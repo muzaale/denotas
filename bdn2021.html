@@ -1,0 +1,3086 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>01/2021 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn2021';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/practicing.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/practicing.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.html">object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn2021.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/bdn2021.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>01/2021</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">01/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">02/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">03/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">04/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">05/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">06/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">07/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">08/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">09/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">10/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">11/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">01/2022</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">02/2022</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="id1">
+<h1>01/2021<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>8am UG Airlines<br />
+9-12 (Saturday, Tuesday)<br />
+UG Airlines 10pm</p>
+<p>.</p>
+<p>I don’t like the structure of 340.684.01 Pharmacoepi (includes group work)<br />
+And I don’t think I’ll like the philosophical XXX.XXX.XX either</p>
+<p>Drop Grant writing (4)</p>
+<p>— Lets add the Stata course<br />
+— Multilevel models (P/F)<br />
+— Biostats (P/F)<br />
+— Do the interpersonal communication class — Debra Roter (2) + Stata programming (2)</p>
+<p>.</p>
+<p>Bloomberg School<br />
+500 courses per term<br />
+4 terms per year<br />
+2000 courses in all</p>
+<p>.</p>
+<p>12pm — Monday (meet daph) xxx<br />
+Tell the boys  xxx</p>
+<p>— Buy ticket to Nairobi  xxx<br />
+— Andrew, Allan xxx<br />
+— Alert boys of Monday xxx<br />
+— Sandra &amp; Tasha condolence xxx<br />
+— Register: Pharmacoepi, Built Environment xxx</p>
+<p>.</p>
+<p>La Chouffe<br />
+Magma Obscura</p>
+<p>.</p>
+<p>NIRA — National ID (online)<br />
+Nexus approvals</p>
+<p>.</p>
+<p>Hama tribe — Ethiopia<br />
+Samburu tribe — Kenya</p>
+<p>.</p>
+<p>5 peter wedding<br />
+Jan 6 Edeet birthday<br />
+Jan 7 Jeff birthday</p>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>COVID19 test</p></li>
+<li><p>Packing (before test!!)</p></li>
+<li><p>Lido beach</p></li>
+<li><p>Hotel (Simeon) + Ridders</p></li>
+<li><p>Shuttle to airport</p></li>
+<li><p>Resend Allan email</p></li>
+<li><p>Yellow fever vaccine</p></li>
+<li><p>Victoria medical services</p></li>
+<li><p>Julia sebutinde road</p></li>
+<li><p>Send J the Nairobi schedule</p></li>
+<li><p>Sam of Admas Hotel</p></li>
+</ol>
+<p>.</p>
+<p>Holy trinity</p>
+<ol class="arabic simple">
+<li><p>Faith (or Research)</p></li>
+<li><p>Service</p></li>
+<li><p>Education<br />
+Tracey Abrams</p></li>
+</ol>
+<p>.</p>
+<p>A married philosopher is ridiculous<br />
+They have already shown commitment<br />
+— irrational, steadfast commitment</p>
+<p>.</p>
+<p>Download the “signal” app in lieu of WhatsApp</p>
+<p>.</p>
+<p>Prada L’Homme — Duncan xxx<br />
+BVLGRI/Dior — Saidi xxx<br />
+Criteria — Response<br />
+Massie — Email  xxx<br />
+Fawaz</p>
+<p>.</p>
+<p>14,321 Ruhindo North</p>
+<p>.</p>
+<p>Wild waters, Jinja<br />
+— Simeon recommended</p>
+<p>.</p>
+<p>Tragedy of their disappointments/Death
+Comedy of their incongruity/Sin<br />
+Jesus and St. Paul: the very worst exemplars!<br />
+For those seeking guidance to marriage :-)<br />
+And especially for those already married 🎭</p>
+<p>.</p>
+<p>18,321 — Tayebwa, FINAL</p>
+<p>.</p>
+<p>1.Khalil email Jan 13 (two week meeting)<br />
+— send five</p>
+<p>.</p>
+<p>Hi Dorry — I wish to bring you up-to-speed with my GTPCI endeavors:</p>
+<p>My 1st Term GPA was 2.50, weighted down mostly by two Cs (Biostats 651 and Intro to US healthcare systems). And my 2nd Term GPA was 3.11, weighted down by one C (Life Course Perspectives on Health). The GTPCI PhD program expects only A/B grades and a GPA&gt;3.0 and so my performance has been flagged.</p>
+<p>I was mostly an A student during the MPH program and this recent performance is inconsistent with my track record. I’m happy to discuss what might have contributed to these recent Cs. But I’ll be having a discussion with Khalil some time next week regarding my plans to get back on track with the expectations of the GTPCI PhD.</p>
+<p>Of course I got As for the GTPCI program requirements (Epi &amp; Biostats) during my MPH. The Cs I’ve received were for elective coursework, some of it tangentially relevant to my interests in Aging. I’ll keep you in the loop with what I discuss with Khalil next week and will also update you on what else I’ve been doing beyond the GTPCI efforts.</p>
+<p>Abi</p>
+<p>.</p>
+<p>Trudy’s delicious lunch luwombo<br />
+&#64;Rainbow road/Gaba road junction<br />
+Worth trying one of these days!</p>
+<p>.</p>
+<p>It is thought abroad that ‘twixt my sheets he has done my office</p>
+<p>.</p>
+<p>Ann is Belge/Lingala<br />
+Miriam is from Ottawa<br />
+Prefer to meet around 12pm<br />
+Of course at quality Hill<br />
+Tomorrow is in on the table</p>
+<p>.</p>
+<p>Troubadour Obscura<br />
+At. Bernadus<br />
+Westmalle<br />
+Lefort<br />
+Duvel</p>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=n-ppu9uyO6s">empeta</a></p>
+<p>.</p>
+<p>“A first, tentative example: at all times morality has aimed to “improve” men — this aim is above all what was called morality. Under the same word, however, the most divergent tendencies have been concealed. But “improvement” has meant both taming the beast called man, and breeding a particular kind of man. Such zoological concepts are required to express the realities — realities of which the typical “improver,” the priest, admittedly neither knows anything nor wants to know anything.</p>
+<p>To call the taming of an animal its “improvement” sounds almost like a joke to our ears. Whoever knows what goes on in kennels doubts that dogs are “improved” there. They are weakened, they are made less harmful, and through the depressive effect of fear, through pain, through wounds, and through hunger, they become sickly beasts. It is no different with the tamed man whom the priest has “improved.” In the early Middle Ages, when the church was indeed, above all, a kennel, the most perfect specimens of the “blond beast” were hunted down everywhere; and the noble Teutons, for example, were “improved.” But how did such an “improved” Teuton look after he had been drawn into a monastery? Like a caricature of man, a miscarriage: he had become a “sinner,” he was stuck in a cage, tormented with all sorts of painful concepts. And there he lay, sick, miserable, hateful to himself, full of evil feelings against the impulses of his own life, full of suspicion against all that was still strong and happy. In short, a “Christian.”</p>
+<p>Physiologically speaking: in the struggle with beasts, making them sick may be the only way to make them weak. The church understood this: it sickened and weakened man — and by so doing “improved” him.”</p>
+<p>Excerpt From<br />
+Twilight of the Idols<br />
+Friedrich Nietzsche<br />
+<a class="reference external" href="https://books.apple.com/us/book/twilight-of-the-idols/id1101368153">https://books.apple.com/us/book/twilight-of-the-idols/id1101368153</a><br />
+This material may be protected by copyright.</p>
+<p>.</p>
+<p>Expedited passport application — same day</p>
+<p>.</p>
+<p>I shall not be moved</p>
+</section>
+<section id="id2">
+<h1>02/2021<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h1>
+<p>N’golo Kanté <a class="footnote-reference brackets" href="#id23" id="id3">13</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">2013</span> <span class="n">Bolougne</span> <span class="n">Ligue</span> <span class="mi">3</span>
+<span class="mi">2014</span> <span class="n">Caen</span> <span class="n">Ligue</span> <span class="mi">2</span>
+<span class="mi">2015</span> <span class="n">Caen</span> <span class="n">Ligue</span> <span class="mi">1</span>
+<span class="mi">2016</span> <span class="n">Chelsea</span> <span class="n">Premier</span> <span class="p">(</span><span class="n">Champs</span><span class="p">)</span>
+<span class="mi">2017</span> <span class="n">Chelsea</span> <span class="n">Premier</span> <span class="p">(</span><span class="n">No</span> <span class="n">Title</span><span class="p">)</span>
+<span class="mi">2018</span> <span class="n">France</span> <span class="n">World</span> <span class="n">Cup</span> <span class="p">(</span><span class="n">Champs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>.</p>
+<p>Monsieur Jaques</p>
+<p>.</p>
+<p>What evidence would you need to change your mind?</p>
+<p>.</p>
+<p>“The human being who has become free — and how much more the spirit who has become free — spits on the contemptible type of well-being dreamed of by shopkeepers, Christians, cows, females, Englishmen, and other democrats. The free man is a warrior.”</p>
+<p>Excerpt From<br />
+Twilight of the Idols<br />
+Friedrich Nietzsche<br />
+<a class="reference external" href="https://books.apple.com/us/book/twilight-of-the-idols/id1101368153">https://books.apple.com/us/book/twilight-of-the-idols/id1101368153</a><br />
+This material may be protected by copyright.<br />
+Watch this!!</p>
+<p>.</p>
+<p>Brady’s protection to determine game<br />
+— That protection has allowed a geriatric case to survive this long<br />
+— Hallmark of all the stuff civilization brings to the table: survival of the soft &amp; weak<br />
+— Perhaps this and the cheer economy of energy expenditure summaries the lack appeal</p>
+<p>.</p>
+<p>Dedicate 30min to <a class="reference external" href="https://www.youtube.com/watch?v=q1pa4Z_3YQo">PR</a></p>
+<p>.</p>
+<p>Shame on Freud: 1887</p>
+<p>“What is the meaning of the conceptual opposites which I have introduced into aesthetics, Apollinian and Dionysian, both conceived as kinds of frenzy? The Apollinian frenzy excites the eye above all, so that it gains the power of vision. The painter, the sculptor, the epic poet are visionaries par excellence. In the Dionysian state, on the other hand, the whole affective system is excited and enhanced: so that it discharges all its means of expression at once and drives forth simultaneously the power of representation, imitation, transfiguration, transformation, and every kind of mimicking and acting. The essential feature here remains the ease of metamorphosis, the inability not to react (similar to certain hysterical types who also, upon any suggestion, enter into any role). It is impossible for the Dionysian type not to understand any suggestion; he does not overlook any sign of an affect; he possesses the instinct of understanding and guessing in the highest degree, just as he commands the art of communication in the highest degree. He enters into any skin, into any affect: he constantly transforms himself.” .</p>
+<p>Excerpt From<br />
+Twilight of the Idols<br />
+Friedrich Nietzsche<br />
+<a class="reference external" href="https://books.apple.com/us/book/twilight-of-the-idols/id1101368153">https://books.apple.com/us/book/twilight-of-the-idols/id1101368153</a><br />
+This material may be protected by copyright.</p>
+<p>.</p>
+<p>Kippo for Ramen Noodles 🍝<br />
+606 S. Broadway<br />
+Around feels point!!<br />
+Probably &#64; Aliceanna &amp; Broadway</p>
+<p>.</p>
+<p>Ennui — Oscar Wild<br />
+Alienation — Karl Marx<br />
+Dancing, laughter, wrestling — Nietzsche</p>
+<p>x</p>
+<p>Debauchery
+Revolutionary<br />
+Expending energy</p>
+<p>.</p>
+<p>Oude Quetsche Tilquin à L’Ancienne</p>
+<p>#1 Lambic of those I’ve sampled</p>
+<p>.</p>
+<p>Shakespeare!</p>
+<p>.</p>
+<p>My whole life has changed<br />
+— genuwine</p>
+<p>Never seen anyone so proud of their IDs!!</p>
+<p>.</p>
+<p>Apple Watch Activation</p>
+<p>*7735<br />
+(410) 336 8423</p>
+<p>(410) 336 8936</p>
+<p>Accept the contact</p>
+<p>866 895 1099</p>
+<p>.</p>
+<p>Humor — and it’s twin virtue honesty — is the ultimate mark of genius: one can’t help but be witness to just how comical morality and ideals are, in their daily contradictions</p>
+<p>.</p>
+<p>Tudor line was weak<br />
+And thus survived war of roses 🌹<br />
+Henry VIII, his succession, extinction —<br />
+Shakespeare, etc are the symptoms<br />
+Never again has succession been by strength</p>
+<p>.</p>
+<p>Gagsta rap is the rare instance in which art &amp; power collaborate: beautiful powerful types willing themselves to power — inspite of, or perhaps necessarily— as criminals</p>
+<p>Dostoevsky &amp; Nietzsche would endorse these Gs</p>
+<p>.</p>
+<p>Visit Bob&#64;Nacho Mama’s</p>
+<p>.</p>
+<p>“Not only the eternal idols, but also the youngest—that is to say, the most senile: modern ideas, for instance.”</p>
+<p>Excerpt From<br />
+Ecce Homo<br />
+Friedrich Nietzsche<br />
+<a class="reference external" href="https://books.apple.com/us/book/ecce-homo/id1369792621">https://books.apple.com/us/book/ecce-homo/id1369792621</a><br />
+This material may be protected by copyright</p>
+<p>.</p>
+<p>A movie that rushes you through someone’s becoming? Clearly isn’t interested in THE story, the aesthetics — it’s all plot</p>
+<p>.</p>
+<p>“Excess strength alone is the proof of strength”</p>
+<p>Excerpt From<br />
+Twilight of the Idols<br />
+Friedrich Nietzsche<br />
+<a class="reference external" href="https://books.apple.com/us/book/twilight-of-the-idols/id1101368153">https://books.apple.com/us/book/twilight-of-the-idols/id1101368153</a><br />
+This material may be protected by copyright.</p>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>Flanked out of PhD</p></li>
+<li><p>Inconvenienced female Uber driver</p></li>
+<li><p>Eating burgers</p></li>
+<li><p>Neglected finances</p></li>
+<li><p>Obese</p></li>
+</ol>
+<p>Criticism ‘bout x No<br />
+Anger x No<br />
+Guilty/Reduce x Yes<br />
+Eye opener x No</p>
+<p>.</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">b.coeff</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.matrix</span><span class="p">(</span><span class="n">mlr</span><span class="o">$</span><span class="n">coefficients</span><span class="p">)</span>
+<span class="n">b.var</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="nf">vcov</span><span class="p">(</span><span class="n">mlr</span><span class="p">)[</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">],</span><span class="nf">vcov</span><span class="p">(</span><span class="n">mlr</span><span class="p">)[</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">],</span><span class="nf">vcov</span><span class="p">(</span><span class="n">mlr</span><span class="p">)[</span><span class="m">3</span><span class="p">,</span><span class="m">3</span><span class="p">],</span><span class="nf">vcov</span><span class="p">(</span><span class="n">mlr</span><span class="p">)[</span><span class="m">4</span><span class="p">,</span><span class="m">4</span><span class="p">],</span><span class="nf">vcov</span><span class="p">(</span><span class="n">mlr</span><span class="p">)[</span><span class="m">5</span><span class="p">,</span><span class="m">5</span><span class="p">],</span><span class="nf">vcov</span><span class="p">(</span><span class="n">mlr</span><span class="p">)[</span><span class="m">6</span><span class="p">,</span><span class="m">6</span><span class="p">],</span><span class="nf">vcov</span><span class="p">(</span><span class="n">mlr</span><span class="p">)[</span><span class="m">7</span><span class="p">,</span><span class="m">7</span><span class="p">],</span><span class="nf">vcov</span><span class="p">(</span><span class="n">mlr</span><span class="p">)[</span><span class="m">8</span><span class="p">,</span><span class="m">8</span><span class="p">])</span>
+<span class="n">b.se</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.matrix</span><span class="p">(</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">b.var</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>.</p>
+<p>Ask Andrew to Send Allan R script</p>
+<p>Introduce<br />
+Ask to send code<br />
+Single script, does not use third party packages, Allan doesn’t use R at all<br />
+Third party packages?</p>
+<p>Rscript</p>
+<p>/jhpce/shared/jhpce/core/R/3.6.1/bin/Rscript conv_srtr.R</p>
+</section>
+<section id="id4">
+<h1>03/2021<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h1>
+<p>The slippery slope: Updated 03/03/21</p>
+<p>Objective<br />
+Rigorous<br />
+Error (Process)<br />
+Sloppy (Reviewers)<br />
+Fraud (Investigators)</p>
+<p>.</p>
+<p>Tayebwa, Anita<br />
+Alex, Sheba<br />
+Instanbul, Turkey</p>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>Zoom with Tayebwa: 7pm Turkey</p></li>
+<li><p>Send him the link</p></li>
+<li><p>Michael B</p></li>
+</ol>
+<p>.</p>
+<p>The first, purely theoretical, article was written by Watson and Crick from the University of Cambridge. Immediately following this article were two data-rich papers by researchers from King’s College London: one by Maurice Wilkins and two colleagues, the other by Franklin and a PhD student, Ray Gosling.</p>
+<p>Deductive (Watson and Crick) —&gt; One offspring battles with Schizophrenia; Cognitive Power
+Inductive (Franklin and Wilkins) —&gt; Typical career professionals in their brood; Sensory Power<br />
+?? —&gt; ??; Rhetorical Power</p>
+<p>.</p>
+<p>I can’t stand Tyler Perry’s art
+Do recognize the strength of the “School of Resentment”<br />
+Power in numbers.. of the normal distribution<br />
+Not my aesthetic</p>
+<p>.</p>
+<p>The show is called “Sisters”, but the TRUE sisters are the dudes!</p>
+<p>.</p>
+<p>March 9, 2021</p>
+<p>Abideth these three: sensory, cognitive, and rhetorical power.</p>
+<p>The greatest of all is —</p>
+<p>.</p>
+<p>Oprah is a hardly surprising phenomenon<br />
+You can say of the sensory, cognitive, rhetorical<br />
+Those who have been chained have developed<br />
+Most advanced cognitive powers<br />
+And these have been filled by the passions</p>
+<p>X</p>
+<p>Friendship between Tyler Perry and Oprah<br />
+Can be deduced to be founded on this<br />
+A resonance that strikes quite deeply<br />
+Having survived as double-minorities<br />
+School of resentment has no higher priests</p>
+<p>.</p>
+<p>Robustness can’t be measured?<br />
+How about time taken to run a mile?</p>
+<p>.</p>
+<p>Video conferencing relighting from<br />
+Lumecube??<br />
+Yup -/ gotta get it</p>
+<p>.</p>
+<p>Lyrics and music have never been better-matched:</p>
+<p>Out to tour the places he would not<br />
+And some you never knew would get you hot<br />
+Nothin’ is forbidden when we touch</p>
+<p>Watch Madea’s farewell for vivid portrayal of case</p>
+<p>.</p>
+<p>How to make background blurry on Zoom</p>
+<p>I like this!!!</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Like in Molier’s 1670 play Le bourgeois gentilhomme, when Mr. Jourdain is surprised and delighted to learn that he has been speaking prose all his life without knowing it, many scientists such as Richard Feynman and Stephen Hawking are practicing philosophy without knowing. They discourse on ontology (the nature of things), epistemology (the nature of knowledge), identity, change, causality, necessity and the entire range of issues that one might rightly describe as metaphysics. 
+
+Einstein, in a lecture delivered to the Nordic Assembly of Naturalists at Gothenburg, in lieu of his Nobel Lecture on the photoelectric effect, states the following at the outset:
+
+“If we consider that part of the theory of relative which may nowadays in a sense be regarded as bona fide scientific knowledge, we note two aspects which have a major bearing on this theory. The whole development of the theory turns on the question of whether there are physically preferred stats of motion in Nature (physical relativity problem). Also, concepts and distinctions are only admissible to the extent that observable facts cam be assigned to them without ambiguity (stipulation that concepts and distinctions should have meaning). This postulate, pertaining to epistemology, proves to be of fundamental importance.“ (1)
+
+The prominent Einstein consciously practiced philosophy, explicitly conducted thought experiments, brought the rigor of metaphysics to bear upon untenable assumptions that had dogged the world of classical physics since the time of Newton, and set off a scientific and technological revolution that is still in its infancy today. Technology is still playing “catchup” with the insights articulated by Einstein between 1905 and 1935. 
+
+Such dependency between metaphysical concepts and empirical verification is not in any way opposed to Feyman’s conceptualization of the scientific enterprise: postulates, precise predictions, verification (or failure), revision of the postulates, etc. In my final project on the revolution of Organ Transplantation, the “concept” of replacing a failed human organ with a functioning one from an animal, identical twin, full-sibling, parent, or non-biological relative started just as that — a concept. How identical the allograft has to be to the recipient, such as with regard to HLA-DR and immunogenetics, is a matter of metaphysics. Whether such HLA-identity is necessary. Whether such an allograft will survive for a few days or more. Whether the immune rejection of the organ is an ontological fact, or whether it can be changed by immunosuppressive therapy. Whether one can find a donor with identical HLA (i.e., what we now know epistemologically as “neccessary” through tissue typing vs. identical twin in our earlier, more naive epistemology). All these are metaphysical questions the field of transplant grappled with in its early days and still does today. Whether or not transplant professionals are aware they are prating philosophy is one thing. But the fact is that they are. 
+
+A conscious recognition of this fact may give science the sort of impetus and razor-focus that Einstein had. Maybe the slow progress of science is symptomatic of the neglect of philosophy among prominent modern scientists. We find ourselves “reinventing the wheel“ of metaphysics, unwittingly, like Mr. Jourdain.
+
+References
+1. Einstein, A. Fundamental ideas and problems of the theory of relativity. July 11, 1923.  https://www.nobelprize.org/uploads/2018/06/einstein-lecture.pdf
+
+</pre></div>
+</div>
+<p>.</p>
+<p>“The earth has been a madhouse”, he says in the Genealogy of Morals, and otherworldly philosophers, along with priests, theologians, and others, have played a large a part in making it so. Such claims demand rigorous scrutiny, so it’s pleasing that in the book under review Nietzsche’s account of ressentiment is carefully investigated and diligently analyzed.</p>
+<p>x</p>
+<p>“By your patience, Aunchient Pistol. Fortune is painted blind, with a muffler afore his eyes, to signify to you that Fortune is blind; and she is painted also with a wheel, to signify to you, which is the moral of it, that she is turning, and inconstant, and mutability, and variation; and her foot, look you, is fixed upon a spherical stone, which rolls, and rolls, and rolls. In good truth, the poet makes a most excellent description of it. Fortune is an excellent moral.”</p>
+<p>Excerpt From<br />
+Works of William Shakespeare<br />
+William Shakespeare<br />
+<a class="reference external" href="https://books.apple.com/us/book/works-of-william-shakespeare/id370188174">https://books.apple.com/us/book/works-of-william-shakespeare/id370188174</a><br />
+This material may be protected by copyright.</p>
+<p>x</p>
+<p>—Sensory vs otherness/Ascetic-Weak<br />
+Things base and vile, holding no quantity,</p>
+<p>—Cognitive vs metaphysics/Ressentiment<br />
+Love can transpose to form and dignity.<br />
+Love looks not with the eyes, but with the mind;<br />
+And therefore is wing’d Cupid painted blind.<br />
+Nor hath love’s mind of any judgment taste</p>
+<p>— Motor vs rhetoric/Peacetime<br />
+Wings and no eyes figure unheedy haste</p>
+<p>Excerpt From<br />
+Works of William Shakespeare<br />
+William Shakespeare
+<a class="reference external" href="https://books.apple.com/us/book/works-of-william-shakespeare/id370188174">https://books.apple.com/us/book/works-of-william-shakespeare/id370188174</a><br />
+This material may be protected by copyright.</p>
+<p>.</p>
+<p>Statistics is at the interface of science and its concerns with precision<br />
+—- Zeger</p>
+<p>.</p>
+<p>Lin Wang, doctoral thesis!!!</p>
+<p>.</p>
+<p>Shakespeare sacrificed Sir John Falstaff after only two plays (plus merry wives of Windsor)</p>
+<p>Tyler Perry only sacrificed Ms. Mabel “Madea” Simmons after 30 plays, films, and TV shows</p>
+<p>One insisted on the development of Harry the Prince of Wales from a rascal to a dutiful Henry V. The other is totally stunted — perhaps also harming his audience? Or merely putting a mirror up to it?</p>
+<p>.</p>
+<p>Here feel we not the penalty of Adam?</p>
+<p>.</p>
+<p>He that hath learned no wit by nature nor art may complain of good breeding, or comes of a very dull kindred<br />
+— As You Like It</p>
+<p>.</p>
+<p>For ever and a day<br />
+— As You Like It</p>
+<p>.</p>
+<p>Counterfeit</p>
+<p>.</p>
+<p>Look up his publications, they touch on multilevel models and Scot Zeger</p>
+<p>Alessandro Orlando, MPH PhD Candidate (Joe Coresh)<br />
+Update/Progress = Evidence/Likelihood * Prior/Intuition<br />
+Overcoming = Man*Beast</p>
+<p>Thats awesome!</p>
+</section>
+<section id="id5">
+<h1>04/2021<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h1>
+<p>“BANQUO.<br />
+Were such things here as we do speak about?<br />
+Or have we eaten on the insane root<br />
+That takes the reason prisoner?”</p>
+<p>Excerpt From<br />
+Works of William Shakespeare<br />
+William Shakespeare<br />
+<a class="reference external" href="https://books.apple.com/us/book/works-of-william-shakespeare/id370188174">https://books.apple.com/us/book/works-of-william-shakespeare/id370188174</a><br />
+This material may be protected by copyright.</p>
+<p>.</p>
+<p>“O Banquo, Banquo!<br />
+Our royal master’s murder’d!</p>
+<p>LADY MACBETH.<br />
+Woe, alas!<br />
+What, in our house?”</p>
+<p>Excerpt From<br />
+Works of William Shakespeare<br />
+William Shakespeare<br />
+<a class="reference external" href="https://books.apple.com/us/book/works-of-william-shakespeare/id370188174">https://books.apple.com/us/book/works-of-william-shakespeare/id370188174</a><br />
+This material may be protected by copyright.</p>
+<p>.</p>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">use</span> <span class="o">/</span>dcs01<span class="o">/</span>igm<span class="o">/</span>segevlab<span class="o">/</span>data<span class="o">/</span>srtr2004<span class="o">/</span>SegevDataSupplement<span class="o">/</span>DonHosp_ZIPs<span class="o">/</span>donzip,clear
+</pre></div>
+</div>
+<p>.</p>
+<p>It hurts me to see you wasting your time on confused women, and on books that don’t benefit a Jew</p>
+<p>.</p>
+<p>Conniving, resentful bitch-ass niggaz &amp; ho’s</p>
+<p>.</p>
+<p>Percentiles are not exchangeable across datasets <a class="footnote-reference brackets" href="#id24" id="id6">14</a></p>
+<p>.</p>
+<p>Our approach is the first to address both<br />
+Fixed (seasonal) and Random (annual)<br />
+Effects in a single model</p>
+<p>.</p>
+<p>Kanye met Kim on the set of “Talk about our love” video. She was Brandy’s make-up assistant at the time</p>
+<p>.</p>
+<p>Comprehensive exams<br />
+June 4-11th</p>
+<p>.</p>
+<p>Nietzsche in his book, Beyond Good and Evil makes this comment.
+“The case is not different with Shakespeare, that marvelous Spanish-Moorish-Saxon synthesis of taste, over whom an ancient Athenian of the circle of Aeschylus would have half-killed himself with laughter or irritation: but we–accept precisely this wild motleyness, this medley of the most delicate, the most coarse, and the most artificial, with a secret confidence and cordiality; we enjoy it as a refinement of art reserved expressly for us, and allow ourselves to be as little disturbed by the repulsive fumes and the proximity of the English populace in which Shakespeare’s art and taste lives”</p>
+<p>.</p>
+<p>Mummy<br />
+— Walking stick<br />
+— Ringing in ears</p>
+<p>.</p>
+<p>“Against that positivism which stops before phenomena, saying ‘there are only facts,’ I should say: no, it is precisely facts that do not exist, only interpretations…” (Nietzsche)</p>
+<p>Inference = Evidence * Belief</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+Why do we rank?
+Raking is 1 dimension!
+But what is the dimensionality of quality?
+Certainly never 1
+Read SZ notes on inverse of ecology, and that bias that is equivalent to compositional effects 
+
+X
+
+Who is going to unite the desperate worlds of statistics (variance), epidemiology (mean), and medicine (precision)?
+
+X
+
+Statistics: [ Unknown | Known]
+[Theta_i, Alpha_i, Psu_i | y, x, w] ; can be mathematically intractable
+But simulation of a large number of these posterior values can allow us to get the average of the unknowns 
+Montecarlo integration
+
+X
+
+
+Bayes = Maximum Likelihood * Priors
+</pre></div>
+</div>
+<p>.</p>
+<p>Picture of Dorian Gray: its the spectator, and not life, …</p>
+<ol class="arabic simple" start="0">
+<li><p>Artist</p></li>
+<li><p>Critic</p></li>
+<li><p>Well-written</p></li>
+<li><p>Moral</p></li>
+<li><p>Rage</p></li>
+<li><p>Proof/Sympathies/Morbidity</p></li>
+<li><p>Thought&amp;language, Vice&amp;Virtue</p></li>
+<li><p>Music (form) &gt; Actors (feeling) &gt; etc.</p></li>
+</ol>
+<p>Its all symbol</p>
+<p>.</p>
+<p>GTPCI/JHU</p>
+<p><span class="math notranslate nohighlight">\(59,184/year  
+\)</span>14,796/term<br />
+<span class="math notranslate nohighlight">\(2,959/cycle  
+\)</span>1,139/tax</p>
+<p>38% rate</p>
+<p>.</p>
+<p>Kale 180 calories/4 oz = 720/pound<br />
+Panera noodle soup = 240/container<br />
+Veggie crunch = 1000/pound</p>
+<p>2000 calories/day without sea food</p>
+<p>Seafood = 1000/pound<br />
+Pasta = 260/4oz = 1040/pound</p>
+</section>
+<section id="id7">
+<h1>05/2021<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h1>
+<p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5374691/">genetic</a> <span class="xref myst">epi</span> <a class="reference external" href="https://docs.google.com/presentation/d/1rllN74YzedR8v1WG6wpHPWiYvxkmHjlo9hxPemV8_eI/edit?ts=608c43ba#slide=id.p">presentation</a></p>
+<p>.</p>
+<p>Will-to-Power</p>
+<ol class="arabic simple">
+<li><p>First as a spouse: choosing among many, proposing</p></li>
+<li><p>Then as parents: X (first name) AE A-XII (middle name)</p></li>
+<li><p>Maybe as manager: corporate strategy vs. board</p></li>
+</ol>
+<p>Nothing succeeds if prankishness has no part in it</p>
+<p>.</p>
+<p>MCMC — this is what you want to get familiar with in multi-level models
+Superior to the Gaussian-Gaussian methods implemented by Stata and R
+Give much more flexibility to the analysis —</p>
+<p>.</p>
+<p>Bezeyi 50th anniversary</p>
+<ol class="arabic simple">
+<li><p>Budget estimate</p></li>
+<li><p>Our contributions</p></li>
+<li><p>Top-up their monthly yield: 1.4m /-</p></li>
+</ol>
+<p>.</p>
+<p>Patrick Muinda<br />
+— Doctoral proposal<br />
+— IT governance as a [new] determinant for IT governance performance<br />
+— Accelerated by COVID<br />
+— Governance (1 - 4; which is optimal): structures (roles), practices (knowledge and skills ), guidelines  (money)
+— Performance<br />
+— Adaptable</p>
+<p>X</p>
+<p>//Negative feedback loop</p>
+<ol class="arabic simple">
+<li><p>Knowledge and skills  and placement of persons within the organizational structure (vertical — levels 1-4— vs. horizontal; ie., maturity of structure)</p></li>
+<li><p>Process: organizational structure (IT structure embedded within),</p></li>
+<li><p>Performance: outcome of process</p></li>
+</ol>
+<p>//Express this adaptive system</p>
+<p>.</p>
+<p>Emphasize missing data, parameters, imputation, assumptions</p>
+<p>If at all this figure (or process of estimation that it relays) appears so fragmented,<br />
+Then I can assure you that the methods section is just as fragmented<br />
+For these reasons..</p>
+<ol class="arabic simple">
+<li><p>We deconstructed</p></li>
+<li><p>Then reconstructed</p></li>
+<li><p>And expose hidden assumptions</p></li>
+<li><p>Here’s a reinterpretation of the methods.. using symbols familiar to most</p></li>
+</ol>
+<p>Vamsee<br />
+Zhanmo<br />
+Abi</p>
+<p>.</p>
+<p>Idealists are tolerable as long as they have affection (eg Tarantino’s ideals of cinema — the past)</p>
+<p>The only excuse for making a useless thing is that one admires it intensely.</p>
+<p>All art is quite useless</p>
+<p>X</p>
+<p>Can art teach us to love life very intensely? Or does it merely fuel life-denying ideals?</p>
+<p>Well.. Tarantino is loving, living… successfully selling his ideals</p>
+<p>.</p>
+<p>Fingerprinting with ink: 3:40 pm<br />
+Blue Circle Fingerprinting	5229 Harford Road<br />
+Baltimore, MD  21214	443.527.0884</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>2021
+5/12 - 9’38”
+4/21 - 9’58”
+4/14 - 9’58”
+
+2020
+12/12 - 9’13”
+12/06 - 9’04”
+12/02 - 9’51”
+
+2019
+9/14 - 9’14”
+9/07 - 9’56”
+3/17 - 8’48” 
+3/16 - 9’33”
+3/03 - 9’25”
+2/23 - 8’56”
+2/20 - 9’17”
+2/17 - 9’54”
+2/16 - 9’56”
+
+2018
+12/18 - 9’09”
+12/10 - 8’42”  ***
+11/11 - 10’34”
+
+2017
+9/08 - 8’41” (3 mile) **
+</pre></div>
+</div>
+<p>.</p>
+<ol class="arabic simple" start="0">
+<li><p>Brain</p></li>
+<li><p>Danger</p></li>
+<li><p>Rigor</p></li>
+<li><p>Sloppiness</p></li>
+<li><p>Error</p></li>
+<li><p>Misinformed</p></li>
+<li><p>Correction*</p></li>
+<li><p>Instincts</p></li>
+</ol>
+<p>.</p>
+<p>Dostoevsky was accused of reading works by Belinsky, including the banned Letter to Gogol</p>
+<p>.</p>
+<p>Art is Individualism, and Individualism is a disturbing and disintegrating force. Therein lies its immense value. For what it seeks to disturb is monotony of type, slavery of custom, tyranny of habit, and the reduction of man to the level of a machine<br />
+— Oscar Wilde</p>
+<p>Therein lies the error in art. For master-slave relationships — in a word, Power! — belongs to reality whereas art belongs to fantasy. So ones ca confidently forecast the winner!!</p>
+<p>.</p>
+<p>Who the hell is Tucker Carlson? And why should I care about him</p>
+<p>.</p>
+<p>The summary of life? One either is powerful or powerless. The powerless are resentful and and left to idealizing what life would be like if they could have their way — ie if they could <em>also</em> IMPOSE their values on others.</p>
+<p>.</p>
+<p>If you say you’ve read Nietzsche but have no recollection of moments at which you could only chuckle, gasp in horrific enlightenment, or marvel wherefore his energy comes, then we can’t confidently declare that you’ve understand him</p>
+<p>.</p>
+<p>In 2011, Stronger was voted “the greatest workout song of all time” after topping a nationwide poll by Gold’s Gym. “Stronger” has been ranked as the third most popular workout song of all time on Spotify. In 2020, uDiscoverMusic named it the best workout song of all time.</p>
+<p>.</p>
+<p>Listening to the Rondo finale of Mozarts Piano Concerto No. 13<br />
+Thinking about the dance between the piano solo and orchestra<br />
+Mozart conveys this as systems thinking: with stakeholders<br />
+No top-down stuff.. more bottom up and collabo</p>
+<p>.</p>
+<p>Duvel:<br />
+Heavenly pour for a devil of a beer</p>
+<p>Did divine inspiration lead Jan-Leonard Moortgat to invent his brewery in 1871? Or was it the little devil 👿 on his shoulder? It’s impossible to know —</p>
+<p>But we do know that a beer with this heritage deserve a righteous pour. Remember that frothiness is next to godliness</p>
+<p>(Pour unhurriedly)</p>
+<p>.</p>
+<p>Nietzsche as hedgehog 🦔  =  Nietzsche in Germany (as contrasted with, say, Turin)</p>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>Can totally drop burger</p></li>
+<li><p>Belgian in the loop</p></li>
+<li><p>Proof that’s it’s the dopamine rush</p></li>
+<li><p>Especially when I’ve hit head winds</p></li>
+<li><p>Ideal —&gt; Satyr —&gt; Real</p></li>
+</ol>
+<p>.</p>
+<p>Look at all the extraordinary things man had achieved:</p>
+<ol class="arabic simple">
+<li><p>The pyramids</p></li>
+<li><p>Biblical tower of</p></li>
+<li><p>European Cathedrals</p></li>
+<li><p>Flying to the moon</p></li>
+<li><p>Name it!</p></li>
+</ol>
+<p>All based on the very earnest human, all-too-human error in glorifying the “beyond”. But to what end?</p>
+<p>.</p>
+<p>Errors R us!</p>
+<p>.</p>
+<p>Gordon<br />
+Charlotte<br />
+Curtis<br />
+Gab<br />
+Emmanuel</p>
+</section>
+<section id="id8">
+<h1>06/2021<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h1>
+<p>Which was the best ever Brazil national football team?</p>
+<p>Excess strength alone is the proof of strength</p>
+<p>It was either the 1998 or the 2002 Brazil team. Because of many world-class attackers such as Ronaldinho Ronaldo Rivaldo Kaka and they had many great defenses and stars in the defense such as Cafu Roberto Carlos and dida And they dominated every team whether it be a exhibition match or World Cup final and it did it with smiles on their face that is the Brazilian team so I would say 2002</p>
+<p>.</p>
+<p>Excess strength alone is the proof of strength<br />
+— Twilight of Idols</p>
+<p>1.Brazil football team of 2002<br />
+— Manifests in goals<br />
+— But also flourishes<br />
+— Soccer no longer exciting<br />
+— No surplus of individual strength today<br />
+—  Just cold as ice team strategy</p>
+<p>2.Prankishness has a part in it<br />
+— Family<br />
+— School<br />
+— Church<br />
+— Work<br />
+— Government</p>
+<p>3.Great Britain, R.I.P<br />
+— Mind your language<br />
+— Yes, minister!<br />
+— Shakespeare<br />
+— IPA<br />
+— Lady Grey</p>
+<p>4.Human Error<br />
+— Neo so sick of love songs<br />
+— So sad and slow<br />
+— RnB is dead<br />
+— Twilight of the love ideal<br />
+— Ascendency of hiphop</p>
+<p>.</p>
+<p>K’la - Nairobi is 400MI
+I’ve run 300 in Nike Zoom Next% since 10/2020</p>
+<p>.</p>
+<p>Mans greatest error is univariable analysis <a class="footnote-reference brackets" href="#id25" id="id9">15</a></p>
+<ol class="arabic simple">
+<li><p>Philosophers stone</p></li>
+<li><p>Gods</p></li>
+<li><p>Paradise</p></li>
+<li><p>Alchemy</p></li>
+<li><p>Science</p></li>
+<li><p>Technology?</p></li>
+<li><p>Means to ultimate end.. absence of suffering</p></li>
+</ol>
+<p>.</p>
+<p>Glorifiers of human errors</p>
+<ol class="arabic simple">
+<li><p>Artists</p></li>
+<li><p>Hedge funds</p></li>
+<li><p>Politicians</p></li>
+<li><p>Boyfriends</p></li>
+<li><p>Clergy</p></li>
+</ol>
+<p>What an indictment!!</p>
+<ol class="arabic simple">
+<li><p>Question</p></li>
+<li><p>Rigor</p></li>
+<li><p>Error. Human, all too human?</p></li>
+<li><p>Sloppy</p></li>
+<li><p>Fraudulent</p></li>
+</ol>
+<p>Reflexivity maketh errors profitable</p>
+<p>.</p>
+<ol class="arabic simple" start="0">
+<li><p>Philosophy</p></li>
+<li><p>Realism</p></li>
+<li><p>Hardness</p></li>
+<li><p>Error</p></li>
+<li><p>Sloppiness</p></li>
+<li><p>Idealism</p></li>
+<li><p>Engineering</p></li>
+</ol>
+<p>.</p>
+<ol class="arabic simple" start="0">
+<li><p>Ecce</p></li>
+<li><p>Homo</p></li>
+<li><p>Wise</p></li>
+<li><p>Clever</p></li>
+<li><p>Books</p></li>
+<li><p>Shackles</p></li>
+<li><p>Dance</p></li>
+<li><p>Twilight</p></li>
+</ol>
+<p>.</p>
+<p>Ed Sheehan’s “shape of you” vs “scrubs”</p>
+<p>.</p>
+<p>Ngo’lo Kante</p>
+<p><a class="reference external" href="https://m.youtube.com/watch?v=yxalRGX3wXQ">https://m.youtube.com/watch?v=yxalRGX3wXQ</a></p>
+<p>Check it out!!</p>
+<p>.</p>
+<p>Everything is reduced to a single (error) variable<br />
+— Harry Potter<br />
+— Tom Riddle<br />
+—  “Shared” Wand<br />
+This is, alas, Human, All-Too-Human</p>
+<p>Wisdom tells of multiple (perspectives) variables<br />
+— I am so wise, so clever, write good books<br />
+— Psychologist<br />
+— Eternal feminine</p>
+<p>.</p>
+<p>Harry Potter: Greatest Errors</p>
+<ol class="arabic simple">
+<li><p>Tom Riddle vs. Harry Potter
+— Conflict not physical<br />
+— Entirely in spiritual realm<br />
+— Very feminine</p></li>
+<li><p>Rationale for Potters invulnerability
+— Only wizard who survived some curse
+— In process was bonded with Mr. Riddle<br />
+— They are equals buy opposite</p></li>
+<li><p>Finale
+— Harry has love<br />
+— Riddle hate<br />
+— Proves to be the key</p></li>
+<li><p>Summary
+— Heroism<br />
+— Genius<br />
+— Being vs becoming</p></li>
+<li><p>Explaining All
+— Motives, Conflicts<br />
+— The Beyond (Ewwww)<br />
+— Death Hallows Part 2, Love</p></li>
+</ol>
+<p>.</p>
+<p>High humidity + a Breeze = Itchy AF skin</p>
+<p>.</p>
+<p>Let me tell you something. Nowadays every body has to go to shrinks and counselors and go on Sally and talk about their problems. Whatever happened to Gary Cooper, the strong, silent type? That was an American! He wasn’t in touch with his feelings. He just did what he had to do.<br />
+— Tony Soprano S1E1</p>
+<p>.</p>
+<p>I’m not a man 👨🏾, I’m dynamite 🧨</p>
+<p>.</p>
+<p>Idols<br />
+Gods<br />
+Univariate<br />
+Silverbullet<br />
+End-all, be-all <a class="footnote-reference brackets" href="#id26" id="id10">16</a></p>
+<p>.</p>
+<p>Sopranos<br />
+— founded on weakness<br />
+The Wire<br />
+— founded on strength</p>
+<p>.</p>
+<p>Gouden Carolus Cuvée Van De Keizer Imperial Dark</p>
+</section>
+<section id="id11">
+<h1>07/2021<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h1>
+<p>Hit the row jack by Ray Charles</p>
+<p>.</p>
+<p>Runner-Informed Traction</p>
+<p>The rubber outsole features a design created using data from hundreds of runners. That information helps place traction where your foot needs it most, giving you grip on multiple surfaces.</p>
+<ol class="arabic simple">
+<li><p>Air Tempo Next%</p></li>
+<li><p>Zoomx Vaporfly Next%</p></li>
+<li><p>Air Zoom Alphafly Next%</p></li>
+</ol>
+<p>.</p>
+<p>Swim jammers<br />
+Size: Large<br />
+BALEAF Men’s Splice Quick Dry Swim Jammer</p>
+<p>.</p>
+<p>4th of July, 2021</p>
+<ol class="arabic simple">
+<li><p>Nike Alphafly, Vaporfly, and Tempo NEXT% $768</p></li>
+<li><p>Two pairs of swim jammers L</p></li>
+<li><p>Five-pack set of Active Wear Crew Ts, Two Amour sleeveless Ts</p></li>
+<li><p>Two 2-pack loose-fit Performance shorts S</p></li>
+<li><p>Five-pack Performance boxer briefs M $139</p></li>
+</ol>
+<p>A $907 Fitness commitment</p>
+<p>.</p>
+<p>This is my career, this is everything<br />
+— Rhonda Pearlman, The Wire</p>
+<p>.</p>
+<p>Perfect August, September, October, November, and December: no hedonism!!</p>
+<p>.</p>
+<p><strong>Irreligiousness of Artists.</strong> —Homer is so much at home among his gods and is as a poet so good natured to them that he must have been profoundly irreligious. That which was brought to him by the popular faith—a mean, crude and partially repulsive superstition—he dealt with as freely as the Sculptor with his clay, therefore with the same freedom that Æschylus and Aristophanes evinced and with which in later times the great artists of the renaissance, and also Shakespeare and Goethe, drew their pictures.</p>
+<p>.</p>
+<p>A.Courses approved by advisor before July 15<br />
+B.Prelim oral exam committee before Sep 1</p>
+<ol class="arabic simple">
+<li><p>GTPCI Advisor: Julie Hoover-Fong</p></li>
+<li><p>Thesis Mentor: Dorry Segev</p></li>
+<li><p>Someone in GTPCI:</p></li>
+<li><p>Primary SPH</p></li>
+<li><p>SPH of SOM</p></li>
+</ol>
+<p>Alternatives</p>
+<ol class="arabic simple">
+<li><p>GTPCI</p></li>
+<li><p>SPH primary</p></li>
+</ol>
+<p>Two-hour time slot</p>
+<p>.</p>
+<p>Unbearable in a work of art<br />
+Or for that matter in a friend</p>
+<p>Contrived<br />
+Seductive<br />
+Preachy</p>
+<p>.</p>
+<p>Belgian list (In rank-order of curiosity!!)</p>
+<ol class="arabic simple">
+<li><p>Gouden Carolus Cuvée Van De Keizer: ImpDark</p></li>
+<li><p>Alvinne Phi (Sour)</p></li>
+<li><p>Duchesse De Bourgogne Sour (try it)</p></li>
+<li><p>Monk’s Cafe (Sour)</p></li>
+</ol>
+<p>.</p>
+<p>It might as well be the limited constraints from English grammar and advanced knowledge of piano that Swedes make great pop music producers — they’re quite free</p>
+<p>.</p>
+<p>Run<br />
+Work<br />
+Swim<br />
+Work<br />
+Run<br />
+x<br />
+Check on friends??<br />
+Any social routines?</p>
+<p>.</p>
+<p>What conquests bring ye home?<br />
+What tributaries follow you to Rome?<br />
+To grace in captive bonds the euro cup?</p>
+<p>.</p>
+<p>Romans 12:2 .
+King James Version</p>
+<p>2 And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God.</p>
+<p>.</p>
+<p>Hey Allan — Thanks for setting up Andrew with an account on the cluster. He has been able to create the attached script that runs on the cluster with no errors. It outputs .PDF, .XLS, and .PNG files into the working directory.</p>
+<p>Lines 53, 58, and 61 include file paths and dataset names. These are the only necessary edits before running this on the SRTR machine</p>
+<p>Please let us know if anything remains unclear.</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Midsummer nights dream
+1.Fit
+— 8min/mile pace over 9 miles
+— VO2MAX is 40
+— BMI is 25
+— Swim 1.5 miles in 5min
+
+2.Hygiene
+— Effortlessly fall asleep
+— Maintain sleep 
+— Hours always 11pm-5am
+— Fresh throughout day 
+
+3.Neuroses
+— Vanished 
+— No hypergraphia 
+— Philosophize no more 
+— Ask zero questions 
+
+4.Anhedonia 
+— Piano
+— Music (outside jogging)
+— But savoring tapas and small plates!
+— Craving of beer is Nil
+
+5.Dissonance
+— Resolved
+— Older
+— Wiser
+— Hardened 
+</pre></div>
+</div>
+<p>.</p>
+<p>Rwabutura, Sheema District<br />
+Formerly Bushenyi</p>
+<p>.</p>
+<p>Muzooras <a class="reference external" href="https://www.youtube.com/watch?v=8o7IfjDVuhM">reception</a></p>
+<p>.</p>
+<p>Like big ideas, big plates of food are fatally flawed</p>
+<p>The richer, truer experience consists in sampling tiny plates here, there, and all around</p>
+<p>One craves big ideas and big plates of food simply because their lives aren’t rich</p>
+<p>Abundance would never make one crave a big-fix</p>
+<p>.</p>
+<p>One is either resilient or frail<br />
+Strong or weak<br />
+Old Testament or New Testament<br />
+Nietzsche or St. Paul<br />
+Homer or Jane Austen</p>
+<p>.</p>
+<p>De Klein Duivel</p>
+<p>Petrus aged pale ale (sour)</p>
+<p>Try it sometime: 92% of BA</p>
+<p>.</p>
+<p>The wine source — great European wines and Belgian beers</p>
+<p>.</p>
+<p>I’m no genius<br />
+But neither no follower<br />
+Guess I belongs to the wilderness<br />
+— Honey and locusts like John the Baptist!!!</p>
+<p>.</p>
+<p>Morales
+Fatboys<br />
+Dead at 52<br />
+Congestive heart failure<br />
+Tempting to make a morality tale of this</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Prince_Markie_Dee">https://en.wikipedia.org/wiki/Prince_Markie_Dee</a></p>
+<p>Real Love (Mary J. Blige) Song writer/Producer</p>
+<p>.</p>
+<p>Zoom Next %</p>
+<p>Alphafly<br />
+Vaporfly<br />
+Tempo</p>
+<p>.</p>
+<p>Cheap thrills<br />
+— Morality<br />
+— Women<br />
+— Revenge</p>
+<p>Original thrills<br />
+— Food<br />
+— Sex<br />
+— War</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+            2.Nephrectomy
+                          \
+                          3.Resiliency —&gt; 4.CKD —&gt; 5.Hospitalization 
+                          /
+                         1.kidney
+</pre></div>
+</div>
+<p>.</p>
+<p>AMC White Marsh 16
+4:40pm 8:20pm<br />
+8141 Honeygo Blvd, Baltimore, MD 21236</p>
+<p>Perring Pkwy<br />
+31C to White Marsh Blvd<br />
+R+ onto Perry Hall Blvd/Dave &amp; Busters</p>
+<p>.</p>
+<p>“On the other hand, conversely, could it be that the Greeks became more and more optimistic, superficial, and histrionic precisely in the period of dissolution and weakness—more and more ardent for logic and logicizing the world and thus more “cheerful” and “scientific”?”</p>
+<p>Excerpt From: Friedrich Nietzsche. “The Birth of Tragedy and The Case of Wagner.” Apple Books. <a class="reference external" href="https://books.apple.com/us/book/the-birth-of-tragedy-and-the-case-of-wagner/id420541400">https://books.apple.com/us/book/the-birth-of-tragedy-and-the-case-of-wagner/id420541400</a></p>
+<p>.</p>
+<p>“In the mountains the shortest way is from peak to peak, but for that route thou must have long legs. Proverbs should be peaks, and those spoken to should be big and tall”</p>
+<p>Excerpt From<br />
+Thus Spoke Zarathustra<br />
+Friedrich Nietzsche<br />
+<a class="reference external" href="https://books.apple.com/us/book/thus-spoke-zarathustra/id1317362608">https://books.apple.com/us/book/thus-spoke-zarathustra/id1317362608</a><br />
+This material may be protected by copyright.</p>
+<p>.</p>
+<p>Nike<br />
+Alphafly<br />
+Warranty??</p>
+<p>Sole is falling apart within three weeks!!</p>
+<p>.</p>
+<p>Critiquing my auteurs:<br />
+1.Woody Allen. Idealist, always looking back at failed relationships and what might have prevented their demise</p>
+<p>2.Tarantino. Revengeful, resentful characters, one big end-all &amp; be-all mission, plot-point, stalled by obsequious banter, then blood 🩸</p>
+<p>3.Coen brothers. Meaninglessness of everything, especially the pursuit of money. Human errors have never been so glorified on TV<br />
+Thrills for the weak ☝🏾</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>In ERGOT terms
+My relationship to Dorry
+Like Boyz 2 Men to Babyface
+Biggest hits attributed to the combo
+Face has never reproduced End-of-the-road or
+Make Love To You with some other artist
+No have Boyz 2 Men reproduced 
+These without him
+As so is it with me
+JAMA papers of 2010 and 2014
+ERGOTs biggest hits ever
+Dorry’s biggest hits ever
+So its attributable to the two-way interaction!
+</pre></div>
+</div>
+<p>.</p>
+<p>Belgian beer must be paired !!</p>
+<p>.</p>
+<p>“When the English actually believe that they know “intuitively” what is good and evil, when they therefore suppose that they no longer require Christianity as the guarantee of morality, we merely witness the effects of the dominion of the Christian value judgment and an expression of the strength and depth of this dominion: such that the origin of English morality has been forgotten, such that the very conditional character of its right to existence is no longer felt. For the English, morality is not yet a problem.”</p>
+<p>Excerpt From<br />
+Twilight of the Idols<br />
+Friedrich Nietzsche<br />
+<a class="reference external" href="https://books.apple.com/us/book/twilight-of-the-idols/id1101368153">https://books.apple.com/us/book/twilight-of-the-idols/id1101368153</a><br />
+This material may be protected by copyright</p>
+<p>.</p>
+<p>Am I a flâneur?</p>
+<p>.</p>
+<p>Forever my lady<br />
+Beautifully glorifies human errors<br />
+Recorded between 1990-1991<br />
+Album release is May 28, 1991<br />
+Quincy B. Sure! Was born on June 4, 1991<br />
+Kim Porter and Al B. Sure!<br />
+Divorced not long after<br />
+Marriage was 1989-1990</p>
+<p>.</p>
+<p>Gideon — Father<br />
+Abimelech — Son (ie my father is king)</p>
+<p>.</p>
+<p>Once upon a time, some 20+ years ago, Prince Sempa asked a beautiful princes “Will you marry me?” The princes said yes, and the prince lived forever in fury over young men who can’t see the light like he did!</p>
+<p>.</p>
+<p>Battles<br />
+— Brandy &amp; Monica (real dual, not mere duet)<br />
+— Jam &amp; Lewis (rival bands and battles)<br />
+— Funky bottom (Lewis) vs Pretty top (Jam)<br />
+— Hood (Monica) vs Huxtables (Brandy)<br />
+— Sweat vs Teddy Riley</p>
+<p>.</p>
+<p>— Cards are 3.2 x 2.1<br />
+— A wallet should be around that<br />
+— Therefore, TRAVINDO at 4.5” x 3.1” x 0.6” doesn’t cut it!</p>
+<p>.</p>
+<p>I’m at a point where I fully understand folks who abuse psychoactive drugs. And these are folks from all social hierarchies but who have become numbed by the senselessness of modern life — they could do with some stimulation</p>
+<p>For my part, running 9 miles in under 90 minutes and as frequently as possible provides some respite. It causes pain to the shins and soleus and makes me feel something — even alive!!</p>
+<p>.</p>
+<p>Lisa Jones (Married to hilarious Muzungu)<br />
+Stephanie Rawlings-Blake (2yrs Junior)<br />
+Also, Lisa is 💯 Macey</p>
+<p>.</p>
+<p>American songbook sheet music</p>
+<p>.</p>
+<p>Investigate this theory:<br />
+West Africa — Sprint<br />
+East Africa — Endurance</p>
+</section>
+<section id="id12">
+<h1>08/2021<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h1>
+<p><a class="reference external" href="https://www.beeradvocate.com/beer/profile/25888/457684/">https://www.beeradvocate.com/beer/profile/25888/457684/</a></p>
+<p>Coffee stout (2020 dark matter coffee)</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>9 mile run records as of 8/3/2021
+2021
+8/5 - 8’37” *** second best over 9 miles 
+8/3 - 8’39” *** third best over 9 miles 
+7/31 - 8’34” *** best over 9 miles 
+7/3 - 8’58”
+
+2020
+12/12 - 9’13”
+12/06 - 9’04”
+
+2019
+9/14 - 9’14”
+9/07 - 9’56”
+3/17 - 8’48” 
+2/23 - 8’56”
+
+2018
+12/18 - 9’09”
+12/10 - 8’42”  *** Fourth best ever 
+12/04 - 9’05”
+11/11 - 10’34”
+
+2017
+12/03 - 8’34” (3 mile)
+12/02 - 7’32” (3mile) * best on record over 3mi
+9/08 - 8’41” (3 mile) 
+07/2021 — 100miles
+05/2021 — 111miles
+11/2018 — 110miles
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Tyler Perry is a self-made billionaire<br />
+He understands what it takes to become<br />
+Yet instead he creates preachy characters<br />
+We are never seduced by any story of becoming<br />
+At bottom of his film and TV one finds this failure</p>
+<p>.</p>
+<p>Explains why artist seduce millions of folks
+May even seduce one into a relationship<br />
+But because a relationship is about becoming,<br />
+And art about magic, illusions, genius beings—<br />
+The man is found out and the relationship fails</p>
+<p>.</p>
+<p>I’m poorly calibrated for calorie replacement after a run</p>
+<p>Hence forth, I’ll only savor food — never for the “fill”</p>
+<p>Maybe enjoy beer more?</p>
+<p>.</p>
+<p>Ones gotta learn Italian<br />
+And maybe Español<br />
+So musical, dulcet —</p>
+<p>.</p>
+<p>This was the era of the “Gentleman’s C” -<br />
+Where overzealous studiousness was<br />
+Frowned upon by the scions of<br />
+American’s regnant WASP aristocracy.<br />
+— Stephen Greenblatt at Yale</p>
+<p>.</p>
+<p>When Paul Chelimo wins bronze for USA<br />
+Is it an American process at work?<br />
+Say openness to immigration ??</p>
+<p>And when Marvell Jacob’s wins gold for Italy<br />
+Does one celebrate an Italian process?<br />
+Like intermarriage with an African-American?</p>
+<p>But witness Italy win the men’s 100m x 4<br />
+Lorenzo Patta, Marcell Jacobs, Eseosa Desalu<br />
+Filippo Tortu — Only the Italian process counts!!</p>
+<p>.</p>
+<p>I’m not interested in burning calories<br />
+I’m interested in performance</p>
+<p>.</p>
+<p>Oxtail<br />
+Two patties — beef only<br />
+Coconut bread</p>
+<p>.</p>
+<p>Benoni</p>
+<p>.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/NN_Running_Team">https://en.wikipedia.org/wiki/NN_Running_Team</a></p>
+<p>.</p>
+<p>Olympics<br />
+Male/Female competitions<br />
+Intersex<br />
+Semenya<br />
+Christine Mboma</p>
+<p>x</p>
+<p>Values<br />
+Fairness<br />
+Nature<br />
+Interventions<br />
+Gaussian distribution of testosterone</p>
+<p>.</p>
+<p>Hamlet is Shakespeare moralizing about all sorts of things<br />
+There is really no action throughout the play<br />
+And somehow folks think it’s a great work?<br />
+Probably because we like to read self-help<br />
+Especially when its from a “proven” authority</p>
+<p>.</p>
+<p>Ms. Shirley — Thomas is the manager (earphones with mic 🎙)</p>
+<p>He calls me by name and handed me a loyalty card :)</p>
+<p>Ms. Micheala has served me most. She’s nice. And she brought me tea and asked whether I’d be having Grapefruit brûlée without me prompting!</p>
+<p>Brian’s looks like Thomas — at least with mask on, physique is same. Maybe jelled hair? Find what distinguishes him</p>
+<p>.</p>
+<p>TV series written by women<br />
+— Talk<br />
+— Talk<br />
+— Talk<br />
+— Know how you feel<br />
+Men would rather commit suicide</p>
+<p>.</p>
+<p>Movie that inspired end of the road!!</p>
+<p>.</p>
+<p>“I shall th’ effect of this good lesson keep<br />
+As watchman to my heart. But, good my brother,<br />
+Do not, as some ungracious pastors do,<br />
+Show me the steep and thorny way to heaven;<br />
+Whilst, like a puff’d and reckless libertine,<br />
+Himself the primrose path of dalliance treads<br />
+And recks not his own read”</p>
+<p>Excerpt From<br />
+Works of William Shakespeare<br />
+William Shakespeare<br />
+<a class="reference external" href="https://books.apple.com/us/book/works-of-william-shakespeare/id370188174">https://books.apple.com/us/book/works-of-william-shakespeare/id370188174</a><br />
+This material may be protected by copyright.</p>
+<p>.</p>
+<p>Thrift, thrift, Horacio!<br />
+Indeed, indeed, sirs, but this troubles me.<br />
+Fear it, Ophelia, fear it, my dear sister;<br />
+For the apparel oft proclaims the man;</p>
+<p>.</p>
+<p>Grubhub<br />
+8/15/21<br />
+Savior African Restaurant<br />
+<span class="math notranslate nohighlight">\(45.35  
+Did they cutoff \)</span>17??<br />
+For the Tilapia they didn’t send??</p>
+<p>.</p>
+<p>8/15/21</p>
+<p>Episcopalian church on University
+The two J’s<br />
+— Jay?
+— Jen?
+Great conversation<br />
+Show up!<br />
+Organists on demand !!</p>
+<p>.</p>
+<p>Sour Flanders<br />
+Flanders Red<br />
+Great styles!!</p>
+<p>.</p>
+<p>“We gave them everything… What we couldn’t give them was the Will to Fight..”<br />
+— Biden</p>
+<p>.</p>
+<p>Tarantino doesn’t do rushed plots or scenes<br />
+He indulges in every scene and clearly enjoys himself<br />
+Overflowing banter and obsequious stuff is in overplus<br />
+Serves to define the resentment felt by lead<br />
+Prepares the audience for the ultimate catharsis in revenge</p>
+<p>.</p>
+<p>Tyler Perry:<br />
+Are you sure?<br />
+SMH!</p>
+<p>.</p>
+<p>Nike Flyknit — Nike engineered a fabric that fits like a sock</p>
+<p>.</p>
+<p>One should not mistake Malthus for nature</p>
+<p>.</p>
+<p>— While watching Gossip Girl —</p>
+<p>Why do people like The Wire so much?</p>
+<p>Because the true villain is the system</p>
+<p>The Wire treated its audiences as intelligent people</p>
+<p>When television history is written, little else will rival ‘The Wire.’</p>
+<p>Because it resists typecasting. The vast majority of shows fit people into something of a mold, and usually into a binary set of categories— hero vs. villain, smart vs. stupid, calculated vs. impulsive. The Wire doesn’t do that. Every significant character is multi-layered and complex. Their flaws and their virtues are gradually revealed through their actions rather than expressed in simple terms. Characters who are tragically flawed in some ways are prodigious in others. And the show does a phenomenal job of showing how most of those characters became who they were. That makes it maybe the most impressive TV series ever created.</p>
+<p>.</p>
+<p>Episode after episode of earth-shattering pettiness<br />
+And rushed scenes of glamour as an excuse for a plot point</p>
+<p>.</p>
+<p>Injuries after upgrading to size 12<br />
+— left big toe<br />
+— left shin</p>
+<p>.</p>
+<p>Forescast<br />
+Heinrich<br />
+Nietzsche</p>
+<p>.</p>
+<p>Bagel, schmear &amp; lox</p>
+<p>.</p>
+<p>Pleasure from senses<br />
+But what about from power?</p>
+<p>.</p>
+<p>Explanations!<br />
+Apologies!<br />
+Makeup’s<br />
+Breakups<br />
+Plotting<br />
+Conniving<br />
+Soapbox</p>
+<p>.</p>
+<p>“You look like a million bucks before taxes!” he declared to the long-legged blonde</p>
+<p>.</p>
+<p>Gelato 🍨 vs Ice-cream 🍦</p>
+<p>.</p>
+<p>Gossip girl<br />
+— Anticipated social media frenzy, influencers<br />
+— But missed the financial angle to it all<br />
+— That’s where Zuckerberg came in</p>
+<p>.</p>
+<p>Gossip Girls<br />
+S5 E13: G.G.<br />
+27:46/42:12</p>
+<p>Only redeeming moment:<br />
+Oh, Siras, one father is not enough!</p>
+<p>Oh, another redeeming moment:<br />
+S5 E24: The Return of the Ring<br />
+32:56/42:10</p>
+<p>Chuck: Now I have nothing<br />
+Blair: You have me<br />
+Chuck: It’s not enough! … I don’t wanna be Mr. Blair Waldorf (with contorted face)</p>
+<p>Episode &amp; series should have ended here!!</p>
+<p>.</p>
+<p>How about looking for redeeming qualities in people, organizations, cultures? Never criticize! Leverage!</p>
+<p>.</p>
+<p>Houblon Chouffe!!<br />
+IPA Tripel :)</p>
+<p>.</p>
+<p>Watch gossip girls<br />
+Ask yourself this:<br />
+Is this depiction of men real?<br />
+From the female perspective?<br />
+No, no, no!</p>
+<p>Might women view male<br />
+Depictions of women<br />
+Similarly?<br />
+Likely so<br />
+Balanced out!</p>
+<p>.</p>
+<p>Gossip girl has the incoherence of<br />
+Midsummer Nights dream<br />
+But no compelling origin of the frenzy<br />
+The Bard gave us errant fairies 🧚‍♀️<br />
+Here we have dull, contrived relationships</p>
+<p>.</p>
+<p>Busboys make better Burgers than Koopers<br />
+Maybe it’s the gentler traffic?<br />
+Overheated grills screw shitup</p>
+<p>.</p>
+<p>Diet or exercise?</p>
+<p>— % body fat, BMI/2, 15% for me, 31 lbs<br />
+— % muscle, 85%, 172 lbs<br />
+— insulin resistance vs multi-system regulation<br />
+— demand (body) vs supply (diet, oxygen)<br />
+— exercise is proportionately largest demand</p>
+<ol class="arabic simple">
+<li><p>Impossible to exercise without eating, but possible to eat without exercising</p></li>
+<li><p>Since use-disuse atrophy is a fact, no amount of good food can build muscle. Only exercise!</p></li>
+<li><p>Therefore emphasize should be on exercise alone. Dietary demands will adapt to it :)</p></li>
+</ol>
+<p>.</p>
+<p>Annual activity by Apple Watch</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="mi">18</span><span class="o">+</span><span class="mi">27</span><span class="o">+</span><span class="mi">82</span><span class="o">+</span><span class="mi">111</span><span class="o">+</span><span class="mi">64</span><span class="o">+</span><span class="mi">100</span><span class="o">+</span><span class="mi">100</span>
+<span class="mi">500</span> <span class="n">miles</span> <span class="n">run</span> <span class="kn">from</span> <span class="nn">Jan</span> <span class="o">-</span> <span class="n">Aug</span><span class="p">,</span> <span class="mi">2021</span>
+
+<span class="mi">27</span><span class="o">+</span><span class="mi">25</span><span class="o">+</span><span class="mi">46</span>
+<span class="mi">98</span> <span class="n">miles</span> <span class="n">run</span> <span class="kn">from</span> <span class="nn">Sep</span> <span class="o">-</span> <span class="n">Dec</span><span class="p">,</span> <span class="mi">2020</span>
+
+<span class="mi">36</span><span class="o">+</span><span class="mi">36</span><span class="o">+</span><span class="mi">73</span><span class="o">+</span><span class="mi">73</span><span class="o">+</span><span class="mi">46</span><span class="o">+</span><span class="mi">25</span><span class="o">+</span><span class="mi">27</span>
+<span class="mi">316</span> <span class="n">miles</span> <span class="n">run</span> <span class="kn">from</span> <span class="nn">Feb</span> <span class="o">-</span> <span class="n">Dec</span><span class="p">,</span> <span class="mi">2019</span>
+
+<span class="mi">13</span><span class="o">+</span><span class="mi">23</span><span class="o">+</span><span class="mi">35</span><span class="o">+</span><span class="mi">7</span><span class="o">+</span><span class="mi">5</span><span class="o">+</span><span class="mi">110</span><span class="o">+</span><span class="mi">73</span>
+<span class="mi">266</span> <span class="n">miles</span> <span class="n">run</span> <span class="kn">from</span> <span class="nn">Jan</span> <span class="o">-</span> <span class="n">Dec</span><span class="p">,</span> <span class="mi">2018</span>
+
+<span class="mi">25</span><span class="o">+</span><span class="mi">25</span>
+<span class="mi">50</span> <span class="n">miles</span> <span class="n">run</span> <span class="kn">from</span> <span class="nn">Nov</span> <span class="o">-</span> <span class="n">Dec</span><span class="p">,</span> <span class="mi">2017</span>
+</pre></div>
+</div>
+<p>.</p>
+<p>Entourage (2004-2011)</p>
+<p>vs</p>
+<p>Gossip Girls (2007-2012)</p>
+<p>.</p>
+<p>Weight goals (BMI/Construct-Driven) .</p>
+<p>vs.</p>
+<p>Performance goals (Minutes/Mile-Driven)</p>
+<p>.</p>
+<p>Tentative names.</p>
+<ul class="simple">
+<li><p>GTPCI Advisor: Julie Hoover-Fong</p></li>
+<li><p>Thesis Mentor: Dorry Segev</p></li>
+<li><p>Someone in GTPCI: Karen Bandeen-Roche</p></li>
+<li><p>Primary SPH: David Celentano</p></li>
+<li><p>SPH or SOM: Pete Miller</p></li>
+</ul>
+<p>Alternates</p>
+<ul class="simple">
+<li><p>GTPCI: Fabian Johnston  <a class="reference external" href="mailto:fjohnst4&#37;&#52;&#48;jhmi&#46;edu">fjohnst4<span>&#64;</span>jhmi<span>&#46;</span>edu</a></p></li>
+<li><p>SPH: Brian Caffo</p></li>
+</ul>
+</section>
+<section id="id13">
+<h1>09/2021<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h1>
+<p>Kipchoge more beautiful than Hamilton<br />
+120,000 fans lined the streets of Vienna<br />
+October 12, 2019<br />
+Just for him<br />
+Rock star or what?</p>
+<p>.</p>
+<p>Outdoor walks from Dec 2020 - July 2021<br />
+9+8+35+35+55 = 142 MILES</p>
+<p>Outdoor runs from Sep 2020 - Aug 2021<br />
+46+25+27+18+27+92+111+64+100+100 = 610 MILES</p>
+<p>Total of 752 MILES !!!</p>
+<p>.</p>
+<p>Baby got back!</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=w59e20ijOpE">https://www.youtube.com/watch?v=w59e20ijOpE</a></p>
+<p>.</p>
+<p>According to Nietzsche this tendency to worship the genius serves the psychological purpose of enabling us to feel satisfied living a mediocre life, and comforted in our failure to strive towards some grand goal or vision. If genius is an inborn gift, either we have the potential for genius or we don’t</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Markups  
+OJ @Miss Shirley’s — 2,331%  
+52 ounces = $2.69 at Giants (6.5 servings)  
+8 ounces = $4 at Miss Shirleys    
+
+Trappists @De Kleine Duivel — 100%  
+Westmalle $12 vs $6  
+Rochefort $15 vs $7  
+Orval $12 vs $6  
+Chimay $14 vs $6 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0g.κοσμογονία,γ Life
+1f.ἡ ἔρις,κ Might
+2e.πρᾶξις,σ Truth
+3e.ἄσκησις,μ Rigor
+4d.∫δυσφορία.dt,ψ Error
+5c.φάρμακον,δ Sloppy
+6b.ομορφιά,β Fraud 
+7a.τάξη,α Philistines
+
+Life is principally will-to-power or else discontent
+Might makes right and there’s little need to explain
+Let one defend their truth — their values — by war
+A moral-stance will be judged rigorous or sloppy by time
+Dysphoria as sure evidence of wrongness of ones philosophy
+Self-medication with pharmacological or other distractions as symptom
+Only an approach beyond good and evil recognizes these downstream symptoms as such
+The philistine finds ugly meanings in beautiful things but the cultivated appreciate the genealogy of this morality
+I’d hereby like to conclude that this brings Dostoevsky, Shakespeare, Wilde, Nietzsche, and Yours truly into marvelous fellowship
+</pre></div>
+</div>
+<p>credo <a class="footnote-reference brackets" href="#id27" id="id14">17</a></p>
+<p>.</p>
+<p>Mother’s —&gt; Love —&gt; Comfort —&gt; Stunting</p>
+<p>.</p>
+<p>Freedom to worship
+Freedom to dissent<br />
+Freedom to evade taxes<br />
+Freedom to reject vaccine mandates<br />
+All these are “freedoms” in Rousseau’s sense</p>
+<p>But Freedom is becoming— a lover, idolator of ones fate!</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+
+
+
+ Problem with Socrates
+ Morality as anti-nature
+ Improvers of mankind
+                         \
+                          Reason in Philosophy
+                       Four great errors        —&gt;  What I owe the ancients —&gt; The Hammer Speaks
+                          Skirmishes of an untimely man
+                         / 
+                         Maxims and Arrows
+                         How Truth became fable
+                          What Germans lack
+</pre></div>
+</div>
+<p>.</p>
+<p>Train<br />
+Eat<br />
+rest<br />
+repeat</p>
+<p>.</p>
+<p>Augmented 7th chord!</p>
+<p>.</p>
+<p>Swimming<br />
+— 7 item checklist<br />
+— Weekends<br />
+— Just do it!</p>
+<p>.</p>
+<p>Beer in Baltimore<br />
+The wine source<br />
+<a class="reference external" href="https://www.thewinesource.com">https://www.thewinesource.com</a><br />
+3601 Elm Ave</p>
+<p>Behind Luigi’s Italian Deli on 36th</p>
+<p>.</p>
+<p>According to Nietzsche this tendency to worship the genius serves the psychological purpose of enabling us to feel satisfied living a mediocre life, and comforted in our failure to strive towards some grand goal or vision. If genius is an inborn gift, either we have the potential for genius or we don’t</p>
+<p>.</p>
+<p>Ommegang — Quad (Three Philosophers)<br />
+Wine source<br />
+Priority on Sep 15</p>
+<p>Ask Abe to bring Chimay-Green if at all this is possible<br />
+Special 150th Anniversary Edition<br />
+Thats this year: 2021</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+mRNA
+Spike protein
+Neutralizing antibodies
+Cross-reaction with own proteins
+Side-effects
+
+https://www.nebraskamed.com/COVID/where-mrna-vaccines-and-spike-proteins-go
+
+Dendritic cells (DCs) are professional antigen-presenting cells that link innate and adaptive immunity and are critical for the induction of protective immune responses against pathogens
+
+mRNA is processed by dendritic APCs, HIV (with its reverse transcript) infects CD4+ cells
+
+Unlikely that “leaked” reverse transcriptase from CD4+ cells will cause mRNA in dendritic cells to incorporate the spike protein code into DNA
+
+X
+
+https://www.chop.edu/news/news-views-3-questions-you-will-get-about-new-mrna-vaccines
+
+
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Kylie Minogue<br />
+— Come on do the locomotion</p>
+<p>Soulja Boy Tell ‘Em<br />
+— Crank That</p>
+<p>.</p>
+<p>Dosteovsky and Nietzsche agree on one thing:<br />
+Weakness sooner trades freedom for slavery (and bread)<br />
+Bets on happiness 1(Constant)/5(Shapeshifting)<br />
+Mwijje Mwena Abaruhire Nimwe <a class="reference external" href="https://www.youtube.com/watch?v=XPMWcH1ZPms">Abaremerirwe</a> Yesu Nabahumuriza: Matthew 11:28-30  <a class="footnote-reference brackets" href="#id28" id="id15">18</a></p>
+<p>.</p>
+<p>Success is accorded not only to victory — which would be mere teleology and consequentialism — but sometimes to the desire for victory too.</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#Goals 
+Miles 1-4 7’30”
+Miles 5-9 8’20”
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+Markups
+OJ @Miss Shirley’s — 2,331%
+52 ounces = $2.69 at Giants (6.5 servings)
+8 ounces = $4 at Miss Shirleys  
+
+Trappists @De Kleine Duivel — 100%
+Westmalle $12 vs $6
+Rochefort $15 vs $7
+Orval $12 vs $6
+Chimay $14 vs $6
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Actuarial models<br />
+Exponential functions<br />
+But at best for the average<br />
+Individualized estimates flawed<br />
+Growth of income both for<br />
+C-suit &amp; bathroom cleaner<br />
+Only consider upside<br />
+Never damage they could cause<br />
+To household or general economy</p>
+<p>.</p>
+<p>What is freedom?<br />
+The freedom to pretend!<br />
+We feel entitled to our affections<br />
+In Afghanistan the curtain comes down<br />
+Turning Point: 9/11 — S1 E4</p>
+<p>Freedom is living in the wilderness<br />
+On honey, locusts, and roots<br />
+Any access to bread is a benefit..<br />
+Coming from a community, thus duty!!<br />
+No individual can produce bread on their own</p>
+<p>.</p>
+<p>As of 9/11/21<br />
+6/10 of ERGOTs top ten hits are about living kidney donors</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+0g.κοσμογονία,γ Life
+1f.ἡ ἔρις,κ Might
+2e.πρᾶξις,σ Truth
+3e.ἄσκησις,μ Rigor
+4d.∫δυσφορία.dt,ψ Error
+5c.φάρμακον,δ Sloppy
+6b.ομορφιά,β Fraud 
+7a.τάξη,α Philstines
+
+x
+
+How do you “defend” your values?
+By debate/quarreling/whining? Or by willingness to go to war?
+That is the question that separates two fellas:
+Modern man from his stronger predecessor: the heathen 
+Defend here is literal— not literal as the modern man of literature and words has become
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+0g.κοσμογονία,γ Life
+— Egypticism
+— Greco-Roman 
+1f.ἡ ἔρις,κ Might
+— Frail
+— Robust
+2e.πρᾶξις,σ Truth
+— Peace
+— War
+3e.ἄσκησις,μ Rigor
+— Moral
+— Amoral
+4d.∫δυσφορία.dt,ψ Error
+— Grave
+— Free Spirit
+5c.φάρμακον,δ Sloppy
+— Drugs
+— Frenzy
+6b.ομορφιά,β Fraud 
+— Pretentious 
+— Solitary
+7a.τάξη,α Philistines
+— Good &amp; Evil
+— Beyond Good &amp; Evil
+</pre></div>
+</div>
+<p>.</p>
+<p>Kipchoge BMI = 18<br />
+Elaine Thompson-Herah = 19.3<br />
+Usain Bolt = 24.7<br />
+Lamont Marcell Jacobs = 24.3<br />
+Cristiano Ronaldo = 24<br />
+Yours Truly = 26.6</p>
+<p>.</p>
+<p>Running: 140 calories/mile<br />
+Walking: 100 calories/mile<br />
+Demand: 40% increase<br />
+Swimming: 410 calories/mile</p>
+<p>.</p>
+<p>You know, Walter, you are right: there is an unspoken message here and it says “Fuck you and leave me alone!”</p>
+<p>.</p>
+<p>Date-nut-fig energy rolls</p>
+<p>.</p>
+<p>“The dude abides! I don’t know about you, but I take comfort in that. It’s good knowing he is out there, The Dude, taking it easy for all us sinners… That just about wraps it all up…”<br />
+— The Big Lebowski, 1998</p>
+<p>.</p>
+<p>Feminine plots are about interpersonal relationships from family, to church, to school, to work</p>
+<p>Masculine plots are similar but they go beyond work to government, to internecine, to international, to war  <a class="footnote-reference brackets" href="#id29" id="id16">19</a></p>
+<p>.</p>
+<p>Stompetoren Grand Cru<br />
+A favorite Dutch Aged Gouda</p>
+<p>.</p>
+<p>Hemingways, Nairobi Sunday brunch  —<br />
+J’s recommended — he ate!!!<br />
+Unlimited Sushi</p>
+<p>.</p>
+<p>Cut -40
+10 seconds off Mile 4<br />
+14 seconds off Mile 5<br />
+16 seconds off Mile 9</p>
+<p>Added +26<br />
+26 seconds to Mile 8</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     Priest
+            \
+             Trader —&gt; Slave
+            /
+           Warrior
+</pre></div>
+</div>
+<p>.</p>
+<p>Its 7:07pm
+September 21, 2021<br />
+Craving absolutely nothing<br />
+Just had a burger, fries, key lime pie, tea</p>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=v_XT9-C5Qu8">16yo 2pac</a> in his b’more days</p>
+<p>.</p>
+<p>We moderns, with out anxious self-solitude and neighbor-love, with our virtues of work, modesty, legality, and scientism — accumulating, economic, machinelike — appear as a weak age. Our virtues are conditional on, are provoked by, our weaknesses</p>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>Breakfast — granola bar</p></li>
+<li><p>Lunch&#64;12pm — 18mo Gouda</p></li>
+<li></li>
+</ol>
+<p>.</p>
+<p>My favorite things</p>
+<p>Parmigiano-Reggiano, Vecchio<br />
+Gouda, 18mo<br />
+Sbrinz, 36mo</p>
+<p>.</p>
+<p>What does Ancient Greece mean to you?<br />
+Socrates? Plato? Aristotle?<br />
+Or Homer? Aeschylus? Sophocles? Perhaps Aristophanes?</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+9/23/21
+Home —&gt; Wine shop 
+3.70 MILES return 
+7,665 steps 
+349 calories 
+
+
+194.8 lbs night before 
+190.8 lbs by 2pm today 
+191.4 lbs by 2:54pm (after first meal)
+190.8 lbs by 6pm today (after a piss)
+__
+0.6 lbs gain after cheese 🧀 meal
+
+18yo Gouda, 0.25 lbs 
+36mo Sbrinz, 0.165 lbs 
+5oz Fig spread, 0.3 lbs 
+Chorizo el rey, 0.07 lbs
+Hot sopressata, 0.05 lbs
+Calabrian 3-way, 0.09 lbs
+__
+0.925 lbs 
+
+Unaccounted 0.325 lbs probably expired 
+Within +/-0.2 margin of error by declared by manufacturer
+
+Murkier maths after taking a piss 
+
+x
+
+191.0 lbs at 4:30am before :
+9 mile run, 3 mile walk
+186.8 lbs at 6:54am after taking shit and piss 
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p>How to update your weight:</p>
+<ol class="arabic simple">
+<li><p>Spend day before eating only cheese/fig</p></li>
+<li><p>Drink &lt;660ml water</p></li>
+<li><p>Calorie intake &lt;1200</p></li>
+<li><p>Weigh following morning at 4:30am</p></li>
+<li><p>Repeat after 9 mile run/3 mile walk
+That is a close an estimate of dry weight</p></li>
+</ol>
+<p>.</p>
+<p>Did this guy just say we are in “Pole Position” to let her go home? Hahaha!</p>
+<p>Agreed — the blood in urine is probably just injury from the catheter… the tube for passing urine</p>
+<p>Otherwise, I agree that she should go home. Someone over 93 should really be home because hospital is rarely a good   environment at that age. Let her be home with people she knows, family, etc.</p>
+<p>.</p>
+<p>Watch Ted lasso episode :)</p>
+<p>.</p>
+<p>Chino’s<br />
+— 36’ 32”<br />
+— Regular/Classic-fit<br />
+— GAP<br />
+— Two browns, One Grey, Khaki Navy Blue</p>
+<p>Pegasus 38<br />
+— Navy Blue<br />
+—</p>
+<p>Yogi Tea - Forever Young - 30.6g<br />
+— For daddy<br />
+— On amazon</p>
+<p>.</p>
+<p>Gouda — 0.4 .<br />
+Permesian — 0.4
+Manchego— 0.4<br />
+Olives 0.6<br />
+Nuts 4 oz</p>
+<p>.</p>
+<p>God created man<br />
+So how can he also be redeemer?<br />
+Huh?</p>
+<p>.</p>
+<p>#withdrawal<br />
+— I must withdraw from this class<br />
+— really doesn’t appeal to my interests, strengths<br />
+— the more I’ve studied it, the more I’ve appreciated that its not connected to my goals<br />
+— but is generally important for one to understand its basic tenets.. but not for a grade!</p>
+<p>.</p>
+<p>Heart beat = 1/300 calories<br />
+24<em>60</em>70/300 = 336 calories/day (i.e., 100,000 heart beats a day)</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+#nutrition
+
+Paulo on 9/26/21
+— 10 miles
+— 97 minutes
+— 9’40” per mile 
+— 16,918 steps 
+— Cadence 174 SPM 
+— 160 BPM 
+— 1003 calories 
+
+#exercize 
+
+Yours truly on 6/5/21
+— 9.3 miles 
+— 90 minutes 
+— 9’47” per mile 
+— 13,000 steps 
+— Cadence 152 SPM
+— 158 BPM
+— 1086 calories 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#cheese   
+
+— Edam 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#donda
+
+Some say Adam could never be a black man 
+Because a black man never shares his ribs 
+
+How Nietzsche felt after Wagners Parsifal 
+Is how I do after Kanye’s Donda 
+
+Looks like we have a case of frailty upon us!
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#blessed
+
+9/30/21 
+
+May 10’40”
+Jun 9’50”
+Jul 9’20”
+Aug 9’04”
+Sep 8’44”
+</pre></div>
+</div>
+</section>
+<section id="id17">
+<h1>10/2021<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h1>
+<p>Morality is a reaction to the senses — with terror! It’s actually comical</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+#fraud
+
+1.Elizabeth Holmes
+2.Balwani 
+3.Theranos
+4.Cleveland Clinic Deal — Fell through 
+5.Rigorous calibration against standards 
+
+#
+
+1.Claims
+2.Rigor
+3.Error
+4.Sloppy
+5.Fraud
+</pre></div>
+</div>
+<p>.</p>
+<p>Committee.</p>
+<ul class="simple">
+<li><p>GTPCI Advisor: Julie Hoover-Fong</p></li>
+<li><p>Thesis Mentor: Dorry Segev</p></li>
+<li><p>Someone in GTPCI: Karen Bandeen-Roche</p></li>
+<li><p>Primary SPH: David Celentano</p></li>
+<li><p>SPH or SOM: Pete Miller  
+ 
+Alternates</p></li>
+<li><p>GTPCI: Fabian Johnston</p></li>
+<li><p>SPH: Brian Caffo  
+ 
+Tentative dates</p></li>
+<li><p>3/11/22</p></li>
+<li><p>3/18/22</p></li>
+<li><p>3/25/22</p></li>
+<li><p>4/1/22</p></li>
+<li><p>4/8/22</p></li>
+<li><p>4/15/22
+ 
+.</p></li>
+</ul>
+<p>2 hour drive from:<br />
+Halle - Eisenach</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+<span class="o">&gt;</span><span class="mi">1000</span> <span class="n">calorie</span> <span class="n">budget</span>
+<span class="o">|||</span>
+
+<span class="o">&lt;</span><span class="mi">1000</span> <span class="n">calorie</span> <span class="n">budget</span>
+<span class="o">|||||</span> <span class="o">|||||</span> 
+
+<span class="n">Odds</span> <span class="n">of</span> <span class="n">weight</span> <span class="n">loss</span><span class="p">:</span> <span class="mi">6</span><span class="o">/</span><span class="mi">20</span> 
+
+<span class="n">X</span>
+
+<span class="n">Above</span> 
+<span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|||</span>
+
+<span class="n">below</span>
+<span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|||||</span> <span class="o">|</span>
+
+
+<span class="mi">23</span><span class="o">/</span><span class="mi">76</span> <span class="o">~</span> <span class="mi">6</span><span class="o">/</span><span class="mi">19</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+0g.κοσμογονία,γ Life
+— Egypticism
+— Roman 
+1f.ἡ ἔρις,κ Valuation
+— Frailty 🐑 
+— Robustness 🦅 
+2e.πρᾶξις,σ Crime &amp; Punishment 
+— Peace
+— War
+3e.ἄσκησις,μ Guilt 
+— Décadence 
+— Culture 
+4d.∫δυσφορία.dt,ψ Sickness
+— Memory
+— Forgetfulness 
+5c.φάρμακον,δ Treatment 
+— Opium 
+— Frenzy
+6b.ομορφιά,β Medium
+— Pretentious 
+— Light footed 💃🏾 🕺🏾 
+7a.τάξη,α Outcome 
+— Comfort
+— Recurrence 
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#action</span></code></p>
+<p>1.Rejection of transplant surgery because I’m a mere “spectator”, “commentator” — I’m taking no risks!! I’m an “objective” armchair scholar, half-priest, half-satyr, Renan-scented, who reveals all that he lacks, where he lacks it! I have neither taste nor patience for this: this person with nothing to lose by doing… : Genealogy of morality, Essay 3, Paragraph 26</p>
+<p>2.Embrace of sports medicine since it would allow me to be a tight-rope walker across several towers including orthopedic surgery, athletics, health, strength, culture, public health, gerontology and all the while serve as an antidote to the high priests of dietary nutrition who proselytize to the beef-eaters in the spirit of Sir Andrew.. : Twelfth Night</p>
+<p>3.Question all the brooding arts and professions — Hamlet-like — in their lack of action. Fortinbras, Achilles, Rugby 🏉: that’s more to my liking. Raise the matter with the ministry of education and sports in its condescending approach to PE. Meanwhile, get contracts with Ravens, Orioles, Cranes, etc</p>
+<p>.</p>
+<p>Basically, I’m so much more than that reference photo my sisters show their plastic surgeons.<br />
+— KKW</p>
+<p>.</p>
+<p>I’m a musician I don’t sample. When I sing my mic is on!</p>
+<p>Prince vs Michael: great agon!!</p>
+<p>.</p>
+<p>Hierarchy:</p>
+<p>Performance<br />
+Wellness<br />
+Disease</p>
+<p>Orthopedics!</p>
+<p>.</p>
+<p>Cissy Zibrel Akello</p>
+<p>.</p>
+<p>Ok — Moët bottle is coming your way. Being picked from the cellar. It has to be chilled first so may take about 15-20 minutes. Hang on just a bit !!</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#mato</span></code></p>
+<p>Jethro (American)<br />
+Jerome<br />
+J’hill (Singer)</p>
+<p>Ruta (Scottish Masterbrewer)
+Dora (Books, Publisher)<br />
+Ketcho (Book, Miscarriage)<br />
+Hinda (Book, Redemption)</p>
+</section>
+<section id="id18">
+<h1>11/2021<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#end 
+
+Wednesday 
+— Bobby 8:30pm 
+
+Thursday 
+— Mummy: 9am (Activity)
+— Lab: code to SRTR
+— Tayebwa: 10am
+— Grandma: 11am (Simeon)
+— Barber: 2pm
+— Umutoni: 4pm (Activity)
+— MM: 5pm ($1.06m)
+
+Friday 
+— America: 1pm
+— Gad: 4pm
+— Cisse: 7pm
+— MM: 850k
+— PK: 750k
+
+Saturday 
+— PCR: 9am 
+— Tea: 
+— Duncan: 2pm
+</pre></div>
+</div>
+<p>.</p>
+<p>EAC pass — download</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#carryon</span></code></p>
+<p>To never do favors for international travel</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PI (Cover Page)
+ABIMEREKI D MUZAALE , MD MPH PHD 
+
+Drop PHD
+
+Please see B.2 of attached RPPR from 2020
+— We can use this same B.2 with the following modification:
+— As outlined in the timeline of K08 application, the chief activity and goal of this period was PhD coursework. The PI matriculated as a GTPCI PhD student at Johns Hopkins University in 04/2020 and has been registered as a full-time student doing at least 16 credit units of course work in each term. The first term has be
+While no research was scheduled for this period, the PI is preparing for formative research by curating existing datasets for the research aims outlined in years 2 and 3 of the timeline.
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#belgian
+
+
+Belgian beer styles and exemplars 
+1.Quad — Rocheforte 10 
+2.Tripel — Westmalle
+3.Dubbel — Westmalle 
+4.Strong Golden Ale — Duvel 
+5.Golden Ale — Troubadour Blonde 
+6.Pale Ale — Orval 
+7.Flanders Red — Rodenbach Grand Cru 
+8.Oude Gueuze — Tilquin A l’ancienne 
+9.Belgian IPA — Houblon Chouffe
+10.Imperial Dark — Cuvée Van De Keizer
+11.Kriek/Quad  — Ommegang 3 Philosophers
+12.Saison — DuPont 
+Personal selections as of 9/15/21
+
+#1 monastery: Trappist Westvleteren
+
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+#weight 
+#creativedestruction
+#activity
+#orthopedics 
+#sportsmedicine 
+
+e = mc^2
+—&gt; anabolism (insulin, GH, ILGF, steroids)
+&lt;— catabolism (adrenaline, cortisol, glucagon)
+
+1 Lb = 3500 calories/week = 500/day deficit 
+
+#bestshapeofmylife
+
+will smith 
+deeply agrees with much here 
+
+“A mind that tries to seek pleasure and comfort and the easy way inadvertently poisons its dreams” W.S.
+
+9/26/21 
+— 8:45 pm 189.6 lbs 
+— 11:29 pm 189.4 lbs 
+
+9/27/21
+— 4:12 am 188.0 lbs 
+— 7:05 am 184.2 lbs*
+— 9:01 pm 190.4 lbs 
+— 11:05 pm 190.0 lbs
+
+9/28/21
+— 3:18 am 189.6 lbs 
+— 5:48 am 189.2 lbs
+— 6:00 am 188.4 lbs 
+— 9:30 am 192.0 lbs
+— 8:41 pm 194.2 lbs*
+
+*10 lbs difference 
+
+9/29/21 
+— 5:00am 192.0 lbs 
+
+9/30/21
+— 10:00am 192.4 lbs 
+— 12:51pm 191.4 lbs 
+— 5:50pm 192.4 lbs 
+
+10/1/21
+— 4:32am 192.2 lbs 
+— 6:30am 188.2 lbs 
+— 11:30am 188.0 lbs
+— 7:30pm 187.2 lbs 
+
+10/2/21
+— 5:00am 186.8 lbs 
+— 8:50am 183.8 lbs
+
+10/3/21
+— 6:36am 185.4 lbs
+— 9:58am 182.4 lbs 
+— 1:03pm 185.2 lbs 
+— 4:01pm 185.6 lbs 
+— 10:04pm 185.0 lbs 
+— 11:50pm 187.2 lbs 
+
+10/4/21
+— 8:00am 181.8 lbs***
+— 4:02pm 183.4 lbs 
+— 5:29pm 185.2 lbs 
+— 9:38pm 185.6 lbs 
+
+10/5/21
+— 2:00am 185.2 lbs 
+— 6:51am 184.6 lbs 
+— 4:55pm 186.2 lbs 
+— 6:52pm 185.8 lbs 
+— 11:42pm 185.4 lbs 
+
+10/6/21
+— 2:12am 185.0 lbs 
+— 5:56am 184.8 lbs 
+— 3:20pm 188.8 lbs 
+
+10/10/21
+— 10:48am 182.8 lbs 
+
+10/13/21
+— 2:30pm 182.8 lbs 
+— 4:00pm 183.6 lbs??? 
+
+10/14/21
+— 5:29am 182.4 lbs 
+— 8:34am 182.4 lbs 
+— 10:27am 181.8 lbs***
+
+0.3 lbs stompetoren gouda 
+0.3 lbs kristal gouda
+0.3 lbs mahon reserva 
+0.1 lbs finocciona 
+0.1 lbs chorizo el rey 
+0.1 lbs calabrian 3-way 
+0.1 lbs pepperoni 
+0.7 lbs orval 
+0.5 lbs gala apple 🍎 
+1.0 lbs water 
+1.0 lbs oude gueze 
+1.0 lbs water 
+1.0 lbs soup 🥣 
+__
+6.5 lbs 
+__
+
+— 2.04pm 186.3 lbs???
+— 6:37pm 188.3 lbs???
+— 6:39pm 187.8 lbs!!!
+
+10/15/21
+— 4:24am 184.4 lbs 
+— 6:15am 180.6 lbs 
+— 6:38am 180.2 lbs 
+— 7:32am 179.8 lbs 
+
+10/17/21
+— 6:49am 184.2 lbs 
+— 9:01am 180.8 lbs 
+— 11:59am 182.3 lbs 
+</pre></div>
+</div>
+<p>.</p>
+<p>Belfast cathedral choir
+There’s a wideness in God’s mercy <a class="footnote-reference brackets" href="#id30" id="id19">20</a></p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#aging</span></code></p>
+<p>Homeostenosis</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#culture</span></code></p>
+<p>— anthropometry from cradle to grave<br />
+— should be accountable to others<br />
+— but also physical performance (ie pace)</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#will</span></code></p>
+<p>Ambition — Nietzsche<br />
+Meaning — Kierkegaard<br />
+Pleasure — Freud</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#butterfly</span></code></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?app=desktop&amp;amp;v=6EJPqppOZ2Y">https://www.youtube.com/watch?app=desktop&amp;v=6EJPqppOZ2Y</a></p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#music</span></code></p>
+<p>there has never been a philosopher who has been in his essence a musician to such an extent as I am.</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#parenting</span></code></p>
+<p>I love only what a person has written with his blood</p>
+<p>— rollover helicopter parents!!</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#relationships</span></code></p>
+<p>— aunt Loy &amp; a genealogy in our family (e.g. abimereki, sefatia, brothers, self)<br />
+— there’s ancient curse<br />
+— reason to dismiss everybody: Rx.. dismiss the spirit<br />
+— we are attracted to time-wasters (never materialize)<br />
+— probably ancestors made a pact with devil to have sons..</p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>— she also revealed responsibility for harriet vanishing from kasese</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#feedback </span>
+
+<span class="n">art</span> <span class="ow">is</span> <span class="n">negative</span> <span class="n">feedback</span> 
+<span class="n">science</span> <span class="ow">is</span> <span class="n">positive</span> <span class="n">feedback</span> 
+</pre></div>
+</div>
+<p>.</p>
+<p>“To venture into many situations where one cannot get by with sham virtues, but where, like the tightrope walker on his rope, one either stands or falls — or gets away”</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#sláinte 
+
+sla-nche
+
+From Dublin— 
+Dave 
+Debby 
+Jane (American)
+</pre></div>
+</div>
+<p>.</p>
+<p>My heart speaks in puzzle and codes<br />
+I’ve been trying my whole life to solve</p>
+<p>No amount of love
+Can keep me satisfied<br />
+I can’t keep up<br />
+When I keep changing my mind</p>
+<p>The feelings flood me to the heights of no compromise</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#goals
+
+
+
+Domination — Ambition — Nietzsche
+Comfort — Meaning — Kierkegaard 
+Pleasure — Hedonism — Freud 
+
+X
+
+Henry V — ambition 
+Hamlet — meaning 
+Henry IV — pleasure 
+
+X
+
+Political Economy/Mega Church
+Religion/Metaphysics 
+Hedonism/Flâneur 
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#jazz
+
+— conversation among instruments 
+— kenny G is a solo masturbation
+— he is on record denying ancestry 
+— claiming he only plays from feelings
+— pleasure and not ambition or meaning 
+
+x
+
+— but pop is a system also 
+— more commercial than cultural 
+— producers, artists, engineers, etc 
+— kenny G &amp; clive Davis 
+</pre></div>
+</div>
+<p>.</p>
+<p>parmenides vs. heraclitus? <a class="footnote-reference brackets" href="#id31" id="id20">21</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#core
+
+
+What amazes me is the consistency of your personality from childhood. You are not excited by much. Anyone who approaches you with excitement is likely to leave disappointed and frustrated. Because you are an emotionless trained observer of the world
+
+Prof P.J.Muzaale aka dad 
+
+Said in response to my views on a chaotic meaningless universe vs. preferred metaphysical narratives— to err is human. Witness how evocative the pyramids, the Taj Mahal, or the best music are. It’s our errors that lead to our greatest achievements 
+</pre></div>
+</div>
+<p>.</p>
+<p>Love on top — Beyoncé<br />
+If this isn’t love — edition</p>
+<p>.</p>
+<p>Swangz Avenue</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#fortportal 
+
+288 km 
+16:00 departure 
+250,000 full tank (full tank, diesel, prado)
+21:30 arrival 
+Nyaika hotel 
+$160
+Checkout 10:00 
+Open to late checkout 
+
+12:00 departure 
+17:35 arrival 
+
+52 km/hr 
+</pre></div>
+</div>
+<p>.</p>
+</section>
+<section id="id21">
+<h1>01/2022<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#thesis 
+
+A framework for IT Project Implementation in Uganda 
+
+— Business process &amp; structure (hierarchical tree)
+— IT process &amp; structure (hierarchical tree)
+— Synergy 
+
+X Management/Not lacking.. 
+X Governance/This is what is going wrong
+
+X
+
+Aspects of governance (e.g. project risk) — subject 
+— object 
+</pre></div>
+</div>
+<p>.</p>
+<p>Marsupialization<br />
+Cefixime 2x1<br />
+Metronidazole</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+Pointers to the existence of God?
+
+1.This isn’t subject to scientific inquiry 
+2.It also commits the greatest human error 
+3.Reality is turned on it’s head 
+
+#1. Origin of an error
+— First, an abstract concept is introduced (ie God)
+— Second, human beings craving relief from a chaotic reality find comfort in this concept 
+— The said human beings will go to pains to prove or support the concept 
+
+#2. Where science differs 
+— First, a concrete aspect of reality that our senses can detect is introduced (eg our eyes see light, our ears hear sound, our nose smells molecules, our tongue detects molecules, our other senses detect vibrations, heat, cold, etc) real stuff!! 
+— Second, curious creatures called scientists document the impact of those external realities on their senses and attempt to reproduce this experience beyond their anecdotal experience (ie the trials are repeated across several observers) and statistical summary of the observations with a mean and variance is documented 
+— Finally, the findings are submitted for peer-review to weed out abstract concepts, clarify errors in logic, and ensure reproducibility of findings 
+
+As you can see, “God” isn’t subject to science
+</pre></div>
+</div>
+<p>.</p>
+<p>— Phillip Ntege</p>
+<p>.</p>
+<p>9b Prof Muzaale Close — Bazeyi<br />
+8 Prof Muzaale Close — J’s</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#hymns</span>
+
+<span class="n">Come</span> <span class="n">Oh</span> <span class="n">Long</span> <span class="n">Expected</span> <span class="n">Jesus</span> 
+<span class="n">Love</span> <span class="n">Divine</span> 
+<span class="n">Come</span> <span class="n">Holy</span> <span class="n">Ghost</span> 
+<span class="n">The</span> <span class="n">Lord</span> <span class="n">Is</span> <span class="n">My</span> <span class="n">Shepherd</span> 
+<span class="n">Be</span> <span class="n">thou</span> <span class="n">my</span> <span class="n">guide</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#idioms </span>
+
+<span class="n">Igumba</span> <span class="n">iwala</span> <span class="n">lifa</span> <span class="n">ni</span> <span class="n">ilizala</span>
+</pre></div>
+</div>
+<p>.</p>
+<p>Peckham, Denmark Hill, and Camberwell Green</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+#disruption
+
+1.Stata 
+— summer
+— 4th term
+
+2.R
+— summer 
+— 4th term 
+
+3.Primary SPH 
+— epidemiology 
+— aging, COAH 
+
+4.Surgery
+— databases 
+— clinicians strictly 
+</pre></div>
+</div>
+<p>.</p>
+<p>Ms. Ndagije,</p>
+<p>You’ve brought the greatest joy to my life merely by being who you are &amp; sharing a bit of you with me.</p>
+<p>Thank you!!</p>
+<p>Kadi</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+#mylife
+
+1980-2021
+— Understood root cause of human error: frailty
+
+2021-to-date
+— Testing peak performance on land &amp; in water 
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#theodicy</span>
+
+<span class="n">Jeremiah</span> <span class="mi">32</span><span class="p">:</span><span class="mi">32</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#RnB
+
+1.I don’t care (Ariana Grande) 
+2.You’re all I need to get by (Marvin Gaye) 
+3. 
+</pre></div>
+</div>
+<p>.</p>
+<p>Muddling through</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#classes
+
+— 140.642.71 sign of clinical experiments 
+— W-2 forms in ESS
+— https://sis.jhu.edu (overdue)
+— 
+
+
+
+
+1.Schedule
+2.Benchmarks (of courses)
+3.Oral exam
+4.Tuition remission/Emma
+5.Add/drop period ends Fri Jan 28th
+
+*covid test!!! 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+#mombasa 
+
+1.UG airlines reservation number: 3BG947 
+2.Booking.com reservation: 2917532304 
+3.ADMAS Entebbe: taxi at 5am, $16
+4.Tamarid restaurant: david recommended 
+5.E-ticket: 109-6963824869
+
+
+— Tamarid 
+— Jahazi 
+— 
+
+https:arrivals.health desk.go.UG/home/
+
+— 6pm. Arrive
+— 7pm. Munyonyo 
+— 8pm. Online registration 
+— 9pm. Doodle for oral exam 
+— 
+
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#idiom 
+
+— anoga duuma aziraku: mukyala 
+— plucked her flower 
+— twida kulya duma ki nga bamumazeku? mpaata 
+
+— irene instead “over interpretes” a concrete expression for a metaphor 
+
+1.Ideological 
+2.Metaphoric 
+3.Concrete
+</pre></div>
+</div>
+<p>.</p>
+<p>Rocket Health</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#ambition
+
+Nkoye tamala gugwe
+
+Bagalama — Bamwoze
+</pre></div>
+</div>
+<p>.</p>
+</section>
+<section id="id22">
+<h1>02/2022<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#japanese
+
+— nigiri 🍣 sake 
+</pre></div>
+</div>
+<p>.</p>
+<p><a class="reference external" href="https://hekint.org/2020/08/11/friedrich-nietzsche-much-afflicted-philosopher/">#mykindathing</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Friedrich Nietzsche—much afflicted philosopher
+
+
+ Portrait of Friedrich Nietzsche by Munch
+Friedrich Nietzsche by Edvard Munch. 1906. Thielska Gallerie, Sweden. Via Wikimedia.
+Friedrich Nietzsche was one of the most important philosophers of the nineteenth century. Though often misinterpreted, his influence has been enormous. Like his compatriot Schopenhauer, he questioned the comfortable beliefs of the conservative bourgeoisie of his time. His writings have fascinated generations of readers, his style was exquisite, his ideas original. Bertrand Russell called him an aristocratic anarchist.
+
+Nietzsche admired the Pre-Socratic philosophers and was sympathetic to the teachings of the Buddha. He formulated the concept of the overman or superman, of the eternal recurrence, of a Dionysian life of gaiety and heroism. For Nietzsche, Christianity was a failure because it promoted a slave-like mentality, and when he said God was dead, he meant it was the belief in God that was dead. He asked whether man was a mistake of God or God a mistake of man. He thought that spiritualizing sensuality as love represented a great triumph over Christianity. He despised the bourgeois “herd,” who loved the police more than their neighbor, and advocated a free life as the desirable state for great souls.
+
+In a section of the Twilight of the Idols (1888) titled “Morality for physicians,” Nietzsche proclaimed that the sick man was a parasite of society and that when the meaning of life and the right to live had been lost it was indecent and contemptible for a man to “vegetate in cowardly dependence on physicians and machines.”2 He argued that death should be freely chosen and cheerfully accomplished, amid children and witnesses instead of the “wretched and revolting comedy that Christianity has made of the hour of death.” “Die at the right time,” preached the hero of Thus Spoke Zarathustra (1883) as he came down from the rarefied atmosphere of his mountain bearing his eagle and his serpent. Yet sadly and paradoxically, this was not what happened to him after his collapse in Turin, and he lingered for many years, bedridden and demented.
+
+Nietzsche was born in 1844 near Leipzig in Saxony, Germany. He studied classical philology in Bonn and Leipzig, and at age twenty-four was the youngest person to ever be appointed to the chair of philology at the University of Basel (1869). He resigned from that position in 1879 for health reasons and completed most of his writing in the next decade in Switzerland and Italy. There he lived in increasing isolation, usually in a modest, coldly furnished room, his compositions strewn on the floor, an old trunk holding his only possessions of two shirts and a worn suit, and a tray displaying his numerous bottles of medications: chloral hydrate, opium, and barbiturates. Wrapped in his overcoat, his double glasses close to the paper, he wrote for hours, depressed, in pain, increasingly blind, and isolated.1
+
+We learn from “Nietzsche: in Illness and in Health” by William Gass that Nietzsche had been troubled by ill health most of his life.2 He had hemorrhoids and suffered from “gastric spasms.” He had bad eyesight, often fainted, had fits, and was scared of lightning, which made him hide under the covers. He sometimes vomited blood, for which he was given quinine. He followed prescribed diets seriously, ate only small pieces of meat with Carlsbad fruit salts, but changed his diets and physicians frequently. In the morning he had “his rectum flushed out with cold water.” He was treated with leeches applied to his ears, and these apparently partook of his blood while he partook of his wine.2 
+
+Nietzsche had suffered from migraines since he was nine years old. These were recurrent, severe, not preceded by auras, mostly localized to the right side, and often lasted several hours or even days.3 Visual problems began at age twelve, when he complained of tired eyes, and later of diminished vision. Later he was found to be blind in the right eye, and by 1878 he was almost completely blind. Depressive symptoms with suicidal ideas first appeared in 1882, followed by visual hallucinations (1884). The final breakdown occurred in Turin in 1889. There are several versions of this story, the most common being that he saw a man flogging his horse, rushed to him to stop him, collapsed, and was found hanging onto the horse’s neck.
+
+He was taken to a psychiatric clinic or asylum in Basel, where general paresis of the insane, quaternary neurosyphilis, was diagnosed. For the next decade, he remained in a bedridden vegetative state, insane and at times unmanageable. He had a series of strokes leading to impaired speech, facial paresis, and later a left-sided hemiplegia. He was cared for by his proto-fascist sister, who returned from South America and elaborated aspects of his philosophy that he had never expounded. He died in 1900 from pneumonia.
+
+It had long been thought that Nietzsche had suffered from neurosyphilis, general paresis of the insane, but several authorities have now disputed this diagnosis.3-6 Interestingly, the asymmetry of his pupils, an important sign of neurosyphilis, had been noted forty years earlier but was assumed to be a new finding. Other proposed causes of Nietzsche’s disease are meningioma, bipolar affective disorder followed by vascular dementia, a hereditary form of frontotemporal dementia, or mitochondrial encephalomyopathy with lactic acidosis and stroke-like episodes (MELAS), a disease presenting with stroke-like episodes, epilepsy, and neurologic deficits.4,5
+
+In 2008 neurologists from Ghent in Belgium carried out an extensive and meticulous review of original medical notes and other documents, mostly in German, and renewed their opinion that the clinical picture was not consistent with neurosyphilis. Instead, they proposed that Nietzsche had suffered the newly described neurological syndrome of cerebral autosomal dominant arteriopathy with subcortical infarcts and leukoencephalopathy or CADASIL.3 This inherited disease of blood vessels has been found to affect mainly the blood vessels supplying the white matter of the brain. In support of their diagnosis, they pointed out that Nietzsche’s father Ludwig had suffered from an illness running a similar course, with aphasia, multiple strokes, and dementia, becoming incapacitated and dying at age forty-six from “brain softening.” One younger brother also had migraines, suggesting this was a hereditary disease.3
+
+Still, the cause of Nietzsche’s death remains uncertain. It has been suggested that it could be established by an exhumation of the body and DNA testing on tissue and looking for skull imprints that would confirm the presence of a tumor.6 Some authors still favor an atypical form of syphilis as the most likely diagnosis.6 When all is said and done we may never know what killed this remarkable person. But more than a century later people still read him, and academicians argue about what he really meant. And for most of his readers, he remains stimulating, controversial, provocative, and fun to read.
+
+ 
+
+Further reading
+William H Gass. Nietzsche in Illness and in Health, in Life Sentences, Alfred A Knopf, New York, 2012.
+Walter Kaufmann: The Portable Nietzsche. The Viking Press, New York 1954.
+Hemelsoet D, Hemelsoet K, and Devreese D. The neurological illness of Frederic Nietzsche. Acta Neurol Belg 2008; 108:19p.
+Koszka. Friedrich Nietzsche (1844-1900): a classical case of mitochondrial encephalomyopathy with lactic acidosis and stroke-like episodes (MELAS) syndrome? Journal of Medical Biography 2009: 17(3):161.
+Tényi The madness of Dionysus — six hypotheses on the illness of Nietzsche. Psychiatr Hung. 2012;27(6):420
+Charles André C and Rios. Furious Frederich: Nietzsche’s neurosyphilis diagnosis and new hypotheses. Arq. Neuro-Psiquiatr. 2015; vol.73 no.12, São Paulo.
+ 
+
+ 
+
+GEORGE DUNEA, MD, Editor-in-Chief
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#nietzsche
+
+anatomy — cerebral, sub-cortical
+pathology — arteriopathy, infarcts, leukoenceph
+etiology — autosomal dominant 
+
+My paradise is “in the shadow of my sword”
+</pre></div>
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id3">13</a></span></dt>
+<dd><p>unprecedented career progress</p>
+</dd>
+<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id6">14</a></span></dt>
+<dd><p>non-parametric tests for jhustata?</p>
+</dd>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id9">15</a></span></dt>
+<dd><p>univariable analysis</p>
+</dd>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id10">16</a></span></dt>
+<dd><p>error of dimensionality reduction</p>
+</dd>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id14">17</a></span></dt>
+<dd><p>credo</p>
+</dd>
+<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id15">18</a></span></dt>
+<dd><p>fave idea</p>
+</dd>
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id16">19</a></span></dt>
+<dd><p>my thoughts be bloody, or be nothing worth</p>
+</dd>
+<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id19">20</a></span></dt>
+<dd><p>figure out a system to identify the tune of interest</p>
+</dd>
+<dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id20">21</a></span></dt>
+<dd><p>parmenides</p>
+</dd>
+</dl>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">01/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">02/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">03/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">04/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">05/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">06/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">07/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">08/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">09/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">10/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">11/2021</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">01/2022</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">02/2022</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
