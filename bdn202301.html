@@ -1,0 +1,1411 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>01/2023 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn202301';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/practicing.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/practicing.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.html">object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn202301.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/bdn202301.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>01/2023</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">01/2023</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">02/2023</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="id1">
+<h1>01/2023<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>Dr. Brian Kiggundu<br />
+Cardiology<br />
+Married to Jeff’s younger sis (Tina)</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#catechism
+
+01/23
+
+1.Falstaff
+2.Epicurus
+3.
+
+#1
+Who hath honor?
+He that died o’ Wednesday.
+
+Doth he feel it? 
+No.
+Why?
+‘Tis insensible to the dead.
+
+So do the living feel it?
+No.
+Why?
+Detractors will not suffer it 
+
+#2
+Able?
+Yes.
+Then not willing:
+Indifferent, paring nails 
+
+Willing?
+Yes.
+Then not able! 
+Defers to cosmic order 
+
+Happy?
+Yes.
+Then neither able, nor willing 
+</pre></div>
+</div>
+<p>.</p>
+<p>Marvin<br />
+Tayebwa<br />
+Daughter<br />
+Germany<br />
+Medical school</p>
+<p>.</p>
+<p>Namawanga— other tribe<br />
+Bakidi — other tribe<br />
+Gentile — other tribe</p>
+<p>.</p>
+<p>Emoji🤌🏿🤌🏿</p>
+<p>.</p>
+<p>9b Prof. Muzaale Cl</p>
+<p>Home address</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#mtn </span>
+<span class="mi">01</span><span class="o">/</span><span class="mi">23</span> <span class="n">tips</span>
+
+<span class="mf">1.</span><span class="n">Freedom</span> <span class="n">package</span>
+<span class="mf">2.</span><span class="n">One</span> <span class="n">month</span> <span class="n">data</span> 
+<span class="mf">3.</span><span class="n">Use</span> <span class="n">voice</span> <span class="n">more</span> 
+</pre></div>
+</div>
+<p>.</p>
+<p>Eifumo — spear
+Okutenga — brandish<br />
+Batebga — warriors</p>
+<p>Perspective of balamongi</p>
+<p>.</p>
+<p>Ndiko — concentration
+Muweire ndiko — diluted</p>
+<p>.</p>
+<p>St. Bernadus 6 (thick)<br />
+Leffe Bruine (Tea, sugar/caramel)<br />
+Chimay white (Orange/peel)</p>
+<p>— dads palate</p>
+<p>.</p>
+<p>Jackie— mwidha Na nhinha</p>
+<p>.</p>
+<p>Amazze emirimu gye (to the tune of rock of ages)</p>
+<p>.</p>
+<p>Egulu likusinza<br />
+Nemirimu gyona tebikowa</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#lusoga</span>
+
+<span class="n">Tiwebweine</span> 
+<span class="n">Girl</span> <span class="n">says</span> <span class="n">to</span> <span class="n">a</span> <span class="n">suitor</span> 
+<span class="n">Maybe</span> <span class="n">rage</span> <span class="n">of</span> <span class="n">Caliban</span> 
+</pre></div>
+</div>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?app=desktop&amp;v=usK9vtYlh2c">Songs</a> of the day</p>
+<p>.</p>
+<p>3rd/4th term</p>
+<p>140.628 (41) 4cr<br />
+Data Science for Public Health I</p>
+<p>Web app development project (aligns with Aim #3 of my thesis)<br />
+Letter grade to replace LONGITUDINAL METHODS (now offered in 1st term)</p>
+<p>.</p>
+<p>140.629 (41) .
+Data Science for Public Health II</p>
+<p>Caffo 4.00</p>
+<p>.</p>
+<p>9.321 miles in 68.6 minutes<br />
+7.35min per mile<br />
+7’21”/Mile</p>
+<p>.</p>
+<p>Eddie<br />
+Crystal</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#offertory
+
+St. Steven’s Kisugu
+CHURCH
+*165*4*4#
+Offertory tithe thanksgiving 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#hymns</span>
+
+<span class="n">My</span> <span class="n">God</span> <span class="n">how</span> <span class="n">wonderful</span> <span class="n">you</span> <span class="n">are</span> 
+
+<span class="n">The</span> <span class="n">lords</span> <span class="n">my</span> <span class="n">shepherd</span> 
+
+<span class="n">God</span><span class="p">,</span> <span class="n">whose</span> <span class="n">alright</span> <span class="n">word</span> 
+</pre></div>
+</div>
+<p>.</p>
+<p>Mismatched spezzato suit</p>
+<p>.</p>
+<p>Odds</p>
+<p>01/23</p>
+<p>Arsenal 17/20<br />
+Man City 3/2</p>
+<p>.</p>
+<p>Hamlet</p>
+<p>I opened Hamlet:</p>
+<p>Lonely prince<br />
+Obsessed with dead parent<br />
+Watches remaining parent<br />
+Fall in love with<br />
+Dead parents usurper?</p>
+<p>I slammed it shut: no thank you!</p>
+<p>.</p>
+<p>Baby girl,</p>
+<p>You are absolutely amazing in mind, body, and soul. May you continue to inspire us through your ambitions &amp; achievements in 2023 as you’ve done so many times before.</p>
+<p>Always,</p>
+<p>Baby D :)</p>
+<p>.</p>
+<p>Osumagira Ofiirwa
+You snooze you loose</p>
+<p>.</p>
+<p>Combination lock
+Walmart<br />
+25 33 08</p>
+<p>.</p>
+<p>Cabamezapine 200mg</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#netherlands #transit
+
+1.Amsterdam 15min
+2.Rotterdam 25min
+3.Antwerp 90min (platforms 5, 6)
+
+USB-B charger at Starbucks 
+(Further, larger Starbucks)
+
+$87.62 return ticket with NS train to Antwerp 
+</pre></div>
+</div>
+<p>.</p>
+<p>Westvetrein abbey only sold in monastery</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+Schipol - Antwerp 9-10:30
+Gallivant: 11am-2pm (only 3hrs)
+Antwerp-Schipol 2:30-4pm (boarding 4:24pm)
+
+08:43 Brussel-Zurich Midi 
+Platform/trein— 5
+Via Rotterdam C., Breda, Antwerpen-C. 
+
+Red — first class
+Blue — coach, really no difference 
+
+Antwerpen-C.
+Spoor 23, 24
+
+Return:
+
+14:44 Breda Amsterdam C 
+IC 22 (Intercity) 
+
+
+16:24 arrival at Schipol 
+16:42 boaridng
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#aerodynamics 
+
+Super modern Dutch windmills 
+Dreamliner wings 
+There’s a similarity 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#joelmulinda
+
+Album
+
+https://m.youtube.com/watch?v=T6z3oPA46-Y&amp;feature=youtu.be
+</pre></div>
+</div>
+<p>.</p>
+<p>Yunia Mwebaze Mukyala<br />
+Yunia Grace Mukyala</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>MGB
+
+Graduate student union
+Vote YES on 30th/31st 
+Next week together
+On-time payments for grad students
+Especially with family, international students
+Better commitment of JHU to community
+Petition not voting: committed to voting yes
+Trying to get thousands to say we are going to vote
+— bargaining power: 
+— text me a link to sign electronically 
+— block off a time 30/31st to head to turner
+
+Bit.ly/tru-petition
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#uganda #food 
+
+Carvel Food 
+— Very good deep fried fish 
+— Haven’t had it before
+- But seen a compelling picture
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Return</span> <span class="n">eSim</span><span class="o">-</span><span class="n">only</span>
+
+<span class="n">W1224884838</span> <span class="p">(</span><span class="n">White</span><span class="p">)</span>
+<span class="n">W1248167275</span> <span class="p">(</span><span class="n">Purple</span><span class="p">)</span>
+
+<span class="n">Over</span> <span class="n">holiday</span> 
+<span class="n">Travelled</span> <span class="n">to</span> <span class="n">Uganda</span>
+<span class="n">Completely</span> <span class="n">useless</span> 
+<span class="n">No</span> <span class="n">warning</span> <span class="n">on</span> <span class="n">website</span> 
+<span class="n">Remember</span><span class="p">:</span> <span class="n">unlocked</span> <span class="ow">is</span> <span class="nb">all</span>  
+</pre></div>
+</div>
+<p>.</p>
+<p>What sayest thou to a hare, or the melancholy of
+Moor-ditch?</p>
+<p>.</p>
+<p>Prof. Muzaale <a class="reference external" href="https://www.uict.ac.ug/governing-council/">in his 80s</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#gm e2p16
+
+01/23
+
+A thought which, quarter&#39;d, hath but one part 
+
+Wisdom 1
+Coward 3
+Thought 4/4
+
+Why yet I live to say &#39;This thing&#39;s to do;&#39;
+Sith I have…
+
+Cause 1 (Sensory)
+Will 1 (Cognitive)
+Strength 1 (Motor)
+Means 1 (Obstacles)
+
+To do&#39;t.
+
+How stand I then?
+
+— Tyler Perry
+— Harry Windsor
+
+x
+
+All instincts which do not find a vent without, turn inwards — this is what I mean by the growing “internalisation” of man: consequently we have the first growth in man, of what subsequently was called his soul. The whole inner world, originally as thin as if it had been stretched between two layers of skin, burst apart and expanded proportionately, and obtained depth, breadth, and height, when man’s external outlet became obstructed
+
+— Genealogy of morality 
+</pre></div>
+</div>
+<p><a class="footnote-reference brackets" href="#id5" id="id2">37</a></p>
+<p>.</p>
+<p>Pessimism, not cynicism</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Olivia Kates
+
+01/23
+
+1.Descriptive ethics: what is
+— history
+—
+—
+
+2.Normative ethics: ought to be
+— applied ethics
+— pluralism 
+— casuistry 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Nothing but the truth!
+
+01/23
+
+Truths are metaphors, illusions, anthropomorphisms about which one has forgotten that they are such. There are different truths to different beings. Like a spider man sits in the web of his truths and ideas. He wants to be deceived. By means of error he mostly lives; truth is often fatal. When the liar, the story-teller, the poet, the rhapsodist lie to him without hurting him he — loves them! —
+
+Hence the most admired and followed people are frauds. To bring day light upon their magic is to make an enemy out of each of their followers 
+
+And this is how to approach the Sussexes. A back girl marrying a prince and living happily ever after is too much truth for Brits to stomach and Meghan is hated for that. As is a tell-all memoir by an erstwhile prince 
+</pre></div>
+</div>
+<p>.</p>
+<p>Waisonsole</p>
+<p>01/23</p>
+<p>Tiyeyendera<br />
+Kuzimbawala</p>
+<p>.</p>
+<p>Illusion</p>
+<p>01/23</p>
+<p>My 84yo dad views much of our desires in life as mirages</p>
+<p>Searching the complete works of Nietzsche for “illusions” reveals in the cheer number of hits from birth of tragedy onward just how central this is to his philosophy</p>
+<p>Doing something similar with “counterfeit” in Shakespeare complete works directs us specifically to Henry IV Part I</p>
+<p>.</p>
+<p>Art vs. Science</p>
+<p>01/23</p>
+<p>How many scientists do you admire?<br />
+How many artists do you admire?<br />
+Isn’t celebrity synonymous with pop art?</p>
+<p>Yes, but you’d need to add athletes!<br />
+Athletes are heroes in a kind world<br />
+In the wicked world, aka the streets, we…</p>
+<p>Even our admiration of athletes is a lie<br />
+Wisdom truly cryeth from the streets<br />
+Looks like we just don’t want it at all</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Caffo class
+
+01/23
+
+— Spring break 3/21, 3/23
+— Class I (tools)
+— Class II (regression)
+
+VS code written by Microsoft (strongly recommended)
+— slightly harder than other solutions
+— true multilingual for editing R, quarto, R studio, python 
+
+Jupyter lab (doesn’t see benefit locally)
+
+ipynb (iPhython note book)
+— working lab notebook
+— its not a final product to submit
+— real benefit is ability to blend code chunks and documentation
+
+Google co-lab (play around if new to programming) ***
+— just log into google account
+— compile in GPU not CPU 
+— python is for virtual environments 
+— anaconda manages various python projects 
+
+Send a message to Caffo on TEAM 
+— to get you added to ipynb 
+— emacs mode for R is truly incredible
+— but RStudio came out and is the best 
+— switched to python when he moved into AI
+— use mostly anaconda… 
+— soft spot for editing online (Jupiter)
+— rstudio can handle raw python 
+
+Install git 
+Manage repositories locally 
+Does version control 
+But real power is taking local directory to..
+Github: fantastic place to deposit code 
+Homework can be submitted here
+Any data science lab will use some variation of GitHub for version control 
+If your lab is still emailing around word documents, you can be the one
+To carry them over to the 21st century 
+
+1.sign up for GitHub account
+— personal repositories
+— don’t submit to this 
+— submit to your organization repository
+— this is step one (authenticated)
+
+2.Homework
+— go to the general channel on TEAMS
+— find how to submit a homework (login with JHED account)
+— Mondays 5pm 
+
+x
+
+1.class materials
+2.document contains all you need
+3.content for recorded video lectures
+4.email John wang ja@
+— full name
+— JHED address 
+— reset password
+— use same link for all homework 
+— have to use GitHub classroom for this
+5.idea is to get a Jupiter account
+
+X
+
+Eric chow on githhub 
+https://ekhco.github.io
+
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Fred Francis <a class="reference external" href="https://www.youtube.com/watch?v=SKY6SDDtRKA">Coppola</a></p>
+<p>01/23</p>
+<p>Art = No safety net, no proven formula <a class="footnote-reference brackets" href="#id6" id="id3">38</a></p>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=MzmGcDubMQ8">Chuck D</a>  9:04</p>
+<p>01/23</p>
+<p>Art = A Rose that arose out of concrete<br />
+Art = Greater than popularity, can’t be quantified<br />
+Art = Making something out of nothing, Aug 11, 1973; started in the Bronx</p>
+<p>x</p>
+<p>Denominator = out of nothing, so doesn’t exist<br />
+Numerator = the something called art<br />
+Quantified = Numerator/Denominator (undefined)</p>
+<p>X</p>
+<p>Art = Fake but impact as if truth<br />
+Science = Truth but suspected to be fake<br />
+Nutshell = My King Solomon moment in 01/23 :(</p>
+<p>.</p>
+<p><a class="reference external" href="https://hellomood.co">https://hellomood.co</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#myideal 
+
+01/23
+
+1.body: she-ba 
++
+2.mind: chris-ta
++
+3.soul: tu-ra
+
+ah, the impossible!
+</pre></div>
+</div>
+<p>.</p>
+<p>Their roles</p>
+<p>01/23</p>
+<p>society: provide foils, worthy adversaries, make superman!<br />
+father: answer the question, what is a man?<br />
+<a class="reference external" href="https://www.youtube.com/watch?v=74zcqLWywNU">mother</a>: nurture cubs, produce robust specimens of a beast.</p>
+<p>.</p>
+<p>Bialetti</p>
+<p>01/23</p>
+<p>270ml</p>
+<p>.</p>
+<p>Explo ’85</p>
+<p>01/23</p>
+<p>To compete with contemporary popular musicians such as the Beatles and Bob Dylan, Campus Crusade sponsored its own Christian popular music band called the New Folk. According to historian John G. Turner, Campus Crusade under Bright’s leadership also actively sought to confront the counterculture movement during the 1960s and 1970s. One notable Campus Crusade campaign was the “Berkeley Blitz” in January 1967 which saw 600 Campus Crusade staff and students organize a series of events including concerts, dinners for international students, a performance by the illusionist André Kole, and a sermon by evangelist Billy Graham. Campus Crusade also claimed to have converted 700 students and faculty members</p>
+<p>In 1972, Campus Crusade in coordination with the Jesus Movement organized a week-long International Student Congress on Evangelism at Cotton Bowl Stadium in Dallas known as Explo ‘72. The Explo ‘72 conference featured evangelism and discipleship training and contemporary music events. It was attended by 80,000 college and high school students and was nicknamed as the “Christian Woodstock” in the media. Besides Billy Graham, the event featured several contemporary popular musicians including Johnny Cash, Kris Kristofferson, the Christian band Love Song, \textcolor{blue}{Andraé Crouch}, and the Disciples</p>
+<p>During the 1980s, Campus Crusade increased its cooperation with the charismatic, Pentecostal, and Catholic churches and denominations. Bright’s personal friendships with charismatic and Pentecostal Christians and Zachary Bright’s charismatic experience led Campus Crusade to soften its stance towards charismatic and Pentecostal churches. In 1983, Campus Crusade overturned its ban on staff members speaking in tongues. During the late 1980s, Campus Crusade also partnered with the Assemblies of God in missionary work in <a class="reference external" href="https://www.latimes.com/archives/la-xpm-1986-01-04-me-24254-story.html">Africa</a> and Latin America. In addition, Campus Crusade also collaborated with the Catholic Church to distribute the Jesus film in Catholic countries</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Cru_(Christian_organization)">https://en.wikipedia.org/wiki/Cru_(Christian_organization)</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#locks #master #0123 </span>
+
+<span class="mi">13</span> <span class="mi">31</span> <span class="mi">21</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#Counterfeiting  
+
+01/23
+
+B. So why do you stay with him?
+W. I’m building my brand. He puts me on his channel more often.
+
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#fawaz 
+
+01/23
+
+— apps as ultimate products, not papers
+— R03/R21
+— R01
+
+— Technology era
+— Telemedicine
+— Telehealth
+— Apps 
+
+— 10AM on Fridays with Fawaz
+
+</pre></div>
+</div>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=2dRELDzYDxw">gabi wilson</a></p>
+<p>.</p>
+<p>King Lear</p>
+<p>01/23</p>
+<p>The stage has finally been set<br />
+For me to study this play:<br />
+I’ve thus far been too unschool’d for it</p>
+<p>.</p>
+<p>Verbs</p>
+<p>01/23</p>
+<p>Do<br />
+Be<br />
+Is</p>
+<p>x</p>
+<p>Tremendous marches<br />
+To be, or not to be<br />
+O, where is Romeo?</p>
+<p>.</p>
+<p>Heaven has no rage like love to hatred turned, Nor hell a fury like a woman scorned</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>How Madoff Made Off
+
+Joe Crawford
+April 19, 2021
+Updated: April 19, 2021 2:21 p.m.
+
+Last week, Bernie Madoff, (pronounced “made off” as in “made off with all your money”) died in prison. He was serving a 150-year term for defrauding thousands of people of as much as $65 billion dollars. He was a young 82 and had served only 12 years of the 150-year sentence. No word yet on who will cover the other 138 years.
+
+Among his famous clueless victims were the brilliant director and filmmaker Steven Spielberg, the brilliant actor Kevin Bacon and the brilliant Hall of Fame pitcher Sandy Koufax. Which in retrospect doesn’t make them look so brilliant after all.
+One actually brilliant man, independent investigator Harry Markopolos, smelled a rat as early as 2000, but was unable to convince anyone that Madoff was a fake, because nobody could hear him over the loud party music investors were playing as they were celebrating their improbable returns on their investments.
+
+You might ask how he was able to hoodwink so many people for so long. That’s easy. He simply used a version of the well-known pyramid scheme, which was invented in Egypt. That’s where the top man, Madoff in this case, proposes to build a pyramid made out of other people’s money.
+
+Madoff, acting as the pharaoh, convinces all the gullible people he can to fork over their hard earned cash in return for a piece of the pie, I mean, “pyramid”.
+
+The more people foolishly hand over their money, the more the pharaoh tells them how brilliant they are to be investing in his pyramid. This only makes the people want to question him less and fork over even more money.
+
+Because pyramid schemes (being made of money, not mortar and bricks) are naturally flawed, his pyramid eventually collapsed to the ultimate horror of the investors and building inspectors but mostly to the horror of the Securities and Exchange Commission or SEC. 
+That’s the highly financed, watchdog government agency designed to protect us hard-working taxpayers from people like Mr. Madoff, but which was obviously asleep at the wheel.
+So how silly does that make the SEC look? I think the SEC ranks just above FEMA in terms of likeability of government agencies designed to help us. That’s how.
+
+What Madoff was doing was closer to what’s called a Ponzi scheme. It convinces people to invest their money blindly and can maintain the illusion of a sustainable investment vehicle as long as new people contribute new funds, and as long as those investing do not ask full repayment and still believe in the non-existent assets they supposedly are entitled to. This incidentally sounds just like our Social Security system. Just giving you fair warning.
+
+In the meantime, just be wary of any investors with get-rich-quick schemes involving three-dimensional objects like pyramids, cubes, cones or arches. Always ask to see the building permit first.
+
+References
+https://www.nssfug.org
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Verbs 
+
+01/23
+
+Do
+Be
+Is
+
+x
+
+FALSTAFF
+Now, Hal, what time of day is it, lad?
+
+PRINCE HENRY
+Thou art so fat-witted, with drinking of old sack
+and unbuttoning thee after supper and sleeping upon benches after noon, that thou hast forgotten to demand that truly which thou wouldst truly know
+
+What a devil hast thou to do with the time of the
+day?
+</pre></div>
+</div>
+<p>.</p>
+<p>Tiana Major9</p>
+<p>Think about you<br />
+— raggae<br />
+— soul<br />
+— garage</p>
+<p>.</p>
+<p>Pleasure vs. sin</p>
+<p>01/23</p>
+<p>One is enjoyed<br />
+The other is confessed<br />
+According to Henry James</p>
+<p>.</p>
+<p>Marketing</p>
+<p>01/23</p>
+<p>Those born after 1990<br />
+Natural-born self-promoters<br />
+Better at their craft than all priors<br />
+Essentially clarify what life about:<br />
+Counterfeiting ones identity<br />
+Faking it till you make it</p>
+<p>.</p>
+<p>Madoff</p>
+<p>01/23</p>
+<p>— trade on 19th floor (legit)<br />
+— client advisory on 17th floor (ponzi)<br />
+— family involved, nepotism<br />
+— trump, museveni, madoff<br />
+— not bezos, gates, jobs, etc.</p>
+<p>.</p>
+<p>Time</p>
+<p>01/23</p>
+<p>1.Hours - sack<br />
+2.Minutes - capons<br />
+3.Clocks - tongues<br />
+4.Dials - sings<br />
+5.Sun - wench</p>
+<p>.</p>
+<p>Jeffry Picower</p>
+<p>01/23</p>
+<p>Anti-Esau incarnate</p>
+<p>Reference<br />
+MADOFF:  The master of Wall Street E2: Don’t ask, don’t tell</p>
+<p>.</p>
+<p>10 The great God that formed all things both rewardeth the fool, and rewardeth transgressors.</p>
+<p>25 When he speaketh fair, believe him not: for there are seven abominations in his heart.</p>
+<p>.</p>
+<p>Prayer requests</p>
+<p>01/23</p>
+<ol class="arabic simple">
+<li><p>I feel I’ve been extraordinarily blessed in this life. And I want to continue feeling this way for the rest of the year (and my life l)</p></li>
+<li><p>What is my job? What is my career? What is my calling?</p></li>
+</ol>
+<p>— do I respond to my calling?
+— am I being a career person?
+— have I got a job?</p>
+<ol class="arabic simple" start="3">
+<li><p>Shouldn’t I give all to just one of these? My calling? How about that!</p></li>
+</ol>
+<p>.</p>
+<p>Madoff</p>
+<p>01/23</p>
+<ol class="arabic simple">
+<li><p>legitimate 19th floor</p></li>
+<li><p>ponze 17th floor</p></li>
+<li><p>dependent on each other</p></li>
+</ol>
+<p>Think: a gourmet recipe that omits the 0.1% cyanide in it<br />
+Is it 99.9% truthful? I don’t think so!<br />
+We are talking all-or-nothing<br />
+And no one can hand us such a guarantee
+So we be dealing in fakes all our lives :)</p>
+<p>.</p>
+<p>Beers</p>
+<p>01/23</p>
+<p>Heady Topper/Alchemist/Imperial IPA/15k<br />
+Pliny The Elder/Russian River/Imperial IPA/15k<br />
+KBS/Founders/American Imperial Stout/14k<br />
+Bourbon Country Brand Stout/Goose Island/American Imperial Stout/12k<br />
+Zombie Dust/3 Floyds/American Pale Ale/11k<br />
+Breakfast Stout/Founders/Oatmeal Stout/17k</p>
+<p>.</p>
+<p>Million</p>
+<p>01/23</p>
+<p><span class="math notranslate nohighlight">\(1m in 2020  
+Just \)</span>200k/y thru 2024<br />
+That’s $100k/y after taxes</p>
+<p>.</p>
+<p>Compunction</p>
+<p>01/23</p>
+<p>He did not have any compunction to destroying peoples lives</p>
+<p>.</p>
+<p>Greetings</p>
+<p>01/23</p>
+<p>buono<br />
+buona<br />
+buenas<br />
+bien</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Madoff
+
+01/23
+
+The basic concept of WallStreet, 
+Which sometimes the Regulators
+Lose sight of — as do the academics
+Is that its a for-profit enterprise
+By benefiting one person
+You are disadvantaging another person
+</pre></div>
+</div>
+<p>.</p>
+<p>Your word is your bond
+— Madoff</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>HW 1
+
+01/23
+
+1.accept &amp; submit https://classroom.github.com/a/OLroOFhr
+2.then authorize GitHub classroom 
+3.redirected to authorized place
+4.ds4ph-spring-hw-1-muzaale repository is the ds4ph-bme …
+5.organization on GitHub (accept assignment)
+6.was due on 01/30, 20223, 12:00 EST ???
+7.you’re good to go! 
+8.click and voila!!
+9.how to edit a file!!! (click on pencil icon)
+10.google colab to create .ipynb notebook
+11.used .Rmd but this is a learning opportunity
+12.so how to submit!
+
+— go to HW1 on teams
+— click on my work 
+— attach weblink
+— then turn it in
+— enjoy the ice cream :)
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Data Science</p>
+<p>01/23</p>
+<p>colab/google<br />
+github/repo<br />
+jupyter/notebook</p>
+<p>.</p>
+<p>Deborah Ekkusai Sebatta</p>
+<p>.</p>
+<p>Caffo</p>
+<p>01/23</p>
+<p>Class notes</p>
+<p><a class="reference external" href="https://smart-stats.github.io/ds4bio_book/book/_build/html/intro.html">https://smart-stats.github.io/ds4bio_book/book/_build/html/intro.html</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Caffo 
+
+01/31/23
+
+Submission system
+— organization repo
+— name of the repository 
+— commits meant submitted 
+
+X
+
+— Pull and push to &amp; from github
+— Download GitHub software if using computer
+— That is a good personal workflow
+
+X
+
+— Using class Jupyter server
+— Requires internet connection
+— Connected to remote computer
+— No direct connection to GitHub 
+— How to work with Git on remote server 
+
+X
+
+— SSH keys 
+— Public key (lock)
+— Private key (key)
+— Github for public key
+— Involved to pull/push
+
+X
+
+— create terminal on Jupiter
+— File/new/terminal
+— Or lower left from launcher
+— This is a linux terminal 
+— need a .SSH directory (to create key)
+
+X
+
+— more id_rsa.pub (then go to GitHub)
+— ssh 
+— ib_ (key)
+— ib_*_pub public key (lock)
+
+X
+
+Python
+Colab —&gt; Jupyter Server —&gt; PC (cheaper &amp; ultimate)
+print(type(10))
+print(type(10.0)
+print(type(10+0j))
+print(type(“10”))
+print(type(True))
+
+X
+
+https://smart-stats.github.io/ds4bio_book/book/_build/html/python_programming.html
+
+X
+
+Clone repo for next assignment 
+</pre></div>
+</div>
+<p>.</p>
+<p>Cause I got that</p>
+<p>new body, flex,</p>
+<p>Pilates, stretchAin’t wildin’ yet, like I want say less’Cause it ain’t for nobody yet, ready set, so come get it
+.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#hearing</span>
+
+<span class="mi">01</span><span class="o">/</span><span class="mi">23</span>
+
+<span class="n">R</span> <span class="o">&gt;</span> <span class="n">L</span>
+
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h1>02/2023<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h1>
+<p>Taxes/W-2</p>
+<p>01/23</p>
+<p>myJH portal<br />
+ESS<br />
+Download</p>
+<p>digit signature ID: 16181<br />
+ignore credit karma</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#jessruck
+
+01/23
+
+— Charlotte is baby’s name :)
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>RDC public dataset 
+
+02/23
+
+— 09/30/22 (approved)
+— four months delay!
+— user fees ($12k), days ($300/d) —&gt; 10 days
+— confidentiality (two forms)
+— dataset: public use, .SAS7BDAT, vars, labels (only approved), no derived
+— highlight additional variables, may need further approval
+
+X
+
+Checklist
+1.Payment
+2.Ten days
+3.Confidentiality
+4.Dataset 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Python
+
+01/23
+
+Book
+
+https://smart-stats.github.io/ds4bio_book/book/_build/html/python_programming.html
+
+X
+
+R
+
+— functions 
+— mapply
+— sapply
+— proficiency!!!
+
+X
+
+Why python?
+
+— sick of learning C, C++, pascal, Matlab, R
+— list keeps going on and I don’t really like computers 
+— why bother introducing other when everyone uses R in biostats?
+— because you should only care about the community and what its developed
+— there is no statistics community and so that’s not useful regardless of how good it is
+— you can’t write the library for everything or optimize stuff
+— in this class we will cover artificial intelligence, and the community is embedded in python
+— caffo’s reason: that’s where the ai party is at
+— also python is quite the easiest language to learn :)
+— extremely easy to learn!
+— machine learning is a statistical task with heavy interactions 
+— e.g. random forest, neural network, arithmetic (machines already good at)
+— but ai is something that humans are typically good at and machines aren’t good at
+— spoken language into text or text into human language
+— recognizing a song that you’re familiar with (subtle patterns, what humans are good at)
+
+X
+
+1.github
+2.codespace
+3.new (+)
+4.givename.extention
+5.mysecond.ipyn
+
+X
+
+1.problems
+2.output
+3.debug console
+4.terminal
+5.ports 
+6.jupyter
+
+
+
+</pre></div>
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">37</a></span></dt>
+<dd><p>nietzsche!</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id3">38</a></span></dt>
+<dd><p>art, science, engineering</p>
+</dd>
+</dl>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">01/2023</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">02/2023</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
