@@ -1,0 +1,27 @@
+---
+title: ''
+output: pdf_document
+---
+
+```{r}
+# install.packages('icdpicr')
+# install.packages('dplyr')
+# install.packages('readr')
+# install.packages('tidyr')
+rm(list = ls())
+ 
+library(icdpicr)
+library(dplyr)
+library(readr)
+library(tidyr)
+ 
+df <- read.csv("df.csv")
+
+df_out <- cat_trauma(df[1:5,1:3], "DX", icd10 = FALSE)
+df_out
+
+df_long <- df %>%
+  pivot_longer(cols = starts_with("DX"),
+               names_to = "diagnosis_number",
+               values_to = "icd_code")
+```
