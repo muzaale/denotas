@@ -5721,7 +5721,7 @@ Together they enrich our searching soul.
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/3afc367caa89efee8c5abdff10de67372cebd830919d6fc0b3cd3616eea3aa70.png" src="_images/3afc367caa89efee8c5abdff10de67372cebd830919d6fc0b3cd3616eea3aa70.png" />
+<img alt="_images/4a2a19541d292dd6ce1f14d7d15617a979a68bfdc1888bdf8e55bb7f9f1a34b7.png" src="_images/4a2a19541d292dd6ce1f14d7d15617a979a68bfdc1888bdf8e55bb7f9f1a34b7.png" />
 </div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="n">cosmic</span> <span class="n">vastness</span><span class="p">,</span> <span class="n">tremors</span> <span class="n">shake</span> <span class="n">the</span> <span class="n">ground</span><span class="p">,</span>
@@ -13081,6 +13081,126 @@ done
 </pre></div>
 </div>
 <p>This command uses nested loops. The outer loop iterates through the years from 2011 to 2024, and the inner loop iterates through the months represented by {01..12}. The command copies the content of “bdn001.ipynb” to files named as “bdnYYYYMM.ipynb” for each combination of year and month.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># Sample ICD-9 and ICD-10 codes</span>
+<span class="n">icd9_codes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;401.9&#39;</span><span class="p">,</span> <span class="s1">&#39;414.01&#39;</span><span class="p">,</span> <span class="s1">&#39;272.4&#39;</span><span class="p">,</span> <span class="s1">&#39;250.00&#39;</span><span class="p">,</span> <span class="s1">&#39;278.01&#39;</span><span class="p">]</span>
+<span class="n">icd10_codes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;I10&#39;</span><span class="p">,</span> <span class="s1">&#39;I25.10&#39;</span><span class="p">,</span> <span class="s1">&#39;E78.5&#39;</span><span class="p">,</span> <span class="s1">&#39;E11.9&#39;</span><span class="p">,</span> <span class="s1">&#39;E66.01&#39;</span><span class="p">]</span>
+
+<span class="c1"># Concatenate the codes</span>
+<span class="n">icd_codes</span> <span class="o">=</span> <span class="n">icd9_codes</span> <span class="o">+</span> <span class="n">icd10_codes</span>
+
+<span class="c1"># Create a dataset</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;ID_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">icd_codes</span><span class="p">))</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+<span class="c1"># Create a DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="s1">&#39;DX1&#39;</span><span class="p">,</span> <span class="s1">&#39;DX2&#39;</span><span class="p">,</span> <span class="s1">&#39;DX3&#39;</span><span class="p">,</span> <span class="s1">&#39;DX4&#39;</span><span class="p">,</span> <span class="s1">&#39;DX5&#39;</span><span class="p">,</span> <span class="s1">&#39;DX6&#39;</span><span class="p">,</span> <span class="s1">&#39;DX7&#39;</span><span class="p">,</span> <span class="s1">&#39;DX8&#39;</span><span class="p">,</span> <span class="s1">&#39;DX9&#39;</span><span class="p">,</span> <span class="s1">&#39;DX10&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ID     DX1     DX2     DX3     DX4     DX5     DX6     DX7     DX8  \
+0  ID_1   401.9  I25.10   401.9  I25.10  278.01  278.01   272.4   272.4   
+1  ID_2  278.01   401.9  414.01  278.01  I25.10  250.00  I25.10   272.4   
+2  ID_3   E11.9  250.00  414.01  278.01     I10   E78.5  250.00  278.01   
+3  ID_4   E11.9  I25.10  278.01     I10  I25.10   E11.9   E11.9  250.00   
+4  ID_5   401.9   272.4  E66.01  414.01  I25.10   401.9   E78.5  278.01   
+
+      DX9   DX10  
+0  278.01  E78.5  
+1  E66.01  E11.9  
+2   E78.5  E78.5  
+3   272.4  401.9  
+4  278.01    I10  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># Sample ICD-9 and ICD-10 codes related to Trauma/ER</span>
+<span class="n">icd9_codes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;800.0&#39;</span><span class="p">,</span> <span class="s1">&#39;801.0&#39;</span><span class="p">,</span> <span class="s1">&#39;803.0&#39;</span><span class="p">,</span> <span class="s1">&#39;804.0&#39;</span><span class="p">,</span> <span class="s1">&#39;850.0&#39;</span><span class="p">,</span> <span class="s1">&#39;851.0&#39;</span><span class="p">,</span> <span class="s1">&#39;852.0&#39;</span><span class="p">,</span> <span class="s1">&#39;853.0&#39;</span><span class="p">,</span> <span class="s1">&#39;854.0&#39;</span><span class="p">,</span> <span class="s1">&#39;860.0&#39;</span><span class="p">,</span> <span class="s1">&#39;861.0&#39;</span><span class="p">]</span>
+<span class="n">icd10_codes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S02.0&#39;</span><span class="p">,</span> <span class="s1">&#39;S02.1&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.0&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.1&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.2&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.3&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.4&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.5&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.6&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.7&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.8&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.9&#39;</span><span class="p">]</span>
+
+<span class="c1"># Concatenate the codes</span>
+<span class="n">icd_codes</span> <span class="o">=</span> <span class="n">icd9_codes</span> <span class="o">+</span> <span class="n">icd10_codes</span>
+
+<span class="c1"># Create a dataset</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">):</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">icd_codes</span><span class="p">))</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+<span class="c1"># Create a DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="s1">&#39;DX1&#39;</span><span class="p">,</span> <span class="s1">&#39;DX2&#39;</span><span class="p">,</span> <span class="s1">&#39;DX3&#39;</span><span class="p">,</span> <span class="s1">&#39;DX4&#39;</span><span class="p">,</span> <span class="s1">&#39;DX5&#39;</span><span class="p">,</span> <span class="s1">&#39;DX6&#39;</span><span class="p">,</span> <span class="s1">&#39;DX7&#39;</span><span class="p">,</span> <span class="s1">&#39;DX8&#39;</span><span class="p">,</span> <span class="s1">&#39;DX9&#39;</span><span class="p">,</span> <span class="s1">&#39;DX10&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="c1"># Save DataFrame to a CSV file</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;df.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ID    DX1    DX2    DX3    DX4    DX5    DX6    DX7    DX8    DX9   DX10
+0   1  S06.7  804.0  851.0  S06.3  S02.1  861.0  860.0  803.0  804.0  851.0
+1   2  801.0  S06.7  801.0  861.0  804.0  S06.3  804.0  S06.1  803.0  S06.0
+2   3  860.0  S06.2  S06.7  S06.5  S06.5  S02.0  854.0  851.0  860.0  803.0
+3   4  S06.9  S06.7  S06.1  S06.6  850.0  854.0  S06.7  801.0  861.0  S06.1
+4   5  803.0  852.0  850.0  S06.2  854.0  861.0  S06.2  S06.5  852.0  803.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># install.packages(&#39;icdpicr&#39;)</span>
+<span class="c1"># install.packages(&#39;dplyr&#39;)</span>
+<span class="c1"># install.packages(&#39;readr&#39;)</span>
+<span class="c1"># install.packages(&#39;tidyr&#39;)</span>
+<span class="nf">rm</span><span class="p">(</span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ls</span><span class="p">())</span>
+<span class="w"> </span>
+<span class="nf">library</span><span class="p">(</span><span class="n">icdpicr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span>
+<span class="w"> </span>
+<span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;df.csv&quot;</span><span class="p">)</span>
+
+<span class="n">df_out</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">cat_trauma</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">],</span><span class="w"> </span><span class="s">&quot;DX&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">icd10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="n">df_out</span>
+
+<span class="n">df_long</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">df</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">  </span><span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">starts_with</span><span class="p">(</span><span class="s">&quot;DX&quot;</span><span class="p">),</span>
+<span class="w">               </span><span class="n">names_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;diagnosis_number&quot;</span><span class="p">,</span>
+<span class="w">               </span><span class="n">values_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;icd_code&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id99"><span class="brackets">4</span><span class="fn-backref">(<a href="#id43">1</a>,<a href="#id80">2</a>)</span></dt>
