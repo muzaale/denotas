@@ -3,25 +3,44 @@ title: ''
 output: pdf_document
 ---
 
+## 07/18/2023 
+
+#
+
+Matt/Abi code-snippet to guide one using 'cat_trauma' function
+
+## 
+
+#
+
 ```{r}
+# install packages
 # install.packages('icdpicr')
 # install.packages('dplyr')
 # install.packages('readr')
 # install.packages('tidyr')
+
+# clear memory
 rm(list = ls())
  
+# use libraries
 library(icdpicr)
 library(dplyr)
 library(readr)
 library(tidyr)
- 
-df <- read.csv("df.csv")
 
-df_out <- cat_trauma(df[1:5,1:3], "DX", icd10 = FALSE)
-df_out
+# import dataset or use given "injury" dataset
 
-df_long <- df %>%
-  pivot_longer(cols = starts_with("DX"),
-               names_to = "diagnosis_number",
-               values_to = "icd_code")
+# very large dataset!
+dim(injury)
+
+# demonstrate using a sample
+inj = injury[1:100,1:3]
+dim(inj)
+df_score = cat_trauma(inj,"dx",icd10=TRUE,i10_iss_method="roc_max_NIS",calc_method = 1,verbose=FALSE)
+
+# 
+df_score[1:3,]
+
+df_score$Pmort[1:30]
 ```
