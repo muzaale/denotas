@@ -870,8 +870,14 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id96">07/18/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id97">717. migration</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id98">718. unix</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#icd">720. icd</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r">721. r</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r">720. r</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-relevant-packages">720.1 install the relevant packages</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#get-some-documentation">720.2 get some documentation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#study-the-syntax">720.3 study the syntax</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-value-of-dx-pre">720.4 what is the value of dx_pre?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#as-such-the-syntax-is">720.5 as such the syntax is:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -5723,7 +5729,7 @@ Together they enrich our searching soul.
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/038879df60b73c663ef4094395836f41b059d82725808689a221bf51a374c54b.png" src="_images/038879df60b73c663ef4094395836f41b059d82725808689a221bf51a374c54b.png" />
+<img alt="_images/aff82a237f34a17e424e5c8219975b38e76faa75a69feeecebdfe51ae7b2b614.png" src="_images/aff82a237f34a17e424e5c8219975b38e76faa75a69feeecebdfe51ae7b2b614.png" />
 </div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="n">cosmic</span> <span class="n">vastness</span><span class="p">,</span> <span class="n">tremors</span> <span class="n">shake</span> <span class="n">the</span> <span class="n">ground</span><span class="p">,</span>
@@ -13084,113 +13090,15 @@ done
 </div>
 <p>This command uses nested loops. The outer loop iterates through the years from 2011 to 2024, and the inner loop iterates through the months represented by {01..12}. The command copies the content of “bdn001.ipynb” to files named as “bdnYYYYMM.ipynb” for each combination of year and month.</p>
 </section>
-<section id="icd">
-<h3>720. icd<a class="headerlink" href="#icd" title="Permalink to this heading">#</a></h3>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">random</span>
-
-<span class="c1"># Sample ICD-9 and ICD-10 codes</span>
-<span class="n">icd9_codes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;401.9&#39;</span><span class="p">,</span> <span class="s1">&#39;414.01&#39;</span><span class="p">,</span> <span class="s1">&#39;272.4&#39;</span><span class="p">,</span> <span class="s1">&#39;250.00&#39;</span><span class="p">,</span> <span class="s1">&#39;278.01&#39;</span><span class="p">]</span>
-<span class="n">icd10_codes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;I10&#39;</span><span class="p">,</span> <span class="s1">&#39;I25.10&#39;</span><span class="p">,</span> <span class="s1">&#39;E78.5&#39;</span><span class="p">,</span> <span class="s1">&#39;E11.9&#39;</span><span class="p">,</span> <span class="s1">&#39;E66.01&#39;</span><span class="p">]</span>
-
-<span class="c1"># Concatenate the codes</span>
-<span class="n">icd_codes</span> <span class="o">=</span> <span class="n">icd9_codes</span> <span class="o">+</span> <span class="n">icd10_codes</span>
-
-<span class="c1"># Create a dataset</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
-    <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;ID_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">icd_codes</span><span class="p">))</span>
-    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-
-<span class="c1"># Create a DataFrame</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="s1">&#39;DX1&#39;</span><span class="p">,</span> <span class="s1">&#39;DX2&#39;</span><span class="p">,</span> <span class="s1">&#39;DX3&#39;</span><span class="p">,</span> <span class="s1">&#39;DX4&#39;</span><span class="p">,</span> <span class="s1">&#39;DX5&#39;</span><span class="p">,</span> <span class="s1">&#39;DX6&#39;</span><span class="p">,</span> <span class="s1">&#39;DX7&#39;</span><span class="p">,</span> <span class="s1">&#39;DX8&#39;</span><span class="p">,</span> <span class="s1">&#39;DX9&#39;</span><span class="p">,</span> <span class="s1">&#39;DX10&#39;</span><span class="p">])</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ID     DX1     DX2     DX3     DX4     DX5     DX6     DX7     DX8  \
-0  ID_1   401.9  I25.10   401.9  I25.10  278.01  278.01   272.4   272.4   
-1  ID_2  278.01   401.9  414.01  278.01  I25.10  250.00  I25.10   272.4   
-2  ID_3   E11.9  250.00  414.01  278.01     I10   E78.5  250.00  278.01   
-3  ID_4   E11.9  I25.10  278.01     I10  I25.10   E11.9   E11.9  250.00   
-4  ID_5   401.9   272.4  E66.01  414.01  I25.10   401.9   E78.5  278.01   
-
-      DX9   DX10  
-0  278.01  E78.5  
-1  E66.01  E11.9  
-2   E78.5  E78.5  
-3   272.4  401.9  
-4  278.01    I10  
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">random</span>
-
-<span class="c1"># Sample ICD-9 and ICD-10 codes related to Trauma/ER</span>
-<span class="n">icd9_codes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;800.0&#39;</span><span class="p">,</span> <span class="s1">&#39;801.0&#39;</span><span class="p">,</span> <span class="s1">&#39;803.0&#39;</span><span class="p">,</span> <span class="s1">&#39;804.0&#39;</span><span class="p">,</span> <span class="s1">&#39;850.0&#39;</span><span class="p">,</span> <span class="s1">&#39;851.0&#39;</span><span class="p">,</span> <span class="s1">&#39;852.0&#39;</span><span class="p">,</span> <span class="s1">&#39;853.0&#39;</span><span class="p">,</span> <span class="s1">&#39;854.0&#39;</span><span class="p">,</span> <span class="s1">&#39;860.0&#39;</span><span class="p">,</span> <span class="s1">&#39;861.0&#39;</span><span class="p">]</span>
-<span class="n">icd10_codes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;S02.0&#39;</span><span class="p">,</span> <span class="s1">&#39;S02.1&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.0&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.1&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.2&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.3&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.4&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.5&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.6&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.7&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.8&#39;</span><span class="p">,</span> <span class="s1">&#39;S06.9&#39;</span><span class="p">]</span>
-
-<span class="c1"># Concatenate the codes</span>
-<span class="n">icd_codes</span> <span class="o">=</span> <span class="n">icd9_codes</span> <span class="o">+</span> <span class="n">icd10_codes</span>
-
-<span class="c1"># Create a dataset</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">):</span>
-    <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-        <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">icd_codes</span><span class="p">))</span>
-    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-
-<span class="c1"># Create a DataFrame</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ID&#39;</span><span class="p">,</span> <span class="s1">&#39;DX1&#39;</span><span class="p">,</span> <span class="s1">&#39;DX2&#39;</span><span class="p">,</span> <span class="s1">&#39;DX3&#39;</span><span class="p">,</span> <span class="s1">&#39;DX4&#39;</span><span class="p">,</span> <span class="s1">&#39;DX5&#39;</span><span class="p">,</span> <span class="s1">&#39;DX6&#39;</span><span class="p">,</span> <span class="s1">&#39;DX7&#39;</span><span class="p">,</span> <span class="s1">&#39;DX8&#39;</span><span class="p">,</span> <span class="s1">&#39;DX9&#39;</span><span class="p">,</span> <span class="s1">&#39;DX10&#39;</span><span class="p">])</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-
-<span class="c1"># Save DataFrame to a CSV file</span>
-<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;df.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ID    DX1    DX2    DX3    DX4    DX5    DX6    DX7    DX8    DX9   DX10
-0   1  S06.7  804.0  851.0  S06.3  S02.1  861.0  860.0  803.0  804.0  851.0
-1   2  801.0  S06.7  801.0  861.0  804.0  S06.3  804.0  S06.1  803.0  S06.0
-2   3  860.0  S06.2  S06.7  S06.5  S06.5  S02.0  854.0  851.0  860.0  803.0
-3   4  S06.9  S06.7  S06.1  S06.6  850.0  854.0  S06.7  801.0  861.0  S06.1
-4   5  803.0  852.0  850.0  S06.2  854.0  861.0  S06.2  S06.5  852.0  803.0
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 <section id="r">
-<h3>721. r<a class="headerlink" href="#r" title="Permalink to this heading">#</a></h3>
+<h3>720. r<a class="headerlink" href="#r" title="Permalink to this heading">#</a></h3>
+<section id="install-the-relevant-packages">
+<h4>720.1 install the relevant packages<a class="headerlink" href="#install-the-relevant-packages" title="Permalink to this heading">#</a></h4>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># install.packages(&#39;icdpicr&#39;)</span>
 <span class="c1"># install.packages(&#39;dplyr&#39;)</span>
 <span class="c1"># install.packages(&#39;readr&#39;)</span>
 <span class="c1"># install.packages(&#39;tidyr&#39;)</span>
+
 <span class="nf">rm</span><span class="p">(</span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ls</span><span class="p">())</span>
 <span class="w"> </span>
 <span class="nf">library</span><span class="p">(</span><span class="n">icdpicr</span><span class="p">)</span>
@@ -13198,22 +13106,25 @@ done
 <span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">)</span>
 <span class="w"> </span>
-<span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;df.csv&quot;</span><span class="p">)</span>
-
-<span class="n">df_out</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">cat_trauma</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">],</span><span class="w"> </span><span class="s">&quot;DX&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">icd10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
-<span class="n">df_out</span>
-
-<span class="n">df_long</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">df</span><span class="w"> </span><span class="o">%&gt;%</span>
-<span class="w">  </span><span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">starts_with</span><span class="p">(</span><span class="s">&quot;DX&quot;</span><span class="p">),</span>
-<span class="w">               </span><span class="n">names_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;diagnosis_number&quot;</span><span class="p">,</span>
-<span class="w">               </span><span class="n">values_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;icd_code&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ls</span><span class="p">(</span><span class="s">&quot;package:icdpicr&quot;</span><span class="p">);</span><span class="w"> </span><span class="nf">print</span><span class="p">(</span><span class="n">cat_trauma</span><span class="p">);</span><span class="w"> </span><span class="nf">print</span><span class="p">(</span><span class="n">injury</span><span class="p">)</span>
+</section>
+<section id="get-some-documentation">
+<h4>720.2 get some documentation<a class="headerlink" href="#get-some-documentation" title="Permalink to this heading">#</a></h4>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ls</span><span class="p">(</span><span class="s">&quot;package:icdpicr&quot;</span><span class="p">)</span><span class="w"> </span>
 </pre></div>
 </div>
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ls</span><span class="p">(</span><span class="s">&quot;package:icdpicr&quot;</span><span class="p">);</span><span class="w"> </span><span class="nf">print</span><span class="p">(</span><span class="n">cat_trauma</span><span class="p">);</span><span class="w"> </span><span class="nf">print</span><span class="p">(</span><span class="n">injury</span><span class="p">)</span>
-<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;cat_trauma&quot;</span><span class="w"> </span><span class="s">&quot;injury&quot;</span><span class="w">    </span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">ls</span><span class="p">(</span><span class="s">&quot;package:icdpicr&quot;</span><span class="p">)</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;cat_trauma&quot;</span><span class="w"> </span><span class="s">&quot;injury&quot;</span><span class="w"> </span>
+</pre></div>
+</div>
+</section>
+<section id="study-the-syntax">
+<h4>720.3 study the syntax<a class="headerlink" href="#study-the-syntax" title="Permalink to this heading">#</a></h4>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">cat_trauma</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">print</span><span class="p">(</span><span class="n">cat_trauma</span><span class="p">)</span>
 <span class="nf">function </span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="w"> </span><span class="n">dx_pre</span><span class="p">,</span><span class="w"> </span><span class="n">icd10</span><span class="p">,</span><span class="w"> </span><span class="n">i10_iss_method</span><span class="p">,</span><span class="w"> </span><span class="n">calc_method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span>
 <span class="w">    </span><span class="n">verbose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w"> </span>
 <span class="p">{</span>
@@ -13407,8 +13318,17 @@ done
 <span class="w">    </span><span class="nf">rownames</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="o">:</span><span class="nf">nrow</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 <span class="w">    </span><span class="n">df</span>
 <span class="p">}</span>
-<span class="o">&lt;</span><span class="n">bytecode</span><span class="o">:</span><span class="w"> </span><span class="mh">0x7fa6c073fc18</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">bytecode</span><span class="o">:</span><span class="w"> </span><span class="mh">0x7fd33db28d30</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">environment</span><span class="o">:</span><span class="w"> </span><span class="n">namespace</span><span class="o">:</span><span class="n">icdpicr</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="what-is-the-value-of-dx-pre">
+<h4>720.4 what is the value of dx_pre?<a class="headerlink" href="#what-is-the-value-of-dx-pre" title="Permalink to this heading">#</a></h4>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">injury</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="nf">print</span><span class="p">(</span><span class="n">injury</span><span class="p">)</span>
 <span class="c1"># A tibble: 100,477 × 11</span>
 <span class="w">   </span><span class="n">dx1</span><span class="w">      </span><span class="n">dx2</span><span class="w">      </span><span class="n">dx3</span><span class="w">      </span><span class="n">dx4</span><span class="w">      </span><span class="n">dx5</span><span class="w">      </span><span class="n">dx6</span><span class="w">      </span><span class="n">dx7</span><span class="w">      </span><span class="n">dx8</span><span class="w">      </span><span class="n">dx9</span><span class="w">      </span><span class="n">dx10</span><span class="w">      </span><span class="n">died</span>
 <span class="w">   </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">    </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">    </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">    </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">    </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">    </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">    </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">    </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">    </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">    </span><span class="o">&lt;</span><span class="n">chr</span><span class="o">&gt;</span><span class="w">    </span><span class="o">&lt;</span><span class="n">int</span><span class="o">&gt;</span>
@@ -13426,6 +13346,58 @@ done
 <span class="c1"># ℹ Use `print(n = ...)` to see more rows</span>
 </pre></div>
 </div>
+</section>
+<section id="as-such-the-syntax-is">
+<h4>720.5 as such the syntax is:<a class="headerlink" href="#as-such-the-syntax-is" title="Permalink to this heading">#</a></h4>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">cat_trauma</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">inj</span><span class="p">,</span><span class="n">dx_pre</span><span class="o">=</span><span class="s">&quot;dx&quot;</span><span class="p">,</span><span class="n">icd10</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="n">i10_iss_method</span><span class="o">=</span><span class="s">&quot;roc_max_NIS&quot;</span><span class="p">,</span><span class="n">calc_method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="n">verbose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w"> </span>
+</pre></div>
+</div>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">df_score</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">];</span><span class="w"> </span><span class="n">df_score</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">,</span><span class="m">10</span><span class="o">:</span><span class="m">14</span><span class="p">];</span><span class="w"> </span><span class="n">df_score</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">,</span><span class="m">15</span><span class="o">:</span><span class="m">18</span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">df_score</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">,</span><span class="m">34</span><span class="o">:</span><span class="m">35</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="w"> </span><span class="n">df_score</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">];</span><span class="w"> </span><span class="n">df_score</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">,</span><span class="m">10</span><span class="o">:</span><span class="m">14</span><span class="p">];</span><span class="w"> </span><span class="n">df_score</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">,</span><span class="m">15</span><span class="o">:</span><span class="m">18</span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">df_score</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">,</span><span class="m">34</span><span class="o">:</span><span class="m">35</span><span class="p">]</span>
+<span class="w">       </span><span class="n">dx1</span><span class="w"> </span><span class="n">sev_1</span><span class="w">     </span><span class="n">issbr_1</span><span class="w">      </span><span class="n">dx2</span><span class="w"> </span><span class="n">sev_2</span><span class="w">     </span><span class="n">issbr_2</span><span class="w">      </span><span class="n">dx3</span><span class="w"> </span><span class="n">sev_3</span><span class="w">     </span><span class="n">issbr_3</span>
+<span class="m">1</span><span class="w"> </span><span class="n">S72.342A</span><span class="w">     </span><span class="m">1</span><span class="w"> </span><span class="n">Extremities</span><span class="w">     </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w">    </span><span class="kc">NA</span><span class="w">        </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w">     </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w">    </span><span class="kc">NA</span><span class="w">        </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span>
+<span class="m">2</span><span class="w"> </span><span class="n">S05.22XA</span><span class="w">     </span><span class="m">1</span><span class="w">        </span><span class="n">Face</span><span class="w">     </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w">    </span><span class="kc">NA</span><span class="w">        </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w">     </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w">    </span><span class="kc">NA</span><span class="w">        </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span>
+<span class="m">3</span><span class="w"> </span><span class="n">S00.01XA</span><span class="w">     </span><span class="m">1</span><span class="w">   </span><span class="n">Head</span><span class="o">/</span><span class="n">Neck</span><span class="w"> </span><span class="n">S00.03XA</span><span class="w">     </span><span class="m">2</span><span class="w">   </span><span class="n">Head</span><span class="o">/</span><span class="n">Neck</span><span class="w"> </span><span class="n">S00.11XA</span><span class="w">     </span><span class="m">2</span><span class="w">        </span><span class="n">Face</span>
+<span class="m">4</span><span class="w"> </span><span class="n">S21.119A</span><span class="w">     </span><span class="m">3</span><span class="w">       </span><span class="n">Chest</span><span class="w">     </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w">    </span><span class="kc">NA</span><span class="w">        </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w">     </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w">    </span><span class="kc">NA</span><span class="w">        </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span>
+<span class="m">5</span><span class="w"> </span><span class="n">S82.191A</span><span class="w">     </span><span class="m">3</span><span class="w"> </span><span class="n">Extremities</span><span class="w">     </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w">    </span><span class="kc">NA</span><span class="w">        </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w">     </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w">    </span><span class="kc">NA</span><span class="w">        </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span>
+<span class="m">6</span><span class="w"> </span><span class="n">S22.42XA</span><span class="w">     </span><span class="m">3</span><span class="w">       </span><span class="n">Chest</span><span class="w">     </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w">    </span><span class="kc">NA</span><span class="w">        </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w">     </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w">    </span><span class="kc">NA</span><span class="w">        </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span>
+<span class="m">7</span><span class="w"> </span><span class="n">S92.052A</span><span class="w">     </span><span class="m">1</span><span class="w"> </span><span class="n">Extremities</span><span class="w"> </span><span class="n">S92.065A</span><span class="w">     </span><span class="m">1</span><span class="w"> </span><span class="n">Extremities</span><span class="w"> </span><span class="n">S92.325A</span><span class="w">     </span><span class="m">1</span><span class="w"> </span><span class="n">Extremities</span>
+<span class="m">8</span><span class="w"> </span><span class="n">S02.112A</span><span class="w">     </span><span class="m">1</span><span class="w">        </span><span class="n">Face</span><span class="w"> </span><span class="n">S06.5X0A</span><span class="w">     </span><span class="m">4</span><span class="w">   </span><span class="n">Head</span><span class="o">/</span><span class="n">Neck</span><span class="w"> </span><span class="n">S12.090A</span><span class="w">     </span><span class="m">4</span><span class="w">   </span><span class="n">Head</span><span class="o">/</span><span class="n">Neck</span>
+<span class="m">9</span><span class="w"> </span><span class="n">S00.03XA</span><span class="w">     </span><span class="m">2</span><span class="w">   </span><span class="n">Head</span><span class="o">/</span><span class="n">Neck</span><span class="w"> </span><span class="n">S22.058A</span><span class="w">     </span><span class="m">1</span><span class="w">       </span><span class="n">Chest</span><span class="w"> </span><span class="n">S22.068A</span><span class="w">     </span><span class="m">3</span><span class="w">       </span><span class="n">Chest</span>
+<span class="w">  </span><span class="n">mxaisbr_General</span><span class="w"> </span><span class="n">mxaisbr_HeadNeck</span><span class="w"> </span><span class="n">mxaisbr_Face</span><span class="w"> </span><span class="n">mxaisbr_Extremities</span><span class="w"> </span><span class="n">mxaisbr_Chest</span>
+<span class="m">1</span><span class="w">               </span><span class="m">0</span><span class="w">                </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">                   </span><span class="m">1</span><span class="w">             </span><span class="m">0</span>
+<span class="m">2</span><span class="w">               </span><span class="m">0</span><span class="w">                </span><span class="m">0</span><span class="w">            </span><span class="m">1</span><span class="w">                   </span><span class="m">0</span><span class="w">             </span><span class="m">0</span>
+<span class="m">3</span><span class="w">               </span><span class="m">0</span><span class="w">                </span><span class="m">2</span><span class="w">            </span><span class="m">2</span><span class="w">                   </span><span class="m">0</span><span class="w">             </span><span class="m">0</span>
+<span class="m">4</span><span class="w">               </span><span class="m">0</span><span class="w">                </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">                   </span><span class="m">0</span><span class="w">             </span><span class="m">3</span>
+<span class="m">5</span><span class="w">               </span><span class="m">0</span><span class="w">                </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">                   </span><span class="m">3</span><span class="w">             </span><span class="m">0</span>
+<span class="m">6</span><span class="w">               </span><span class="m">0</span><span class="w">                </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">                   </span><span class="m">0</span><span class="w">             </span><span class="m">3</span>
+<span class="m">7</span><span class="w">               </span><span class="m">0</span><span class="w">                </span><span class="m">0</span><span class="w">            </span><span class="m">0</span><span class="w">                   </span><span class="m">1</span><span class="w">             </span><span class="m">0</span>
+<span class="m">8</span><span class="w">               </span><span class="m">0</span><span class="w">                </span><span class="m">4</span><span class="w">            </span><span class="m">1</span><span class="w">                   </span><span class="m">0</span><span class="w">             </span><span class="m">0</span>
+<span class="m">9</span><span class="w">               </span><span class="m">0</span><span class="w">                </span><span class="m">2</span><span class="w">            </span><span class="m">0</span><span class="w">                   </span><span class="m">0</span><span class="w">             </span><span class="m">3</span>
+<span class="w">  </span><span class="n">mxaisbr_Abdomen</span><span class="w"> </span><span class="n">maxais</span><span class="w"> </span><span class="n">riss</span><span class="w"> </span><span class="n">niss</span>
+<span class="m">1</span><span class="w">               </span><span class="m">0</span><span class="w">      </span><span class="m">1</span><span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">1</span>
+<span class="m">2</span><span class="w">               </span><span class="m">0</span><span class="w">      </span><span class="m">1</span><span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">1</span>
+<span class="m">3</span><span class="w">               </span><span class="m">0</span><span class="w">      </span><span class="m">2</span><span class="w">    </span><span class="m">8</span><span class="w">    </span><span class="m">9</span>
+<span class="m">4</span><span class="w">               </span><span class="m">0</span><span class="w">      </span><span class="m">3</span><span class="w">    </span><span class="m">9</span><span class="w">    </span><span class="m">9</span>
+<span class="m">5</span><span class="w">               </span><span class="m">0</span><span class="w">      </span><span class="m">3</span><span class="w">    </span><span class="m">9</span><span class="w">    </span><span class="m">9</span>
+<span class="m">6</span><span class="w">               </span><span class="m">0</span><span class="w">      </span><span class="m">3</span><span class="w">    </span><span class="m">9</span><span class="w">    </span><span class="m">9</span>
+<span class="m">7</span><span class="w">               </span><span class="m">0</span><span class="w">      </span><span class="m">1</span><span class="w">    </span><span class="m">1</span><span class="w">    </span><span class="m">3</span>
+<span class="m">8</span><span class="w">               </span><span class="m">0</span><span class="w">      </span><span class="m">4</span><span class="w">   </span><span class="m">17</span><span class="w">   </span><span class="m">33</span>
+<span class="m">9</span><span class="w">               </span><span class="m">0</span><span class="w">      </span><span class="m">3</span><span class="w">   </span><span class="m">13</span><span class="w">   </span><span class="m">14</span>
+<span class="w">  </span><span class="n">intent4</span><span class="w">       </span><span class="n">Pmort</span>
+<span class="m">1</span><span class="w">    </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.013857916</span>
+<span class="m">2</span><span class="w">    </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.014412795</span>
+<span class="m">3</span><span class="w">    </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.017673701</span>
+<span class="m">4</span><span class="w">    </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.026078454</span>
+<span class="m">5</span><span class="w">    </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.027839150</span>
+<span class="m">6</span><span class="w">    </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.024364215</span>
+<span class="m">7</span><span class="w">    </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.005516156</span>
+<span class="m">8</span><span class="w">    </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.037222518</span>
+<span class="m">9</span><span class="w">    </span><span class="o">&lt;</span><span class="kc">NA</span><span class="o">&gt;</span><span class="w"> </span><span class="m">0.021037152</span>
+</pre></div>
+</div>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id99"><span class="brackets">4</span><span class="fn-backref">(<a href="#id43">1</a>,<a href="#id80">2</a>)</span></dt>
@@ -13438,6 +13410,7 @@ done
 <dd><p>deut <a class="reference external" href="https://www.biblegateway.com/passage/?search=Deuteronomy%2020%3A14&amp;version=KJV">20:14</a></p>
 </dd>
 </dl>
+</section>
 </section>
 </section>
 </section>
@@ -14008,8 +13981,14 @@ done
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id96">07/18/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id97">717. migration</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id98">718. unix</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#icd">720. icd</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r">721. r</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r">720. r</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-relevant-packages">720.1 install the relevant packages</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#get-some-documentation">720.2 get some documentation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#study-the-syntax">720.3 study the syntax</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-value-of-dx-pre">720.4 what is the value of dx_pre?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#as-such-the-syntax-is">720.5 as such the syntax is:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
