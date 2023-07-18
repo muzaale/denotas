@@ -1,0 +1,940 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>04/2022 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn202204';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/practicing.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/practicing.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.html">object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn202204.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/bdn202204.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>04/2022</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="id1">
+<h1>04/2022<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#exam</span>
+
+<span class="n">Muzaale</span><span class="p">,</span> <span class="n">POE</span><span class="o">/</span><span class="n">GTPCI</span> <span class="n">PhD</span>
+<span class="mi">04</span><span class="o">/</span><span class="mi">01</span><span class="o">/</span><span class="mi">22</span>
+
+<span class="mf">1.</span><span class="n">Logical</span> <span class="n">thinking</span>
+<span class="mf">2.</span><span class="n">Breadth</span> <span class="n">of</span> <span class="n">knowledge</span>
+<span class="mf">3.</span><span class="n">Develop</span> <span class="ow">and</span> <span class="n">conduct</span> <span class="n">research</span>
+
+<span class="mi">10</span><span class="o">-</span><span class="mi">15</span><span class="nb">min</span> <span class="n">presentation</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1.Julie
+— Insurance companies &amp; others may use your calculators for harm
+— Consider IRB implications of proposed EMR: consenting, aquisition
+— Publishing a paper that reduces access to donation
+— Accelerometer and hearing aids: pertinent to gerontology and in NHANES/EMR
+
+2.Karen
+— Big picture (increasing trends for older donors)
+— Gerontologist hat (confounding by indication in frailty for EMR: cause-inference methods)
+— Statistics hat
+— Effect-modification a big problem? What do we know? How common is donation over 50?
+
+3.Pete
+— Validating EMR for donors as NHANES has already be done
+— Quality of EMR data: I’m a lazy clinician for instance
+— Power size calculation: what difference in risk between groups is clinically relevant?
+
+4.Celentano
+— 
+
+5.Dorry
+— Missing data mechanisms
+— Validating new national registry
+— OPTN oversight encouraging on clinical practice (e.g. eGFR in donors, CMS flags, etc)
+</pre></div>
+</div>
+<p>.</p>
+<p>`#graçias``</p>
+<p>04/01/22<br />
+10am-12pm<br />
+🙏🏾</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#husbandsandwives</span>
+
+<span class="n">Roger</span><span class="o">/</span><span class="n">Ruth</span> <span class="p">(</span><span class="n">Knows</span> <span class="n">dad</span><span class="p">,</span> <span class="n">tribalism</span><span class="p">)</span>
+<span class="n">Mutabazi</span><span class="o">/</span><span class="n">Brandy</span>
+<span class="n">Tayebwa</span><span class="o">/</span><span class="n">Anita</span><span class="p">,</span> <span class="n">Joannita</span>
+<span class="n">Simeon</span><span class="o">/</span><span class="n">Shannie</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#film</span>
+
+<span class="s2">&quot;I got out there to entertain audiences the way Hollywood entertained me. Make them forget their lives for a few hours and be thrilled, awed, or excited at the big room where make believe lives,&quot;</span> <span class="n">Jackson</span> <span class="n">continued</span>
+</pre></div>
+</div>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=kglSBsGCJWY">Donald Lawrence</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#Morgann
+
+1.MPH vs PhD? She liked my recommendation
+2.From an affluent black family 
+3.West Baltimore 
+4.Transition in career
+5.From federal government (Forestry)
+6.And to health (MPH vs PhD nursing) 
+</pre></div>
+</div>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=4p4Cs2IVSXw">https://www.youtube.com/watch?v=4p4Cs2IVSXw</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#death
+
+To die proudly when it is no longer possible to live proudly. Death freely chosen, death at the right time, brightly and cheerfully accomplished amid children and witnesses: then a real farewell is still possible.. 
+               #36. Morality for physicians. Skirmishes of an untimely man. Twilight of Idols
+
+If it was a dog you’d put it down
+           11:47min left, Afterlife E1:S1 
+(Here we are introduced to Tony’s cantankerous funk — which he calls a superpower — that is founded on a contradiction: an atheistic view of the afterlife, but an idealization of a wife lost to cancer)
+
+Why do we give dogs a better death than we give ourselves?
+https://aeon.co/essays/why-do-we-give-dogs-a-better-death-than-we-give-ourselves
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#goingsoft
+
+Had a girlfriend at every time between 2007-2018
+
+Underestimated just how soft I’d grown in the interim 
+
+One needs a stern philosophy from as earlier in life as possible 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#faves </span>
+
+<span class="n">Julius</span> <span class="n">Caesar</span> <span class="mi">15</span>
+<span class="n">Cesare</span> <span class="n">Borgia</span> <span class="mi">7</span>
+<span class="n">Napoleon</span> <span class="mi">61</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#borgias
+
+This monk, with all the vengeful instincts of an unsuccessful priest in him, raised a rebellion against the Renaissance in Rome.... Instead of grasping, with profound thanksgiving, the miracle that had taken place: the conquest of Christianity at its capital — instead of this, his hatred was stimulated by the spectacle. 
+
+A religious man thinks only of himself. — Luther saw only the depravity of the papacy at the very moment when the opposite was becoming apparent: the old corruption, the peccatum originale, Christianity itself, no longer occupied the papal chair! 
+
+Instead there was life! Instead there was the triumph of life! Instead there was a great yea to all lofty, beautiful and daring things!... And Luther restored the church: he attacked it.... The Renaissance — an event without meaning, a great futility! — Ah, these Germans, what they have not cost us! 
+
+Futility — that has always been the work of the Germans. — The Reformation; Leibnitz; Kant and so-called German philosophy; the war of “liberation”; the empire — every time a futile substitute for something that once existed, for something irrecoverable.... These Germans, I confess, are my enemies: I despise all their uncleanliness in concept and valuation, their cowardice before every honest[…]”
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#saidi 
+
+04/08/22
+86min 07sec/17km
+86.12 min/10.563 miles 
+8.15393/MI
+8’09”/MI
+
+Vs
+
+74min 46sec/9miles
+8’18”/MI
+</pre></div>
+</div>
+<p>.</p>
+<p><a class="reference external" href="https://nypost.com/2022/04/07/will-smith-warns-jada-dont-use-me-for-clout-in-video/amp/">https://nypost.com/2022/04/07/will-smith-warns-jada-dont-use-me-for-clout-in-video/amp/</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#football</span>
+
+<span class="n">Man</span> <span class="n">City</span> <span class="n">vs</span> <span class="n">Liverpool</span>   
+<span class="mi">10</span><span class="p">:</span><span class="mi">30</span><span class="n">am</span>
+<span class="n">Sunday</span> <span class="mi">04</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">22</span>
+
+</pre></div>
+</div>
+<p>.</p>
+<p>177.2 after swimming<br />
+178.9 after a Pilsner &amp; Larger (anticipated)</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+
+
+
+
+#max’s
+
+Max’s taphouse 
+There’s 3 Jason’s 
+Jason Saturday’s :-)
+Jason 1 y’already know 
+Jason 2 no affect, really nice, deep eyes
+Jason 3 slightly bald, big beard, shy, little affect, really really nice 
+Bob y’already know 
+Scooter (wife is with Bloomberg school) 
+Jeff (long-ass beard 🧔) confirmed 
+Diana/Big “D” (Cinco de Mayo birthday) 
+Jason (another one, who knows me, bushy 🧔, little affect!!)
+Tim (young, capped 🧢 dude)
+? Cheerful bold guy who knows me! 
+Mac: young, shy, goatee, cap, knows my name!!!!
+??? Bold dude, knows me, somewhat cheerful, is NOT scooter :-) Jammie 
+Jammie is def the most cheerful 👨‍🦲:-)
+Jay: knows me, no smiles, but really nice 
+Racheal: new 2021 chic 
+Didi: extremely pleasant big black dude. Upgraded to bartender from bouncer during the 2020 shitshow 
+
+
+Scooter really is the bold dude with 
+A wife at Hopkins who 
+Travels a lot to Africa and places 
+
+But who is the young dude?? 
+
+Confirmed (by 🛴, whose wife actual works at JHPIEGO, but does some mentor-mentee shit at  Bloomberg); the young dude with a reverse cap 🧢 is Tim (what are the odds???)
+
+Jason — looks like there’s 3 of them
+Yeah — 200% emotionless, no beard too 
+That’s also Jason! Jay!!
+
+Rachael — hot Jewish 
+Matthew — young, southern accent (Nice guy)
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+#summary
+
+Ambitious
+L’homme moyen
+Slacker
+
+*
+
+Mark 8: 34-38 : For what shall it profit a man, if he shall gain the whole world, and lose his own soul? 
+
+*
+
+Examples of slacker protagonist becoming ambitious (aka losing their soul)
+1.Henry V
+2.William James
+3.Not “The Dude”!
+4.Cédric
+5.[XXX]
+
+
+“To those who want to know where the hell’s my ambition, I say: and you, where the hell’s your well-being? Usually they stammer a few words and I understand by them that they’ve postponed it. Because first, they need:
+
+1.Money (and a job);
+2.Husband/wife;
+3.Car;
+4.A house; and,
+5.Retirement plan
+
+And people say I’m the one wasting my time!
+
+https://ir.lib.uwo.ca/cgi/viewcontent.cgi?article=9099&amp;context=etd
+
+*
+
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#narcicism
+
+2016 Oscars
+— Mexican Best Director for The Renevant 
+— Mexican Cinematographer for The Renevant
+
+2015 Oscars “So White” (87th Academy’s)
+— Birdman was biggest winner 
+— Written, Produced, Directed, Cinematography— All Mexican!! 
+
+2014 Oscars (86th Academy’s)
+— 12 Years a Slave won best picture 
+— Lupita won best supporting actress 
+— Gravity (Mexican cinematographer, director)
+
+2013 Oscars (85th Academy’s)
+— Jamie Foxx nominated for best actor 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>https://www.youtube.com/watch?v=ke_Syg4fj3c
+
+Anger
+Chris Rock
+Dr. Jamal H. Bryant
+Keep my wife’s name out your mouth 
+
+Romans 12:17-21
+Vengeance is mine
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+#life
+
+Life = Will to Power
+Evasion = Numbing this Will
+Methods = Ideology or Chemicals
+
+x
+
+Will (to do)
+Desire (to be)
+Senses 🐘 🦒 🦓 🦔 🐄 🐅 
+
+Only alcohol can keep man in hedonism 
+
+x
+
+She should have died hereafter;
+There would have been a time for such a word.--
+To-morrow, and to-morrow, and to-morrow,
+Creeps in this petty pace from day to day,
+To the last syllable of recorded time;
+And all our yesterdays have lighted fools
+The way to dusty death. Out, out, brief candle!
+Life&#39;s but a walking shadow; a poor player,
+That struts and frets his hour upon the stage,
+And then is heard no more: it is a tale
+Told by an idiot, full of sound and fury,
+Signifying nothing 
+
+Ambition — thou shalt be king 
+Meaning — signifying nothing 
+Pleasure — increases the desire?
+
+No, alcohol merely inhibits mans will 
+Or numbs man whose will is too weak to climb 
+What is left are base instincts, sensualist, etc 
+
+x
+
+0g.κοσμογονία,γ Mass/Energy
+— Egypticism
+— Roman 
+1f.ἡ ἔρις,κ Flux
+— Frailty 🐑 
+— Robustness 🦅 
+2e.πρᾶξις,σ Catabolism
+— Peace
+— War
+3e.ἄσκησις,μ Anabolism
+— Décadence 
+— Culture 
+4d.∫δυσφορία.dt,ψ Plus Ça Change 
+— Memory
+— Forgetfulness 
+5c.φάρμακον,δ HPA-Axis
+— Opium 
+— Frenzy
+6b.ομορφιά,β Exercise/Doping 
+— Pretentious 
+— Light footed 💃🏾 🕺🏾 
+7a.τάξη,α Performance 🎭 
+— Good &amp; Evil
+— Beyond Good &amp; Evil
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#shakespeare
+
+Ambitious 
+— Macbeth
+
+L’Homme Moyen
+— Hamlet
+
+Slacker
+— Falstaff
+
+
+</pre></div>
+</div>
+<p>Non plus ultra <a class="footnote-reference brackets" href="#id3" id="id2">22</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#univariable
+
+1.World views like “Jesus is the answer”
+2.Virtually all ideologies 
+3.Punchlines, devices, etc.
+
+Metaphysical comforters
+</pre></div>
+</div>
+<p>.</p>
+<p>Study lucky daye — Teija is a fan &amp; she’d thus far been disappointed by Neo RnB</p>
+<p>Of course she’s an old soul — yob 1995 — and her late 50s dad was a DJ</p>
+<p>Tisha-like, but looks 10 years younger!!</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#art
+
+It’s art, and art only, that reveals us to ourselves 
+     — Portrait of Mr. W.H. 
+
+To err is human 
+     — Alexander Pope 
+
+All these things originate from that instinct which found in pain its most potent mnemonic. In a certain sense the whole of asceticism is to be ascribed to this
+     — What is the meaning of ascetic ideals?
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+<span class="c1">#shultz</span>
+
+<span class="mf">1.</span><span class="n">There</span> <span class="n">should</span> <span class="n">be</span> <span class="n">an</span> <span class="n">aristocracy</span>
+<span class="mf">2.</span><span class="n">There</span> <span class="n">should</span> <span class="n">be</span> <span class="n">mountains</span> <span class="ow">and</span> <span class="n">valleys</span>
+<span class="mf">3.</span><span class="n">Fresh</span> <span class="n">brooks</span> <span class="n">will</span> <span class="n">always</span> <span class="n">flow</span> <span class="kn">from</span> <span class="nn">high</span> <span class="n">places</span> <span class="n">to</span> <span class="n">low</span>
+<span class="mf">4.</span>
+<span class="mf">5.</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Psychology of money: the lesson here is.. 
+— Anecdotes 
+— Man of science isn’t moved 
+— Successful
+— Retired at 40
+— Died at 92 with $8m
+— Never trust retirement as achievement 
+— It’s frailty 
+— Patience as virtue 
+— Greed as Vice 
+Tremendous struggle reading this book 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#adams</span>
+
+<span class="n">Adams</span> <span class="n">was</span> <span class="n">a</span> <span class="n">dedicated</span> <span class="n">diarist</span> <span class="ow">and</span> <span class="n">regularly</span> <span class="n">corresponded</span> <span class="k">with</span> <span class="n">many</span> <span class="n">important</span> <span class="n">contemporaries</span><span class="p">,</span> <span class="n">including</span> <span class="n">his</span> <span class="n">wife</span> <span class="ow">and</span> <span class="n">adviser</span> <span class="n">Abigail</span> <span class="n">Adams</span> <span class="k">as</span> <span class="n">well</span> <span class="k">as</span> <span class="n">his</span> <span class="n">friend</span> <span class="ow">and</span> <span class="n">rival</span> <span class="n">Thomas</span> <span class="n">Jefferson</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Ambitious — Kim
+L’Femme Moyen — Khloe 
+Slacker — Kourtney*
+
+*PDA in S1E1 of both shows
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>80yo M
+
+Presented: x 5 years (Insidious onset)?
+— Palpitations
+— Weakness
+— Distance to bathroom
+
+Recent:
+— Otherwise a very active person
+— Above issues lead to Dx: NHL/CLL.. 2 cycles of CHOP including last one in march
+— Received several blood transfusions (Hb was 4 earlier in the year)
+— Bone marrow biopsy: CD20 immunofluorescence pattern on H&amp;E
+— Received x? Rounds of chemotherapy so far
+— Chief issue now is??
+
+Surgery: 10/2021
+— Intestinal Obstruction
+— Hernia
+
+Labs
+— HGB 8.2 g/dL (Origin of presenting symptoms)
+
+*
+
+Symptoms: nodes, fever, night sweats, weight loss, tiredness
+4 types of NHL (this case is CLL)
+60 sub-types
+Rx: slow vs. fast-growing, local vs. spread
+Chemotherapy increases risk of other cancers (e.g. R-CHOP: well tolerated)
+Affects 2% of Americans at some point in life, 4% of all cancers
+Mostly between 65-75yo
+5y survival is 71%
+Staging CT-scan after 3 cycles for response
+Of increased prevalence over last 29y
+Window of opportunity: had surgery in 10/2021.
+Did he have anemia then?
+Received a blood transfusion before surgery.. 
+
+*
+
+Hb at surgery
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Peter Thiel and <a class="reference external" href="https://www.youtube.com/watch?v=WOEsVjqoOfA">education reform</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Mighty
+— Imposing 
+— Lacrimosa 
+— What makes man, Mr. Lebowski?
+
+Q&amp;A
+— Formulaic
+— Lady, I got buddies who died facedown in the muck so that you and I could enjoy this restaurant!
+
+Pleasing
+— Circle of Fifths
+— White Russian
+— a “J” 🚬 
+— Bowling
+</pre></div>
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id2">22</a></span></dt>
+<dd><p>bards non plus ultra</p>
+</dd>
+</dl>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

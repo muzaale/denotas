@@ -1,0 +1,714 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>09/2019 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn201909';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/practicing.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/practicing.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.html">object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn201909.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/bdn201909.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>09/2019</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="id1">
+<h1>09/2019<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>I think I’ve come up with a tidy heuristic that unites various views of complexity:</p>
+<ol class="arabic simple">
+<li><p>Initial conditions = time zero = y-intercept = known unknown</p></li>
+</ol>
+<p>2.Subsequent process = mathematical function = linear only within some time limits, but mostly nonlinear</p>
+<p>3.Future perturbations to emergent system = unknown unknown = “projectile” that “impacts” processes’ trajectory and changes it (unknowns including when impact will occur and the extent of the perturbation)</p>
+<p>.</p>
+<p>only Ssebuliba amongst Beatrice’s children is 24/7 sober</p>
+<p>.</p>
+<p>9mile🏃🏾&#64;80min&lt;🌅😓💦</p>
+<p>.</p>
+<p>Life isn’t about finding yourself. Life is about creating yourself — George Bernard Shaw</p>
+<p>(Bob Dylan recycled this)</p>
+<p>Becoming, not being</p>
+<p>.</p>
+<p>I went to jail for 11 days for disturbing the peace; I was trying to disturb the war.
+—Joan Baez, 1967 Pop Chronicles interview</p>
+<p>.</p>
+<p>The New York Times</p>
+<p>What Really Brought Down the Boeing 737 Max?<br />
+Malfunctions caused two deadly crashes. But an industry that puts unprepared pilots in the cockpit is just as guilty.</p>
+<p>By William Langewiesche<br />
+On Oct. 29, 2018, Lion Air Flight 610 taxied toward the runway at the main airport in Jakarta, Indonesia, carrying 189 people bound for Bangka Island, a short flight away. The airplane was the latest version of the Boeing 737, a gleaming new 737 Max that was delivered merely three months before. The captain was a 31-year-old Indian named Bhavye Suneja, who did his initial flight training at a small and now-defunct school in San Carlos, Calif., and opted for an entry-level job with Lion Air in 2011. Lion Air is an aggressive airline that dominates the rapidly expanding Indonesian market in low-cost air travel and is one of Boeing’s largest customers worldwide. It is known for hiring inexperienced pilots — most of them recent graduates of its own academy — and for paying them little and working them hard. Pilots like Suneja who come from the outside typically sign on in the hope of building hours and moving on to a better job. Lion Air gave him some simulator time and a uniform, put him into the co-pilot’s seat of a 737 and then made him a captain sooner than a more conventional airline would have. Nonetheless, by last Oct. 29, Suneja had accumulated 6,028 hours and 45 minutes of flight time, so he was no longer a neophyte. On the coming run, it would be his turn to do the flying.</p>
+<p>His co-pilot was an Indonesian 10 years his elder who went by the single name Harvino and had nearly the same flight experience. On this leg, he would handle the radio communications. No reference has been made to Harvino’s initial flight training. He had accumulated about 900 hours of flight time when he was hired by Lion Air. Like thousands of new pilots now meeting the demands for crews — especially those in developing countries with rapid airline growth — his experience with flying was scripted, bounded by checklists and cockpit mandates and dependent on autopilots. He had some rote knowledge of cockpit procedures as handed down from the big manufacturers, but he was weak in an essential quality known as airmanship. Sadly, his captain turned out to be weak in it, too.</p>
+<p>“Airmanship” is an anachronistic word, but it is applied without prejudice to women as well as men. Its full meaning is difficult to convey. It includes a visceral sense of navigation, an operational understanding of weather and weather information, the ability to form mental maps of traffic flows, fluency in the nuance of radio communications and, especially, a deep appreciation for the interplay between energy, inertia and wings. Airplanes are living things. The best pilots do not sit in cockpits so much as strap them on. The United States Navy manages to instill a sense of this in its fledgling fighter pilots by ramming them through rigorous classroom instruction and then requiring them to fly at bank angles without limits, including upside down. The same cannot be expected of airline pilots who never fly solo and whose entire experience consists of catering to passengers who flinch in mild turbulence, refer to “air pockets” in cocktail conversation and think they are near death if bank angles exceed 30 degrees. The problem exists for many American and European pilots, too. Unless they make extraordinary efforts — for instance, going out to fly aerobatics, fly sailplanes or wander among the airstrips of backcountry Idaho — they may never develop true airmanship no matter the length of their careers. The worst of them are intimidated by their airplanes and remain so until they retire or die. It is unfortunate that those who die in cockpits tend to take their passengers with them.</p>
+<p>It was a blue-sky morning in Jakarta, with a few clouds floating offshore to the north. The flight was assigned a standard departure route over the Java Sea. At 6:20 a.m., it was cleared for takeoff. To anyone observing the airplane externally, for instance from the control tower, the takeoff would have appeared ordinary as the Boeing lumbered down the runway and lifted into the air. The first external hint of trouble came about a minute later, after a departure controller cleared the flight for a climb to 27,000 feet. Harvino asked the controller to confirm the airplane’s current altitude as shown on the controller’s display. The request was unusual, and it went unexplained. The controller answered that he showed the altitude as 900 feet, and Harvino acknowledged him without comment as if he concurred.</p>
+<p>Twenty-five seconds later (a long interlude in flight), Harvino requested a clearance to “some holding point” where the airplane could linger in the sky. The request was surprising. The controller did not provide a holding point but asked about the nature of the problem. Harvino answered, “Flight-control problem.” He did not mention which kind, but before they die, pilots are rarely so descriptive. Harvino did not declare an emergency. The controller asked about their intended altitude. Harvino answered 5,000 feet, which was strangely low and to this day remains unexplained.</p>
+<p>Two and a half minutes after takeoff, as the airplane was climbing through 2,175 feet, it suddenly went into a violent 700-foot dive, rounding out of it at 1,475 feet and pulling into an uncertain climb. No turn was associated with the plunge, so the airplane’s problem seemed to be unrelated to roll control and the age-old menace of a spiral dive. Right from the start of the investigation, suspicions focused on Lion Air 610’s trim mechanism — and specifically on the possibility of a failure known as a runaway trim. Trim refers to an aerodynamic condition related to pitch — the nose-up-or-down attitude of an airplane in flight. It can be thought of as a balance point, or the nose attitude at which an airplane naturally rides when no up-or-down elevator-control deflections are applied. That is a slight simplification, but good enough. Trim is routinely adjusted in flight. In the Boeing 737, the adjustments are made by the use of thumb switches on the control wheels when the pilots are “hand flying” the airplane manually, as they would on takeoff and landing. The thumb switches control an electrohydraulic mechanism that changes the angle of the horizontal stabilizer — the all-important tail surface that counteracts the natural pitching effects of the wings and provides the necessary aerodynamic balance for flight. In its functioning, the electric trim is smooth, powerful and usually well behaved. On occasion, however, it may start running on its own volition and prompt the airplane to nose up or down. That’s a runaway trim. Such failures are easily countered by the pilot — first by using the control column to give opposing elevator, then by flipping a couple of switches to shut off the electrics before reverting to a perfectly capable parallel system of manual trim. But it seemed that for some reason, the Lion Air crew might not have resorted to the simple solution.</p>
+<p>Lion Air 610 climbed to 5,000 feet and stayed there shakily for an additional six minutes. Soon it was out over open water. At some point, Harvino declared the crew’s intent to return to the Jakarta airport. Air-traffic control approved the return and later advised the crew to plan on Runway 25 Left, the one closest to their position. But nothing occurred as a result. The airplane kept flying away from the airport. Harvino asked the controller for the airplane’s speed across the ground. This was another unusual question, given that multiple independent indications of speed should have been available in the cockpit. The controller answered that the groundspeed was 322 knots (371 miles per hour). At that altitude, it was nearing the 737’s maximum engineered aerodynamic airspeed of approximately 340 knots. The airplane was flying unusually fast.</p>
+<p>It should have been obvious to air-traffic control that the pilots were struggling, but maybe because they had not declared an emergency, the controller continued to treat them routinely, repeatedly instructing them to maintain their chosen altitude of 5,000 feet and issuing multiple new compass headings to steer. Each new heading involved a banked turn, and each bank complicated the crew’s ability to keep the nose from dropping. It is hard to imagine what the controller was thinking. One of his headings steered the flight away from conflicting traffic, when instead it was the traffic that should have been steered away from the flight. Equally unfortunate was the acquiescence of Suneja and Harvino, who dutifully complied with every air-traffic control request.</p>
+<p>At 6:31 a.m., 11 minutes into the flight, Suneja got on the radio for the first time. He did not know their altitude, he told the controller, because all their altitude indicators were showing different values. This is unlikely and has never been explained. Perhaps reflecting the strain he felt, Suneja misidentified himself as Lion Air 650. Appropriately, the controller acknowledged Suneja’s transmission without quibbling and responded, “No restriction.” He meant that Suneja was cleared to fly at whatever altitude he chose. But apparently Suneja did not understand. A few seconds later, he unnecessarily asked the controller for a block clearance to all altitudes 3,000 feet above and below his current altitude for traffic avoidance. The controller, who had just heard Suneja say he did not know his altitude, asked him what altitude he wanted. Suneja answered, “Five thou.”</p>
+<p>Suneja was shepherding 188 hapless souls through the sky, 189 if you include his own, and struggling with a confusing failure of some kind. Under stress, his performance had become abysmal. Right from the start — months before the cockpit voice recorder was found and listened to — his obsession with altitude clearances could only be explained as a pilot drowning in minutiae. “Five thou” was his final transmission. Twelve minutes into the flight, Lion Air 610 disappeared from radar.</p>
+<p>[Read highlights from The Times’s coverage of the 737 Max crashes and the fallout.]<br />
+Airline crashes are rare, and rarer still are crashes that force the grounding of an entire fleet. Lion Air 610 was not immediately among them. But about four months later, on March 10, 2019, an equally new 737 Max flown by Ethiopian Airlines went down on departure from Addis Ababa with the loss of everyone aboard, and within a week all further flights of the 737 Max were stopped worldwide.</p>
+<p>After both accidents, the flight-data recordings indicated that the immediate culprit was a sensor failure tied to a new and obscure control function that was unique to the 737 Max: the Maneuvering Characteristics Augmentation System (MCAS). The system automatically applies double-speed impulses of nose-down trim, but only under circumstances so narrow that no regular airline pilot will ever experience its activation — unless a sensor fails. Boeing believed the system to be so innocuous, even if it malfunctioned, that the company did not inform pilots of its existence or include a description of it in the airplane’s flight manuals.</p>
+<p>The system in question is complicated, and we will return to it later, but for now it is enough to know that after the loss of Lion Air 610, the company suggested that the 737 Max was as safe as its predecessors. Its tone was uncharacteristically meek, but not for lack of conviction. The company seemed hesitant to point the finger at a prickly customer — Lion Air — that had several billion dollars’ worth of orders on the table and could withdraw them at any time. The dilemma is familiar to manufacturers after major accidents in which it is usually some pilot and not an airplane that has gone wrong. Nonetheless, Boeing’s reticence allowed a narrative to emerge: that the company had developed the system to elude regulators; that it was all about shortcuts and greed; that it had cynically gambled with the lives of the flying public; that the Lion Air pilots were overwhelmed by the failures of a hidden system they could not reasonably have been expected to resist; and that the design of the MCAS was unquestionably the cause of the accident.</p>
+<p>But none of this was quite true. The rush to lay blame was based in part on a poor understanding not just of the technicalities but also of Boeing’s commercial aviation culture. The Max’s creation took place in suburban Seattle among engineers and pilots of unquestionable if bland integrity, including supervising officials from the Federal Aviation Administration. Although Boeing’s designers were aware of timetables and competitive pressures, the mistakes they made were honest ones, or stupid ones, or maybe careless ones, but not a result of an intentional sacrifice of safety for gain. As always, there was a problem with like-mindedness and a reluctance by team players to stand out from the crowd. Even more pernicious was the F.A.A.’s longstanding delegation of regulatory authority to Boeing employees — a worry that is perennially available to chew on if you like and may indeed be related to the configuration of the troublesome system as it was installed. Nonetheless, in Seattle, at the level where such small choices are made, corruption, like cynicism, is rare.</p>
+<p>That is not meant as a blanket defense of Boeing. On the corporate level, the company is the worst sort of player — a corrosive agent that spreads money around Washington, pushes exotic weapons on Congress, toys with nuclear annihilation, sells all sorts of lesser instruments of death to oppressive regimes around the world and dangerously distorts American society in the ways that President Dwight D. Eisenhower warned against in his prescient 1961 farewell address. But hardly any of that matters in the story of the 737 Max. What sent an expensive new Boeing into the ocean on that beautiful, bright morning in Indonesia? It is understandable to look for a simple answer. Laying the blame on a poorly implemented system, even a complex one, made the accident relatively easy to understand and also provided for a material solution: Simply fix the system. But the focus on a single shoddy component — as the news media and government regulators have rushed to do — has obscured the larger forces that ultimately made these accidents possible.</p>
+<p>The paradox is that the failures of the 737 Max were really the product of an incredible success: a decades-long transformation of the whole business of flying, in which airplanes became so automated and accidents so rare that a cheap air-travel boom was able to take root around the world. Along the way, though, this system never managed to fully account for the unexpected: for the moment when technology fails and humans — a growing population of more than 300,000 airline pilots of variable and largely unpredictable skills — are required to intervene. In the drama of the 737 Max, it was the decisions made by four of those pilots, more than the failure of a single obscure component, that led to 346 deaths and the worldwide grounding of the entire fleet.</p>
+<p>If you were to choose a location in the developing world in which to witness the challenges facing airline safety — the ossification of regulations and in many places their creeping irrelevance to operations; the corruption of government inspectors; the corruption of political leaders and the press; the pressure on mechanics, dispatchers and flight crews to keep unsafe airplanes in the air; the discouragement, fatigue and low wages of many airline employees; the willingness of bankers and insurers to underwrite bare-bones operations at whatever risk to the public; the cynicism of investors who insist on treating air travel as just another business opportunity; and finally the eagerness of the manufacturers to sell their airplanes to any airline without restraint — you would be hard pressed to find a more significant place than Indonesia.</p>
+<p>The country began deregulating its airline industry in the late 1990s in the hope of providing for the sort of fast, low-cost travel that might help bind its islands together. No-frills newcomers who cared nothing for prestige rushed in to compete for the business of bargain-conscious passengers and undercut the flagship national airline, Garuda, in a booming domestic market that started growing at a rate second only to China’s. The free-for-all soon raised questions about how to manage safety. That is a polite way of putting it. A race to the bottom comes to mind.</p>
+<p>At the forefront of the boom was a streetwise Jakarta local named Rusdi Kirana, then 36, who came from a humble background, once sold typewriters for a living and became an airport freelancer hustling for scraps of opportunity among the passengers moving through the terminal buildings. Initially that meant wheeling suitcases to and from the curb, holding up name signs in the arrival flows or spotting people who might appreciate some friendly guidance. He was good at the hustle, but little else has been reported about his early work at the airport, except that in the 1990s he and his brother started what they called a travel agency. This was in a pre-electronic era, when the airlines issued paper tickets. In Jakarta, the airport terminals had become marketplaces where thousands of passengers in search of cheap flights hunted for last-minute discounts offered by airlines wanting to fill empty seats at any price. Kirana and his brother stepped in as middlemen, acquiring tickets by the fistful from airline clerks and scalping them to the crowds. The mechanics of the scheme remain murky, but even Garuda profited from Kirana’s hustle. No one complained.</p>
+<p>Kirana’s travel agency did not make him rich, but it apparently convinced him that a large, unexploited market existed in Indonesia for cheap flights, and that someday, because of the country’s island geography, air travel might be seen as routine by ordinary people. At the time, the industry remained regulated. Kirana seemed to believe that it was price rather than convenience that counted and that the trips would have to cost about the same as those by ferry and bus. To achieve that, he would have to use his own airplanes and control every aspect of the operation. More important than reducing costs, he would have to fill his airplanes to capacity and keep them flying. He would call the airline Lion Air. To save money, he sketched out the logo and uniforms himself. He approached the Transportation Ministry to inquire about licensing the airline and was laughed off and advised to set up a condom factory instead. But when the industry was deregulated shortly afterward, Kirana could not be denied. He leased a decrepit Boeing 737, and in June 2000, Lion Air started operations, offering low-cost flights on two of Indonesia’s most popular routes.</p>
+<p>Within five years, domestic passenger traffic doubled and then tripled. Lion Air’s fleet grew by even larger multiples as the airline gobbled up an increasing share of the market, and Kirana turned out to be a master of financial dealings. The public flocked to him even while reviling his airline for its poor on-time performance and, soon enough, for its safety record. He did not appear to care about the complaints that came in. One afternoon, he pointed to a trash can in his office and said to a businessman I know, “Here’s my complaints department.” People called him ruthless, but shrewd is a better description. Having given up at typewriter sales, he was determined to succeed at something else. He told the businessman that it is a mistake in an airline venture to get wrapped up in the romance and art of flying, because money is what counts. He may have been right, except that this approach reduces pilots to journeymen and ignores the role of airmanship in safety.</p>
+<p>The twist is that Kirana could have built his airline on the Airbus 320, an airplane that is less challenging to fly, but instead chose the equivalent Boeing 737, which counts on pilots as the last resort if something mechanical or otherwise goes wrong. I have been unable to speak to Kirana despite multiple attempts to reach him, so I do not know if he cares about these distinctions. For sure, though, he cares that once an airline makes a choice between Airbus and Boeing, changing manufacturers is expensive to do. Simulators, shop equipment, stocks of spare parts and training curriculums have to change. Kirana has become a major Airbus customer — but for other airlines he now controls. As for Lion Air, having begun with Boeing, it stuck with Boeing and by 2005 placed an order for up to 60 Next-Generation 737-900ERs. ER stands for extended range. The 900 is a 220-passenger airplane. The model was unpopular and had garnered not a single customer before Lion Air came along. The deal came close to $4 billion. This got Boeing’s attention.</p>
+<p>The deregulated Indonesian airline industry was also attracting attention, but not of the desirable kind. Accompanying the drastic expansion in traffic was a disproportionate rise in accidents. There were many contributing factors, mostly among the budget carriers but affecting Garuda as well: an onrush of inexperienced pilots willing to work long hours for low pay; discouragement among mechanics, ramp workers and dispatchers; pressure to keep airplanes flying despite component failures that should have grounded them; the falsification of cargo and passenger manifests; dual maintenance and flight logs; and corruption permeating the entire system, including even air-traffic control.</p>
+<p>In Jakarta, a graybeard captain, speaking to me on the condition of anonymity, described the attitude of the new owners toward their pilots. He said: “The pilots passed the check ride! They can fly the airplanes!” Also, in some owners’ view, the semiannual simulator training is wasteful because the simulators are costly to run and maintain, and while the pilots are playing around in them (while collecting their pay), they are not out producing revenue. Normally two pilots train in a simulator at a time, with an instructor seated behind them — so, three in the box. I was told that in Indonesian simulators, there are sometimes seven in there: two pilots flying, one instructing and four others standing up and logging the time.</p>
+<p>One Indonesian newcomer was a low-cost airline called Adam Air, which was a Lion Air competitor for several years. Its disregard of safety ran the gamut and resulted in the dispatch of shabby airplanes in the hands of beleaguered pilots. (Former Adam Air employees could not be reached for comment.) Many pilots quit out of disgust or fear. I know how it feels, because as a young man I flew for fly-by-night cargo operators in the United States and suffered most of the survivable failures known to pilot-kind — engine failure, engine fire, electrical failure, electrical fire, radio failure, radar failure, pressurization failure, wing-flap failure, landing-gear failure, gyroscopic failure, airspeed-indication failure, altimeter failure, anti-ice failure, personal (girlfriend) failure, tail-tin-canning lightning-strike failure and trim failures at least four times. By trim failures, I mean runaway trims. Our mechanics laughed about “pencil whipping” the airplanes into the air, and we agreed that the paperwork was a joke. The F.A.A. inspected it and never caught on. But we carried only freight. One winter night, one of our pilots died. He was taken down by a de-icing failure over high terrain inbound to Los Angeles, and none of us were surprised.</p>
+<p>But Adam Air carried unwitting passengers. Its president director was a wealthy young man named Adam Suherman, who lived in Los Angeles for a few years. One day, he went back to Jakarta and, with the help of family money, started an airline. It began flying in December 2003. One of its 737s — an airplane that had been around the block for 18 years and was leased from Wells Fargo — was written up by pilots for recurring defects 154 times over the final three months of 2006. The number was high because the defects were not fixed. By far the largest number of defects was related to discrepancies between the airplane’s two independent inertial reference systems, navigational and flight instrumentation drivers that are important to the safe completion of a flight.</p>
+<p>Speaking about Adam Air, Dave Carbaugh, a former Boeing test pilot and one of the world’s top aviators, who trained airline pilots throughout Asia, told me: “They kept dispatching a faulty aircraft. Eventually they ran into a crew that couldn’t handle it.” It happened on New Year’s Day in 2007. While flying through an area of bad weather at 35,000 feet, the crew noticed discrepancies between the navigational systems; while fiddling with a solution, they switched off the autopilot unintentionally and drifted into a bank that turned into an uncontrolled spiral dive, during which the descent rate exceeded 50,000 feet per minute and the airplane approached the speed of sound before the captain pulled the wings off in flight. All 102 occupants died in terror.
+The cockpit voice recorder from Lion Air Flight 610 was recovered in January 2019, 11 weeks after the crash.</p>
+<p>Willy Kurniawa/Reuters
+Seven weeks later, another Adam Air 737 flew an erratic approach to the Surabaya airport among thunderstorms and made a landing so hard that its fuselage cracked and was badly bent, leaving the aft section drooping toward the pavement. No passengers were seriously injured, but the airplane had to be written off. The airline did not provide investigators with the identities of its pilots and was not forced to. Their training histories and qualifications therefore remain unknown. In 2008, Adam Air lost yet another 737 and was grounded by the Indonesian government. The airline declared bankruptcy and ceased operations. Adam Suherman faded from view. The more important point was that Adam Air no longer posed a threat to the flying public.</p>
+<p>By 2007, Garuda, the national airline, had a notoriously bad safety record. Two weeks after Adam Air’s bent-airplane episode in Surabaya, a Garuda captain at the controls of a 737 bound for another airport on the island of Java allowed the airplane to get too high on the approach and tried to resolve the problem by pointing the nose down and diving at the runway despite the co-pilot’s calls to abort the approach and circle around. The captain got the airplane going so fast that when he called for flaps to configure for landing, the co-pilot did not dare extend them for fear of structural damage and did not communicate his doubts to the captain. Investigators later criticized the co-pilot for poor teamwork, specifically for not taking control of the airplane, but short of clubbing the captain into submission, there wasn’t much he could do. The airplane landed long, touched down going 100 miles an hour too fast, bounced three times and went careering off the far end of the runway, slicing through an airport perimeter fence and sliding across a road, a ditch and an embankment before coming to rest in a rice paddy and bursting into flames. Because rescue vehicles could not cross the ditch, firefighters could not get their equipment close enough to suppress the flames effectively, and the fire burned for more than two hours. The captain and the co-pilot were not hurt, but 21 people died and others were severely injured.
+Garuda was the last straw. From 2003 to 2007, the Indonesian accident rate as measured by fatal flights per million departures had grown to be 15 times as high as the global average. The United States Embassy in Jakarta advised Americans to avoid travel on Indonesian airlines, though within Indonesia that was practically impossible to do. As usual, the numbers worked in favor of individual travelers: Even on the worst Indonesian airlines in the worst of times, the chances of being killed were minuscule. But for foreign governments that had become the self-anointed guardians of their citizens worldwide, the exposure was similar to that of the airplane manufacturers, though less consequential: Inevitably, accidents would continue to occur in Indonesia, and foreigners would die, and it would be hard for their officials to duck accountability unless the officials had registered concern in advance.</p>
+<p>In 2007, the European Union and the United States permanently banned all Indonesian airlines from their national territories. This was done for reasons of safety. The ban was largely symbolic, because the Indonesians were focused on their expanding regional markets and had no immediate plans to open such long-distance routes, but it signaled official disapproval of Indonesia’s regulatory capabilities and served as a public critique of a group of airlines, some of which were out of control. Residents of Europe and the United States generally did not know or care, but many of the ordinary Indonesians who had grown to hate their airlines were in favor of the ban simply as a form of punishment. Deregulation had transformed Indonesia into a complicated Wild East of flying, inhabited by consumers who were immune to prestige, just as Lion Air’s Kirana had predicted.</p>
+<p>The ban put Boeing and Airbus into a delicate position. They would now be selling airplanes to officially declared unsafe airlines that the American and European authorities expected would keep killing and injuring their passengers at a rate that would be unacceptable in the West. By 2007, the biggest of those airlines was Lion Air. That year, it placed a new order for 40 additional 737s, and Boeing happily agreed to fill it. In 2011, Lion Air returned to the table with what at the time was the largest commercial order in aviation history, a $22 billion deal for 230 units of the 737, including 201 units of the coming 737 Max. The deal was finalized during an Asean summit meeting in Bali that was attended by President Barack Obama. Photographs show Obama looking on approvingly as Kirana and a senior Boeing executive signed the contract. No mention was made in the associated news reports that Lion Air was considered to be a dangerous airline and that it was banned from the United States.</p>
+<p>Lion Air had been contributing to the casualties almost since its inception. By the time of the signing ceremony in Bali, it was responsible for 25 deaths, a larger number of injuries, five total hull losses and an unreported number of damaged airplanes. An old truth in aviation is that no pilot crashes an airplane who has not previously dinged an airplane somehow. Scratches and scrapes count. They are signs of a mind-set, and Lion Air had plenty of them, generally caused by rushed pushbacks from the gates in the company’s hurry to slap airplanes into the air. Kirana was once asked why Lion Air was experiencing so many accidents, and he answered sincerely that it was because of the large number of flights. Another question might have been why, despite so many crashes, the death toll was not higher. The answer was that all of Lion Air’s accidents happened during takeoffs and landings and therefore at relatively low speed, either on runways or in their immediate obstacle-free vicinities. These were the brief interludes when the airplanes were being flown by hand. The reason crashes never happened during other stages of flight is most likely that the autopilots were engaged.</p>
+<p>Boeing knew it had a problem. A widespread culture of corruption lay at the core, but that was beyond anyone’s ability to reform. Instead, Boeing decided to intervene at its own expense to raise standards at Lion Air and try to reduce its contributions to the accident rate. Both Boeing and Airbus had taken larger such actions before. Foremost were their epic interventions in China that gathered speed in the late 1980s and endured for years. At the start, civil aviation in China was a mess, with one of the highest accident rates in the world.</p>
+<p>Dave Carbaugh, the former Boeing test pilot, spent his first 10 years with the company traveling the globe to teach customers how to fly its airplanes. He mentioned the challenge of training pilots in Asia. “Those were the rote pilots,” he said, “the guys standing up in the back of a sim. They saw a runaway trim. They saw where and how it was handled in the curriculum — always on Sim Ride No. 3. And so on their Sim Ride No. 3, they handled it correctly, because they knew exactly when it was coming and what was going to happen. But did they get exposed anywhere else? Or did they discuss the issues involved? No. It was just a rote exercise. This is Step No. 25 of learning to fly a 737. Period.” I asked about China specifically. He said: “The Chinese? They were probably the worst.” He spent every other month in China for years. He said: “They saw flying from Beijing to Tianjin as 1,352 steps to do. Yet if they flew from Beijing to Guangzhou, it was 1,550 steps. And they didn’t connect the two. It would get so rote that they just wouldn’t deviate. I remember flying with a captain who would never divert no matter how many problems I gave him. I asked him, ‘How come?’ He said, ‘Because the checklist doesn’t say to divert.’ ”</p>
+<p>That changed over time. With the support of the Chinese government, which went so far as to delegate some regulatory functions to foreigners like Carbaugh, the manufacturers were able to instill a rigorous approach to safety in a small cadre of pilots and managers, who in turn were able to instill it in others. The effort was made not out of the goodness of the manufacturers’ hearts, but out of calculations related to risk and self-preservation. It is widely seen to have been a success. Today the Chinese airlines are some of the safest in the world.</p>
+<p>This was the history that Boeing had in mind 10 years ago when it decided to intervene with Lion Air. Carbaugh said: “Boeing spent a shitpot full of money trying to bring those folks up to Western standards. We could only do so much, but we knew we had to try. It was an extraordinary effort.” But it was not good enough. Lion Air continued to crash airplanes around runways as it had before. The Indonesian authorities lacked the political will to rein that in. It is no secret that Rusdi Kirana prioritized efficiency over regulation. Recently he made it clear that he also resented Boeing as being presumptuous and typically condescending. “They look down on my airline and my country,” he told Reuters. “They treat us as third-world.”</p>
+<p>It was perhaps inevitable that the relationship between Boeing and Lion Air would prove fractious. Boeing became the world’s pre-eminent commercial airplane manufacturer in part because it developed a coherent design philosophy that relied on pilots’ airmanship as the last line of defense. It made sense in an era when airplanes were vulnerable to weather and prone to failures and pilots intervened regularly to keep airplanes from crashing. By the 1980s, however, the situation had evolved. It became apparent that because of engineering improvements, very few accidents were caused by airplanes anymore, and almost all resulted from pilot error. This occurred at a time when airlines were being deregulated, discount carriers were springing up, major new markets were beginning to appear in developing countries, pilots’ unions were being busted, pilots’ salaries were in steep decline and airmanship globally was being eroded by an increasing reliance on cockpit automation, production-line training and a rote approach to flying.</p>
+<p>In the face of these changes, Boeing clung resolutely to its pilot-centric designs, but in Toulouse, France, the relative newcomers at the European consortium called Airbus were not nearly as shy. Led by an outspoken former military test pilot turned chief engineer named Bernard Ziegler, Airbus decided to take on Boeing by creating a robotic new airplane that would address the accelerating decline in airmanship and require minimal piloting skills largely by using digital flight controls to reduce pilot workload, iron out undesirable handling characteristics and build in pilot-proof protections against errors like aerodynamic stalls, excessive banks and spiral dives. The idea was that it would no longer be necessary to protect the public from airplanes if Airbus could get airplanes to protect themselves from pilots.</p>
+<p>The approach was diametrically opposed to Boeing’s. Ziegler announced that he was going to build an airplane that even his concierge could fly. The implicit insult won him the enmity of some French airline pilots, who then as now thought highly of themselves. Ziegler told me he received death threats and lived under police protection for a while. But his efforts led to the smartest airplane ever built, a single-aisle medium-range “fly-by-wire” masterpiece called the A320 that entered the global market in 1988, led the way to all other Airbus models since and has been locked into a seesaw battle with Boeing’s relatively conventional 737s for the past 30 years.</p>
+<p>You might think that the 737 would have grown increasingly disadvantaged given the New World qualities of the A320, but in my estimation pilots have managed to crash the 320 at about the same rate, largely because of confusion over automation. In other more positive ways, the 737 and A320 were closely matched: same payloads and performance, same operating costs, same potential for profit-making. That threatened to change in 2010 when Airbus introduced a version of the 320 called the Neo (for “new engine option”) that offered large improvements in fuel efficiency, range and payload. The following year, American Airlines warned that it might abandon Boeing and buy hundreds of the new Airbus models. Boeing responded with a rush program to re-engineer the 737, modify the wings and make other changes to improve the performance of the airplane and give it some perceptible advantage over the A320Neo.</p>
+<p>The rush took five years to complete. Boeing called the result the Max. To keep costs down, as with all previous iterations, the redesign had to lie within the original 1968 F.A.A. certification of the type and not be treated officially as a new airplane. Airbus had similar requirements for the Neo. In its marketing literature comparing the Max to the earlier Next-Generation 737, Boeing wrote: “same pilot type rating, same ground handling, same maintenance program, same flight simulators, same reliability.” Equally important was that it had to have the same flying characteristics. This was a regulatory necessity if the Max was to escape onerous reclassification as a new airplane. And there was a problem. Boeing test pilots discovered that the Max had unusual stall characteristics when the wing flaps were up and the engines were thrusting.</p>
+<p>Aerodynamic stalls are central to the Boeing 737 saga, so let’s explore them briefly now. Airplanes fly because their wings greet the oncoming air at a positive angle, known as an angle of attack. The faster an airplane flies, the lower the angle of attack needs to be to generate the necessary lift. Conversely, the slower an airplane flies, the greater the angle of attack needs to be. But at some point, the angle of attack becomes too great for the oncoming air to negotiate smoothly. As the airplane approaches that critical angle, the first event is a stall warning in the cockpit. In the 737, it is a rattling “stick shaker” that vibrates the control columns and is meant as an urgent warning to lower the nose. If the pilot does not respond, the airflow starts to boil across the top of the wings, sometimes causing buffets that shake the airplane, before separating from the wings conclusively at the moment of the stall. At that point, the wings’ effectiveness is hugely degraded, roll control becomes difficult and the nose drops unavoidably in what is known as a G-break, so called because it may be felt as a brief lessening of the normal (unaccelerated) 1-G pull of gravity.</p>
+<p>The nose drop can be drastic, typically about 30 degrees in a classic 737. Now fully stalled, the airplane enters into a precipitous, low-airspeed descent — a condition referred to as mushing that if left unattended will lead to a catastrophic impact with the ground. The event does not take long. In June 2009, when an Air France crew stalled a twin-aisle Airbus 330 on a night flight from Rio de Janeiro to Paris, the descent required merely three minutes and 30 seconds from 38,000 feet to the ocean’s surface. Start to finish, that was an exercise in poor airmanship. Investigators later determined that the Air France flight — a heavy jet stalling at absurdly high angles of attack — passed the point of possible recovery as it mushed down through 12,000 feet. After that, it was just as a co-pilot said before pancaking into the Atlantic: “[Expletive], we’re dead.”</p>
+<p>The Max’s stall characteristics, which indirectly bear on the accidents, have been widely reported as being an unusual tendency to pitch up when the airplane is flown at high angles of attack, in realms beyond the stick shaker where airline pilots never go. But pitching up into a stall is a characteristic of all jets with underslung engines, and the tendency in the Max, though slightly stronger than in previous 737s, was probably not sufficiently different to rouse the F.A.A. during the airplane’s testing and certification process. Rather, it was an entirely new characteristic that caused regulatory concern. During stall testing in the Max, the area of buffet was found to be unusually wide, and the G-break, when it occurred, was unusually mild. More important, within the buffet zone as the airplane approached the stall, the control forces — the necessary backpressure on the control column — did not increase in a conventional linear manner as they had in previous 737s and as certification standards required. As a mild behavioral quirk, this was a remote concern, and it occurred in an area of the flight envelope where airline pilots never go. But if the Max was to avoid designation as an entirely new model, the control-force problem needed to be addressed.</p>
+<p>Some at Boeing argued for an aerodynamic fix, but the modifications would have been slow and expensive, and Boeing was in a hurry. Its solution was to create synthetic control forces by cooking up a new automated system known as the MCAS to roll in a burst of double-speed nose-down stabilizer trim at just the right moment, calculated largely by angle of attack. There were two other conditions for MCAS activation: the wing flaps had to be up and the autopilot off. The logic of those conditions is clear, but not worth the digression here. After some initial tweaking, the system produced control forces that closely mimicked those of the earlier 737 models, allowing the Max to avoid onerous recertification. Indeed, on initial impulse the artificial forces were so realistic that Boeing convinced itself (and the F.A.A.) that there was no need to even introduce the MCAS to the airplane’s future pilots. The omission meant that the possibility of a false positive in cruising flight — a pushover occurring where it naturally would not — would likewise not be addressed. Boeing believed that in the worst case, a false positive would present as a mere runaway trim, a problem any pilot would know how to handle. The 737 features two prominent toggle switches on the center pedestal whose sole purpose is to deal with such an event — a pilot simply switches them off to disengage the electric trim. They are known as trim cutout switches. They are big and fat and right behind the throttles. There is not a 737 pilot in the world who is unaware of them. Boeing assumed that if necessary, 737 Max pilots would flip them much as previous generations of 737 pilots had. It would be at most a 30-second event. This turned out to be an obsolete assumption.</p>
+<p>It took several months and the slow and reluctant release of investigative findings before the inside story of the tragedy of Lion Air 610 could be told. That story actually starts three days before the accident, when the same airplane — under different flight numbers and Lion Air crews — experienced errors in airspeed and altitude indications on the captain’s (left side) flight display that weren’t properly addressed. Those indications are driven by a combination of sensors on the surface of the airplane. A set of independent duplicate sensors drive the co-pilot’s (right side) display. A third standby system provides additional independent backup and allows for intuitive troubleshooting when any one of the three systems fails: If two indications agree and the third one does not, the odd one out is obviously the one to ignore. This sort of arrangement helps to explain why flying a Boeing is not normally an intellectual challenge. Furthermore, the airplane provides an alert when airspeed or altitude indications disagree.</p>
+<p>All the faulty indications on that airplane were only ever on the captain’s side. The respective crews wrote them up repeatedly. During intervals on the ground, the airline’s technicians ran built-in tests, got coded responses and did plug-out plug-in reboot attempts of the mindless sort performed at automotive service centers. None of it worked here, but the technicians kept zeroing the fault messages and approving the airplane for flight. Two days before the final flight, the airplane was in Bali, and technicians did more of the same. Additionally, in response to an error message indicating possible failures in angle-of-attack information, they replaced the angle-of-attack vane on the nose of the airplane on the captain’s side. Angle-of-attack vanes are exposed to the winds and are vulnerable to impact, ice and wear. The replacement vane put onto this airplane in Bali was older than the airplane itself. It was a used part that had been provided by a shop in Miramar, Fla., and shipped to Lion Air one year before. In the maintenance log in Bali, the company technicians documented replacing the angle-of-attack vane and testing it. They wrote, “Installation test and heater test result good.”</p>
+<p>I had some doubts whether these tests were really run, and I mentioned these doubts to John Goglia, a no-nonsense Bostonian who spent 35 years as an airline mechanic and an additional nine years as a board member of the competent crash-investigation unit of the United States government, the National Transportation Safety Board. Goglia has followed the investigations surrounding the 737 Max closely. Speaking of the Lion Air mechanics, he said: “They’re full of shit. They suspected they found the problem in Bali. So they replaced one problem with another — a dubious unit from Cockroach Corner in Miami. Cockroach Corner is the source of tons of suspected unapproved parts. Many of those repair stations in Miami are junk peddlers.” And the Lion Air mechanics? He said: “They didn’t finish, whatever the log says. They didn’t do an adequate check of the systems.” If they had, in Goglia’s view, they would have seen that the unit was faulty.</p>
+<p>According to the official narrative, which — discounting its omissions — seems to be mostly true, when a fresh crew arrived to take the next run, a night flight 600 miles west to Jakarta, a technician showed the new captain the maintenance log and explained that the angle-of-attack sensor on the left side had been replaced. The captain informed the co-pilot and said that he himself would do the flying. They would have a hitchhiker in the cockpit, sitting on the jump seat just behind them. He was an off-duty pilot and, according to one Indonesian pilot I spoke to, a 737 Max captain for a Lion Air subsidiary. For mysterious reasons, this man was not mentioned in subsequent Indonesian accounts. When I asked a senior investigator about the omission, he explained that it was because the investigators had been busy. Only recently and reluctantly have the Indonesians acknowledged the third pilot’s presence, though, as it happened, he played an important role.</p>
+<p>None of the Bali crew have been named, and access to them has been blocked. The airplane took off at 10:20 p.m. with 189 people aboard, or 190 if the ghost in the cockpit is included. Immediately after liftoff, the captain’s airspeed indication failed, airspeed-disagreement and altitude-disagreement warnings appeared on his flight display and his stick shaker began to rattle the controls in warning of an imminent stall.</p>
+<p>The Bali captain was enough of an airman to realize that he was dealing with an information failure only — not an actual stall. No direct mention has been made of this, but he must have immediately identified the replacement angle-of-attack vane on his side as the likely culprit. The co-pilot’s stick shaker had not activated. The second angle-of-attack sensor was functioning correctly. The captain held the airplane steady in the climb, confirmed that the right-side indications crosschecked with the standby instruments and transferred the flying to the co-pilot with instructions to follow a regular schedule of flap retractions and retrim the airplane as normal. The handoff was well done. The stick shaker continued to rattle, but that was merely an annoyance.
+But then there was a change. What had been an information failure suddenly turned into a flight-control one. Soon after the flaps were retracted, the airplane developed a mind of its own and rolled in a fast burst of nose-down trim. Apparently, this caused such a lurch that back in the cabin some passengers started praying. It was just the MCAS kicking in, because the three conditions necessary to trigger it had combined: The flaps were up, the autopilot was off and the captain’s angle-of-attack sensor was showing a stall.</p>
+<p>One of Boeing’s bewildering failures in the MCAS design is that despite the existence of two independent angle-of-attack sensors, the system did not require agreement between them to conclude that a stall had occurred. Inside the cockpit, none of the pilots knew any of this or had ever heard of the MCAS. To them the event must have looked like a runaway trim, much as Boeing had expected. But there were two differences that may have confused them. The first was the severity of the pitch-down trim, which ran twice as fast a regular runaway — hence the praying in the cabin. The second was that it lasted about only 10 seconds, then stopped for five seconds, then started again. The pattern repeated and would have kept repeating to the limits of nose-down trim, an extreme imbalance never approached in regular flight. This is another of Boeing’s bewildering failures — the implementation of an automated nose-down input meant to make for an authentic control feel but allowed to keep at it again and again while throwing the airplane wildly out of trim. No one I spoke to from Boeing, Airbus or the N.T.S.B. could explain the reasoning here.</p>
+<p>MCAS trimming can be thwarted and even overpowered by counter-trimming with the sustained use of the thumb switches on the control yokes, but in the confusion of the encounter in Bali, the counter-trimming went only so far. After three MCAS impulses, the co-pilot said that his control column had grown so heavy that he could hardly hold the nose up. They were about six minutes into the flight and still on the runway heading. The captain formally declared a condition of urgency by making a “pan-pan” call to air-traffic control. He reported an instrument failure and asked to continue flying straight ahead. The controller approved the request and asked if the crew wanted to return to the airport. The captain answered, “Stand by.” Over the next two minutes, while the co-pilot fought to maintain control of the airplane, the captain went wandering through the checklists trying to figure out what to do.
+Ethiopian Airlines Flight 302 crashed near Addis Ababa in March 2019.<br />
+Michael Tewelde/Agence France-Press/Getty Images</p>
+<p>Finally the ghost in the jump seat intervened. It is impossible to know if he was a better airman than the pilots in the front or simply had the advantage of an overview. Either way, he recommended the obvious — shutting off the electric trim by flipping the cutout switches. The captain flipped the switches, the trim stopped running away and the MCAS was disabled. It was that easy.</p>
+<p>With the captain’s stick shaker continuing to rattle and the trim switches set to the off (cutout) position, the crew flew to Jakarta without further issue, adjusting trim as sometimes necessary by use of the manual trim wheels mounted on both sides of the central pedestal, and landed just before midnight. Investigators do not seem to have explored why the pilots required nearly five minutes to handle what normally might have been a 30-second adventure, or why they required a cockpit guest to provide the solution. Such questions were overshadowed by the subsequent failures of the accident crew on Flight 610.</p>
+<p>After pulling up to the gate in Jakarta, the Bali captain informed a company mechanic about “the aircraft problem” and in the maintenance log noted only three anomalies — the captain’s airspeed and altitude indication errors and the illumination of a warning light related to a system known as Feel Differential Pressure. That was it. Apparently the captain noted nothing about the failure of the newly installed angle-of-attack sensor, or the activation of the stick shaker, or the runaway trim, or the current position of the trim cutout switches. If true, it was hard to conclude anything other than that this was severe and grotesque negligence. Dave Carbaugh, the former Boeing test pilot, had the most charitable view of the matter. “I suspect that the pilot wrote what you see in the log, and he verbally told maintenance that, ‘Hey, the trim was running down, and we had to use the stabilizer cutout switches, and we flew the airplane back manually,’ ” he said. “And maintenance took no action on that, because the airplane had made it back to Jakarta. They just checked the fault messages and cleared them and called it a day. That’s my best guess. They were just hellbent to release that airplane.”</p>
+<p>According to the written record, the mechanics responded to the captain’s reports by flushing out a couple of air-data units, cleaning an electrical plug and declaring success after running some ground tests. Given the scope of the night’s events, the report was so off-base that I questioned whether any of the recorded maintenance had even taken place. I was not the only one with questions. John Goglia, with his vast knowledge, shared my concerns. Falsified maintenance records? They are as common as they are difficult to discern. One reason for them is that no one expects a pilot to go out and crash the next day. Goglia said: “They say they flushed the pitot-static in an 800-hour airplane? That’s a sure sign right there.” About the Bali crew, he said: “They pull up to the gate. They had a stick shaker. The No. 1 culprit is the angle-of-attack vane. But they don’t say anything? The trim switches are off. They leave the airplane. The next morning, the accident crew comes out. They go through the checklist. Those two switches are still off? They turn them on? What’s not known is who did that. The first officer? He didn’t know what he was doing? He didn’t tell the captain?”</p>
+<p>It is hard to believe that any pilot entering that cockpit could have been so sloppy. But one thing is obvious: Throughout the subsequent fatal flight, neither member of the accident crew gave those switches a thought.</p>
+<p>The Lion Air 610 accident crew — Capt. Bhavye Suneja and his co-pilot, First Officer Harvino — arrived at the airport before dawn to prepare for the flight. Each had been through pro forma runaway-trim training in Lion Air simulators (hint: watch for it in Sim Ride No. 3), but they had never heard of the MCAS and had no way of guessing from the maintenance log that none of the airplane’s recent failures had been resolved, that some of the entries might have been fraudulent, that serious failures had occurred on the previous flight that had not been recorded or addressed or that the angle-of-attack sensor on the captain’s side was a slapped-on unit from Cockroach Corner that was 20 degrees out of whack. Instead, they thought they had a healthy airplane, and a nice new one, too.</p>
+<p>That much can be discerned by a close study of the flight data that have been parsed out, as well as from glimpses into the cockpit provided by certain summaries of the audio recordings. Suneja was at the controls. Everything seemed fine during the takeoff roll, but as soon as he hauled back on his control column and the airplane lifted off, the angle-of-attack sensor went haywire, the stick shaker began to rattle the left-side controls and Suneja lost reliable indications of airspeed and altitude on his flight display. In other words, the airplane misbehaved exactly as it had the night before. Once again, everything was fine on the co-pilot’s side. Suneja, however, did not turn the flying over to Harvino but retained it for himself, despite the vibrations of the controls in his hands.</p>
+<p>In the aftermath of the accident, it turned out that a warning light indicating disagreement between the two angle-of-attack sensors was absent from the airplane because it was being offered on the Max only as part of an optional angle-of-attack instrumentation package. On previous models, the light had come as standard equipment. The change was a result of an error somewhere in the bowels of Boeing. Critics have since loudly blamed it for the difficulty in countering the MCAS when the system receives false indications of a stall. But the truth is that the MCAS is easy to counter — just flip the famous switches to kill it. Furthermore, when you have a maintenance log that shows the replacement of an angle-of-attack sensor two days before and then you have an associated stick shaker rattling away while the other stick shaker remains quiet, you do not need an idiot light to tell you what is going on. At any rate, the recognition of an angle-of-attack disagreement — however pilots do or do not come to it — has no bearing on this accident, so we will move on.</p>
+<p>With the stick shaker sounding off, Suneja might have chosen to discontinue the trip and immediately return for a landing. Instead, two minutes after takeoff, Harvino asked air-traffic control for clearance to proceed to “some holding point” where he and Suneja could figure things out. The mood in the cockpit was calm. When Harvino mentioned a “flight-control problem,” he was wrong. They had a stick shaker sounding off and some unreliable indications, but the still-unknown MCAS had not yet engaged because the wing flaps remained extended. The only control problem they had was some hand-flown sloppiness from Suneja, who allowed a minor drift-down to occur before continuing with the climb.</p>
+<p>In reaction to the drift-down, the controller asked them what altitude they wanted, and Harvino opted for 5,000 feet. It was a poorly considered level that turned into a murderous one as the pilots tied themselves to it under circumstances that changed. I spoke to a heavy-jet pilot with global experience who said that had he been flying that 737, he would have scratched for all the altitude he could get — probably 20,000 feet — and after the first few vectors would have ignored air-traffic control and “pointed the damned airplane toward Nevada.” He meant he would have pared down to the essentials and sought to buy time.</p>
+<p>As the airplane climbed through 2,150 feet, Harvino retracted the wing flaps, and the MCAS kicked in for the first time, ambushing Suneja with its 10 seconds of double-fast nose-down trim and resulting in the 700-foot plunge seen on radar by the controller. Suneja countered by using his thumb switch to apply a burst of nose-up trim as he hauled back on the control column and returned the airplane to its climb. Adding to the workload, the controller chose this moment to issue the first needless turn and to formally clear the flight to 5,000 feet. Harvino dutifully responded. Suneja then ordered him to put the wing flaps back down to where they had been. It was the best move of the morning and seems to have been based on a rule of thumb that if you do something in a cockpit and are rewarded by some unwanted event, do not waste time wondering what the connection is — undo that something you just did.</p>
+<p>Suneja knew they had experienced some kind of runaway trim, but now with the flaps extended (and therefore with the unknown MCAS neutralized) it did not happen again. This would have been a good time to quit and go home. Instead, Suneja leveled at 5,000 and 30 seconds later ordered the flaps retracted. He may have made that choice because the airplane was flying at aerodynamic speeds in excess of 300 knots, which is not only fast for that altitude but also at least 50 knots faster than the maximum flap speed and enough to generate a loud overspeed clacker in the cockpit. He did not know about the MCAS, it’s true, but he had just experienced a violent runaway trim after flap retraction, and you might think he would have had the wherewithal to leave the flaps alone and throttle back to slow or, alternatively, pull into a climb to achieve the same result while also buying time. But no, he stuck obediently to 5,000 feet, left the throttles forward and retracted the flaps.</p>
+<p>This time he was ready when the MCAS engaged, and he managed to avoid a dive by counter-trimming and hanging tight. The surprise was that after the assault ended, the MCAS paused and came at him again and again. In the right seat, Harvino was fumbling through checklists with increasing desperation, trying to figure out which one might apply. Over in the left seat, Suneja was confronting a rabid dog. The MCAS was fast and relentless. Suneja could have disabled it at any time with the flip of the two trim cutout switches, but this apparently never came to mind, and he had no ghost in the jump seat to offer the advice. The fight continued for the next five minutes, during which time the MCAS mounted more than 20 attacks and began to prevail.</p>
+<p>As a reminder, the horizontal stabilizer is the large tail surface that can be angled down or up by the trimming mechanisms to change the airplane’s pitch; the “elevators” are the hinged control surfaces mounted behind it and are manipulated by the use of primary controls to adjust the pitch. Normally, these two movable surfaces function in agreement to the same end — nose-up elevator, nose-up trim; nose-down elevator, nose-down trim. But the relationship reverses with a runaway. In the unusual case in which a pilot does not switch off the electric trim, the elevator has to be used against the runaway stabilizer to keep an airplane from getting out of control. By certification standards, the elevator will succeed at this at all aerodynamic speeds up to the maximum, which, again, is approximately 340 knots in the 737. The catch is that as the airspeed increases, so does the power of the stabilizer in relation to the elevators. The slope becomes slippery toward the end. If an inattentive crew allows a runaway trim to drop the nose too far below the horizon and the crew reacts with full up elevator, the nose will rise as certification standards require, but it may remain below the horizon for a period sufficient to allow the airspeed to continue to increase and bust right through the maximum speed, at which point recovery becomes impossible if you don’t lay into the electric trim.</p>
+<p>Relatives of Yared Getachew, a 29-year-old pilot who was the captain of Ethiopian Airlines Flight 302, at the crash site in March.</p>
+<p>Jemal Countess/Getty Images<br />
+The story is complicated because the counter-trim that Suneja had been thumbing to beat back the dog was working, and with greater effect at higher speeds, to the point that full nose-down trim would have been avoidable even if the cutout switches were not thrown, so long as the pilots stayed in the fight. But panic was growing in the cockpit. What little the Indonesian investigators have said about the voice recordings, they have described that much. The air-traffic control record shows the same. Suddenly it was the captain, Suneja, who was on the radio, and his transmissions made little sense. Apparently he had taken over the desperate search through the checklists and handed the flying to Harvino. This was a mistake, because Harvino was in no condition to fend off the MCAS attacks. He gave a few feeble inputs of nose-up trim with his thumb switch and began calling on God for a miracle. The MCAS ignored his entreaties and pitched the airplane into a steepening dive at airspeeds that quickly exceeded the engineered limits. Harvino stopped even trying to thumb the trim. Suneja hauled his control column all the way back, giving full up elevator to no avail. The nose dropped farther as the stabilizer prevailed. The crew of an offshore oil platform saw the airplane in a nearly vertical dive before it hit the water.</p>
+<p>The MCAS as it was designed and implemented was a big mistake. It remains unclear exactly what went wrong at Boeing — who decided what, and why — but a small collective breakdown had obviously occurred, and the F.A.A. had gone along for the ride. Nonetheless, the lethargy of the company’s initial response to the loss of Lion Air 610 seemed rooted less in fear or feelings of remorse than in genuine incredulity that these two pilots had been so incompetent as to plunge into the sea because of what amounted to a runaway trim. Eight days after the accident, Boeing issued a worldwide bulletin for 737 Max pilots in which it continued to avoid mention of the MCAS but emphasized longstanding procedures provided in the “Runaway Stabilizer Non Normal Checklist (NNC).” The company was willing to leave its communications to that. Privately, it would start working on a fix for the MCAS. Meanwhile, even after the accident, there still seemed to the company to be no reason to burden pilots with descriptions of the system.</p>
+<p>One day later, however, the F.A.A. repeated the same information in the form of an “Emergency Airworthiness Directive,” a regulatory mandate to change the airplane’s flight manual. That same day, the Indonesians followed suit, as did the rest of the world. “Emergency” is a riveting word, and it provided the urgency that Boeing had lacked. Requests for information started flooding into Seattle. Two days later, Boeing finally came forward. Under the title “Boeing Correspondence: Multi Operator Messages,” it sent a two-paragraph email that named the MCAS for the first time.</p>
+<p>Events would soon show that the situation was far worse than Boeing realized — to the extent that disseminating full descriptions of the MCAS was not sufficient to keep another accident from happening. But for what it’s worth, if asked at the time, I would have agreed with the company. It seemed highly unlikely that Lion Air’s mistakes would be repeated anytime soon. In my own flying life, each of the four trim runaways I have experienced has been at most a 10-second problem — eight seconds to be surprised, and two seconds to flip the electric trim off. Who could be confused? When I mentioned this to Larry Rockliff, a former Canadian military and Airbus test pilot, he shrugged me off. “Look,” he said, “we know as a fact that half of airline pilots graduated in the bottom half of their class.”</p>
+<p>If only they were so easy to rank. Bernard Ziegler, the founding father of the Airbus fly-by-wire designs, once told me that the company ran tests and found that 90 percent of airline pilots believed that they could extract maximum performance from an airplane during emergency pull-ups away from the ground, but that only 10 percent actually could. Rockliff said, “More like 0.1 percent.” The Airbus answer was to automate the pull-ups and let computers do the job. Boeing’s answer was to continue to rely on pilots.</p>
+<p>This spring, I drove an hour west of the Jakarta airport to a compound known as Lion City. There, 2,500 flight attendants live in dormitories and batches of pilot recruits sit through up to six months of initial ground school before moving on to four to five months of flight training in Cessna 172s, followed by guaranteed jobs as co-pilots for the Lion Air Group. The pedagogical approach is that of a production line, with no accommodation for creativity or the unexpected. The tuition is $60,000. About 150 to 200 students pass through every year. The completion rate for the flight training is an astonishing 95 percent. When I asked how the completion rate could be so high, the head of training explained that it is because of aptitude testing at the start. For instance, applicants must have graduated from high school. In other words, when it comes to predicting the competence of its pilots, Lion Air has achieved the clairvoyance that has long eluded Boeing and Airbus, both of which have spent decades in that pursuit without finding good answers.</p>
+<p>At Lion City, I stood in front of a class of buzz-cut clean-shaven young recruits in white uniform shirts and narrow black neckties — the new checklist children of global aviation. At a loss for words, I said, “Congratulations.” Dutifully and in perfect unison they answered, “Thank you, sir.” The visit was an education for me. Boeing is aware of this academy and feeder facilities just like it all over the world. The situation is evidently grave. I left Lion City struck that Boeing has not reacted with greater urgency to the larger problems now faced.</p>
+<p>The second accident occurred when Ethiopian Airlines Flight 302, a 737 Max bound for Nairobi with 157 people aboard, hit the ground near Addis Ababa in a screaming dive. The airplane was captained by a 29-year-old pilot named Yared Getachew, who had graduated from the airline’s production-line academy 10 years before and had accumulated 8,122 hours of flight time. His co-pilot was a 25-year-old named Ahmed Nur Mohammod Nur, who had graduated from the academy just a few months before and had started serving as a 737 co-pilot when he had merely 154 hours of flight time. Since then, he had gained another 207 hours.</p>
+<p>Both men were aware of the Lion Air tragedy. They had been briefed on the MCAS system and knew the basics: that it provided repetitive 10-second bursts of nose-down trim, that it could be held at bay through vigorous use of the control yoke thumb switches to counter-trim, that it would not activate if the flaps were down or the autopilot was on, that it could be deactivated by shutting off the electric trim through use of the now-famous cutout switches on the center pedestal and that afterward the airplane could be trimmed using the manual trim wheel.</p>
+<p>The airplane rolled down the runway at 8:38 a.m. with a standard takeoff flap setting and Getachew at the controls. Immediately after liftoff, the angle-of-attack measurement on his side failed, setting off his stick shaker and distorting his indications of airspeed and altitude. It is not known why the angle-of-attack measurement failed. The vane on that side seemed to be the original unit. As in Indonesia, all indications on the co-pilot’s side were evidently correct because they crosschecked to the standby instruments and were not accompanied by a stick shaker. Airmanship 101. The situation was obvious enough for almost any pilot. Roughly one minute after takeoff and 1,000 feet above the ground, they engaged the autopilot on the captain’s side. The choice to use the captain’s side was strange because the instrument failure was clearly on that side, but the autopilot gracefully agreed to help. The airplane wobbled a bit, perhaps because the captain’s air data was confusing.</p>
+<p>A few seconds later, air-traffic control cleared the flight to 34,000 feet. Despite the troubles in the cockpit, the co-pilot, Mohammod, acknowledged the clearance, changed the autopilot mode, dialed in the target altitude and selected a climb airspeed of 238 knots, apparently because he was flying by rote. Similarly, Getachew took this moment to be really dumb: Despite the activation of his stick shaker and the likelihood that it related to erroneous angle-of-attack measurements on his side, despite knowing what had occurred in Indonesia, despite the information he had received about the MCAS and despite the need to return to the airport, he ordered Mohammod to raise the flaps. Mohammod did, and five seconds later the autopilot disengaged, perhaps because the captain’s indications became even more erratic than before. Getachew instructed Mohammod to advise air-traffic control that they were having flight-control problems, even though until then the only problem they had experienced was with instruments and their indications.</p>
+<p>Getachew had neglected to throttle back from the full takeoff thrust setting. And now the MCAS kicked in. It gave a nine-second nose-down burst that stopped the climb and forced the airplane into a slight descent. Because of the descent, a ground-proximity “DON’T SINK” warning sounded. Getachew pulled the nose up. The MCAS kicked in again. Three more ground-proximity warnings sounded. Getachew asked for help with the nose-up trim, a request that did not make sense because the dual use of electric thumb switches is no more powerful than a single use. Mohammod said: “Stab trim cutout! Stab trim cutout!” And Getachew concurred. Mohammod flipped the switches. That should have ended the story, but it didn’t.</p>
+<p>The airplane was now so far out of trim that Getachew had to hold his control column halfway back (meaning half up-elevator) to keep the nose from dropping. It was urgent to retrim the airplane using the manual trim wheel. But there was a big problem: The pilots had still not throttled back from takeoff thrust, and the airplane now in level flight was going extremely fast, at least 25 knots faster than the maximum operating speed of 340 knots, and was rapidly accelerating into realms beyond the flight-testing range. The excessive speed was amply clear in the cockpit, where an overspeed clacker was sounding off, but neither pilot thought to reduce the thrust and slow. The flight-data recorder later showed that the throttles remained at a takeoff setting until the end.
+The speed, meanwhile, was producing such large aerodynamic forces on the tail that the manual trim wheel lacked the mechanical power to overcome them, and the trim was essentially locked into the position where the MCAS had left it — not fully nose-down, but dangerously out of whack. The only way to retrim the airplane at these speeds would be to use the much more powerful electrohydraulic mechanism associated with the thumb switches, which, however, would require the pilots first to flip the cutout switches back to “normal,” exposing the airplane to further attacks from the MCAS.</p>
+<p>The cockpit of a grounded Lion Air Boeing 737 Max in Indonesia.<br />
+Dimas Ardian/Bloomberg, via Getty Images<br />
+But something slightly different occurred. On Getachew’s orders, Mohammod flipped the cutout switches to reactivate the electric trim, but apparently less to use the thumb switch — Getachew gave it only two halfhearted tries — than to activate the autopilot as a way of disabling the MCAS. The record shows four attempts in rapid succession to engage the autopilot, all of which were refused because autopilots are not recovery devices and will not engage if they sense pressures on the control column — meaning that an airplane is being flown out of trim.</p>
+<p>This airplane had heavy pressures on the controls — remember, Getachew was muscling his control column halfway back. Now, in apparent desperation to persuade the autopilot to engage, Getachew did the unthinkable and released his pressure on the control column. The column snapped forward, and the airplane responded by violently pitching down, 20 degrees below the horizon. Just then, with the stick shaker still rattling, the MCAS kicked in and achieved full nose-down trim, doubling the angle of the dive. As the speed shot through 450 knots, the pilots hauled back on their control columns to no effect. Six minutes after takeoff, the airplane hit the ground doing approximately 600 miles an hour. It buried itself into a 30-foot-deep crater in farmland about 32 miles southeast of the airport. Within a week, the Boeing 737 Max was grounded worldwide.</p>
+<p>The formal investigations continue today, and you might hope that their findings would lead to a more complete understanding of the accidents. Each appears to comply with guidelines laid out in a document known as Annex 13 that is disseminated by the International Civil Aviation Organization, a United Nations agency. Each is led by government officials of the countries where the airplanes crashed — Indonesia and Ethiopia — and joined, respectively, by Lion Air and Ethiopian Airlines, by Boeing as the airplane’s builder and by the N.T.S.B. as investigators from the country of the airplanes’ manufacture. Australian and French investigators have been involved, too.</p>
+<p>Knowledgeable observers, however, are skeptical that the investigations can proceed unimpeded. Dennis Jones, a retired N.T.S.B. investigator with a long career of international experience, suggested to me diplomatically that Annex 13 is a typical United Nations construct that does not necessarily accommodate national and political variations in intent to get at the truth no matter where it may lie. He was speaking specifically about Malaysia’s investigation into the mysterious disappearance of Flight 370, the Malaysia Airlines Boeing 777 lost in 2014, a case to which he was assigned. He came away from it impressed by some of the Malaysian investigators because of their efforts to explore the evidence despite powerful political constraints.</p>
+<p>The process in Jakarta has been similarly problematic. The official investigation is proceeding under the gaze of Lion Air’s founder, Rusdi Kirana, who has acquired political power and wealth. According to sources familiar with both investigations, Boeing and the N.T.S.B. have been largely excluded and denied access to such basic evidence as the complete flight-data recordings and the audio from the cockpit. A representative from the Indonesian investigation rebuts this claim and said that all parties have “access to all investigation data.” Important leads, meanwhile, are not being pursued, entire angles are being overlooked and the release of information to the public has been unusually restricted. This is occurring in a country where assumptions are widespread that regulators, investigators and reporters alike are on Lion Air’s payroll.</p>
+<p>This year, two New York Times reporters, Hannah Beech and Muktita Suhartono, spoke to a former investigator who said that after a previous Lion Air accident, an airline employee tried to hand over a black garbage bag full of cash. The surprise was that the investigator did not accept it. Beech and Suhartono wrote: “Such payments from Lion Air were common because transportation-safety officials were poorly paid, former investigators said. A former high-level Lion Air employee confirmed that when he worked at the company, clandestine payments to government investigators, even for restaurants and prostitutes, were routine.” I admired the reporters’ restraint in their use of the past tense. It is not clear that anything has changed.</p>
+<p>In the case of the Ethiopian investigation, we have an airline and an investigative body that historically have not been able to isolate themselves from the country’s dysfunctional political life. Carbaugh mentioned to me that he was serving as Boeing’s chief pilot of safety in 2010 when an Ethiopian crew lost control of a 737 NG, the predecessor of the Max, killing all 90 people aboard. The airplane had just departed from Beirut. The subsequent investigation was led by a brilliant Lebanese airline pilot named Mohammed Aziz, who after nearly two years of obstructionism and obfuscations by the Ethiopians produced a report laying the blame squarely on the pilots, who had overshot assigned compass headings left and right, overbanked repeatedly, stalled twice and, for lack of airmanship, entered a lethal high-G spiral dive.</p>
+<p>The report was passed around for comment before publication. The French, Americans and Lebanese all agreed that it was complete. Ethiopia vociferously disagreed. Shortly before the report was to be released in 2012, Carbaugh stopped by Addis Ababa to demonstrate a new 787 Dreamliner, four of which the airline had ordered. He told me that a senior official from Ethiopian Airlines asked him to come to his office for a private talk. According to Carbaugh, the official said: “The report is coming out. Boeing has influence over the N.T.S.B. and the Lebanese. You need to get them to change the findings. They need to say that an Israeli shoot-down or a bomb was a possible cause of the accident.”</p>
+<p>Carbaugh told me that he answered: “Sir, here’s the data. Here’s what it says. Here’s what happened. Eyewitnesses who saw a flash, that was probably the landing lights coming out of the bottom of the clouds. There was no Israeli missile, no explosion, no lightning strike. That’s not what happened. The facts speak for themselves. Boeing works on behest of the N.T.S.B. on a technical basis. We don’t control the outcome.”
+The official was incredulous and mentioned the airline’s relationship with Boeing. He insisted that the report be changed.</p>
+<p>Carbaugh wasn’t going to argue. “We can’t,” he said.<br />
+The Ethiopian Airlines Flight 302 investigation currently underway may look from a distance like an Annex 13 effort, but it is riddled with furtiveness and fear. One example can stand for much of the rest: After the cockpit voice recorder was dug out of the wreckage, it was shielded from the N.T.S.B. and whisked to Paris. There, for reasons unknown, French accident investigators agreed to download its contents in private onto a drive for an immediate return to Addis Ababa, where the information remains mostly locked away today and has been withheld in full form from any outside observers.</p>
+<p>It is a forlorn hope, but you might wish that investigators like those in Indonesia and Ethiopia would someday have the self-confidence to pursue full and transparent investigations and release all the raw data associated with the accidents. When I mentioned this to Carbaugh, he said: “I think the information will never get released. Too damning. And if they don’t want to release the information, they won’t. And the U.N. and I.C.A.O. probably won’t have the gumption to demand that they do.” He thought for a moment and said, “Oh, they may do it years down the road, when nobody gives a shit anymore.” I said it is hard to believe that such a moment will come. Sounding resigned, if not fatigued, he said, “Yeah, but that’s the way it goes.”</p>
+<p>The 737 Max remains grounded under impossibly close scrutiny, and any suggestion that this might be an overreaction, or that ulterior motives might be at play, or that the Indonesian and Ethiopian investigations might be inadequate, is dismissed summarily. To top it off, while the technical fixes to the MCAS have been accomplished, other barely related imperfections have been discovered and added to the airplane’s woes. All signs are that the reintroduction of the 737 Max will be exceedingly difficult because of political and bureaucratic obstacles that are formidable and widespread. Who in a position of authority will say to the public that the airplane is safe?</p>
+<p>I would if I were in such a position. What we had in the two downed airplanes was a textbook failure of airmanship. In broad daylight, these pilots couldn’t decipher a variant of a simple runaway trim, and they ended up flying too fast at low altitude, neglecting to throttle back and leading their passengers over an aerodynamic edge into oblivion. They were the deciding factor here — not the MCAS, not the Max. Furthermore, it is certain that thousands of similar crews are at work around the world, enduring as rote pilots and apparently safe, but only so long as conditions are routine. Airbus has gone further than Boeing in acknowledging this reality with its robotic designs, though thereby, unintentionally, steepening the very decline it has tried to address. Boeing is aware of the decline, but until now — even after these two accidents — it has been reluctant to break with its traditional pilot-centric views. That needs to change, and someday it probably will; in the end Boeing will have no choice but to swallow its pride and follow the Airbus lead.</p>
+<p>These broader implications, however, have been lost in the noise. After President Trump weighed in on the basis of no perceptible knowledge, and the F.A.A. was forced to retreat from its initial defense of the airplane, Boeing had to accept a public onslaught. The onslaught has included congressional hearings, federal investigations, calls for the criminal prosecution of Boeing executives, revelations by whistle-blowers, attacks in the news media, the exploitation of personal tragedy and the construction of a whole new economic sector built around perceptions of the company’s liability. Boeing has grown largely silent, perhaps as much at the request of its sales force as of its lawyers. To point fingers at important clients would risk alienating not only those airlines but others who have been conditioned to buy its airplanes, no matter how incompetent their pilots may be.</p>
+<p>Correction: Sept. 18, 2019<br />
+An earlier version of this article misstated the date of the crash of Air France Flight 447. It was June 2009, not January 2015.
+William Langewiesche is a newly named writer at large for the magazine. He is a former national correspondent for The Atlantic and international correspondent for Vanity Fair, where he covered a wide variety of subjects throughout the world. He grew up in aviation and got his start as a pilot before turning to journalism. This is his first article for the magazine.</p>
+<p>.</p>
+<p>Samuelson, like Friedman, had a regular column in Newsweek from 1966 to 1981. But unlike Friedman, he did not and does not have a passionate belief in free markets—or for that matter in government intervention in markets. His pleasure seemed to come from providing new proofs, demonstrating technical finesse, and turning a clever phrase</p>
+<p>.</p>
+<p>Max’s taphouse<br />
+There’s 3 Jason’s<br />
+Jason Saturday’s :-)<br />
+Jason 1 y’already know<br />
+Jason 2 no affect, really nice, deep eyes<br />
+Jason 3 slightly bald, big beard, shy, little affect, really really nice<br />
+Bob y’already know<br />
+Scooter (wife is with Bloomberg school)<br />
+Jeff (long-ass beard 🧔) confirmed<br />
+Diana/Big “D” (Cinco de Mayo birthday)<br />
+Jason (another one, who knows me, bushy 🧔, little affect!!)<br />
+Tim (young, capped 🧢 dude)<br />
+? Cheerful bold guy who knows me!<br />
+Mac: young, shy, goatee, cap, knows my name!!!!<br />
+??? Bold dude, knows me, somewhat cheerful, is NOT scooter :-) Jammie<br />
+Jammie is def the most cheerful 👨‍🦲:-)<br />
+Jay: knows me, no smiles, but really nice</p>
+<p>Scooter really is the bold dude with<br />
+A wife at Hopkins who<br />
+Travels a lot to Africa and places</p>
+<p>But who is the young dude??</p>
+<p>Confirmed (by 🛴, whose wife actual works at JHPIEGO, but does some mentor-mentee shit at  Bloomberg); the young dude with a reverse cap 🧢 is Tim (what are the odds???)</p>
+<p>Jason — looks like there’s 3 of them<br />
+Yeah — 200% emotionless, no beard too<br />
+That’s also Jason! Jay!!</p>
+<p>.</p>
+<p>So.. is at all possible to send me a $200 SOS? I’m happily, valiantly, enduringly, on day 21 of a record-breaking — even by my unbreakable standards — 28 day starvation routine. But this morning I jogged passed my watering hole 🕳, Max’s Taphouse. And they seem to be on a three-day run of a <em>German Craft Beer Festival</em></p>
+<p>.</p>
+<p>$2.8million</p>
+<p>The forces of displacement arrived at Price’s doorstep five years ago, when her 14-unit building was sold by Talley R. Holmes Jr., a black lawyer and real estate magnate, to Clydeco 2013 LLC for <span class="math notranslate nohighlight">\(2.8 million. It is now worth an estimated \)</span>6 million, according to Redfin</p>
+<p>.</p>
+<p>The 100 lap swim 🏊🏾‍♂️ Nice way to rest the back, knees, and feet 🦶🏾</p>
+<p>.</p>
+<p>Chat with daddy on La Distinction</p>
+<p>1.His doctoral thesis on Food and Famine in Rural East Africa<br />
+2.Pierre Bourdieu’s thesis on Food and Class Distinctions in France<br />
+3.Indiginizing social work to Uganda may merely involve translating French to English<br />
+<a class="reference external" href="http://4.So">4.So</a> there is a rich opportunity to link these two great minds and reach a synthesis<br />
+<a class="reference external" href="http://5.No">5.No</a> primary data collection necessary: merely set up a research program for students</p>
+<p>.</p>
+<p>Raphael was in Florence when he received word that Pope Julius II, the same man who asked Michelangelo to paint the Sistine Ceiling, asked him to decorate apartments on the second floor of the Vatican Palace. He was hoping to outshine the Early Renaissance paintings his predecessor, Pope Alexander VI, had done in the Borgia Apartments, which sat directly below. It could be seen as a bold choice, as a young Raphael had never executed fresco works as complex as the commission would require</p>
+<p>.</p>
+<p>My brain is pulling tricks on me! Just had the weirdest dream ever.</p>
+<p>And it’s 11.09pm. Must have come to bed around 10.45pm or something.</p>
+<p>In brief, I dreamed I was proposing to Ruharo — RUHARO!! Now that’s a chic I’ve never chatted with or even fancied. Maybe last saw her in school. And she has never been on my mind. So WTF??</p>
+<p>This all comes after three weird days where I am struggling to eat for the first time ever  — I get full with the slightest bite of food.</p>
+<p>So my body is also pulling tricks on me. Maybe it’s revenging for torturing it with three week starvation??? Anyways, let me give sleep another go. Thought you might analyze my dream for me :-)</p>
+<p>.</p>
+<p>Ruharo was 17 when last I saw? Len is 17 now and just called before I went to bed. So I’ve swapped theme in this senseless body-time-arithmetic swap? Perhaps both are pretty but I don’t fancy either? One is from north west B’more and other from western uganda? Jeeez — these are rather weak, tenuous connections. Of all the women in the whole wide world why I’d dream of Ruharo will forever baffle me. And proposing!!</p>
+<p>x</p>
+<p>My brain is pulling tricks on me! Just had the weirdest dream ever.</p>
+<p>And it’s 11.09pm. Must have come to bed around 10.45pm or something. After reading a 258 page essay on poststructural criticism (featuring Nietzsche, Foucault, Bourdieu, Levinas, and Derrida).</p>
+<p>In brief, I dreamed I was proposing to Ruharo — RUHARO!! Now that’s a chic I’ve never chatted with or even fancied. Maybe last saw her in school. And she has never been on my mind. So WTF??</p>
+<p>This all comes after three weird days where I am struggling to eat for the first time ever  — I get full with the slightest bite of food.</p>
+<p>So my body is also pulling tricks on me. Maybe it’s revenging for torturing it with three week starvation??? Anyways, let me give sleep another go. Thought you might analyze my dream for me. Have fun chewing on this end of summer madness!</p>
+<p>.</p>
+<p>1.Agents<br />
+— Crazy ones, Misfits, Rebels, Troublemakers<br />
+— Round pegs in a square hole<br />
+— The ones who see things differently</p>
+<p>2.Structures<br />
+— Not fond of rules, have no respect for status quo<br />
+— You can quote them, disagree with them, glorify or vilify them<br />
+— Only thing you cannot do is ignore them</p>
+<p>3.Ethos<br />
+— Because they change things<br />
+— Push human race forward<br />
+— We [insert brand name] see genius while some see the crazy ones</p>
+<p>4.Critique<br />
+— Anyone crazy enough to think they can change the world<br />
+— Is the one that does<br />
+— Think different</p>
+<p>5.Goals<br />
+— Marketing and values<br />
+— Same language on my JHMI profile page<br />
+— Have I been treated like a rebel!!!</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=keCwRdbwNQY">https://www.youtube.com/watch?v=keCwRdbwNQY</a></p>
+<p>.</p>
+<p>veni vidi vici/<br />
+me and tina ricci/<br />
+eatin lychee/<br />
+talkin nietzsche/<br />
+lifes peachy/</p>
+<p>ya feel me <em>WHOosh</em> <em>ghost heems leaves my body</em> cya ghost heems</p>
+<p>.</p>
+<p>Diversity is reality, because reality is diverse</p>
+<p>.</p>
+<p>My final testament <a class="reference external" href="https://plato.stanford.edu/entries/nietzsche/#Plur">in a nutshell</a></p>
+<p>We have seen that Nietzsche promotes a number of different values. In some cases, these values reinforce one another. For example, Nietzsche’s emphasis on affirming life could be taken to enhance or to confirm the value of life itself, qua successful expression of will to power, or conversely, one might trace the value of affirmation to its acknowledgment of our inescapable condition as living, power-seeking creatures. Similarly, we saw that both the virtue of honesty and the value of art and artistry play essential roles in support of the person’s ability to affirm life (Anderson 2005: 203–11). Nietzsche appeals to the metaphor of a tree’s growth to capture this sort of organic interconnection among his commitments:</p>
+<p>For this alone is fitting for a philosopher. We have no right to be single in anything: we may neither err nor hit upon the truth singly. Rather, with the necessity with which a tree bears its fruit our thoughts grow out of us, our values, our yes’s and no’s and if’s and whether’s—the whole lot related and connected among themselves, witnesses to one will, one health, one earthly kingdom, one sun. (GM Pref., 2)</p>
+<p>However interrelated Nietzsche’s values, though, they appear to remain irreducible to a single common value or principle that explains them all. For example, the account of honesty and artistry explored in sections 3.2.3 and 3.2.4 revealed that the support they provide to the value of affirmation depends on their opposition to one another, as “counterforces” (GS 107): if this is right, then Nietzsche’s various values may interact within an organic whole, but some of the interactions are oppositional, so they cannot all arise from a monistic philosophical system.</p>
+<p>That very fact, however, fits nicely with another of Nietzsche’s core values, the value of pluralism itself. For Nietzsche, a person’s ability to deploy and be responsive to a multiplicity of values, of virtues, of outlooks and “perspectives”, is a positive good in its own right. Nietzsche’s defense of this idea is perhaps clearest in the epistemic case, where he insists on the value of bringing multiple perspectives to bear on any question: the thinker must “know how to make precisely the difference in perspectives and affective interpretations useful for knowledge”, because</p>
+<p>There is only a perspectival seeing, only a perspectival “knowing”; and the more affects we allow to speak about a matter, the more eyes, different eyes, we know how to bring to bear on one and the same matter, that much more complete will our “concept” of this matter, our “objectivity”, be. (GM III, 12) .</p>
+<p>As the passage makes clear, however, Nietzschean perspectives are themselves rooted in affects (and the valuations to which affects give rise), and in his mind, the ability to deploy a variety of perspectives is just as important for our practical and evaluative lives as it is for cognitive life. In GM I, 16, for example, he wraps up a discussion of the sharp opposition between the good/bad and good/evil value schemes with a surprising acknowledgment that the best of his contemporaries will need both, despite their opposition:</p>
+<p>today there is perhaps no more decisive mark of the “higher nature”, of the more spiritual nature, than to be conflicted in this sense and to be still a real battleground for these opposites. (GM I, 16; see also BGE 212; TI V, 3; and EH I)</p>
+<p>While efforts to provide a systematic reconstruction unifying Nietzsche’s philosophy around one fundamental thought or basic value retain their attraction for many commentators, it is fair to say that all such efforts have remained controversial. Meanwhile, Nietzschean pluralism has been a major theme of several landmark Nietzsche studies (e.g., Nehamas 1985, Schacht 1983, Poellner 1995, Richardson 2004), and some of the most sophisticated recent treatments of his value theory have returned evaluative pluralism to the center of attention (Railton 2012; Huddleston 2017). Huddleston’s view is particularly noteworthy, since he argues that Nietzsche’s conceptions of strength and health—which, as we saw, are connected to the allegedly foundational value of power—are themselves disunified “cluster concepts” involving an internal plurality of separate and irreducible commitments. In fact, Nietzsche’s commitment to pluralism helps us understand how his diverse positive values fit together. From his pluralistic point of view, it is a selling point, not a drawback, that he has many other value commitments, and that they interact in complex patterns to support, inform, and sometimes to oppose or limit one another, rather than being parts of a single, hierarchically ordered, systematic axiology.</p>
+<p>.</p>
+<p>Don’t say the Currington’s fail to pay their debt</p>
+<p>#Reciprocity</p>
+<p>#Requite</p>
+<p>#Promise</p>
+<p>.</p>
+<p>🏅100 lap 🏊🏾‍♂️ &lt;60min</p>
+<p>.</p>
+<p>Rolled Hima eyes acknowledged :-)</p>
+<p>But at least this time I didn’t post my “warm up”</p>
+<p>Also, you’ve just reminded me of Elijah! Remember when we went swimming and I did 50 laps nonstop at Munyonyo? He so totally didn’t feel me — as always — and had no time for small talk. But was honest enough to come out of his silence to acknowledge that I was a badass swimmer, especially since I didn’t seem tired after the ordeal :-) .</p>
+<p>.</p>
+<p><a class="reference external" href="https://www.economist.com/1843/2019/09/06/inside-aspen-the-mountain-retreat-for-the-liberal-elite">https://www.economist.com/1843/2019/09/06/inside-aspen-the-mountain-retreat-for-the-liberal-elite</a></p>
+<p>.</p>
+<p>🙏🏾R.I.P Jessye Norman 💁🏾‍♀️</p>
+<p>.</p>
+<p>Great, great article on birth year mates Chopin and Schumann<br />
+<a class="reference external" href="https://www.nytimes.com/2010/01/24/arts/music/24schumann.html">https://www.nytimes.com/2010/01/24/arts/music/24schumann.html</a><br />
+You’ve gotta read this to get a sense of the romantic revolution!</p>
+<p>.</p>
+<p>You and Duncan are obsessed with America, while America is busy making iPhones, giving you Google services, offering you the WhatsApp platform we are using to communicate, and generally making the world a happier place. The same America is giving you all the Nobel laureates in medicine and economics. So go ahead and criticize it. Cherry pick the American stuff that is from white saviors. And criticize the rest that is also from white saviors. Or maybe try to stop using American products and see whether life is actually livable as you know it. Also, is there any brain chip the Ugandan government has put in your brain? And in Duncan’s brain? Something is really wrong with you two!!! Ask any body</p>
+<p>.</p>
+<p>Ensonyi— Conscience<br />
+Empisa— Manners<br />
+Amazima— Truth<br />
+Okufa ku munno— Empathy<br />
+Bulungibwanai— Social Justice<br />
+Obuvunnanyuzibwa—Duty; etc.</p>
+<p>.</p>
+<p>Derrida received a grant for studies at Harvard University, and he spent the 1956–57 academic year reading James Joyce’s Ulysses at the Widener Library</p>
+<p>Much would I give for a constructive passion of some kind</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

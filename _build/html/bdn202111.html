@@ -1,0 +1,796 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>11/2021 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn202111';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/practicing.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/practicing.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.html">object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn202111.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/bdn202111.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>11/2021</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="id1">
+<h1>11/2021<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#end 
+
+Wednesday 
+— Bobby 8:30pm 
+
+Thursday 
+— Mummy: 9am (Activity)
+— Lab: code to SRTR
+— Tayebwa: 10am
+— Grandma: 11am (Simeon)
+— Barber: 2pm
+— Umutoni: 4pm (Activity)
+— MM: 5pm ($1.06m)
+
+Friday 
+— America: 1pm
+— Gad: 4pm
+— Cisse: 7pm
+— MM: 850k
+— PK: 750k
+
+Saturday 
+— PCR: 9am 
+— Tea: 
+— Duncan: 2pm
+</pre></div>
+</div>
+<p>.</p>
+<p>EAC pass — download</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#carryon</span></code></p>
+<p>To never do favors for international travel</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>PI (Cover Page)
+ABIMEREKI D MUZAALE , MD MPH PHD 
+
+Drop PHD
+
+Please see B.2 of attached RPPR from 2020
+— We can use this same B.2 with the following modification:
+— As outlined in the timeline of K08 application, the chief activity and goal of this period was PhD coursework. The PI matriculated as a GTPCI PhD student at Johns Hopkins University in 04/2020 and has been registered as a full-time student doing at least 16 credit units of course work in each term. The first term has be
+While no research was scheduled for this period, the PI is preparing for formative research by curating existing datasets for the research aims outlined in years 2 and 3 of the timeline.
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#belgian
+
+
+Belgian beer styles and exemplars 
+1.Quad — Rocheforte 10 
+2.Tripel — Westmalle
+3.Dubbel — Westmalle 
+4.Strong Golden Ale — Duvel 
+5.Golden Ale — Troubadour Blonde 
+6.Pale Ale — Orval 
+7.Flanders Red — Rodenbach Grand Cru 
+8.Oude Gueuze — Tilquin A l’ancienne 
+9.Belgian IPA — Houblon Chouffe
+10.Imperial Dark — Cuvée Van De Keizer
+11.Kriek/Quad  — Ommegang 3 Philosophers
+12.Saison — DuPont 
+Personal selections as of 9/15/21
+
+#1 monastery: Trappist Westvleteren
+
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+#weight 
+#creativedestruction
+#activity
+#orthopedics 
+#sportsmedicine 
+
+e = mc^2
+—&gt; anabolism (insulin, GH, ILGF, steroids)
+&lt;— catabolism (adrenaline, cortisol, glucagon)
+
+1 Lb = 3500 calories/week = 500/day deficit 
+
+#bestshapeofmylife
+
+will smith 
+deeply agrees with much here 
+
+“A mind that tries to seek pleasure and comfort and the easy way inadvertently poisons its dreams” W.S.
+
+9/26/21 
+— 8:45 pm 189.6 lbs 
+— 11:29 pm 189.4 lbs 
+
+9/27/21
+— 4:12 am 188.0 lbs 
+— 7:05 am 184.2 lbs*
+— 9:01 pm 190.4 lbs 
+— 11:05 pm 190.0 lbs
+
+9/28/21
+— 3:18 am 189.6 lbs 
+— 5:48 am 189.2 lbs
+— 6:00 am 188.4 lbs 
+— 9:30 am 192.0 lbs
+— 8:41 pm 194.2 lbs*
+
+*10 lbs difference 
+
+9/29/21 
+— 5:00am 192.0 lbs 
+
+9/30/21
+— 10:00am 192.4 lbs 
+— 12:51pm 191.4 lbs 
+— 5:50pm 192.4 lbs 
+
+10/1/21
+— 4:32am 192.2 lbs 
+— 6:30am 188.2 lbs 
+— 11:30am 188.0 lbs
+— 7:30pm 187.2 lbs 
+
+10/2/21
+— 5:00am 186.8 lbs 
+— 8:50am 183.8 lbs
+
+10/3/21
+— 6:36am 185.4 lbs
+— 9:58am 182.4 lbs 
+— 1:03pm 185.2 lbs 
+— 4:01pm 185.6 lbs 
+— 10:04pm 185.0 lbs 
+— 11:50pm 187.2 lbs 
+
+10/4/21
+— 8:00am 181.8 lbs***
+— 4:02pm 183.4 lbs 
+— 5:29pm 185.2 lbs 
+— 9:38pm 185.6 lbs 
+
+10/5/21
+— 2:00am 185.2 lbs 
+— 6:51am 184.6 lbs 
+— 4:55pm 186.2 lbs 
+— 6:52pm 185.8 lbs 
+— 11:42pm 185.4 lbs 
+
+10/6/21
+— 2:12am 185.0 lbs 
+— 5:56am 184.8 lbs 
+— 3:20pm 188.8 lbs 
+
+10/10/21
+— 10:48am 182.8 lbs 
+
+10/13/21
+— 2:30pm 182.8 lbs 
+— 4:00pm 183.6 lbs??? 
+
+10/14/21
+— 5:29am 182.4 lbs 
+— 8:34am 182.4 lbs 
+— 10:27am 181.8 lbs***
+
+0.3 lbs stompetoren gouda 
+0.3 lbs kristal gouda
+0.3 lbs mahon reserva 
+0.1 lbs finocciona 
+0.1 lbs chorizo el rey 
+0.1 lbs calabrian 3-way 
+0.1 lbs pepperoni 
+0.7 lbs orval 
+0.5 lbs gala apple 🍎 
+1.0 lbs water 
+1.0 lbs oude gueze 
+1.0 lbs water 
+1.0 lbs soup 🥣 
+__
+6.5 lbs 
+__
+
+— 2.04pm 186.3 lbs???
+— 6:37pm 188.3 lbs???
+— 6:39pm 187.8 lbs!!!
+
+10/15/21
+— 4:24am 184.4 lbs 
+— 6:15am 180.6 lbs 
+— 6:38am 180.2 lbs 
+— 7:32am 179.8 lbs 
+
+10/17/21
+— 6:49am 184.2 lbs 
+— 9:01am 180.8 lbs 
+— 11:59am 182.3 lbs 
+</pre></div>
+</div>
+<p>.</p>
+<p>Belfast cathedral choir
+There’s a wideness in God’s mercy <a class="footnote-reference brackets" href="#id4" id="id2">20</a></p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#aging</span></code></p>
+<p>Homeostenosis</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#culture</span></code></p>
+<p>— anthropometry from cradle to grave<br />
+— should be accountable to others<br />
+— but also physical performance (ie pace)</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#will</span></code></p>
+<p>Ambition — Nietzsche<br />
+Meaning — Kierkegaard<br />
+Pleasure — Freud</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#butterfly</span></code></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?app=desktop&amp;amp;v=6EJPqppOZ2Y">https://www.youtube.com/watch?app=desktop&amp;v=6EJPqppOZ2Y</a></p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#music</span></code></p>
+<p>there has never been a philosopher who has been in his essence a musician to such an extent as I am.</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#parenting</span></code></p>
+<p>I love only what a person has written with his blood</p>
+<p>— rollover helicopter parents!!</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#relationships</span></code></p>
+<p>— aunt Loy &amp; a genealogy in our family (e.g. abimereki, sefatia, brothers, self)<br />
+— there’s ancient curse<br />
+— reason to dismiss everybody: Rx.. dismiss the spirit<br />
+— we are attracted to time-wasters (never materialize)<br />
+— probably ancestors made a pact with devil to have sons..</p>
+<ul class="simple">
+<li></li>
+</ul>
+<p>— she also revealed responsibility for harriet vanishing from kasese</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#feedback </span>
+
+<span class="n">art</span> <span class="ow">is</span> <span class="n">negative</span> <span class="n">feedback</span> 
+<span class="n">science</span> <span class="ow">is</span> <span class="n">positive</span> <span class="n">feedback</span> 
+</pre></div>
+</div>
+<p>.</p>
+<p>“To venture into many situations where one cannot get by with sham virtues, but where, like the tightrope walker on his rope, one either stands or falls — or gets away”</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#sláinte 
+
+sla-nche
+
+From Dublin— 
+Dave 
+Debby 
+Jane (American)
+</pre></div>
+</div>
+<p>.</p>
+<p>My heart speaks in puzzle and codes<br />
+I’ve been trying my whole life to solve</p>
+<p>No amount of love
+Can keep me satisfied<br />
+I can’t keep up<br />
+When I keep changing my mind</p>
+<p>The feelings flood me to the heights of no compromise</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#goals
+
+
+
+Domination — Ambition — Nietzsche
+Comfort — Meaning — Kierkegaard 
+Pleasure — Hedonism — Freud 
+
+X
+
+Henry V — ambition 
+Hamlet — meaning 
+Henry IV — pleasure 
+
+X
+
+Political Economy/Mega Church
+Religion/Metaphysics 
+Hedonism/Flâneur 
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#jazz
+
+— conversation among instruments 
+— kenny G is a solo masturbation
+— he is on record denying ancestry 
+— claiming he only plays from feelings
+— pleasure and not ambition or meaning 
+
+x
+
+— but pop is a system also 
+— more commercial than cultural 
+— producers, artists, engineers, etc 
+— kenny G &amp; clive Davis 
+</pre></div>
+</div>
+<p>.</p>
+<p>parmenides vs. heraclitus? <a class="footnote-reference brackets" href="#id5" id="id3">21</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#core
+
+
+What amazes me is the consistency of your personality from childhood. You are not excited by much. Anyone who approaches you with excitement is likely to leave disappointed and frustrated. Because you are an emotionless trained observer of the world
+
+Prof P.J.Muzaale aka dad 
+
+Said in response to my views on a chaotic meaningless universe vs. preferred metaphysical narratives— to err is human. Witness how evocative the pyramids, the Taj Mahal, or the best music are. It’s our errors that lead to our greatest achievements 
+</pre></div>
+</div>
+<p>.</p>
+<p>Love on top — Beyoncé<br />
+If this isn’t love — edition</p>
+<p>.</p>
+<p>Swangz Avenue</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#fortportal 
+
+288 km 
+16:00 departure 
+250,000 full tank (full tank, diesel, prado)
+21:30 arrival 
+Nyaika hotel 
+$160
+Checkout 10:00 
+Open to late checkout 
+
+12:00 departure 
+17:35 arrival 
+
+52 km/hr 
+</pre></div>
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">20</a></span></dt>
+<dd><p>figure out a system to identify the tune of interest</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id3">21</a></span></dt>
+<dd><p>parmenides</p>
+</dd>
+</dl>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
