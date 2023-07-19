@@ -608,6 +608,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">06/24/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">544. becoming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#translocation">545. translocation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consilience">546. consilience</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theoretical">547. theoretical</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interfearance">548. interfearance</a></li>
@@ -5475,7 +5476,7 @@ Together they enrich our searching soul.
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/d527c99eeefeb1469becc816a34d65d6ae570a6aa7d902405724ee542e3879b0.png" src="_images/d527c99eeefeb1469becc816a34d65d6ae570a6aa7d902405724ee542e3879b0.png" />
+<img alt="_images/04338b4c1c188e2154084ac92b6982303e3f1b20887b9ea701514eaba67ef675.png" src="_images/04338b4c1c188e2154084ac92b6982303e3f1b20887b9ea701514eaba67ef675.png" />
 </div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="n">cosmic</span> <span class="n">vastness</span><span class="p">,</span> <span class="n">tremors</span> <span class="n">shake</span> <span class="n">the</span> <span class="n">ground</span><span class="p">,</span>
@@ -5756,7 +5757,7 @@ Y =\beta_0  \pm\varepsilon_i
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/080701c949a183bc0fd9d16de35925c4b1a3da6fd0cea83de42fdc026069b087.png" src="_images/080701c949a183bc0fd9d16de35925c4b1a3da6fd0cea83de42fdc026069b087.png" />
+<img alt="_images/f0a152cb9ba15f35889e6fd9a954775d586aa030993180bdd8f68b0689524e06.png" src="_images/f0a152cb9ba15f35889e6fd9a954775d586aa030993180bdd8f68b0689524e06.png" />
 </div>
 </div>
 <p>var2:</p>
@@ -5777,8 +5778,89 @@ Y =\beta_0  + \beta_1X_1 \pm\varepsilon_i
 <p><span class="math notranslate nohighlight">\(
 Y =\beta_0  + \beta_2X_2 \pm\varepsilon_i
 \)</span></p>
-<p>print(<a class="reference external" href="http://data.info">data.info</a>())
-print(data.describe())</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 2000 entries, 0 to 1999
+Data columns (total 26 columns):
+ #   Column            Non-Null Count  Dtype  
+---  ------            --------------  -----  
+ 0   fake_id           2000 non-null   int64  
+ 1   ctr_id            2000 non-null   int64  
+ 2   transplant_date   2000 non-null   object 
+ 3   don_hgt_cm        2000 non-null   float64
+ 4   don_wgt_kg        2000 non-null   float64
+ 5   don_cod           2000 non-null   object 
+ 6   don_ecd           2000 non-null   int64  
+ 7   dx                2000 non-null   object 
+ 8   race              2000 non-null   object 
+ 9   rec_hgt_cm        1933 non-null   float64
+ 10  rec_wgt_kg        1946 non-null   float64
+ 11  bmi               1870 non-null   object 
+ 12  prev_ki           2000 non-null   int64  
+ 13  age               2000 non-null   int64  
+ 14  peak_pra          1654 non-null   float64
+ 15  end_date          2000 non-null   float64
+ 16  died              2000 non-null   int64  
+ 17  tx_failed         2000 non-null   int64  
+ 18  wait_yrs          2000 non-null   float64
+ 19  abo               2000 non-null   object 
+ 20  gender            2000 non-null   int64  
+ 21  rec_hcv_antibody  1928 non-null   object 
+ 22  rec_work          1895 non-null   object 
+ 23  pretx_cmv         1994 non-null   object 
+ 24  rec_education     1784 non-null   object 
+ 25  extended_dgn      1997 non-null   object 
+dtypes: float64(7), int64(8), object(11)
+memory usage: 406.4+ KB
+None
+           fake_id      ctr_id   don_hgt_cm   don_wgt_kg      don_ecd  \
+count  2000.000000  2000.00000  2000.000000  2000.000000  2000.000000   
+mean   1000.500000    24.73050   168.767969    79.310105     0.141500   
+std     577.494589     6.21089    18.411148    25.210647     0.348624   
+min       1.000000    11.00000    57.000000     5.000000     0.000000   
+25%     500.750000    20.00000   163.000000    65.575000     0.000000   
+50%    1000.500000    25.00000   170.180000    78.000000     0.000000   
+75%    1500.250000    30.00000   180.000000    93.400000     0.000000   
+max    2000.000000    35.00000   208.000000   200.000000     1.000000   
+
+        rec_hgt_cm   rec_wgt_kg      prev_ki          age     peak_pra  \
+count  1933.000000  1946.000000  2000.000000  2000.000000  1654.000000   
+mean    168.646593    79.682434     0.128500    50.404000    16.539299   
+std      14.218013    21.411712     0.334729    15.810622    30.334164   
+min      79.000000     9.670000     0.000000     0.000000     0.000000   
+25%     162.560000    65.525000     0.000000    41.000000     0.000000   
+50%     170.180000    78.962550     0.000000    53.000000     0.000000   
+75%     177.800000    93.440000     0.000000    62.000000    15.000000   
+max     225.000000   155.580000     1.000000    85.000000   100.000000   
+
+           end_date         died    tx_failed     wait_yrs       gender  
+count   2000.000000  2000.000000  2000.000000  2000.000000  2000.000000  
+mean   20088.935123     0.118000     0.744500     2.335220     0.387500  
+std      743.031188     0.322689     0.436251     2.012785     0.487301  
+min    16855.867000     0.000000     0.000000     0.002738     0.000000  
+25%    20374.676500     0.000000     0.000000     0.672827     0.000000  
+50%    20407.276500     0.000000     1.000000     1.891855     0.000000  
+75%    20440.574250     0.000000     1.000000     3.440109     1.000000  
+max    20472.961000     1.000000     1.000000    13.037645     1.000000  
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="translocation">
+<h3>545. <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#">translocation</a><a class="headerlink" href="#translocation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>idea of icloud notes -&gt; github migration</p></li>
+<li><p>all notes prior to this date</p></li>
+<li><p>this covers 2011-2023</p></li>
+</ul>
 </section>
 <section id="consilience">
 <h3>546. consilience<a class="headerlink" href="#consilience" title="Permalink to this heading">#</a></h3>
@@ -6108,7 +6190,7 @@ Name: age, dtype: float64
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/57fba6fd3f6453f40ab326033365607d62caf593c15f0613d52709c73e57f5e9.png" src="_images/57fba6fd3f6453f40ab326033365607d62caf593c15f0613d52709c73e57f5e9.png" />
+<img alt="_images/ee3ca972bc57f1f9e3482ad8c0f9a1251ccb4922f74e128861c38e0340c9a687.png" src="_images/ee3ca972bc57f1f9e3482ad8c0f9a1251ccb4922f74e128861c38e0340c9a687.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -6191,7 +6273,7 @@ Name: age, dtype: float64
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/e4eaf66dd4adb1ad702fd5c36c0f7c19500b9af1dab0a6b3d8e0f58de27c15e1.png" src="_images/e4eaf66dd4adb1ad702fd5c36c0f7c19500b9af1dab0a6b3d8e0f58de27c15e1.png" />
+<img alt="_images/0fbc738747614c14e262929ccb88a07d3e971ca32f865bf49caca8f43f91eb1a.png" src="_images/0fbc738747614c14e262929ccb88a07d3e971ca32f865bf49caca8f43f91eb1a.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -6274,7 +6356,7 @@ Name: age, dtype: float64
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/e8190376cdd73731db5d0608645c38c6699eb0e224ed6e4db03529cfd76311cb.png" src="_images/e8190376cdd73731db5d0608645c38c6699eb0e224ed6e4db03529cfd76311cb.png" />
+<img alt="_images/7ea81fa1d8344fccaa43310ef587eb2766c1e501e82cc598534d532b863a211f.png" src="_images/7ea81fa1d8344fccaa43310ef587eb2766c1e501e82cc598534d532b863a211f.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -6357,7 +6439,7 @@ Name: age, dtype: float64
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/4b5d0ff7ef75f5cdb42352ec983750f3e531dc60e4c41c424fee8303d80b9f32.png" src="_images/4b5d0ff7ef75f5cdb42352ec983750f3e531dc60e4c41c424fee8303d80b9f32.png" />
+<img alt="_images/01288b032ca50752b9f9118c98715f6a4dc8eb39a44e9ab0c90a9c3fe3b46866.png" src="_images/01288b032ca50752b9f9118c98715f6a4dc8eb39a44e9ab0c90a9c3fe3b46866.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -10745,6 +10827,7 @@ Julius Caesar A1S2
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">06/24/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">544. becoming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#translocation">545. translocation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consilience">546. consilience</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theoretical">547. theoretical</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interfearance">548. interfearance</a></li>
