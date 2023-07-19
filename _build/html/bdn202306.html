@@ -5476,7 +5476,7 @@ Together they enrich our searching soul.
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/04338b4c1c188e2154084ac92b6982303e3f1b20887b9ea701514eaba67ef675.png" src="_images/04338b4c1c188e2154084ac92b6982303e3f1b20887b9ea701514eaba67ef675.png" />
+<img alt="_images/720a5367dccb0184a4541a9f29bd9c4b8fbf61a4dabff385c5f8f307ff201837.png" src="_images/720a5367dccb0184a4541a9f29bd9c4b8fbf61a4dabff385c5f8f307ff201837.png" />
 </div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="n">cosmic</span> <span class="n">vastness</span><span class="p">,</span> <span class="n">tremors</span> <span class="n">shake</span> <span class="n">the</span> <span class="n">ground</span><span class="p">,</span>
@@ -5710,6 +5710,7 @@ Y =\beta_0  \pm\varepsilon_i
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 <span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span> <span class="nn">os</span>
 
 <span class="c1"># Load the data from the URL using requests</span>
 <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/jhustata/livre/main/transplants.txt&#39;</span>
@@ -5743,11 +5744,21 @@ Y =\beta_0  \pm\varepsilon_i
 <span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">mean_age</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="p">[[</span><span class="n">mean_age</span> <span class="o">-</span> <span class="n">lb</span><span class="p">],</span> <span class="p">[</span><span class="n">ub</span> <span class="o">-</span> <span class="n">mean_age</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="c1"># Styling</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Age at Transplant, y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Age at Transplant, y&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>  <span class="c1"># Rotate the y-axis title horizontally</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Mean &amp; 95% CI&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.01</span><span class="p">,</span> <span class="n">mean_age</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\beta_0$&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Get the filename from the URL</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># Calculate the total number of observations</span>
+<span class="n">total_observations</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+
+<span class="c1"># Text annotation with the source and total observations</span>
+<span class="n">source_info</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Source: </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="se">\n</span><span class="s1">Total Observations: </span><span class="si">{</span><span class="n">total_observations</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">source_info</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
 
 <span class="c1"># Save the figure</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;age_m_95ci.png&#39;</span><span class="p">)</span>
@@ -5757,7 +5768,7 @@ Y =\beta_0  \pm\varepsilon_i
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/f0a152cb9ba15f35889e6fd9a954775d586aa030993180bdd8f68b0689524e06.png" src="_images/f0a152cb9ba15f35889e6fd9a954775d586aa030993180bdd8f68b0689524e06.png" />
+<img alt="_images/131ecf9fd149965719db4d47a0207cb4a9e93fbcd91afb404a572055a3bce6aa.png" src="_images/131ecf9fd149965719db4d47a0207cb4a9e93fbcd91afb404a572055a3bce6aa.png" />
 </div>
 </div>
 <p>var2:</p>
@@ -6190,7 +6201,7 @@ Name: age, dtype: float64
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/ee3ca972bc57f1f9e3482ad8c0f9a1251ccb4922f74e128861c38e0340c9a687.png" src="_images/ee3ca972bc57f1f9e3482ad8c0f9a1251ccb4922f74e128861c38e0340c9a687.png" />
+<img alt="_images/437b4e92e863d080891768eadc029044aa83e8fa8dca5abc90529c4222b84b6e.png" src="_images/437b4e92e863d080891768eadc029044aa83e8fa8dca5abc90529c4222b84b6e.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -6273,7 +6284,7 @@ Name: age, dtype: float64
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/0fbc738747614c14e262929ccb88a07d3e971ca32f865bf49caca8f43f91eb1a.png" src="_images/0fbc738747614c14e262929ccb88a07d3e971ca32f865bf49caca8f43f91eb1a.png" />
+<img alt="_images/a7f347fefaa383b7c37e5aa288b52f680d598f17c8e9d1d7338e65effb2995ed.png" src="_images/a7f347fefaa383b7c37e5aa288b52f680d598f17c8e9d1d7338e65effb2995ed.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -6356,7 +6367,7 @@ Name: age, dtype: float64
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/7ea81fa1d8344fccaa43310ef587eb2766c1e501e82cc598534d532b863a211f.png" src="_images/7ea81fa1d8344fccaa43310ef587eb2766c1e501e82cc598534d532b863a211f.png" />
+<img alt="_images/3be91121a07a144ca604c2435f5403348cc65690006c77ffadc2d642897301bf.png" src="_images/3be91121a07a144ca604c2435f5403348cc65690006c77ffadc2d642897301bf.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -6439,7 +6450,7 @@ Name: age, dtype: float64
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/01288b032ca50752b9f9118c98715f6a4dc8eb39a44e9ab0c90a9c3fe3b46866.png" src="_images/01288b032ca50752b9f9118c98715f6a4dc8eb39a44e9ab0c90a9c3fe3b46866.png" />
+<img alt="_images/06041318c4f3b5f21b52568d8b9e3666fbc8321f10fbadf3f0f39a995c902570.png" src="_images/06041318c4f3b5f21b52568d8b9e3666fbc8321f10fbadf3f0f39a995c902570.png" />
 </div>
 </div>
 <div class="cell docutils container">
