@@ -377,6 +377,76 @@ document.write(`
 <li><p>should be able to facilitate real-time dialogue</p></li>
 <li><p>lets seperate this be <a class="reference external" href="http://afecdvi.github.io">afecdvi.github.io</a></p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># Load the data from the URL using requests</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/jhustata/livre/main/transplants.txt&#39;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">file</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Extract relevant columns</span>
+<span class="n">age</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+
+<span class="c1"># Calculate mean and standard deviation</span>
+<span class="n">mean_age</span> <span class="o">=</span> <span class="n">age</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">std_age</span> <span class="o">=</span> <span class="n">age</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="c1"># Calculate upper and lower bounds for 95% confidence interval</span>
+<span class="n">ub</span> <span class="o">=</span> <span class="n">mean_age</span> <span class="o">+</span> <span class="n">std_age</span> <span class="o">*</span> <span class="mf">1.96</span>
+<span class="n">lb</span> <span class="o">=</span> <span class="n">mean_age</span> <span class="o">-</span> <span class="n">std_age</span> <span class="o">*</span> <span class="mf">1.96</span>
+
+<span class="c1"># Add jitter to x-axis values</span>
+<span class="n">x_jitter</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+
+<span class="c1"># Scatter plot of age with increased jitter</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_jitter</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;lime&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Mean point</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">mean_age</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
+
+<span class="c1"># Confidence interval with thicker line</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">mean_age</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="p">[[</span><span class="n">mean_age</span> <span class="o">-</span> <span class="n">lb</span><span class="p">],</span> <span class="p">[</span><span class="n">ub</span> <span class="o">-</span> <span class="n">mean_age</span><span class="p">]],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Styling</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Age at Transplant, y&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>  <span class="c1"># Rotate the y-axis title horizontally</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Mean &amp; 95% CI&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">1.01</span><span class="p">,</span> <span class="n">mean_age</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;$\beta_0$&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Get the filename from the URL</span>
+<span class="n">file_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># Calculate the total number of observations</span>
+<span class="n">total_observations</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+
+<span class="c1"># Text annotation with the source and total observations</span>
+<span class="n">source_info</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Source: </span><span class="si">{</span><span class="n">file_name</span><span class="si">}</span><span class="se">\n</span><span class="s1">Total Observations: </span><span class="si">{</span><span class="n">total_observations</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">source_info</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+
+<span class="c1"># Save the figure</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;age_m_95ci.png&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/172a9ac7dc87923b2f02d084dc1fbf53566ac64571847d74ae65d540b8deaf62.png" src="_images/172a9ac7dc87923b2f02d084dc1fbf53566ac64571847d74ae65d540b8deaf62.png" />
+</div>
+</div>
 </section>
 </section>
 </section>
