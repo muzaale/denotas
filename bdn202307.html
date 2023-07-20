@@ -552,6 +552,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timecheck">733. timecheck</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constant">734. constant</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#essay">735. essay</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gotzendammerung">736. götzendämmerung</a></li>
 </ul>
 </li>
 </ul>
@@ -3926,6 +3927,84 @@ function setup() {
 <p>This proverb emphasizes the value of foresight (<code class="docutils literal notranslate"><span class="pre">prévoir</span></code>) and prudence in the face of potential harm. It suggests that wisdom lies in recognizing threats and acting accordingly to avoid them, while those who lack such discernment face consequences.</p>
 <p>When I referred to Epicurus as being “grounded and pragmatic,” I was speaking to his philosophy’s emphasis on real-world, tangible happiness and well-being, rather than metaphysical or abstract ideals. Epicurus advised living in a way that maximizes pleasure (understood as tranquility and the absence of pain) and minimizes suffering.</p>
 <p>However, drawing a parallel between Epicurean pragmatism and the prudence highlighted in Proverbs 27:12 is an insightful connection. Both promote an awareness of one’s surroundings and circumstances, advocating for actions that lead to the best possible outcomes for oneself.</p>
+</section>
+<section id="gotzendammerung">
+<h2>736. götzendämmerung<a class="headerlink" href="#gotzendammerung" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">data_2021</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2021&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Instagram&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2021&#39;</span><span class="p">:</span> <span class="s1">&#39;1 billion&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2021&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Cristiano Ronaldo&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2021&#39;</span><span class="p">:</span> <span class="s1">&#39;339 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2021&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Dwayne Johnson&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2021&#39;</span><span class="p">:</span> <span class="s1">&#39;258 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2021&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Selena Gomez&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2021&#39;</span><span class="p">:</span> <span class="s1">&#39;256 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2021&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Ariana Grande&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2021&#39;</span><span class="p">:</span> <span class="s1">&#39;245 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2021&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Kylie Jenner&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2021&#39;</span><span class="p">:</span> <span class="s1">&#39;242 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2021&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Kim Kardashian&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2021&#39;</span><span class="p">:</span> <span class="s1">&#39;238 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2021&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Leo Messi&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2021&#39;</span><span class="p">:</span> <span class="s1">&#39;218 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2021&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Beyoncé&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2021&#39;</span><span class="p">:</span> <span class="s1">&#39;192 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2021&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Neymar Jr.&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2021&#39;</span><span class="p">:</span> <span class="s1">&#39;156 million&#39;</span><span class="p">}</span>
+<span class="p">]</span>
+
+<span class="n">data_2023</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2023&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Instagram&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2023&#39;</span><span class="p">:</span> <span class="s1">&#39;649 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2023&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Cristiano Ronaldo&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2023&#39;</span><span class="p">:</span> <span class="s1">&#39;597 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2023&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Lionel Messi&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2023&#39;</span><span class="p">:</span> <span class="s1">&#39;479 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2023&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Selena Gomez&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2023&#39;</span><span class="p">:</span> <span class="s1">&#39;426 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2023&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Kylie Jenner&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2023&#39;</span><span class="p">:</span> <span class="s1">&#39;398 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2023&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Dwayne Johnson&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2023&#39;</span><span class="p">:</span> <span class="s1">&#39;388 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2023&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Ariana Grande&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2023&#39;</span><span class="p">:</span> <span class="s1">&#39;377 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2023&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Kim Kardashian&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2023&#39;</span><span class="p">:</span> <span class="s1">&#39;363 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2023&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Beyoncé&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2023&#39;</span><span class="p">:</span> <span class="s1">&#39;315 million&#39;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;Rank 2023&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">:</span> <span class="s1">&#39;Khloé Kardashian&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2023&#39;</span><span class="p">:</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">}</span>
+<span class="p">]</span>
+
+<span class="n">df_2021</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data_2021</span><span class="p">)</span>
+<span class="n">df_2023</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data_2023</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_2021</span><span class="p">[[</span><span class="s1">&#39;Rank 2021&#39;</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2021&#39;</span><span class="p">]],</span> <span class="n">df_2023</span><span class="p">[[</span><span class="s1">&#39;Rank 2023&#39;</span><span class="p">,</span> <span class="s1">&#39;Account&#39;</span><span class="p">,</span> <span class="s1">&#39;Followers 2023&#39;</span><span class="p">]]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Change&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Followers 2023&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; million&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Unknown&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">))</span> <span class="o">-</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Followers 2021&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; billion&#39;</span><span class="p">,</span> <span class="s1">&#39;000&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; million&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   Rank 2021            Account Followers 2021  Rank 2023            Account  \
+0          1          Instagram      1 billion          1          Instagram   
+1          2  Cristiano Ronaldo    339 million          2  Cristiano Ronaldo   
+2          3     Dwayne Johnson    258 million          3       Lionel Messi   
+3          4       Selena Gomez    256 million          4       Selena Gomez   
+4          5      Ariana Grande    245 million          5       Kylie Jenner   
+5          6       Kylie Jenner    242 million          6     Dwayne Johnson   
+6          7     Kim Kardashian    238 million          7      Ariana Grande   
+7          8          Leo Messi    218 million          8     Kim Kardashian   
+8          9            Beyoncé    192 million          9            Beyoncé   
+9         10         Neymar Jr.    156 million         10   Khloé Kardashian   
+
+  Followers 2023  Change  
+0    649 million  -351.0  
+1    597 million   258.0  
+2    479 million   221.0  
+3    426 million   170.0  
+4    398 million   153.0  
+5    388 million   146.0  
+6    377 million   139.0  
+7    363 million   145.0  
+8    315 million   123.0  
+9        Unknown     NaN  
+</pre></div>
+</div>
+</div>
+</div>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id4">33</a></span></dt>
@@ -4186,6 +4265,7 @@ function setup() {
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timecheck">733. timecheck</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constant">734. constant</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#essay">735. essay</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gotzendammerung">736. götzendämmerung</a></li>
 </ul>
 </li>
 </ul>
