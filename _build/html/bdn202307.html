@@ -4381,9 +4381,17 @@ _(Provide answer here)_
 
 <span class="n">table_data</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data1</span><span class="p">)):</span>
-    <span class="n">table_data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">data1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">data2</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="n">handle2023</span> <span class="o">=</span> <span class="n">data1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">followers2023</span> <span class="o">=</span> <span class="n">data1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">rank2021</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data2</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">handle2023</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">followers2021</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data2</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">handle2023</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">rank2021</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">rank_change</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">rank2021</span><span class="p">)</span> <span class="o">-</span> <span class="n">i</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">rank_change</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span>
+    <span class="n">table_data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="n">data1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">handle2023</span><span class="p">,</span> <span class="n">followers2023</span><span class="p">,</span> <span class="n">rank2021</span><span class="p">,</span> <span class="n">handle2023</span><span class="p">,</span> <span class="n">followers2021</span><span class="p">,</span> <span class="n">rank_change</span><span class="p">])</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;#2023&quot;</span><span class="p">,</span> <span class="s2">&quot;Handle2023&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers2023&quot;</span><span class="p">,</span> <span class="s2">&quot;#2021&quot;</span><span class="p">,</span> <span class="s2">&quot;Account2021&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers2021&quot;</span><span class="p">]</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;#2023&quot;</span><span class="p">,</span> <span class="s2">&quot;Handle2023&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers2023&quot;</span><span class="p">,</span> <span class="s2">&quot;#2021&quot;</span><span class="p">,</span> <span class="s2">&quot;Account2021&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers2021&quot;</span><span class="p">,</span> <span class="s2">&quot;CHANGE (+/-)&quot;</span><span class="p">]</span>
 
 <span class="n">table</span> <span class="o">=</span> <span class="n">tabulate</span><span class="p">(</span><span class="n">table_data</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">&quot;plain&quot;</span><span class="p">)</span>
 
@@ -4393,61 +4401,62 @@ _(Provide answer here)_
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  #2023                Handle2023               Followers2023  #2021                      Account2021
-  1  @instagram           Instagram                        649    Instagram                        302
-  2  @cristiano           Cristiano Ronaldo                596    Cristiano Ronaldo                172.7
-  3  @leomessi            Lionel Messi                     479    Selena Gomez                     167.3
-  4  @selenagomez         Selena Gomez                     426    Ariana Grande                    154.4
-  5  @kyliejenner         Kylie Jenner                     397    Dwayne Johnson                   148.2
-  6  @therock             Dwayne Johnson                   387    Kim Kardashian                   145.7
-  7  @arianagrande        Ariana Grande                    377    Beyoncé                          130.3
-  8  @kimkardashian       Kim Kardashian                   362    Kylie Jenner                     126.8
-  9  @beyonce             Beyoncé                          314    Taylor Swift                     119.6
- 10  @khloekardashian     Khloé Kardashian                 310    Neymar Jr                        118.2
- 11  @nike                Nike                             302    National Geographic              114.5
- 12  @justinbieber        Justin Bieber                    293    Justin Bieber                    111.7
- 13  @kendalljenner       Kendall Jenner                   292    Kendall Jenner                   109.4
- 14  @natgeo              National Geographic              281    Nicki Minaj                      106.5
- 15  @taylorswift         Taylor Swift                     268    Jennifer Lopez                   105.3
- 16  @virat.kohli         Virat Kohli                      255    Khloé Kardashian                 101.6
- 17  @jlo                 Jennifer Lopez                   249    Miley Cyrus                       98.4
- 18  @nickiminaj          Nicki Minaj                      223    Katy Perry                        92.2
- 19  @kourtneykardash     Kourtney Kardashian              223    Kourtney Kardashian               90.4
- 20  @mileycyrus          Miley Cyrus                      212    Kevin Hart                        88.3
- 21  @neymarjr            Neymar                           210    Demi Lovato                       86.6
- 22  @katyperry           Katy Perry                       203    FC Barcelona                      84.6
- 23  @zendaya             Zendaya                          183    Rihanna                           81.3
- 24  @kevinhart4real      Kevin Hart                       178    Nike                              78.6
- 25  @iamcardib           Cardi B                          168    Real Madrid CF                    75.9
- 26  @kingjames           LeBron James                     156    Vin Diesel                        75.5
- 27  @ddlovato            Demi Lovato                      156    Ellen DeGeneres                   75.3
- 28  @badgalriri          Rihanna                          152    9GAG                              74.6
- 29  @realmadrid          Real Madrid CF                   143    NASA                              73.5
- 30  @chrisbrownofficial  Chris Brown                      142    Maluma                            72.4
- 31  @champagnepapi       Drake                            140    Zara Larsson                      71.5
- 32  @ellendegeneres      Ellen DeGeneres                  139    Marvel                            70.6
- 33  @fcbarcelona         FC Barcelona                     122    Shakira                           70.5
- 34  @billieeilish        Billie Eilish                    109    LeBron James                      70.2
- 35  @championsleague     UEFA Champions League            107    Deepika Padukone                  69.5
- 36  @gal_gadot           Gal Gadot                        105    Chris Brown                       68.9
- 37  @k.mbappe            Kylian Mbappé                    105    NASA Goddard                      68.3
- 38  @vindiesel           Vin Diesel                        97.5  Cardi B                           67.9
- 39  @lalalalisa_m        Lisa                              95.8  Nike Football (Soccer)            67.2
- 40  @nasa                NASA                              94.2  Chanel                            66.6
- 41  @dualipa             Dua Lipa                          88.6  Priyanka Chopra                   65.5
- 42  @priyankachopra      Priyanka Chopra                   88.5  Maluma Baby                       64.8
- 43  @shakira             Shakira                           87.8  David Beckham                     64.1
- 44  @nba                 NBA                               82.3  Gigi Hadid                        63.5
- 45  @shraddhakapoor      Shraddha Kapoor                   81.6  Ronaldinho                        63.3
- 46  @davidbeckham        David Beckham                     80.6  Justin Timberlake                 63.1
- 47  @jennierubyjane      Jennie                            80.2  NASA Earth Observatory            62.6
- 48  @snoopdogg           Snoop Dogg                        80.2  LeBron James                      62.5
- 49  @khaby00             Khaby Lame                        79.6  NASA Jet Propulsion Lab           62.3
- 50  @gigihadid           Gigi Hadid                        78.8  Kaka                              61.8
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  #2023                Handle2023               Followers2023    #2021  Account2021              Followers2021  CHANGE (+/-)
+  1  @instagram           Instagram                        649          1  Instagram                        302    0
+  2  @cristiano           Cristiano Ronaldo                596          2  Cristiano Ronaldo                172.7  0
+  3  @leomessi            Lionel Messi                     479         52  Lionel Messi                      61.5  49
+  4  @selenagomez         Selena Gomez                     426          3  Selena Gomez                     167.3  -1
+  5  @kyliejenner         Kylie Jenner                     397          8  Kylie Jenner                     126.8  3
+  6  @therock             Dwayne Johnson                   387          5  Dwayne Johnson                   148.2  -1
+  7  @arianagrande        Ariana Grande                    377          4  Ariana Grande                    154.4  -3
+  8  @kimkardashian       Kim Kardashian                   362          6  Kim Kardashian                   145.7  -2
+  9  @beyonce             Beyoncé                          314          7  Beyoncé                          130.3  -2
+ 10  @khloekardashian     Khloé Kardashian                 310         16  Khloé Kardashian                 101.6  6
+ 11  @nike                Nike                             302         24  Nike                              78.6  13
+ 12  @justinbieber        Justin Bieber                    293         12  Justin Bieber                    111.7  0
+ 13  @kendalljenner       Kendall Jenner                   292         13  Kendall Jenner                   109.4  0
+ 14  @natgeo              National Geographic              281         11  National Geographic              114.5  -3
+ 15  @taylorswift         Taylor Swift                     268          9  Taylor Swift                     119.6  -6
+ 16  @virat.kohli         Virat Kohli                      255             Virat Kohli                             -
+ 17  @jlo                 Jennifer Lopez                   249         15  Jennifer Lopez                   105.3  -2
+ 18  @nickiminaj          Nicki Minaj                      223         14  Nicki Minaj                      106.5  -4
+ 19  @kourtneykardash     Kourtney Kardashian              223         19  Kourtney Kardashian               90.4  0
+ 20  @mileycyrus          Miley Cyrus                      212         17  Miley Cyrus                       98.4  -3
+ 21  @neymarjr            Neymar                           210             Neymar                                  -
+ 22  @katyperry           Katy Perry                       203         18  Katy Perry                        92.2  -4
+ 23  @zendaya             Zendaya                          183             Zendaya                                 -
+ 24  @kevinhart4real      Kevin Hart                       178         20  Kevin Hart                        88.3  -4
+ 25  @iamcardib           Cardi B                          168         38  Cardi B                           67.9  13
+ 26  @kingjames           LeBron James                     156         34  LeBron James                      70.2  8
+ 27  @ddlovato            Demi Lovato                      156         21  Demi Lovato                       86.6  -6
+ 28  @badgalriri          Rihanna                          152         23  Rihanna                           81.3  -5
+ 29  @realmadrid          Real Madrid CF                   143         25  Real Madrid CF                    75.9  -4
+ 30  @chrisbrownofficial  Chris Brown                      142         36  Chris Brown                       68.9  6
+ 31  @champagnepapi       Drake                            140             Drake                                   -
+ 32  @ellendegeneres      Ellen DeGeneres                  139         27  Ellen DeGeneres                   75.3  -5
+ 33  @fcbarcelona         FC Barcelona                     122         22  FC Barcelona                      84.6  -11
+ 34  @billieeilish        Billie Eilish                    109             Billie Eilish                           -
+ 35  @championsleague     UEFA Champions League            107             UEFA Champions League                   -
+ 36  @gal_gadot           Gal Gadot                        105             Gal Gadot                               -
+ 37  @k.mbappe            Kylian Mbappé                    105             Kylian Mbappé                           -
+ 38  @vindiesel           Vin Diesel                        97.5       26  Vin Diesel                        75.5  -12
+ 39  @lalalalisa_m        Lisa                              95.8           Lisa                                    -
+ 40  @nasa                NASA                              94.2       29  NASA                              73.5  -11
+ 41  @dualipa             Dua Lipa                          88.6           Dua Lipa                                -
+ 42  @priyankachopra      Priyanka Chopra                   88.5       41  Priyanka Chopra                   65.5  -1
+ 43  @shakira             Shakira                           87.8       33  Shakira                           70.5  -10
+ 44  @nba                 NBA                               82.3           NBA                                     -
+ 45  @shraddhakapoor      Shraddha Kapoor                   81.6           Shraddha Kapoor                         -
+ 46  @davidbeckham        David Beckham                     80.6       43  David Beckham                     64.1  -3
+ 47  @jennierubyjane      Jennie                            80.2           Jennie                                  -
+ 48  @snoopdogg           Snoop Dogg                        80.2       51  Snoop Dogg                        61.6  3
+ 49  @khaby00             Khaby Lame                        79.6           Khaby Lame                              -
+ 50  @gigihadid           Gigi Hadid                        78.8       44  Gigi Hadid                        63.5  -6
 </pre></div>
 </div>
 </div>
 </div>
+<p>This includes several inaccuracies. But for starters the code is of interest to me as a Python novice. Later we’ll investigate how to debug and improve it (for instance: everything is hardcoded but we need to scrape old websites to capture this information).</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id4">33</a></span></dt>
