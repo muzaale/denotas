@@ -561,6 +561,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#khloe">742. khloe</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paulsimon">743. paulsimon</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mankind">742. mankind</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clock">744. clock</a></li>
 </ul>
 </li>
 </ul>
@@ -2927,7 +2928,7 @@ by the presence of our Lord
 <span class="c1"># Plot the anxiety and boredom areas</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Anxiety&#39;</span><span class="p">,</span> <span class="n">interpolate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Boredom&#39;</span><span class="p">,</span> <span class="n">interpolate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="n">yellow_zone_low</span><span class="p">,</span> <span class="n">yellow_zone_high</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Flow Channel&#39;</span><span class="p">,</span> <span class="n">interpolate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="n">yellow_zone_low</span><span class="p">,</span> <span class="n">yellow_zone_high</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#FFCC00&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Flow Channel&#39;</span><span class="p">,</span> <span class="n">interpolate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Plot the sinusoid function</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="n">sinusoid</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
@@ -2937,7 +2938,7 @@ by the presence of our Lord
           <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=-</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">head_length</span><span class="o">=-</span><span class="mf">0.3</span><span class="p">)</span>
 
 <span class="c1"># Plot the flow channel boundaries</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#FFCC00&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
 
 <span class="c1"># Set plot labels and title</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Credo&#39;</span><span class="p">)</span>
@@ -2954,8 +2955,8 @@ by the presence of our Lord
 <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">tick_labels</span><span class="p">)</span>
 
 <span class="c1"># Add text annotations to label the areas</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.8</span><span class="p">,</span> <span class="mf">7.9</span><span class="p">,</span> <span class="s1">&#39;art&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">5.1</span><span class="p">,</span> <span class="s1">&#39;engineering&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.8</span><span class="p">,</span> <span class="mf">7.9</span><span class="p">,</span> <span class="s1">&#39;art&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;#FFCC00&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">5.1</span><span class="p">,</span> <span class="s1">&#39;engineering&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;#FFCC00&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;#FFCC00&#39;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">6.2</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="s1">&#39;science&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;lightgreen&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;lightgreen&#39;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">))</span>
 
 <span class="c1"># Display the plot</span>
@@ -2965,11 +2966,11 @@ by the presence of our Lord
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/6e1c9162eaae57898382ef2504f02f311d0bd2fefccb78158cbe114516d92c22.png" src="_images/6e1c9162eaae57898382ef2504f02f311d0bd2fefccb78158cbe114516d92c22.png" />
+<img alt="_images/d8992890aa8e6abbdfea07e82df84197ad89cf85168a650ab689341fc120c463.png" src="_images/d8992890aa8e6abbdfea07e82df84197ad89cf85168a650ab689341fc120c463.png" />
 </div>
 </div>
 <ol class="arabic simple">
-<li><p><span style="color: yellow;">engineering</span></p>
+<li><p><span style="color: #FFCC00;">engineering</span></p>
 <ul class="simple">
 <li><p>emergent flow channel</p></li>
 <li><p>represents continuous never ending struggle</p></li>
@@ -3873,7 +3874,7 @@ function setup() {
     ellipse(width/2, height/2, 400);
 
     // Draw the hour hand (2:00)
-    stroke('yellow');
+    stroke('#FFCC00');
     strokeWeight(6);
     push();
     translate(width/2, height/2);
@@ -4530,6 +4531,15 @@ _(Provide answer here)_
 </ul>
 </li>
 </ol>
+</section>
+<section id="clock">
+<h2>744. <a class="reference external" href="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js">clock</a><a class="headerlink" href="#clock" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>study this code</p></li>
+<li><p>what language is it?</p></li>
+<li><p>and why so long?</p></li>
+<li><p>used in <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#timecheck">timecheck</a></p></li>
+</ul>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id4">33</a></span></dt>
@@ -4799,6 +4809,7 @@ _(Provide answer here)_
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#khloe">742. khloe</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paulsimon">743. paulsimon</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mankind">742. mankind</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clock">744. clock</a></li>
 </ul>
 </li>
 </ul>
