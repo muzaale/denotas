@@ -549,6 +549,9 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pairs">730. pairs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#music">731. music</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#app">732. app</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timecheck">733. timecheck</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constant">734. constant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#essay">735. essay</a></li>
 </ul>
 </li>
 </ul>
@@ -3835,6 +3838,86 @@ This is similar to the first chord but has an additional E♭:</p>
 <li><p>participer (pourvoir)</p></li>
 <li><p>précipiter (provoquer)</p></li>
 </ul>
+</section>
+<section id="timecheck">
+<h2>733. timecheck<a class="headerlink" href="#timecheck" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span style="color: yellow;">1:</span><span style="color: green;">29:</span><span style="color: red;">45</span></p></li>
+</ul>
+<style>
+.input_area {
+    display: none;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+<script>
+function setup() {
+    // Set up the canvas
+    const canvas = createCanvas(400, 400);
+    canvas.parent('clock-container');
+
+    // Draw the clock face
+    background(255);
+    noFill();
+    stroke(0);
+    strokeWeight(3);
+    ellipse(width/2, height/2, 400);
+
+    // Draw the hour hand (2:00)
+    stroke('yellow');
+    strokeWeight(6);
+    push();
+    translate(width/2, height/2);
+    rotate(-PI/4); // Set rotation to 45 degrees
+    line(0, 0, 100, 0);
+    pop();
+
+    // Draw the minute hand (6:00)
+    stroke('green');
+    strokeWeight(4);
+    push();
+    translate(width/2, height/2);
+    rotate(PI/2);
+    line(0, 0, 150, 0);
+    pop();
+
+    // Draw the second hand (9:00)
+    stroke('red');
+    strokeWeight(2);
+    push();
+    translate(width/2, height/2);
+    rotate(PI); // Set rotation to 9 o'clock position
+    line(0, 0, 180, 0);
+    pop();
+}
+</script>   
+<div id="clock-container"></div>   
+<ul class="simple">
+<li><p><span style="color: yellow;">struggle</span></p></li>
+<li><p><span style="color: green;">deliverance</span></p></li>
+<li><p><span style="color: red;">reverence</span></p></li>
+</ul>
+</section>
+<section id="constant">
+<h2>734. constant<a class="headerlink" href="#constant" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span style="color: yellow;">energy (heraclitean hustle)</span></p></li>
+<li><p><span style="color: green;">credo (platonic ideal)</span></p></li>
+<li><p><span style="color: red;">place (epicurean prudence)</span></p></li>
+</ul>
+</section>
+<section id="essay">
+<h2>735. essay<a class="headerlink" href="#essay" title="Permalink to this heading">#</a></h2>
+<p><strong>and</strong> what are they. also, write a 500 word essay on these three characters and one must emerge as the winner. please don’t be dull, democratic, and overly sensible. give us a human touch with bias</p>
+<p>Epicurus, Plato, and Heraclitus represent three prominent figures in ancient philosophy, each contributing unique perspectives and ideas to the field. In this essay, we will explore the philosophies of these three characters, their key concepts, and evaluate their contributions. Please note that the following essay will incorporate a human touch with bias.</p>
+<p>Epicurus, known as an Epicurean philosopher, emphasized the pursuit of happiness and pleasure as the ultimate goal of life. He believed that pleasure should be sought, but not in the form of hedonistic indulgence. Epicurus advocated for a moderate and balanced approach, focusing on mental tranquility and the avoidance of pain. He taught that by attaining ataraxia (freedom from disturbance) and aponia (freedom from bodily pain), individuals could achieve a state of happiness. Epicurus valued friendship, simple living, and the absence of fear in his philosophy.</p>
+<p>On the other hand, Plato, one of the most renowned philosophers in history, founded the Academy and proposed the theory of Forms. Plato believed that the physical world we perceive is merely a reflection of a higher reality of eternal and unchanging Forms. According to Plato, knowledge and truth are obtained through reason and contemplation of these abstract Forms. He viewed the pursuit of knowledge and the cultivation of virtue as the path to the Good, which he considered the highest aim of human life. Plato’s philosophy emphasized the importance of justice, wisdom, and the existence of an ideal state.</p>
+<p>Lastly, Heraclitus, known for his enigmatic and paradoxical statements, held a radically different perspective. Heraclitus believed in the constant flux and change in the universe. He famously stated, “You cannot step into the same river twice.” According to Heraclitus, change and opposition are fundamental aspects of existence. He emphasized the concept of “Logos,” an underlying principle that governs the world, representing the interconnectedness and harmony within the perpetual flux. Heraclitus encouraged individuals to embrace change, to see it as a natural part of life, and to develop an understanding of the interconnectedness of all things.</p>
+<p>Now, considering these three philosophies, it becomes a challenge to determine a clear winner. Each philosopher offers valuable insights and contributes to the rich tapestry of human thought. However, it is essential to acknowledge the biases inherent in any evaluation. In this context, I find myself drawn to the profound ideas of Plato.</p>
+<p>Plato’s philosophy, with its focus on reason, virtue, and the pursuit of knowledge, resonates deeply. His theory of Forms provides a compelling framework for understanding the nature of reality and the human quest for truth. Plato’s emphasis on the ideal state, justice, and wisdom speaks to the desire for a just and harmonious society. The enduring influence of Plato’s ideas on subsequent philosophers and his impact on the development of Western philosophy further substantiate his significance.</p>
+<p>While Epicurus and Heraclitus present intriguing perspectives, the broad applicability and timeless relevance of Plato’s ideas make him stand out. However, it is crucial to acknowledge that this evaluation is subjective and influenced by personal biases. Other individuals may find solace and inspiration in the teachings of Epicurus or the enigmatic wisdom of Heraclitus.</p>
+<p>In conclusion, the philosophies of Epicurus, Plato, and Heraclitus offer distinct perspectives on life, happiness, and the nature of reality. While each philosopher contributes valuable insights, Plato’s emphasis on reason, virtue, and the pursuit of knowledge emerges as a powerful force. However, it is essential to recognize the subjectivity and bias inherent in this evaluation. Philosophy, like life itself, is complex and multifaceted, and the richness of human thought lies in the diversity of perspectives that contribute to our understanding of the world.</p>
+<p><strong>oh well</strong>, chatbot, my natural inclination is with epicurus. though i must confess that in my younger, better days i was without any doubt a splendid mishmash of heraclitus (music) &amp; plato (anglican). i’m guessing, now that i think of it, that the tension (<a class="reference external" href="https://www.youtube.com/watch?v=b1MN3chW1Hk">hymns</a> vs <a class="reference external" href="https://www.youtube.com/watch?v=A4C4NiVKrXk">babyface</a>) ultimately resolved by choosing epicurus.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id4">33</a></span></dt>
@@ -4092,6 +4175,9 @@ This is similar to the first chord but has an additional E♭:</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pairs">730. pairs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#music">731. music</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#app">732. app</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#timecheck">733. timecheck</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constant">734. constant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#essay">735. essay</a></li>
 </ul>
 </li>
 </ul>
