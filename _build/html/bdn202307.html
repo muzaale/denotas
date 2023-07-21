@@ -3957,99 +3957,232 @@ function setup() {
 <span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
 <span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
 
-<span class="k">def</span> <span class="nf">scrape_instagram_accounts</span><span class="p">():</span>
-    <span class="c1"># URL of the Wikipedia page</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts&quot;</span>
+<span class="c1"># Send a request to the Wikipedia page</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts&#39;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
 
-    <span class="c1"># Send a GET request to the URL and retrieve the content</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-    <span class="n">content</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+<span class="c1"># Find the table rows containing the data</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s1">&#39;wikitable&#39;</span><span class="p">)</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;tbody tr&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]</span>  <span class="c1"># Skip the header row</span>
 
-    <span class="c1"># Create a BeautifulSoup object to parse the HTML content</span>
-    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="c1"># Extract data from each row and store it in a list</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">columns</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">rank</span> <span class="o">=</span> <span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">owner</span> <span class="o">=</span> <span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">followers</span> <span class="o">=</span> <span class="n">columns</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\xa0</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>  <span class="c1"># Remove non-breaking spaces</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">rank</span><span class="p">,</span> <span class="n">owner</span><span class="p">,</span> <span class="n">followers</span><span class="p">])</span>
 
-    <span class="c1"># Find the table containing the Instagram accounts</span>
-    <span class="n">table</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;table&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;wikitable&quot;</span><span class="p">)</span>
+<span class="c1"># Print the table using tabulate</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Rank23&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers23&quot;</span><span class="p">,</span> <span class="s2">&quot;Country&quot;</span><span class="p">]</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">tabulate</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">&quot;plain&quot;</span><span class="p">)</span>
 
-    <span class="c1"># Extract the account data from the table</span>
-    <span class="n">accounts</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">rows</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;tr&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]</span>  <span class="c1"># Exclude the header row</span>
-    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">columns</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">columns</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
-            <span class="n">rank</span> <span class="o">=</span> <span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-            <span class="n">account</span> <span class="o">=</span> <span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-            <span class="n">followers</span> <span class="o">=</span> <span class="n">columns</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-            <span class="n">description</span> <span class="o">=</span> <span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-            <span class="n">accounts</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">index</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">account</span><span class="p">,</span> <span class="n">followers</span><span class="p">,</span> <span class="n">description</span><span class="p">])</span>
-
-    <span class="k">return</span> <span class="n">accounts</span>
-
-<span class="c1"># Scrape the Instagram accounts data</span>
-<span class="n">accounts_table</span> <span class="o">=</span> <span class="n">scrape_instagram_accounts</span><span class="p">()</span>
-
-<span class="c1"># Print the Instagram accounts table for 2023</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">tabulate</span><span class="p">(</span><span class="n">accounts_table</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot; #2023&quot;</span><span class="p">,</span> <span class="s2">&quot;Handle2023&quot;</span><span class="p">,</span> <span class="s2">&quot;Account2023&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers2023&quot;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     #2023               Handle2023             Account2023      Followers2023
---  -------------------  ---------------------  -------------  ---------------
- 1  @instagram           Instagram                                       649
- 2  @cristiano           Cristiano Ronaldo                               596
- 3  @leomessi            Lionel Messi                                    480
- 4  @selenagomez         Selena Gomez                                    426
- 5  @kyliejenner         Kylie Jenner                                    397
- 6  @therock             Dwayne Johnson                                  387
- 7  @arianagrande        Ariana Grande                                   377
- 8  @kimkardashian       Kim Kardashian                                  362
- 9  @beyonce             Beyoncé                                         314
-10  @khloekardashian     Khloé Kardashian                                310
-11  @nike                Nike                                            302
-12  @justinbieber        Justin Bieber                                   293
-13  @kendalljenner       Kendall Jenner                                  292
-14  @natgeo              National Geographic                             281
-15  @taylorswift         Taylor Swift                                    268
-16  @virat.kohli         Virat Kohli                                     255
-17  @jlo                 Jennifer Lopez                                  249
-18  @nickiminaj          Nicki Minaj                                     223
-19  @kourtneykardash     Kourtney Kardashian                             223
-20  @mileycyrus          Miley Cyrus                                     212
-21  @neymarjr            Neymar                                          210
-22  @katyperry           Katy Perry                                      203
-23  @zendaya             Zendaya                                         183
-24  @kevinhart4real      Kevin Hart                                      178
-25  @iamcardib           Cardi B                                         168
-26  @kingjames           LeBron James                                    156
-27  @ddlovato            Demi Lovato                                     156
-28  @badgalriri          Rihanna                                         152
-29  @realmadrid          Real Madrid CF                                  143
-30  @chrisbrownofficial  Chris Brown                                     142
-31  @champagnepapi       Drake                                           140
-32  @ellendegeneres      Ellen DeGeneres                                 139
-33  @fcbarcelona         FC Barcelona                                    122
-34  @billieeilish        Billie Eilish                                   109
-35  @championsleague     UEFA Champions League                           107
-36  @gal_gadot           Gal Gadot                                       105
-37  @k.mbappe            Kylian Mbappé                                   105
-38  @vindiesel           Vin Diesel                                       97.5
-39  @lalalalisa_m        Lisa                                             95.8
-40  @nasa                NASA                                             94.2
-41  @dualipa             Dua Lipa                                         88.6
-42  @priyankachopra      Priyanka Chopra                                  88.5
-43  @shakira             Shakira                                          87.8
-44  @nba                 NBA                                              82.3
-45  @shraddhakapoor      Shraddha Kapoor                                  81.6
-46  @davidbeckham        David Beckham                                    80.6
-47  @jennierubyjane      Jennie                                           80.2
-48  @snoopdogg           Snoop Dogg                                       80.2
-49  @khaby00             Khaby Lame                                       79.6
-50  @gigihadid           Gigi Hadid                                       78.8
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rank23                   Followers23  Country
+Instagram                      649    United States
+Cristiano Ronaldo              597    Portugal
+Lionel Messi                   480    Argentina
+Selena Gomez                   426    United States
+Kylie Jenner                   397    United States
+Dwayne Johnson                 387    United States
+Ariana Grande                  377    United States
+Kim Kardashian                 362    United States
+Beyoncé                        314    United States
+Khloé Kardashian               310    United States
+Nike                           302    United States
+Justin Bieber                  293    Canada
+Kendall Jenner                 293    United States
+National Geographic            281    United States
+Taylor Swift                   268    United States
+Virat Kohli                    255    India
+Jennifer Lopez                 249    United States
+Nicki Minaj                    223    Trinidad and TobagoUnited States
+Kourtney Kardashian            223    United States
+Miley Cyrus                    212    United States
+Neymar                         210    Brazil
+Katy Perry                     203    United States
+Zendaya                        183    United States
+Kevin Hart                     178    United States
+Cardi B                        168    United States
+LeBron James                   156    United States
+Demi Lovato                    156    United States
+Rihanna                        152    Barbados
+Real Madrid CF                 143    Spain
+Chris Brown                    142    United States
+Drake                          140    Canada
+Ellen DeGeneres                139    United States
+FC Barcelona                   122    Spain
+Billie Eilish                  109    United States
+UEFA Champions League          107    Europe
+Gal Gadot                      105    Israel
+Kylian Mbappé                  105    France
+Vin Diesel                      97.5  United States
+Lisa                            95.9  Thailand
+NASA                            94.3  United States
+Dua Lipa                        88.6  United KingdomAlbania
+Priyanka Chopra                 88.5  India
+Shakira                         87.9  Colombia
+NBA                             82.4  United StatesCanada
+Shraddha Kapoor                 81.7  India
+David Beckham                   80.8  United Kingdom
+Jennie                          80.2  South Korea
+Snoop Dogg                      80.2  United States
+Khaby Lame                      79.7  ItalySenegal
+Gigi Hadid                      78.8  United States
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_table</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">header</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+    <span class="n">col_widths</span> <span class="o">=</span> <span class="p">[</span><span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">cell</span><span class="p">))</span> <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">col</span><span class="p">)</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">data</span><span class="p">)]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Name23&quot;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">col_widths</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="s2">&quot;Followers23&quot;</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">col_widths</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="s2">&quot;Country&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span> <span class="o">*</span> <span class="nb">sum</span><span class="p">(</span><span class="n">col_widths</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">col_widths</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">str</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="n">col_widths</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="nb">str</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+
+<span class="c1"># Example data for the table</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;Rank&quot;</span><span class="p">,</span> <span class="s2">&quot;Owner&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Instagram&quot;</span><span class="p">,</span> <span class="s2">&quot;649&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Cristiano Ronaldo&quot;</span><span class="p">,</span> <span class="s2">&quot;597&quot;</span><span class="p">,</span> <span class="s2">&quot;Portugal&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Lionel Messi&quot;</span><span class="p">,</span> <span class="s2">&quot;480&quot;</span><span class="p">,</span> <span class="s2">&quot;Argentina&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Selena Gomez&quot;</span><span class="p">,</span> <span class="s2">&quot;426&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Kylie Jenner&quot;</span><span class="p">,</span> <span class="s2">&quot;397&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Dwayne Johnson&quot;</span><span class="p">,</span> <span class="s2">&quot;387&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Ariana Grande&quot;</span><span class="p">,</span> <span class="s2">&quot;377&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Kim Kardashian&quot;</span><span class="p">,</span> <span class="s2">&quot;362&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Beyoncé&quot;</span><span class="p">,</span> <span class="s2">&quot;314&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Khloé Kardashian&quot;</span><span class="p">,</span> <span class="s2">&quot;310&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Nike&quot;</span><span class="p">,</span> <span class="s2">&quot;302&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Justin Bieber&quot;</span><span class="p">,</span> <span class="s2">&quot;293&quot;</span><span class="p">,</span> <span class="s2">&quot;Canada&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Kendall Jenner&quot;</span><span class="p">,</span> <span class="s2">&quot;293&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;National Geographic&quot;</span><span class="p">,</span> <span class="s2">&quot;281&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Taylor Swift&quot;</span><span class="p">,</span> <span class="s2">&quot;268&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Virat Kohli&quot;</span><span class="p">,</span> <span class="s2">&quot;255&quot;</span><span class="p">,</span> <span class="s2">&quot;India&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Jennifer Lopez&quot;</span><span class="p">,</span> <span class="s2">&quot;249&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Nicki Minaj&quot;</span><span class="p">,</span> <span class="s2">&quot;223&quot;</span><span class="p">,</span> <span class="s2">&quot;Trinidad and TobagoUnited States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Kourtney Kardashian&quot;</span><span class="p">,</span> <span class="s2">&quot;223&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Miley Cyrus&quot;</span><span class="p">,</span> <span class="s2">&quot;212&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Neymar&quot;</span><span class="p">,</span> <span class="s2">&quot;210&quot;</span><span class="p">,</span> <span class="s2">&quot;Brazil&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Katy Perry&quot;</span><span class="p">,</span> <span class="s2">&quot;203&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Zendaya&quot;</span><span class="p">,</span> <span class="s2">&quot;183&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Kevin Hart&quot;</span><span class="p">,</span> <span class="s2">&quot;178&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Cardi B&quot;</span><span class="p">,</span> <span class="s2">&quot;168&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;LeBron James&quot;</span><span class="p">,</span> <span class="s2">&quot;156&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Demi Lovato&quot;</span><span class="p">,</span> <span class="s2">&quot;156&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Rihanna&quot;</span><span class="p">,</span> <span class="s2">&quot;152&quot;</span><span class="p">,</span> <span class="s2">&quot;Barbados&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Real Madrid CF&quot;</span><span class="p">,</span> <span class="s2">&quot;143&quot;</span><span class="p">,</span> <span class="s2">&quot;Spain&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Chris Brown&quot;</span><span class="p">,</span> <span class="s2">&quot;142&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Drake&quot;</span><span class="p">,</span> <span class="s2">&quot;140&quot;</span><span class="p">,</span> <span class="s2">&quot;Canada&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Ellen DeGeneres&quot;</span><span class="p">,</span> <span class="s2">&quot;139&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s2">&quot;122&quot;</span><span class="p">,</span> <span class="s2">&quot;Spain&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Billie Eilish&quot;</span><span class="p">,</span> <span class="s2">&quot;109&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;UEFA Champions League&quot;</span><span class="p">,</span> <span class="s2">&quot;107&quot;</span><span class="p">,</span> <span class="s2">&quot;Europe&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Gal Gadot&quot;</span><span class="p">,</span> <span class="s2">&quot;105&quot;</span><span class="p">,</span> <span class="s2">&quot;Israel&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Kylian Mbappé&quot;</span><span class="p">,</span> <span class="s2">&quot;105&quot;</span><span class="p">,</span> <span class="s2">&quot;France&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Vin Diesel&quot;</span><span class="p">,</span> <span class="s2">&quot;97.5&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Lisa&quot;</span><span class="p">,</span> <span class="s2">&quot;95.9&quot;</span><span class="p">,</span> <span class="s2">&quot;Thailand&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;NASA&quot;</span><span class="p">,</span> <span class="s2">&quot;94.3&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Dua Lipa&quot;</span><span class="p">,</span> <span class="s2">&quot;88.6&quot;</span><span class="p">,</span> <span class="s2">&quot;United KingdomAlbania&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Priyanka Chopra&quot;</span><span class="p">,</span> <span class="s2">&quot;88.5&quot;</span><span class="p">,</span> <span class="s2">&quot;India&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Shakira&quot;</span><span class="p">,</span> <span class="s2">&quot;87.9&quot;</span><span class="p">,</span> <span class="s2">&quot;Colombia&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;NBA&quot;</span><span class="p">,</span> <span class="s2">&quot;82.4&quot;</span><span class="p">,</span> <span class="s2">&quot;United StatesCanada&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Shraddha Kapoor&quot;</span><span class="p">,</span> <span class="s2">&quot;81.7&quot;</span><span class="p">,</span> <span class="s2">&quot;India&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;David Beckham&quot;</span><span class="p">,</span> <span class="s2">&quot;80.8&quot;</span><span class="p">,</span> <span class="s2">&quot;United Kingdom&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Jennie&quot;</span><span class="p">,</span> <span class="s2">&quot;80.2&quot;</span><span class="p">,</span> <span class="s2">&quot;South Korea&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Snoop Dogg&quot;</span><span class="p">,</span> <span class="s2">&quot;80.2&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Khaby Lame&quot;</span><span class="p">,</span> <span class="s2">&quot;79.7&quot;</span><span class="p">,</span> <span class="s2">&quot;ItalySenegal&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Gigi Hadid&quot;</span><span class="p">,</span> <span class="s2">&quot;78.8&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="n">print_table</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="hide below-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell output</span>
+<span class="expanded">Hide code cell output</span>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Name23                Followers23 Country
+==========================================================
+Instagram             649   United States
+Cristiano Ronaldo     597   Portugal
+Lionel Messi          480   Argentina
+Selena Gomez          426   United States
+Kylie Jenner          397   United States
+Dwayne Johnson        387   United States
+Ariana Grande         377   United States
+Kim Kardashian        362   United States
+Beyoncé               314   United States
+Khloé Kardashian      310   United States
+Nike                  302   United States
+Justin Bieber         293   Canada
+Kendall Jenner        293   United States
+National Geographic   281   United States
+Taylor Swift          268   United States
+Virat Kohli           255   India
+Jennifer Lopez        249   United States
+Nicki Minaj           223   Trinidad and TobagoUnited States
+Kourtney Kardashian   223   United States
+Miley Cyrus           212   United States
+Neymar                210   Brazil
+Katy Perry            203   United States
+Zendaya               183   United States
+Kevin Hart            178   United States
+Cardi B               168   United States
+LeBron James          156   United States
+Demi Lovato           156   United States
+Rihanna               152   Barbados
+Real Madrid CF        143   Spain
+Chris Brown           142   United States
+Drake                 140   Canada
+Ellen DeGeneres       139   United States
+FC Barcelona          122   Spain
+Billie Eilish         109   United States
+UEFA Champions League 107   Europe
+Gal Gadot             105   Israel
+Kylian Mbappé         105   France
+Vin Diesel            97.5  United States
+Lisa                  95.9  Thailand
+NASA                  94.3  United States
+Dua Lipa              88.6  United KingdomAlbania
+Priyanka Chopra       88.5  India
+Shakira               87.9  Colombia
+NBA                   82.4  United StatesCanada
+Shraddha Kapoor       81.7  India
+David Beckham         80.8  United Kingdom
+Jennie                80.2  South Korea
+Snoop Dogg            80.2  United States
+Khaby Lame            79.7  ItalySenegal
+Gigi Hadid            78.8  United States
+</pre></div>
+</div>
+</div>
+</details>
 </div>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -4061,63 +4194,61 @@ function setup() {
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Instagram&quot;</span><span class="p">,</span> <span class="mi">302</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Cristiano Ronaldo&quot;</span><span class="p">,</span> <span class="mf">172.7</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Selena Gomez&quot;</span><span class="p">,</span> <span class="mf">167.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;Ariana Grande&quot;</span><span class="p">,</span> <span class="mf">154.4</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Dwayne Johnson&quot;</span><span class="p">,</span> <span class="mf">148.2</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Kim Kardashian&quot;</span><span class="p">,</span> <span class="mf">145.7</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;Beyoncé&quot;</span><span class="p">,</span> <span class="mf">130.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;Kylie Jenner&quot;</span><span class="p">,</span> <span class="mf">126.8</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;Taylor Swift&quot;</span><span class="p">,</span> <span class="mf">119.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;Neymar Jr&quot;</span><span class="p">,</span> <span class="mf">118.2</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="s2">&quot;National Geographic&quot;</span><span class="p">,</span> <span class="mf">114.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;Justin Bieber&quot;</span><span class="p">,</span> <span class="mf">111.7</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="s2">&quot;Kendall Jenner&quot;</span><span class="p">,</span> <span class="mf">109.4</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;Nicki Minaj&quot;</span><span class="p">,</span> <span class="mf">106.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="s2">&quot;Jennifer Lopez&quot;</span><span class="p">,</span> <span class="mf">105.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;Khloé Kardashian&quot;</span><span class="p">,</span> <span class="mf">101.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="s2">&quot;Miley Cyrus&quot;</span><span class="p">,</span> <span class="mf">98.4</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;Katy Perry&quot;</span><span class="p">,</span> <span class="mf">92.2</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="s2">&quot;Kourtney Kardashian&quot;</span><span class="p">,</span> <span class="mf">90.4</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;Kevin Hart&quot;</span><span class="p">,</span> <span class="mf">88.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="s2">&quot;Demi Lovato&quot;</span><span class="p">,</span> <span class="mf">86.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="s2">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="mf">84.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="s2">&quot;Rihanna&quot;</span><span class="p">,</span> <span class="mf">81.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;Nike&quot;</span><span class="p">,</span> <span class="mf">78.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;Real Madrid CF&quot;</span><span class="p">,</span> <span class="mf">75.9</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">26</span><span class="p">,</span> <span class="s2">&quot;Vin Diesel&quot;</span><span class="p">,</span> <span class="mf">75.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="s2">&quot;Ellen DeGeneres&quot;</span><span class="p">,</span> <span class="mf">75.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">28</span><span class="p">,</span> <span class="s2">&quot;9GAG&quot;</span><span class="p">,</span> <span class="mf">74.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">29</span><span class="p">,</span> <span class="s2">&quot;NASA&quot;</span><span class="p">,</span> <span class="mf">73.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;Maluma&quot;</span><span class="p">,</span> <span class="mf">72.4</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">31</span><span class="p">,</span> <span class="s2">&quot;Zara Larsson&quot;</span><span class="p">,</span> <span class="mf">71.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="s2">&quot;Marvel&quot;</span><span class="p">,</span> <span class="mf">70.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">33</span><span class="p">,</span> <span class="s2">&quot;Shakira&quot;</span><span class="p">,</span> <span class="mf">70.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="s2">&quot;LeBron James&quot;</span><span class="p">,</span> <span class="mf">70.2</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">35</span><span class="p">,</span> <span class="s2">&quot;Deepika Padukone&quot;</span><span class="p">,</span> <span class="mf">69.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">36</span><span class="p">,</span> <span class="s2">&quot;Chris Brown&quot;</span><span class="p">,</span> <span class="mf">68.9</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">37</span><span class="p">,</span> <span class="s2">&quot;NASA Goddard&quot;</span><span class="p">,</span> <span class="mf">68.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="s2">&quot;Cardi B&quot;</span><span class="p">,</span> <span class="mf">67.9</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">39</span><span class="p">,</span> <span class="s2">&quot;Nike Football (Soccer)&quot;</span><span class="p">,</span> <span class="mf">67.2</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="s2">&quot;Chanel&quot;</span><span class="p">,</span> <span class="mf">66.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="s2">&quot;Priyanka Chopra&quot;</span><span class="p">,</span> <span class="mf">65.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;Maluma Baby&quot;</span><span class="p">,</span> <span class="mf">64.8</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">43</span><span class="p">,</span> <span class="s2">&quot;David Beckham&quot;</span><span class="p">,</span> <span class="mf">64.1</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">44</span><span class="p">,</span> <span class="s2">&quot;Gigi Hadid&quot;</span><span class="p">,</span> <span class="mf">63.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">45</span><span class="p">,</span> <span class="s2">&quot;Ronaldinho&quot;</span><span class="p">,</span> <span class="mf">63.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">46</span><span class="p">,</span> <span class="s2">&quot;Justin Timberlake&quot;</span><span class="p">,</span> <span class="mf">63.1</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">47</span><span class="p">,</span> <span class="s2">&quot;NASA Earth Observatory&quot;</span><span class="p">,</span> <span class="mf">62.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">48</span><span class="p">,</span> <span class="s2">&quot;LeBron James&quot;</span><span class="p">,</span> <span class="mf">62.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">49</span><span class="p">,</span> <span class="s2">&quot;NASA Jet Propulsion Lab&quot;</span><span class="p">,</span> <span class="mf">62.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;Kaka&quot;</span><span class="p">,</span> <span class="mf">61.8</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">51</span><span class="p">,</span> <span class="s2">&quot;Snoop Dogg&quot;</span><span class="p">,</span> <span class="mf">61.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">52</span><span class="p">,</span> <span class="s2">&quot;Lionel Messi&quot;</span><span class="p">,</span> <span class="mf">61.5</span><span class="p">]</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Instagram&quot;</span><span class="p">,</span> <span class="s2">&quot;400 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Cristiano Ronaldo&quot;</span><span class="p">,</span> <span class="s2">&quot;340 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Dwayne &#39;The Rock&#39; Johnson&quot;</span><span class="p">,</span> <span class="s2">&quot;245 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;Kylie Jenner&quot;</span><span class="p">,</span> <span class="s2">&quot;240 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Kim Kardashian&quot;</span><span class="p">,</span> <span class="s2">&quot;230 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Lionel Messi&quot;</span><span class="p">,</span> <span class="s2">&quot;220 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;Beyoncé&quot;</span><span class="p">,</span> <span class="s2">&quot;170 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;Neymar Jr.&quot;</span><span class="p">,</span> <span class="s2">&quot;160 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;Taylor Swift&quot;</span><span class="p">,</span> <span class="s2">&quot;150 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;National Geographic&quot;</span><span class="p">,</span> <span class="s2">&quot;150 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="s2">&quot;Justin Bieber&quot;</span><span class="p">,</span> <span class="s2">&quot;150 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;Kendall Jenner&quot;</span><span class="p">,</span> <span class="s2">&quot;140 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="s2">&quot;Jennifer Lopez&quot;</span><span class="p">,</span> <span class="s2">&quot;140 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;Nicki Minaj&quot;</span><span class="p">,</span> <span class="s2">&quot;140 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="s2">&quot;Nike&quot;</span><span class="p">,</span> <span class="s2">&quot;130 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;Miley Cyrus&quot;</span><span class="p">,</span> <span class="s2">&quot;130 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="s2">&quot;Katy Perry&quot;</span><span class="p">,</span> <span class="s2">&quot;130 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;Khloé Kardashian&quot;</span><span class="p">,</span> <span class="s2">&quot;130 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="s2">&quot;Rihanna&quot;</span><span class="p">,</span> <span class="s2">&quot;120 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;Kourtney Kardashian&quot;</span><span class="p">,</span> <span class="s2">&quot;120 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="s2">&quot;Virat Kohli&quot;</span><span class="p">,</span> <span class="s2">&quot;120 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="s2">&quot;NASA&quot;</span><span class="p">,</span> <span class="s2">&quot;120 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="s2">&quot;Ellen DeGeneres&quot;</span><span class="p">,</span> <span class="s2">&quot;100 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;Real Madrid C.F.&quot;</span><span class="p">,</span> <span class="s2">&quot;100 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s2">&quot;100 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">26</span><span class="p">,</span> <span class="s2">&quot;LeBron James&quot;</span><span class="p">,</span> <span class="s2">&quot;100 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="s2">&quot;Demi Lovato&quot;</span><span class="p">,</span> <span class="s2">&quot;100 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">28</span><span class="p">,</span> <span class="s2">&quot;Zlatan Ibrahimović&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">29</span><span class="p">,</span> <span class="s2">&quot;Shakira&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;Nicky Jam&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">31</span><span class="p">,</span> <span class="s2">&quot;Kevin Hart&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="s2">&quot;NASA Goddard&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">33</span><span class="p">,</span> <span class="s2">&quot;Priyanka Chopra Jonas&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="s2">&quot;9GAG&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">35</span><span class="p">,</span> <span class="s2">&quot;Cardi B&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">36</span><span class="p">,</span> <span class="s2">&quot;Ronaldinho&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">37</span><span class="p">,</span> <span class="s2">&quot;Emma Watson&quot;</span><span class="p">,</span> <span class="s2">&quot;90 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="s2">&quot;Chris Brown&quot;</span><span class="p">,</span> <span class="s2">&quot;90 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">39</span><span class="p">,</span> <span class="s2">&quot;Selena Gomez&quot;</span><span class="p">,</span> <span class="s2">&quot;90 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="s2">&quot;The Weeknd&quot;</span><span class="p">,</span> <span class="s2">&quot;90 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="s2">&quot;Narendra Modi&quot;</span><span class="p">,</span> <span class="s2">&quot;90 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;Gareth Bale&quot;</span><span class="p">,</span> <span class="s2">&quot;90 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">43</span><span class="p">,</span> <span class="s2">&quot;FC Bayern Munich&quot;</span><span class="p">,</span> <span class="s2">&quot;90 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">44</span><span class="p">,</span> <span class="s2">&quot;Nike Football&quot;</span><span class="p">,</span> <span class="s2">&quot;85 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">45</span><span class="p">,</span> <span class="s2">&quot;Vin Diesel&quot;</span><span class="p">,</span> <span class="s2">&quot;85 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">46</span><span class="p">,</span> <span class="s2">&quot;Justin Timberlake&quot;</span><span class="p">,</span> <span class="s2">&quot;85 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">47</span><span class="p">,</span> <span class="s2">&quot;NASA Jet Propulsion Laboratory&quot;</span><span class="p">,</span> <span class="s2">&quot;85 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">48</span><span class="p">,</span> <span class="s2">&quot;David Beckham&quot;</span><span class="p">,</span> <span class="s2">&quot;85 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">49</span><span class="p">,</span> <span class="s2">&quot;Maluma&quot;</span><span class="p">,</span> <span class="s2">&quot;85 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;Billie Eilish&quot;</span><span class="p">,</span> <span class="s2">&quot;85 million&quot;</span><span class="p">]</span>
 <span class="p">]</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#2021&quot;</span><span class="p">,</span> <span class="s2">&quot;Account2021&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers2021&quot;</span><span class="p">]</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Rank21&quot;</span><span class="p">,</span> <span class="s2">&quot;Name21&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers21&quot;</span><span class="p">]</span>
 
-<span class="n">table</span> <span class="o">=</span> <span class="n">tabulate</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">&quot;plain&quot;</span><span class="p">)</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">tabulate</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">&quot;plain&quot;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
 </pre></div>
@@ -4125,59 +4256,57 @@ function setup() {
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #2021  Account2021                Followers2021
-      1  Instagram                          302
-      2  Cristiano Ronaldo                  172.7
-      3  Selena Gomez                       167.3
-      4  Ariana Grande                      154.4
-      5  Dwayne Johnson                     148.2
-      6  Kim Kardashian                     145.7
-      7  Beyoncé                            130.3
-      8  Kylie Jenner                       126.8
-      9  Taylor Swift                       119.6
-     10  Neymar Jr                          118.2
-     11  National Geographic                114.5
-     12  Justin Bieber                      111.7
-     13  Kendall Jenner                     109.4
-     14  Nicki Minaj                        106.5
-     15  Jennifer Lopez                     105.3
-     16  Khloé Kardashian                   101.6
-     17  Miley Cyrus                         98.4
-     18  Katy Perry                          92.2
-     19  Kourtney Kardashian                 90.4
-     20  Kevin Hart                          88.3
-     21  Demi Lovato                         86.6
-     22  FC Barcelona                        84.6
-     23  Rihanna                             81.3
-     24  Nike                                78.6
-     25  Real Madrid CF                      75.9
-     26  Vin Diesel                          75.5
-     27  Ellen DeGeneres                     75.3
-     28  9GAG                                74.6
-     29  NASA                                73.5
-     30  Maluma                              72.4
-     31  Zara Larsson                        71.5
-     32  Marvel                              70.6
-     33  Shakira                             70.5
-     34  LeBron James                        70.2
-     35  Deepika Padukone                    69.5
-     36  Chris Brown                         68.9
-     37  NASA Goddard                        68.3
-     38  Cardi B                             67.9
-     39  Nike Football (Soccer)              67.2
-     40  Chanel                              66.6
-     41  Priyanka Chopra                     65.5
-     42  Maluma Baby                         64.8
-     43  David Beckham                       64.1
-     44  Gigi Hadid                          63.5
-     45  Ronaldinho                          63.3
-     46  Justin Timberlake                   63.1
-     47  NASA Earth Observatory              62.6
-     48  LeBron James                        62.5
-     49  NASA Jet Propulsion Lab             62.3
-     50  Kaka                                61.8
-     51  Snoop Dogg                          61.6
-     52  Lionel Messi                        61.5
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Rank21  Name21                          Followers21
+       1  Instagram                       400 million
+       2  Cristiano Ronaldo               340 million
+       3  Dwayne &#39;The Rock&#39; Johnson       245 million
+       4  Kylie Jenner                    240 million
+       5  Kim Kardashian                  230 million
+       6  Lionel Messi                    220 million
+       7  Beyoncé                         170 million
+       8  Neymar Jr.                      160 million
+       9  Taylor Swift                    150 million
+      10  National Geographic             150 million
+      11  Justin Bieber                   150 million
+      12  Kendall Jenner                  140 million
+      13  Jennifer Lopez                  140 million
+      14  Nicki Minaj                     140 million
+      15  Nike                            130 million
+      16  Miley Cyrus                     130 million
+      17  Katy Perry                      130 million
+      18  Khloé Kardashian                130 million
+      19  Rihanna                         120 million
+      20  Kourtney Kardashian             120 million
+      21  Virat Kohli                     120 million
+      22  NASA                            120 million
+      23  Ellen DeGeneres                 100 million
+      24  Real Madrid C.F.                100 million
+      25  FC Barcelona                    100 million
+      26  LeBron James                    100 million
+      27  Demi Lovato                     100 million
+      28  Zlatan Ibrahimović              95 million
+      29  Shakira                         95 million
+      30  Nicky Jam                       95 million
+      31  Kevin Hart                      95 million
+      32  NASA Goddard                    95 million
+      33  Priyanka Chopra Jonas           95 million
+      34  9GAG                            95 million
+      35  Cardi B                         95 million
+      36  Ronaldinho                      95 million
+      37  Emma Watson                     90 million
+      38  Chris Brown                     90 million
+      39  Selena Gomez                    90 million
+      40  The Weeknd                      90 million
+      41  Narendra Modi                   90 million
+      42  Gareth Bale                     90 million
+      43  FC Bayern Munich                90 million
+      44  Nike Football                   85 million
+      45  Vin Diesel                      85 million
+      46  Justin Timberlake               85 million
+      47  NASA Jet Propulsion Laboratory  85 million
+      48  David Beckham                   85 million
+      49  Maluma                          85 million
+      50  Billie Eilish                   85 million
 </pre></div>
 </div>
 </div>
@@ -4289,189 +4418,189 @@ _(Provide answer here)_
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
 
-<span class="n">data1</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">[</span><span class="s2">&quot;#2023&quot;</span><span class="p">,</span> <span class="s2">&quot;Handle2023&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers2023&quot;</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@instagram&quot;</span><span class="p">,</span> <span class="s2">&quot;Instagram&quot;</span><span class="p">,</span> <span class="mi">649</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@cristiano&quot;</span><span class="p">,</span> <span class="s2">&quot;Cristiano Ronaldo&quot;</span><span class="p">,</span> <span class="mi">596</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@leomessi&quot;</span><span class="p">,</span> <span class="s2">&quot;Lionel Messi&quot;</span><span class="p">,</span> <span class="mi">479</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@selenagomez&quot;</span><span class="p">,</span> <span class="s2">&quot;Selena Gomez&quot;</span><span class="p">,</span> <span class="mi">426</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@kyliejenner&quot;</span><span class="p">,</span> <span class="s2">&quot;Kylie Jenner&quot;</span><span class="p">,</span> <span class="mi">397</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@therock&quot;</span><span class="p">,</span> <span class="s2">&quot;Dwayne Johnson&quot;</span><span class="p">,</span> <span class="mi">387</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@arianagrande&quot;</span><span class="p">,</span> <span class="s2">&quot;Ariana Grande&quot;</span><span class="p">,</span> <span class="mi">377</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@kimkardashian&quot;</span><span class="p">,</span> <span class="s2">&quot;Kim Kardashian&quot;</span><span class="p">,</span> <span class="mi">362</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@beyonce&quot;</span><span class="p">,</span> <span class="s2">&quot;Beyoncé&quot;</span><span class="p">,</span> <span class="mi">314</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@khloekardashian&quot;</span><span class="p">,</span> <span class="s2">&quot;Khloé Kardashian&quot;</span><span class="p">,</span> <span class="mi">310</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@nike&quot;</span><span class="p">,</span> <span class="s2">&quot;Nike&quot;</span><span class="p">,</span> <span class="mi">302</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@justinbieber&quot;</span><span class="p">,</span> <span class="s2">&quot;Justin Bieber&quot;</span><span class="p">,</span> <span class="mi">293</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@kendalljenner&quot;</span><span class="p">,</span> <span class="s2">&quot;Kendall Jenner&quot;</span><span class="p">,</span> <span class="mi">292</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@natgeo&quot;</span><span class="p">,</span> <span class="s2">&quot;National Geographic&quot;</span><span class="p">,</span> <span class="mi">281</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@taylorswift&quot;</span><span class="p">,</span> <span class="s2">&quot;Taylor Swift&quot;</span><span class="p">,</span> <span class="mi">268</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@virat.kohli&quot;</span><span class="p">,</span> <span class="s2">&quot;Virat Kohli&quot;</span><span class="p">,</span> <span class="mi">255</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@jlo&quot;</span><span class="p">,</span> <span class="s2">&quot;Jennifer Lopez&quot;</span><span class="p">,</span> <span class="mi">249</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@nickiminaj&quot;</span><span class="p">,</span> <span class="s2">&quot;Nicki Minaj&quot;</span><span class="p">,</span> <span class="mi">223</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@kourtneykardash&quot;</span><span class="p">,</span> <span class="s2">&quot;Kourtney Kardashian&quot;</span><span class="p">,</span> <span class="mi">223</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@mileycyrus&quot;</span><span class="p">,</span> <span class="s2">&quot;Miley Cyrus&quot;</span><span class="p">,</span> <span class="mi">212</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@neymarjr&quot;</span><span class="p">,</span> <span class="s2">&quot;Neymar&quot;</span><span class="p">,</span> <span class="mi">210</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@katyperry&quot;</span><span class="p">,</span> <span class="s2">&quot;Katy Perry&quot;</span><span class="p">,</span> <span class="mi">203</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@zendaya&quot;</span><span class="p">,</span> <span class="s2">&quot;Zendaya&quot;</span><span class="p">,</span> <span class="mi">183</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@kevinhart4real&quot;</span><span class="p">,</span> <span class="s2">&quot;Kevin Hart&quot;</span><span class="p">,</span> <span class="mi">178</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@iamcardib&quot;</span><span class="p">,</span> <span class="s2">&quot;Cardi B&quot;</span><span class="p">,</span> <span class="mi">168</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@kingjames&quot;</span><span class="p">,</span> <span class="s2">&quot;LeBron James&quot;</span><span class="p">,</span> <span class="mi">156</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@ddlovato&quot;</span><span class="p">,</span> <span class="s2">&quot;Demi Lovato&quot;</span><span class="p">,</span> <span class="mi">156</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@badgalriri&quot;</span><span class="p">,</span> <span class="s2">&quot;Rihanna&quot;</span><span class="p">,</span> <span class="mi">152</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@realmadrid&quot;</span><span class="p">,</span> <span class="s2">&quot;Real Madrid CF&quot;</span><span class="p">,</span> <span class="mi">143</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@chrisbrownofficial&quot;</span><span class="p">,</span> <span class="s2">&quot;Chris Brown&quot;</span><span class="p">,</span> <span class="mi">142</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@champagnepapi&quot;</span><span class="p">,</span> <span class="s2">&quot;Drake&quot;</span><span class="p">,</span> <span class="mi">140</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@ellendegeneres&quot;</span><span class="p">,</span> <span class="s2">&quot;Ellen DeGeneres&quot;</span><span class="p">,</span> <span class="mi">139</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@fcbarcelona&quot;</span><span class="p">,</span> <span class="s2">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="mi">122</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@billieeilish&quot;</span><span class="p">,</span> <span class="s2">&quot;Billie Eilish&quot;</span><span class="p">,</span> <span class="mi">109</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@championsleague&quot;</span><span class="p">,</span> <span class="s2">&quot;UEFA Champions League&quot;</span><span class="p">,</span> <span class="mi">107</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@gal_gadot&quot;</span><span class="p">,</span> <span class="s2">&quot;Gal Gadot&quot;</span><span class="p">,</span> <span class="mi">105</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@k.mbappe&quot;</span><span class="p">,</span> <span class="s2">&quot;Kylian Mbappé&quot;</span><span class="p">,</span> <span class="mi">105</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@vindiesel&quot;</span><span class="p">,</span> <span class="s2">&quot;Vin Diesel&quot;</span><span class="p">,</span> <span class="mf">97.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@lalalalisa_m&quot;</span><span class="p">,</span> <span class="s2">&quot;Lisa&quot;</span><span class="p">,</span> <span class="mf">95.8</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@nasa&quot;</span><span class="p">,</span> <span class="s2">&quot;NASA&quot;</span><span class="p">,</span> <span class="mf">94.2</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@dualipa&quot;</span><span class="p">,</span> <span class="s2">&quot;Dua Lipa&quot;</span><span class="p">,</span> <span class="mf">88.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@priyankachopra&quot;</span><span class="p">,</span> <span class="s2">&quot;Priyanka Chopra&quot;</span><span class="p">,</span> <span class="mf">88.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@shakira&quot;</span><span class="p">,</span> <span class="s2">&quot;Shakira&quot;</span><span class="p">,</span> <span class="mf">87.8</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@nba&quot;</span><span class="p">,</span> <span class="s2">&quot;NBA&quot;</span><span class="p">,</span> <span class="mf">82.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@shraddhakapoor&quot;</span><span class="p">,</span> <span class="s2">&quot;Shraddha Kapoor&quot;</span><span class="p">,</span> <span class="mf">81.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@davidbeckham&quot;</span><span class="p">,</span> <span class="s2">&quot;David Beckham&quot;</span><span class="p">,</span> <span class="mf">80.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@jennierubyjane&quot;</span><span class="p">,</span> <span class="s2">&quot;Jennie&quot;</span><span class="p">,</span> <span class="mf">80.2</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@snoopdogg&quot;</span><span class="p">,</span> <span class="s2">&quot;Snoop Dogg&quot;</span><span class="p">,</span> <span class="mf">80.2</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@khaby00&quot;</span><span class="p">,</span> <span class="s2">&quot;Khaby Lame&quot;</span><span class="p">,</span> <span class="mf">79.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;@gigihadid&quot;</span><span class="p">,</span> <span class="s2">&quot;Gigi Hadid&quot;</span><span class="p">,</span> <span class="mf">78.8</span><span class="p">]</span>
+<span class="n">data21</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;Rank21&quot;</span><span class="p">,</span> <span class="s2">&quot;Name21&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers21&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Instagram&quot;</span><span class="p">,</span> <span class="s2">&quot;400 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Cristiano Ronaldo&quot;</span><span class="p">,</span> <span class="s2">&quot;340 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Dwayne &#39;The Rock&#39; Johnson&quot;</span><span class="p">,</span> <span class="s2">&quot;245 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;Kylie Jenner&quot;</span><span class="p">,</span> <span class="s2">&quot;240 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Kim Kardashian&quot;</span><span class="p">,</span> <span class="s2">&quot;230 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Lionel Messi&quot;</span><span class="p">,</span> <span class="s2">&quot;220 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;Beyoncé&quot;</span><span class="p">,</span> <span class="s2">&quot;170 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;Neymar Jr.&quot;</span><span class="p">,</span> <span class="s2">&quot;160 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;Taylor Swift&quot;</span><span class="p">,</span> <span class="s2">&quot;150 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;National Geographic&quot;</span><span class="p">,</span> <span class="s2">&quot;150 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="s2">&quot;Justin Bieber&quot;</span><span class="p">,</span> <span class="s2">&quot;150 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;Kendall Jenner&quot;</span><span class="p">,</span> <span class="s2">&quot;140 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="s2">&quot;Jennifer Lopez&quot;</span><span class="p">,</span> <span class="s2">&quot;140 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;Nicki Minaj&quot;</span><span class="p">,</span> <span class="s2">&quot;140 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="s2">&quot;Nike&quot;</span><span class="p">,</span> <span class="s2">&quot;130 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;Miley Cyrus&quot;</span><span class="p">,</span> <span class="s2">&quot;130 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="s2">&quot;Katy Perry&quot;</span><span class="p">,</span> <span class="s2">&quot;130 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;Khloé Kardashian&quot;</span><span class="p">,</span> <span class="s2">&quot;130 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="s2">&quot;Rihanna&quot;</span><span class="p">,</span> <span class="s2">&quot;120 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;Kourtney Kardashian&quot;</span><span class="p">,</span> <span class="s2">&quot;120 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="s2">&quot;Virat Kohli&quot;</span><span class="p">,</span> <span class="s2">&quot;120 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="s2">&quot;NASA&quot;</span><span class="p">,</span> <span class="s2">&quot;120 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="s2">&quot;Ellen DeGeneres&quot;</span><span class="p">,</span> <span class="s2">&quot;100 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;Real Madrid C.F.&quot;</span><span class="p">,</span> <span class="s2">&quot;100 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s2">&quot;100 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">26</span><span class="p">,</span> <span class="s2">&quot;LeBron James&quot;</span><span class="p">,</span> <span class="s2">&quot;100 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="s2">&quot;Demi Lovato&quot;</span><span class="p">,</span> <span class="s2">&quot;100 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">28</span><span class="p">,</span> <span class="s2">&quot;Zlatan Ibrahimović&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">29</span><span class="p">,</span> <span class="s2">&quot;Shakira&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;Nicky Jam&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">31</span><span class="p">,</span> <span class="s2">&quot;Kevin Hart&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="s2">&quot;NASA Goddard&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">33</span><span class="p">,</span> <span class="s2">&quot;Priyanka Chopra Jonas&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="s2">&quot;9GAG&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">35</span><span class="p">,</span> <span class="s2">&quot;Cardi B&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">36</span><span class="p">,</span> <span class="s2">&quot;Ronaldinho&quot;</span><span class="p">,</span> <span class="s2">&quot;95 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">37</span><span class="p">,</span> <span class="s2">&quot;Emma Watson&quot;</span><span class="p">,</span> <span class="s2">&quot;90 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="s2">&quot;Chris Brown&quot;</span><span class="p">,</span> <span class="s2">&quot;90 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">39</span><span class="p">,</span> <span class="s2">&quot;Selena Gomez&quot;</span><span class="p">,</span> <span class="s2">&quot;90 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="s2">&quot;The Weeknd&quot;</span><span class="p">,</span> <span class="s2">&quot;90 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="s2">&quot;Narendra Modi&quot;</span><span class="p">,</span> <span class="s2">&quot;90 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;Gareth Bale&quot;</span><span class="p">,</span> <span class="s2">&quot;90 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">43</span><span class="p">,</span> <span class="s2">&quot;FC Bayern Munich&quot;</span><span class="p">,</span> <span class="s2">&quot;90 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">44</span><span class="p">,</span> <span class="s2">&quot;Nike Football&quot;</span><span class="p">,</span> <span class="s2">&quot;85 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">45</span><span class="p">,</span> <span class="s2">&quot;Vin Diesel&quot;</span><span class="p">,</span> <span class="s2">&quot;85 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">46</span><span class="p">,</span> <span class="s2">&quot;Justin Timberlake&quot;</span><span class="p">,</span> <span class="s2">&quot;85 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">47</span><span class="p">,</span> <span class="s2">&quot;NASA Jet Propulsion Laboratory&quot;</span><span class="p">,</span> <span class="s2">&quot;85 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">48</span><span class="p">,</span> <span class="s2">&quot;David Beckham&quot;</span><span class="p">,</span> <span class="s2">&quot;85 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">49</span><span class="p">,</span> <span class="s2">&quot;Maluma&quot;</span><span class="p">,</span> <span class="s2">&quot;85 million&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;Billie Eilish&quot;</span><span class="p">,</span> <span class="s2">&quot;85 million&quot;</span><span class="p">]</span>
 <span class="p">]</span>
 
-<span class="n">data2</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">[</span><span class="s2">&quot;#2021&quot;</span><span class="p">,</span> <span class="s2">&quot;Account2021&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers2021&quot;</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Instagram&quot;</span><span class="p">,</span> <span class="mi">302</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Cristiano Ronaldo&quot;</span><span class="p">,</span> <span class="mf">172.7</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Selena Gomez&quot;</span><span class="p">,</span> <span class="mf">167.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;Ariana Grande&quot;</span><span class="p">,</span> <span class="mf">154.4</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;Dwayne Johnson&quot;</span><span class="p">,</span> <span class="mf">148.2</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;Kim Kardashian&quot;</span><span class="p">,</span> <span class="mf">145.7</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;Beyoncé&quot;</span><span class="p">,</span> <span class="mf">130.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;Kylie Jenner&quot;</span><span class="p">,</span> <span class="mf">126.8</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;Taylor Swift&quot;</span><span class="p">,</span> <span class="mf">119.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;Neymar Jr&quot;</span><span class="p">,</span> <span class="mf">118.2</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">11</span><span class="p">,</span> <span class="s2">&quot;National Geographic&quot;</span><span class="p">,</span> <span class="mf">114.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;Justin Bieber&quot;</span><span class="p">,</span> <span class="mf">111.7</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">13</span><span class="p">,</span> <span class="s2">&quot;Kendall Jenner&quot;</span><span class="p">,</span> <span class="mf">109.4</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="s2">&quot;Nicki Minaj&quot;</span><span class="p">,</span> <span class="mf">106.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="s2">&quot;Jennifer Lopez&quot;</span><span class="p">,</span> <span class="mf">105.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;Khloé Kardashian&quot;</span><span class="p">,</span> <span class="mf">101.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">17</span><span class="p">,</span> <span class="s2">&quot;Miley Cyrus&quot;</span><span class="p">,</span> <span class="mf">98.4</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;Katy Perry&quot;</span><span class="p">,</span> <span class="mf">92.2</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">19</span><span class="p">,</span> <span class="s2">&quot;Kourtney Kardashian&quot;</span><span class="p">,</span> <span class="mf">90.4</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;Kevin Hart&quot;</span><span class="p">,</span> <span class="mf">88.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="s2">&quot;Demi Lovato&quot;</span><span class="p">,</span> <span class="mf">86.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="s2">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="mf">84.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="s2">&quot;Rihanna&quot;</span><span class="p">,</span> <span class="mf">81.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;Nike&quot;</span><span class="p">,</span> <span class="mf">78.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;Real Madrid CF&quot;</span><span class="p">,</span> <span class="mf">75.9</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">26</span><span class="p">,</span> <span class="s2">&quot;Vin Diesel&quot;</span><span class="p">,</span> <span class="mf">75.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="s2">&quot;Ellen DeGeneres&quot;</span><span class="p">,</span> <span class="mf">75.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">28</span><span class="p">,</span> <span class="s2">&quot;9GAG&quot;</span><span class="p">,</span> <span class="mf">74.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">29</span><span class="p">,</span> <span class="s2">&quot;NASA&quot;</span><span class="p">,</span> <span class="mf">73.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;Maluma&quot;</span><span class="p">,</span> <span class="mf">72.4</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">31</span><span class="p">,</span> <span class="s2">&quot;Zara Larsson&quot;</span><span class="p">,</span> <span class="mf">71.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="s2">&quot;Marvel&quot;</span><span class="p">,</span> <span class="mf">70.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">33</span><span class="p">,</span> <span class="s2">&quot;Shakira&quot;</span><span class="p">,</span> <span class="mf">70.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="s2">&quot;LeBron James&quot;</span><span class="p">,</span> <span class="mf">70.2</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">35</span><span class="p">,</span> <span class="s2">&quot;Deepika Padukone&quot;</span><span class="p">,</span> <span class="mf">69.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">36</span><span class="p">,</span> <span class="s2">&quot;Chris Brown&quot;</span><span class="p">,</span> <span class="mf">68.9</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">37</span><span class="p">,</span> <span class="s2">&quot;NASA Goddard&quot;</span><span class="p">,</span> <span class="mf">68.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="s2">&quot;Cardi B&quot;</span><span class="p">,</span> <span class="mf">67.9</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">39</span><span class="p">,</span> <span class="s2">&quot;Nike Football (Soccer)&quot;</span><span class="p">,</span> <span class="mf">67.2</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="s2">&quot;Chanel&quot;</span><span class="p">,</span> <span class="mf">66.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">41</span><span class="p">,</span> <span class="s2">&quot;Priyanka Chopra&quot;</span><span class="p">,</span> <span class="mf">65.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;Maluma Baby&quot;</span><span class="p">,</span> <span class="mf">64.8</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">43</span><span class="p">,</span> <span class="s2">&quot;David Beckham&quot;</span><span class="p">,</span> <span class="mf">64.1</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">44</span><span class="p">,</span> <span class="s2">&quot;Gigi Hadid&quot;</span><span class="p">,</span> <span class="mf">63.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">45</span><span class="p">,</span> <span class="s2">&quot;Ronaldinho&quot;</span><span class="p">,</span> <span class="mf">63.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">46</span><span class="p">,</span> <span class="s2">&quot;Justin Timberlake&quot;</span><span class="p">,</span> <span class="mf">63.1</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">47</span><span class="p">,</span> <span class="s2">&quot;NASA Earth Observatory&quot;</span><span class="p">,</span> <span class="mf">62.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">48</span><span class="p">,</span> <span class="s2">&quot;LeBron James&quot;</span><span class="p">,</span> <span class="mf">62.5</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">49</span><span class="p">,</span> <span class="s2">&quot;NASA Jet Propulsion Lab&quot;</span><span class="p">,</span> <span class="mf">62.3</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;Kaka&quot;</span><span class="p">,</span> <span class="mf">61.8</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">51</span><span class="p">,</span> <span class="s2">&quot;Snoop Dogg&quot;</span><span class="p">,</span> <span class="mf">61.6</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">52</span><span class="p">,</span> <span class="s2">&quot;Lionel Messi&quot;</span><span class="p">,</span> <span class="mf">61.5</span><span class="p">]</span>
+<span class="n">data23</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;Name23&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers23&quot;</span><span class="p">,</span> <span class="s2">&quot;Country&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Instagram&quot;</span><span class="p">,</span> <span class="s2">&quot;649&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Cristiano Ronaldo&quot;</span><span class="p">,</span> <span class="s2">&quot;597&quot;</span><span class="p">,</span> <span class="s2">&quot;Portugal&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Lionel Messi&quot;</span><span class="p">,</span> <span class="s2">&quot;480&quot;</span><span class="p">,</span> <span class="s2">&quot;Argentina&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Selena Gomez&quot;</span><span class="p">,</span> <span class="s2">&quot;426&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Kylie Jenner&quot;</span><span class="p">,</span> <span class="s2">&quot;397&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Dwayne Johnson&quot;</span><span class="p">,</span> <span class="s2">&quot;387&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Ariana Grande&quot;</span><span class="p">,</span> <span class="s2">&quot;377&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Kim Kardashian&quot;</span><span class="p">,</span> <span class="s2">&quot;362&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Beyoncé&quot;</span><span class="p">,</span> <span class="s2">&quot;314&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Khloé Kardashian&quot;</span><span class="p">,</span> <span class="s2">&quot;310&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Nike&quot;</span><span class="p">,</span> <span class="s2">&quot;302&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Justin Bieber&quot;</span><span class="p">,</span> <span class="s2">&quot;293&quot;</span><span class="p">,</span> <span class="s2">&quot;Canada&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Kendall Jenner&quot;</span><span class="p">,</span> <span class="s2">&quot;293&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;National Geographic&quot;</span><span class="p">,</span> <span class="s2">&quot;281&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Taylor Swift&quot;</span><span class="p">,</span> <span class="s2">&quot;268&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Virat Kohli&quot;</span><span class="p">,</span> <span class="s2">&quot;255&quot;</span><span class="p">,</span> <span class="s2">&quot;India&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Jennifer Lopez&quot;</span><span class="p">,</span> <span class="s2">&quot;249&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Nicki Minaj&quot;</span><span class="p">,</span> <span class="s2">&quot;223&quot;</span><span class="p">,</span> <span class="s2">&quot;Trinidad and Tobago, United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Kourtney Kardashian&quot;</span><span class="p">,</span> <span class="s2">&quot;223&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Miley Cyrus&quot;</span><span class="p">,</span> <span class="s2">&quot;212&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Neymar&quot;</span><span class="p">,</span> <span class="s2">&quot;210&quot;</span><span class="p">,</span> <span class="s2">&quot;Brazil&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Katy Perry&quot;</span><span class="p">,</span> <span class="s2">&quot;203&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Zendaya&quot;</span><span class="p">,</span> <span class="s2">&quot;183&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Kevin Hart&quot;</span><span class="p">,</span> <span class="s2">&quot;178&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Cardi B&quot;</span><span class="p">,</span> <span class="s2">&quot;168&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;LeBron James&quot;</span><span class="p">,</span> <span class="s2">&quot;156&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Demi Lovato&quot;</span><span class="p">,</span> <span class="s2">&quot;156&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Rihanna&quot;</span><span class="p">,</span> <span class="s2">&quot;152&quot;</span><span class="p">,</span> <span class="s2">&quot;Barbados&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Real Madrid CF&quot;</span><span class="p">,</span> <span class="s2">&quot;143&quot;</span><span class="p">,</span> <span class="s2">&quot;Spain&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Chris Brown&quot;</span><span class="p">,</span> <span class="s2">&quot;142&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Drake&quot;</span><span class="p">,</span> <span class="s2">&quot;140&quot;</span><span class="p">,</span> <span class="s2">&quot;Canada&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Ellen DeGeneres&quot;</span><span class="p">,</span> <span class="s2">&quot;139&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;FC Barcelona&quot;</span><span class="p">,</span> <span class="s2">&quot;122&quot;</span><span class="p">,</span> <span class="s2">&quot;Spain&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Billie Eilish&quot;</span><span class="p">,</span> <span class="s2">&quot;109&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;UEFA Champions League&quot;</span><span class="p">,</span> <span class="s2">&quot;107&quot;</span><span class="p">,</span> <span class="s2">&quot;Europe&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Gal Gadot&quot;</span><span class="p">,</span> <span class="s2">&quot;105&quot;</span><span class="p">,</span> <span class="s2">&quot;Israel&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Kylian Mbappé&quot;</span><span class="p">,</span> <span class="s2">&quot;105&quot;</span><span class="p">,</span> <span class="s2">&quot;France&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Vin Diesel&quot;</span><span class="p">,</span> <span class="s2">&quot;97.5&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Lisa&quot;</span><span class="p">,</span> <span class="s2">&quot;95.9&quot;</span><span class="p">,</span> <span class="s2">&quot;Thailand&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;NASA&quot;</span><span class="p">,</span> <span class="s2">&quot;94.3&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Dua Lipa&quot;</span><span class="p">,</span> <span class="s2">&quot;88.6&quot;</span><span class="p">,</span> <span class="s2">&quot;United Kingdom, Albania&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Priyanka Chopra&quot;</span><span class="p">,</span> <span class="s2">&quot;88.5&quot;</span><span class="p">,</span> <span class="s2">&quot;India&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Shakira&quot;</span><span class="p">,</span> <span class="s2">&quot;87.9&quot;</span><span class="p">,</span> <span class="s2">&quot;Colombia&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;NBA&quot;</span><span class="p">,</span> <span class="s2">&quot;82.4&quot;</span><span class="p">,</span> <span class="s2">&quot;United States, Canada&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Shraddha Kapoor&quot;</span><span class="p">,</span> <span class="s2">&quot;81.7&quot;</span><span class="p">,</span> <span class="s2">&quot;India&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;David Beckham&quot;</span><span class="p">,</span> <span class="s2">&quot;80.8&quot;</span><span class="p">,</span> <span class="s2">&quot;United Kingdom&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Jennie&quot;</span><span class="p">,</span> <span class="s2">&quot;80.2&quot;</span><span class="p">,</span> <span class="s2">&quot;South Korea&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Snoop Dogg&quot;</span><span class="p">,</span> <span class="s2">&quot;80.2&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Khaby Lame&quot;</span><span class="p">,</span> <span class="s2">&quot;79.7&quot;</span><span class="p">,</span> <span class="s2">&quot;Italy, Senegal&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Gigi Hadid&quot;</span><span class="p">,</span> <span class="s2">&quot;78.8&quot;</span><span class="p">,</span> <span class="s2">&quot;United States&quot;</span><span class="p">]</span>
 <span class="p">]</span>
 
-<span class="n">table_data</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data1</span><span class="p">)):</span>
-    <span class="n">handle2023</span> <span class="o">=</span> <span class="n">data1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">followers2023</span> <span class="o">=</span> <span class="n">data1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
-    <span class="n">rank2021</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data2</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">handle2023</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
-    <span class="n">followers2021</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data2</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">handle2023</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">rank2021</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">rank_change</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">rank2021</span><span class="p">)</span> <span class="o">-</span> <span class="n">i</span>
+<span class="c1"># Combine the data and calculate the difference in row numbers</span>
+<span class="n">combined_data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">51</span><span class="p">):</span>
+    <span class="n">row_data21</span> <span class="o">=</span> <span class="n">data21</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">name21</span> <span class="o">=</span> <span class="n">row_data21</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">row_data23</span> <span class="o">=</span> <span class="nb">next</span><span class="p">((</span><span class="n">row</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data23</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">name21</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">row_data23</span><span class="p">:</span>
+        <span class="n">row_number_difference</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="n">data23</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">row_data23</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">rank_change</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span>
-    <span class="n">table_data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">i</span><span class="p">,</span> <span class="n">data1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">handle2023</span><span class="p">,</span> <span class="n">followers2023</span><span class="p">,</span> <span class="n">rank2021</span><span class="p">,</span> <span class="n">handle2023</span><span class="p">,</span> <span class="n">followers2021</span><span class="p">,</span> <span class="n">rank_change</span><span class="p">])</span>
+        <span class="n">row_data23</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>  <span class="c1"># Fill with empty values if no match is found in data23</span>
+        <span class="n">row_number_difference</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#&quot;</span><span class="p">,</span> <span class="s2">&quot;#2023&quot;</span><span class="p">,</span> <span class="s2">&quot;Handle2023&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers2023&quot;</span><span class="p">,</span> <span class="s2">&quot;#2021&quot;</span><span class="p">,</span> <span class="s2">&quot;Account2021&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers2021&quot;</span><span class="p">,</span> <span class="s2">&quot;CHANGE (+/-)&quot;</span><span class="p">]</span>
+    <span class="n">combined_row</span> <span class="o">=</span> <span class="n">row_data21</span> <span class="o">+</span> <span class="n">row_data23</span> <span class="o">+</span> <span class="p">[</span><span class="n">row_number_difference</span><span class="p">]</span>
+    <span class="n">combined_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">combined_row</span><span class="p">)</span>
 
-<span class="n">table</span> <span class="o">=</span> <span class="n">tabulate</span><span class="p">(</span><span class="n">table_data</span><span class="p">,</span> <span class="n">headers</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">&quot;plain&quot;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+<span class="c1"># Display the combined table</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Rank21&quot;</span><span class="p">,</span> <span class="s2">&quot;Name21&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers21&quot;</span><span class="p">,</span> <span class="s2">&quot;Name23&quot;</span><span class="p">,</span> <span class="s2">&quot;Followers23&quot;</span><span class="p">,</span> <span class="s2">&quot;Country&quot;</span><span class="p">,</span> <span class="s2">&quot;Row Difference&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tabulate</span><span class="p">(</span><span class="n">combined_data</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  #  #2023                Handle2023               Followers2023    #2021  Account2021              Followers2021  CHANGE (+/-)
-  1  @instagram           Instagram                        649          1  Instagram                        302    0
-  2  @cristiano           Cristiano Ronaldo                596          2  Cristiano Ronaldo                172.7  0
-  3  @leomessi            Lionel Messi                     479         52  Lionel Messi                      61.5  49
-  4  @selenagomez         Selena Gomez                     426          3  Selena Gomez                     167.3  -1
-  5  @kyliejenner         Kylie Jenner                     397          8  Kylie Jenner                     126.8  3
-  6  @therock             Dwayne Johnson                   387          5  Dwayne Johnson                   148.2  -1
-  7  @arianagrande        Ariana Grande                    377          4  Ariana Grande                    154.4  -3
-  8  @kimkardashian       Kim Kardashian                   362          6  Kim Kardashian                   145.7  -2
-  9  @beyonce             Beyoncé                          314          7  Beyoncé                          130.3  -2
- 10  @khloekardashian     Khloé Kardashian                 310         16  Khloé Kardashian                 101.6  6
- 11  @nike                Nike                             302         24  Nike                              78.6  13
- 12  @justinbieber        Justin Bieber                    293         12  Justin Bieber                    111.7  0
- 13  @kendalljenner       Kendall Jenner                   292         13  Kendall Jenner                   109.4  0
- 14  @natgeo              National Geographic              281         11  National Geographic              114.5  -3
- 15  @taylorswift         Taylor Swift                     268          9  Taylor Swift                     119.6  -6
- 16  @virat.kohli         Virat Kohli                      255             Virat Kohli                             -
- 17  @jlo                 Jennifer Lopez                   249         15  Jennifer Lopez                   105.3  -2
- 18  @nickiminaj          Nicki Minaj                      223         14  Nicki Minaj                      106.5  -4
- 19  @kourtneykardash     Kourtney Kardashian              223         19  Kourtney Kardashian               90.4  0
- 20  @mileycyrus          Miley Cyrus                      212         17  Miley Cyrus                       98.4  -3
- 21  @neymarjr            Neymar                           210             Neymar                                  -
- 22  @katyperry           Katy Perry                       203         18  Katy Perry                        92.2  -4
- 23  @zendaya             Zendaya                          183             Zendaya                                 -
- 24  @kevinhart4real      Kevin Hart                       178         20  Kevin Hart                        88.3  -4
- 25  @iamcardib           Cardi B                          168         38  Cardi B                           67.9  13
- 26  @kingjames           LeBron James                     156         34  LeBron James                      70.2  8
- 27  @ddlovato            Demi Lovato                      156         21  Demi Lovato                       86.6  -6
- 28  @badgalriri          Rihanna                          152         23  Rihanna                           81.3  -5
- 29  @realmadrid          Real Madrid CF                   143         25  Real Madrid CF                    75.9  -4
- 30  @chrisbrownofficial  Chris Brown                      142         36  Chris Brown                       68.9  6
- 31  @champagnepapi       Drake                            140             Drake                                   -
- 32  @ellendegeneres      Ellen DeGeneres                  139         27  Ellen DeGeneres                   75.3  -5
- 33  @fcbarcelona         FC Barcelona                     122         22  FC Barcelona                      84.6  -11
- 34  @billieeilish        Billie Eilish                    109             Billie Eilish                           -
- 35  @championsleague     UEFA Champions League            107             UEFA Champions League                   -
- 36  @gal_gadot           Gal Gadot                        105             Gal Gadot                               -
- 37  @k.mbappe            Kylian Mbappé                    105             Kylian Mbappé                           -
- 38  @vindiesel           Vin Diesel                        97.5       26  Vin Diesel                        75.5  -12
- 39  @lalalalisa_m        Lisa                              95.8           Lisa                                    -
- 40  @nasa                NASA                              94.2       29  NASA                              73.5  -11
- 41  @dualipa             Dua Lipa                          88.6           Dua Lipa                                -
- 42  @priyankachopra      Priyanka Chopra                   88.5       41  Priyanka Chopra                   65.5  -1
- 43  @shakira             Shakira                           87.8       33  Shakira                           70.5  -10
- 44  @nba                 NBA                               82.3           NBA                                     -
- 45  @shraddhakapoor      Shraddha Kapoor                   81.6           Shraddha Kapoor                         -
- 46  @davidbeckham        David Beckham                     80.6       43  David Beckham                     64.1  -3
- 47  @jennierubyjane      Jennie                            80.2           Jennie                                  -
- 48  @snoopdogg           Snoop Dogg                        80.2       51  Snoop Dogg                        61.6  3
- 49  @khaby00             Khaby Lame                        79.6           Khaby Lame                              -
- 50  @gigihadid           Gigi Hadid                        78.8       44  Gigi Hadid                        63.5  -6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Rank21  Name21                          Followers21    Name23               Followers23    Country                             Row Difference
+--------  ------------------------------  -------------  -------------------  -------------  ----------------------------------  ----------------
+       1  Instagram                       400 million    Instagram            649            United States                       0
+       2  Cristiano Ronaldo               340 million    Cristiano Ronaldo    597            Portugal                            0
+       3  Dwayne &#39;The Rock&#39; Johnson       245 million
+       4  Kylie Jenner                    240 million    Kylie Jenner         397            United States                       -1
+       5  Kim Kardashian                  230 million    Kim Kardashian       362            United States                       -3
+       6  Lionel Messi                    220 million    Lionel Messi         480            Argentina                           3
+       7  Beyoncé                         170 million    Beyoncé              314            United States                       -2
+       8  Neymar Jr.                      160 million
+       9  Taylor Swift                    150 million    Taylor Swift         268            United States                       -6
+      10  National Geographic             150 million    National Geographic  281            United States                       -4
+      11  Justin Bieber                   150 million    Justin Bieber        293            Canada                              -1
+      12  Kendall Jenner                  140 million    Kendall Jenner       293            United States                       -1
+      13  Jennifer Lopez                  140 million    Jennifer Lopez       249            United States                       -4
+      14  Nicki Minaj                     140 million    Nicki Minaj          223            Trinidad and Tobago, United States  -4
+      15  Nike                            130 million    Nike                 302            United States                       4
+      16  Miley Cyrus                     130 million    Miley Cyrus          212            United States                       -4
+      17  Katy Perry                      130 million    Katy Perry           203            United States                       -5
+      18  Khloé Kardashian                130 million    Khloé Kardashian     310            United States                       8
+      19  Rihanna                         120 million    Rihanna              152            Barbados                            -9
+      20  Kourtney Kardashian             120 million    Kourtney Kardashian  223            United States                       1
+      21  Virat Kohli                     120 million    Virat Kohli          255            India                               5
+      22  NASA                            120 million    NASA                 94.3           United States                       -18
+      23  Ellen DeGeneres                 100 million    Ellen DeGeneres      139            United States                       -9
+      24  Real Madrid C.F.                100 million
+      25  FC Barcelona                    100 million    FC Barcelona         122            Spain                               -8
+      26  LeBron James                    100 million    LeBron James         156            United States                       0
+      27  Demi Lovato                     100 million    Demi Lovato          156            United States                       0
+      28  Zlatan Ibrahimović              95 million
+      29  Shakira                         95 million     Shakira              87.9           Colombia                            -14
+      30  Nicky Jam                       95 million
+      31  Kevin Hart                      95 million     Kevin Hart           178            United States                       7
+      32  NASA Goddard                    95 million
+      33  Priyanka Chopra Jonas           95 million
+      34  9GAG                            95 million
+      35  Cardi B                         95 million     Cardi B              168            United States                       10
+      36  Ronaldinho                      95 million
+      37  Emma Watson                     90 million
+      38  Chris Brown                     90 million     Chris Brown          142            United States                       8
+      39  Selena Gomez                    90 million     Selena Gomez         426            United States                       35
+      40  The Weeknd                      90 million
+      41  Narendra Modi                   90 million
+      42  Gareth Bale                     90 million
+      43  FC Bayern Munich                90 million
+      44  Nike Football                   85 million
+      45  Vin Diesel                      85 million     Vin Diesel           97.5           United States                       7
+      46  Justin Timberlake               85 million
+      47  NASA Jet Propulsion Laboratory  85 million
+      48  David Beckham                   85 million     David Beckham        80.8           United Kingdom                      2
+      49  Maluma                          85 million
+      50  Billie Eilish                   85 million     Billie Eilish        109            United States                       16
 </pre></div>
 </div>
 </div>
