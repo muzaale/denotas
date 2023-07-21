@@ -568,6 +568,7 @@ document.write(`
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">07/21/2023</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#record">747. record</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#science">748. science</a></li>
 </ul>
 </li>
 </ul>
@@ -4705,6 +4706,168 @@ _(Provide answer here)_
 <li><p>07/20/2023 baddest journaling day on record <a class="footnote-reference brackets" href="#id43" id="id39">39</a></p></li>
 <li><p>i’m writing this in the middle of the night (on 07/20/2023)</p></li>
 </ul>
+</section>
+<section id="science">
+<h2>748. science<a class="headerlink" href="#science" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Create data for the skill and challenge levels</span>
+<span class="n">skill_levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">challenge_levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># Define the flow channel boundaries</span>
+<span class="n">flow_channel</span> <span class="o">=</span> <span class="n">skill_levels</span>
+
+<span class="c1"># Adjust the phase and amplitude of the sinusoid wave</span>
+<span class="n">phase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">16</span>  <span class="c1"># Reducing the wavelength by a quarter</span>
+<span class="n">amplitude</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="n">flow_channel</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">skill_levels</span> <span class="o">+</span> <span class="n">phase</span><span class="p">)</span> <span class="o">*</span> <span class="n">amplitude</span>
+
+<span class="c1"># Define the yellow zone boundaries</span>
+<span class="n">yellow_zone_low</span> <span class="o">=</span> <span class="n">flow_channel</span> <span class="o">-</span> <span class="mf">1.5</span>
+<span class="n">yellow_zone_high</span> <span class="o">=</span> <span class="n">flow_channel</span> <span class="o">+</span> <span class="mf">1.5</span>
+
+<span class="c1"># Define the sinusoid function with the middle yellow line as its axis</span>
+<span class="n">sinusoid</span> <span class="o">=</span> <span class="n">flow_channel</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">skill_levels</span> <span class="o">+</span> <span class="n">phase</span><span class="p">)</span> <span class="o">*</span> <span class="n">amplitude</span>
+
+<span class="c1"># Define the anxiety and boredom areas</span>
+<span class="n">anxiety_area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">challenge_levels</span> <span class="o">&gt;</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="n">challenge_levels</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<span class="n">boredom_area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">challenge_levels</span> <span class="o">&lt;</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="n">challenge_levels</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="c1"># Plotting</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Plot the anxiety and boredom areas</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Anxiety&#39;</span><span class="p">,</span> <span class="n">interpolate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Boredom&#39;</span><span class="p">,</span> <span class="n">interpolate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="n">yellow_zone_low</span><span class="p">,</span> <span class="n">yellow_zone_high</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#FFCC00&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Flow Channel&#39;</span><span class="p">,</span> <span class="n">interpolate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Plot the sinusoid function</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="n">sinusoid</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add arrowhead to the sinusoid line (flipped direction)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">sinusoid</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">skill_levels</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">skill_levels</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">sinusoid</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">sinusoid</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span>
+          <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=-</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">head_length</span><span class="o">=-</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Plot the flow channel boundaries</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#FFCC00&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="c1"># Set plot labels and title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;State-of-the-art&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Population&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>  <span class="c1"># Rotate the label horizontally</span>
+
+<span class="c1"># Set plot limits and grid</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Set tick labels</span>
+<span class="n">tick_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">tick_labels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">tick_labels</span><span class="p">)</span>
+
+<span class="c1"># Add text annotations to label the areas</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">2.8</span><span class="p">,</span> <span class="mf">7.9</span><span class="p">,</span> <span class="s1">&#39;bigdata&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">5.1</span><span class="p">,</span> <span class="s1">&#39;cohort&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;#FFCC00&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;#FFCC00&#39;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">6.2</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="s1">&#39;trial&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;lightgreen&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;lightgreen&#39;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">))</span>
+
+<span class="c1"># Display the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/daebd0a23483ea51419a792d647dd68373117240b6c5aba06430ecdd73f2409f.png" src="_images/daebd0a23483ea51419a792d647dd68373117240b6c5aba06430ecdd73f2409f.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p><a class="reference internal" href="psychology.html"><span class="doc std std-doc">psychology</span></a></p></li>
+<li><p>sociology</p></li>
+<li><p>anthropology</p></li>
+<li><p>economics</p></li>
+<li><p>political science</p></li>
+<li><p>history</p></li>
+<li><p>philosophy</p></li>
+<li><p>theology</p></li>
+<li><p>literature</p></li>
+<li><p>music</p></li>
+<li><p>art</p></li>
+<li><p>architecture</p></li>
+<li><p>engineering</p></li>
+<li><p>mathematics</p></li>
+<li><p>physics</p></li>
+<li><p>chemistry</p></li>
+<li><p>biology</p></li>
+<li><p>medicine</p></li>
+<li><p>computer science</p></li>
+<li><p>data science</p></li>
+<li><p>statistics</p></li>
+<li><p><a class="reference internal" href="epidemiology.html"><span class="doc std std-doc">epidemiology</span></a></p></li>
+<li><p>public health</p></li>
+<li><p>public policy</p></li>
+<li><p>law</p></li>
+<li><p>business</p></li>
+<li><p>finance</p></li>
+<li><p>accounting</p></li>
+<li><p>marketing</p></li>
+<li><p>management</p></li>
+<li><p>operations</p></li>
+<li><p>supply chain</p></li>
+<li><p>logistics</p></li>
+<li><p>transportation</p></li>
+<li><p>communication</p></li>
+<li><p>journalism</p></li>
+<li><p>education</p></li>
+<li><p>linguistics</p></li>
+<li><p>geography</p></li>
+<li><p>geology</p></li>
+<li><p>astronomy</p></li>
+<li><p>cosmology</p></li>
+<li><p>astrology</p></li>
+<li><p>meteorology</p></li>
+<li><p>oceanography</p></li>
+<li><p>ecology</p></li>
+<li><p>environmental science</p></li>
+<li><p>agriculture</p></li>
+<li><p>forestry</p></li>
+<li><p>fisheries</p></li>
+<li><p>food science</p></li>
+<li><p>nutrition</p></li>
+<li><p>culinary arts</p></li>
+<li><p>sports</p></li>
+<li><p>recreation</p></li>
+<li><p>leisure</p></li>
+<li><p>travel</p></li>
+<li><p>tourism</p></li>
+<li><p>hospitality</p></li>
+<li><p>fashion</p></li>
+<li><p>textiles</p></li>
+<li><p>interior design</p></li>
+<li><p>industrial design</p></li>
+<li><p>product design</p></li>
+<li><p>graphic design</p></li>
+<li><p>animation</p></li>
+<li><p>film</p></li>
+<li><p>photography</p></li>
+<li><p>theater</p></li>
+<li><p>dance</p></li>
+<li><p>choreography</p></li>
+<li><p>music</p></li>
+<li><p>literature</p></li>
+<li><p>poetry</p></li>
+<li><p>prose</p></li>
+<li><p>fiction<br />
+<span class="math notranslate nohighlight">\(\vdots\)</span></p></li>
+</ul>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="id40"><span class="brackets"><a class="fn-backref" href="#id4">33</a></span></dt>
@@ -4987,6 +5150,7 @@ _(Provide answer here)_
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">07/21/2023</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#record">747. record</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#science">748. science</a></li>
 </ul>
 </li>
 </ul>
