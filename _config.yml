@@ -12,10 +12,17 @@ execute:
   timeout: 600
   notebook_interface: jupyter
   
-# Define the name of the latex output file for PDF builds
-latex:
-  latex_documents:
-    targetname: book.tex
+# Define the name of the latex output file for jupyter-book
+sphinx:
+  config:
+    latex_elements:
+      # Include the bibliography file for references
+      preamble: |
+        \bibliography{bibliography.bib}
+  latex:
+    latex_documents:
+      targetname: book.tex
+
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
