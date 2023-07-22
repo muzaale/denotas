@@ -9,24 +9,15 @@ logo: practicing.png
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: force
-  timeout: 600
-  notebook_interface: jupyter
-  
-# Define the name of the latex output file for jupyter-book
-sphinx:
-  config:
-    latex_elements:
-      # Include the bibliography file for references
-      preamble: |
-        \bibliography{references.bib}
-  latex:
-    latex_documents:
-      targetname: book.tex
 
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
-  - references.bib
+  - bibliography.bib
 
 # Information about where the book exists on the web
 repository:
@@ -39,3 +30,17 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+
+##
+##
+##
+
+# Was not in the original file
+sphinx:
+  config:
+    bibtex_reference_style: author_year
+
+
+
+
+

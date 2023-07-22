@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<csl:style xmlns:csl="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort">
+  <info>
+    <title>Vancouver (author-number) Citation Style</title>
+    <id>http://www.zotero.org/styles/vancouver</id>
+    <link href="http://www.zotero.org/styles/vancouver" rel="self"/>
+    <link href="http://www.zotero.org/styles/ieee" rel="template"/>
+    <author>
+      <name>Nicolas Delhomme</name>
+      <email>nicolas.delhomme@umu.se</email>
+    </author>
+    <contributor>
+      <name>Sylvain Machefert</name>
+      <email>sylvain.machefert@cepheid.com</email>
+    </contributor>
+    <category citation-format="author-number"/>
+    <category field="biology"/>
+    <category field="science"/>
+    <issn>0006-291X</issn>
+    <eissn>1090-2104</eissn>
+    <summary/>
+  </info>
+  <macro name="editor">
+    <names variable="editor"/>
+  </macro>
+  <macro name="author">
+    <names variable="author">
+      <name delimiter=", " and="text"/>
+      <et-al et-al-min="8" et-al-use-first="6"/>
+      <substitute>
+        <names variable="editor"/>
+        <text value=" ed"/>
+      </substitute>
+      <substitute>
+        <names variable="translator"/>
+        <text value=" trans"/>
+      </substitute>
+      <substitute>
+        <names variable="container-author"/>
+        <text value=""/>
+      </substitute>
+    </names>
+  </macro>
+  <citation et-al-min="6" et-al-use-first="4" disambiguate-add-year-suffix="true">
+    <sort>
+      <key macro="author"/>
+      <key variable="issued"/>
+      <key variable="title"/>
+    </sort>
+    <layout delimiter=" ">
+      <group suffix=".">
+        <text macro="author"/>
+      </group>
+      <group suffix="">
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+      </group>
+    </layout>
+  </citation>
+  <bibliography hanging-indent="true" et-al-min="6" et-al-use-first="4">
+    <sort>
+      <key macro="author"/>
+      <key variable="issued"/>
+      <key variable="title"/>
+    </sort>
+    <layout prefix="">
+      <group suffix=".">
+        <text macro="author"/>
+      </group>
+      <group prefix=" " suffix=". ">
+        <text variable="title"/>
+      </group>
+      <group prefix=" ">
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+      </group>
+      <text variable="container-title"/>
+      <text variable="volume"/>
+      <text variable="issue"/>
+      <text variable="page"/>
+      <text variable="DOI"/>
+    </layout>
+  </bibliography>
+</csl:style>
