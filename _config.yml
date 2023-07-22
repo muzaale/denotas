@@ -18,7 +18,7 @@ sphinx:
     latex_elements:
       # Include the bibliography file for references
       preamble: |
-        \bibliography{bibliography.bib}
+        \bibliography{references.bib}
   latex:
     latex_documents:
       targetname: book.tex
