@@ -31,16 +31,6 @@ html:
   use_issues_button: true
   use_repository_button: true
 
-##
-##
-##
-
-# Was not in the original file
+# Use numerical citations (plain style)
 sphinx:
-  config:
-    bibtex_reference_style: author_year
-
-
-
-
-
+  bibtex_reference_style: plain
