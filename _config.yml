@@ -37,3 +37,20 @@ sphinx:
 
 # Do not include in the build any files matching these patterns
 exclude_patterns: [pattern1/*, path/to/myfile.ipynb]
+
+##
+##
+##
+
+# Specify the citation label format
+bibtex:
+  citation_label_prefix: "["
+  citation_label_suffix: "]"
+
+# Specify the template for the citation reference in the text
+jupyterbook:
+  citation_template: "{{ prefix }}{{ citation_key }}{{ suffix }}"
+
+# Specify the template for the full citation in the bibliography
+sphinx:
+  bibliography_item_template: "{{ order }}. {{ details.authors }}. {{ details.title }}. {{ details.journal }}. {{ details.year }}. {{ details.address }}."
