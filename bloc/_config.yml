@@ -1,0 +1,54 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Nothin'
+author: Abimereki Muzaale
+logo: practicing.png
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - bibliography.bib
+
+# Specify the citation label format
+bibtex:
+  citation_label_prefix: "["
+  citation_label_suffix: "]"
+  default_style: "numeric"  # Use numeric citation style
+  backrefs: true  # Show backreferences in the bibliography
+
+# Use numerical citations with square brackets
+sphinx:
+  bibtex_reference_style: numeric_brackets  # Use numeric citation style with square brackets
+
+# Specify the template for the citation reference in the text
+jupyterbook:
+  citation_template: "[{{ order }}]"
+  citation_reference_template: "{{ details.authors }} ({{ details.year }})"
+
+# Specify the template for the full citation in the bibliography
+  bibliography_item_template: "{{ order }}. {{ details.authors }}. {{ details.title }}. {{ details.journal }}. {{ details.year }}. {{ details.address }}."
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
+  path_to_book: docs  # Optional path to your book, relative to the repository root
+  branch: master  # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
+
+# Do not include in the build any files matching these patterns
+exclude_patterns: [pattern1/*, path/to/myfile.ipynb]

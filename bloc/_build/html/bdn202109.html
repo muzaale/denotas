@@ -1,0 +1,917 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>09/2021 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn202109';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/practicing.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/practicing.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.html">object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn202109.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/bdn202109.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>09/2021</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="id1">
+<h1>09/2021<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>Kipchoge more beautiful than Hamilton<br />
+120,000 fans lined the streets of Vienna<br />
+October 12, 2019<br />
+Just for him<br />
+Rock star or what?</p>
+<p>.</p>
+<p>Outdoor walks from Dec 2020 - July 2021<br />
+9+8+35+35+55 = 142 MILES</p>
+<p>Outdoor runs from Sep 2020 - Aug 2021<br />
+46+25+27+18+27+92+111+64+100+100 = 610 MILES</p>
+<p>Total of 752 MILES !!!</p>
+<p>.</p>
+<p>Baby got back!</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=w59e20ijOpE">https://www.youtube.com/watch?v=w59e20ijOpE</a></p>
+<p>.</p>
+<p>According to Nietzsche this tendency to worship the genius serves the psychological purpose of enabling us to feel satisfied living a mediocre life, and comforted in our failure to strive towards some grand goal or vision. If genius is an inborn gift, either we have the potential for genius or we don’t</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Markups  
+OJ @Miss Shirley’s — 2,331%  
+52 ounces = $2.69 at Giants (6.5 servings)  
+8 ounces = $4 at Miss Shirleys    
+
+Trappists @De Kleine Duivel — 100%  
+Westmalle $12 vs $6  
+Rochefort $15 vs $7  
+Orval $12 vs $6  
+Chimay $14 vs $6 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0g.κοσμογονία,γ Life
+1f.ἡ ἔρις,κ Might
+2e.πρᾶξις,σ Truth
+3e.ἄσκησις,μ Rigor
+4d.∫δυσφορία.dt,ψ Error
+5c.φάρμακον,δ Sloppy
+6b.ομορφιά,β Fraud 
+7a.τάξη,α Philistines
+
+Life is principally will-to-power or else discontent
+Might makes right and there’s little need to explain
+Let one defend their truth — their values — by war
+A moral-stance will be judged rigorous or sloppy by time
+Dysphoria as sure evidence of wrongness of ones philosophy
+Self-medication with pharmacological or other distractions as symptom
+Only an approach beyond good and evil recognizes these downstream symptoms as such
+The philistine finds ugly meanings in beautiful things but the cultivated appreciate the genealogy of this morality
+I’d hereby like to conclude that this brings Dostoevsky, Shakespeare, Wilde, Nietzsche, and Yours truly into marvelous fellowship
+</pre></div>
+</div>
+<p>credo <a class="footnote-reference brackets" href="#id5" id="id2">17</a></p>
+<p>.</p>
+<p>Mother’s —&gt; Love —&gt; Comfort —&gt; Stunting</p>
+<p>.</p>
+<p>Freedom to worship
+Freedom to dissent<br />
+Freedom to evade taxes<br />
+Freedom to reject vaccine mandates<br />
+All these are “freedoms” in Rousseau’s sense</p>
+<p>But Freedom is becoming— a lover, idolator of ones fate!</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+
+
+
+ Problem with Socrates
+ Morality as anti-nature
+ Improvers of mankind
+                         \
+                          Reason in Philosophy
+                       Four great errors        —&gt;  What I owe the ancients —&gt; The Hammer Speaks
+                          Skirmishes of an untimely man
+                         / 
+                         Maxims and Arrows
+                         How Truth became fable
+                          What Germans lack
+</pre></div>
+</div>
+<p>.</p>
+<p>Train<br />
+Eat<br />
+rest<br />
+repeat</p>
+<p>.</p>
+<p>Augmented 7th chord!</p>
+<p>.</p>
+<p>Swimming<br />
+— 7 item checklist<br />
+— Weekends<br />
+— Just do it!</p>
+<p>.</p>
+<p>Beer in Baltimore<br />
+The wine source<br />
+<a class="reference external" href="https://www.thewinesource.com">https://www.thewinesource.com</a><br />
+3601 Elm Ave</p>
+<p>Behind Luigi’s Italian Deli on 36th</p>
+<p>.</p>
+<p>According to Nietzsche this tendency to worship the genius serves the psychological purpose of enabling us to feel satisfied living a mediocre life, and comforted in our failure to strive towards some grand goal or vision. If genius is an inborn gift, either we have the potential for genius or we don’t</p>
+<p>.</p>
+<p>Ommegang — Quad (Three Philosophers)<br />
+Wine source<br />
+Priority on Sep 15</p>
+<p>Ask Abe to bring Chimay-Green if at all this is possible<br />
+Special 150th Anniversary Edition<br />
+Thats this year: 2021</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+mRNA
+Spike protein
+Neutralizing antibodies
+Cross-reaction with own proteins
+Side-effects
+
+https://www.nebraskamed.com/COVID/where-mrna-vaccines-and-spike-proteins-go
+
+Dendritic cells (DCs) are professional antigen-presenting cells that link innate and adaptive immunity and are critical for the induction of protective immune responses against pathogens
+
+mRNA is processed by dendritic APCs, HIV (with its reverse transcript) infects CD4+ cells
+
+Unlikely that “leaked” reverse transcriptase from CD4+ cells will cause mRNA in dendritic cells to incorporate the spike protein code into DNA
+
+X
+
+https://www.chop.edu/news/news-views-3-questions-you-will-get-about-new-mrna-vaccines
+
+
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Kylie Minogue<br />
+— Come on do the locomotion</p>
+<p>Soulja Boy Tell ‘Em<br />
+— Crank That</p>
+<p>.</p>
+<p>Dosteovsky and Nietzsche agree on one thing:<br />
+Weakness sooner trades freedom for slavery (and bread)<br />
+Bets on happiness 1(Constant)/5(Shapeshifting)<br />
+Mwijje Mwena Abaruhire Nimwe <a class="reference external" href="https://www.youtube.com/watch?v=XPMWcH1ZPms">Abaremerirwe</a> Yesu Nabahumuriza: Matthew 11:28-30  <a class="footnote-reference brackets" href="#id6" id="id3">18</a></p>
+<p>.</p>
+<p>Success is accorded not only to victory — which would be mere teleology and consequentialism — but sometimes to the desire for victory too.</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#Goals 
+Miles 1-4 7’30”
+Miles 5-9 8’20”
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+Markups
+OJ @Miss Shirley’s — 2,331%
+52 ounces = $2.69 at Giants (6.5 servings)
+8 ounces = $4 at Miss Shirleys  
+
+Trappists @De Kleine Duivel — 100%
+Westmalle $12 vs $6
+Rochefort $15 vs $7
+Orval $12 vs $6
+Chimay $14 vs $6
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Actuarial models<br />
+Exponential functions<br />
+But at best for the average<br />
+Individualized estimates flawed<br />
+Growth of income both for<br />
+C-suit &amp; bathroom cleaner<br />
+Only consider upside<br />
+Never damage they could cause<br />
+To household or general economy</p>
+<p>.</p>
+<p>What is freedom?<br />
+The freedom to pretend!<br />
+We feel entitled to our affections<br />
+In Afghanistan the curtain comes down<br />
+Turning Point: 9/11 — S1 E4</p>
+<p>Freedom is living in the wilderness<br />
+On honey, locusts, and roots<br />
+Any access to bread is a benefit..<br />
+Coming from a community, thus duty!!<br />
+No individual can produce bread on their own</p>
+<p>.</p>
+<p>As of 9/11/21<br />
+6/10 of ERGOTs top ten hits are about living kidney donors</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+0g.κοσμογονία,γ Life
+1f.ἡ ἔρις,κ Might
+2e.πρᾶξις,σ Truth
+3e.ἄσκησις,μ Rigor
+4d.∫δυσφορία.dt,ψ Error
+5c.φάρμακον,δ Sloppy
+6b.ομορφιά,β Fraud 
+7a.τάξη,α Philstines
+
+x
+
+How do you “defend” your values?
+By debate/quarreling/whining? Or by willingness to go to war?
+That is the question that separates two fellas:
+Modern man from his stronger predecessor: the heathen 
+Defend here is literal— not literal as the modern man of literature and words has become
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+0g.κοσμογονία,γ Life
+— Egypticism
+— Greco-Roman 
+1f.ἡ ἔρις,κ Might
+— Frail
+— Robust
+2e.πρᾶξις,σ Truth
+— Peace
+— War
+3e.ἄσκησις,μ Rigor
+— Moral
+— Amoral
+4d.∫δυσφορία.dt,ψ Error
+— Grave
+— Free Spirit
+5c.φάρμακον,δ Sloppy
+— Drugs
+— Frenzy
+6b.ομορφιά,β Fraud 
+— Pretentious 
+— Solitary
+7a.τάξη,α Philistines
+— Good &amp; Evil
+— Beyond Good &amp; Evil
+</pre></div>
+</div>
+<p>.</p>
+<p>Kipchoge BMI = 18<br />
+Elaine Thompson-Herah = 19.3<br />
+Usain Bolt = 24.7<br />
+Lamont Marcell Jacobs = 24.3<br />
+Cristiano Ronaldo = 24<br />
+Yours Truly = 26.6</p>
+<p>.</p>
+<p>Running: 140 calories/mile<br />
+Walking: 100 calories/mile<br />
+Demand: 40% increase<br />
+Swimming: 410 calories/mile</p>
+<p>.</p>
+<p>You know, Walter, you are right: there is an unspoken message here and it says “Fuck you and leave me alone!”</p>
+<p>.</p>
+<p>Date-nut-fig energy rolls</p>
+<p>.</p>
+<p>“The dude abides! I don’t know about you, but I take comfort in that. It’s good knowing he is out there, The Dude, taking it easy for all us sinners… That just about wraps it all up…”<br />
+— The Big Lebowski, 1998</p>
+<p>.</p>
+<p>Feminine plots are about interpersonal relationships from family, to church, to school, to work</p>
+<p>Masculine plots are similar but they go beyond work to government, to internecine, to international, to war  <a class="footnote-reference brackets" href="#id7" id="id4">19</a></p>
+<p>.</p>
+<p>Stompetoren Grand Cru<br />
+A favorite Dutch Aged Gouda</p>
+<p>.</p>
+<p>Hemingways, Nairobi Sunday brunch  —<br />
+J’s recommended — he ate!!!<br />
+Unlimited Sushi</p>
+<p>.</p>
+<p>Cut -40
+10 seconds off Mile 4<br />
+14 seconds off Mile 5<br />
+16 seconds off Mile 9</p>
+<p>Added +26<br />
+26 seconds to Mile 8</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     Priest
+            \
+             Trader —&gt; Slave
+            /
+           Warrior
+</pre></div>
+</div>
+<p>.</p>
+<p>Its 7:07pm
+September 21, 2021<br />
+Craving absolutely nothing<br />
+Just had a burger, fries, key lime pie, tea</p>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=v_XT9-C5Qu8">16yo 2pac</a> in his b’more days</p>
+<p>.</p>
+<p>We moderns, with out anxious self-solitude and neighbor-love, with our virtues of work, modesty, legality, and scientism — accumulating, economic, machinelike — appear as a weak age. Our virtues are conditional on, are provoked by, our weaknesses</p>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>Breakfast — granola bar</p></li>
+<li><p>Lunch&#64;12pm — 18mo Gouda</p></li>
+<li></li>
+</ol>
+<p>.</p>
+<p>My favorite things</p>
+<p>Parmigiano-Reggiano, Vecchio<br />
+Gouda, 18mo<br />
+Sbrinz, 36mo</p>
+<p>.</p>
+<p>What does Ancient Greece mean to you?<br />
+Socrates? Plato? Aristotle?<br />
+Or Homer? Aeschylus? Sophocles? Perhaps Aristophanes?</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+9/23/21
+Home —&gt; Wine shop 
+3.70 MILES return 
+7,665 steps 
+349 calories 
+
+
+194.8 lbs night before 
+190.8 lbs by 2pm today 
+191.4 lbs by 2:54pm (after first meal)
+190.8 lbs by 6pm today (after a piss)
+__
+0.6 lbs gain after cheese 🧀 meal
+
+18yo Gouda, 0.25 lbs 
+36mo Sbrinz, 0.165 lbs 
+5oz Fig spread, 0.3 lbs 
+Chorizo el rey, 0.07 lbs
+Hot sopressata, 0.05 lbs
+Calabrian 3-way, 0.09 lbs
+__
+0.925 lbs 
+
+Unaccounted 0.325 lbs probably expired 
+Within +/-0.2 margin of error by declared by manufacturer
+
+Murkier maths after taking a piss 
+
+x
+
+191.0 lbs at 4:30am before :
+9 mile run, 3 mile walk
+186.8 lbs at 6:54am after taking shit and piss 
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p>How to update your weight:</p>
+<ol class="arabic simple">
+<li><p>Spend day before eating only cheese/fig</p></li>
+<li><p>Drink &lt;660ml water</p></li>
+<li><p>Calorie intake &lt;1200</p></li>
+<li><p>Weigh following morning at 4:30am</p></li>
+<li><p>Repeat after 9 mile run/3 mile walk
+That is a close an estimate of dry weight</p></li>
+</ol>
+<p>.</p>
+<p>Did this guy just say we are in “Pole Position” to let her go home? Hahaha!</p>
+<p>Agreed — the blood in urine is probably just injury from the catheter… the tube for passing urine</p>
+<p>Otherwise, I agree that she should go home. Someone over 93 should really be home because hospital is rarely a good   environment at that age. Let her be home with people she knows, family, etc.</p>
+<p>.</p>
+<p>Watch Ted lasso episode :)</p>
+<p>.</p>
+<p>Chino’s<br />
+— 36’ 32”<br />
+— Regular/Classic-fit<br />
+— GAP<br />
+— Two browns, One Grey, Khaki Navy Blue</p>
+<p>Pegasus 38<br />
+— Navy Blue<br />
+—</p>
+<p>Yogi Tea - Forever Young - 30.6g<br />
+— For daddy<br />
+— On amazon</p>
+<p>.</p>
+<p>Gouda — 0.4 .<br />
+Permesian — 0.4
+Manchego— 0.4<br />
+Olives 0.6<br />
+Nuts 4 oz</p>
+<p>.</p>
+<p>God created man<br />
+So how can he also be redeemer?<br />
+Huh?</p>
+<p>.</p>
+<p>#withdrawal<br />
+— I must withdraw from this class<br />
+— really doesn’t appeal to my interests, strengths<br />
+— the more I’ve studied it, the more I’ve appreciated that its not connected to my goals<br />
+— but is generally important for one to understand its basic tenets.. but not for a grade!</p>
+<p>.</p>
+<p>Heart beat = 1/300 calories<br />
+24<em>60</em>70/300 = 336 calories/day (i.e., 100,000 heart beats a day)</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+#nutrition
+
+Paulo on 9/26/21
+— 10 miles
+— 97 minutes
+— 9’40” per mile 
+— 16,918 steps 
+— Cadence 174 SPM 
+— 160 BPM 
+— 1003 calories 
+
+#exercize 
+
+Yours truly on 6/5/21
+— 9.3 miles 
+— 90 minutes 
+— 9’47” per mile 
+— 13,000 steps 
+— Cadence 152 SPM
+— 158 BPM
+— 1086 calories 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#cheese   
+
+— Edam 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#donda
+
+Some say Adam could never be a black man 
+Because a black man never shares his ribs 
+
+How Nietzsche felt after Wagners Parsifal 
+Is how I do after Kanye’s Donda 
+
+Looks like we have a case of frailty upon us!
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#blessed
+
+9/30/21 
+
+May 10’40”
+Jun 9’50”
+Jul 9’20”
+Aug 9’04”
+Sep 8’44”
+</pre></div>
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">17</a></span></dt>
+<dd><p>credo</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id3">18</a></span></dt>
+<dd><p>fave idea</p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id4">19</a></span></dt>
+<dd><p>my thoughts be bloody, or be nothing worth</p>
+</dd>
+</dl>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

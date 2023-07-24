@@ -1,0 +1,70 @@
+---
+title: ''
+output: pdf_document
+---
+
+## 07/18/2023 
+
+#
+
+Matt/Abi code-snippet to guide one using 'cat_trauma' function
+
+## 
+
+#### 720.1 install the relevant packages
+
+```{r}
+suppressWarnings({
+  invisible({
+    rm(list = ls())
+    
+    if (!require(icdpicr, quietly = TRUE, warn.conflicts = FALSE)) install.packages('icdpicr')
+    if (!require(dplyr, quietly = TRUE, warn.conflicts = FALSE)) install.packages('dplyr')
+    if (!require(readr, quietly = TRUE, warn.conflicts = FALSE)) install.packages('readr')
+    if (!require(tidyr, quietly = TRUE, warn.conflicts = FALSE)) install.packages('tidyr')
+    
+    library(icdpicr, quietly = TRUE, warn.conflicts = FALSE)
+    library(dplyr, quietly = TRUE, warn.conflicts = FALSE)
+    library(readr, quietly = TRUE, warn.conflicts = FALSE)
+    library(tidyr, quietly = TRUE, warn.conflicts = FALSE)
+  })
+})
+
+
+```
+
+#### 720.2 get some documentation
+
+```{r}
+ls("package:icdpicr") 
+```
+
+
+#### 720.3 study the syntax
+
+```{r}
+print(cat_trauma)
+```
+
+#### 720.4 what is the value of dx_pre?
+
+```{r}
+print(injury)
+```
+
+
+#### 720.5 as such the syntax is:
+
+```{r}
+# use subset of injury given its size
+inj = injury[1:100,1:3]
+
+df_score = cat_trauma(df=inj,dx_pre="dx",icd10=TRUE,i10_iss_method="roc_max_NIS",calc_method = 1,verbose = FALSE) 
+
+# visualize the output
+df_score[1:9,1:9]; df_score[1:9,10:14]; df_score[1:9,15:18] ; df_score[1:9,34:35]
+```
+
+
+
+
