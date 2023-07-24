@@ -24,6 +24,7 @@ bibtex:
   citation_label_prefix: "["
   citation_label_suffix: "]"
   default_style: "numeric"  # Use numeric citation style
+  backrefs: true  # Show backreferences in the bibliography
 
 # Use numerical citations with square brackets
 sphinx:
