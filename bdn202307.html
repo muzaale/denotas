@@ -383,6 +383,7 @@ document.write(`
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">07/03/2023</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#areas">625. areas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#twoway">626. twoway</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">07/04/2023</a><ul class="visible nav section-nav flex-column">
@@ -1236,44 +1237,44 @@ Freud</p>
 <p>Does ones credo impose limits on the skill-levels they might attain? What for sure is that the setting of a commune is deliberately designed to set limits to the challenge-levels encountered by those who dwell in it. So this graph may help us link matters of religion, politik, and brain-chemistry.</p>
 <p>We should find hippies in the green zone having arrived there by the horizontal red line represented by 9 o’clock. Catholics should mostly be in the red zone in urgent need of deliverance, which they do obtain via confession and the green line represented by 6 o’clock should get them there. But what would be truly optimal is the yellow zone represented by 2 o’clock, which represents constant struggle: incremental challenges and skill-levels that are matching these changes over time.</p>
 <p>Such a person is a worthy adversary and worthy of the greatest honors. Athletes and sportsmen are the embodiment of this credo in modern life. They represent the healthiest, most sustainable, and dare I say, most meaningful approach to life <span id="id4">[<a class="reference internal" href="references.html#id11" title="Yours Truly. Credo 32-33. 2023.">Tru23d</a>]</span>.</p>
-<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>### <span class="m">626</span>.<span class="k"> twoway</span>
+</section>
+<section id="twoway">
+<h2>626. twoway<a class="headerlink" href="#twoway" title="Permalink to this heading">#</a></h2>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>import delimited https:<span class="o">//</span>raw<span class="m">.</span>githubusercontent<span class="m">.</span>com<span class="o">/</span>jhustata<span class="o">/</span>livre<span class="o">/</span>main<span class="o">/</span>transplants<span class="m">.</span>txt,<span class="k"> clear</span>
+<span class="k">sum</span> age
+<span class="k">g</span> age_c = age <span class="o">-</span> <span class="nf">r</span>(mean)
+<span class="k">sum</span> bmi 
+<span class="k">g</span> bmi_c = bmi <span class="o">-</span> <span class="nf">r</span>(mean)
+<span class="k">regress</span> bmi_c age_c 
+<span class="k">matrix</span> define<span class="k"> m</span> =<span class="k"> e</span>(b)
 
-<span class="nv">```stata</span>
-<span class="nv">import delimited https://raw.githubusercontent.com/jhustata/livre/main/transplants.txt, clear</span>
-<span class="nv">sum age</span>
-<span class="nv">g age_c = age - r(mean)</span>
-<span class="nv">sum bmi </span>
-<span class="nv">g bmi_c = bmi - r(mean)</span>
-<span class="nv">regress bmi_c age_c </span>
-<span class="nv">matrix define m = e(b)</span>
+<span class="k">local</span> b1:<span class="k"> di</span> <span class="nx">%3.2f</span><span class="k"> m</span>[<span class="m">1</span>,<span class="m">1</span>]
+<span class="k">local</span> b0:<span class="k"> di</span> <span class="nx">%3.2f</span><span class="k"> m</span>[<span class="m">1</span>,<span class="m">2</span>]
 
-<span class="nv">local b1: di %3.2f m[1,1]</span>
-<span class="nv">local b0: di %3.2f m[1,2]</span>
+<span class="k">gen</span> bmi_hat = <span class="nv">`b0&#39;</span> <span class="o">+</span> <span class="nv">`b1&#39;</span> <span class="o">*</span> age_c 
+<span class="k">sum</span> age_c,<span class="k"> d</span>
+<span class="k">local</span> q1:<span class="k"> di</span> <span class="nx">%3.2f</span> <span class="nf">r</span>(p5)
+<span class="k">local</span> q4:<span class="k"> di</span> <span class="nx">%3.2f</span> <span class="nf">r</span>(p75)
 
-<span class="nv">gen bmi_hat = `b0&#39; + `b1&#39; * age_c </span>
-<span class="nv">sum age_c, d</span>
-<span class="nv">local q1: di %3.2f r(p5)</span>
-<span class="nv">local q4: di %3.2f r(p75)</span>
+<span class="k">local</span> rmse =<span class="k"> e</span>(rmse)
+<span class="k">g</span> ci_lower = <span class="nv">`b0&#39;</span> <span class="o">-</span> <span class="m">1.96</span> <span class="o">*</span> <span class="nv">`rmse&#39;</span>
+<span class="k">g</span> ci_upper = <span class="nv">`b0&#39;</span> <span class="o">+</span> <span class="m">1.96</span> <span class="o">*</span> <span class="nv">`rmse&#39;</span>
+<span class="k">sum</span> age_c
+<span class="k">g</span> age_int = <span class="nf">r</span>(mean)
 
-<span class="nv">local rmse = e(rmse)</span>
-<span class="nv">g ci_lower = `b0&#39; - 1.96 * `rmse&#39;</span>
-<span class="nv">g ci_upper = `b0&#39; + 1.96 * `rmse&#39;</span>
-<span class="nv">sum age_c</span>
-<span class="nv">g age_int = r(mean)</span>
-
-<span class="nv">twoway ///</span>
-<span class="nv">   (scatter bmi_c age_c, mcolor(lime) msymbol(oh) jitter(5)) ///</span>
-<span class="nv">   (line bmi_hat age_c, lcolor(blue) lstyle(dash)) ///</span>
-<span class="nv">   (rcap ci_lower ci_upper age_int, lcolor(red)), ///</span>
-<span class="nv">       xtitle(&quot;Age&quot;) ///</span>
-<span class="nv">	   ytitle(&quot;BMI&quot;, orientation(horizontal)) ///</span>
-<span class="nv">       title(&quot; &quot;) ///</span>
-<span class="nv">       text(0 0 &quot;Intercept = `b0&#39;&quot;, size(small)) ///</span>
-<span class="nv">       text(0 -40 &quot;Slope = `b1&#39;&quot;, size(small)) ///</span>
-<span class="nv">	   xlab(-40 &quot;0&quot; -20 &quot;20&quot; 0 &quot;40&quot; 20 &quot;60&quot; 40 &quot;80&quot;) ///</span>
-<span class="nv">	   ylab(-10 &quot;20&quot; -5 &quot;25&quot; 0 &quot;30&quot; 5 &quot;35&quot; 10 &quot;40&quot;) ///</span>
-<span class="nv">	   legend(off)</span>
-<span class="nv">graph export twoway_overlayfit.png, replace </span>
+<span class="k">twoway</span> <span class="cs">///</span>
+   (scatter bmi_c age_c, mcolor(lime) msymbol(oh) jitter(<span class="m">5</span>)) <span class="cs">///</span>
+   (line bmi_hat age_c, lcolor(blue) lstyle(dash)) <span class="cs">///</span>
+   (rcap ci_lower ci_upper age_int, lcolor(red)), <span class="cs">///</span>
+       xtitle(<span class="s">&quot;Age&quot;</span>) <span class="cs">///</span>
+	   ytitle(<span class="s">&quot;BMI&quot;</span>, orientation(horizontal)) <span class="cs">///</span>
+       title(<span class="s">&quot; &quot;</span>) <span class="cs">///</span>
+       text(<span class="m">0</span> <span class="m">0</span> <span class="s">&quot;Intercept = </span><span class="nv">`b0&#39;</span><span class="s">&quot;</span>, size(small)) <span class="cs">///</span>
+       text(<span class="m">0</span> <span class="o">-</span><span class="m">40</span> <span class="s">&quot;Slope = </span><span class="nv">`b1&#39;</span><span class="s">&quot;</span>, size(small)) <span class="cs">///</span>
+	   xlab(<span class="o">-</span><span class="m">40</span> <span class="s">&quot;0&quot;</span> <span class="o">-</span><span class="m">20</span> <span class="s">&quot;20&quot;</span> <span class="m">0</span> <span class="s">&quot;40&quot;</span> <span class="m">20</span> <span class="s">&quot;60&quot;</span> <span class="m">40</span> <span class="s">&quot;80&quot;</span>) <span class="cs">///</span>
+	   ylab(<span class="o">-</span><span class="m">10</span> <span class="s">&quot;20&quot;</span> <span class="o">-</span><span class="m">5</span> <span class="s">&quot;25&quot;</span> <span class="m">0</span> <span class="s">&quot;30&quot;</span> <span class="m">5</span> <span class="s">&quot;35&quot;</span> <span class="m">10</span> <span class="s">&quot;40&quot;</span>) <span class="cs">///</span>
+	   legend(off)
+<span class="k">graph</span> export twoway_overlayfit<span class="m">.</span>png,<span class="k"> replace</span> 
 </pre></div>
 </div>
 <p><img alt="" src="twoway_overlayfit.png" /></p>
@@ -4893,7 +4894,7 @@ _(Provide answer here)_
 <p>Euler’s identity, equation <a class="reference internal" href="#equation-euler">()</a>, was elected one of the
 most beautiful mathematical formulas.</p>
 <blockquote>
-<div><p>Jul 24, 2023 | 11517 words | 58 min read</p>
+<div><p>Jul 24, 2023 | 11518 words | 58 min read</p>
 </div></blockquote>
 </section>
 </section>
@@ -4977,6 +4978,7 @@ most beautiful mathematical formulas.</p>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">07/03/2023</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#areas">625. areas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#twoway">626. twoway</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">07/04/2023</a><ul class="visible nav section-nav flex-column">
