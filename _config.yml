@@ -10,35 +10,16 @@ logo: practicing.png
 execute:
   execute_notebooks: force
 
-# Define the name of the latex output file for PDF builds
-latex:
-  latex_documents:
-    targetname: book.tex
-  preamble: |
-    \usepackage[verbose]{backref}
-    \backrefsetup{verbose=false}
-
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
   - bibliography.bib
 
-# Specify the citation label format
+# Add the following lines to enable back-references
 bibtex:
-  citation_label_prefix: "["  # Set the prefix for citation labels to "["
-  citation_label_suffix: "]"  # Set the suffix for citation labels to "]"
-  default_style: numeric  # Use numeric citation style
   backrefs: true  # Show backreferences in the bibliography
+  bibtex_use_backref: true  # Show backreferences in the bibliography
 
-bibtex_use_backref: true  # Show backreferences in the bibliography
 # Use author-year citations
-sphinx:
-  bibtex_reference_style: numeric  # Use author-year citation style
-
-  # Add the custom role to enable citation hyperlinks
-  extra_extensions:
-    - sphinxcontrib.bibtex
-
-# Specify the template for the citation reference in the text
 jupyterbook:
   citation_reference_template: "[{{ order }}]"
 

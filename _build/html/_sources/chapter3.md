@@ -18,7 +18,4 @@ tameth
 
 whineth
 
-hideth[^1]
-
-[^1]: `prov 27:12`
-
+hideth {cite}`prudence`
