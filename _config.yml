@@ -40,3 +40,7 @@ html:
 
 # Do not include in the build any files matching these patterns
 exclude_patterns: [pattern1/*, path/to/myfile.ipynb]
+
+sphinx:
+  extra_extensions:
+    - sphinxcontrib.bibtex
