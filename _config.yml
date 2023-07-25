@@ -21,22 +21,21 @@ bibtex_bibfiles:
 
 # Specify the citation label format
 bibtex:
-  citation_label_prefix: "["
-  citation_label_suffix: "]"
-  default_style: "numeric"  # Use numeric citation style
+  citation_label_prefix: "["  # Set the prefix for citation labels to "["
+  citation_label_suffix: "]"  # Set the suffix for citation labels to "]"
+  default_style: "plain"  # Use numeric citation style
   backrefs: true  # Show backreferences in the bibliography
 
 # Use numerical citations with square brackets
 sphinx:
-  bibtex_reference_style: numeric_brackets  # Use numeric citation style with square brackets
+  bibtex_reference_style: plain  # Use numeric citation style with square brackets
 
 # Specify the template for the citation reference in the text
 jupyterbook:
-  citation_template: "[{{ order }}]"
-  citation_reference_template: "{{ details.authors }} ({{ details.year }})"
-
+  citation_reference_template: "[{{ order }}]"
+  
 # Specify the template for the full citation in the bibliography
-  bibliography_item_template: "{{ order }}. {{ details.authors }}. {{ details.title }}. {{ details.journal }}. {{ details.year }}. {{ details.address }}."
+bibliography_item_template: "{{ order }}. {{ details.authors }}. {{ details.title }}. {{ details.year }}. {% if details.url %}URL: {{ details.url }}.{% endif %}"
 
 # Information about where the book exists on the web
 repository:
