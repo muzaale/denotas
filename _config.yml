@@ -14,6 +14,9 @@ execute:
 latex:
   latex_documents:
     targetname: book.tex
+  preamble: |
+    \usepackage[verbose]{backref}
+    \backrefsetup{verbose=false}
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
@@ -23,17 +26,22 @@ bibtex_bibfiles:
 bibtex:
   citation_label_prefix: "["  # Set the prefix for citation labels to "["
   citation_label_suffix: "]"  # Set the suffix for citation labels to "]"
-  default_style: "plain"  # Use numeric citation style
+  default_style: numeric  # Use numeric citation style
   backrefs: true  # Show backreferences in the bibliography
 
-# Use numerical citations with square brackets
+bibtex_use_backref: true  # Show backreferences in the bibliography
+# Use author-year citations
 sphinx:
-  bibtex_reference_style: plain  # Use numeric citation style with square brackets
+  bibtex_reference_style: numeric  # Use author-year citation style
+
+  # Add the custom role to enable citation hyperlinks
+  extra_extensions:
+    - sphinxcontrib.bibtex
 
 # Specify the template for the citation reference in the text
 jupyterbook:
   citation_reference_template: "[{{ order }}]"
-  
+
 # Specify the template for the full citation in the bibliography
 bibliography_item_template: "{{ order }}. {{ details.authors }}. {{ details.title }}. {{ details.year }}. {% if details.url %}URL: {{ details.url }}.{% endif %}"
 
