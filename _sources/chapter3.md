@@ -18,4 +18,4 @@ tameth
 
 whineth
 
-hideth {cite}`prudence`
+hideth 
