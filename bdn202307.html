@@ -595,6 +595,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#odds">763. odds</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id60">07/26/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#credo">764. credo</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -4913,7 +4917,7 @@ _(Provide answer here)_
 <p>Euler’s identity, equation <a class="reference internal" href="#equation-euler">()</a>, was elected one of the
 most beautiful mathematical formulas.</p>
 <blockquote>
-<div><p>Jul 26, 2023 | 14052 words | 70 min read</p>
+<div><p>Jul 26, 2023 | 14426 words | 72 min read</p>
 </div></blockquote>
 </section>
 </section>
@@ -5296,6 +5300,96 @@ Moneyline odds profit: $250000.00
 </div>
 </section>
 </section>
+<section id="id60">
+<h1>07/26/2023<a class="headerlink" href="#id60" title="Permalink to this heading">#</a></h1>
+<section id="credo">
+<h2>764. credo<a class="headerlink" href="#credo" title="Permalink to this heading">#</a></h2>
+<p>Certainly, integrating both the philosophical and statistical concepts:</p>
+<ol class="arabic simple">
+<li><p><strong>Tameth (Heraclitus; fixed on struggle; 1 - unexplained variance)</strong>:</p>
+<ul class="simple">
+<li><p>Heraclitus focuses on the ever-changing nature of existence, highlighting life’s inherent struggles. In the context of statistical modeling, “1 - unexplained variance” represents the proportion of the variance that’s accounted for or understood. Drawing parallels, “tameth” can be perceived as the human effort to understand, grasp, and ‘tame’ the ever-evolving nature of life. It embodies the desire to account for as much variability as possible, to find order and meaning amid life’s chaos.</p></li>
+</ul>
+</li>
+<li><p><strong>Whineth (Plato; fixed credo or idea; unexplained variance)</strong>:</p>
+<ul class="simple">
+<li><p>Plato emphasizes the divide between the imperfect material world and the realm of ideal forms. Statistically, “unexplained variance” is the portion of variance not accounted for by the model. “Whineth” encapsulates the human dissatisfaction that emerges from recognizing these gaps or imperfections. It’s the acknowledgment of the unattained, the residuals of life, and the yearning to bridge the divide between the real and the ideal.</p></li>
+</ul>
+</li>
+<li><p><strong>Hideth (Epicurus; fixed environment; model, indifferent to model fit or error)</strong>:</p>
+<ul class="simple">
+<li><p>Epicurus advocates for creating an environment conducive to peace and minimizing disturbances. In statistical terms, the “model” represents the structure or framework we use to understand phenomena, even if it might not perfectly account for all variability. “Hideth” symbolizes the human instinct to create or adopt a framework (or environment) that provides safety and predictability, even if it doesn’t capture every nuance or error. It’s a protective stance, prioritizing mental and physical well-being over complete understanding.</p></li>
+</ul>
+</li>
+</ol>
+<p>In sum, these categories offer a fascinating fusion of philosophy and statistics, portraying diverse human responses to life’s challenges:</p>
+<ul class="simple">
+<li><p><strong>Tameth</strong> is about actively engaging with and striving to understand the world, analogous to maximizing the explained variance in a model.</p></li>
+<li><p><strong>Whineth</strong> mirrors the discontent arising from recognizing what remains unexplained or unattained, similar to the residuals or errors in statistical predictions.</p></li>
+<li><p><strong>Hideth</strong> represents the instinct to adopt protective frameworks, even if they aren’t perfect, analogous to prioritizing a model’s utility over its potential shortcomings.</p></li>
+</ul>
+<p>Sure, I can provide you with Python code that visualizes the concepts of explained variance, unexplained variance, and a general model. We’ll use matplotlib and numpy for this task.</p>
+<ol class="arabic simple">
+<li><p>Tameth: A bar representing the explained variance (1 - unexplained variance).</p></li>
+<li><p>Whineth: A bar representing the unexplained variance.</p></li>
+<li><p>Hideth: A general model curve, indifferent to the fit or error.</p></li>
+</ol>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Data</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># A linear model with some noise</span>
+
+<span class="c1"># Linear model fit</span>
+<span class="n">coefficients</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">y_fit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyval</span><span class="p">(</span><span class="n">coefficients</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Explained and unexplained variance</span>
+<span class="n">explained_variance</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">y_fit</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y</span><span class="p">))</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">unexplained_variance</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">explained_variance</span>
+
+<span class="c1"># Plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="c1"># Tameth (Explained variance)</span>
+<span class="n">darkyellow</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="s1">&#39;Explained Variance&#39;</span><span class="p">],</span> <span class="p">[</span><span class="n">explained_variance</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Tameth&#39;</span><span class="p">)</span>
+
+<span class="c1"># Whineth (Unexplained variance)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="s1">&#39;Unexplained Variance&#39;</span><span class="p">],</span> <span class="p">[</span><span class="n">unexplained_variance</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lime&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Whineth&#39;</span><span class="p">)</span>
+
+<span class="c1"># Hideth (General model)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_fit</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Model&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Hideth (Model)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Y&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/72c573ba19812c260f09e7b19d11beccafa96b2fa80f5446e5bad8309a1fc868.png" src="_images/72c573ba19812c260f09e7b19d11beccafa96b2fa80f5446e5bad8309a1fc868.png" />
+</div>
+</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -5586,6 +5680,10 @@ Moneyline odds profit: $250000.00
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#management">761. management</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recession">762. recession</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#odds">763. odds</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id60">07/26/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#credo">764. credo</a></li>
 </ul>
 </li>
 </ul>
