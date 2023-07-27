@@ -4939,7 +4939,7 @@ _(Provide answer here)_
 <p>Euler’s identity, equation <a class="reference internal" href="#equation-euler">()</a>, was elected one of the
 most beautiful mathematical formulas.</p>
 <blockquote>
-<div><p>Jul 27, 2023 | 17991 words | 90 min read</p>
+<div><p>Jul 27, 2023 | 17940 words | 90 min read</p>
 </div></blockquote>
 </section>
 </section>
@@ -5407,7 +5407,7 @@ Moneyline odds profit: $250000.00
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/1e457255799aa18f51535e775fe5119f221cd9b32d7adda0ed4fa39c2061706e.png" src="_images/1e457255799aa18f51535e775fe5119f221cd9b32d7adda0ed4fa39c2061706e.png" />
+<img alt="_images/f99304f7f30991a0501ce2d446776a8886ab24eac706abbde29f5e50e5f91db3.png" src="_images/f99304f7f30991a0501ce2d446776a8886ab24eac706abbde29f5e50e5f91db3.png" />
 </div>
 </div>
 </section>
@@ -6066,14 +6066,18 @@ In the context of research on older living kidney donors, the Concerto represent
 </li>
 </ul>
 <hr class="docutils" />
-<p>ssh-keygen -t ed25519 -C “<a class="reference external" href="mailto:dhatemwakulala&#37;&#52;&#48;gmail&#46;com">dhatemwakulala<span>&#64;</span>gmail<span>&#46;</span>com</a>”
+<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t ed25519 -C &quot;dhatemwakulala@gmail.com&quot;
 /Users/d/.ssh/id_ed25519 already exists
 Overwrite (y/n)? n
-ssh-keygen -t adm16181 -C “<a class="reference external" href="mailto:dhatemwakulala&#37;&#52;&#48;gmail&#46;com">dhatemwakulala<span>&#64;</span>gmail<span>&#46;</span>com</a>”
+ssh-keygen -t adm16181 -C &quot;dhatemwakulala@gmail.com&quot;
 Enter file in which to save the key: /Users/d/.ssh/id_adm16181
-Enter passphrase (empty for no passphrase):drum</p>
-<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>Your identification has been saved in /Users/d/.ssh/id_adm16181
-Your public key has been saved in /Users/d/.ssh/id_adm16181.pub
+Enter passphrase (empty for no passphrase):drum
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>Your identification has been saved in /Users/d/.ssh/id_adm16181 #private key
+Your public key has been saved in /Users/d/.ssh/id_adm16181.pub #public key
+
 The key fingerprint is:
 SHA256:WwvgZyFEEzKKB3UKNsi/A8fpseP/RVnvUq4/7ZkG/q4 dhatemwakulala@gmail.com
 The key&#39;s randomart image is:
@@ -6091,23 +6095,31 @@ The key&#39;s randomart image is:
 </pre></div>
 </div>
 <hr class="docutils" />
-<p>cd /users/d/.ssh
+<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>cd /users/d/.ssh
 cat id_adm16181.pub #add to repo
-cat id_adm16181 #</p>
+cat id_adm16181 #add to config
+</pre></div>
+</div>
 <hr class="docutils" />
-<p>eval “$(ssh-agent -s)”
+<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>eval &quot;$(ssh-agent -s)&quot;
 Agent pid 36588
 open ~/.ssh/config #paste stuff
-ssh-add –apple-use-keychain ~/.ssh/id_adm16181.pub</p>
+ssh-add --apple-use-keychain ~/.ssh/id_adm16181.pub
+</pre></div>
+</div>
 <hr class="docutils" />
-<p>pbcopy &lt; ~/.ssh/id_adm16181.pub #copy contents to clipboard</p>
+<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>pbcopy &lt; ~/.ssh/id_adm16181.pub #copy contents to clipboard
+</pre></div>
+</div>
 <hr class="docutils" />
-<p>git remote -v
-git remote set-url origin <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:dhatemwakulala/kelele.git
+<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>git remote -v
+git remote set-url origin git@github.com:dhatemwakulala/kelele.git
 ssh-add ~/.ssh/id_adm16181
 git push
 drum
-git push #success!</p>
+git push #success!
+</pre></div>
+</div>
 </section>
 </section>
 
