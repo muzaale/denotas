@@ -464,13 +464,24 @@ Website: <a class="reference external" href="https://JHU.edassist.com">https://J
 A Bright Horizons Solution at Work.
 <a class="reference external" href="http://www.edassist.com">www.edassist.com</a></p>
 <hr class="docutils" />
+<p>Good morning, Kadi; l always celebrate hearing from you. As you know, ours is not a literate culture. But I learned from your late grandfather, with whom you shared the clan name, “Dhatemwa kulala aye dhayawukana emibala.” That is, they diverge when it comes to the sound they make and the philosophy of life they articulate. This was especially noteworthy in the case of twins who frequently diverge in their behaviour preferences!</p>
+<p>Literally, the name conveys the need to manage your expectations of people accordingly.</p>
+<p>“Although drums my have been made from the stem of a the same tree they don’t sound the same.”</p>
+<p>Good morning, Kadi! I always celebrate hearing from you. As you know, our culture is not rooted in literacy, but the wisdom of our ancestors has been passed down through generations, including the teachings from your late grandfather, withwhom you shared the clan name, “Dhatemwa kulala aye dhayawukana emibala.”</p>
+<p>It reminds one of the diversity of people and their perspectives. Just like the “drums cut from the stem of the same tree”, each person creates a unique sound and articulates their philosophy of life differently. This understanding becomes especially apparent when dealing with twins, who, despite sharing the same biological origin, often display distinct behavior preferences.</p>
+<p>I cherish the wisdom embedded in this saying, and it reminds me to manage my expectations of others with empathy and understanding. By recognizing and appreciating the individuality of each person, I can foster better relationships and create <code class="docutils literal notranslate"><span class="pre">harmony</span></code> within our community.</p>
+<p>–</p>
+<p>Thanks, daddy! I like this! I will use it thematically for my next project. I incorporate the elements in “Dhatemwa kulala aye dhayawukana emibal” to describe github repositories and projects. I will use the following:</p>
 <p><a class="reference external" href="mailto:abimereki&#37;&#52;&#48;gmail&#46;com">abimereki<span>&#64;</span>gmail<span>&#46;</span>com</a>
-<a class="reference external" href="mailto:dhatemwakulala&#37;&#52;&#48;gmail&#46;com">dhatemwakulala<span>&#64;</span>gmail<span>&#46;</span>com</a> -&gt; concerto
+<a class="reference external" href="mailto:dhatemwakulala&#37;&#52;&#48;gmail&#46;com">dhatemwakulala<span>&#64;</span>gmail<span>&#46;</span>com</a><br />
 <a class="reference external" href="http://github.com/dhatemwakulala">github.com/dhatemwakulala</a>
 engoma
+dhatemwa
+kulala
 aye
 dhayawukana
 emibala (colors)</p>
+<p>Come to think of it, Dhatemwa kulala is akin to a Vienesse Concerto – at least as interpreted by Mozart. “Dhatemwa kulala” is analogous to the “Concerto” whereas “aye” is analogous to the “Solo” of the concerto.</p>
 <p>“Arco” (played with a bow) and “Pizzicato” (played by plucking the strings) are techniques used primarily with stringed instruments, adding a sense of technique, artistry, and precision to the theme. Let’s craft a musical-inspired framework around these terms:</p>
 <p>Concerto
 A piece of music in which one solo instrument is accompanied by an orchestra, symbolizing the lead research and its many collaborative components. so what is our lead research? older living kidney donors? oh yeah!</p>
@@ -482,6 +493,78 @@ Sordino: For discreet, background projects, much like the muted tones produced u
 Tremolo: Fast-paced, high-frequency tasks or projects, akin to the rapid oscillation of a musical note.
 Ritardando: Initiatives that start quickly but gradually slow down, allowing for reflection and recalibration.
 The central theme, Concerto, portrays the amalgamation of various elements to produce a masterpiece, while the subgroups, inspired by specific techniques and musical nuances, capture the varied approaches and paces of research projects. This structure paints a picture of a finely-tuned orchestra, each section playing its role to perfection.</p>
+<p><a class="reference external" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent</a></p>
+<p>upgrade
+workflow</p>
+<hr class="docutils" />
+<p>It seems like you’re encountering an issue related to SSH keys. An SSH key is a secure way to authenticate yourself when connecting to a remote server or machine. To resolve the error message you mentioned, you need to ensure that you are providing a valid OpenSSH public key format.</p>
+<p>Here are some steps to create an SSH key pair and obtain the public key in OpenSSH format:</p>
+<ol class="arabic simple">
+<li><p><strong>Generate SSH Key Pair</strong>:</p></li>
+</ol>
+<p>If you haven’t generated an SSH key pair yet, you can do so using the <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> command on your local machine:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span><span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
+</pre></div>
+</div>
+<p>This command will generate a new RSA key pair with a 4096-bit key size. Replace “<a class="reference external" href="mailto:your_email&#37;&#52;&#48;example&#46;com">your_email<span>&#64;</span>example<span>&#46;</span>com</a>” with your actual email address.</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>Locate the Public Key</strong>:</p></li>
+</ol>
+<p>Once the key pair is generated, you’ll find the public key in a file with a <code class="docutils literal notranslate"><span class="pre">.pub</span></code> extension in your home directory. By default, the file name is <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code>, but it might be different if you provided a custom name during key generation.</p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Ensure OpenSSH Format</strong>:</p></li>
+</ol>
+<p>Open the public key file using a text editor and verify that it is in OpenSSH public key format. The contents should look something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span><span class="o">-</span><span class="n">rsa</span> <span class="n">AAAAB3NzaC1yc2EAAAADAQABAAAB</span><span class="o">...</span>
+</pre></div>
+</div>
+<p>If you copied the key from a web page or an email, make sure no extra spaces or characters are present.</p>
+<ol class="arabic simple" start="4">
+<li><p><strong>Using the Public Key</strong>:</p></li>
+</ol>
+<p>When connecting to a remote server or service that requires your public key, ensure you copy the entire content of the public key file (usually <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code>) into the appropriate field or file on the server. The exact steps may vary depending on the service or platform you are using.</p>
+<p>After following these steps, your key should be recognized as a valid OpenSSH public key, and you should be able to use it for SSH authentication without encountering the “Key is invalid” error.</p>
+<hr class="docutils" />
+<p>cd /users/d/.ssh
+cat id_adm16181.pub #add to repo
+cat id_adm16181 #
+ssh-keygen -t ed25519 -C “<a class="reference external" href="mailto:dhatemwakulala&#37;&#52;&#48;gmail&#46;com">dhatemwakulala<span>&#64;</span>gmail<span>&#46;</span>com</a>”
+/Users/d/.ssh/id_ed25519 already exists
+Overwrite (y/n)? n
+ssh-keygen -t adm16181 -C “<a class="reference external" href="mailto:dhatemwakulala&#37;&#52;&#48;gmail&#46;com">dhatemwakulala<span>&#64;</span>gmail<span>&#46;</span>com</a>”
+Enter file in which to save the key: /Users/d/.ssh/id_adm16181
+Enter passphrase (empty for no passphrase):drum</p>
+<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>Your identification has been saved in /Users/d/.ssh/id_adm16181
+Your public key has been saved in /Users/d/.ssh/id_adm16181.pub
+The key fingerprint is:
+SHA256:WwvgZyFEEzKKB3UKNsi/A8fpseP/RVnvUq4/7ZkG/q4 dhatemwakulala@gmail.com
+The key&#39;s randomart image is:
++--[ED25519 256]--+
+|=+. +.=.         |
+|o=.+ + .         |
+|. * . o .  .     |
+| o * . o .o .    |
+|  + + . So.  o   |
+|   *   o.+ .+.   |
+|  . o   .....oo  |
+|   .    .   oo oo|
+|    ....   ..EB* |
++----[SHA256]-----+
+</pre></div>
+</div>
+<p>eval “$(ssh-agent -s)”
+Agent pid 36588
+open ~/.ssh/config #paste stuff
+ssh-add –apple-use-keychain ~/.ssh/id_adm16181.pub</p>
+<hr class="docutils" />
+<p>pbcopy &lt; ~/.ssh/id_adm16181.pub #copy contents to clipboard</p>
+<hr class="docutils" />
+<p>git remote -v
+git remote set-url origin <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:dhatemwakulala/kelele.git
+ssh-add ~/.ssh/id_adm16181
+git push
+drum
+git push #success!</p>
 </section>
 </section>
 
