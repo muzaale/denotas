@@ -617,6 +617,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ngomakelele-gmail-com">779. ngomakelele@gmail.com</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drum">780. drum 🪘</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upgraded">781. upgraded</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#private">782. private</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id74">783. gratitude </a></li>
 </ul>
 </li>
 </ul>
@@ -4939,7 +4941,7 @@ _(Provide answer here)_
 <p>Euler’s identity, equation <a class="reference internal" href="#equation-euler">()</a>, was elected one of the
 most beautiful mathematical formulas.</p>
 <blockquote>
-<div><p>Jul 27, 2023 | 17940 words | 90 min read</p>
+<div><p>Jul 27, 2023 | 18021 words | 90 min read</p>
 </div></blockquote>
 </section>
 </section>
@@ -5407,7 +5409,7 @@ Moneyline odds profit: $250000.00
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/f99304f7f30991a0501ce2d446776a8886ab24eac706abbde29f5e50e5f91db3.png" src="_images/f99304f7f30991a0501ce2d446776a8886ab24eac706abbde29f5e50e5f91db3.png" />
+<img alt="_images/a2a166e4484f255468df83dcc89ec9b9ba741aabe53d54219b84fa0497d29afa.png" src="_images/a2a166e4484f255468df83dcc89ec9b9ba741aabe53d54219b84fa0497d29afa.png" />
 </div>
 </div>
 </section>
@@ -5715,8 +5717,8 @@ function setup() {
 <p>Good morning, Kadi! I always celebrate hearing from you. As you know, our culture is not rooted in literacy, but the wisdom of our ancestors has been passed down through generations, including the teachings from your late grandfather, with whom you shared the clan name, “Dhatemwa kulala aye dhayawukana emibala.”</p>
 <p>It reminds one of the diversity of people and their perspectives. Just like the “drums cut from the stem of the same tree”, each person creates a unique sound and articulates their philosophy of life differently. This understanding becomes especially apparent when dealing with twins, who, despite sharing the same biological origin, often display distinct behavior preferences.</p>
 <p>By cherishing the wisdom embedded in this saying, one may constantly be reminded to manage their expectations of others with sensitivity, empathy and understanding. By recognizing and appreciating the individuality of each person, one may foster better relationships and create <code class="docutils literal notranslate"><span class="pre">harmony</span></code> within a community.</p>
-<p>P.J.M
-Munyonyo, Uganda
+<p>P.J.M<br />
+Munyonyo, Uganda<br />
 August 20, 2020 at 3:10 AM (EST)</p>
 </section>
 <section id="concerto">
@@ -6121,6 +6123,64 @@ git push #success!
 </pre></div>
 </div>
 </section>
+<section id="private">
+<h2>782. private<a class="headerlink" href="#private" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>established first ever private repo workflow</p></li>
+<li><p>means no one can clone this repo</p></li>
+<li><p>but i can clone it to other machines</p></li>
+<li><p>also i can still create jb &amp; push</p></li>
+<li><p>just can’t share a url</p></li>
+<li><p>but might push _build/html to public repo</p></li>
+</ul>
+<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>01. ssh-keygen -t ed25519 -C &quot;dhatemwakulala@gmail.com&quot;
+02. /users/d/.ssh/id_adm12345
+03. ngoma
+
+Your identification has been saved in /users/d/.ssh/id_adm12345
+Your public key has been saved in /users/d/.ssh/id_adm12345.pub
+The key fingerprint is:
+SHA256:9ZG067hcjqW7G+hksoeRZy9NJxY2+I9Q26IMmcev9PM dhatemwakulala@gmail.com
+The key&#39;s randomart image is:
++--[ED25519 256]--+
+|            .    |
+|           . o   |
+|         .. +    |
+|        ..=. o   |
+|       =S+ =o    |
+|      * *.Boo    |
+|      .O=Oo*+    |
+|      .B=o*O.    |
+|      ..ooX*E    |
++----[SHA256]-----+
+
+
+04. cat /users/d/.ssh/id_adm12345.pub
+05. private (or public) github repo
+06. deploy key on github
+07. eval &quot;$(ssh-agent -s)&quot;
+08. Agent pid 42306
+09. pbcopy &lt; ~/.ssh/id_adm12345.pub
+10. chmod 600 ~/.ssh/id_adm12345
+11. chmod 644 ~/.ssh/id_adm12345.pub
+12. ssh-add ~/.ssh/id_adm12345
+13. ngoma
+14. git clone git@github.com:dhatemwakulala/tusirike.git
+15. &amp;etc
+
+</pre></div>
+</div>
+</section>
+<section id="id74">
+<h2>783. gratitude <a class="headerlink" href="#id74" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>what a day: i am grateful for the opportunity to learn</p></li>
+<li><p>lets see if ever i need to save stuff locally</p></li>
+<li><p>but looks like i can just push to github</p></li>
+<li><p>rolloever dropbox and google drive</p></li>
+<li><p>and then just pull from github</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -6436,6 +6496,8 @@ git push #success!
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ngomakelele-gmail-com">779. ngomakelele@gmail.com</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drum">780. drum 🪘</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upgraded">781. upgraded</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#private">782. private</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id74">783. gratitude </a></li>
 </ul>
 </li>
 </ul>
