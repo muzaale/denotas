@@ -4955,7 +4955,7 @@ _(Provide answer here)_
 <p>Euler’s identity, equation <a class="reference internal" href="#equation-euler">()</a>, was elected one of the
 most beautiful mathematical formulas.</p>
 <blockquote>
-<div><p>Jul 28, 2023 | 19435 words | 97 min read</p>
+<div><p>Jul 28, 2023 | 19571 words | 98 min read</p>
 </div></blockquote>
 </section>
 </section>
@@ -5423,7 +5423,7 @@ Moneyline odds profit: $250000.00
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/90b1ac5e2a3722e54edbd01c0db3aafd83aaed1c464fa5bead081aafa80e9156.png" src="_images/90b1ac5e2a3722e54edbd01c0db3aafd83aaed1c464fa5bead081aafa80e9156.png" />
+<img alt="_images/fd44c99a86faec3bcbc1e43072d5edabc238c310b696856d9d01b74aecec8299.png" src="_images/fd44c99a86faec3bcbc1e43072d5edabc238c310b696856d9d01b74aecec8299.png" />
 </div>
 </div>
 </section>
@@ -6752,6 +6752,168 @@ Gospel music’s influence has extended beyond the United States, reaching diver
 <li><p>thats 24 weeks</p></li>
 <li><p>covers 19 topics</p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Create data for the skill and challenge levels</span>
+<span class="n">weeks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">challenge_levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># Define the flow channel boundaries</span>
+<span class="n">flow_channel</span> <span class="o">=</span> <span class="n">weeks</span>
+
+<span class="c1"># Adjust the phase and amplitude of the sinusoid wave</span>
+<span class="n">phase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">16</span>  <span class="c1"># Reducing the wavelength by a quarter</span>
+<span class="n">amplitude</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="n">flow_channel</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">weeks</span> <span class="o">+</span> <span class="n">phase</span><span class="p">)</span> <span class="o">*</span> <span class="n">amplitude</span>
+
+<span class="c1"># Define the yellow zone boundaries</span>
+<span class="n">yellow_zone_low</span> <span class="o">=</span> <span class="n">flow_channel</span> <span class="o">-</span> <span class="mf">1.5</span>
+<span class="n">yellow_zone_high</span> <span class="o">=</span> <span class="n">flow_channel</span> <span class="o">+</span> <span class="mf">1.5</span>
+
+<span class="c1"># Define the sinusoid function with the middle yellow line as its axis</span>
+<span class="n">sinusoid</span> <span class="o">=</span> <span class="n">flow_channel</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">weeks</span> <span class="o">+</span> <span class="n">phase</span><span class="p">)</span> <span class="o">*</span> <span class="n">amplitude</span>
+
+<span class="c1"># Define the anxiety and boredom areas</span>
+<span class="n">anxiety_area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">challenge_levels</span> <span class="o">&gt;</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="n">challenge_levels</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<span class="n">boredom_area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">challenge_levels</span> <span class="o">&lt;</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="n">challenge_levels</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="c1"># Plotting</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Plot the anxiety and boredom areas</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">weeks</span><span class="p">,</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Anxiety&#39;</span><span class="p">,</span> <span class="n">interpolate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">weeks</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Boredom&#39;</span><span class="p">,</span> <span class="n">interpolate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">weeks</span><span class="p">,</span> <span class="n">yellow_zone_low</span><span class="p">,</span> <span class="n">yellow_zone_high</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Flow Channel&#39;</span><span class="p">,</span> <span class="n">interpolate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Plot the sinusoid function</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">weeks</span><span class="p">,</span> <span class="n">sinusoid</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add arrowhead to the sinusoid line (correct direction)</span>
+<span class="n">arrow_pos</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">weeks</span><span class="p">[</span><span class="n">arrow_pos</span><span class="p">],</span> <span class="n">sinusoid</span><span class="p">[</span><span class="n">arrow_pos</span><span class="p">],</span> <span class="n">weeks</span><span class="p">[</span><span class="n">arrow_pos</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">weeks</span><span class="p">[</span><span class="n">arrow_pos</span><span class="p">],</span> <span class="n">sinusoid</span><span class="p">[</span><span class="n">arrow_pos</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span> <span class="o">-</span> <span class="n">sinusoid</span><span class="p">[</span><span class="n">arrow_pos</span><span class="p">],</span>
+          <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">head_length</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Plot the flow channel boundaries</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">weeks</span><span class="p">,</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="c1"># Set plot labels and title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Weeks&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Challenge Levels&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gospel Music University&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+
+<span class="c1"># Set plot limits</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">19</span><span class="p">)</span>  <span class="c1"># Weeks from 1 to 19</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">19</span><span class="p">)</span>  <span class="c1"># Challenge levels from 1 to 19</span>
+
+<span class="c1"># Add text annotations</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="s1">&#39;Anxiety&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mf">11.5</span><span class="p">,</span> <span class="s1">&#39;Flow&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;Relaxation&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;lightgreen&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;lightgreen&#39;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">))</span>
+
+<span class="c1"># Hide the grid</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Display the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/db8470438a72100a41a11253cbd66ee71af4b93135a8ee80afee1bc8f44f5e23.png" src="_images/db8470438a72100a41a11253cbd66ee71af4b93135a8ee80afee1bc8f44f5e23.png" />
+</div>
+</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>🟥</p></td>
+<td><p>Anxiety - Challenge levels &gt; Skill levels</p></td>
+</tr>
+<tr class="row-odd"><td><p>🟩</p></td>
+<td><p>Boredom - Challenge levels &lt; Skill levels</p></td>
+</tr>
+<tr class="row-even"><td><p>🟨</p></td>
+<td><p>Flow Channel - ±1.5 units from Arousal Level</p></td>
+</tr>
+<tr class="row-odd"><td><p>🟣</p></td>
+<td><p>Sinusoid function with Flow Channel as its axis</p></td>
+</tr>
+<tr class="row-even"><td><p>—–</p></td>
+<td><p>——————————————————-</p></td>
+</tr>
+<tr class="row-odd"><td><p>Week</p></td>
+<td><p>Experience</p></td>
+</tr>
+<tr class="row-even"><td><p>——</p></td>
+<td><p>——————————————————-</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>Introduction to Music Theory and Gospel Music History</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>Learning Melodies and Chords for Gospel Songs</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>Practicing Rhythms in Different Time Signatures</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>Exploring Gospel Harmony and Vocal Techniques</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>Understanding Song Forms and Structure</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>Mastering Various Musical Instruments</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>Expressive Dynamics and Effective Performance</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>Exploring Gospel Music Tempo and Grooves</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>Emphasizing Articulation and Phrasing</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>Diving into Polyphonic Gospel Music</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>Immersing in Various Gospel Music Styles</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>Studying Gospel Music Compositions and Arrangements</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>Reflecting on the Emotions and Mood in Gospel Music</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>Analyzing Different Key Signatures in Gospel Music</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>Exploring Unique Scales in Gospel Music</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>Understanding Gospel Music Cadences</p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>Analyzing Advanced Chord Progressions</p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>Focusing on Inversions and Orchestration</p></td>
+</tr>
+<tr class="row-odd"><td><p>19</p></td>
+<td><p>Incorporating Ornamentation in Gospel Music</p></td>
+</tr>
+</tbody>
+</table>
+<p><code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">guess</span> <span class="pre">week</span> <span class="pre">two</span> <span class="pre">leaves</span> <span class="pre">me</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">red/yellow</span> <span class="pre">zone.</span> <span class="pre">Was</span> <span class="pre">initially</span> <span class="pre">bored</span> <span class="pre">but</span> <span class="pre">charting</span> <span class="pre">this</span> <span class="pre">out</span> <span class="pre">and</span> <span class="pre">linking</span> <span class="pre">it</span> <span class="pre">to</span> <span class="pre">my</span> <span class="pre">emerging</span> <span class="pre">philosophy</span> <span class="pre">of</span> <span class="pre">learning</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">fun</span> <span class="pre">exercise</span> <span class="pre">that</span> <span class="pre">has</span> <span class="pre">me</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">flow</span> <span class="pre">channel</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">real</span> <span class="pre">world.</span></code></p>
 </section>
 </section>
 
