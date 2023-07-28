@@ -63,7 +63,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn202307';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn202307-bugged';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -231,7 +231,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn202307.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn202307-bugged.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -261,7 +261,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/bdn202307.ipynb" target="_blank"
+      <li><a href="_sources/bdn202307-bugged.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -626,9 +626,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id76">785. r</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extensions">786. extensions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter">787. jupyter</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drawblood">788. drawblood 🩸</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow3-0">789. workflow3.0</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow3-1">790. workflow3.1</a></li>
 </ul>
 </li>
 </ul>
@@ -3083,12 +3080,11 @@ by the presence of our Lord
 <section id="unix">
 <h2>718. unix<a class="headerlink" href="#unix" title="Permalink to this heading">#</a></h2>
 <p>To create .ipynb files named as “bdnYYYYMM.ipynb” for the period from January 2011 to December 2024 by copying the content of “bdn001.ipynb,” you can use the following Linux command:</p>
-<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>for y in {2011..2024}; do
-  for m in {01..12}; do
-    cp bdn001.ipynb &quot;bdn${y}${m}.ipynb&quot;
-  done
-done
-
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>y<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">2011</span>..2024<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span>m<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">01</span>..12<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>cp<span class="w"> </span>bdn001.ipynb<span class="w"> </span><span class="s2">&quot;bdn</span><span class="si">${</span><span class="nv">y</span><span class="si">}${</span><span class="nv">m</span><span class="si">}</span><span class="s2">.ipynb&quot;</span>
+<span class="w">  </span><span class="k">done</span>
+<span class="k">done</span>
 </pre></div>
 </div>
 <p>This command uses nested loops. The outer loop iterates through the years from 2011 to 2024, and the inner loop iterates through the months represented by {01..12}. The command copies the content of “bdn001.ipynb” to files named as “bdnYYYYMM.ipynb” for each combination of year and month.</p>
@@ -3447,9 +3443,9 @@ done
 <li><p>successful, insightful, experiential</p></li>
 <li><p>had <a class="reference external" href="https://www.youtube.com/watch?v=4XpnKHJAok8">accidentally</a> deleted notes 718-719</p></li>
 <li><p><a class="reference external" href="https://nceas.github.io/oss-lessons/version-control/1-git-basics.html">version control</a> &amp; <a class="reference external" href="https://homes.cs.washington.edu/~mernst/advice/version-control.html#descriptive-commit-message">precise commit statement</a> to the rescue:</p>
-<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>(base) d@Poseidon denotas % git commit -m &quot;fancy r syntax: suppressWarnings({
-  invisible({
-    rm(list = ls())&quot;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>d@Poseidon<span class="w"> </span>denotas<span class="w"> </span>%<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;fancy r syntax: suppressWarnings({</span>
+<span class="s2">  invisible({</span>
+<span class="s2">    rm(list = ls())&quot;</span>
 </pre></div>
 </div>
 </li>
@@ -4586,7 +4582,7 @@ _(Provide answer here)_
 <p><span class="caption-text">Party time!</span><a class="headerlink" href="#rst-fun-fish" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>A reference from inside: <a class="reference internal" href="bdn202307-bugged.html#rst-fun-fish"><span class="std std-ref">Party time!</span></a></p>
+<p>A reference from inside: <a class="reference internal" href="#rst-fun-fish"><span class="std std-ref">Party time!</span></a></p>
 <p>A reference from outside: <span class="xref std std-ref">syntax/directives/parsing</span></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -4603,10 +4599,10 @@ _(Provide answer here)_
 <p>Since Pythagoras, we know that <span class="math notranslate nohighlight">\(a^2 + b^2 = c^2\)</span></p>
 <div class="math notranslate nohighlight" id="equation-euler">
 <span class="eqno">()<a class="headerlink" href="#equation-euler" title="Permalink to this equation">#</a></span>\[e^{i\pi} + 1 = 0\]</div>
-<p>Euler’s identity, equation <a class="reference internal" href="bdn202307-bugged.html#equation-euler">()</a>, was elected one of the
+<p>Euler’s identity, equation <a class="reference internal" href="#equation-euler">()</a>, was elected one of the
 most beautiful mathematical formulas.</p>
 <blockquote>
-<div><p>Jul 28, 2023 | 18884 words | 94 min read</p>
+<div><p>Jul 28, 2023 | 18723 words | 94 min read</p>
 </div></blockquote>
 </section>
 </section>
@@ -5723,16 +5719,16 @@ In the context of research on older living kidney donors, the Concerto represent
 </li>
 </ul>
 <hr class="docutils" />
-<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t ed25519 -C &quot;dhatemwakulala@gmail.com&quot;
-/Users/d/.ssh/id_ed25519 already exists
-Overwrite (y/n)? n
-ssh-keygen -t adm16181 -C &quot;dhatemwakulala@gmail.com&quot;
-Enter file in which to save the key: /Users/d/.ssh/id_adm16181
-Enter passphrase (empty for no passphrase):drum
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;dhatemwakulala@gmail.com&quot;</span>
+/Users/d/.ssh/id_ed25519<span class="w"> </span>already<span class="w"> </span>exists
+Overwrite<span class="w"> </span><span class="o">(</span>y/n<span class="o">)</span>?<span class="w"> </span>n
+ssh-keygen<span class="w"> </span>-t<span class="w"> </span>adm16181<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;dhatemwakulala@gmail.com&quot;</span>
+Enter<span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>which<span class="w"> </span>to<span class="w"> </span>save<span class="w"> </span>the<span class="w"> </span>key:<span class="w"> </span>/Users/d/.ssh/id_adm16181
+Enter<span class="w"> </span>passphrase<span class="w"> </span><span class="o">(</span>empty<span class="w"> </span><span class="k">for</span><span class="w"> </span>no<span class="w"> </span>passphrase<span class="o">)</span>:drum
 </pre></div>
 </div>
 <hr class="docutils" />
-<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>Your identification has been saved in /Users/d/.ssh/id_adm16181 #private key
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Your identification has been saved in /Users/d/.ssh/id_adm16181 #private key
 Your public key has been saved in /Users/d/.ssh/id_adm16181.pub #public key
 
 The key fingerprint is:
@@ -5752,29 +5748,29 @@ The key&#39;s randomart image is:
 </pre></div>
 </div>
 <hr class="docutils" />
-<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>cd /users/d/.ssh
-cat id_adm16181.pub #add to repo
-cat id_adm16181 #add to config
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/users/d/.ssh
+cat<span class="w"> </span>id_adm16181.pub<span class="w"> </span><span class="c1">#add to repo</span>
+cat<span class="w"> </span>id_adm16181<span class="w"> </span><span class="c1">#add to config</span>
 </pre></div>
 </div>
 <hr class="docutils" />
-<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>eval &quot;$(ssh-agent -s)&quot;
-Agent pid 36588
-open ~/.ssh/config #paste stuff
-ssh-add --apple-use-keychain ~/.ssh/id_adm16181.pub
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+Agent<span class="w"> </span>pid<span class="w"> </span><span class="m">36588</span>
+open<span class="w"> </span>~/.ssh/config<span class="w"> </span><span class="c1">#paste stuff</span>
+ssh-add<span class="w"> </span>--apple-use-keychain<span class="w"> </span>~/.ssh/id_adm16181.pub
 </pre></div>
 </div>
 <hr class="docutils" />
-<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>pbcopy &lt; ~/.ssh/id_adm16181.pub #copy contents to clipboard
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pbcopy<span class="w"> </span>&lt;<span class="w"> </span>~/.ssh/id_adm16181.pub<span class="w"> </span><span class="c1">#copy contents to clipboard</span>
 </pre></div>
 </div>
 <hr class="docutils" />
-<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>git remote -v
-git remote set-url origin git@github.com:dhatemwakulala/kelele.git
-ssh-add ~/.ssh/id_adm16181
-git push
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>remote<span class="w"> </span>-v
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:dhatemwakulala/kelele.git
+ssh-add<span class="w"> </span>~/.ssh/id_adm16181
+git<span class="w"> </span>push
 drum
-git push #success!
+git<span class="w"> </span>push<span class="w"> </span><span class="c1">#success!</span>
 </pre></div>
 </div>
 </section>
@@ -5788,7 +5784,7 @@ git push #success!
 <li><p>just can’t share a url</p></li>
 <li><p>but might push _build/html to public repo</p></li>
 </ul>
-<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>01. ssh-keygen -t ed25519 -C &quot;dhatemwakulala@gmail.com&quot;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>01. ssh-keygen -t ed25519 -C &quot;dhatemwakulala@gmail.com&quot;
 02. /users/d/.ssh/id_adm12345
 03. ngoma
 
@@ -6212,55 +6208,6 @@ Contributions are always welcome! Please see the contributing guide for more det
 </ol>
 <p>If you have followed these steps and are still facing issues, double-check that your environment configurations are correct and that the necessary packages and dependencies are installed. Additionally, review the Jupyter Notebook logs for any error messages that might provide more information about the problem. If the problem persists, consult the official documentation for Jupyter and R for further troubleshooting.</p>
 <p><code class="docutils literal notranslate"><span class="pre">rerun</span> <span class="pre">later</span></code>: jupyter lab wasn’t available at 4:44 AM</p>
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>git remote set-url origin <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:dhatemwakulala/tusirike.git
-git remote -v
-ssh-add -D
-ssh-add ~/.ssh/id_adm12345
-ssh-add -l
-ssh -T <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>
-git status
-git push origin main</p>
-</div>
-</aside>
-</section>
-<section id="drawblood">
-<h2>788. <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#timecheck">drawblood</a> 🩸<a class="headerlink" href="#drawblood" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>to drawblood is to challenge &amp; put one at risk of a physical or emotional injury 👆 <span id="id77">[<a class="reference internal" href="references.html#id66" title="Nietzsche. Oh dionysus! 1888. URL: https://muzaale.github.io/denotas/bdn202307.html#drawblood.">60</a>]</span></p></li>
-<li><p>since music is a powerful emotive force at its best it can draw blood</p></li>
-<li><p>it is the dionysian man who will respond to the challenge with joy</p></li>
-<li><p>a prospect of an eternal recurrence of challenges is a prospect of eternal joy</p></li>
-<li><p>we may summarize drawing blood as follows: challenge-level &gt; skill-level</p></li>
-<li><p>being a good sport, the dionysian man responds to this prospect with undescribable joy</p></li>
-<li><p>life is about little else than drawing blood, whining about those who draw blood, or hiding!</p></li>
-</ul>
-</section>
-<section id="workflow3-0">
-<h2>789. workflow3.0<a class="headerlink" href="#workflow3-0" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>pairs</p>
-<ul>
-<li><p>may mean python, ai, r, stata</p></li>
-<li><p>but also means mentor-mentee</p></li>
-<li><p>and in this case public-private key encryption</p></li>
-<li><p>git push -f origin main # necessary at times</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="workflow3-1">
-<h2>790. workflow3.1<a class="headerlink" href="#workflow3-1" title="Permalink to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>beware of mistaking repo-clone for work-dir</p></li>
-<li><p>just cost me an entire day</p></li>
-<li><p>can happen to the best of us!</p></li>
-<li><p>because of identical content :(</p></li>
-<li><p>let this be an earlier diagnostic</p></li>
-</ol>
 </section>
 </section>
 
@@ -6586,9 +6533,6 @@ git push origin main</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id76">785. r</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extensions">786. extensions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter">787. jupyter</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drawblood">788. drawblood 🩸</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow3-0">789. workflow3.0</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow3-1">790. workflow3.1</a></li>
 </ul>
 </li>
 </ul>
