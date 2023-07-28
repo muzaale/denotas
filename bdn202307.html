@@ -618,7 +618,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drum">780. drum 🪘</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upgraded">781. upgraded</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#private">782. private</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id74">783. gratitude </a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id74">783. gratitude 🙏</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mcr">784. mcr</a></li>
 </ul>
 </li>
 </ul>
@@ -4941,7 +4942,7 @@ _(Provide answer here)_
 <p>Euler’s identity, equation <a class="reference internal" href="#equation-euler">()</a>, was elected one of the
 most beautiful mathematical formulas.</p>
 <blockquote>
-<div><p>Jul 27, 2023 | 18021 words | 90 min read</p>
+<div><p>Jul 27, 2023 | 18035 words | 90 min read</p>
 </div></blockquote>
 </section>
 </section>
@@ -5409,7 +5410,7 @@ Moneyline odds profit: $250000.00
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/a2a166e4484f255468df83dcc89ec9b9ba741aabe53d54219b84fa0497d29afa.png" src="_images/a2a166e4484f255468df83dcc89ec9b9ba741aabe53d54219b84fa0497d29afa.png" />
+<img alt="_images/e4445fcaadd68ac079018ed7b15c68b72aaf934ebcec84b243e803481f40dc18.png" src="_images/e4445fcaadd68ac079018ed7b15c68b72aaf934ebcec84b243e803481f40dc18.png" />
 </div>
 </div>
 </section>
@@ -6172,7 +6173,7 @@ The key&#39;s randomart image is:
 </div>
 </section>
 <section id="id74">
-<h2>783. gratitude <a class="headerlink" href="#id74" title="Permalink to this heading">#</a></h2>
+<h2>783. gratitude 🙏<a class="headerlink" href="#id74" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>what a day: i am grateful for the opportunity to learn</p></li>
 <li><p>lets see if ever i need to save stuff locally</p></li>
@@ -6180,6 +6181,211 @@ The key&#39;s randomart image is:
 <li><p>rolloever dropbox and google drive</p></li>
 <li><p>and then just pull from github</p></li>
 </ul>
+</section>
+<section id="mcr">
+<h2>784. mcr<a class="headerlink" href="#mcr" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>melody</p>
+<ul>
+<li><p>shared note</p></li>
+</ul>
+</li>
+<li><p>chords</p>
+<ul>
+<li><p>with the note</p></li>
+</ul>
+</li>
+<li><p>rhythm</p>
+<ul>
+<li><p>the soul of the music</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Sample data for demonstration purposes</span>
+<span class="n">languages</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;English&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Spanish&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;French&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;German&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Latin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Italian&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Hindi&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Arabic&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Hebrew&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Swahili&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Yoruba&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Igbo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Zulu&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Xhosa&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Russian&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Chinese&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Japanese&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Korean&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Turkish&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Greek&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Thai&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Vietnamese&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Indonesian&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Malay&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Tagalog&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Bengali&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Punjabi&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Tamil&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1"># English equivalents of &quot;melody,&quot; &quot;harmony,&quot; and &quot;rhythm&quot; for each language</span>
+<span class="n">melody</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;melody&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;melody&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;melody&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;melody&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;melody&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;melody&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;स्वर&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;نغمة&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;מֶלוֹדִיָה&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;melodi&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;orin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;mkpọ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;inkanyezi&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;umculo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;мелодия&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;旋律&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;メロディ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;멜로디&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;melodi&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;μελωδία&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ทำนองเพลง&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;giai điệu&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;điệu nhạc&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;melodi&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;awit&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ਮੈਲੋਡੀ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;இசை&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;మెలడీ&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">harmony</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;harmony&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;armonía&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;harmonie&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Harmonie&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;harmonia&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;armonia&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;सामंजस्य&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;توافق&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;הַרְמוֹנִיָה&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;umwiliso&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;oorin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;imeela&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ukunqanda&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;isigubhu&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;гармония&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;和谐&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;harmony&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Harmonie&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;uyum&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;αρμονία&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ความสงบ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;hòa âm&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;keselarasan&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;harmoni&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;uskong&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ਸ਼ਾਨਦਾਰੀ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;இசைப்பொருள்&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;హార్మోనీ&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">rhythm</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;rhythm&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ritmo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;rythme&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Rhythmus&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ritmo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ritmo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ताल&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;إيقاع&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;קְצָב&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;mtindo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;irin&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ọgbanje&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;isigubhu&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;isigubhu&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ритм&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;节奏&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;リズム&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;리듬&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ritim&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ρυθμός&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;จังหวะ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nhịp điệu&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nhịp điệu&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;iritmo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pandayaw&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ਤਾਲ&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;இசையின் பாட்டின்&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;రిద్ధం&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="c1"># Creating the table using pandas</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Languages&quot;</span><span class="p">:</span> <span class="n">languages</span><span class="p">,</span>
+    <span class="s2">&quot;Melody&quot;</span><span class="p">:</span> <span class="n">melody</span><span class="p">,</span>
+    <span class="s2">&quot;Harmony&quot;</span><span class="p">:</span> <span class="n">harmony</span><span class="p">,</span>
+    <span class="s2">&quot;Rhythm&quot;</span><span class="p">:</span> <span class="n">rhythm</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Displaying the table</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     Languages      Melody       Harmony            Rhythm
+0      English      melody       harmony            rhythm
+1      Spanish      melody       armonía             ritmo
+2       French      melody      harmonie            rythme
+3       German      melody      Harmonie          Rhythmus
+4        Latin      melody      harmonia             ritmo
+5      Italian      melody       armonia             ritmo
+6        Hindi        स्वर      सामंजस्य               ताल
+7       Arabic        نغمة         توافق             إيقاع
+8       Hebrew  מֶלוֹדִיָה  הַרְמוֹנִיָה             קְצָב
+9      Swahili      melodi      umwiliso            mtindo
+10      Yoruba        orin         oorin              irin
+11        Igbo        mkpọ        imeela           ọgbanje
+12        Zulu   inkanyezi     ukunqanda          isigubhu
+13       Xhosa      umculo      isigubhu          isigubhu
+14     Russian     мелодия      гармония              ритм
+15     Chinese          旋律            和谐                节奏
+16    Japanese        メロディ       harmony               リズム
+17      Korean         멜로디      Harmonie                리듬
+18     Turkish      melodi          uyum             ritim
+19       Greek     μελωδία       αρμονία            ρυθμός
+20        Thai   ทำนองเพลง       ความสงบ            จังหวะ
+21  Vietnamese   giai điệu        hòa âm         nhịp điệu
+22  Indonesian   điệu nhạc   keselarasan         nhịp điệu
+23       Malay      melodi       harmoni            iritmo
+24     Tagalog        awit        uskong          pandayaw
+25     Bengali      ਮੈਲੋਡੀ      ਸ਼ਾਨਦਾਰੀ               ਤਾਲ
+26     Punjabi         இசை  இசைப்பொருள்  இசையின் பாட்டின்
+27       Tamil       మెలడీ      హార్మోనీ            రిద్ధం
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -6497,7 +6703,8 @@ The key&#39;s randomart image is:
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#drum">780. drum 🪘</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upgraded">781. upgraded</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#private">782. private</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id74">783. gratitude </a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id74">783. gratitude 🙏</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mcr">784. mcr</a></li>
 </ul>
 </li>
 </ul>
