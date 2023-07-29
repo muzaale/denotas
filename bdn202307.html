@@ -641,6 +641,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ourlab">797. ourlab</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spectrum">798. spectrum</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id81">799. gmu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table1">800. table1</a></li>
 </ul>
 </li>
 </ul>
@@ -5431,7 +5432,7 @@ Moneyline odds profit: $250000.00
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/069628bc4c8a36d073b5a68a2346ef779ec2d7a82bb522566cf4aee08985cbc4.png" src="_images/069628bc4c8a36d073b5a68a2346ef779ec2d7a82bb522566cf4aee08985cbc4.png" />
+<img alt="_images/ed14dd6a56d1953590b36319a911aa803a283ff7f0921f5b71a9d7a882f81209.png" src="_images/ed14dd6a56d1953590b36319a911aa803a283ff7f0921f5b71a9d7a882f81209.png" />
 </div>
 </div>
 </section>
@@ -7196,6 +7197,129 @@ git push -u origin master
 </ul>
 <p>2nd diatonic chord: 1, b3, 5, b7</p>
 </section>
+<section id="table1">
+<h2>800. table1<a class="headerlink" href="#table1" title="Permalink to this heading">#</a></h2>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="c1">*! inspired by 340.600.71 </span>
+<span class="c1">*! by Vincent Jin &amp; Abi Muzaale</span>
+<span class="c1">*! version 3.02 released on July 5, 2022 </span>
+<span class="c1">*! renamed table1_afecdvi on May 21, 2023</span>
+<span class="c1">*! table1_afecdvi=table1_options+ind_translator</span>
+<span class="k">qui</span> {
+<span class="k">	if</span> <span class="m">0</span> { <span class="c1">//table1 on the dailygrind </span>
+		this .do<span class="k"> file</span> creates table1. its name is pronouned
+		<span class="s">&quot;effective immediately&quot;</span>, but is really a play<span class="k"> on</span>
+		abi fawaz<span class="k"> encode</span> code<span class="k"> decode</span> vincent (with)
+		immediate (effect)
+		table1_afecvi<span class="m">.</span>ado includes<span class="k"> two</span> sequential programs:
+		table1_options<span class="m">.</span>ado <span class="o">&amp;</span> ind_translator<span class="m">.</span>ado
+		was inspired to<span class="k"> do</span> this<span class="k"> by</span> stata&#39;s native<span class="k"> stcox</span><span class="m">.</span>ado 
+	}
+<span class="k">	if</span> <span class="m">1</span> { <span class="c1">//edit file path to suit your machine</span>
+		cls
+<span class="k">		global</span> path1  <span class="o">~/</span>dropbox<span class="o">/</span>2e<span class="m">.</span>πρᾶξις,σ<span class="o">/</span><span class="m">3.</span>acetyl<span class="m">.</span>neurotrans<span class="o">/</span>big<span class="m">.</span>data<span class="o">/</span>
+<span class="k">		global</span> path2 big<span class="m">.</span>data<span class="m">.</span>nchs<span class="o">/</span>nchs<span class="m">.</span>proposal<span class="o">/</span>nchs<span class="m">.</span>04project<span class="o">/</span>
+<span class="k">		global</span> path3 nchs<span class="m">.</span>project<span class="m">.</span>return<span class="o">*/</span>
+<span class="k">		global</span> workdir <span class="s">&quot;</span><span class="vg">$path1$path2$path3</span><span class="s">&quot;</span>
+	}
+<span class="k">	if</span> <span class="m">2</span> {
+<span class="k">		use</span> <span class="s">&quot;</span><span class="vg">${workdir}</span><span class="s">18_nhtable102feb2023.dta&quot;</span>,<span class="k"> clear</span> 
+		<span class="c1">//g string=&quot;string&quot;</span>
+	}
+<span class="k">	if</span> <span class="m">3</span> {
+		<span class="c1">//noi ds, has(type string)</span>
+		<span class="c1">//global string: di &quot;`r(varlist)&#39;&quot;</span>
+<span class="k">		foreach</span> v of<span class="k"> varlist</span> <span class="o">*</span> {
+<span class="k">			replace</span> <span class="nv">`v&#39;</span>=<span class="nf">round</span>(<span class="nv">`v&#39;</span>)
+<span class="k">			levelsof</span> <span class="nv">`v&#39;</span>
+<span class="k">			if</span> <span class="nf">r</span>(r) <span class="o">==</span> <span class="m">2</span> {
+<span class="k">				noi di</span> <span class="s">&quot;binary vars: </span><span class="nv">`v&#39;</span><span class="s">&quot;</span>
+			}
+<span class="k">			else if</span> <span class="nf">inrange</span>(<span class="nf">r</span>(r),<span class="m">3</span>,<span class="m">30</span>) {
+<span class="k">				noi di</span> <span class="s">&quot;categorical vars: </span><span class="nv">`v&#39;</span><span class="s">&quot;</span>
+			} 
+<span class="k">			else</span> {
+<span class="k">				noi di</span> <span class="s">&quot;continuous vars: </span><span class="nv">`v&#39;</span><span class="s">&quot;</span>
+			}
+		}
+	}
+<span class="k">	if</span> <span class="m">4</span> {
+		#delimit ;
+<span class="k">		noi</span> table1_afecdvi, 
+		    excel(<span class="s">&quot;Table1_NHANES&quot;</span>
+		    )
+		    title(
+		    <span class="s">&quot;Table 1. Demographic &amp; health characteristics of NHANES, 1988-2018&quot;</span>
+		    )
+<span class="k">		    by</span>(race2
+		    )
+		    cont(
+		    acr
+		    creat
+		    income 
+		    bmi
+		    logacr 
+		    egfr 
+		    age
+		    sbp
+		    hba1c
+		    glucose 
+		    )
+		    binary(
+			female
+			smk
+			dm
+			htn
+		    )
+		    multi(
+			educ
+		    )
+		    foot(
+			acr
+		    creat
+		    income 
+		    bmi
+		    logacr 
+		    egfr 
+		    age
+		    sbp
+		    hba1c
+		    glucose
+			female
+			smk
+			dm
+			htn
+			educ
+		    )
+		 ;
+		#delimit cr
+	}
+}            
+<span class="k">capture program drop</span> _all
+<span class="k">program</span> define ind_translator
+<span class="k">	syntax</span>, row(int) col(int)
+
+	<span class="c1">// tokenize the alphabet</span>
+<span class="k">	local</span> alphabet <span class="s">&quot;</span><span class="nv">`c(ALPHA)&#39;</span><span class="s">&quot;</span>
+<span class="k">	tokenize</span> <span class="nv">`alphabet&#39;</span>
+	<span class="c1">// now translate col</span>
+<span class="k">	local</span> col_helper = <span class="nv">`col&#39;</span>
+<span class="k">	</span>
+<span class="k">	</span>
+<span class="k">    while</span> (<span class="nv">`col_helper&#39;</span> <span class="o">&gt;</span> <span class="m">0</span>) {
+<span class="k">		local</span> temp_helper2 = (<span class="nv">`col_helper&#39;</span> <span class="o">-</span> <span class="m">1</span>)
+<span class="k">		local</span> temp_helper = <span class="nf">mod</span>(<span class="nv">`temp_helper2&#39;</span>, <span class="m">26</span>) <span class="o">+</span> <span class="m">1</span>
+<span class="k">        local</span> col_name :<span class="k"> di</span> <span class="s">&quot;</span><span class="nv">``temp_helper&#39;&#39;</span><span class="s">&quot;</span> <span class="s">&quot;</span><span class="nv">`col_name&#39;</span><span class="s">&quot;</span>
+<span class="k">        local</span> col_helper = (<span class="nv">`col_helper&#39;</span> <span class="o">-</span> <span class="nv">`temp_helper&#39;</span>) <span class="o">/</span> <span class="m">26</span>
+    } 
+	
+	
+	<span class="c1">// generate a global macro that can be used in main program</span>
+<span class="k">	global</span> ul_cell <span class="s">&quot;</span><span class="nv">`col_name&#39;`row&#39;</span><span class="s">&quot;</span>
+<span class="k">	</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -7535,6 +7659,7 @@ git push -u origin master
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ourlab">797. ourlab</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spectrum">798. spectrum</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id81">799. gmu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table1">800. table1</a></li>
 </ul>
 </li>
 </ul>
