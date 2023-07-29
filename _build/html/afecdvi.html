@@ -363,7 +363,53 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  
+  <div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t ed25519 -C &quot;dhatemwakulala@gmail.com&quot;
+/users/d/.ssh/id_yaffeffena.pub 
+uganda
+
+
+(base) d@Poseidon ffena % ssh-keygen -t ed25519 -C &quot;dhatemwakulala@gmail.com&quot;
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/d/.ssh/id_ed25519): /users/d/.ssh/id_yaffeffena.pub      
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /users/d/.ssh/id_yaffeffena.pub
+Your public key has been saved in /users/d/.ssh/id_yaffeffena.pub.pub
+The key fingerprint is:
+SHA256:hx0P+a1nae09w69jrj4wBpnjib3xSHk3E71rSDxo4gw dhatemwakulala@gmail.com
+The key&#39;s randomart image is:
++--[ED25519 256]--+
+|                 |
+|           .     |
+|         o+  .   |
+|        =o =...  |
+|       +S=ooo... |
+|      E O.B B..o |
+|       = X =.=*..|
+|        = . o+==.|
+|           .o*ooB|
++----[SHA256]-----+
+(base) d@Poseidon ffena %
+
+cd /users/d/.ssh/
+ls -l
+cat /users/d/.ssh/id_yaffeffena.pub # shouldn&#39;t have added .pub
+cat id_yaffeffena.pub
+cat id_yaffeffena.pub.pub
+deploy .pub key on github
+eval &quot;$(ssh-agent -s)&quot;
+Agent pid 26700
+pbcopy &lt; ~/.ssh/id_yaffeffena.pub.pub
+chmod 600 ~/.ssh/id_yaffeffena.pub
+chmod 644 ~/.ssh/id_yaffeffena.pub.pub
+git remote set-url origin git@github.com:dhatemwakulala/ffena
+ssh-add ~/.ssh/id_yaffeffena.pub
+uganda
+git push 
+
+</pre></div>
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
