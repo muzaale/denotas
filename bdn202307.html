@@ -643,6 +643,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id81">799. gmu</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table1">800. table1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clone">801. clone</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-4-0">802. workflow 4.0</a></li>
 </ul>
 </li>
 </ul>
@@ -4965,7 +4966,7 @@ _(Provide answer here)_
 <p>Euler’s identity, equation <a class="reference internal" href="#equation-euler">()</a>, was elected one of the
 most beautiful mathematical formulas.</p>
 <blockquote>
-<div><p>Jul 29, 2023 | 19634 words | 98 min read</p>
+<div><p>Jul 29, 2023 | 19609 words | 98 min read</p>
 </div></blockquote>
 </section>
 </section>
@@ -5433,7 +5434,7 @@ Moneyline odds profit: $250000.00
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/45f2efcda7e7f68087a1a00c3947d36d5e5636957039b7b4412175f2ce88369e.png" src="_images/45f2efcda7e7f68087a1a00c3947d36d5e5636957039b7b4412175f2ce88369e.png" />
+<img alt="_images/f30585f7d117634f701e18ab46fc60c89432214667cc48a577462c055ca5f439.png" src="_images/f30585f7d117634f701e18ab46fc60c89432214667cc48a577462c055ca5f439.png" />
 </div>
 </div>
 </section>
@@ -7363,30 +7364,375 @@ CALL conda deactivate
 <li><p>but guess what?</p>
 <ul class="simple">
 <li><p>i opened a run.bat file and it’s a conda environment with a jupyterbook.</p></li>
-<li><p>guess i need to do the following:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">export</span> <span class="pre">-n</span> <span class="pre">automated_metashape</span> <span class="pre">&gt;</span> <span class="pre">automated_metashape.yaml</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">automated_metashape.yaml</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">automated_metashape</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">book</span> <span class="pre">build</span> <span class="pre">.</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">_build/html</span></code></p></li>
+<li><p>guess i need to do the following <span class="math notranslate nohighlight">\(\cdots\)</span></p></li>
 </ul>
 </li>
-<li><p>let me explore this workflow</p></li>
+<li><p>let me explore this workflow later</p></li>
 </ol>
-<ul class="simple">
-<li><p>i’m going to create a new repo called <code class="docutils literal notranslate"><span class="pre">automated_metashape</span></code></p>
-<ul>
-<li><p>i’m going to clone it to my local machine</p></li>
-<li><p>i’m going to create a run.bat file</p></li>
-<li><p>i’m going to create a .gitignore file</p></li>
-<li><p>i’m going to create a <a class="reference external" href="http://README.md">README.md</a> file</p></li>
-<li><p>i’m going to create a LICENSE file</p></li>
-<li><p>i’m going to create a .gitattributes file</p></li>
-<li><p>i’m going to create a .nojekyll file</p></li>
-<li><p>i’m going to create a .gitattributes file</p></li>
-</ul>
-</li>
-</ul>
+</section>
+<section id="workflow-4-0">
+<h2>802. workflow 4.0<a class="headerlink" href="#workflow-4-0" title="Permalink to this heading">#</a></h2>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>git commit -m &quot;statement&quot;
+ssh-keygen -t ed25519 -C &quot;muzaale@gmail.com&quot;
+/users/d/.ssh/id_ganoamagunju  
+ngalabi
+cat /users/d/.ssh/id_ganoamagunju
+cat /users/d/.ssh/id_ganoamagunju.pub
+SHA256:zXLdnERY/Og9oZtADfnJwJCN8hik+qkWGzeWwrD7kDc muzaale@gmail.com
+deploy .pub key on github
+verify that key signature is correct
+eval &quot;$(ssh-agent -s)&quot;
+Agent pid 49486
+pbcopy &lt; ~/.ssh/id_ganoamagunju.pub
+chmod 600 ~/.ssh/id_ganoamagunju
+chmod 644 ~/.ssh/id_ganoamagunju.pub
+git remote set-url origin git@github.com:muzaale/amagunju
+ssh-add ~/.ssh/id_ganoamagunju
+ngalabi
+git push 
+</pre></div>
+</div>
+</aside>
+<ol class="arabic simple">
+<li><p>cancel all collaboration with self across github accounts</p></li>
+<li><p>use ssh keys to authenticate as oppossed to crude invites</p></li>
+<li><p>use a single github account to push to multiple repos</p></li>
+</ol>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">faker</span>
+
+<span class="n">fake</span> <span class="o">=</span> <span class="n">faker</span><span class="o">.</span><span class="n">Faker</span><span class="p">()</span>
+
+<span class="c1"># Function to generate random GitHub account names</span>
+<span class="k">def</span> <span class="nf">generate_github_accounts</span><span class="p">():</span>
+    <span class="c1"># Use different locales for broader geographic/ethnic perspective</span>
+    <span class="n">fake</span> <span class="o">=</span> <span class="n">faker</span><span class="o">.</span><span class="n">Faker</span><span class="p">([</span><span class="s1">&#39;en_US&#39;</span><span class="p">,</span> <span class="s1">&#39;es_ES&#39;</span><span class="p">,</span> <span class="s1">&#39;fr_FR&#39;</span><span class="p">,</span> <span class="s1">&#39;ar_EG&#39;</span><span class="p">,</span> <span class="s1">&#39;ru_RU&#39;</span><span class="p">,</span> <span class="s1">&#39;ja_JP&#39;</span><span class="p">,</span> <span class="s1">&#39;ko_KR&#39;</span><span class="p">,</span> <span class="s1">&#39;zh_CN&#39;</span><span class="p">,</span> <span class="s1">&#39;hi_IN&#39;</span><span class="p">])</span>
+    <span class="n">github_accounts</span> <span class="o">=</span> <span class="p">[</span><span class="n">fake</span><span class="o">.</span><span class="n">user_name</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">github_accounts</span>
+
+<span class="c1"># Function to generate random repo names</span>
+<span class="k">def</span> <span class="nf">generate_repo_names</span><span class="p">():</span>
+    <span class="c1"># Use different locales for broader geographic/ethnic perspective</span>
+    <span class="n">fake</span> <span class="o">=</span> <span class="n">faker</span><span class="o">.</span><span class="n">Faker</span><span class="p">([</span><span class="s1">&#39;en_US&#39;</span><span class="p">,</span> <span class="s1">&#39;es_ES&#39;</span><span class="p">,</span> <span class="s1">&#39;fr_FR&#39;</span><span class="p">,</span> <span class="s1">&#39;ar_EG&#39;</span><span class="p">,</span> <span class="s1">&#39;ru_RU&#39;</span><span class="p">,</span> <span class="s1">&#39;ja_JP&#39;</span><span class="p">,</span> <span class="s1">&#39;ko_KR&#39;</span><span class="p">,</span> <span class="s1">&#39;zh_CN&#39;</span><span class="p">,</span> <span class="s1">&#39;hi_IN&#39;</span><span class="p">])</span>
+    <span class="n">repo_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">fake</span><span class="o">.</span><span class="n">word</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;_repo&quot;</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">repo_names</span>
+
+<span class="c1"># Function to generate random email addresses for the GitHub accounts</span>
+<span class="k">def</span> <span class="nf">generate_email_addresses</span><span class="p">(</span><span class="n">github_accounts</span><span class="p">):</span>
+    <span class="n">email_domains</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;en_US&#39;</span><span class="p">:</span> <span class="s1">&#39;example.com&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;es_ES&#39;</span><span class="p">:</span> <span class="s1">&#39;ejemplo.com&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;fr_FR&#39;</span><span class="p">:</span> <span class="s1">&#39;exemple.com&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;ar_EG&#39;</span><span class="p">:</span> <span class="s1">&#39;مثال.موقع&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;ru_RU&#39;</span><span class="p">:</span> <span class="s1">&#39;пример.сайт&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;ja_JP&#39;</span><span class="p">:</span> <span class="s1">&#39;例.com&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;ko_KR&#39;</span><span class="p">:</span> <span class="s1">&#39;예시.com&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;zh_CN&#39;</span><span class="p">:</span> <span class="s1">&#39;例子.com&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;hi_IN&#39;</span><span class="p">:</span> <span class="s1">&#39;उदाहरण.कॉम&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">email_addresses</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">account</span> <span class="ow">in</span> <span class="n">github_accounts</span><span class="p">:</span>
+        <span class="n">locale</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">locales</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">email_domain</span> <span class="o">=</span> <span class="n">email_domains</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">locale</span><span class="p">,</span> <span class="s1">&#39;example.com&#39;</span><span class="p">)</span>
+        <span class="n">email_addresses</span><span class="p">[</span><span class="n">account</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">account</span><span class="si">}</span><span class="s2">@</span><span class="si">{</span><span class="n">email_domain</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">return</span> <span class="n">email_addresses</span>
+
+<span class="c1"># Function to generate random data for the table</span>
+<span class="k">def</span> <span class="nf">generate_table_data</span><span class="p">():</span>
+    <span class="n">github_accounts</span> <span class="o">=</span> <span class="n">generate_github_accounts</span><span class="p">()</span>
+    <span class="n">repo_names</span> <span class="o">=</span> <span class="n">generate_repo_names</span><span class="p">()</span>
+    <span class="n">repo_statuses</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Private&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">]</span>
+    <span class="n">email_addresses</span> <span class="o">=</span> <span class="n">generate_email_addresses</span><span class="p">(</span><span class="n">github_accounts</span><span class="p">)</span>
+    <span class="n">table_data</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">99</span><span class="p">):</span>
+        <span class="n">counter</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">github_account</span> <span class="o">=</span> <span class="n">github_accounts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">repo_name</span> <span class="o">=</span> <span class="n">repo_names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">repo_status</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">repo_statuses</span><span class="p">)</span>
+        <span class="n">email</span> <span class="o">=</span> <span class="n">email_addresses</span><span class="p">[</span><span class="n">github_account</span><span class="p">]</span>
+        <span class="n">table_data</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">counter</span><span class="p">,</span> <span class="n">github_account</span><span class="p">,</span> <span class="n">repo_name</span><span class="p">,</span> <span class="n">repo_status</span><span class="p">,</span> <span class="n">email</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">table_data</span>
+
+<span class="c1"># Create the table and display it</span>
+<span class="k">def</span> <span class="nf">create_table</span><span class="p">(</span><span class="n">table_data</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:&lt;5}</span><span class="s2"> </span><span class="si">{:&lt;20}</span><span class="s2"> </span><span class="si">{:&lt;30}</span><span class="s2"> </span><span class="si">{:&lt;10}</span><span class="s2"> </span><span class="si">{:&lt;30}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span> <span class="s2">&quot;GitHub Account&quot;</span><span class="p">,</span> <span class="s2">&quot;Repo Name&quot;</span><span class="p">,</span> <span class="s2">&quot;Status&quot;</span><span class="p">,</span> <span class="s2">&quot;Email Address&quot;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">110</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">table_data</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:&lt;5}</span><span class="s2"> </span><span class="si">{:&lt;20}</span><span class="s2"> </span><span class="si">{:&lt;30}</span><span class="s2"> </span><span class="si">{:&lt;10}</span><span class="s2"> </span><span class="si">{:&lt;30}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">4</span><span class="p">]))</span>
+
+<span class="c1"># Generate random data and create the table</span>
+<span class="n">table_data</span> <span class="o">=</span> <span class="n">generate_table_data</span><span class="p">()</span>
+<span class="n">create_table</span><span class="p">(</span><span class="n">table_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No.   GitHub Account       Repo Name                      Status     Email Address                 
+==============================================================================================================
+1     pankrat2014          odio_repo                      Public     pankrat2014@example.com       
+2     fanggong             ab_repo                        Private    fanggong@example.com          
+3     simpsonedward        ipsam_repo                     Public     simpsonedward@example.com     
+4     dengyan              有限_repo                        Public     dengyan@example.com           
+5     xmeyer               タワー_repo                       Public     xmeyer@example.com            
+6     joaquinvillena       人民_repo                        Private    joaquinvillena@example.com    
+7     wbelda               fier_repo                      Public     wbelda@example.com            
+8     markovlukjan         aperiam_repo                   Public     markovlukjan@example.com      
+9     amitaadaaraa         consectetur_repo               Public     amitaadaaraa@example.com      
+10    teterinaivanna       et_repo                        Private    teterinaivanna@example.com    
+11    nsato                blanditiis_repo                Private    nsato@example.com             
+12    mituru39             соответствие_repo              Private    mituru39@example.com          
+13    afanasevarkadi       pouvoir_repo                   Private    afanasevarkadi@example.com    
+14    jongsui              illo_repo                      Public     jongsui@example.com           
+15    shawcraig            repellat_repo                  Private    shawcraig@example.com         
+16    jyotsnaalodii        记者_repo                        Private    jyotsnaalodii@example.com     
+17    yoshidamituru        汽车_repo                        Private    yoshidamituru@example.com     
+18    minoruyamazaki       原因_repo                        Private    minoruyamazaki@example.com    
+19    qmo                  近代化する_repo                     Private    qmo@example.com               
+20    fmoore               管理_repo                        Private    fmoore@example.com            
+21    moiseevadarja        repellendus_repo               Public     moiseevadarja@example.com     
+22    bgim                 nothing_repo                   Public     bgim@example.com              
+23    kristine54           quidem_repo                    Public     kristine54@example.com        
+24    davisricky           according_repo                 Private    davisricky@example.com        
+25    chantal35            unde_repo                      Public     chantal35@example.com         
+26    shimizumiki          点击_repo                        Public     shimizumiki@example.com       
+27    momoko67             носок_repo                     Private    momoko67@example.com          
+28    enuuraanii           possimus_repo                  Private    enuuraanii@example.com        
+29    gabriellemillet      trade_repo                     Private    gabriellemillet@example.com   
+30    melnikovnikon        saepe_repo                     Public     melnikovnikon@example.com     
+31    zmori                officia_repo                   Public     zmori@example.com             
+32    andrerenaud          modi_repo                      Public     andrerenaud@example.com       
+33    roblesdillon         id_repo                        Private    roblesdillon@example.com      
+34    alba08               生活_repo                        Public     alba08@example.com            
+35    ghoarau              nesciunt_repo                  Private    ghoarau@example.com           
+36    kirstenespinoza      indeed_repo                    Public     kirstenespinoza@example.com   
+37    yeongjin12           монета_repo                    Private    yeongjin12@example.com        
+38    xlefevre             вздрогнуть_repo                Private    xlefevre@example.com          
+39    martinperello        文化_repo                        Private    martinperello@example.com     
+40    rogersrobert         demi_repo                      Private    rogersrobert@example.com      
+41    katonaoto            aspernatur_repo                Public     katonaoto@example.com         
+42    hornebrian           具有_repo                        Public     hornebrian@example.com        
+43    chantalhardy         革新_repo                        Public     chantalhardy@example.com      
+44    tnguyen              ведь_repo                      Private    tnguyen@example.com           
+45    kuprijan20           中文_repo                        Private    kuprijan20@example.com        
+46    quintanillabarbara   налево_repo                    Public     quintanillabarbara@example.com
+47    houjun               能够_repo                        Public     houjun@example.com            
+48    tpopova              structure_repo                 Private    tpopova@example.com           
+49    raamshrmaaankitaa    essuyer_repo                   Private    raamshrmaaankitaa@example.com 
+50    gnnesh64             トス_repo                        Private    gnnesh64@example.com          
+51    andersondarren       语言_repo                        Private    andersondarren@example.com    
+52    amparomercader       解决_repo                        Public     amparomercader@example.com    
+53    mjohnson             nostrum_repo                   Private    mjohnson@example.com          
+54    xyan                 weight_repo                    Public     xyan@example.com              
+55    jakovlevsokrat       管理する_repo                      Private    jakovlevsokrat@example.com    
+56    asukayamaguchi       ipsum_repo                     Public     asukayamaguchi@example.com    
+57    subinjeong           modi_repo                      Private    subinjeong@example.com        
+58    xmllik               labore_repo                    Public     xmllik@example.com            
+59    gangliu              quae_repo                      Private    gangliu@example.com           
+60    claytonbrett         ab_repo                        Public     claytonbrett@example.com      
+61    juan11               arme_repo                      Private    juan11@example.com            
+62    minorufujiwara       建築_repo                        Private    minorufujiwara@example.com    
+63    sarabiaaranzazu      adipisci_repo                  Private    sarabiaaranzazu@example.com   
+64    xriggs               参加_repo                        Public     xriggs@example.com            
+65    yunminseo            午前_repo                        Public     yunminseo@example.com         
+66    juan56               组织_repo                        Public     juan56@example.com            
+67    minsuhwang           tempora_repo                   Public     minsuhwang@example.com        
+68    gyeongsui            бочок_repo                     Private    gyeongsui@example.com         
+69    brandonmiller        仕上げ_repo                       Private    brandonmiller@example.com     
+70    yamashitamiki        sapiente_repo                  Public     yamashitamiki@example.com     
+71    carreraschema        lit_repo                       Public     carreraschema@example.com     
+72    dhaaliivaalllit      placeat_repo                   Private    dhaaliivaalllit@example.com   
+73    sishikawa            文件_repo                        Public     sishikawa@example.com         
+74    toribio14            officia_repo                   Private    toribio14@example.com         
+75    jeongsu58            age_repo                       Public     jeongsu58@example.com         
+76    slaalaa              non_repo                       Public     slaalaa@example.com           
+77    kozlovsevastjan      excepturi_repo                 Private    kozlovsevastjan@example.com   
+78    bgim                 surveiller_repo                Public     bgim@example.com              
+79    adamorlov            这种_repo                        Private    adamorlov@example.com         
+80    mqian                glisser_repo                   Public     mqian@example.com             
+81    hhou                 成功_repo                        Private    hhou@example.com              
+82    laurayoung           賞賛する_repo                      Private    laurayoung@example.com        
+83    karl97               午前_repo                        Private    karl97@example.com            
+84    fisherdavid          eligendi_repo                  Private    fisherdavid@example.com       
+85    kbello               interroger_repo                Private    kbello@example.com            
+86    hozsegismundo        recusandae_repo                Private    hozsegismundo@example.com     
+87    lavrentevveniamin    technology_repo                Public     lavrentevveniamin@example.com 
+88    chiyoyamada          ad_repo                        Public     chiyoyamada@example.com       
+89    areum30              memory_repo                    Public     areum30@example.com           
+90    steelemichelle       very_repo                      Private    steelemichelle@example.com    
+91    frederique60         nuit_repo                      Public     frederique60@example.com      
+92    anisimstepanov       eos_repo                       Private    anisimstepanov@example.com    
+93    suzukiatsushi        广告_repo                        Public     suzukiatsushi@example.com     
+94    vikrmahluvaaliyaa    набор_repo                     Private    vikrmahluvaaliyaa@example.com 
+95    haasnluuthraa        continue_repo                  Public     haasnluuthraa@example.com     
+96    vfrancis             veniam_repo                    Public     vfrancis@example.com          
+97    adelabernat          consectetur_repo               Private    adelabernat@example.com       
+98    kumaarii64           dolore_repo                    Public     kumaarii64@example.com        
+99    fujiwarayuki         пятеро_repo                    Private    fujiwarayuki@example.com      
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;ds4ph-bme/ds4ph-spring-hw-1-muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;ds4ph-bme/ds4ph-spring-hw-2-muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;ds4ph-bme/ds4ph-spring-hw-3-muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;ds4ph-bme/ds4ph-spring-hw-4-muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;ds4ph-bme/ds4ph-spring-hw-5-muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;ds4ph-bme/ds4ph-spring-hw-6-muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;ds4ph-bme/ds4ph-spring-hw-7-muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;ds4ph-bme/ds4ph-spring-hw-8-muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;9&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;ds4ph-bme/ds4ph-spring-hw-9-muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;10&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;ds4ph-bme/ds4ph-spring-hw-10-muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;11&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;ds4ph-bme/capstone-project-muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;12&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;desktop-tutorial&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="c1"># ... Add more rows here ...</span>
+    <span class="p">[</span><span class="s2">&quot;13&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale.github.io&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;14&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;book&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;15&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;denotas&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;16&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;bcmodel&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;17&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;destruction&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;18&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;buch&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;19&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;idioms&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;20&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;kulala&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;21&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;reduction&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;22&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;capstone&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;23&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;vscode&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;24&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;ds4bio_book&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;25&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;ds4ph-bme&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
+        <span class="c1"># ... Add more rows here ...</span>
+    <span class="p">[</span><span class="s2">&quot;26&quot;</span><span class="p">,</span> <span class="s2">&quot;jhustata&quot;</span><span class="p">,</span> <span class="s2">&quot;jhustata.github.io&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@jhmi.edu&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;27&quot;</span><span class="p">,</span> <span class="s2">&quot;jhustata&quot;</span><span class="p">,</span> <span class="s2">&quot;libro&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@jhmi.edu&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;28&quot;</span><span class="p">,</span> <span class="s2">&quot;jhustata&quot;</span><span class="p">,</span> <span class="s2">&quot;livre&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@jhmi.edu&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;29&quot;</span><span class="p">,</span> <span class="s2">&quot;jhustata&quot;</span><span class="p">,</span> <span class="s2">&quot;c600y23s&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@jhmi.edu&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;30&quot;</span><span class="p">,</span> <span class="s2">&quot;jhustata&quot;</span><span class="p">,</span> <span class="s2">&quot;600y23s&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@jhmi.edu&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;31&quot;</span><span class="p">,</span> <span class="s2">&quot;jhustata&quot;</span><span class="p">,</span> <span class="s2">&quot;kitabo&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@jhmi.edu&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;32&quot;</span><span class="p">,</span> <span class="s2">&quot;jhustata&quot;</span><span class="p">,</span> <span class="s2">&quot;book&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@jhmi.edu&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;33&quot;</span><span class="p">,</span> <span class="s2">&quot;jhustata&quot;</span><span class="p">,</span> <span class="s2">&quot;class700&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@jhmi.edu&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;34&quot;</span><span class="p">,</span> <span class="s2">&quot;jhustata&quot;</span><span class="p">,</span> <span class="s2">&quot;science&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@jhmi.edu&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;35&quot;</span><span class="p">,</span> <span class="s2">&quot;jhustata&quot;</span><span class="p">,</span> <span class="s2">&quot;fix&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@jhmi.edu&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;36&quot;</span><span class="p">,</span> <span class="s2">&quot;jhustata&quot;</span><span class="p">,</span> <span class="s2">&quot;class600&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@jhmi.edu&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;37&quot;</span><span class="p">,</span> <span class="s2">&quot;jhustata&quot;</span><span class="p">,</span> <span class="s2">&quot;desktop&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@jhmi.edu&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;38&quot;</span><span class="p">,</span> <span class="s2">&quot;jhustata&quot;</span><span class="p">,</span> <span class="s2">&quot;nhanes&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@jhmi.edu&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;39&quot;</span><span class="p">,</span> <span class="s2">&quot;jhustata&quot;</span><span class="p">,</span> <span class="s2">&quot;notes&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@jhmi.edu&quot;</span><span class="p">],</span>
+            <span class="c1"># ... Add more rows here ...</span>
+    <span class="p">[</span><span class="s2">&quot;40&quot;</span><span class="p">,</span> <span class="s2">&quot;jhutrc&quot;</span><span class="p">,</span> <span class="s2">&quot;jhutrc.github.io&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@icloud.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;41&quot;</span><span class="p">,</span> <span class="s2">&quot;jhutrc&quot;</span><span class="p">,</span> <span class="s2">&quot;criteria&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@icloud.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;42&quot;</span><span class="p">,</span> <span class="s2">&quot;jhutrc&quot;</span><span class="p">,</span> <span class="s2">&quot;book&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@icloud.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;43&quot;</span><span class="p">,</span> <span class="s2">&quot;jhutrc&quot;</span><span class="p">,</span> <span class="s2">&quot;manuscripts&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@icloud.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;44&quot;</span><span class="p">,</span> <span class="s2">&quot;jhutrc&quot;</span><span class="p">,</span> <span class="s2">&quot;dofiles&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@icloud.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;45&quot;</span><span class="p">,</span> <span class="s2">&quot;jhutrc&quot;</span><span class="p">,</span> <span class="s2">&quot;book&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@icloud.com&quot;</span><span class="p">],</span>
+            <span class="c1"># ... Add more rows here ...</span>
+    <span class="p">[</span><span class="s2">&quot;46&quot;</span><span class="p">,</span> <span class="s2">&quot;afecd&quot;</span><span class="p">,</span> <span class="s2">&quot;ai&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;afecd.lab@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;47&quot;</span><span class="p">,</span> <span class="s2">&quot;afecd&quot;</span><span class="p">,</span> <span class="s2">&quot;afecd.github.io&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;afecd.lab@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;48&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaalefamily&quot;</span><span class="p">,</span> <span class="s2">&quot;bukonte&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale.family@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;49&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaalefamily&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaalefamily.github.io&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale.family@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;49&quot;</span><span class="p">,</span> <span class="s2">&quot;afecdvi&quot;</span><span class="p">,</span> <span class="s2">&quot;og&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;afecdvi@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;50&quot;</span><span class="p">,</span> <span class="s2">&quot;afecdvi&quot;</span><span class="p">,</span> <span class="s2">&quot;ai&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;afecdvi@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;51&quot;</span><span class="p">,</span> <span class="s2">&quot;afecdvi&quot;</span><span class="p">,</span> <span class="s2">&quot;afecdvi.github.io&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;afecdvi@gmail.com&quot;</span><span class="p">],</span> 
+            <span class="c1"># ... Add more rows here ...</span>
+    <span class="p">[</span><span class="s2">&quot;52&quot;</span><span class="p">,</span> <span class="s2">&quot;dhatemwakulala&quot;</span><span class="p">,</span> <span class="s2">&quot;engoma&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;dhatemwakulala@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;53&quot;</span><span class="p">,</span> <span class="s2">&quot;dhatemwakulala&quot;</span><span class="p">,</span> <span class="s2">&quot;tusirike&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;dhatemwakulala@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;54&quot;</span><span class="p">,</span> <span class="s2">&quot;dhatemwakulala&quot;</span><span class="p">,</span> <span class="s2">&quot;ffena&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;dhatemwakulala@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;55&quot;</span><span class="p">,</span> <span class="s2">&quot;dhatemwakulala&quot;</span><span class="p">,</span> <span class="s2">&quot;kelele&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;dhatemwakulala@gmail.com&quot;</span><span class="p">],</span> 
+        <span class="c1"># ... Add more rows here ...</span>
+    <span class="p">[</span><span class="s2">&quot;56&quot;</span><span class="p">,</span> <span class="s2">&quot;iagouganda&quot;</span><span class="p">,</span> <span class="s2">&quot;iago.github.io&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;iago.uganda@gmail.com&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;57&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;imeela&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">],</span>  
+    <span class="p">[</span><span class="s2">&quot;58&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;amagunju&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">],</span>           
+<span class="p">]</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span> <span class="s2">&quot;GitHub Account&quot;</span><span class="p">,</span> <span class="s2">&quot;Repo Name&quot;</span><span class="p">,</span> <span class="s2">&quot;Status&quot;</span><span class="p">,</span> <span class="s2">&quot;Email Address&quot;</span><span class="p">]</span>
+
+<span class="n">table</span> <span class="o">=</span> <span class="n">tabulate</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  No.  GitHub Account    Repo Name                             Status    Email Address
+-----  ----------------  ------------------------------------  --------  ------------------------
+    1  muzaale           ds4ph-bme/ds4ph-spring-hw-1-muzaale   Private   muzaale@gmail.com
+    2  muzaale           ds4ph-bme/ds4ph-spring-hw-2-muzaale   Private   muzaale@gmail.com
+    3  muzaale           ds4ph-bme/ds4ph-spring-hw-3-muzaale   Private   muzaale@gmail.com
+    4  muzaale           ds4ph-bme/ds4ph-spring-hw-4-muzaale   Private   muzaale@gmail.com
+    5  muzaale           ds4ph-bme/ds4ph-spring-hw-5-muzaale   Private   muzaale@gmail.com
+    6  muzaale           ds4ph-bme/ds4ph-spring-hw-6-muzaale   Private   muzaale@gmail.com
+    7  muzaale           ds4ph-bme/ds4ph-spring-hw-7-muzaale   Private   muzaale@gmail.com
+    8  muzaale           ds4ph-bme/ds4ph-spring-hw-8-muzaale   Private   muzaale@gmail.com
+    9  muzaale           ds4ph-bme/ds4ph-spring-hw-9-muzaale   Private   muzaale@gmail.com
+   10  muzaale           ds4ph-bme/ds4ph-spring-hw-10-muzaale  Private   muzaale@gmail.com
+   11  muzaale           ds4ph-bme/capstone-project-muzaale    Private   muzaale@gmail.com
+   12  muzaale           desktop-tutorial                      Private   muzaale@gmail.com
+   13  muzaale           muzaale.github.io                     Public    muzaale@gmail.com
+   14  muzaale           book                                  Public    muzaale@gmail.com
+   15  muzaale           denotas                               Public    muzaale@gmail.com
+   16  muzaale           bcmodel                               Public    muzaale@gmail.com
+   17  muzaale           destruction                           Public    muzaale@gmail.com
+   18  muzaale           buch                                  Public    muzaale@gmail.com
+   19  muzaale           idioms                                Public    muzaale@gmail.com
+   20  muzaale           kulala                                Public    muzaale@gmail.com
+   21  muzaale           reduction                             Public    muzaale@gmail.com
+   22  muzaale           capstone                              Public    muzaale@gmail.com
+   23  muzaale           vscode                                Public    muzaale@gmail.com
+   24  muzaale           ds4bio_book                           Public    muzaale@gmail.com
+   25  muzaale           ds4ph-bme                             Public    muzaale@gmail.com
+   26  jhustata          jhustata.github.io                    Public    muzaale@jhmi.edu
+   27  jhustata          libro                                 Public    muzaale@jhmi.edu
+   28  jhustata          livre                                 Public    muzaale@jhmi.edu
+   29  jhustata          c600y23s                              Public    muzaale@jhmi.edu
+   30  jhustata          600y23s                               Public    muzaale@jhmi.edu
+   31  jhustata          kitabo                                Public    muzaale@jhmi.edu
+   32  jhustata          book                                  Public    muzaale@jhmi.edu
+   33  jhustata          class700                              Public    muzaale@jhmi.edu
+   34  jhustata          science                               Public    muzaale@jhmi.edu
+   35  jhustata          fix                                   Public    muzaale@jhmi.edu
+   36  jhustata          class600                              Public    muzaale@jhmi.edu
+   37  jhustata          desktop                               Public    muzaale@jhmi.edu
+   38  jhustata          nhanes                                Public    muzaale@jhmi.edu
+   39  jhustata          notes                                 Public    muzaale@jhmi.edu
+   40  jhutrc            jhutrc.github.io                      Public    muzaale@icloud.com
+   41  jhutrc            criteria                              Public    muzaale@icloud.com
+   42  jhutrc            book                                  Public    muzaale@icloud.com
+   43  jhutrc            manuscripts                           Public    muzaale@icloud.com
+   44  jhutrc            dofiles                               Public    muzaale@icloud.com
+   45  jhutrc            book                                  Public    muzaale@icloud.com
+   46  afecd             ai                                    Public    afecd.lab@gmail.com
+   47  afecd             afecd.github.io                       Public    afecd.lab@gmail.com
+   48  muzaalefamily     bukonte                               Public    muzaale.family@gmail.com
+   49  muzaalefamily     muzaalefamily.github.io               Public    muzaale.family@gmail.com
+   49  afecdvi           og                                    Public    afecdvi@gmail.com
+   50  afecdvi           ai                                    Public    afecdvi@gmail.com
+   51  afecdvi           afecdvi.github.io                     Public    afecdvi@gmail.com
+   52  dhatemwakulala    engoma                                Public    dhatemwakulala@gmail.com
+   53  dhatemwakulala    tusirike                              Public    dhatemwakulala@gmail.com
+   54  dhatemwakulala    ffena                                 Public    dhatemwakulala@gmail.com
+   55  dhatemwakulala    kelele                                Public    dhatemwakulala@gmail.com
+   56  iagouganda        iago.github.io                        Public    iago.uganda@gmail.com
+   57  muzaale           imeela                                Public    muzaale@gmail.com
+   58  muzaale           amagunju                              Public    muzaale@gmail.com
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -7729,6 +8075,7 @@ CALL conda deactivate
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id81">799. gmu</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table1">800. table1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clone">801. clone</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-4-0">802. workflow 4.0</a></li>
 </ul>
 </li>
 </ul>
