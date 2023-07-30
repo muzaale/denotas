@@ -4965,7 +4965,7 @@ _(Provide answer here)_
 <p>Euler’s identity, equation <a class="reference internal" href="#equation-euler">()</a>, was elected one of the
 most beautiful mathematical formulas.</p>
 <blockquote>
-<div><p>Jul 29, 2023 | 19654 words | 98 min read</p>
+<div><p>Jul 29, 2023 | 19553 words | 98 min read</p>
 </div></blockquote>
 </section>
 </section>
@@ -5433,7 +5433,7 @@ Moneyline odds profit: $250000.00
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/27b1bed6d362a102b81af0c61937fdca75ad1528063c80f6f785b50d47abd858.png" src="_images/27b1bed6d362a102b81af0c61937fdca75ad1528063c80f6f785b50d47abd858.png" />
+<img alt="_images/0c894fd1f898a9eb52465e941e83a732c3472214d8a318d5ca110866bbb96788.png" src="_images/0c894fd1f898a9eb52465e941e83a732c3472214d8a318d5ca110866bbb96788.png" />
 </div>
 </div>
 </section>
@@ -7345,42 +7345,46 @@ git push -u origin master
 <li><p>and this is a jupyterbook with no .html files</p></li>
 </ul>
 </li>
-<li><p>but guess what?</p>
-<ul class="simple">
-<li><p>i opened a run.bat file and it’s a conda environment with a jupyterbook.</p></li>
-<li><p>guess i need to do the following:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">export</span> <span class="pre">-n</span> <span class="pre">automated_metashape</span> <span class="pre">&gt;</span> <span class="pre">automated_metashape.yaml</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">automated_metashape.yaml</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">automated_metashape</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">book</span> <span class="pre">build</span> <span class="pre">.</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">_build/html</span></code></p></li>
-</ul>
-</li>
 </ol>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
-<p>set name=automated_metashape</p>
-<p>cd %~dp0
+<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>set name=automated_metashape
+
+cd %~dp0
 CALL conda activate %name%
 CALL jupyter book build .
 CALL ghp-import -n -p -f _build/html
-CALL conda env export -n %name% &gt; %name%.yaml</p>
-<ol class="arabic simple" start="5">
-<li><p>let me explore this workflow</p>
-<ul class="simple">
-<li><p>i’m going to create a new repo called <code class="docutils literal notranslate"><span class="pre">automated_metashape</span></code></p></li>
-<li><p>i’m going to clone it to my local machine</p></li>
-<li><p>i’m going to create a run.bat file</p></li>
-<li><p>i’m going to create a .gitignore file</p></li>
-<li><p>i’m going to create a <a class="reference external" href="http://README.md">README.md</a> file</p></li>
-<li><p>i’m going to create a LICENSE file</p></li>
-<li><p>i’m going to create a .gitattributes file</p></li>
-<li><p>i’m going to create a .nojekyll file</p></li>
-<li><p>i’m going to create a .gitattributes file</p></li>
-</ul>
-</li>
-</ol>
+CALL conda env export -n %name% &gt; %name%.yaml
+CALL conda deactivate
+</pre></div>
+</div>
 </aside>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  
+4. but guess what? 
+   + i opened a run.bat file and it&#39;s a conda environment with a jupyterbook. 
+   + guess i need to do the following:
+    + `conda env export -n automated_metashape &gt; automated_metashape.yaml`
+    + `conda env create -f automated_metashape.yaml`
+    + `conda activate automated_metashape`
+    + `jupyter book build .`
+    + `ghp-import -n -p -f _build/html` 
+
+
+
+5. let me explore this workflow
+  + i&#39;m going to create a new repo called `automated_metashape`
+    + i&#39;m going to clone it to my local machine
+    + i&#39;m going to create a run.bat file
+    + i&#39;m going to create a .gitignore file
+    + i&#39;m going to create a README.md file
+    + i&#39;m going to create a LICENSE file
+    + i&#39;m going to create a .gitattributes file
+    + i&#39;m going to create a .nojekyll file
+    + i&#39;m going to create a .gitattributes file
+
+
+</pre></div>
+</div>
 </section>
 </section>
 
