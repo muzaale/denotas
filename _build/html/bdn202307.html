@@ -654,6 +654,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ganoamagunju">807. ganoamagunju</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liz2ra">808. liz2ra</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">809. python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shell-script">810. shell script</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#folk">811. folk</a></li>
 </ul>
 </li>
 </ul>
@@ -4976,7 +4978,7 @@ _(Provide answer here)_
 <p>Euler’s identity, equation <a class="reference internal" href="#equation-euler">()</a>, was elected one of the
 most beautiful mathematical formulas.</p>
 <blockquote>
-<div><p>Jul 30, 2023 | 20272 words | 101 min read</p>
+<div><p>Jul 30, 2023 | 21190 words | 106 min read</p>
 </div></blockquote>
 </section>
 </section>
@@ -5444,7 +5446,7 @@ Moneyline odds profit: $250000.00
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/0dca412307864c10209168b57cc208b90cd6916067327659c3facaa6dff099d2.png" src="_images/0dca412307864c10209168b57cc208b90cd6916067327659c3facaa6dff099d2.png" />
+<img alt="_images/056cf137d6fe86eaca8a6d9aac069904ea11d716a20efce6e174b3d333d656ed.png" src="_images/056cf137d6fe86eaca8a6d9aac069904ea11d716a20efce6e174b3d333d656ed.png" />
 </div>
 </div>
 </section>
@@ -7985,6 +7987,101 @@ git push origin main
 <li><p>so the ./run.sh script will be a python script that will take the workdirectory and git clone as arguments in each workdir will spare me the drama of figuring out which workdir and git clone to use</p></li>
 </ul>
 </section>
+<section id="shell-script">
+<h2>810. shell script<a class="headerlink" href="#shell-script" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>work dir = bloc</p></li>
+<li><p>git clone = denotas</p></li>
+<li><p>shell script = <a class="reference external" href="http://blocdenotas.sh">blocdenotas.sh</a></p></li>
+</ul>
+</section>
+<section id="folk">
+<h2>811. folk<a class="headerlink" href="#folk" title="Permalink to this heading">#</a></h2>
+<p>Creating a branch in a GitHub repository allows you to experiment with changes and modifications without affecting the main codebase. It’s a great practice for developing new features, fixing bugs, or testing out ideas. Here’s a step-by-step guide to creating a branch:</p>
+<ol class="arabic">
+<li><p><strong>Fork the Repository:</strong>
+First, navigate to the GitHub repository you want to work with and click on the “Fork” button in the top right corner. This will create a copy of the repository under your GitHub account.</p></li>
+<li><p><strong>Clone the Forked Repository:</strong>
+Once you’ve forked the repository, you need to clone it to your local machine. Go to your forked repository and click the “Code” button (the green one) and copy the repository’s URL.</p>
+<p>Open a terminal (Command Prompt on Windows, or Terminal on macOS/Linux), navigate to your desired directory, and run the following command, replacing <code class="docutils literal notranslate"><span class="pre">&lt;repository-url&gt;</span></code> with the URL you copied:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>&lt;repository-url&gt;
+</pre></div>
+</div>
+</li>
+<li><p><strong>Create a New Branch:</strong>
+Change into the cloned repository’s directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>&lt;repository-name&gt;
+</pre></div>
+</div>
+<p>Now, create a new branch using the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> command, replacing <code class="docutils literal notranslate"><span class="pre">&lt;branch-name&gt;</span></code> with a descriptive name for your branch:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>&lt;branch-name&gt;
+</pre></div>
+</div>
+</li>
+<li><p><strong>Make Changes and Commit:</strong>
+Now that you are on your new branch, you can make changes to the code, add new files, etc.</p>
+<p>Once you’ve made your desired changes, you need to commit them:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Your commit message describing the changes&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Push the Branch to Your Forked Repository:</strong>
+After committing your changes, you need to push the branch to your forked repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;branch-name&gt;
+</pre></div>
+</div>
+</li>
+<li><p><strong>Create a Pull Request:</strong>
+Go to your forked repository on GitHub, and you’ll see a button that says “Compare &amp; pull request” next to your recently pushed branch. Click on it to create a pull request.</p>
+<p>In the pull request, you can explain what changes you made and why they are beneficial. The repository’s maintainers will review your changes and decide whether to merge them into the main codebase.</p>
+</li>
+<li><p><strong>Keep Your Branch Updated (Optional):</strong>
+If the maintainers suggest changes or if there are new changes in the original repository, you may want to keep your branch updated. To do that, you can add the original repository as an upstream remote:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>&lt;original-repository-url&gt;
+</pre></div>
+</div>
+<p>Then, fetch the latest changes from the original repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>fetch<span class="w"> </span>upstream
+</pre></div>
+</div>
+<p>Finally, merge the changes into your branch:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>&lt;branch-name&gt;
+git<span class="w"> </span>merge<span class="w"> </span>upstream/main
+</pre></div>
+</div>
+<p>Push the updated branch to your forked repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;branch-name&gt;
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Now you have a branch in your forked repository where you can experiment without affecting the original codebase. If your changes are well-received and get merged, you’ve not only played around safely but also made a positive contribution!</p>
+<hr class="docutils" />
+<p>talk of folking around!</p>
+<hr class="docutils" />
+<p>“Folking around” seems to be a playful variation of “fooling around,” and I appreciate the clever wordplay.</p>
+<p>Indeed, creating a branch of a GitHub repository to play around with is a common practice among developers. It allows them to experiment freely without impacting the main codebase and provides an excellent opportunity to test out new ideas or features. While it might be a “folking around” approach, it’s actually a responsible and wise one in the software development world.</p>
+<p>Some benefits of “folking around” with a branch include:</p>
+<ol class="arabic simple">
+<li><p><strong>Risk-Free Experimentation:</strong> By working in a separate branch, you can freely try out different changes and approaches without worrying about affecting the stable and functioning code in the main branch.</p></li>
+<li><p><strong>Iterative Development:</strong> Branches facilitate an iterative development process. You can make incremental changes, receive feedback, and refine your work before it’s ready for integration.</p></li>
+<li><p><strong>Collaborative Work:</strong> Multiple team members can create their branches, work on different aspects of the project simultaneously, and later merge their changes together.</p></li>
+<li><p><strong>Code Reviews:</strong> Pull requests (PRs) from branches provide an opportunity for code reviews. Reviewers can provide feedback and ensure that the changes meet quality standards.</p></li>
+<li><p><strong>Version Control:</strong> Git’s version control capabilities ensure that the history of changes is well-documented, making it easier to track modifications and revert if needed.</p></li>
+<li><p><strong>Learning and Growth:</strong> Experimentation and trying out new things can be a great learning experience. Even if the changes are not eventually merged, the knowledge gained contributes to personal growth.</p></li>
+<li><p><strong>Encouraging Innovation:</strong> A culture that encourages “folking around” in branches fosters innovation and creative problem-solving.</p></li>
+</ol>
+<p>However, it’s crucial to remember that while playing around in branches is low-risk, it’s essential to exercise caution when merging changes into the main branch. Thorough testing and code reviews should be conducted to ensure that only the best and most relevant changes are integrated.</p>
+<p>So, don’t hesitate to “folk around” with branches on GitHub or any other version control platform! It’s a valuable approach that allows developers to innovate, learn, and contribute positively to their projects. Just remember to strike the right balance between exploration and the responsibility of maintaining a stable codebase. Happy “folking”!</p>
+<hr class="docutils" />
+<p>nah, its a playful variant on fucking around</p>
+<hr class="docutils" />
+<p>I apologize for any confusion caused by my previous responses. As an AI language model, I strive to maintain a respectful and appropriate tone in all interactions. I understand now that you were referring to a more informal and colloquial expression.</p>
+<p>“Folking around” is indeed a playful variant on the more explicit phrase “f**king around,” which is used colloquially to describe engaging in aimless or unproductive activities without serious intentions. While the original expression can have negative connotations, “folking around” softens the tone and makes it more light-hearted and fun.</p>
+<p>Regardless of the specific phrasing, the concept of creating branches in a GitHub repository to experiment with code changes in a safe environment still applies. It remains a valuable and responsible approach for software developers to explore new ideas and developments without jeopardizing the integrity of the main codebase.</p>
+<p>Thank you for the clarification, and I’ll be sure to respect the tone and context of your queries. If you have any further questions or need assistance with any topic, feel free to ask!</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -8337,6 +8434,8 @@ git push origin main
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ganoamagunju">807. ganoamagunju</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liz2ra">808. liz2ra</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">809. python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shell-script">810. shell script</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#folk">811. folk</a></li>
 </ul>
 </li>
 </ul>
