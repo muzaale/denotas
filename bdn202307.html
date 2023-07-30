@@ -646,6 +646,13 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-4-0">802. workflow 4.0</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id82">07/30/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-5-0">803. workflow 5.0</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-5-1">804. workflow 5.1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-5-2">805. workflow 5.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bash">806. bash</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -4966,7 +4973,7 @@ _(Provide answer here)_
 <p>Euler’s identity, equation <a class="reference internal" href="#equation-euler">()</a>, was elected one of the
 most beautiful mathematical formulas.</p>
 <blockquote>
-<div><p>Jul 29, 2023 | 19604 words | 98 min read</p>
+<div><p>Jul 30, 2023 | 20133 words | 101 min read</p>
 </div></blockquote>
 </section>
 </section>
@@ -5434,7 +5441,7 @@ Moneyline odds profit: $250000.00
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/e9e1a1e2c1fab713895ff713dd6ce96fbb7638ec1ad03154d8c3e3da5a40fb53.png" src="_images/e9e1a1e2c1fab713895ff713dd6ce96fbb7638ec1ad03154d8c3e3da5a40fb53.png" />
+<img alt="_images/c57d31174dfe1ac475fef7149d96184aa5bf070100aee135aadf327a22fff543.png" src="_images/c57d31174dfe1ac475fef7149d96184aa5bf070100aee135aadf327a22fff543.png" />
 </div>
 </div>
 </section>
@@ -7735,6 +7742,196 @@ git push
 </div>
 </section>
 </section>
+<section id="id82">
+<h1>07/30/2023<a class="headerlink" href="#id82" title="Permalink to this heading">#</a></h1>
+<aside class="margin sidebar">
+<p class="sidebar-title">&#64;bash_mode_script.sh</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Change directory to ~/dropbox/1f.ἡἔρις,κ/1.ontology</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+
+<span class="c1"># Build Jupyter Book with &#39;gano&#39; as the argument</span>
+jb<span class="w"> </span>build<span class="w"> </span>gano
+cp<span class="w"> </span>-r<span class="w"> </span>gano/*<span class="w"> </span>amagunju
+
+<span class="c1"># Change directory to &#39;amagunju&#39;</span>
+<span class="nb">cd</span><span class="w"> </span>amagunju
+
+<span class="c1"># Add all files in the current directory to Git</span>
+git<span class="w"> </span>add<span class="w"> </span>./*
+
+<span class="c1"># Commit changes to Git with the given commit message</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;third commit using .sh script, bellissimo! had omitted cp -r gano/* amagunju&quot;</span>
+
+<span class="c1"># Push changes to GitHub</span>
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:muzaale/amagunju
+ngalabi
+git<span class="w"> </span>push<span class="w"> </span>
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+</pre></div>
+</div>
+</aside>
+<section id="workflow-5-0">
+<h2>803. workflow 5.0<a class="headerlink" href="#workflow-5-0" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>have now mastered the public-private key encryption and decryption workflow (workflow 4.0)</p></li>
+<li><p>now i’ve moved from interactive to non-interactive mode on the command line</p></li>
+<li><p>i can’t express how much this is a game changer for me &amp; my work</p></li>
+</ol>
+</section>
+<section id="workflow-5-1">
+<h2>804. workflow 5.1<a class="headerlink" href="#workflow-5-1" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>name convensions for solo, team, or community projects:</p></li>
+<li><p>choose themes inspired by the following:</p></li>
+<li><p>approach inspired by python</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>python</p>
+<ul class="simple">
+<li><p>anaconda</p></li>
+<li><p>conda</p></li>
+<li><p>jupyter</p></li>
+<li><p>numpy</p></li>
+<li><p>pytorch</p></li>
+</ul>
+</li>
+<li><p>animals</p>
+<ul class="simple">
+<li><p>pandas</p></li>
+<li><p>seaborn</p></li>
+</ul>
+</li>
+<li><p>etc.</p>
+<ul class="simple">
+<li><p>matplotlib</p></li>
+<li><p>tensorflow</p></li>
+</ul>
+</li>
+</ol>
+<ul class="simple">
+<li><p>thus far i’ve found “drum” to be rich with variants</p></li>
+<li><p>from the african perspective a drum symbolizes a community</p></li>
+<li><p>used to communicate over long distances, invite, celebrate, etc.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>drum &amp; its variants</p>
+<ul class="simple">
+<li><p>ngalabi</p></li>
+<li><p>djembe</p></li>
+<li><p>etc.</p></li>
+</ul>
+</li>
+<li><p>musical instruments &amp; their variants</p>
+<ul class="simple">
+<li><p>ngoma</p></li>
+<li><p>adungu</p></li>
+<li><p>ukelele</p></li>
+<li><p>etc.</p></li>
+</ul>
+</li>
+<li><p>concerto &amp; its synonyms</p>
+<ul class="simple">
+<li><p>symphony</p></li>
+<li><p>sonata</p></li>
+<li><p>etc.</p></li>
+</ul>
+</li>
+<li><p>group dynamics &amp; its synonyms</p>
+<ul class="simple">
+<li><p>team</p>
+<ul>
+<li><p>yaffe</p></li>
+<li><p>etc.</p></li>
+</ul>
+</li>
+<li><p>community</p>
+<ul>
+<li><p>ffena</p></li>
+</ul>
+</li>
+<li><p>etc.</p></li>
+</ul>
+</li>
+<li><p>other: there’ss no <code class="docutils literal notranslate"><span class="pre">i</span></code> in team (<strong>irony</strong>)</p>
+<ul class="simple">
+<li><p>no <code class="docutils literal notranslate"><span class="pre">eye</span></code> in community</p></li>
+<li><p>no <code class="docutils literal notranslate"><span class="pre">i</span></code> in drum</p></li>
+<li><p>no <code class="docutils literal notranslate"><span class="pre">i</span></code> in concerto</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noid</span></code> in de-identified data</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="workflow-5-2">
+<h2>805. workflow 5.2<a class="headerlink" href="#workflow-5-2" title="Permalink to this heading">#</a></h2>
+<p>To translate the given Windows batch commands to a macOS shell script (Bash script), follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Create a new text file and give it a <code class="docutils literal notranslate"><span class="pre">.sh</span></code> extension. For example, <code class="docutils literal notranslate"><span class="pre">script.sh</span></code>.</p></li>
+<li><p>Open the file using a text editor.</p></li>
+<li><p>Add the following content to the <code class="docutils literal notranslate"><span class="pre">script.sh</span></code> file:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Change directory to ~/dropbox/1f.ἡἔρις,κ/1.ontology</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+
+<span class="c1"># Build Jupyter Book with &#39;gano&#39; as the argument</span>
+jb<span class="w"> </span>build<span class="w"> </span>gano
+
+<span class="c1"># Change directory to &#39;amagunju&#39;</span>
+<span class="nb">cd</span><span class="w"> </span>amagunju
+
+<span class="c1"># Add all files in the current directory to Git</span>
+git<span class="w"> </span>add<span class="w"> </span>./*
+
+<span class="c1"># Commit changes to Git with the given commit message</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;first attempt at .sh script&quot;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Save the file.</p></li>
+<li><p>Make the script executable. Open a terminal, navigate to the directory where <code class="docutils literal notranslate"><span class="pre">script.sh</span></code> is located, and run the following command:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span>script.sh
+</pre></div>
+</div>
+<p>Now you have a Bash script that replicates the functionality of the original Windows batch commands. To execute the script, you can run it from the terminal using <code class="docutils literal notranslate"><span class="pre">./script.sh</span></code> or by providing the full path to the script.</p>
+<p>Please note that in macOS, you might need to adjust some paths depending on your specific file system structure. Also, be cautious with non-ASCII characters in file and folder names, as they can sometimes cause issues in shell scripts. If you encounter any issues, consider renaming folders with non-ASCII characters to more standard names.</p>
+</section>
+<section id="bash">
+<h2>806. bash<a class="headerlink" href="#bash" title="Permalink to this heading">#</a></h2>
+<p>To create a file named “<a class="reference external" href="http://run.sh">run.sh</a>” on the command line, you can use a text editor like <code class="docutils literal notranslate"><span class="pre">nano</span></code>, <code class="docutils literal notranslate"><span class="pre">vim</span></code>, or simply the <code class="docutils literal notranslate"><span class="pre">echo</span></code> command to write the contents of the file. Below are two common methods:</p>
+<p>Method 1: Using a Text Editor (nano)</p>
+<ol class="arabic simple">
+<li><p>Open a terminal or command prompt on your system.</p></li>
+<li><p>Type the following command to create and open the “<a class="reference external" href="http://run.sh">run.sh</a>” file in the nano text editor:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nano<span class="w"> </span>run.sh
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>This will open the nano editor with an empty file named “<a class="reference external" href="http://run.sh">run.sh</a>.”</p></li>
+<li><p>Now, you can type or paste the content you want to have in the “<a class="reference external" href="http://run.sh">run.sh</a>” file.</p></li>
+<li><p>Once you’re done writing the content, press <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">O</span></code> (Write Out) to save the file.</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> to confirm the filename and overwrite if it already exists.</p></li>
+<li><p>Finally, press <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">X</span></code> to exit the nano editor.</p></li>
+</ol>
+<p>Method 2: Using the Echo Command</p>
+<ol class="arabic simple">
+<li><p>Open a terminal or command prompt on your system.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">echo</span></code> command to create the “<a class="reference external" href="http://run.sh">run.sh</a>” file and add content to it. For example:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;#!/bin/bash&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>run.sh
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;echo &quot;Hello, world!&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>run.sh
+</pre></div>
+</div>
+<p>The first line creates the file “<a class="reference external" href="http://run.sh">run.sh</a>” and writes the shebang (#!/bin/bash) to indicate that it is a bash script. The second line appends the “echo” command to the “<a class="reference external" href="http://run.sh">run.sh</a>” file, which will print “Hello, world!” when you run the script.</p>
+<p>Please note that if you already have a file named “<a class="reference external" href="http://run.sh">run.sh</a>” in the current directory, using these methods will overwrite the existing file. If you want to append to the existing file without overwriting, use double greater-than <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code> instead of a single one <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>.</p>
+<p>I’ve used  <code class="docutils literal notranslate"><span class="pre">nano</span></code> &amp; it was infinitely easier than <code class="docutils literal notranslate"><span class="pre">vim</span></code> or <code class="docutils literal notranslate"><span class="pre">echo</span></code> since i’m not a programmer.</p>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -8076,6 +8273,13 @@ git push
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table1">800. table1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clone">801. clone</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-4-0">802. workflow 4.0</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id82">07/30/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-5-0">803. workflow 5.0</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-5-1">804. workflow 5.1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-5-2">805. workflow 5.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bash">806. bash</a></li>
 </ul>
 </li>
 </ul>
