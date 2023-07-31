@@ -14,7 +14,11 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "fena = git & spoke = fenagas"
+git commit -m "### 820. herverb
+
++ for the record, i set record record sales 
++ i do: cardi b with sza
++ wap"
 
 # Push changes to GitHub
 # git remote set-url origin git@github.com:muzaale/amagunju
