@@ -661,6 +661,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#juliocesare">813. juliocesare</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id83">07/31/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cafe">814. café</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feminism">815. feminism</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -4981,7 +4986,7 @@ _(Provide answer here)_
 <p>Euler’s identity, equation <a class="reference internal" href="#equation-euler">()</a>, was elected one of the
 most beautiful mathematical formulas.</p>
 <blockquote>
-<div><p>Jul 30, 2023 | 21274 words | 106 min read</p>
+<div><p>Jul 31, 2023 | 21304 words | 107 min read</p>
 </div></blockquote>
 </section>
 </section>
@@ -5449,7 +5454,7 @@ Moneyline odds profit: $250000.00
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/4f48ca34f70745bc271fcd9a4f969b98eb0f84e13d4999bd646257ef0b4c1649.png" src="_images/4f48ca34f70745bc271fcd9a4f969b98eb0f84e13d4999bd646257ef0b4c1649.png" />
+<img alt="_images/9d6719f1485efe40aedc3f470f5bf81bc3894ebb9df77d55c7ee73da04be4b5e.png" src="_images/9d6719f1485efe40aedc3f470f5bf81bc3894ebb9df77d55c7ee73da04be4b5e.png" />
 </div>
 </div>
 </section>
@@ -7605,6 +7610,8 @@ git push
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;ds4ph-bme/ds4ph-spring-hw-1-muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>
@@ -7669,14 +7676,33 @@ git push
     <span class="p">[</span><span class="s2">&quot;54&quot;</span><span class="p">,</span> <span class="s2">&quot;dhatemwakulala&quot;</span><span class="p">,</span> <span class="s2">&quot;ffena&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;dhatemwakulala@gmail.com&quot;</span><span class="p">],</span>
     <span class="p">[</span><span class="s2">&quot;55&quot;</span><span class="p">,</span> <span class="s2">&quot;dhatemwakulala&quot;</span><span class="p">,</span> <span class="s2">&quot;kelele&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;dhatemwakulala@gmail.com&quot;</span><span class="p">],</span> 
         <span class="c1"># ... Add more rows here ...</span>
-    <span class="p">[</span><span class="s2">&quot;56&quot;</span><span class="p">,</span> <span class="s2">&quot;iagouganda&quot;</span><span class="p">,</span> <span class="s2">&quot;iago.github.io&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;iago.uganda@gmail.com&quot;</span><span class="p">,</span> <span class="s2">&quot;x&quot;</span><span class="p">],</span>
-    <span class="p">[</span><span class="s2">&quot;57&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;imeela&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">],</span>  
-    <span class="p">[</span><span class="s2">&quot;58&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;amagunju&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">],</span>  
+    <span class="p">[</span><span class="s2">&quot;56&quot;</span><span class="p">,</span> <span class="s2">&quot;iagouganda&quot;</span><span class="p">,</span> <span class="s2">&quot;iago.github.io&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;iago.uganda@gmail.com&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;57&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;imeela&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>  
+    <span class="p">[</span><span class="s2">&quot;58&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;amagunju&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>  
         <span class="c1"># ... Add more rows here ...</span>
-    <span class="p">[</span><span class="s2">&quot;58&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;zeushadesposeidon&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">],</span>          
+    <span class="p">[</span><span class="s2">&quot;58&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;zeushadesposeidon&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span> 
+    <span class="p">[</span><span class="s2">&quot;59&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;repos&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>  
+    <span class="p">[</span><span class="s2">&quot;60&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale&quot;</span><span class="p">,</span> <span class="s2">&quot;fenagas,llc&quot;</span><span class="p">,</span> <span class="s2">&quot;Private&quot;</span><span class="p">,</span> <span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="p">],</span>         
 <span class="p">]</span>
 
 <span class="n">headers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span> <span class="s2">&quot;GitHub Account&quot;</span><span class="p">,</span> <span class="s2">&quot;Repo Name&quot;</span><span class="p">,</span> <span class="s2">&quot;Status&quot;</span><span class="p">,</span> <span class="s2">&quot;Email Address&quot;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">generate_random_date</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">):</span>
+    <span class="n">time_delta</span> <span class="o">=</span> <span class="n">end_date</span> <span class="o">-</span> <span class="n">start_date</span>
+    <span class="n">random_days</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">time_delta</span><span class="o">.</span><span class="n">days</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">start_date</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">random_days</span><span class="p">)</span>
+
+<span class="c1"># Define the date range</span>
+<span class="n">start_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">end_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
+
+<span class="c1"># Add a random date for each row in the data</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+    <span class="n">random_date</span> <span class="o">=</span> <span class="n">generate_random_date</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random_date</span><span class="p">)</span>
+
+<span class="c1"># Update headers to include the new column</span>
+<span class="n">headers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Random Date&quot;</span><span class="p">)</span>
 
 <span class="n">table</span> <span class="o">=</span> <span class="n">tabulate</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">tablefmt</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
@@ -8189,6 +8215,40 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 <img alt="_images/3aa21e7ef0bcc1af986420a3005ba7debb518fbf0e92e4ddc050b8b91d21f936.png" src="_images/3aa21e7ef0bcc1af986420a3005ba7debb518fbf0e92e4ddc050b8b91d21f936.png" />
 </div>
 </div>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+<span class="c1"># nano trackrepos.sh</span>
+<span class="c1"># chmod +x trackrepos.sh</span>
+<span class="c1"># jb create track </span>
+jb<span class="w"> </span>build<span class="w"> </span>track<span class="w"> </span>
+<span class="c1"># git clone https://github.com/muzaale/repos</span>
+cp<span class="w"> </span>-r<span class="w"> </span>track/*<span class="w"> </span>repos
+<span class="nb">cd</span><span class="w"> </span>repos
+git<span class="w"> </span>add<span class="w"> </span>./*
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;tracking down burgeoning repos, juliocesare 31st 2023, uncomment vigilante&quot;</span>
+<span class="c1"># ssh-keygen -t ed25519 -C &quot;muzaale@gmail.com&quot;</span>
+/users/d/.ssh/id_trackrepos
+vigilante
+<span class="c1"># cat /users/d/.ssh/id_trackrepos.pub</span>
+<span class="c1"># eval &quot;$(ssh-agent -s)&quot;</span>
+<span class="c1"># Agent pid 80141</span>
+<span class="c1"># pbcopy &lt; ~/.ssh/id_trackrepos.pub</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/id_trackrepos
+git<span class="w"> </span>remote<span class="w"> </span>-v
+ssh-add<span class="w"> </span>-D
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:muzaale/repos<span class="w"> </span>
+ssh-add<span class="w"> </span>~/.ssh/id_trackrepos
+vigilante
+<span class="c1"># git status</span>
+git<span class="w"> </span>push<span class="w"> </span>
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+<span class="c1"># interactive shell is now zsh</span>
+<span class="c1"># please run `chsh -s /bin/zsh`</span>
+</pre></div>
+</div>
+</aside>
 </section>
 <section id="juliocesare">
 <h2>813. juliocesare<a class="headerlink" href="#juliocesare" title="Permalink to this heading">#</a></h2>
@@ -8196,6 +8256,35 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 <li><p>what a month this been!</p></li>
 <li><p>i’m delighted to close out on this note</p></li>
 <li><p>accouncing the vigilante project: <a class="reference external" href="https://muzaale.github.io/repos/intro.html">track repos</a> to <span class="math notranslate nohighlight">\(min(chaos)\)</span></p></li>
+</ul>
+</section>
+</section>
+<section id="id83">
+<h1>07/31/2023<a class="headerlink" href="#id83" title="Permalink to this heading">#</a></h1>
+<section id="cafe">
+<h2>814. café<a class="headerlink" href="#cafe" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>henchforth to be my beverage of choice</p></li>
+<li><p>i will drink it black, <em>grazie</em></p></li>
+<li><p>mocha espresso - <code class="docutils literal notranslate"><span class="pre">apeshit</span></code></p>
+<ul>
+<li><p>aesethetics</p></li>
+<li><p>parsimony</p></li>
+<li><p>epicurean</p></li>
+<li><p>simplicity</p></li>
+<li><p>habit</p></li>
+<li><p>italian</p></li>
+<li><p>tradition</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="feminism">
+<h2>815. feminism<a class="headerlink" href="#feminism" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>jill scott</p></li>
+<li><p>crown royal</p></li>
+<li><p>ain’t that somethin’?</p></li>
 </ul>
 </section>
 </section>
@@ -8555,6 +8644,11 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sexiest">812. sexiest</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gas">813. gas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#juliocesare">813. juliocesare</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id83">07/31/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cafe">814. café</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feminism">815. feminism</a></li>
 </ul>
 </li>
 </ul>
