@@ -669,6 +669,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#playwright">819. playwright</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#herverb">820. herverb</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jhutrc-fenagas-llc">821. jhutrc/fenagas,llc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array">822. array</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list">823. list</a></li>
 </ul>
 </li>
 </ul>
@@ -4991,7 +4993,7 @@ _(Provide answer here)_
 <p>Euler’s identity, equation <a class="reference internal" href="#equation-euler">()</a>, was elected one of the
 most beautiful mathematical formulas.</p>
 <blockquote>
-<div><p>Jul 31, 2023 | 21789 words | 109 min read</p>
+<div><p>Jul 31, 2023 | 22091 words | 110 min read</p>
 </div></blockquote>
 </section>
 </section>
@@ -5459,7 +5461,7 @@ Moneyline odds profit: $250000.00
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/1d3650877f4ec2100e7572ade2dd645e7451b7f26e0ff42de37e1ad836bbd612.png" src="_images/1d3650877f4ec2100e7572ade2dd645e7451b7f26e0ff42de37e1ad836bbd612.png" />
+<img alt="_images/7d21b5cf341183cf0799e5c5c2d043b489830102669545807c275fa1eee5b78e.png" src="_images/7d21b5cf341183cf0799e5c5c2d043b489830102669545807c275fa1eee5b78e.png" />
 </div>
 </div>
 </section>
@@ -8400,6 +8402,50 @@ While there are notable thinkers associated with the exploration of perspectivit
 </li>
 </ul>
 </section>
+<section id="array">
+<h2>822. array<a class="headerlink" href="#array" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="nb">declare</span><span class="w"> </span>-a<span class="w"> </span><span class="nv">arr</span><span class="o">=(</span><span class="s2">&quot;high_school_students&quot;</span><span class="w"> </span><span class="s2">&quot;undergraduates&quot;</span><span class="w"> </span><span class="s2">&quot;graduate_students&quot;</span><span class="w"> </span><span class="s2">&quot;medical_students&quot;</span><span class="w"> </span><span class="s2">&quot;residents&quot;</span><span class="w"> </span>
+<span class="s2">&quot;fellows&quot;</span><span class="w"> </span><span class="s2">&quot;faculty&quot;</span><span class="w"> </span><span class="s2">&quot;analysts&quot;</span><span class="w"> </span><span class="s2">&quot;staff&quot;</span><span class="w"> </span><span class="s2">&quot;collaborators&quot;</span><span class="w"> </span><span class="s2">&quot;graduates&quot;</span><span class="o">)</span>
+
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">arr</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">do</span>
+<span class="w">   </span>touch<span class="w"> </span><span class="s2">&quot;./content/dramatispersonae/</span><span class="nv">$i</span><span class="s2">.ipynb&quot;</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+</section>
+<section id="list">
+<h2>823. list<a class="headerlink" href="#list" title="Permalink to this heading">#</a></h2>
+<p>List, Array, and Tibble are data structures used in different programming environments for handling data. Here’s a brief explanation of each:</p>
+<ol class="arabic simple">
+<li><p>List:
+A list is a data structure that can store elements of different types and is usually found in many programming languages, including Python, R, and others. It is an ordered collection of items where each item is identified by an index or a name (in the case of named lists). Lists can be heterogeneous, meaning they can contain elements of different data types like numbers, strings, and other lists. In Python, lists are denoted using square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>, and in R, they are created using the <code class="docutils literal notranslate"><span class="pre">list()</span></code> function.</p></li>
+</ol>
+<p>Example in Python:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">}]</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Array:
+An array is a data structure that can hold elements of the same data type in a fixed-size, contiguous block of memory. It is commonly found in programming languages like C, C++, Java, and NumPy (Python library). Arrays are generally more efficient in terms of memory usage and performance for numerical computations compared to lists. However, arrays in most programming languages don’t allow resizing once they are created.</p></li>
+</ol>
+<p>Example in C++:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">my_array</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Tibble:
+A tibble is a data structure used in the R programming language, specifically within the tidyverse ecosystem. It is an improved version of the traditional data.frame and is designed to store rectangular data in a structured format. Tibbles maintain some additional properties, such as improved printing and subsetting behavior, which make them more user-friendly compared to data frames. Tibbles are widely used in data manipulation and analysis workflows in R.</p></li>
+</ol>
+<p>Example in R:</p>
+<div class="highlight-R notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tibble</span><span class="p">)</span>
+<span class="n">my_tibble</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tibble</span><span class="p">(</span><span class="n">ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="n">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Charlie&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">Age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="m">22</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>In summary, a list is a versatile data structure that can store elements of different types, an array is a more rigid structure meant for elements of the same type, and a tibble is a specific data structure used in R, optimized for data manipulation and analysis tasks.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -8767,6 +8813,8 @@ While there are notable thinkers associated with the exploration of perspectivit
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#playwright">819. playwright</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#herverb">820. herverb</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jhutrc-fenagas-llc">821. jhutrc/fenagas,llc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#array">822. array</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list">823. list</a></li>
 </ul>
 </li>
 </ul>
