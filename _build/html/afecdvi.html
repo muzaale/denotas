@@ -418,6 +418,36 @@ git push
 </pre></div>
 </div>
 </aside>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+<span class="c1"># terminal</span>
+<span class="c1"># nano trackrepos.sh</span>
+<span class="c1"># chmod +x trackrepos.sh</span>
+<span class="c1"># jb create track </span>
+jb<span class="w"> </span>build<span class="w"> </span>track<span class="w"> </span>
+<span class="c1"># git clone https://github.com/muzaale/repos</span>
+cp<span class="w"> </span>-r<span class="w"> </span>track/*<span class="w"> </span>repos
+<span class="nb">cd</span><span class="w"> </span>repos
+git<span class="w"> </span>add<span class="w"> </span>./*
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;tracking down burgeoning repos&quot;</span>
+<span class="c1"># ssh-keygen -t ed25519 -C &quot;muzaale@gmail.com&quot;</span>
+/users/d/.ssh/id_trackrepos
+vigilante
+cat<span class="w"> </span>/users/d/.ssh/id_trackrepos.pub
+<span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+<span class="c1"># Agent pid 80141</span>
+pbcopy<span class="w"> </span>&lt;<span class="w"> </span>~/.ssh/id_trackrepos.pub
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/id_trackrepos
+git<span class="w"> </span>remote<span class="w"> </span>-v
+ssh-add<span class="w"> </span>-D
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:muzaale/repos<span class="w"> </span>
+ssh-add<span class="w"> </span>~/.ssh/id_trackrepos
+vigilante
+git<span class="w"> </span>status
+git<span class="w"> </span>push<span class="w"> </span>
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+</pre></div>
+</div>
 
     <script type="text/x-thebe-config">
     {
