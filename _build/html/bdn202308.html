@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; Nothin&#39;</title>
+    <title>825. undergrads &#8212; Nothin&#39;</title>
   
   
   
@@ -328,9 +328,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -341,19 +339,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>825. undergrads</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -363,7 +353,80 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  
+  <section id="undergrads">
+<h1>825. <a class="reference external" href="https://jhutrc.github.io/fenagas/content/dramatispersonae/undergraduates.html">undergrads</a><a class="headerlink" href="#undergrads" title="Permalink to this heading">#</a></h1>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># List of names</span>
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;Amelia&quot;</span><span class="p">,</span> <span class="s2">&quot;Brown&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Brandon&quot;</span><span class="p">,</span> <span class="s2">&quot;Wilson&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Catherine&quot;</span><span class="p">,</span> <span class="s2">&quot;Garcia&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;David&quot;</span><span class="p">,</span> <span class="s2">&quot;Martinez&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Evelyn&quot;</span><span class="p">,</span> <span class="s2">&quot;Lee&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Fernando&quot;</span><span class="p">,</span> <span class="s2">&quot;Gomez&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Grace&quot;</span><span class="p">,</span> <span class="s2">&quot;Kim&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Henry&quot;</span><span class="p">,</span> <span class="s2">&quot;Johnson&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Isabella&quot;</span><span class="p">,</span> <span class="s2">&quot;Smith&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Jackson&quot;</span><span class="p">,</span> <span class="s2">&quot;Nguyen&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Kayla&quot;</span><span class="p">,</span> <span class="s2">&quot;Patel&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Lucas&quot;</span><span class="p">,</span> <span class="s2">&quot;White&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Mia&quot;</span><span class="p">,</span> <span class="s2">&quot;Anderson&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Nathan&quot;</span><span class="p">,</span> <span class="s2">&quot;Chan&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Olivia&quot;</span><span class="p">,</span> <span class="s2">&quot;Perez&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Peter&quot;</span><span class="p">,</span> <span class="s2">&quot;Zhang&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;Quinn&quot;</span><span class="p">,</span> <span class="s2">&quot;Rodriguez&quot;</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">create_table</span><span class="p">(</span><span class="n">names</span><span class="p">):</span>
+    <span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Number&quot;</span><span class="p">,</span> <span class="s2">&quot;Name&quot;</span><span class="p">]</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">full_name</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="n">full_name</span><span class="p">]</span>
+        <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    
+    <span class="c1"># Printing the table</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">table</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;10</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">&lt;30</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Call the function</span>
+<span class="n">create_table</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
+1          Amelia Brown                  
+2          Brandon Wilson                
+3          Catherine Garcia              
+4          David Martinez                
+5          Evelyn Lee                    
+6          Fernando Gomez                
+7          Grace Kim                     
+8          Henry Johnson                 
+9          Isabella Smith                
+10         Jackson Nguyen                
+11         Kayla Patel                   
+12         Lucas White                   
+13         Mia Anderson                  
+14         Nathan Chan                   
+15         Olivia Perez                  
+16         Peter Zhang                   
+17         Quinn Rodriguez               
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -404,20 +467,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
