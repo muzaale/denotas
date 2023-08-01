@@ -14,7 +14,7 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "array, list, tibble"
+git commit -m "Shakespeare Contra Nietzsche by Andrew Lanham: fave essay"
 
 # Push changes to GitHub
 # git remote set-url origin git@github.com:muzaale/amagunju
