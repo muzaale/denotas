@@ -14,11 +14,16 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "### 828. music
+git commit -m "### 829. boards
 
-+ take me to church on apple music
-+ my fave playlist
-+ *savor it!*"
++ my scores are expired
++ i need to retake them
++ will be fun with ai 
++ consider a timeline
++ and with fenagas,llc?
++ just might have bandwidth
++ but its the synthesis of the two
++ that will be the most fun"
 
 # Push changes to GitHub
 # git remote set-url origin git@github.com:muzaale/amagunju
