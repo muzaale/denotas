@@ -14,7 +14,7 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "synthesis: act i: hypothesis, act ii: data, act iii: estimate, act iv: variance, act v: explanation, epilogue: conclusion"
+git commit -m "repo per project. fenagas is merely a recruitment tool."
 
 # Push changes to GitHub
 # git remote set-url origin git@github.com:muzaale/amagunju
