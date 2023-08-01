@@ -14,7 +14,7 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "restored fakenames object & express gratitute for fenagas, lcc"
+git commit -m "let ai say about fena annuŋŋamya mu makubo ago butuki... github co-pilot completed ...rivu"
 
 # Push changes to GitHub
 # git remote set-url origin git@github.com:muzaale/amagunju
