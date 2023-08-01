@@ -14,9 +14,7 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "had omited the date: ## 08/01/2023
-
-### 825. [undergrads](https://jhutrc.github.io/fenagas/content/dramatispersonae/undergraduates.html)"
+git commit -m "restored fakenames object & express gratitute for fenagas, lcc"
 
 # Push changes to GitHub
 # git remote set-url origin git@github.com:muzaale/amagunju
