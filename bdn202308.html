@@ -373,6 +373,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">840. music</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning">841. learning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#act1">842. act1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#streamline">843. streamline</a></li>
 </ul>
 </li>
 </ul>
@@ -427,16 +428,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Charles Norton                
-2          Kaylee Hopkins                
-3          Julie Weiss                   
-4          Drew Williams                 
-5          Wesley Potter                 
-6          Martha Johnson                
-7          Kelly Nunez                   
-8          Kristen Solis                 
-9          Christopher Smith             
-10         Peggy Riley                   
+1          Katie Young                   
+2          Eric Woodard                  
+3          Krista Browning               
+4          Mark Reed                     
+5          Tasha Merritt                 
+6          Joshua Gonzalez               
+7          Sherry Nelson                 
+8          Brandon Flores                
+9          James Hernandez               
+10         Edward Ashley                 
 </pre></div>
 </div>
 </div>
@@ -1296,6 +1297,198 @@ cp<span class="w"> </span>content/lessons/l1/act1_<span class="o">{</span><span 
 <li><p>push content to the public repository and use gh-pages to publish the content</p></li>
 </ul>
 </section>
+<section id="streamline">
+<h2>843. streamline<a class="headerlink" href="#streamline" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Change the working directory to the desired location</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+
+<span class="c1"># Uncomment the following line if you need to create the &quot;three40&quot; directory</span>
+<span class="c1"># mkdir three40</span>
+<span class="c1"># cd three40</span>
+
+<span class="c1"># Create the root folder</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>three40
+
+<span class="c1"># Create the &quot;intro.ipynb&quot; file inside the &quot;root&quot; folder</span>
+touch<span class="w"> </span>three40/intro.ipynb
+
+<span class="c1"># Function to read the chapters from the YAML file using pure bash</span>
+get_chapters_from_yaml<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="nv">part</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="nv">toc_file</span><span class="o">=</span><span class="s2">&quot;_toc.yml&quot;</span>
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span>lines
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="nv">in_part</span><span class="o">=</span><span class="nb">false</span>
+
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>line<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$line</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*<span class="s2">&quot;</span><span class="nv">$part</span><span class="s2">&quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">      </span><span class="nv">in_part</span><span class="o">=</span><span class="nb">true</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$line</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*<span class="s2">&quot;- File: &quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$in_part</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$line</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span>-F<span class="s1">&#39;: &#39;</span><span class="w"> </span><span class="s1">&#39;{print $2}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39; &#39;</span>
+<span class="w">      </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$line</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*<span class="s2">&quot;-&quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">      </span><span class="nv">in_part</span><span class="o">=</span><span class="nb">false</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="w">  </span><span class="k">done</span><span class="w"> </span>&lt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$toc_file</span><span class="s2">&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># Create parts and chapters based on the _toc.yml structure</span>
+<span class="nv">parts</span><span class="o">=(</span>
+<span class="w">  </span><span class="s2">&quot;Act I&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Act II&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Act III&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Act IV&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Act V&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Epilogue&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Git &amp; Spoke&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Feedback&quot;</span>
+<span class="w">  </span><span class="s2">&quot;About Fena&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Courses&quot;</span>
+<span class="o">)</span>
+
+<span class="c1"># Loop through parts and create chapters inside each part folder</span>
+<span class="k">for</span><span class="w"> </span>part<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">parts</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nv">part_folder</span><span class="o">=</span><span class="s2">&quot;root/</span><span class="nv">$part</span><span class="s2">&quot;</span>
+<span class="w">  </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$part_folder</span><span class="s2">&quot;</span>
+
+<span class="w">  </span><span class="c1"># Get the chapters for the current part from the _toc.yml</span>
+<span class="w">  </span><span class="nv">chapters</span><span class="o">=(</span><span class="k">$(</span>get_chapters_from_yaml<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$part</span><span class="s2">&quot;</span><span class="k">)</span><span class="o">)</span>
+
+<span class="w">  </span><span class="c1"># Create chapter files inside the part folder</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span>chapter<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">chapters</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$part_folder</span><span class="s2">/</span><span class="nv">$chapter</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="c1"># Create folders for dramatispersonae</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>root/content/dramatispersonae/<span class="o">{</span>high_school_students,undergraduates,graduate_students,medical_students,residents,fellows,faculty,analysts,staff,collaborators,graduates<span class="o">}</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>root/content/dramatispersonae/high_school_students/calvin_mathews
+mkdir<span class="w"> </span>-p<span class="w"> </span>root/content/dramatispersonae/medical_students/andrew_arking
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Folder structure has been created successfully.&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>Root: intro.ipynb
+Title: Fenagas
+
+Parts:
+- Caption:
+  Chapters:
+  - File: prologue.ipynb
+
+- Caption: Act I
+  Chapters:
+  - File: content/lessons/l1/act1_1.ipynb
+  - File: content/lessons/l1/act1_2.ipynb
+  - File: content/lessons/l1/act1_3.ipynb
+  - File: content/lessons/l1/act1_4.ipynb
+  - File: content/lessons/l1/act1_5.ipynb
+  - File: content/lessons/l1/act1_6.ipynb
+  - File: content/lessons/l1/act1_7.ipynb
+  - File: content/lessons/l1/act1_8.ipynb
+  - File: content/lessons/l1/act1_9.ipynb
+  - File: content/lessons/l1/act1_10.ipynb
+
+- Caption: Act II
+  Chapters:
+  - File: content/lessons/l2/act2_1.ipynb
+  - File: content/lessons/l2/act2_2.ipynb
+  - File: content/lessons/l2/act2_3.ipynb
+  - File: content/lessons/l2/act2_4.ipynb
+  - File: content/lessons/l2/act2_5.ipynb
+  - File: content/lessons/l2/act2_6.ipynb
+  - File: content/lessons/l2/act2_7.ipynb
+  - File: content/lessons/l2/act2_8.ipynb
+  - File: content/lessons/l2/act2_9.ipynb
+  - File: content/lessons/l2/act2_10.ipynb
+
+- Caption: Act III
+  Chapters:
+  - File: content/lessons/l3/act3_1.ipynb
+  - File: content/lessons/l3/act3_2.ipynb
+  - File: content/lessons/l3/act3_3.ipynb
+  - File: content/lessons/l3/act3_4.ipynb
+  - File: content/lessons/l3/act3_5.ipynb
+  - File: content/lessons/l3/act3_6.ipynb
+  - File: content/lessons/l3/act3_7.ipynb
+  - File: content/lessons/l3/act3_8.ipynb
+  - File: content/lessons/l3/act3_9.ipynb
+  - File: content/lessons/l3/act3_10.ipynb
+
+- Caption: Act IV
+  Chapters:
+  - File: content/lessons/l4/act4_1.ipynb
+  - File: content/lessons/l4/act4_2.ipynb
+  - File: content/lessons/l4/act4_3.ipynb
+  - File: content/lessons/l4/act4_4.ipynb
+  - File: content/lessons/l4/act4_5.ipynb
+  - File: content/lessons/l4/act4_6.ipynb
+  - File: content/lessons/l4/act4_7.ipynb
+  - File: content/lessons/l4/act4_8.ipynb
+  - File: content/lessons/l4/act4_9.ipynb
+  - File: content/lessons/l4/act4_10.ipynb
+
+- Caption: Act V
+  Chapters:
+  - File: content/lessons/l5/act5_1.ipynb
+  - File: content/lessons/l5/act5_2.ipynb
+  - File: content/lessons/l5/act5_3.ipynb
+  - File: content/lessons/l5/act5_4.ipynb
+  - File: content/lessons/l5/act5_5.ipynb
+  - File: content/lessons/l5/act5_6.ipynb
+  - File: content/lessons/l5/act5_7.ipynb
+  - File: content/lessons/l5/act5_8.ipynb
+  - File: content/lessons/l5/act5_9.ipynb
+  - File: content/lessons/l5/act5_10.ipynb
+
+- Caption: Epilogue
+  Chapters:
+  - File: content/lessons/l6/epi_1.ipynb
+  - File: content/lessons/l6/epi_2.ipynb
+  - File: content/lessons/l6/epi_3.ipynb
+  - File: content/lessons/l6/epi_4.ipynb
+  - File: content/lessons/l6/epi_5.ipynb
+  - File: content/lessons/l6/epi_6.ipynb
+  - File: content/lessons/l6/epi_7.ipynb
+  - File: content/lessons/l6/epi_8.ipynb
+  - File: content/lessons/l6/epi_9.ipynb
+  - File: content/lessons/l6/epi_10.ipynb
+
+- Caption: Git &amp; Spoke
+  Chapters:
+  - File: content/lessons/l7/act7_1.ipynb
+  - File: content/lessons/l7/act7_2.ipynb
+  - File: content/lessons/l7/act7_3.ipynb
+  - File: content/lessons/l7/act7_4.ipynb
+  - File: content/lessons/l7/act7_5.ipynb
+  - File: content/lessons/l7/act7_6.ipynb
+  - File: content/lessons/l7/act7_7.ipynb
+  - File: content/lessons/l7/act7_8.ipynb
+  - File: content/lessons/l7/act7_9.ipynb
+  - File: content/lessons/l7/act7_10.ipynb
+
+- Caption: Feedback
+  Chapters:
+  - File: content/lessons/1_survey9.ipynb
+
+- Caption: About Fena
+  Chapters:
+  - File: content/lessons/about/cite.ipynb
+  - File: content/lessons/about/changelog.ipynb
+
+- Caption: Courses
+  Chapters:
+  - URL: https://publichealth.jhu.edu/courses
+    Title: Stata Programming
+  - File: content/dramatispersonae/high_school_students/high_school_students.ipynb
+  - File: content/dramatispersonae/undergraduates/undergraduates.ipynb
+  - File: content/dramatispersonae/graduate_students/graduate_students.ipynb
+  - File: content/dramatispersonae/medical_students/medical_students.ipynb
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1369,6 +1562,7 @@ cp<span class="w"> </span>content/lessons/l1/act1_<span class="o">{</span><span 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">840. music</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning">841. learning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#act1">842. act1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#streamline">843. streamline</a></li>
 </ul>
 </li>
 </ul>
