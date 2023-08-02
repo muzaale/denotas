@@ -14,7 +14,7 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "### 825. [undergrads](https://jhutrc.github.io/fenagas/content/dramatispersonae/undergraduates/undergraduates.html)"
+git commit -m "### 854. Stata. Hi Laura, ..."
 
 # Push changes to GitHub
 # git remote set-url origin git@github.com:muzaale/amagunju
