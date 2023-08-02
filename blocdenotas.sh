@@ -14,7 +14,7 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "notfancybutworks three40.sh"
+git commit -m "notfancybutworks three40.sh, take2"
 
 # Push changes to GitHub
 # git remote set-url origin git@github.com:muzaale/amagunju
