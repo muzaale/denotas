@@ -427,16 +427,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Sydney Edwards                
-2          Mary Simmons                  
-3          Frank Harris                  
-4          Christine Perez               
-5          Stephanie Johnson             
-6          Alexander Price               
-7          Alan Aguirre                  
-8          Elizabeth Perez               
-9          Kaitlin Thompson              
-10         Jennifer Peterson             
+1          Charles Norton                
+2          Kaylee Hopkins                
+3          Julie Weiss                   
+4          Drew Williams                 
+5          Wesley Potter                 
+6          Martha Johnson                
+7          Kelly Nunez                   
+8          Kristen Solis                 
+9          Christopher Smith             
+10         Peggy Riley                   
 </pre></div>
 </div>
 </div>
@@ -921,9 +921,9 @@ Songwriters: Donald Lawrence / Marshon Lewis / William James Stokes / Robert Woo
 <span class="nb">print</span><span class="p">(</span><span class="n">music_stream</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">))</span>
 
 <span class="c1"># Save the score as MusicXML and display it as a PNG image</span>
-<span class="n">musicxml_path</span> <span class="o">=</span> <span class="s1">&#39;/tmp/music21_example.musicxml&#39;</span>
-<span class="n">png_path</span> <span class="o">=</span> <span class="s1">&#39;/tmp/music21_example.png&#39;</span>
-<span class="n">score</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;musicxml.png&#39;</span><span class="p">,</span> <span class="n">fp</span><span class="o">=</span><span class="n">musicxml_path</span><span class="p">)</span>
+<span class="c1"># musicxml_path = &#39;/tmp/music21_example.musicxml&#39;</span>
+<span class="c1"># png_path = &#39;/tmp/music21_example.png&#39;</span>
+<span class="c1"># score.write(&#39;musicxml.png&#39;, fp=musicxml_path)</span>
 
 <span class="c1"># Convert the MusicXML to a PNG image</span>
 <span class="n">conv</span> <span class="o">=</span> <span class="n">converter</span><span class="o">.</span><span class="n">subConverters</span><span class="o">.</span><span class="n">ConverterMusicXML</span><span class="p">()</span>
@@ -970,38 +970,39 @@ None
 <p>To design a Stata Programming class with the flexibility to adapt it into Python and R Programming classes, we can organize the content according to the provided headings in the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file. We will structure the course into five acts, and each act will contain three to six scenes representing different chapters or topics. Each scene will be a learning module or topic that covers a specific aspect of Stata programming (and later Python and R programming).</p>
 <p>Let’s begin by creating the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Skip to main content</span>
+
 <span class="l l-Scalar l-Scalar-Plain">Have any feedback? Please participate in this survey</span>
 <span class="l l-Scalar l-Scalar-Plain">Logo image</span>
 <span class="l l-Scalar l-Scalar-Plain">Fenagas</span>
 <span class="l l-Scalar l-Scalar-Plain">Prologue</span>
-<span class="l l-Scalar l-Scalar-Plain">Act I</span>
 
+<span class="l l-Scalar l-Scalar-Plain">Act I</span>
 <span class="l l-Scalar l-Scalar-Plain">Manuscripts</span>
 <span class="l l-Scalar l-Scalar-Plain">Code</span>
 <span class="l l-Scalar l-Scalar-Plain">Git</span>
-<span class="l l-Scalar l-Scalar-Plain">Act II</span>
 
+<span class="l l-Scalar l-Scalar-Plain">Act II</span>
 <span class="l l-Scalar l-Scalar-Plain">Python</span>
 <span class="l l-Scalar l-Scalar-Plain">AI</span>
 <span class="l l-Scalar l-Scalar-Plain">R</span>
 <span class="l l-Scalar l-Scalar-Plain">Stata</span>
-<span class="l l-Scalar l-Scalar-Plain">Act III</span>
 
+<span class="l l-Scalar l-Scalar-Plain">Act III</span>
 <span class="l l-Scalar l-Scalar-Plain">Nonparametric</span>
 <span class="l l-Scalar l-Scalar-Plain">Semiparametric</span>
 <span class="l l-Scalar l-Scalar-Plain">Parametric</span>
 <span class="l l-Scalar l-Scalar-Plain">Simulation</span>
 <span class="l l-Scalar l-Scalar-Plain">Uses, abuses</span>
-<span class="l l-Scalar l-Scalar-Plain">Act IV</span>
 
+<span class="l l-Scalar l-Scalar-Plain">Act IV</span>
 <span class="l l-Scalar l-Scalar-Plain">Truth</span>
 <span class="l l-Scalar l-Scalar-Plain">Rigor</span>
 <span class="l l-Scalar l-Scalar-Plain">Error</span>
 <span class="l l-Scalar l-Scalar-Plain">Sloppiness</span>
 <span class="l l-Scalar l-Scalar-Plain">Fraud</span>
 <span class="l l-Scalar l-Scalar-Plain">Learning</span>
-<span class="l l-Scalar l-Scalar-Plain">Act V</span>
 
+<span class="l l-Scalar l-Scalar-Plain">Act V</span>
 <span class="l l-Scalar l-Scalar-Plain">Oneway</span>
 <span class="l l-Scalar l-Scalar-Plain">Twoway</span>
 <span class="l l-Scalar l-Scalar-Plain">Multivariable</span>
@@ -1094,199 +1095,12 @@ This optional chapter will introduce students to automation using bash and Unix 
 Students will be provided with resources to explore more specialized programming courses beyond Stata, Python, and R.</p>
 <p>With this _toc.yml and the organized content for each part and scene, the Stata Programming class can be easily adapted into Python and R Programming classes by modifying the programming language-specific examples and exercises while keeping the underlying concepts and topics consistent.</p>
 <p>Based on the provided <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> in the <code class="docutils literal notranslate"><span class="pre">jb-book</span></code> format, here is the redesigned Stata Programming class:</p>
-<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>Root: intro.ipynb
-Title: Fenagas
-
-Parts:
-- Caption:
-  Chapters:
-  - File: prologue.ipynb
-
-- Caption: Act I
-  Chapters:
-  - File: content/lessons/l1/act1_1.ipynb
-  - File: content/lessons/l1/act1_2.md
-  - File: content/lessons/l1/act1_3.md
-
-- Caption: Act II
-  Chapters:
-  - File: content/lessons/l2/act2_1.md
-  - File: content/lessons/l2/act2_2.md
-  - File: content/lessons/l2/act2_3.md
-  - File: content/lessons/l2/act2_4.md
-
-- Caption: Act III
-  Chapters:
-  - File: content/lessons/l3/act3_1.md
-  - File: content/lessons/l3/act3_2.md
-  - File: content/lessons/l3/act3_3.md
-  - File: content/lessons/l3/act3_4.md
-  - File: content/lessons/l3/act3_5.md
-
-- Caption: Act IV
-  Chapters:
-  - File: content/lessons/l4/act4_1.md
-  - File: content/lessons/l4/act4_2.md
-  - File: content/lessons/l4/act4_3.md
-  - File: content/lessons/l4/act4_4.md
-  - File: content/lessons/l4/act4_5.md
-  - File: content/lessons/l4/act4_6.md
-
-- Caption: Act V
-  Chapters:
-  - File: content/lessons/l5/act5_1.md
-  - File: content/lessons/l5/act5_2.md
-  - File: content/lessons/l5/act5_3.md
-  - File: content/lessons/l5/act5_4.md
-  - File: content/lessons/l5/act5_5.md
-  - File: content/lessons/l5/act5_6.md
-
-- Caption: Epilogue
-  Chapters:
-  - File: content/lessons/l6/epi_1.md
-  - File: content/lessons/l6/epi_2.md
-  - File: content/lessons/l6/epi_3.md
-  - File: content/lessons/l6/epi_4.md
-  - File: content/lessons/l6/epi_5.md
-  - File: content/lessons/l6/epi_6.md
-  - File: content/lessons/l6/epi_7.md
-  - File: content/lessons/l6/epi_8.md
-
-- Caption: Git &amp; Spoke
-  Chapters:
-  - File: content/lessons/l7/act7_1.md
-  - File: content/lessons/l7/act7_2.md
-  - File: content/lessons/l7/act7_3.ipynb
-
-- Caption: Feedback
-  Chapters:
-  - File: content/lessons/1_survey9.md
-
-- Caption: About Fena
-  Chapters:
-  - File: content/lessons/about/cite.md
-  - File: content/lessons/about/changelog.md
-
-- Caption: Courses
-  Chapters:
-  - URL: https://publichealth.jhu.edu/courses
-    Title: Stata Programming
-  - File: content/dramatispersonae/high_school_students/high_school_students.ipynb
-  - File: content/dramatispersonae/undergraduates/undergraduates.ipynb
-  - File: content/dramatispersonae/graduate_students/graduate_students.ipynb
-  - File: content/dramatispersonae/medical_students/medical_students.ipynb
-  - File: content/dramatispersonae/residents/residents.ipynb
-  - File: content/dramatispersonae/fellows/fellows.ipynb
-  - File: content/dramatispersonae/faculty/faculty.ipynb
-  - File: content/dramatispersonae/analysts/analysts.ipynb
-  - File: content/dramatispersonae/staff/staff.ipynb
-  - File: content/dramatispersonae/collaborators/collaborators.ipynb
-  - File: content/dramatispersonae/graduates/graduates.ipynb
-  - File: content/dramatispersonae/high_school_students/calvin_mathews/calvin_mathews.ipynb
-  - File: content/dramatispersonae/medical_students/andrew_arking/andrew_arking.ipynb
-  - File: content/dramatispersonae/medical_students/andrew_arking/andrew_arking_1.ipynb
-  - File: content/dramatispersonae/collaborators/fawaz_al_ammary/fawaz_al_ammary.ipynb
-  - File: content/dramatispersonae/collaborators/fawaz_al_ammary/fawaz_al_ammary_1.ipynb
-</pre></div>
-</div>
+<hr class="docutils" />
 <p>Please note that the content of each chapter may need to be written separately in the corresponding <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> or <code class="docutils literal notranslate"><span class="pre">.md</span></code> files. The organization of the class remains the same with five acts, each containing multiple scenes (chapters) covering different topics in Stata programming. You can add content and explanations in the respective files according to the intended class structure.</p>
+<hr class="docutils" />
 <p>Sure, here’s the redesigned Stata Programming class with all files as <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>:</p>
-<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>Root: intro.ipynb
-Title: Fenagas
-
-Parts:
-- Caption:
-  Chapters:
-  - File: prologue.ipynb
-
-- Caption: Act I
-  Chapters:
-  - File: content/lessons/l1/act1_1.ipynb
-  - File: content/lessons/l1/act1_2.ipynb
-  - File: content/lessons/l1/act1_3.ipynb
-
-- Caption: Act II
-  Chapters:
-  - File: content/lessons/l2/act2_1.ipynb
-  - File: content/lessons/l2/act2_2.ipynb
-  - File: content/lessons/l2/act2_3.ipynb
-  - File: content/lessons/l2/act2_4.ipynb
-
-- Caption: Act III
-  Chapters:
-  - File: content/lessons/l3/act3_1.ipynb
-  - File: content/lessons/l3/act3_2.ipynb
-  - File: content/lessons/l3/act3_3.ipynb
-  - File: content/lessons/l3/act3_4.ipynb
-  - File: content/lessons/l3/act3_5.ipynb
-
-- Caption: Act IV
-  Chapters:
-  - File: content/lessons/l4/act4_1.ipynb
-  - File: content/lessons/l4/act4_2.ipynb
-  - File: content/lessons/l4/act4_3.ipynb
-  - File: content/lessons/l4/act4_4.ipynb
-  - File: content/lessons/l4/act4_5.ipynb
-  - File: content/lessons/l4/act4_6.ipynb
-
-- Caption: Act V
-  Chapters:
-  - File: content/lessons/l5/act5_1.ipynb
-  - File: content/lessons/l5/act5_2.ipynb
-  - File: content/lessons/l5/act5_3.ipynb
-  - File: content/lessons/l5/act5_4.ipynb
-  - File: content/lessons/l5/act5_5.ipynb
-  - File: content/lessons/l5/act5_6.ipynb
-
-- Caption: Epilogue
-  Chapters:
-  - File: content/lessons/l6/epi_1.ipynb
-  - File: content/lessons/l6/epi_2.ipynb
-  - File: content/lessons/l6/epi_3.ipynb
-  - File: content/lessons/l6/epi_4.ipynb
-  - File: content/lessons/l6/epi_5.ipynb
-  - File: content/lessons/l6/epi_6.ipynb
-  - File: content/lessons/l6/epi_7.ipynb
-  - File: content/lessons/l6/epi_8.ipynb
-
-- Caption: Git &amp; Spoke
-  Chapters:
-  - File: content/lessons/l7/act7_1.ipynb
-  - File: content/lessons/l7/act7_2.ipynb
-  - File: content/lessons/l7/act7_3.ipynb
-
-- Caption: Feedback
-  Chapters:
-  - File: content/lessons/1_survey9.ipynb
-
-- Caption: About Fena
-  Chapters:
-  - File: content/lessons/about/cite.ipynb
-  - File: content/lessons/about/changelog.ipynb
-
-- Caption: Courses
-  Chapters:
-  - URL: https://publichealth.jhu.edu/courses
-    Title: Stata Programming
-  - File: content/dramatispersonae/high_school_students/high_school_students.ipynb
-  - File: content/dramatispersonae/undergraduates/undergraduates.ipynb
-  - File: content/dramatispersonae/graduate_students/graduate_students.ipynb
-  - File: content/dramatispersonae/medical_students/medical_students.ipynb
-  - File: content/dramatispersonae/residents/residents.ipynb
-  - File: content/dramatispersonae/fellows/fellows.ipynb
-  - File: content/dramatispersonae/faculty/faculty.ipynb
-  - File: content/dramatispersonae/analysts/analysts.ipynb
-  - File: content/dramatispersonae/staff/staff.ipynb
-  - File: content/dramatispersonae/collaborators/collaborators.ipynb
-  - File: content/dramatispersonae/graduates/graduates.ipynb
-  - File: content/dramatispersonae/high_school_students/calvin_mathews/calvin_mathews.ipynb
-  - File: content/dramatispersonae/medical_students/andrew_arking/andrew_arking.ipynb
-  - File: content/dramatispersonae/medical_students/andrew_arking/andrew_arking_1.ipynb
-  - File: content/dramatispersonae/collaborators/fawaz_al_ammary/fawaz_al_ammary.ipynb
-  - File: content/dramatispersonae/collaborators/fawaz_al_ammary/fawaz_al_ammary_1.ipynb
-</pre></div>
-</div>
 <p>With this format, all chapters are now represented as <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files, making it easier to create, manage, and access the content in Jupyter Notebook format. Please ensure that the content of each <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file is written appropriately to deliver the Stata Programming class effectively.</p>
+<hr class="docutils" />
 <p>Sure, here’s the redesigned Stata Programming class with 10 scenes per act:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intro.ipynb</span>
 <span class="nt">Title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fenagas</span>
