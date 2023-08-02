@@ -14,7 +14,7 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "act1: dyndoc is key. but lets edit the _toc.yml and have only one file"
+git commit -m "close to breakthru in automation free of jb create workdir: ### 843. streamline"
 # Push changes to GitHub
 # git remote set-url origin git@github.com:muzaale/amagunju
 # ngalabi
