@@ -372,6 +372,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#counterfeit">839. counterfeit</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">840. music</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning">841. learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#act1">842. act1</a></li>
 </ul>
 </li>
 </ul>
@@ -426,16 +427,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Samuel Gomez                  
-2          Margaret Davis                
-3          Robert Olson                  
-4          Kathy Miller                  
-5          Francis Rodriguez             
-6          Thomas Herring                
-7          William Everett               
-8          Maria Collins                 
-9          Patrick Harris                
-10         Patricia Ramsey               
+1          Sydney Edwards                
+2          Mary Simmons                  
+3          Frank Harris                  
+4          Christine Perez               
+5          Stephanie Johnson             
+6          Alexander Price               
+7          Alan Aguirre                  
+8          Elizabeth Perez               
+9          Kaitlin Thompson              
+10         Jennifer Peterson             
 </pre></div>
 </div>
 </div>
@@ -926,14 +927,14 @@ Songwriters: Donald Lawrence / Marshon Lewis / William James Stokes / Robert Woo
 
 <span class="c1"># Convert the MusicXML to a PNG image</span>
 <span class="n">conv</span> <span class="o">=</span> <span class="n">converter</span><span class="o">.</span><span class="n">subConverters</span><span class="o">.</span><span class="n">ConverterMusicXML</span><span class="p">()</span>
-<span class="n">conv</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">score</span><span class="p">,</span> <span class="s1">&#39;png&#39;</span><span class="p">,</span> <span class="n">png_path</span><span class="p">)</span>
+<span class="c1"># conv.write(score, &#39;png&#39;, png_path)</span>
 
 <span class="c1"># Display the PNG image</span>
-<span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">png_path</span><span class="p">))</span>
+<span class="c1"># display(Image(filename=png_path))</span>
 
 <span class="c1"># Clean up temporary files</span>
-<span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">musicxml_path</span><span class="p">)</span>
-<span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">png_path</span><span class="p">)</span>
+<span class="c1"># os.remove(musicxml_path)</span>
+<span class="c1"># os.remove(png_path)</span>
 </pre></div>
 </div>
 </div>
@@ -956,7 +957,6 @@ Songwriters: Donald Lawrence / Marshon Lewis / William James Stokes / Robert Woo
 None
 </pre></div>
 </div>
-<img alt="_images/38be9b746979a8d949d79ffe200b8b6ce015543ff8cc31294a79d059c8605ead.png" src="_images/38be9b746979a8d949d79ffe200b8b6ce015543ff8cc31294a79d059c8605ead.png" />
 </div>
 </div>
 </section>
@@ -1472,6 +1472,16 @@ cp<span class="w"> </span>content/lessons/l1/act1_<span class="o">{</span><span 
 </div>
 <p>This script uses brace expansion in the <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> command to create the necessary folders in a more concise way. It also utilizes the bash loop with the array to create the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files for the <code class="docutils literal notranslate"><span class="pre">dramatispersonae</span></code> folder. It is both shorter and more readable, making it a more elegant solution. Just make sure to continue copying the remaining <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files to the corresponding folders as specified in the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> format.</p>
 </section>
+<section id="act1">
+<h2>842. act1<a class="headerlink" href="#act1" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>give students a tool to learn how to learn</p></li>
+<li><p>a template of an entire manuscript.ipynb file</p></li>
+<li><p>the python, ai, r, and stata programming scripts that support the manuscript.ipynb file</p></li>
+<li><p>step-by-step instructions on creating a github account, a public, and private repository</p></li>
+<li><p>push content to the public repository and use gh-pages to publish the content</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1544,6 +1554,7 @@ cp<span class="w"> </span>content/lessons/l1/act1_<span class="o">{</span><span 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#counterfeit">839. counterfeit</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">840. music</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning">841. learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#act1">842. act1</a></li>
 </ul>
 </li>
 </ul>

@@ -14,7 +14,7 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "step-by-step design of stata class inspired by fenagas,llc"
+git commit -m "act1: give students a .ipynb template with an entire manuscript for dyndoc"
 # Push changes to GitHub
 # git remote set-url origin git@github.com:muzaale/amagunju
 # ngalabi
