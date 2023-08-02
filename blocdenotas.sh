@@ -14,13 +14,7 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "recap non-trivial, subconscious ### 830: breakthru - 
-   0. hypothesis
-   1. data
-   2. estimates
-   3. variance
-   4. explain
-   5. ship"
+git commit -m "yaffe ffena: add chinese & korean translations"
 
 # Push changes to GitHub
 # git remote set-url origin git@github.com:muzaale/amagunju
