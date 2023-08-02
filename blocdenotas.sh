@@ -14,7 +14,7 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "close to breakthru in automation free of jb create workdir: ### 843. streamline"
+git commit -m "three40.sh, upgrade"
 # Push changes to GitHub
 # git remote set-url origin git@github.com:muzaale/amagunju
 # ngalabi
