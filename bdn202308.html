@@ -436,16 +436,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Brittney Stephenson           
-2          April Dickson                 
-3          Megan Taylor                  
-4          Joseph Sullivan               
-5          Jose Stanley                  
-6          Victoria Jefferson            
-7          Victoria Wolf                 
-8          Michael Johnson               
-9          David Smith                   
-10         Tracy Williams                
+1          William Johnson               
+2          Russell Wiley                 
+3          Madison Wiggins               
+4          Larry Marshall                
+5          Amy Fisher                    
+6          Carl Harrington               
+7          Lori Ingram                   
+8          Yvonne Barrett                
+9          Latoya Terry                  
+10         Adriana Marshall              
 </pre></div>
 </div>
 </div>
@@ -1755,8 +1755,8 @@ get_chapters_from_yaml<span class="o">()</span><span class="w"> </span><span cla
 <span class="w">    </span><span class="c1"># Create chapter files inside the part folder</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span>chapter<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">chapters</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
 <span class="w">      </span><span class="c1"># Extract the act number and create the act folder</span>
-<span class="w">      </span><span class="nv">act</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$chapter</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">2</span><span class="k">)</span>
-<span class="w">      </span><span class="nv">act_folder</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$part_folder</span><span class="s2">/</span><span class="nv">$act</span><span class="s2">&quot;</span>
+<span class="w">      </span><span class="nv">act</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$chapter</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">3</span><span class="k">)</span>
+<span class="w">      </span><span class="nv">act_folder</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$part_folder</span><span class="s2">/Act </span><span class="nv">$act</span><span class="s2">&quot;</span>
 <span class="w">      </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$act_folder</span><span class="s2">&quot;</span>
 
 <span class="w">      </span><span class="c1"># Create the chapter file inside the act folder</span>
@@ -1792,6 +1792,7 @@ touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/col
 touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/collaborators/fawaz_al_ammary/fawaz_al_ammary_1.ipynb&quot;</span>
 
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Folder structure has been created successfully.&quot;</span>
+
 <span class="w">  </span>
 </pre></div>
 </div>
