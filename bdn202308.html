@@ -383,6 +383,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-a-nutshell">847. in-a-nutshell</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notfancybutworks">848. notfancybutworks</a></li>
 </ul>
 </li>
 </ul>
@@ -437,16 +438,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Timothy Palmer                
-2          Corey Campbell                
-3          Earl Shaffer                  
-4          John Roth                     
-5          Jason Ingram                  
-6          Sophia Brown                  
-7          Joshua Abbott                 
-8          Donald Sims                   
-9          Christina Baker               
-10         Christina Park                
+1          Michael Edwards               
+2          William Wheeler               
+3          Dennis Romero                 
+4          Sarah Mitchell                
+5          Tanya Clayton                 
+6          Henry Harper                  
+7          Matthew Archer                
+8          Courtney Jackson              
+9          Michael Gonzalez              
+10         Zachary Johnson               
 </pre></div>
 </div>
 </div>
@@ -1680,10 +1681,24 @@ get_chapters_from_yaml<span class="o">()</span><span class="w"> </span><span cla
 │   │   └── ...
 │   ├── undergraduates/
 │   │   └── ...
-│   ├── ...
-│   └── graduates/
+│   ├── graduates/
+│   │   └── ...
+│   ├── medical_students/
+│   │   └── ...
+│   ├── residents/
+│   │   └── ...
+│   ├── fellows/
+│   │   └── ...
+│   ├── faculty/
+│   │   └── ...
+│   ├── analysts/
+│   │   └── ...
+│   ├── staff/
+│   │   └── ...
+│   └── collaborators/
 │       └── ...
 └── ...
+
 
 </pre></div>
 </div>
@@ -1899,6 +1914,95 @@ parts:
 <li><p>let them find other ways to get lost, other lifetasks to complete</p></li>
 </ul>
 </section>
+<section id="notfancybutworks">
+<h2>848. notfancybutworks<a class="headerlink" href="#notfancybutworks" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Change the working directory to the desired location</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+
+<span class="c1"># Create the &quot;three40&quot; directory</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>three40
+
+<span class="c1"># Create the &quot;Root&quot; folder and the &quot;intro.ipynb&quot; file inside it</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Root&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Root/intro.ipynb&quot;</span>
+
+<span class="c1"># Create the &quot;prologue.ipynb&quot; file in the &quot;three40&quot; directory</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/prologue.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;Act I&quot; folder and its subfiles</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Act I&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act I/act1_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act I/act1_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act I/act1_3.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;Act II&quot; folder and its subfiles</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Act II&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act II/act2_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act II/act2_2.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;Act III&quot; folder and its subfiles</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Act III&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act III/act3_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act III/act3_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act III/act3_3.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;Act IV&quot; folder and its subfiles</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Act IV&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act IV/act4_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act IV/act4_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act IV/act4_3.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;Act V&quot; folder and its subfiles</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Act V&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act V/act5_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act V/act5_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act V/act5_3.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;Epilogue&quot; folder and its subfiles</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Epilogue&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Epilogue/epi_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Epilogue/epi_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Epilogue/epi_3.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;Git &amp; Spoke&quot; folder and its subfiles</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Git &amp; Spoke&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Git &amp; Spoke/act7_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Git &amp; Spoke/act7_2.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;Courses&quot; folder and its subfiles</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Courses&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Courses/course1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Courses/course2.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;dramatispersonae&quot; folder and its subdirectories</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/high_school_students&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/undergraduates&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/graduates&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/medical_students&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/residents&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/fellows&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/faculty&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/analysts&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/staff&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/collaborators&quot;</span>
+
+<span class="c1"># Create additional .ipynb files inside specific subdirectories</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/high_school_students/high_school_students.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/medical_students/medical_students.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/collaborators/fawaz_al_ammary/fawaz_al_ammary.ipynb&quot;</span>
+
+<span class="c1"># Display the directory tree</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Directory Structure:&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;-------------------&quot;</span>
+tree<span class="w"> </span>three40
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Folder structure has been created successfully.&quot;</span>
+<span class="w">  </span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1982,6 +2086,7 @@ parts:
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#in-a-nutshell">847. in-a-nutshell</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notfancybutworks">848. notfancybutworks</a></li>
 </ul>
 </li>
 </ul>
