@@ -14,11 +14,7 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "### 846. iteration~30
-
-#### 846.1. structure
-
-...css"
+git commit -m "in-a-nutshell: this revolution will be televised!"
 
 # Push changes to GitHub
 # git remote set-url origin git@github.com:muzaale/amagunju
