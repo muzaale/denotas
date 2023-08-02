@@ -376,6 +376,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#streamline">843. streamline</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#revolution">844. revolution</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yml">845. yml</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration-30">846. iteration~30</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure">846.1. structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#script">846.2. script</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#toc-yaml">846.3. _toc.yaml</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -430,16 +436,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Sarah Moore                   
-2          Philip Wright                 
-3          Juan Moore                    
-4          Matthew Weaver                
-5          Charlotte Aguilar             
-6          Patricia Chavez               
-7          Richard Washington            
-8          Gary Cervantes                
-9          Michael Evans                 
-10         Veronica Clark                
+1          Brittney Stephenson           
+2          April Dickson                 
+3          Megan Taylor                  
+4          Joseph Sullivan               
+5          Jose Stanley                  
+6          Victoria Jefferson            
+7          Victoria Wolf                 
+8          Michael Johnson               
+9          David Smith                   
+10         Tracy Williams                
 </pre></div>
 </div>
 </div>
@@ -1647,6 +1653,240 @@ get_chapters_from_yaml<span class="o">()</span><span class="w"> </span><span cla
 </pre></div>
 </div>
 </section>
+<section id="iteration-30">
+<h2>846. iteration~30<a class="headerlink" href="#iteration-30" title="Permalink to this heading">#</a></h2>
+<section id="structure">
+<h3>846.1. structure<a class="headerlink" href="#structure" title="Permalink to this heading">#</a></h3>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span>three40/
+├── intro.ipynb
+├── prologue.ipynb
+├── Act I/
+│   ├── act1_1.ipynb
+│   ├── act1_2.ipynb
+│   ├── act1_3.ipynb
+│   └── ...
+├── Act II/
+│   ├── act2_1.ipynb
+│   ├── act2_2.ipynb
+│   └── ...
+├── ...
+├── Act VII/
+│   ├── act7_1.ipynb
+│   ├── act7_2.ipynb
+│   └── ...
+├── dramatispersonae/
+│   ├── high_school_students/
+│   │   └── ...
+│   ├── undergraduates/
+│   │   └── ...
+│   ├── ...
+│   └── graduates/
+│       └── ...
+└── ...
+
+</pre></div>
+</div>
+</section>
+<section id="script">
+<h3>846.2. script<a class="headerlink" href="#script" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Change the working directory to the desired location</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+
+<span class="c1"># Uncomment the following line if you need to create the &quot;three40&quot; directory</span>
+<span class="c1"># nano three40.sh &amp; paste the contents of the three40.sh file</span>
+<span class="c1"># chmod +x three40.sh</span>
+<span class="c1"># mkdir three40</span>
+<span class="c1"># cd three40</span>
+<span class="c1"># Create the root folder</span>
+<span class="c1"># mkdir -p three40</span>
+
+<span class="c1"># nano three40/_toc.yml &amp; paste the contents of the _toc.yml file</span>
+
+<span class="c1"># Create the &quot;intro.ipynb&quot; file inside the &quot;root&quot; folder</span>
+touch<span class="w"> </span>three40/intro.ipynb
+
+<span class="c1"># Function to read the chapters from the YAML file using pure bash</span>
+get_chapters_from_yaml<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="nv">part</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="nv">toc_file</span><span class="o">=</span><span class="s2">&quot;three40/_toc.yml&quot;</span>
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span>lines
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="nv">in_part</span><span class="o">=</span><span class="nb">false</span>
+
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>line<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$line</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*<span class="s2">&quot;</span><span class="nv">$part</span><span class="s2">&quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">      </span><span class="nv">in_part</span><span class="o">=</span><span class="nb">true</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$line</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*<span class="s2">&quot;- File: &quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$in_part</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$line</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span>-F<span class="s1">&#39;: &#39;</span><span class="w"> </span><span class="s1">&#39;{print $2}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39; &#39;</span>
+<span class="w">      </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$line</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*<span class="s2">&quot;-&quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">      </span><span class="nv">in_part</span><span class="o">=</span><span class="nb">false</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="w">  </span><span class="k">done</span><span class="w"> </span>&lt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$toc_file</span><span class="s2">&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># Create parts and chapters based on the _toc.yml structure</span>
+<span class="nv">parts</span><span class="o">=(</span>
+<span class="w">  </span><span class="s2">&quot;Root&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Act I&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Act II&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Act III&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Act IV&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Act V&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Epilogue&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Git &amp; Spoke&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Courses&quot;</span>
+<span class="o">)</span>
+
+<span class="c1"># Loop through parts and create chapters inside each part folder</span>
+<span class="k">for</span><span class="w"> </span>part<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">parts</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nv">part_folder</span><span class="o">=</span><span class="s2">&quot;three40/</span><span class="nv">$part</span><span class="s2">&quot;</span>
+<span class="w">  </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$part_folder</span><span class="s2">&quot;</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$part</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;Root&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="c1"># Create the &quot;prologue.ipynb&quot; file inside the &quot;Root&quot; folder</span>
+<span class="w">    </span>touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$part_folder</span><span class="s2">/prologue.ipynb&quot;</span>
+<span class="w">  </span><span class="k">else</span>
+<span class="w">    </span><span class="c1"># Get the chapters for the current part from the _toc.yml</span>
+<span class="w">    </span><span class="nv">chapters</span><span class="o">=(</span><span class="k">$(</span>get_chapters_from_yaml<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$part</span><span class="s2">&quot;</span><span class="k">)</span><span class="o">)</span>
+
+<span class="w">    </span><span class="c1"># Create chapter files inside the part folder</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>chapter<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">chapters</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">      </span><span class="c1"># Extract the act number and create the act folder</span>
+<span class="w">      </span><span class="nv">act</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$chapter</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">2</span><span class="k">)</span>
+<span class="w">      </span><span class="nv">act_folder</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$part_folder</span><span class="s2">/</span><span class="nv">$act</span><span class="s2">&quot;</span>
+<span class="w">      </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$act_folder</span><span class="s2">&quot;</span>
+
+<span class="w">      </span><span class="c1"># Create the chapter file inside the act folder</span>
+<span class="w">      </span>touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$act_folder</span><span class="s2">/</span><span class="k">$(</span>basename<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$chapter</span><span class="s2">&quot;</span><span class="w"> </span>.ipynb<span class="k">)</span><span class="s2">.ipynb&quot;</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="k">done</span>
+
+<span class="c1"># Create the &quot;dramatispersonae&quot; folder and its subdirectories with loop</span>
+<span class="nv">dramatispersonae_folders</span><span class="o">=(</span>
+<span class="w">  </span><span class="s2">&quot;high_school_students&quot;</span>
+<span class="w">  </span><span class="s2">&quot;undergraduates&quot;</span>
+<span class="w">  </span><span class="s2">&quot;graduates&quot;</span>
+<span class="w">  </span><span class="s2">&quot;medical_students&quot;</span>
+<span class="w">  </span><span class="s2">&quot;residents&quot;</span>
+<span class="w">  </span><span class="s2">&quot;fellows&quot;</span>
+<span class="w">  </span><span class="s2">&quot;faculty&quot;</span>
+<span class="w">  </span><span class="s2">&quot;analysts&quot;</span>
+<span class="w">  </span><span class="s2">&quot;staff&quot;</span>
+<span class="w">  </span><span class="s2">&quot;collaborators&quot;</span>
+<span class="o">)</span>
+
+<span class="k">for</span><span class="w"> </span>folder<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">dramatispersonae_folders</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/</span><span class="nv">$folder</span><span class="s2">&quot;</span>
+<span class="w">  </span>touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/</span><span class="nv">$folder</span><span class="s2">/</span><span class="nv">$folder</span><span class="s2">.ipynb&quot;</span>
+<span class="k">done</span>
+
+<span class="c1"># Create additional .ipynb files inside specific subdirectories</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/high_school_students/calvin_mathews/calvin_mathews.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/medical_students/andrew_arking/andrew_arking.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/medical_students/andrew_arking/andrew_arking_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/collaborators/fawaz_al_ammary/fawaz_al_ammary.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/collaborators/fawaz_al_ammary/fawaz_al_ammary_1.ipynb&quot;</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Folder structure has been created successfully.&quot;</span>
+<span class="w">  </span>
+</pre></div>
+</div>
+</section>
+<section id="toc-yaml">
+<h3>846.3. _toc.yaml<a class="headerlink" href="#toc-yaml" title="Permalink to this heading">#</a></h3>
+<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>format: jb-book
+root: intro.ipynb
+title: Fenagas
+
+parts:
+- caption:  
+  chapters:
+  - file: prologue.ipynb
+
+- caption: Act I
+  chapters:
+  - file: Act I/act1_1.ipynb
+  - file: Act I/act1_2.ipynb
+  - file: Act I/act1_3.ipynb
+
+- caption: Act II
+  chapters:
+  - file: Act II/act2_1.ipynb
+  - file: Act II/act2_2.ipynb
+  - file: Act II/act2_3.ipynb
+  - file: Act II/act2_4.ipynb
+
+- caption: Act III
+  chapters:
+  - file: Act III/act3_1.ipynb
+  - file: Act III/act3_2.ipynb
+  - file: Act III/act3_3.ipynb
+  - file: Act III/act3_4.ipynb
+  - file: Act III/act3_5.ipynb
+
+- caption: Act IV
+  chapters:
+  - file: Act IV/act4_1.ipynb
+  - file: Act IV/act4_2.ipynb
+  - file: Act IV/act4_3.ipynb
+  - file: Act IV/act4_4.ipynb
+  - file: Act IV/act4_5.ipynb
+  - file: Act IV/act4_6.ipynb
+
+- caption: Act V
+  chapters:
+  - file: Act V/act5_1.ipynb
+  - file: Act V/act5_2.ipynb
+  - file: Act V/act5_3.ipynb
+  - file: Act V/act5_4.ipynb
+  - file: Act V/act5_5.ipynb
+  - file: Act V/act5_6.ipynb
+
+- caption: Epilogue
+  chapters:
+  - file: Epilogue/epi_1.ipynb
+  - file: Epilogue/epi_2.ipynb
+  - file: Epilogue/epi_3.ipynb
+  - file: Epilogue/epi_4.ipynb
+  - file: Epilogue/epi_5.ipynb
+  - file: Epilogue/epi_6.ipynb
+  - file: Epilogue/epi_7.ipynb
+  - file: Epilogue/epi_8.ipynb
+
+- caption: Git &amp; Spoke
+  chapters:
+  - file: Git &amp; Spoke/act7_1.ipynb
+  - file: Git &amp; Spoke/act7_2.ipynb
+  - file: Git &amp; Spoke/act7_3.ipynb
+
+- caption: Courses
+  chapters:  
+  - url: https://publichealth.jhu.edu/courses
+    title: Stata Programming 
+  - file: dramatispersonae/high_school_students/high_school_students.ipynb
+  - file: dramatispersonae/undergraduates/undergraduates.ipynb
+  - file: dramatispersonae/graduate_students/graduate_students.ipynb
+  - file: dramatispersonae/medical_students/medical_students.ipynb
+  - file: dramatispersonae/residents/residents.ipynb
+  - file: dramatispersonae/fellows/fellows.ipynb
+  - file: dramatispersonae/faculty/faculty.ipynb
+  - file: dramatispersonae/analysts/analysts.ipynb
+  - file: dramatispersonae/staff/staff.ipynb
+  - file: dramatispersonae/collaborators/collaborators.ipynb
+  - file: dramatispersonae/graduates/graduates.ipynb
+  - file: dramatispersonae/high_school_students/calvin_mathews/calvin_mathews.ipynb
+  - file: dramatispersonae/medical_students/andrew_arking/andrew_arking.ipynb
+  - file: dramatispersonae/medical_students/andrew_arking/andrew_arking_1.ipynb
+  - file: dramatispersonae/collaborators/fawaz_al_ammary/fawaz_al_ammary.ipynb
+  - file: dramatispersonae/collaborators/fawaz_al_ammary/fawaz_al_ammary_1.ipynb
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1723,6 +1963,12 @@ get_chapters_from_yaml<span class="o">()</span><span class="w"> </span><span cla
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#streamline">843. streamline</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#revolution">844. revolution</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yml">845. yml</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration-30">846. iteration~30</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure">846.1. structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#script">846.2. script</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#toc-yaml">846.3. _toc.yaml</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
