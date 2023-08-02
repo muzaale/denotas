@@ -365,6 +365,9 @@ document.write(`
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">08/02/2023</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fena">834. fena</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kind">835. kind</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adversarial-networks">836. adversarial networks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mbappe">837. mbappé</a></li>
 </ul>
 </li>
 </ul>
@@ -419,16 +422,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Lindsey Logan                 
-2          Richard Frye                  
-3          Tony Curry                    
-4          Kelli Martin                  
-5          Samuel Charles                
-6          Paul Watson                   
-7          Lori Curtis                   
-8          Madison Perry                 
-9          Chelsea Hill                  
-10         Jared Schmidt                 
+1          Mark Noble                    
+2          Patrick Hansen                
+3          Jason Foley                   
+4          Jonathan Gordon               
+5          Kimberly Hanson               
+6          Brian Roberts                 
+7          Cheryl Baker                  
+8          Jill Jefferson                
+9          Robert Evans                  
+10         Brandon Garcia                
 </pre></div>
 </div>
 </div>
@@ -612,6 +615,96 @@ document.write(`
 </div>
 </div>
 </section>
+<section id="kind">
+<h2>835. kind<a class="headerlink" href="#kind" title="Permalink to this heading">#</a></h2>
+<p>The statement you’ve provided suggests that someone who enjoys being surrounded by like-minded individuals (kindred spirits) may not have the energy or drive to compete or challenge themselves against strong adversaries or opponents. This seems to express a perspective on complacency, comfort zones, and personal growth.</p>
+<p>However, it’s essential to understand that people have different paths to personal growth and self-fulfillment. While some thrive on challenge and adversity, finding it energizing and invigorating, others might find equal growth in collaboration, mutual understanding, and shared passions.</p>
+<p>Realism, as the statement concludes, might refer to understanding and accepting these differences in human nature and personal paths, acknowledging that everyone has their unique journey and definition of success.</p>
+</section>
+<section id="adversarial-networks">
+<h2>836. adversarial networks<a class="headerlink" href="#adversarial-networks" title="Permalink to this heading">#</a></h2>
+<p>GANs pit two neural networks against each other in a kind of game, where one network (the generator) tries to create fake data that looks real, while the other (the discriminator) tries to tell real from fake.</p>
+<ol class="arabic simple">
+<li><p><strong>Supervised Learning</strong>: Algorithm is trained on labeled data.</p></li>
+<li><p><strong>Unsupervised Learning</strong>: Algorithm is trained on unlabeled data and looks for patterns.</p></li>
+<li><p><strong>Semi-Supervised Learning</strong>: Uses both labeled and unlabeled data for training.</p></li>
+<li><p><strong>Reinforcement Learning</strong>: Algorithm learns by interacting with an environment and receiving feedback in the form of rewards or penalties.</p></li>
+<li><p><strong>Transfer Learning</strong>: Using knowledge gained from one task to aid performance on a related, but different task.</p></li>
+<li><p><strong>Generative Adversarial Networks (GANs)</strong>: A subset of unsupervised learning where two networks are trained together in a competitive fashion.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Type of ML&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Supervised&quot;</span><span class="p">,</span> <span class="s2">&quot;Unsupervised&quot;</span><span class="p">,</span> <span class="s2">&quot;Semi-Supervised&quot;</span><span class="p">,</span> <span class="s2">&quot;Reinforcement&quot;</span><span class="p">,</span> <span class="s2">&quot;Transfer&quot;</span><span class="p">,</span> <span class="s2">&quot;GANs&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Pros&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Direct feedback, High accuracy with enough data&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Works with unlabeled data, Can uncover hidden patterns&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Leverages large amounts of unlabeled data&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Adapts to dynamic environments, Potential for real-time learning&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Saves training time, Can leverage pre-trained models&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Generates new data, Can achieve impressive realism&quot;</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;Cons&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;Needs labeled data, Can overfit&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;No feedback, Harder to verify results&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Needs some labeled data, Combines challenges of both supervised and unsupervised&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Requires careful reward design, Can be computationally expensive&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Not always straightforward, Domain differences can be an issue&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Training can be unstable, May require lots of data and time&quot;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Type of ML: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Type of ML&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">Pros: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Pros&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">Cons: </span><span class="si">{</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Cons&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="si">{</span><span class="s1">&#39;-&#39;</span><span class="o">*</span><span class="mi">40</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Type of ML: Supervised
+Pros: Direct feedback, High accuracy with enough data
+Cons: Needs labeled data, Can overfit
+----------------------------------------
+Type of ML: Unsupervised
+Pros: Works with unlabeled data, Can uncover hidden patterns
+Cons: No feedback, Harder to verify results
+----------------------------------------
+Type of ML: Semi-Supervised
+Pros: Leverages large amounts of unlabeled data
+Cons: Needs some labeled data, Combines challenges of both supervised and unsupervised
+----------------------------------------
+Type of ML: Reinforcement
+Pros: Adapts to dynamic environments, Potential for real-time learning
+Cons: Requires careful reward design, Can be computationally expensive
+----------------------------------------
+Type of ML: Transfer
+Pros: Saves training time, Can leverage pre-trained models
+Cons: Not always straightforward, Domain differences can be an issue
+----------------------------------------
+Type of ML: GANs
+Pros: Generates new data, Can achieve impressive realism
+Cons: Training can be unstable, May require lots of data and time
+----------------------------------------
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="mbappe">
+<h2>837. mbappé<a class="headerlink" href="#mbappe" title="Permalink to this heading">#</a></h2>
+<p>In the world of machine learning, there’s an architecture called Generative Adversarial Networks (GANs). A GAN consists of two neural networks: a generator and a discriminator. The generator creates fake data, while the discriminator evaluates data to determine if it’s real or generated by the generator. These networks are “adversaries”, and they improve through their competition with one another.</p>
+<p><strong>Mbappé in Ligue 1 is like the generator in a GAN:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Competitiveness (Lack of a Worthy Adversary)</strong>: If the discriminator is too weak (akin to the other Ligue 1 teams compared to PSG), then the generator might produce data (or performance) that seems impressive in its context, but might not be as refined as it would be if it faced a stronger discriminator. Just as the EPL could serve as a more challenging discriminator for Mbappé, making him fine-tune his “generation” of skills, a stronger discriminator in a GAN forces the generator to produce higher-quality data.</p></li>
+<li><p><strong>Exposure to Challenges</strong>: If Mbappé were in the EPL (a stronger discriminator), he’d face more frequent and varied challenges, pushing him to adapt and refine his skills, much like a generator improving its data generation when pitted against a robust discriminator.</p></li>
+<li><p><strong>Star Power &amp; Champions League</strong>: Just as Mbappé gets to face high-level competition in the Champions League and play alongside top talents in PSG, a generator can still produce high-quality data when trained with superior techniques or in combination with other skilled “networks”, even if its regular discriminator isn’t top-tier.</p></li>
+<li><p><strong>Future Moves &amp; Evolution</strong>: Over time, a GAN might be fine-tuned or paired with stronger discriminators. Similarly, Mbappé might move to a more competitive league in the future, facing “stronger discriminators” that challenge and refine his game further.</p></li>
+</ol>
+<p>In essence, for optimal growth and refinement, both a soccer player and a GAN benefit from being challenged regularly by worthy adversaries. PSG dominating Ligue 1 without a consistent worthy adversary might not push them to their absolute limits, just as a generator won’t produce its best possible data without a strong discriminator to challenge it.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -677,6 +770,9 @@ document.write(`
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">08/02/2023</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fena">834. fena</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kind">835. kind</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adversarial-networks">836. adversarial networks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mbappe">837. mbappé</a></li>
 </ul>
 </li>
 </ul>
