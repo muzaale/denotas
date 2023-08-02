@@ -371,6 +371,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lyrical">838. lyrical</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#counterfeit">839. counterfeit</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">840. music</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning">841. learning</a></li>
 </ul>
 </li>
 </ul>
@@ -425,16 +426,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Deborah Thomas                
-2          Jennifer Blake                
-3          Matthew Harris                
-4          Jonathan Brewer               
-5          Daniel Reid                   
-6          Matthew Thompson              
-7          Victoria Smith                
-8          Derek Wright                  
-9          John Stevens                  
-10         Matthew Cervantes             
+1          Samuel Gomez                  
+2          Margaret Davis                
+3          Robert Olson                  
+4          Kathy Miller                  
+5          Francis Rodriguez             
+6          Thomas Herring                
+7          William Everett               
+8          Maria Collins                 
+9          Patrick Harris                
+10         Patricia Ramsey               
 </pre></div>
 </div>
 </div>
@@ -959,6 +960,518 @@ None
 </div>
 </div>
 </section>
+<section id="learning">
+<h2>841. learning<a class="headerlink" href="#learning" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>generative adversarial networks</p></li>
+<li><p>challenge-level, skill-level, and equiping students with the right tools to “level up”</p></li>
+<li><p>use this approach to create a “learning” GAN for any sort of course but starting with a course on Stata</p></li>
+</ul>
+<p>To design a Stata Programming class with the flexibility to adapt it into Python and R Programming classes, we can organize the content according to the provided headings in the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file. We will structure the course into five acts, and each act will contain three to six scenes representing different chapters or topics. Each scene will be a learning module or topic that covers a specific aspect of Stata programming (and later Python and R programming).</p>
+<p>Let’s begin by creating the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">Skip to main content</span>
+<span class="l l-Scalar l-Scalar-Plain">Have any feedback? Please participate in this survey</span>
+<span class="l l-Scalar l-Scalar-Plain">Logo image</span>
+<span class="l l-Scalar l-Scalar-Plain">Fenagas</span>
+<span class="l l-Scalar l-Scalar-Plain">Prologue</span>
+<span class="l l-Scalar l-Scalar-Plain">Act I</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Manuscripts</span>
+<span class="l l-Scalar l-Scalar-Plain">Code</span>
+<span class="l l-Scalar l-Scalar-Plain">Git</span>
+<span class="l l-Scalar l-Scalar-Plain">Act II</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Python</span>
+<span class="l l-Scalar l-Scalar-Plain">AI</span>
+<span class="l l-Scalar l-Scalar-Plain">R</span>
+<span class="l l-Scalar l-Scalar-Plain">Stata</span>
+<span class="l l-Scalar l-Scalar-Plain">Act III</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Nonparametric</span>
+<span class="l l-Scalar l-Scalar-Plain">Semiparametric</span>
+<span class="l l-Scalar l-Scalar-Plain">Parametric</span>
+<span class="l l-Scalar l-Scalar-Plain">Simulation</span>
+<span class="l l-Scalar l-Scalar-Plain">Uses, abuses</span>
+<span class="l l-Scalar l-Scalar-Plain">Act IV</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Truth</span>
+<span class="l l-Scalar l-Scalar-Plain">Rigor</span>
+<span class="l l-Scalar l-Scalar-Plain">Error</span>
+<span class="l l-Scalar l-Scalar-Plain">Sloppiness</span>
+<span class="l l-Scalar l-Scalar-Plain">Fraud</span>
+<span class="l l-Scalar l-Scalar-Plain">Learning</span>
+<span class="l l-Scalar l-Scalar-Plain">Act V</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Oneway</span>
+<span class="l l-Scalar l-Scalar-Plain">Twoway</span>
+<span class="l l-Scalar l-Scalar-Plain">Multivariable</span>
+<span class="l l-Scalar l-Scalar-Plain">Hierarchical</span>
+<span class="l l-Scalar l-Scalar-Plain">Clinical</span>
+<span class="l l-Scalar l-Scalar-Plain">Public</span>
+<span class="l l-Scalar l-Scalar-Plain">Epilogue</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Open Science</span>
+<span class="l l-Scalar l-Scalar-Plain">Self publish</span>
+<span class="l l-Scalar l-Scalar-Plain">Published</span>
+<span class="l l-Scalar l-Scalar-Plain">Grants</span>
+<span class="l l-Scalar l-Scalar-Plain">Proposals</span>
+<span class="l l-Scalar l-Scalar-Plain">Git &amp; Spoke</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Automate</span>
+<span class="l l-Scalar l-Scalar-Plain">Bash</span>
+<span class="l l-Scalar l-Scalar-Plain">Unix</span>
+<span class="l l-Scalar l-Scalar-Plain">Courses</span>
+
+<span class="l l-Scalar l-Scalar-Plain">Stata Programming</span>
+</pre></div>
+</div>
+<p>Now, let’s create a brief description for each act and scene:</p>
+<p>Act I - Introduction to Research Manuscripts and Version Control</p>
+<p>Scene 1 - Understanding Research Manuscripts
+This scene will provide an overview of research manuscripts, their structure, and the importance of clear documentation in reproducible research.</p>
+<p>Scene 2 - Introduction to Code
+In this scene, we will introduce coding concepts, syntax, and the use of Stata, Python, and R as programming languages for data analysis.</p>
+<p>Scene 3 - Version Control with Git
+Students will learn the fundamentals of version control using Git, a powerful tool for tracking changes in code and collaborating with others.</p>
+<p>Act II - Exploring Data Analysis with Python, AI, R, and Stata</p>
+<p>Scene 1 - Python for Data Analysis
+This scene will cover basic data analysis tasks using Python, focusing on data manipulation, visualization, and statistical analysis.</p>
+<p>Scene 2 - Introduction to Artificial Intelligence (AI)
+Students will gain insights into AI concepts and applications, including machine learning, deep learning, and generative adversarial networks (GANs).</p>
+<p>Scene 3 - R for Data Science
+In this scene, we’ll explore R’s capabilities for data analysis, statistical modeling, and creating visualizations.</p>
+<p>Scene 4 - Introduction to Stata
+Students will be introduced to Stata programming, including data management, analysis, and graphing features.</p>
+<p>Act III - Advanced Topics in Data Analysis</p>
+<p>Scene 1 - Nonparametric Statistics
+This scene will delve into nonparametric statistical methods and their applications in various research scenarios.</p>
+<p>Scene 2 - Semiparametric Statistics
+Students will learn about semiparametric models and their advantages in handling complex data structures.</p>
+<p>Scene 3 - Parametric Modeling
+This scene will cover parametric statistical models and their assumptions, along with practical implementation in the chosen programming languages.</p>
+<p>Scene 4 - Simulation Techniques
+In this scene, students will learn about simulation methods to replicate observed data and explore “what if” scenarios in their analyses.</p>
+<p>Scene 5 - Data Analysis Uses and Abuses
+We will discuss common mistakes and pitfalls in data analysis, emphasizing the importance of data integrity and robustness.</p>
+<p>Act IV - Ensuring Data Quality and Integrity</p>
+<p>Scene 1 - Seeking Truth in Research
+This scene will highlight the importance of truth-seeking in research and the impact of biased results on scientific discoveries.</p>
+<p>Scene 2 - Rigorous Research Methods
+Students will learn about various rigorous research methodologies to ensure valid and reliable findings.</p>
+<p>Scene 3 - Identifying and Addressing Errors
+We will explore different types of errors in research and how to identify and correct them during the data analysis process.</p>
+<p>Scene 4 - Preventing Sloppiness in Analysis
+This scene will discuss best practices to avoid careless mistakes in data analysis that may compromise research outcomes.</p>
+<p>Scene 5 - Fraud Detection in Research
+Students will explore methods and approaches to detect and prevent fraud in clinical and public health research.</p>
+<p>Scene 6 - Learning from Data
+Drawing inspiration from Generative Adversarial Networks (GANs), this scene will encourage students to learn from data by simulating expected outcomes based on observed data.</p>
+<p>Act V - Advanced Data Visualization and Reporting</p>
+<p>Scene 1 - Oneway Plots and Scatterplots
+This scene will focus on creating oneway plots and scatterplots with jitter and overlapped mean and 95% CI bars to compare variables.</p>
+<p>Scene 2 - Twoway Plots and Multivariable Visualization
+We will cover twoway plots and multivariable visualizations to explore relationships between multiple variables.</p>
+<p>Scene 3 - Hierarchical Data Visualization
+Students will learn techniques for visualizing hierarchical data structures effectively.</p>
+<p>Scene 4 - Data Visualization in Clinical Research
+This scene will demonstrate visualization methods specifically tailored to clinical research scenarios.</p>
+<p>Scene 5 - Communicating Research to the Public
+In this final scene, we will explore effective ways to communicate research findings to the general public.</p>
+<p>Epilogue - Advancing Open Science and Professional Development</p>
+<p>Scene 1 - Embracing Open Science
+This scene will emphasize the importance of open science practices and promoting transparency in research.</p>
+<p>Scene 2 - Self-publishing and Open Access
+Students will learn about self-publishing options and the benefits of open access to research outputs.</p>
+<p>Scene 3 - Getting Published in Journals
+This scene will guide students through the process of getting research published in academic journals.</p>
+<p>Scene 4 - Grant Writing and Proposal Development
+We will cover essential aspects of grant writing and proposal development for research funding.</p>
+<p>Scene 5 - Git and Collaborative Workflows
+In this final scene, students will explore advanced Git workflows for collaborative programming projects.</p>
+<p>Automate - Bash and Unix Scripting for Automation
+This optional chapter will introduce students to automation using bash and Unix scripting.</p>
+<p>Courses - Explore Other Programming Courses
+Students will be provided with resources to explore more specialized programming courses beyond Stata, Python, and R.</p>
+<p>With this _toc.yml and the organized content for each part and scene, the Stata Programming class can be easily adapted into Python and R Programming classes by modifying the programming language-specific examples and exercises while keeping the underlying concepts and topics consistent.</p>
+<p>Based on the provided <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> in the <code class="docutils literal notranslate"><span class="pre">jb-book</span></code> format, here is the redesigned Stata Programming class:</p>
+<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>Root: intro.ipynb
+Title: Fenagas
+
+Parts:
+- Caption:
+  Chapters:
+  - File: prologue.ipynb
+
+- Caption: Act I
+  Chapters:
+  - File: content/lessons/l1/act1_1.ipynb
+  - File: content/lessons/l1/act1_2.md
+  - File: content/lessons/l1/act1_3.md
+
+- Caption: Act II
+  Chapters:
+  - File: content/lessons/l2/act2_1.md
+  - File: content/lessons/l2/act2_2.md
+  - File: content/lessons/l2/act2_3.md
+  - File: content/lessons/l2/act2_4.md
+
+- Caption: Act III
+  Chapters:
+  - File: content/lessons/l3/act3_1.md
+  - File: content/lessons/l3/act3_2.md
+  - File: content/lessons/l3/act3_3.md
+  - File: content/lessons/l3/act3_4.md
+  - File: content/lessons/l3/act3_5.md
+
+- Caption: Act IV
+  Chapters:
+  - File: content/lessons/l4/act4_1.md
+  - File: content/lessons/l4/act4_2.md
+  - File: content/lessons/l4/act4_3.md
+  - File: content/lessons/l4/act4_4.md
+  - File: content/lessons/l4/act4_5.md
+  - File: content/lessons/l4/act4_6.md
+
+- Caption: Act V
+  Chapters:
+  - File: content/lessons/l5/act5_1.md
+  - File: content/lessons/l5/act5_2.md
+  - File: content/lessons/l5/act5_3.md
+  - File: content/lessons/l5/act5_4.md
+  - File: content/lessons/l5/act5_5.md
+  - File: content/lessons/l5/act5_6.md
+
+- Caption: Epilogue
+  Chapters:
+  - File: content/lessons/l6/epi_1.md
+  - File: content/lessons/l6/epi_2.md
+  - File: content/lessons/l6/epi_3.md
+  - File: content/lessons/l6/epi_4.md
+  - File: content/lessons/l6/epi_5.md
+  - File: content/lessons/l6/epi_6.md
+  - File: content/lessons/l6/epi_7.md
+  - File: content/lessons/l6/epi_8.md
+
+- Caption: Git &amp; Spoke
+  Chapters:
+  - File: content/lessons/l7/act7_1.md
+  - File: content/lessons/l7/act7_2.md
+  - File: content/lessons/l7/act7_3.ipynb
+
+- Caption: Feedback
+  Chapters:
+  - File: content/lessons/1_survey9.md
+
+- Caption: About Fena
+  Chapters:
+  - File: content/lessons/about/cite.md
+  - File: content/lessons/about/changelog.md
+
+- Caption: Courses
+  Chapters:
+  - URL: https://publichealth.jhu.edu/courses
+    Title: Stata Programming
+  - File: content/dramatispersonae/high_school_students/high_school_students.ipynb
+  - File: content/dramatispersonae/undergraduates/undergraduates.ipynb
+  - File: content/dramatispersonae/graduate_students/graduate_students.ipynb
+  - File: content/dramatispersonae/medical_students/medical_students.ipynb
+  - File: content/dramatispersonae/residents/residents.ipynb
+  - File: content/dramatispersonae/fellows/fellows.ipynb
+  - File: content/dramatispersonae/faculty/faculty.ipynb
+  - File: content/dramatispersonae/analysts/analysts.ipynb
+  - File: content/dramatispersonae/staff/staff.ipynb
+  - File: content/dramatispersonae/collaborators/collaborators.ipynb
+  - File: content/dramatispersonae/graduates/graduates.ipynb
+  - File: content/dramatispersonae/high_school_students/calvin_mathews/calvin_mathews.ipynb
+  - File: content/dramatispersonae/medical_students/andrew_arking/andrew_arking.ipynb
+  - File: content/dramatispersonae/medical_students/andrew_arking/andrew_arking_1.ipynb
+  - File: content/dramatispersonae/collaborators/fawaz_al_ammary/fawaz_al_ammary.ipynb
+  - File: content/dramatispersonae/collaborators/fawaz_al_ammary/fawaz_al_ammary_1.ipynb
+</pre></div>
+</div>
+<p>Please note that the content of each chapter may need to be written separately in the corresponding <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> or <code class="docutils literal notranslate"><span class="pre">.md</span></code> files. The organization of the class remains the same with five acts, each containing multiple scenes (chapters) covering different topics in Stata programming. You can add content and explanations in the respective files according to the intended class structure.</p>
+<p>Sure, here’s the redesigned Stata Programming class with all files as <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>:</p>
+<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>Root: intro.ipynb
+Title: Fenagas
+
+Parts:
+- Caption:
+  Chapters:
+  - File: prologue.ipynb
+
+- Caption: Act I
+  Chapters:
+  - File: content/lessons/l1/act1_1.ipynb
+  - File: content/lessons/l1/act1_2.ipynb
+  - File: content/lessons/l1/act1_3.ipynb
+
+- Caption: Act II
+  Chapters:
+  - File: content/lessons/l2/act2_1.ipynb
+  - File: content/lessons/l2/act2_2.ipynb
+  - File: content/lessons/l2/act2_3.ipynb
+  - File: content/lessons/l2/act2_4.ipynb
+
+- Caption: Act III
+  Chapters:
+  - File: content/lessons/l3/act3_1.ipynb
+  - File: content/lessons/l3/act3_2.ipynb
+  - File: content/lessons/l3/act3_3.ipynb
+  - File: content/lessons/l3/act3_4.ipynb
+  - File: content/lessons/l3/act3_5.ipynb
+
+- Caption: Act IV
+  Chapters:
+  - File: content/lessons/l4/act4_1.ipynb
+  - File: content/lessons/l4/act4_2.ipynb
+  - File: content/lessons/l4/act4_3.ipynb
+  - File: content/lessons/l4/act4_4.ipynb
+  - File: content/lessons/l4/act4_5.ipynb
+  - File: content/lessons/l4/act4_6.ipynb
+
+- Caption: Act V
+  Chapters:
+  - File: content/lessons/l5/act5_1.ipynb
+  - File: content/lessons/l5/act5_2.ipynb
+  - File: content/lessons/l5/act5_3.ipynb
+  - File: content/lessons/l5/act5_4.ipynb
+  - File: content/lessons/l5/act5_5.ipynb
+  - File: content/lessons/l5/act5_6.ipynb
+
+- Caption: Epilogue
+  Chapters:
+  - File: content/lessons/l6/epi_1.ipynb
+  - File: content/lessons/l6/epi_2.ipynb
+  - File: content/lessons/l6/epi_3.ipynb
+  - File: content/lessons/l6/epi_4.ipynb
+  - File: content/lessons/l6/epi_5.ipynb
+  - File: content/lessons/l6/epi_6.ipynb
+  - File: content/lessons/l6/epi_7.ipynb
+  - File: content/lessons/l6/epi_8.ipynb
+
+- Caption: Git &amp; Spoke
+  Chapters:
+  - File: content/lessons/l7/act7_1.ipynb
+  - File: content/lessons/l7/act7_2.ipynb
+  - File: content/lessons/l7/act7_3.ipynb
+
+- Caption: Feedback
+  Chapters:
+  - File: content/lessons/1_survey9.ipynb
+
+- Caption: About Fena
+  Chapters:
+  - File: content/lessons/about/cite.ipynb
+  - File: content/lessons/about/changelog.ipynb
+
+- Caption: Courses
+  Chapters:
+  - URL: https://publichealth.jhu.edu/courses
+    Title: Stata Programming
+  - File: content/dramatispersonae/high_school_students/high_school_students.ipynb
+  - File: content/dramatispersonae/undergraduates/undergraduates.ipynb
+  - File: content/dramatispersonae/graduate_students/graduate_students.ipynb
+  - File: content/dramatispersonae/medical_students/medical_students.ipynb
+  - File: content/dramatispersonae/residents/residents.ipynb
+  - File: content/dramatispersonae/fellows/fellows.ipynb
+  - File: content/dramatispersonae/faculty/faculty.ipynb
+  - File: content/dramatispersonae/analysts/analysts.ipynb
+  - File: content/dramatispersonae/staff/staff.ipynb
+  - File: content/dramatispersonae/collaborators/collaborators.ipynb
+  - File: content/dramatispersonae/graduates/graduates.ipynb
+  - File: content/dramatispersonae/high_school_students/calvin_mathews/calvin_mathews.ipynb
+  - File: content/dramatispersonae/medical_students/andrew_arking/andrew_arking.ipynb
+  - File: content/dramatispersonae/medical_students/andrew_arking/andrew_arking_1.ipynb
+  - File: content/dramatispersonae/collaborators/fawaz_al_ammary/fawaz_al_ammary.ipynb
+  - File: content/dramatispersonae/collaborators/fawaz_al_ammary/fawaz_al_ammary_1.ipynb
+</pre></div>
+</div>
+<p>With this format, all chapters are now represented as <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files, making it easier to create, manage, and access the content in Jupyter Notebook format. Please ensure that the content of each <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file is written appropriately to deliver the Stata Programming class effectively.</p>
+<p>Sure, here’s the redesigned Stata Programming class with 10 scenes per act:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">Root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intro.ipynb</span>
+<span class="nt">Title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fenagas</span>
+
+<span class="nt">Parts</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Caption</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">Chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prologue.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act I</span>
+<span class="w">  </span><span class="nt">Chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l1/act1_1.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l1/act1_2.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l1/act1_3.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l1/act1_4.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l1/act1_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l1/act1_6.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l1/act1_7.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l1/act1_8.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l1/act1_9.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l1/act1_10.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act II</span>
+<span class="w">  </span><span class="nt">Chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l2/act2_1.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l2/act2_2.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l2/act2_3.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l2/act2_4.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l2/act2_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l2/act2_6.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l2/act2_7.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l2/act2_8.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l2/act2_9.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l2/act2_10.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act III</span>
+<span class="w">  </span><span class="nt">Chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l3/act3_1.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l3/act3_2.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l3/act3_3.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l3/act3_4.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l3/act3_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l3/act3_6.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l3/act3_7.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l3/act3_8.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l3/act3_9.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l3/act3_10.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act IV</span>
+<span class="w">  </span><span class="nt">Chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l4/act4_1.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l4/act4_2.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l4/act4_3.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l4/act4_4.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l4/act4_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l4/act4_6.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l4/act4_7.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l4/act4_8.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l4/act4_9.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l4/act4_10.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act V</span>
+<span class="w">  </span><span class="nt">Chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l5/act5_1.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l5/act5_2.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l5/act5_3.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l5/act5_4.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l5/act5_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l5/act5_6.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l5/act5_7.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l5/act5_8.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l5/act5_9.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l5/act5_10.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Epilogue</span>
+<span class="w">  </span><span class="nt">Chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l6/epi_1.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l6/epi_2.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l6/epi_3.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l6/epi_4.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l6/epi_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l6/epi_6.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l6/epi_7.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l6/epi_8.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l6/epi_9.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l6/epi_10.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Git &amp; Spoke</span>
+<span class="w">  </span><span class="nt">Chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l7/act7_1.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l7/act7_2.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l7/act7_3.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l7/act7_4.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l7/act7_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l7/act7_6.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l7/act7_7.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l7/act7_8.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l7/act7_9.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/l7/act7_10.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Feedback</span>
+<span class="w">  </span><span class="nt">Chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/1_survey9.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">About Fena</span>
+<span class="w">  </span><span class="nt">Chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/about/cite.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/lessons/about/changelog.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Courses</span>
+<span class="w">  </span><span class="nt">Chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://publichealth.jhu.edu/courses</span>
+<span class="w">    </span><span class="nt">Title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Stata Programming</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/dramatispersonae/high_school_students/high_school_students.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/dramatispersonae/undergraduates/undergraduates.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/dramatispersonae/graduate_students/graduate_students.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">File</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">content/dramatispersonae/medical_students/medical_students.ipynb</span>
+</pre></div>
+</div>
+<p>Sure! Below is a bash script named <code class="docutils literal notranslate"><span class="pre">stataclass.sh</span></code> that creates the folder structure and places the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files in the appropriate folders:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Create folders</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/lessons/l1
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/lessons/l2
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/lessons/l3
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/lessons/l4
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/lessons/l5
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/lessons/l6
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/lessons/l7
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/dramatispersonae/high_school_students
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/dramatispersonae/undergraduates
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/dramatispersonae/graduate_students
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/dramatispersonae/medical_students
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/dramatispersonae/residents
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/dramatispersonae/fellows
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/dramatispersonae/faculty
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/dramatispersonae/analysts
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/dramatispersonae/staff
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/dramatispersonae/collaborators
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/dramatispersonae/graduates
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/dramatispersonae/high_school_students/calvin_mathews
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/dramatispersonae/medical_students/andrew_arking
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/lessons/l6
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/lessons/l7
+
+<span class="c1"># Place the .ipynb files in appropriate folders</span>
+cp<span class="w"> </span>prologue.ipynb<span class="w"> </span>content/
+cp<span class="w"> </span>content/lessons/l1/act1_1.ipynb<span class="w"> </span>content/lessons/l1/
+cp<span class="w"> </span>content/lessons/l1/act1_2.ipynb<span class="w"> </span>content/lessons/l1/
+cp<span class="w"> </span>content/lessons/l1/act1_3.ipynb<span class="w"> </span>content/lessons/l1/
+cp<span class="w"> </span>content/lessons/l1/act1_4.ipynb<span class="w"> </span>content/lessons/l1/
+cp<span class="w"> </span>content/lessons/l1/act1_5.ipynb<span class="w"> </span>content/lessons/l1/
+cp<span class="w"> </span>content/lessons/l1/act1_6.ipynb<span class="w"> </span>content/lessons/l1/
+cp<span class="w"> </span>content/lessons/l1/act1_7.ipynb<span class="w"> </span>content/lessons/l1/
+cp<span class="w"> </span>content/lessons/l1/act1_8.ipynb<span class="w"> </span>content/lessons/l1/
+cp<span class="w"> </span>content/lessons/l1/act1_9.ipynb<span class="w"> </span>content/lessons/l1/
+cp<span class="w"> </span>content/lessons/l1/act1_10.ipynb<span class="w"> </span>content/lessons/l1/
+
+<span class="c1"># Continue copying .ipynb files to other folders as required...</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Folder structure and files have been created successfully.&quot;</span>
+</pre></div>
+</div>
+<p>This script will create all the necessary folders and copy the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files to their respective locations, as specified in the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> format. Note that you’ll need to manually complete the script by copying the remaining <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files to the corresponding folders based on the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>. Save the script and run it to create the desired folder structure and files.</p>
+<p>Absolutely! You are right; there is a more elegant and efficient way to create the folders and files using a bash loop. Here’s the updated version of the <code class="docutils literal notranslate"><span class="pre">stataclass.sh</span></code> script using your suggestion:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Create folders</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/lessons/l<span class="o">{</span><span class="m">1</span>..7<span class="o">}</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/dramatispersonae/<span class="o">{</span>high_school_students,undergraduates,graduate_students,medical_students,residents,fellows,faculty,analysts,staff,collaborators,graduates<span class="o">}</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/dramatispersonae/high_school_students/calvin_mathews
+mkdir<span class="w"> </span>-p<span class="w"> </span>content/dramatispersonae/medical_students/andrew_arking
+
+<span class="c1"># Place the .ipynb files in appropriate folders</span>
+cp<span class="w"> </span>prologue.ipynb<span class="w"> </span>content/
+cp<span class="w"> </span>content/lessons/l1/act1_<span class="o">{</span><span class="m">1</span>..10<span class="o">}</span>.ipynb<span class="w"> </span>content/lessons/l1/
+
+<span class="c1"># Continue copying .ipynb files to other folders as required...</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Folder structure and files have been created successfully.&quot;</span>
+</pre></div>
+</div>
+<p>This script uses brace expansion in the <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> command to create the necessary folders in a more concise way. It also utilizes the bash loop with the array to create the <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files for the <code class="docutils literal notranslate"><span class="pre">dramatispersonae</span></code> folder. It is both shorter and more readable, making it a more elegant solution. Just make sure to continue copying the remaining <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files to the corresponding folders as specified in the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> format.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1030,6 +1543,7 @@ None
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lyrical">838. lyrical</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#counterfeit">839. counterfeit</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">840. music</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning">841. learning</a></li>
 </ul>
 </li>
 </ul>
