@@ -375,6 +375,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#act1">842. act1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#streamline">843. streamline</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#revolution">844. revolution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yml">845. yml</a></li>
 </ul>
 </li>
 </ul>
@@ -429,16 +430,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Patrick Barrera               
-2          Sabrina Contreras             
-3          Andre Foster                  
-4          Spencer Riley                 
-5          Grace Barker                  
-6          Alyssa Walsh                  
-7          James Lee                     
-8          Reginald Chapman              
-9          Adam Clark                    
-10         Gerald Thomas                 
+1          Sarah Moore                   
+2          Philip Wright                 
+3          Juan Moore                    
+4          Matthew Weaver                
+5          Charlotte Aguilar             
+6          Patricia Chavez               
+7          Richard Washington            
+8          Gary Cervantes                
+9          Michael Evans                 
+10         Veronica Clark                
 </pre></div>
 </div>
 </div>
@@ -1544,6 +1545,107 @@ mkdir<span class="w"> </span>three40
 nano<span class="w"> </span>_toc.yml
 </pre></div>
 </div>
+<hr class="docutils" />
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>three40/
+├── intro.ipynb
+├── prologue.ipynb
+├── content/
+│   └── lessons/
+│       └── l1/
+│           ├── act1_1.ipynb
+│           ├── act1_2.ipynb
+│           ├── act1_3.ipynb
+│           └── ...
+│       └── l2/
+│           ├── act2_1.ipynb
+│           ├── act2_2.ipynb
+│           └── ...
+│       └── ...
+│       └── l7/
+│           ├── act7_1.ipynb
+│           ├── act7_2.ipynb
+│           └── ...
+├── dramatispersonae/
+│   └── high_school_students/
+│       └── ...
+│   └── undergraduates/
+│       └── ...
+│   └── ...
+│   └── graduates/
+│       └── ...
+└── ...
+</pre></div>
+</div>
+</section>
+<section id="yml">
+<h2>845. yml<a class="headerlink" href="#yml" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Change the working directory to the desired location</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+
+<span class="c1"># Uncomment the following line if you need to create the &quot;three40&quot; directory</span>
+<span class="c1"># nano three40.sh &amp; paste the contents of the three40.sh file</span>
+<span class="c1"># chmod +x three40.sh</span>
+<span class="c1"># mkdir three40</span>
+<span class="c1"># cd three40</span>
+<span class="c1"># Create the root folder</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>three40
+
+<span class="c1"># nano three40/_toc.yml &amp; paste the contents of the _toc.yml file</span>
+
+<span class="c1"># Create the &quot;intro.ipynb&quot; file inside the &quot;root&quot; folder</span>
+touch<span class="w"> </span>three40/intro.ipynb
+
+<span class="c1"># Function to read the chapters from the YAML file using pure bash</span>
+get_chapters_from_yaml<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="nv">part</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="nv">toc_file</span><span class="o">=</span><span class="s2">&quot;three40/_toc.yml&quot;</span>
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span>lines
+<span class="w">  </span><span class="nb">local</span><span class="w"> </span><span class="nv">in_part</span><span class="o">=</span><span class="nb">false</span>
+
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>line<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$line</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*<span class="s2">&quot;</span><span class="nv">$part</span><span class="s2">&quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">      </span><span class="nv">in_part</span><span class="o">=</span><span class="nb">true</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$line</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*<span class="s2">&quot;- File: &quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$in_part</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$line</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span>-F<span class="s1">&#39;: &#39;</span><span class="w"> </span><span class="s1">&#39;{print $2}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39; &#39;</span>
+<span class="w">      </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">elif</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$line</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*<span class="s2">&quot;-&quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">      </span><span class="nv">in_part</span><span class="o">=</span><span class="nb">false</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="w">  </span><span class="k">done</span><span class="w"> </span>&lt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$toc_file</span><span class="s2">&quot;</span>
+<span class="o">}</span>
+
+<span class="c1"># Create parts and chapters based on the _toc.yml structure</span>
+<span class="nv">parts</span><span class="o">=(</span>
+<span class="w">  </span><span class="s2">&quot;Act I&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Act II&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Act III&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Act IV&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Act V&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Epilogue&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Git &amp; Spoke&quot;</span>
+<span class="w">  </span><span class="s2">&quot;Courses&quot;</span>
+<span class="o">)</span>
+
+<span class="c1"># Loop through parts and create chapters inside each part folder</span>
+<span class="k">for</span><span class="w"> </span>part<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">parts</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nv">part_folder</span><span class="o">=</span><span class="s2">&quot;three40/</span><span class="nv">$part</span><span class="s2">&quot;</span>
+<span class="w">  </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$part_folder</span><span class="s2">&quot;</span>
+
+<span class="w">  </span><span class="c1"># Get the chapters for the current part from the _toc.yml</span>
+<span class="w">  </span><span class="nv">chapters</span><span class="o">=(</span><span class="k">$(</span>get_chapters_from_yaml<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$part</span><span class="s2">&quot;</span><span class="k">)</span><span class="o">)</span>
+
+<span class="w">  </span><span class="c1"># Create chapter files inside the part folder</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span>chapter<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">chapters</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$part_folder</span><span class="s2">/</span><span class="nv">$chapter</span><span class="s2">.ipynb&quot;</span>
+<span class="w">  </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Folder structure has been created successfully.&quot;</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -1620,6 +1722,7 @@ nano<span class="w"> </span>_toc.yml
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#act1">842. act1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#streamline">843. streamline</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#revolution">844. revolution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yml">845. yml</a></li>
 </ul>
 </li>
 </ul>
