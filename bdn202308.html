@@ -407,6 +407,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">859.4</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pwomd">860. pwomd</a></li>
 </ul>
 </li>
 </ul>
@@ -461,16 +462,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Ethan Calhoun                 
-2          Ernest Schneider              
-3          Pamela Bates                  
-4          Michael Anthony               
-5          Ryan Mayer                    
-6          Mario Bennett                 
-7          Timothy Haley                 
-8          Antonio Castillo              
-9          Tiffany Santos                
-10         Marcus Macias                 
+1          Jennifer Gilbert              
+2          Jonathan Klein                
+3          Tristan Roberts               
+4          Margaret Vazquez              
+5          Kristin Douglas               
+6          Ashley Welch                  
+7          Maxwell Miller                
+8          Michael Atkins                
+9          Brian Owen                    
+10         Briana Wilson                 
 </pre></div>
 </div>
 </div>
@@ -2943,6 +2944,31 @@ mv<span class="w"> </span>three40.sh<span class="w"> </span>three40/three40.sh
 </ul>
 </section>
 </section>
+<section id="pwomd">
+<h2>860. pwomd<a class="headerlink" href="#pwomd" title="Permalink to this heading">#</a></h2>
+<div class="highlight-unix1. notranslate"><div class="highlight"><pre><span></span>cd ~/dropbox/1f.ἡἔρις,κ/1.ontology
+mkdir -p three40
+nano three40/three40.sh
+chmod +x three40/three40.sh
+nano three40/_toc.yml
+nano three40/_config.yml
+./three40/three40.sh
+find . -name &quot;*.ipynb&quot; -exec cp &quot;notebook.ipynb&quot; {} \;
+nano three40/three40.six100.sh
+cd ~/dropbox/1f.ἡἔρις,κ/1.ontology
+git clone https://github.com/jhustata/six100
+jb build three40
+cp -r three40/* six100
+cd six100
+git add ./*
+git commit -m &quot;first jb created manually&quot;
+git push
+ghp-import -n -p -f _build/html
+chmod +x three40/three40.six100.sh
+./three40/three40.six100.sh
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -3048,6 +3074,7 @@ mv<span class="w"> </span>three40.sh<span class="w"> </span>three40/three40.sh
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">859.4</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pwomd">860. pwomd</a></li>
 </ul>
 </li>
 </ul>
