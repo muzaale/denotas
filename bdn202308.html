@@ -398,7 +398,15 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">08/03/2023</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">858. stata</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#igotthat">858. igotthat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yesterday">859. yesterday</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminal">859.1 terminal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paste">859.2 paste</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bash">859.3 bash</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tree">859.4 tree</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">859.4</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -453,16 +461,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Sarah Price                   
-2          Andrew Mack                   
-3          Denise Thompson               
-4          Kristen Wall                  
-5          Amanda Pollard                
-6          Rodney Miranda                
-7          Ricardo Henry                 
-8          Hector Greer                  
-9          Christine Carroll             
-10         James Stephens                
+1          Ethan Calhoun                 
+2          Ernest Schneider              
+3          Pamela Bates                  
+4          Michael Anthony               
+5          Ryan Mayer                    
+6          Mario Bennett                 
+7          Timothy Haley                 
+8          Antonio Castillo              
+9          Tiffany Santos                
+10         Marcus Macias                 
 </pre></div>
 </div>
 </div>
@@ -2422,47 +2430,518 @@ iii)                 Simulated data</p>
 </section>
 <section id="id5">
 <h1>08/03/2023<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h1>
-<section id="id6">
-<h2>858. stata<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<section id="igotthat">
+<h2>858. <a class="reference external" href="https://www.youtube.com/watch?v=EdZWMKxJpDc">igotthat</a><a class="headerlink" href="#igotthat" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>observed</p>
-<ul>
-<li><p>standard</p></li>
-<li><p>database</p></li>
-<li><p>summary</p></li>
-<li><p>communicate</p></li>
-<li><p>graphs</p></li>
-<li><p>estimates</p>
-<ul>
-<li><p>mean, std, median, min, max</p></li>
-<li><p>univariable regression</p></li>
-<li><p>correlation</p></li>
+<li><p>warryn campbell</p></li>
+<li><p>erica campbell</p></li>
+<li><p>still got it</p></li>
 </ul>
-</li>
+</section>
+<section id="yesterday">
+<h2>859. yesterday<a class="headerlink" href="#yesterday" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>workflow: rollover <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">create</span> <span class="pre">.</span></code></p></li>
+<li><p>herein we take <code class="docutils literal notranslate"><span class="pre">100%</span></code> control of the <code class="docutils literal notranslate"><span class="pre">toc.yml</span></code> file</p></li>
+<li><p>lets see how it all comes together:</p></li>
 </ul>
-</li>
-<li><p>expected</p>
-<ul>
-<li><p>intermediate</p></li>
-<li><p>population</p></li>
-<li><p>overlayed</p></li>
-<li><p>hypothesis</p></li>
-<li><p>p-value</p></li>
-<li><p>scatter plots, multivariable regression</p></li>
-<li><p>visualization</p></li>
+<section id="terminal">
+<h3>859.1 terminal<a class="headerlink" href="#terminal" title="Permalink to this heading">#</a></h3>
+<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>cd ~/dropbox/1f.ἡἔρις,κ/1.ontology
+mkdir -p three40
+nano three40/_toc.yml
+</pre></div>
+</div>
+</section>
+<section id="paste">
+<h3>859.2 paste<a class="headerlink" href="#paste" title="Permalink to this heading">#</a></h3>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jb-book</span>
+<span class="nt">root</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intro.ipynb</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Fenagas</span>
+
+<span class="nt">parts</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Root</span>
+<span class="w">  </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">intro.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">prologue.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act I</span>
+<span class="w">  </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act I/act1_1.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act I/act1_2.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act I/act1_3.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act II</span>
+<span class="w">  </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act II/act2_1.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act II/act2_2.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act II/act2_3.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act II/act2_4.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act III</span>
+<span class="w">  </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act III/act3_1.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act III/act3_2.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act III/act3_3.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act III/act3_4.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act III/act3_5.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act IV</span>
+<span class="w">  </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act IV/act4_1.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act IV/act4_2.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act IV/act4_3.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act IV/act4_4.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act IV/act4_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act IV/act4_6.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act V</span>
+<span class="w">  </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act V/act5_1.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act V/act5_2.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act V/act5_3.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act V/act5_4.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act V/act5_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Act V/act5_6.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Epilogue</span>
+<span class="w">  </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Epilogue/epi_1.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Epilogue/epi_2.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Epilogue/epi_3.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Epilogue/epi_4.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Epilogue/epi_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Epilogue/epi_6.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Epilogue/epi_7.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Epilogue/epi_8.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Gas &amp; Spoke</span>
+<span class="w">  </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Gas &amp; Spoke/gas_1.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Gas &amp; Spoke/gas_2.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Gas &amp; Spoke/gas_3.ipynb</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">caption</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Courses</span>
+<span class="w">  </span><span class="nt">chapters</span><span class="p">:</span><span class="w">  </span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://publichealth.jhu.edu/courses</span>
+<span class="w">    </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Stata Programming</span><span class="w"> </span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/high_school_students/high_school_students.ipynb</span>
+<span class="w">    </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/high_school_students/high_school_students_1.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/high_school_students/high_school_students_2.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/high_school_students/high_school_students_3.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/high_school_students/high_school_students_4.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/high_school_students/high_school_students_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/undergraduates/undergraduates.ipynb</span>
+<span class="w">    </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/undergraduates/undergraduates_1.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/undergraduates/undergraduates_2.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/undergraduates/undergraduates_3.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/undergraduates/undergraduates_4.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/undergraduates/undergraduates_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/graduate_students/graduate_students.ipynb</span>
+<span class="w">    </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/graduate_students/graduate_students_1.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/graduate_students/graduate_students_2.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/graduate_students/graduate_students_3.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/graduate_students/graduate_students_4.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/graduate_students/graduate_students_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/medical_students/medical_students.ipynb</span>
+<span class="w">    </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/medical_students/medical_students_1.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/medical_students/medical_students_2.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/medical_students/medical_students_3.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/medical_students/medical_students_4.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/medical_students/medical_students_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/residents/residents.ipynb</span>
+<span class="w">    </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/residents/residents_1.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/residents/residents_2.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/residents/residents_3.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/residents/residents_4.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/residents/residents_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/fellows/fellows.ipynb</span>
+<span class="w">    </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/fellows/fellows_1.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/fellows/fellows_2.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/fellows/fellows_3.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/fellows/fellows_4.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/fellows/fellows_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/faculty/faculty.ipynb</span>
+<span class="w">    </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/faculty/faculty_1.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/faculty/faculty_2.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/faculty/faculty_3.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/faculty/faculty_4.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/faculty/faculty_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/analysts/analysts.ipynb</span>
+<span class="w">    </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/analysts/analysts_1.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/analysts/analysts_2.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/analysts/analysts_3.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/analysts/analysts_4.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/analysts/analysts_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/staff/staff.ipynb</span>
+<span class="w">    </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/staff/staff_1.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/staff/staff_2.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/staff/staff_3.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/staff/staff_4.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/staff/staff_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/collaborators/collaborators.ipynb</span>
+<span class="w">    </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/collaborators/collaborators_1.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/collaborators/collaborators_2.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/collaborators/collaborators_3.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/collaborators/collaborators_4.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/collaborators/collaborators_5.ipynb</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/graduates/graduates.ipynb</span>
+<span class="w">    </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/graduates/graduates_1.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/graduates/graduates_2.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/graduates/graduates_3.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/graduates/graduates_4.ipynb</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dramatispersonae/graduates/graduates_5.ipynb</span>
+</pre></div>
+</div>
+</section>
+<section id="bash">
+<h3>859.3 bash<a class="headerlink" href="#bash" title="Permalink to this heading">#</a></h3>
+<div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>./three40.sh
+</pre></div>
+</div>
+</section>
+<section id="tree">
+<h3>859.4 tree<a class="headerlink" href="#tree" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Change the working directory to the desired location</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+
+<span class="c1"># Create the &quot;three40&quot; directory</span>
+<span class="c1"># mkdir -p three40</span>
+<span class="c1"># nano three40/_toc.yml</span>
+
+<span class="c1"># Create the &quot;Root&quot; folder and the &quot;intro.ipynb&quot; file inside it</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/intro.ipynb&quot;</span>
+
+<span class="c1"># Create the &quot;prologue.ipynb&quot; file in the &quot;three40&quot; directory</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/prologue.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;Act I&quot; folder and its subfiles</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Act I&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act I/act1_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act I/act1_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act I/act1_3.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;Act II&quot; folder and its subfiles</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Act II&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act II/act2_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act II/act2_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act II/act2_3.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act II/act2_4.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;Act III&quot; folder and its subfiles</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Act III&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act III/act3_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act III/act3_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act III/act3_3.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act III/act3_4.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act III/act3_5.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;Act IV&quot; folder and its subfiles</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Act IV&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act IV/act4_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act IV/act4_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act IV/act4_3.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act IV/act4_4.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act IV/act4_5.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act IV/act4_6.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;Act V&quot; folder and its subfiles</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Act V&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act V/act5_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act V/act5_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act V/act5_3.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act V/act5_4.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act V/act5_5.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Act V/act5_6.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;Epilogue&quot; folder and its subfiles</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Epilogue&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Epilogue/epi_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Epilogue/epi_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Epilogue/epi_3.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Epilogue/epi_4.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Epilogue/epi_5.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Epilogue/epi_6.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Epilogue/epi_7.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Epilogue/epi_8.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;Git &amp; Spoke&quot; folder and its subfiles</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Git &amp; Spoke&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Git &amp; Spoke/gas_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Git &amp; Spoke/gas_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Git &amp; Spoke/gas_3.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;Courses&quot; folder and its subfiles</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/Courses&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Courses/course1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/Courses/course2.ipynb&quot;</span>
+
+<span class="c1"># Create &quot;dramatispersonae&quot; folder and its subdirectories</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/high_school_students&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/undergraduates&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/graduates&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/medical_students&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/residents&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/fellows&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/faculty&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/analysts&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/staff&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/collaborators&quot;</span>
+
+<span class="c1"># Create &quot;dramatispersonae&quot; subdirectories with suffixes _1 to _5</span>
+<span class="k">for</span><span class="w"> </span>branch<span class="w"> </span><span class="k">in</span><span class="w"> </span>high_school_students<span class="w"> </span>undergraduates<span class="w"> </span>graduates<span class="w"> </span>medical_students<span class="w"> </span>residents<span class="w"> </span>fellows<span class="w"> </span>faculty<span class="w"> </span>analysts<span class="w"> </span>staff<span class="w"> </span>collaborators<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">1</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="o">=</span><span class="m">5</span><span class="p">;</span><span class="w"> </span>i++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/</span><span class="si">${</span><span class="nv">branch</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">branch</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="c1"># Create additional .ipynb files inside specific subdirectories</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/high_school_students/high_school_students.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/undergraduates/undergraduates.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/graduates/graduates.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/medical_students/medical_students.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/residents/residents.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/fellows/fellows.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/faculty/faculty.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/analysts/analysts.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/staff/staff.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/collaborators/collaborators.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/high_school_students/high_school_students_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/high_school_students/high_school_students_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/high_school_students/high_school_students_3.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/high_school_students/high_school_students_4.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/high_school_students/high_school_students_5.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/undergraduates/undergraduates_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/undergraduates/undergraduates_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/undergraduates/undergraduates_3.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/undergraduates/undergraduates_4.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/undergraduates/undergraduates_5.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/graduates/graduates_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/graduates/graduates_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/graduates/graduates_3.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/graduates/graduates_4.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/graduates/graduates_5.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/medical_students/medical_students_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/medical_students/medical_students_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/medical_students/medical_students_3.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/medical_students/medical_students_4.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/medical_students/medical_students_5.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/residents/residents_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/residents/residents_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/residents/residents_3.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/residents/residents_4.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/residents/residents_5.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/fellows/fellows_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/fellows/fellows_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/fellows/fellows_3.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/fellows/fellows_4.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/fellows/fellows_5.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/faculty/faculty_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/faculty/faculty_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/faculty/faculty_3.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/faculty/faculty_4.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/faculty/faculty_5.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/analysts/analysts_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/analysts/analysts_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/analysts/analysts_3.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/analysts/analysts_4.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/analysts/analysts_5.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/staff/staff_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/staff/staff_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/staff/staff_3.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/staff/staff_4.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/staff/staff_5.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/collaborators/collaborators_1.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/collaborators/collaborators_2.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/collaborators/collaborators_3.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/collaborators/collaborators_4.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/collaborators/collaborators_5.ipynb&quot;</span>
+
+<span class="c1"># Display the directory tree</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Directory Structure:&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;-------------------&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;three40/</span>
+<span class="s2">├── intro.ipynb</span>
+<span class="s2">├── prologue.ipynb</span>
+<span class="s2">├── Act I/</span>
+<span class="s2">│   ├── act1_1.ipynb</span>
+<span class="s2">│   ├── act1_2.ipynb</span>
+<span class="s2">│   ├── act1_3.ipynb</span>
+<span class="s2">│   └── ...</span>
+<span class="s2">├── Act II/</span>
+<span class="s2">│   ├── act2_1.ipynb</span>
+<span class="s2">│   ├── act2_2.ipynb</span>
+<span class="s2">│   └── ...</span>
+<span class="s2">├── Act III/</span>
+<span class="s2">│   ├── act3_1.ipynb</span>
+<span class="s2">│   ├── act3_2.ipynb</span>
+<span class="s2">│   ├── act3_3.ipynb</span>
+<span class="s2">│   ├── act3_4.ipynb</span>
+<span class="s2">│   └── act3_5.ipynb</span>
+<span class="s2">├── Act IV/</span>
+<span class="s2">│   ├── act4_1.ipynb</span>
+<span class="s2">│   ├── act4_2.ipynb</span>
+<span class="s2">│   ├── act4_3.ipynb</span>
+<span class="s2">│   ├── act4_4.ipynb</span>
+<span class="s2">│   ├── act4_5.ipynb</span>
+<span class="s2">│   └── act4_6.ipynb</span>
+<span class="s2">├── Act V/</span>
+<span class="s2">│   ├── act5_1.ipynb</span>
+<span class="s2">│   ├── act5_2.ipynb</span>
+<span class="s2">│   ├── act5_3.ipynb</span>
+<span class="s2">│   ├── act5_4.ipynb</span>
+<span class="s2">│   ├── act5_5.ipynb</span>
+<span class="s2">│   └── act5_6.ipynb</span>
+<span class="s2">├── Epilogue/</span>
+<span class="s2">│   ├── epi_1.ipynb</span>
+<span class="s2">│   ├── epi_2.ipynb</span>
+<span class="s2">│   ├── epi_3.ipynb</span>
+<span class="s2">│   ├── epi_4.ipynb</span>
+<span class="s2">│   ├── epi_5.ipynb</span>
+<span class="s2">│   ├── epi_6.ipynb</span>
+<span class="s2">│   ├── epi_7.ipynb</span>
+<span class="s2">│   └── epi_8.ipynb</span>
+<span class="s2">├── Gas &amp; Spoke/</span>
+<span class="s2">│   ├── gas_1.ipynb</span>
+<span class="s2">│   ├── gas_2.ipynb</span>
+<span class="s2">│   └── gas_3.ipynb</span>
+<span class="s2">└── dramatispersonae/</span>
+<span class="s2">    ├── high_school_students/</span>
+<span class="s2">    │   ├── high_school_students_1/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── high_school_students_2/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── high_school_students_3/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── high_school_students_4/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   └── high_school_students_5/</span>
+<span class="s2">    │       └── ...</span>
+<span class="s2">    ├── undergraduates/</span>
+<span class="s2">    │   ├── undergraduates_1/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── undergraduates_2/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── undergraduates_3/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── undergraduates_4/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   └── undergraduates_5/</span>
+<span class="s2">    │       └── ...</span>
+<span class="s2">    ├── graduates/</span>
+<span class="s2">    │   ├── graduates_1/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── graduates_2/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── graduates_3/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── graduates_4/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   └── graduates_5/</span>
+<span class="s2">    │       └── ...</span>
+<span class="s2">    ├── medical_students/</span>
+<span class="s2">    │   ├── medical_students_1/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── medical_students_2/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── medical_students_3/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── medical_students_4/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   └── medical_students_5/</span>
+<span class="s2">    │       └── ...</span>
+<span class="s2">    ├── residents/</span>
+<span class="s2">    │   ├── residents_1/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── residents_2/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── residents_3/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── residents_4/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   └── residents_5/</span>
+<span class="s2">    │       └── ...</span>
+<span class="s2">    ├── fellows/</span>
+<span class="s2">    │   ├── fellows_1/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── fellows_2/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── fellows_3/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── fellows_4/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   └── fellows_5/</span>
+<span class="s2">    │       └── ...</span>
+<span class="s2">    ├── faculty/</span>
+<span class="s2">    │   ├── faculty_1/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── faculty_2/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── faculty_3/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── faculty_4/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   └── faculty_5/</span>
+<span class="s2">    │       └── ...</span>
+<span class="s2">    ├── analysts/</span>
+<span class="s2">    │   ├── analysts_1/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── analysts_2/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── analysts_3/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── analysts_4/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   └── analysts_5/</span>
+<span class="s2">    │       └── ...</span>
+<span class="s2">    ├── staff/</span>
+<span class="s2">    │   ├── staff_1/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── staff_2/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── staff_3/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   ├── staff_4/</span>
+<span class="s2">    │   │   └── ...</span>
+<span class="s2">    │   └── staff_5/</span>
+<span class="s2">    │       └── ...</span>
+<span class="s2">    └── collaborators/</span>
+<span class="s2">        ├── collaborators_1/</span>
+<span class="s2">        │   └── ...</span>
+<span class="s2">        ├── collaborators_2/</span>
+<span class="s2">        │   └── ...</span>
+<span class="s2">        ├── collaborators_3/</span>
+<span class="s2">        │   └── ...</span>
+<span class="s2">        ├── collaborators_4/</span>
+<span class="s2">        │   └── ...</span>
+<span class="s2">        └── collaborators_5/</span>
+<span class="s2">            └── ...&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Folder structure has been created successfully.&quot;</span>
+mv<span class="w"> </span>three40.sh<span class="w"> </span>three40/three40.sh
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h3>859.4<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>create a workdir-gitrepo .sh file</p></li>
+<li><p>build your .html</p></li>
+<li><p>push to github</p></li>
 </ul>
-</li>
-<li><p>simulated</p>
-<ul>
-<li><p>advanced</p></li>
-<li><p>random</p></li>
-<li><p>scenarios</p></li>
-<li><p>missingness</p></li>
-<li><p>boundaries, hierachical models</p></li>
-<li><p>pairs</p></li>
-</ul>
-</li>
-</ul>
+</section>
 </section>
 </section>
 
@@ -2560,7 +3039,15 @@ iii)                 Simulated data</p>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">08/03/2023</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">858. stata</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#igotthat">858. igotthat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yesterday">859. yesterday</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminal">859.1 terminal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paste">859.2 paste</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bash">859.3 bash</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tree">859.4 tree</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">859.4</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
