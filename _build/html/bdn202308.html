@@ -408,6 +408,9 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pwomd">860. pwomd</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bloc-githistory-sh">861. bloc/githistory.sh</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals">862. conditionals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">863. stata</a></li>
 </ul>
 </li>
 </ul>
@@ -462,16 +465,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Jennifer Gilbert              
-2          Jonathan Klein                
-3          Tristan Roberts               
-4          Margaret Vazquez              
-5          Kristin Douglas               
-6          Ashley Welch                  
-7          Maxwell Miller                
-8          Michael Atkins                
-9          Brian Owen                    
-10         Briana Wilson                 
+1          Charles Robinson              
+2          Alexandra Glover              
+3          Melissa Jackson               
+4          Diana Carroll                 
+5          Jessica Gates                 
+6          Ellen Freeman                 
+7          Ricky Miller                  
+8          Tanya Cole                    
+9          Jasmine Sexton                
+10         Tommy Thomas                  
 </pre></div>
 </div>
 </div>
@@ -2969,6 +2972,178 @@ chmod +x three40/three40.six100.sh
 </pre></div>
 </div>
 </section>
+<section id="bloc-githistory-sh">
+<h2>861. bloc/githistory.sh<a class="headerlink" href="#bloc-githistory-sh" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Function to reset to a clean state.</span>
+reset_state<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Abort any ongoing rebase.</span>
+<span class="w">    </span>git<span class="w"> </span>rebase<span class="w"> </span>--abort<span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Aborted an ongoing rebase.&quot;</span>
+
+<span class="w">    </span><span class="c1"># Stash any unstaged changes to ensure operations can proceed.</span>
+<span class="w">    </span>git<span class="w"> </span>stash<span class="w"> </span>save<span class="w"> </span><span class="s2">&quot;Unstaged changes before running githis.sh&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Stashed unsaved changes.&quot;</span>
+
+<span class="w">    </span><span class="c1"># Remove any lingering rebase directories.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;.git/rebase-merge&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;.git/rebase-apply&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>rm<span class="w"> </span>-rf<span class="w"> </span>.git/rebase-*
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Removed lingering rebase directories.&quot;</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="c1"># Navigate to the main working directory.</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+
+<span class="c1"># Navigate to the six100 directory.</span>
+<span class="nb">cd</span><span class="w"> </span>six100<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Directory six100 does not exist. Exiting.&quot;</span><span class="p">;</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="o">}</span>
+
+<span class="c1"># Reset to a clean state.</span>
+reset_state
+
+<span class="c1"># Fetch the latest changes from temp_og_repo using SSH.</span>
+<span class="k">if</span><span class="w"> </span>git<span class="w"> </span>fetch<span class="w"> </span>git@github.com:afecdvi/temp_og_repo.git<span class="w"> </span>main<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Successfully fetched changes via SSH.&quot;</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Failed to fetch changes using SSH. Exiting.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># Reset the local branch to match the fetched changes.</span>
+git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>FETCH_HEAD
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Local branch reset to match fetched changes.&quot;</span>
+
+<span class="c1"># Check for network connection.</span>
+<span class="k">if</span><span class="w"> </span>!<span class="w"> </span>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span>google.com<span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;No internet connection. Exiting.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># Check repository size.</span>
+<span class="nv">REPO_SIZE</span><span class="o">=</span><span class="k">$(</span>du<span class="w"> </span>-sh<span class="w"> </span>.git<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-f1<span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Repository size: </span><span class="nv">$REPO_SIZE</span><span class="s2">&quot;</span>
+
+<span class="c1"># Adjust Git configurations.</span>
+<span class="nv">POST_BUFFER_SIZE</span><span class="o">=</span><span class="k">$((</span><span class="w"> </span><span class="o">(</span>RANDOM<span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">200</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">300</span><span class="o">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">1048576</span><span class="w"> </span><span class="k">))</span>
+<span class="nv">LOW_SPEED_LIMIT</span><span class="o">=</span><span class="k">$((</span><span class="w"> </span>RANDOM<span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">5000</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2000</span><span class="w"> </span><span class="k">))</span>
+<span class="nv">LOW_SPEED_TIME</span><span class="o">=</span><span class="k">$((</span><span class="w"> </span>RANDOM<span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="k">))</span>
+
+git<span class="w"> </span>config<span class="w"> </span>http.postBuffer<span class="w"> </span><span class="nv">$POST_BUFFER_SIZE</span>
+git<span class="w"> </span>config<span class="w"> </span>http.lowSpeedLimit<span class="w"> </span><span class="nv">$LOW_SPEED_LIMIT</span>
+git<span class="w"> </span>config<span class="w"> </span>http.lowSpeedTime<span class="w"> </span><span class="nv">$LOW_SPEED_TIME</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Adjusted Git&#39;s buffer size to </span><span class="nv">$POST_BUFFER_SIZE</span><span class="s2">, low speed limit to </span><span class="nv">$LOW_SPEED_LIMIT</span><span class="s2"> and low speed time to </span><span class="nv">$LOW_SPEED_TIME</span><span class="s2">.&quot;</span>
+
+<span class="c1"># Push the changes to the remote repository using SSH and verbose logging.</span>
+<span class="k">if</span><span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>git@github.com:afecdvi/og.git<span class="w"> </span>main<span class="w"> </span>--force<span class="w"> </span>-v<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Successfully pushed changes using SSH.&quot;</span>
+<span class="w">    </span><span class="c1"># Unstash any changes we stashed earlier.</span>
+<span class="w">    </span>git<span class="w"> </span>stash<span class="w"> </span>pop<span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Restored previously stashed changes.&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script completed successfully!&quot;</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Failed to push changes even with SSH. Exiting.&quot;</span>
+<span class="w">    </span>git<span class="w"> </span>stash<span class="w"> </span>pop<span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Restored previously stashed changes.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+</pre></div>
+</div>
+</section>
+<section id="conditionals">
+<h2>862. conditionals<a class="headerlink" href="#conditionals" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span></code> <code class="docutils literal notranslate"><span class="pre">then</span></code> <code class="docutils literal notranslate"><span class="pre">else</span></code> <code class="docutils literal notranslate"><span class="pre">fi</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span></code> refers to the condition</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">then</span></code> refers to the action</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">else</span></code> refers to the alternative action</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fi</span></code> refers to the end of the conditional</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">case</span></code> <code class="docutils literal notranslate"><span class="pre">esac</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">case</span></code> refers to the condition</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">esac</span></code> refers to the end of the conditional</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">for</span></code> <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">done</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">for</span></code> refers to the condition</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">do</span></code> refers to the action</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">done</span></code> refers to the end of the conditional</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">done</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> refers to the condition</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">do</span></code> refers to the action</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">done</span></code> refers to the end of the conditional</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">until</span></code> <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">done</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">until</span></code> refers to the condition</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">do</span></code> refers to the action</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">done</span></code> refers to the end of the conditional</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id7">
+<h2>863. stata<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>let it be said that unconditional code is the most basic, conditional code is intermediate, and looping code is advanced</p></li>
+<li><p>so let’s start with the most basic</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span></code> <code class="docutils literal notranslate"><span class="pre">then</span></code> <code class="docutils literal notranslate"><span class="pre">else</span></code> <code class="docutils literal notranslate"><span class="pre">fi</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span></code> refers to the condition</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">then</span></code> refers to the action</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">else</span></code> refers to the alternative action</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fi</span></code> refers to the end of the conditional</p></li>
+</ul>
+</li>
+</ul>
+<ol class="arabic simple">
+<li><p>basic</p></li>
+</ol>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">clear</span>
+<span class="k">set</span> obs <span class="m">100</span>
+<span class="k">gen</span> x = <span class="nf">runiform</span>()
+</pre></div>
+</div>
+<hr class="docutils" />
+<ol class="arabic simple" start="2">
+<li><p>conditional</p></li>
+</ol>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> x <span class="o">&gt;</span> <span class="m">0.5</span> {
+<span class="k">    display</span> <span class="s">&quot;x is greater than 0.5&quot;</span>
+}
+<span class="k">else if</span> x <span class="o">&gt;</span> <span class="m">0.25</span> {
+<span class="k">    display</span> <span class="s">&quot;x is greater than 0.25&quot;</span>
+}
+<span class="k">else if</span> x <span class="o">&gt;</span> <span class="m">0.125</span> {
+<span class="k">    display</span> <span class="s">&quot;x is greater than 0.125&quot;</span>
+}
+<span class="k">else</span> {
+<span class="k">    display</span> <span class="s">&quot;x is less than or equal to 0.125&quot;</span>
+}
+</pre></div>
+</div>
+<hr class="docutils" />
+<ol class="arabic simple" start="3">
+<li><p>looping</p></li>
+</ol>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">forvalues</span> i = <span class="m">1</span><span class="o">/</span><span class="m">10</span> {
+<span class="k">    if</span> <span class="nv">`i&#39;</span> <span class="o">&lt;</span> <span class="m">5</span> {
+<span class="k">        display</span> <span class="s">&quot;i = </span><span class="nv">`i&#39;</span><span class="s">&quot;</span>
+    }
+<span class="k">    else</span> {
+<span class="k">        display</span> <span class="s">&quot;i is greater than or equal to 5&quot;</span>
+    }
+}
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>we’ll build the three classes around these three basic concepts</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -3075,6 +3250,9 @@ chmod +x three40/three40.six100.sh
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pwomd">860. pwomd</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bloc-githistory-sh">861. bloc/githistory.sh</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals">862. conditionals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">863. stata</a></li>
 </ul>
 </li>
 </ul>
