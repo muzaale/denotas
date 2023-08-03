@@ -29,7 +29,7 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "introducing SSH keys"
+git commit -m "introducing SSH keys, take3"
 
 # Use the provided SSH key for the upcoming Git commands
 export GIT_SSH_COMMAND="ssh -i $SSH_KEY_PATH"
