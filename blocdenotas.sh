@@ -14,11 +14,7 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "### 857. g.o.a.t.
-
-+ man's [greatest](goat.jpg) invention
-+ a mere 88 keys
-+ piano"
+git commit -m "three stata classes"
 
 # Push changes to GitHub
 # git remote set-url origin git@github.com:muzaale/amagunju
