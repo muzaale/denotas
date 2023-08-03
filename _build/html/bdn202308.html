@@ -412,7 +412,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals">862. conditionals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">863. stata</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bloc-blocdenotas-sh">864. bloc/blocdenotas.sh</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tired">tired</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">865. bloc/blocdenotas.sh</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mb-og">866. mb/og</a></li>
 </ul>
 </li>
 </ul>
@@ -467,16 +468,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Tyler Lopez                   
-2          Alexander Woods               
-3          Michelle Webster              
-4          Stephen Lambert               
-5          William Johnson               
-6          Jonathan Green                
-7          Kimberly Gardner              
-8          Stephen Gomez                 
-9          Kristen Murray                
-10         Sarah Garcia                  
+1          Mason Rios                    
+2          Jason Osborne                 
+3          Jessica Ferguson              
+4          Elizabeth King                
+5          Sarah White                   
+6          Jessica Huynh                 
+7          Jermaine Gates                
+8          Emily Crawford                
+9          Donald Keller                 
+10         John Smith                    
 </pre></div>
 </div>
 </div>
@@ -3198,8 +3199,106 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 </pre></div>
 </div>
 </section>
-<section id="tired">
-<h2>tired<a class="headerlink" href="#tired" title="Permalink to this heading">#</a></h2>
+<section id="id8">
+<h2>865. bloc/blocdenotas.sh<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>(base) d@Poseidon 1.ontology % ssh-keygen -t ed25519 -C &quot;xxzxxxx@gmail.com&quot; 
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/users/d/.ssh/id_ed25519): /users/d/.ssh/id_blocdenotas
+Enter passphrase (empty for no passphrase): bloc
+Enter same passphrase again: bloc
+Your identification has been saved in /users/d/.ssh/id_blocdenotas
+Your public key has been saved in /users/d/.ssh/id_blocdenotas.pub
+The key fingerprint is:
+SHA256:/fSyZhRqN3+8b1Ml7tuAqOLNcHIL/w8UW3uVjZKnQZw muzaale@gmail.com
+The key&#39;s randomart image is:
++--[ED25519 256]--+
+|           ...   |
+|           .E. .o|
+|          . = o.o|
+|         . +.*...|
+|        S +.+o...|
+|         .o+++. .|
+|      + o.oo++o..|
+|      .X o .ooo++|
+|     ...*..+o .=*|
++----[SHA256]-----+
+(base) d@Poseidon 1.ontology % cat /users/d/.ssh/id_blocdenotas.pub
+ssh-ed25519 xxzxxxxxxzxxxxxxzxxxxxxzxxxx muzaale@gmail.com
+(base) d@Poseidon 1.ontology % eval &quot;$(ssh-agent -s)&quot;
+Agent pid 98437
+(base) d@Poseidon 1.ontology % pbcopy &lt; ~/.ssh/id_blocdenotas.pub
+(base) d@Poseidon 1.ontology % chmod 600 ~/.ssh/id_blocdenotas
+(base) d@Poseidon 1.ontology % git remote -v
+book    https://github.com/xxzxxxx/book (fetch)
+book    https://github.com/xxzxxxx/book (push)
+og      ../og (fetch)
+og      ../og (push)
+origin  git@github.com:xxzxxxx/repos (fetch)
+origin  git@github.com:xxzxxxx/repos (push)
+source-repo     ../source-repo (fetch)
+source-repo     ../source-repo (push)
+(base) d@Poseidon 1.ontology % ssh-add -D
+All identities removed.
+(base) d@Poseidon 1.ontology % git remote set-url origin git@github.com:xxzxxxx/denotas
+(base) d@Poseidon 1.ontology % ssh-add ~/.ssh/id_blocdenotas
+Enter passphrase for /Users/d/.ssh/id_blocdenotas: bloc 
+Identity added: /Users/d/.ssh/id_blocdenotas (xxzxxxx@gmail.com)
+</pre></div>
+</div>
+</aside>
+</section>
+<section id="mb-og">
+<h2>866. mb/og<a class="headerlink" href="#mb-og" title="Permalink to this heading">#</a></h2>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>(base) d@Poseidon 1.ontology % ssh-keygen -t ed25519 -C &quot;afecdvi@gmail.com&quot;
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/d/.ssh/id_ed25519): /users/d/.ssh/id_mbog       
+Enter passphrase (empty for no passphrase): mb
+Enter same passphrase again: mb
+Your identification has been saved in /users/d/.ssh/id_mbog
+Your public key has been saved in /users/d/.ssh/id_mbog.pub
+The key fingerprint is:
+SHA256:axiI/wbr/zmV1yz2im1zduE8NklWqdasRtQ5NVNXzb8 afecdvi@gmail.com
+The key&#39;s randomart image is:
++--[ED25519 256]--+
+|               .B|
+|               o=|
+|              . B|
+|   . .       . =o|
+|  . . . S  ..o+ +|
+|   ..  o .o ++oE |
+|    .o. o. ooo* o|
+|    ...... ooo+B.|
+|   ..oo.o...+=..o|
++----[SHA256]-----+
+(base) d@Poseidon 1.ontology % cat /users/d/.ssh/id_mbog.pub       
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBkT6Eke7PwVt8qj8wXLq+6JP+O6z89g/ksAAi+h3hZ3 afecdvi@gmail.com
+(base) d@Poseidon 1.ontology % eval &quot;$(ssh-agent -s)&quot;
+Agent pid 99276
+(base) d@Poseidon 1.ontology % pbcopy &lt; ~/.ssh/id_mbog.pub       
+(base) d@Poseidon 1.ontology % chmod 600 ~/.ssh/id_mbog       
+(base) d@Poseidon 1.ontology % git remote -v
+book    https://github.com/mxxzxxxxx/book (fetch)
+book    https://github.com/mxxzxxxxx/book (push)
+og      ../og (fetch)
+og      ../og (push)
+origin  git@github.com:mxxzxxxxx/denotas (fetch)
+origin  git@github.com:mxxzxxxxx/denotas (push)
+source-repo     ../source-repo (fetch)
+source-repo     ../source-repo (push)
+(base) d@Poseidon 1.ontology % ssh-add -D
+All identities removed.
+(base) d@Poseidon 1.ontology % git remote set-url origin git@github.com:afecdvi/og     
+(base) d@Poseidon 1.ontology % ssh-add ~/.ssh/id_mbog       
+Enter passphrase for /Users/d/.ssh/id_mbog: 
+Identity added: /Users/d/.ssh/id_mbog (afecdvi@gmail.com)
+(base) d@Poseidon 1.ontology % jb build mb
+</pre></div>
+</div>
+</aside>
 </section>
 </section>
 
@@ -3311,7 +3410,8 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals">862. conditionals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">863. stata</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bloc-blocdenotas-sh">864. bloc/blocdenotas.sh</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tired">tired</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">865. bloc/blocdenotas.sh</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mb-og">866. mb/og</a></li>
 </ul>
 </li>
 </ul>
