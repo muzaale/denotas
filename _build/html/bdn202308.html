@@ -411,6 +411,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bloc-githistory-sh">861. bloc/githistory.sh</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals">862. conditionals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">863. stata</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bloc-blocdenotas-sh">864. bloc/blocdenotas.sh</a></li>
 </ul>
 </li>
 </ul>
@@ -465,16 +466,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Charles Robinson              
-2          Alexandra Glover              
-3          Melissa Jackson               
-4          Diana Carroll                 
-5          Jessica Gates                 
-6          Ellen Freeman                 
-7          Ricky Miller                  
-8          Tanya Cole                    
-9          Jasmine Sexton                
-10         Tommy Thomas                  
+1          Kaitlyn Phillips              
+2          John Ortiz                    
+3          William Alvarez               
+4          Chelsea Moore                 
+5          Yvonne Willis                 
+6          Donna Harrell                 
+7          Haley Oliver                  
+8          Maria Rose                    
+9          Olivia Garza                  
+10         Katelyn Rodriguez             
 </pre></div>
 </div>
 </div>
@@ -3144,6 +3145,58 @@ git<span class="w"> </span>config<span class="w"> </span>http.lowSpeedTime<span 
 <li><p>we’ll build the three classes around these three basic concepts</p></li>
 </ul>
 </section>
+<section id="bloc-blocdenotas-sh">
+<h2>864. bloc/blocdenotas.sh<a class="headerlink" href="#bloc-blocdenotas-sh" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Ask the user for the path to the SSH key</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Please provide the path to your SSH key (e.g. ~/.ssh/id_blocdenotas): &quot;</span><span class="w"> </span>SSH_KEY_PATH
+
+<span class="c1"># If no input is provided, exit the script</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_KEY_PATH</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;No SSH key provided. Exiting.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># Check if the SSH key exists</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_KEY_PATH</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;The provided SSH key does not exist. Exiting.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># Change directory to ~/dropbox/1f.ἡἔρις,κ/1.ontology</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+
+<span class="c1"># Build Jupyter Book</span>
+jb<span class="w"> </span>build<span class="w"> </span>bloc
+cp<span class="w"> </span>-r<span class="w"> </span>bloc/*<span class="w"> </span>denotas
+
+<span class="c1"># Change directory to &#39;denotas&#39;</span>
+<span class="nb">cd</span><span class="w"> </span>denotas
+
+<span class="c1"># Add all files in the current directory to Git</span>
+git<span class="w"> </span>add<span class="w"> </span>./*
+
+<span class="c1"># Commit changes to Git with the given commit message</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;introducing SSH keys to bloc/blocdenotas.sh&quot;</span>
+
+<span class="c1"># Use the provided SSH key for the upcoming Git commands</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">GIT_SSH_COMMAND</span><span class="o">=</span><span class="s2">&quot;ssh -i </span><span class="nv">$SSH_KEY_PATH</span><span class="s2">&quot;</span>
+
+<span class="c1"># Ensure using the SSH URL for the repository</span>
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:muzaale/denotas.git
+
+<span class="c1"># Push changes to GitHub</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+
+<span class="c1"># Import the built HTML to gh-pages and push to GitHub</span>
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+
+<span class="c1"># Unset the custom GIT_SSH_COMMAND to avoid affecting other git operations</span>
+<span class="nb">unset</span><span class="w"> </span>GIT_SSH_COMMAND
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -3253,6 +3306,7 @@ git<span class="w"> </span>config<span class="w"> </span>http.lowSpeedTime<span 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bloc-githistory-sh">861. bloc/githistory.sh</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditionals">862. conditionals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">863. stata</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bloc-blocdenotas-sh">864. bloc/blocdenotas.sh</a></li>
 </ul>
 </li>
 </ul>
