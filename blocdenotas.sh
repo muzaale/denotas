@@ -14,11 +14,7 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "no pain, no gain: ### 859. yesterday
-
-+ workflow: rollover `jupyter-book create .`
-+ herein we take `100%` control of the `toc.yml` file
-+ lets see how it all comes together:"
+git commit -m "#860: pwomd"
 
 # Push changes to GitHub
 # git remote set-url origin git@github.com:muzaale/amagunju
