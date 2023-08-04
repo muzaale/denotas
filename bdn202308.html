@@ -426,7 +426,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#victory">869. victory</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">githistory.sh</a></li>
 </ul>
 
             </nav>
@@ -479,16 +478,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Catherine Porter              
-2          Steven Huynh                  
-3          Amy Wilson                    
-4          Eddie Martin                  
-5          Mark Flores                   
-6          Brad Warren                   
-7          David Barnes                  
-8          Lisa Townsend                 
-9          Matthew Diaz                  
-10         Lisa Hernandez                
+1          David Rios                    
+2          Amanda Chavez                 
+3          Rebecca Adams                 
+4          Thomas Simmons                
+5          Kelly Mcfarland               
+6          Ashley Cooper                 
+7          Brian Jackson                 
+8          Crystal Nichols               
+9          Gregory Evans                 
+10         Richard Spencer               
 </pre></div>
 </div>
 </div>
@@ -3481,11 +3480,10 @@ mv &quot;$GIT_INDEX_FILE.new&quot; &quot;$GIT_INDEX_FILE&quot;&#39; HEAD
 <h1>08/04/2023<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h1>
 <section id="victory">
 <h2>869. <a class="reference external" href="https://www.youtube.com/watch?v=755whUTJtN4">victory</a><a class="headerlink" href="#victory" title="Permalink to this heading">#</a></h2>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="id10">
-<h1><a class="reference external" href="http://githistory.sh">githistory.sh</a><a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h1>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Ensure the script stops on first error</span>
+<span class="nb">set</span><span class="w"> </span>-e
 
 <span class="c1"># 1. Remove the &quot;og&quot; directory</span>
 rm<span class="w"> </span>-rf<span class="w"> </span>og
@@ -3493,37 +3491,41 @@ rm<span class="w"> </span>-rf<span class="w"> </span>og
 <span class="c1"># 2. Clone the &quot;og&quot; repository</span>
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/afecdvi/og
 
-<span class="c1"># 3. Change directory to &quot;og&quot; and extract git commit history of seasons.docx</span>
+<span class="c1"># 3. Navigate to &quot;og&quot; and generate patches for seasons.docx</span>
 <span class="nb">cd</span><span class="w"> </span>og
-git<span class="w"> </span>log<span class="w"> </span>--pretty<span class="o">=</span>format:<span class="s2">&quot;%h%x09%an%x09%ad%x09%s&quot;</span><span class="w"> </span>--date<span class="o">=</span>short<span class="w"> </span>seasons.docx<span class="w"> </span>&gt;<span class="w"> </span>seasons.docx.log
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Generating patches for seasons.docx...&quot;</span>
+git<span class="w"> </span>log<span class="w"> </span>--pretty<span class="o">=</span>email<span class="w"> </span>--patch-with-stat<span class="w"> </span>--reverse<span class="w"> </span>--<span class="w"> </span>seasons.docx<span class="w"> </span>&gt;<span class="w"> </span>seasons.docx.patch
 
-<span class="c1"># 4. Change directory back to the parent directory</span>
+<span class="c1"># 4. Remove the &quot;canvas&quot; directory and clone the new repository</span>
 <span class="nb">cd</span><span class="w"> </span>..
-
-<span class="c1"># 5. Clone a new repository </span>
-rm<span class="w"> </span>-rf<span class="w"> </span>canvas<span class="w"> </span>
+rm<span class="w"> </span>-rf<span class="w"> </span>canvas
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/muzaale/canvas
 
-<span class="c1"># 6. Copy seasons.docx.log to &quot;canvas&quot; repo, add, commit and setup for SSH push</span>
+<span class="c1"># 5. Apply patches to the &quot;canvas&quot; repository</span>
 <span class="nb">cd</span><span class="w"> </span>canvas
-cp<span class="w"> </span>../og/seasons.docx.log<span class="w"> </span>.
-git<span class="w"> </span>add<span class="w"> </span>seasons.docx.log
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add seasons.docx log, take 2: co-pilot + chatGPT&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Applying patches to canvas repository...&quot;</span>
+git<span class="w"> </span>am<span class="w"> </span>&lt;<span class="w"> </span>../og/seasons.docx.patch
 
-<span class="c1"># Set up SSH for secure push</span>
+<span class="c1"># 6. Setup for SSH push to &quot;canvas&quot; repository</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Setting up SSH for secure push...&quot;</span>
 chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/id_blankcanvas
 ssh-add<span class="w"> </span>-D
 git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:muzaale/canvas
 ssh-add<span class="w"> </span>~/.ssh/id_blankcanvas
+
+<span class="c1"># Optional: If you&#39;re using a remote, push changes to canvas</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Pushing changes to remote repository...&quot;</span>
 git<span class="w"> </span>push
 
-<span class="c1"># 7. Change directory back to parent and remove &quot;og&quot; (or &quot;canvas&quot; if you prefer)</span>
+<span class="c1"># 7. Clean up</span>
 <span class="nb">cd</span><span class="w"> </span>..
+rm<span class="w"> </span>../og/seasons.docx.patch
 rm<span class="w"> </span>-rf<span class="w"> </span>og
 
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script execution completed!&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Migration completed successfully!&quot;</span>
 </pre></div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -3648,7 +3650,6 @@ rm<span class="w"> </span>-rf<span class="w"> </span>og
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#victory">869. victory</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">githistory.sh</a></li>
 </ul>
 
   </nav></div>
