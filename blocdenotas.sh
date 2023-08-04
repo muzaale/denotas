@@ -4,7 +4,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "### 877. fatal-error"
+git commit -m "taking the rest of the day off after this iteration"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
