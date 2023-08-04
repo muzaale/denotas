@@ -4,7 +4,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "adversarial-learning: i am the generator, you are the discriminator"
+git commit -m "### 877. fatal-error"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
