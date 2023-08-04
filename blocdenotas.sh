@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Default SSH Key path
+# Default SSH Key path; did this mess things up?
 DEFAULT_SSH_KEY_PATH="/users/d/.ssh/id_blocdenotas"
 
 # Prompt user for the path to their private SSH key
