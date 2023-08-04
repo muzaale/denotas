@@ -4,7 +4,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "directory -- at launch of documentation for jhutrc/alpha-beta"
+git commit -m "_toc.yml, attention to detail key, jhutrc/alpha-beta"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
