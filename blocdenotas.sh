@@ -4,7 +4,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "workflow 7.4, iteration... 4: blank canvas "
+git commit -m "database scheme "
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D

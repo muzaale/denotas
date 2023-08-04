@@ -435,6 +435,10 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blankcanvas-sh">874. blankcanvas.sh</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database">875. database</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables">1. Tables:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relationships">2. Relationships:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexes">3. Indexes:</a></li>
 </ul>
 </li>
 </ul>
@@ -489,16 +493,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Richard Adkins                
-2          Candice Soto                  
-3          Stephanie Nash                
-4          Maria Miller                  
-5          Billy Thompson                
-6          Edwin Martinez                
-7          Christopher Collins           
-8          Deanna Hobbs                  
-9          Ashley Perez                  
-10         Kimberly Campos               
+1          Molly Smith                   
+2          Brianna Williams              
+3          Christina English             
+4          Dawn Obrien                   
+5          Gregory Shaw                  
+6          Laura Welch                   
+7          Emma Price                    
+8          Sandra White                  
+9          Lori Munoz                    
+10         Jimmy Castillo                
 </pre></div>
 </div>
 </div>
@@ -4003,6 +4007,234 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <li><p>and it’s a good place to be</p></li>
 </ul>
 </section>
+<section id="database">
+<h2>875. database<a class="headerlink" href="#database" title="Permalink to this heading">#</a></h2>
+<p>Design a database schema for an online merch store.</p>
+<hr class="docutils" />
+<p>Certainly! Below is a basic database schema for an online merchandise store. This schema covers key features but can be expanded or adjusted based on specific requirements.</p>
+</section>
+<section id="tables">
+<h2>1. Tables:<a class="headerlink" href="#tables" title="Permalink to this heading">#</a></h2>
+<p><strong>1. Users</strong></p>
+<ul class="simple">
+<li><p>UserID (Primary Key, Auto-increment)</p></li>
+<li><p>Username</p></li>
+<li><p>Email (Unique)</p></li>
+<li><p>Password (hashed)</p></li>
+<li><p>Firstname</p></li>
+<li><p>Lastname</p></li>
+<li><p>DateJoined</p></li>
+<li><p>LastLoginDate</p></li>
+</ul>
+<p><strong>2. Products</strong></p>
+<ul class="simple">
+<li><p>ProductID (Primary Key, Auto-increment)</p></li>
+<li><p>ProductName</p></li>
+<li><p>Description</p></li>
+<li><p>Price</p></li>
+<li><p>StockQuantity</p></li>
+<li><p>CategoryID (Foreign Key)</p></li>
+<li><p>ImageURL</p></li>
+</ul>
+<p><strong>3. Categories</strong></p>
+<ul class="simple">
+<li><p>CategoryID (Primary Key, Auto-increment)</p></li>
+<li><p>CategoryName</p></li>
+<li><p>Description</p></li>
+</ul>
+<p><strong>4. Orders</strong></p>
+<ul class="simple">
+<li><p>OrderID (Primary Key, Auto-increment)</p></li>
+<li><p>UserID (Foreign Key)</p></li>
+<li><p>OrderDate</p></li>
+<li><p>ShippingAddressID (Foreign Key)</p></li>
+<li><p>OrderStatus</p></li>
+</ul>
+<p><strong>5. OrderDetails</strong></p>
+<ul class="simple">
+<li><p>OrderDetailID (Primary Key, Auto-increment)</p></li>
+<li><p>OrderID (Foreign Key)</p></li>
+<li><p>ProductID (Foreign Key)</p></li>
+<li><p>QuantityOrdered</p></li>
+<li><p>PriceEach</p></li>
+</ul>
+<p><strong>6. Addresses</strong></p>
+<ul class="simple">
+<li><p>AddressID (Primary Key, Auto-increment)</p></li>
+<li><p>UserID (Foreign Key)</p></li>
+<li><p>StreetAddress1</p></li>
+<li><p>StreetAddress2</p></li>
+<li><p>City</p></li>
+<li><p>State</p></li>
+<li><p>PostalCode</p></li>
+<li><p>Country</p></li>
+<li><p>IsDefault</p></li>
+</ul>
+<p><strong>7. Cart</strong></p>
+<ul class="simple">
+<li><p>CartID (Primary Key, Auto-increment)</p></li>
+<li><p>UserID (Foreign Key)</p></li>
+</ul>
+<p><strong>8. CartItems</strong></p>
+<ul class="simple">
+<li><p>CartItemID (Primary Key, Auto-increment)</p></li>
+<li><p>CartID (Foreign Key)</p></li>
+<li><p>ProductID (Foreign Key)</p></li>
+<li><p>Quantity</p></li>
+</ul>
+<p><strong>9. Reviews</strong></p>
+<ul class="simple">
+<li><p>ReviewID (Primary Key, Auto-increment)</p></li>
+<li><p>UserID (Foreign Key)</p></li>
+<li><p>ProductID (Foreign Key)</p></li>
+<li><p>Rating (e.g., 1-5)</p></li>
+<li><p>Comment</p></li>
+<li><p>ReviewDate</p></li>
+</ul>
+</section>
+<section id="relationships">
+<h2>2. Relationships:<a class="headerlink" href="#relationships" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Users</strong> and <strong>Orders</strong>: One-to-Many</p>
+<ul>
+<li><p>A user can place multiple orders, but each order is placed by one user.</p></li>
+</ul>
+</li>
+<li><p><strong>Users</strong> and <strong>Addresses</strong>: One-to-Many</p>
+<ul>
+<li><p>A user can have multiple shipping addresses, but each address belongs to one user.</p></li>
+</ul>
+</li>
+<li><p><strong>Products</strong> and <strong>Categories</strong>: Many-to-One</p>
+<ul>
+<li><p>A product belongs to one category, but each category can have multiple products.</p></li>
+</ul>
+</li>
+<li><p><strong>Orders</strong> and <strong>OrderDetails</strong>: One-to-Many</p>
+<ul>
+<li><p>An order can have multiple products (order details), but each order detail refers to one order.</p></li>
+</ul>
+</li>
+<li><p><strong>Users</strong> and <strong>Reviews</strong>: One-to-Many</p>
+<ul>
+<li><p>A user can leave multiple reviews, but each review is written by one user.</p></li>
+</ul>
+</li>
+<li><p><strong>Products</strong> and <strong>Reviews</strong>: One-to-Many</p>
+<ul>
+<li><p>A product can have multiple reviews, but each review pertains to one product.</p></li>
+</ul>
+</li>
+<li><p><strong>Users</strong> and <strong>Cart</strong>: One-to-One</p>
+<ul>
+<li><p>A user has one cart, and each cart belongs to one user.</p></li>
+</ul>
+</li>
+<li><p><strong>Cart</strong> and <strong>CartItems</strong>: One-to-Many</p>
+<ul>
+<li><p>A cart can have multiple cart items, but each cart item belongs to one cart.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="indexes">
+<h2>3. Indexes:<a class="headerlink" href="#indexes" title="Permalink to this heading">#</a></h2>
+<p>Indexes should be created on columns that are frequently searched or joined to enhance query performance. For example:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Email</span></code> in <strong>Users</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ProductName</span></code> and <code class="docutils literal notranslate"><span class="pre">CategoryID</span></code> in <strong>Products</strong></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">UserID</span></code> in <strong>Orders</strong>, <strong>Addresses</strong>, <strong>Reviews</strong>, and <strong>Cart</strong></p></li>
+</ul>
+<p>This schema provides a foundational structure for an online merch store. Depending on the specific requirements and features needed (e.g., wish lists, promotional codes, affiliate tracking, etc.), additional tables and fields may be necessary.</p>
+<hr class="docutils" />
+<p>bring this to life even by simulation if necessary: given me python code</p>
+<hr class="docutils" />
+<p>Creating a real-world application with the above schema involves multiple layers including front-end, back-end, and database interactions. I’ll provide a simplified simulation in Python that focuses on the backend aspect, using SQLite as the database for ease of demonstration.</p>
+<ol class="arabic simple">
+<li><p><strong>Setting Up the Database</strong>:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="k">def</span> <span class="nf">setup_database</span><span class="p">():</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;merch_store.db&quot;</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    
+    <span class="c1"># Users table</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    CREATE TABLE IF NOT EXISTS Users (</span>
+<span class="s1">        UserID INTEGER PRIMARY KEY AUTOINCREMENT,</span>
+<span class="s1">        Username TEXT NOT NULL,</span>
+<span class="s1">        Email TEXT UNIQUE NOT NULL,</span>
+<span class="s1">        Password TEXT NOT NULL,</span>
+<span class="s1">        Firstname TEXT,</span>
+<span class="s1">        Lastname TEXT,</span>
+<span class="s1">        DateJoined DATE,</span>
+<span class="s1">        LastLoginDate DATE</span>
+<span class="s1">    )&#39;&#39;&#39;</span><span class="p">)</span>
+    
+    <span class="c1"># Remaining tables ... (similarly create tables for Products, Categories, etc.)</span>
+    
+    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Inserting Data</strong> (Using Users as an example):</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_user</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">firstname</span><span class="p">,</span> <span class="n">lastname</span><span class="p">):</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;merch_store.db&quot;</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">    INSERT INTO Users (Username, Email, Password, Firstname, Lastname, DateJoined, LastLoginDate)</span>
+<span class="s1">    VALUES (?, ?, ?, ?, ?, CURRENT_DATE, CURRENT_DATE)</span>
+<span class="s1">    &#39;&#39;&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">firstname</span><span class="p">,</span> <span class="n">lastname</span><span class="p">))</span>
+    
+    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><strong>Fetching Data</strong> (Again, using Users as an example):</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fetch_user</span><span class="p">(</span><span class="n">email</span><span class="p">):</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;merch_store.db&quot;</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM Users WHERE Email=?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">email</span><span class="p">,))</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+    
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">user</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p><strong>Main Program Flow</strong>:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">setup_database</span><span class="p">()</span>
+    
+    <span class="c1"># Adding a sample user</span>
+    <span class="n">add_user</span><span class="p">(</span><span class="s2">&quot;john_doe&quot;</span><span class="p">,</span> <span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">,</span> <span class="s2">&quot;securepassword&quot;</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Doe&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Fetching and displaying the user</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">fetch_user</span><span class="p">(</span><span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This is a very basic setup. In a real-world application:</p>
+<ul class="simple">
+<li><p>Passwords would be hashed (e.g., using <code class="docutils literal notranslate"><span class="pre">bcrypt</span></code>).</p></li>
+<li><p>Error handling and input validation would be essential.</p></li>
+<li><p>Interaction with other tables and relationships would be implemented.</p></li>
+<li><p>A RESTful API, frontend, and more advanced backend features would be added.</p></li>
+<li><p>ORM (Object Relational Mapping) tools like SQLAlchemy could be used to simplify database operations.</p></li>
+</ul>
+<p>Always remember to be cautious with handling sensitive information, especially passwords. Always use industry-approved cryptographic methods for storage and transmission.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -4136,6 +4368,10 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blankcanvas-sh">874. blankcanvas.sh</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database">875. database</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables">1. Tables:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relationships">2. Relationships:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexes">3. Indexes:</a></li>
 </ul>
 </li>
 </ul>
