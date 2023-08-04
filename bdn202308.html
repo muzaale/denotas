@@ -430,6 +430,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bc-sh">872.1. bc.sh</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">872.2. gh.sh</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">872.3. gitlog</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gc-sh">872.4. gc.sh</a></li>
 </ul>
 </li>
 </ul>
@@ -486,16 +487,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Zachary King                  
-2          Matthew Hendrix               
-3          Melanie Miller                
-4          Robert Clark                  
-5          Michelle Bryant               
-6          Susan Reilly                  
-7          Charles Frederick             
-8          Michael Martin                
-9          Joseph Montoya                
-10         Michael Rivas                 
+1          Theresa Shannon               
+2          Amanda Lindsey                
+3          Jacob Webb                    
+4          Kimberly Carter               
+5          Taylor Sandoval               
+6          Terry Galloway                
+7          Jessica Fernandez             
+8          Andrea Ward                   
+9          Anthony Jordan                
+10         Anna Adkins                   
 </pre></div>
 </div>
 </div>
@@ -3782,6 +3783,123 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <li><p>with cherry-pick on top</p></li>
 </ul>
 </section>
+<section id="gc-sh">
+<h3>872.4. <a class="reference external" href="http://gc.sh">gc.sh</a><a class="headerlink" href="#gc-sh" title="Permalink to this heading">#</a></h3>
+<p>correct, but will seasons.docx in canvas have the commit history of seasons.docx in afecdvi/og? that’s my humble plea and goal</p>
+<hr class="docutils" />
+<p>Understood. The answer is no, by using patches or the cherry-picking method described earlier, you will effectively be creating new commits in <code class="docutils literal notranslate"><span class="pre">canvas</span></code> that have the same changes as the original commits in <code class="docutils literal notranslate"><span class="pre">og</span></code>. These new commits will have a different commit hash and won’t directly preserve the original commit messages, dates, or authors.</p>
+<p>However, if you want to <em>literally</em> transfer the entire commit history of <code class="docutils literal notranslate"><span class="pre">seasons.docx</span></code> from <code class="docutils literal notranslate"><span class="pre">afecdvi/og</span></code> to <code class="docutils literal notranslate"><span class="pre">canvas</span></code>, it’s a bit more involved. Here’s a rough outline of one method:</p>
+<ol class="arabic simple">
+<li><p>Create a branch in <code class="docutils literal notranslate"><span class="pre">og</span></code> that contains only the history of <code class="docutils literal notranslate"><span class="pre">seasons.docx</span></code>.</p></li>
+<li><p>Turn that branch into its own standalone repository.</p></li>
+<li><p>Add the new standalone repository as a remote to <code class="docutils literal notranslate"><span class="pre">canvas</span></code>.</p></li>
+<li><p>Fetch and merge the branch from the standalone repository into <code class="docutils literal notranslate"><span class="pre">canvas</span></code>.</p></li>
+</ol>
+<p>Here’s how you can do this:</p>
+<ol class="arabic simple">
+<li><p>In <code class="docutils literal notranslate"><span class="pre">og</span></code>, filter out the history of <code class="docutils literal notranslate"><span class="pre">seasons.docx</span></code>:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>og
+git<span class="w"> </span>checkout<span class="w"> </span>--orphan<span class="w"> </span>temp_branch
+git<span class="w"> </span>add<span class="w"> </span>seasons.docx
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Init seasons.docx&quot;</span>
+git<span class="w"> </span>rebase<span class="w"> </span>--onto<span class="w"> </span>temp_branch<span class="w"> </span>--root<span class="w"> </span>master
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Clean up and turn <code class="docutils literal notranslate"><span class="pre">og</span></code> into a standalone repo for <code class="docutils literal notranslate"><span class="pre">seasons.docx</span></code>:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>gc<span class="w"> </span>--prune<span class="o">=</span>all
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Add the standalone repo as a remote to <code class="docutils literal notranslate"><span class="pre">canvas</span></code> and fetch:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>../canvas
+git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>og_temp<span class="w"> </span>../og
+git<span class="w"> </span>fetch<span class="w"> </span>og_temp
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Merge the history of <code class="docutils literal notranslate"><span class="pre">seasons.docx</span></code> into <code class="docutils literal notranslate"><span class="pre">canvas</span></code>:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>merge<span class="w"> </span>og_temp/master<span class="w"> </span>--allow-unrelated-histories
+</pre></div>
+</div>
+<p>This will preserve the actual commits and their metadata, but it will effectively merge the histories of the two repositories. This is a non-trivial action and may cause issues if other people are also working on <code class="docutils literal notranslate"><span class="pre">canvas</span></code>. Ensure you understand the ramifications and maybe test on a separate branch or repository first.</p>
+<p>If this is what you want, I can help further by creating a script. Let me know.</p>
+<hr class="docutils" />
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="nb">set</span><span class="w"> </span>-e<span class="w">  </span><span class="c1"># Stop on any error</span>
+
+<span class="c1"># Variables</span>
+<span class="nv">OG_REPO</span><span class="o">=</span><span class="s2">&quot;https://github.com/afecdvi/og&quot;</span>
+<span class="nv">CANVAS_REPO</span><span class="o">=</span><span class="s2">&quot;git@github.com:muzaale/canvas&quot;</span>
+<span class="nv">SSH_KEY</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.ssh/id_blankcanvas&quot;</span>
+<span class="nv">FILENAME</span><span class="o">=</span><span class="s2">&quot;seasons.docx&quot;</span>
+<span class="nv">BRANCH_NAME</span><span class="o">=</span><span class="s2">&quot;merge_seasons_docx&quot;</span>
+
+<span class="c1"># Ensure git is installed</span>
+<span class="k">if</span><span class="w"> </span>!<span class="w"> </span><span class="nb">command</span><span class="w"> </span>-v<span class="w"> </span>git<span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;git could not be found. Please install git.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># Set up SSH</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Setting up SSH...&quot;</span>
+<span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="nv">$SSH_KEY</span>
+ssh-add<span class="w"> </span>-D
+ssh-add<span class="w"> </span><span class="nv">$SSH_KEY</span>
+
+<span class="c1"># Navigate to the working directory</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+
+<span class="c1"># Clone the &#39;og&#39; repository</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Cloning &#39;og&#39; repository...&quot;</span>
+rm<span class="w"> </span>-rf<span class="w"> </span>og_temp
+git<span class="w"> </span>clone<span class="w"> </span><span class="nv">$OG_REPO</span><span class="w"> </span>og_temp
+
+<span class="c1"># Navigate to the cloned &#39;og&#39; repository and filter out the history of $FILENAME</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Filtering out the history of </span><span class="nv">$FILENAME</span><span class="s2"> in &#39;og&#39; repository...&quot;</span>
+<span class="nb">cd</span><span class="w"> </span>og_temp
+git<span class="w"> </span>checkout<span class="w"> </span>--orphan<span class="w"> </span>temp_branch
+git<span class="w"> </span>add<span class="w"> </span><span class="nv">$FILENAME</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Init </span><span class="nv">$FILENAME</span><span class="s2">&quot;</span>
+git<span class="w"> </span>rebase<span class="w"> </span>--onto<span class="w"> </span>temp_branch<span class="w"> </span>--root<span class="w"> </span>master
+git<span class="w"> </span>gc<span class="w"> </span>--prune<span class="o">=</span>all
+
+<span class="c1"># Navigate back to the working directory and clone the &#39;canvas&#39; repository if not already cloned</span>
+<span class="nb">cd</span><span class="w"> </span>..
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;canvas&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Cloning &#39;canvas&#39; repository...&quot;</span>
+<span class="w">  </span>git<span class="w"> </span>clone<span class="w"> </span><span class="nv">$CANVAS_REPO</span><span class="w"> </span>canvas
+<span class="k">fi</span>
+
+<span class="c1"># Navigate to the &#39;canvas&#39; repository</span>
+<span class="nb">cd</span><span class="w"> </span>canvas
+
+<span class="c1"># Add the filtered &#39;og&#39; repo as a remote and fetch its commits</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fetching the commits from &#39;og&#39; repository...&quot;</span>
+git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>og_temp<span class="w"> </span>../og_temp
+git<span class="w"> </span>fetch<span class="w"> </span>og_temp
+
+<span class="c1"># Merge the commits into &#39;canvas&#39; repo</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Merging the commits into &#39;canvas&#39; repository...&quot;</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span><span class="nv">$BRANCH_NAME</span>
+git<span class="w"> </span>merge<span class="w"> </span>og_temp/temp_branch<span class="w"> </span>--allow-unrelated-histories
+
+<span class="c1"># Push the changes to the &#39;canvas&#39; repository</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Pushing changes to the &#39;canvas&#39; repository...&quot;</span>
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span><span class="nv">$CANVAS_REPO</span>
+ssh-add<span class="w"> </span><span class="nv">$SSH_KEY</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span><span class="nv">$BRANCH_NAME</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script executed successfully!&quot;</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
@@ -3911,6 +4029,7 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bc-sh">872.1. bc.sh</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">872.2. gh.sh</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">872.3. gitlog</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gc-sh">872.4. gc.sh</a></li>
 </ul>
 </li>
 </ul>
