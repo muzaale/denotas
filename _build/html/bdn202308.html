@@ -469,16 +469,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Maria Carey                   
-2          Elizabeth Holmes              
-3          Andre Chung                   
-4          Paul Schmidt                  
-5          Lisa Macias                   
-6          Andrew Hernandez              
-7          Kenneth Short                 
-8          Katelyn Anderson              
-9          Kayla Davis                   
-10         Roger Murray                  
+1          Dwayne Ashley                 
+2          Jennifer Perez                
+3          John Rose                     
+4          Natalie Watson                
+5          Hannah Aguirre                
+6          Cynthia Thomas                
+7          Alexander Castillo            
+8          Seth Nash                     
+9          Christine Harris              
+10         Michael Nelson                
 </pre></div>
 </div>
 </div>
@@ -3105,11 +3105,12 @@ git<span class="w"> </span>config<span class="w"> </span>http.lowSpeedTime<span 
 </li>
 </ul>
 <ol class="arabic simple">
-<li><p>basic</p></li>
+<li><p>unconditional</p></li>
 </ol>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">clear</span>
 <span class="k">set</span> obs <span class="m">100</span>
 <span class="k">gen</span> x = <span class="nf">runiform</span>()
+<span class="k">display</span> <span class="s">&quot;x is greater than 0.5&quot;</span>
 </pre></div>
 </div>
 <hr class="docutils" />
@@ -3353,6 +3354,17 @@ git<span class="w"> </span>push<span class="w"> </span>
 
 <span class="c1"># Import the built HTML to gh-pages and push to GitHub</span>
 ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+</pre></div>
+</div>
+<p>we were talking of conditional statements</p>
+<p>basic:</p>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">clear</span>
+<span class="k">set</span> obs <span class="m">100</span>
+<span class="k">gen</span> x = <span class="nf">runiform</span>()
+</pre></div>
+</div>
+<p>unconditional:</p>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">display</span> <span class="s">&quot;x is greater than 0.5&quot;</span>
 </pre></div>
 </div>
 </section>

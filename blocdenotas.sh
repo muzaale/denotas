@@ -4,7 +4,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "double-check that this routine works, now with SSH key"
+git commit -m "restore uncondtional syntax for stata class"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
