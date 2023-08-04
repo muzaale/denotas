@@ -422,6 +422,11 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">08/04/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#victory">869. victory</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">githistory.sh</a></li>
 </ul>
 
             </nav>
@@ -474,16 +479,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          George Patrick                
-2          Angela Tucker                 
-3          Samantha Fox                  
-4          Bonnie Sanford                
-5          Charles Jones                 
-6          Samuel Sanford                
-7          Susan Barker                  
-8          Cory Lopez                    
-9          Richard Knox                  
-10         Taylor Wilson                 
+1          James Jones                   
+2          Jessica Carr                  
+3          Carlos Clark                  
+4          Emily Hernandez               
+5          Crystal Stone                 
+6          Adam Garrett                  
+7          Laura Horton                  
+8          Kyle Christensen              
+9          Gloria Russell                
+10         Nicholas Herrera              
 </pre></div>
 </div>
 </div>
@@ -3472,6 +3477,44 @@ mv &quot;$GIT_INDEX_FILE.new&quot; &quot;$GIT_INDEX_FILE&quot;&#39; HEAD
 </section>
 </section>
 </section>
+<section id="id9">
+<h1>08/04/2023<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h1>
+<section id="victory">
+<h2>869. <a class="reference external" href="https://www.youtube.com/watch?v=755whUTJtN4">victory</a><a class="headerlink" href="#victory" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id10">
+<h1><a class="reference external" href="http://githistory.sh">githistory.sh</a><a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h1>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>-rf<span class="w"> </span>og
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/afecdvi/og
+<span class="c1"># 5. then, we need to cd into the repo:</span>
+<span class="nb">cd</span>
+<span class="c1"># 6. then, we need to extract the git commit history of seasons.docx:</span>
+git<span class="w"> </span>log<span class="w"> </span>--pretty<span class="o">=</span>format:<span class="s2">&quot;%h%x09%an%x09%ad%x09%s&quot;</span><span class="w"> </span>--date<span class="o">=</span>short<span class="w"> </span>seasons.docx<span class="w"> </span>&gt;<span class="w"> </span>seasons.docx
+<span class="c1"># 7. then, we need to cd out of the repo:</span>
+<span class="nb">cd</span><span class="w"> </span>..
+<span class="c1"># 8. then, we need to clone the repo:</span>
+git<span class="w"> </span>clone
+<span class="c1"># 9. then, we need to cd into wich repo? the new repo:</span>
+<span class="nb">cd</span><span class="w"> </span>canvas
+<span class="c1"># 10. then, we need to import the git commit history of seasons.docx:</span>
+git<span class="w"> </span>add<span class="w"> </span>seasons.docx
+<span class="c1"># 11. then, we need to commit the git commit history of seasons.docx:</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;seasons.docx&quot;</span>
+<span class="c1"># 12. then, we need to push the git commit history of seasons.docx:</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/id_blankcanvas
+git<span class="w"> </span>remote<span class="w"> </span>-v
+ssh-add<span class="w"> </span>-D
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:muzaale/canvas
+ssh-add<span class="w"> </span>~/.ssh/id_blankcanvas
+git<span class="w"> </span>push
+<span class="c1"># 13. then, we need to cd out of the repo:</span>
+<span class="nb">cd</span><span class="w"> </span>..
+<span class="c1"># 14. then, we need to rm the repo:</span>
+rm<span class="w"> </span>-rf
+</pre></div>
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -3591,6 +3634,11 @@ mv &quot;$GIT_INDEX_FILE.new&quot; &quot;$GIT_INDEX_FILE&quot;&#39; HEAD
 </li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">08/04/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#victory">869. victory</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">githistory.sh</a></li>
 </ul>
 
   </nav></div>
