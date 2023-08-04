@@ -4,7 +4,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "new, combined ./gh.sh"
+git commit -m "workflow 7.0, iteration... 1"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D

@@ -426,6 +426,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#victory">869. victory</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gh-sh">870. gh.sh</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gitlog">871. gitlog</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow7-0">872. workflow7.0</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bc-sh">872.1. bc.sh</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">872.2. gh.sh</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">872.3. gitlog</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -480,16 +486,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Angela Arnold                 
-2          Sheila Curtis                 
-3          Matthew Mclaughlin            
-4          Joseph Brown                  
-5          Peter Campos                  
-6          Shelby Schmidt                
-7          Barbara Cortez                
-8          Tyler Kaufman                 
-9          Thomas Fisher                 
-10         Louis Daniel                  
+1          Zachary King                  
+2          Matthew Hendrix               
+3          Melanie Miller                
+4          Robert Clark                  
+5          Michelle Bryant               
+6          Susan Reilly                  
+7          Charles Frederick             
+8          Michael Martin                
+9          Joseph Montoya                
+10         Michael Rivas                 
 </pre></div>
 </div>
 </div>
@@ -3647,6 +3653,136 @@ Date:<span class="w">   </span>Sat<span class="w"> </span>Jun<span class="w"> </
 </pre></div>
 </div>
 </section>
+<section id="workflow7-0">
+<h2>872. workflow7.0<a class="headerlink" href="#workflow7-0" title="Permalink to this heading">#</a></h2>
+<section id="bc-sh">
+<h3>872.1. <a class="reference external" href="http://bc.sh">bc.sh</a><a class="headerlink" href="#bc-sh" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+<span class="c1"># nano bc.sh</span>
+<span class="c1"># chmod +x bc.sh</span>
+jb<span class="w"> </span>build<span class="w"> </span>blank<span class="w"> </span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/muzaale/canvas
+cp<span class="w"> </span>-r<span class="w"> </span>blank/*<span class="w"> </span>canvas
+<span class="nb">cd</span><span class="w"> </span>canvas
+git<span class="w"> </span>add<span class="w"> </span>./*
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;iteration... 1&quot;</span>
+ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;muzaale@gmail.com&quot;</span>
+/users/d/.ssh/id_blankcanvas
+y
+blank
+blank
+cat<span class="w"> </span>/users/d/.ssh/id_blankcanvas.pub
+<span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+pbcopy<span class="w"> </span>&lt;<span class="w"> </span>~/.ssh/id_blankcanvas.pub
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/id_blankcanvas
+git<span class="w"> </span>remote<span class="w"> </span>-v
+ssh-add<span class="w"> </span>-D
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:muzaale/canvas<span class="w"> </span>
+ssh-add<span class="w"> </span>~/.ssh/id_blankcanvas
+blank
+git<span class="w"> </span>push<span class="w"> </span>
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+<span class="nb">cd</span><span class="w"> </span>..
+./gh.sh<span class="w"> </span>
+</pre></div>
+</div>
+</section>
+<section id="id10">
+<h3>872.2. <a class="reference external" href="http://gh.sh">gh.sh</a><a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span><span class="w"> </span>-e<span class="w">  </span><span class="c1"># Stop on any error</span>
+
+<span class="c1"># Variables</span>
+<span class="nv">OG_REPO</span><span class="o">=</span><span class="s2">&quot;https://github.com/afecdvi/og&quot;</span>
+<span class="nv">CANVAS_REPO</span><span class="o">=</span><span class="s2">&quot;git@github.com:muzaale/canvas&quot;</span>
+<span class="nv">SSH_KEY</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.ssh/id_blankcanvas&quot;</span>
+<span class="nv">FILENAME</span><span class="o">=</span><span class="s2">&quot;seasons.docx&quot;</span>
+<span class="nv">BRANCH_NAME</span><span class="o">=</span><span class="s2">&quot;merge_branch&quot;</span>
+
+<span class="c1"># Ensure git is installed</span>
+<span class="k">if</span><span class="w"> </span>!<span class="w"> </span><span class="nb">command</span><span class="w"> </span>-v<span class="w"> </span>git<span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;git could not be found. Please install git.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># Navigate to the working directory</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+<span class="c1"># mkdir -p workspace_for_merge &amp;&amp; cd workspace_for_merge</span>
+
+<span class="c1"># Set up SSH</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Setting up SSH...&quot;</span>
+<span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="nv">$SSH_KEY</span>
+ssh-add<span class="w"> </span>-D
+ssh-add<span class="w"> </span><span class="nv">$SSH_KEY</span>
+
+<span class="c1"># Clone the &#39;og&#39; repository</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Cloning &#39;og&#39; repository...&quot;</span>
+rm<span class="w"> </span>-rf<span class="w"> </span>og
+git<span class="w"> </span>clone<span class="w"> </span><span class="nv">$OG_REPO</span><span class="w"> </span>og
+
+<span class="c1"># Navigate to the cloned &#39;og&#39; repository to fetch commits related to the desired file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fetching commits related to </span><span class="nv">$FILENAME</span><span class="s2">...&quot;</span>
+<span class="nb">cd</span><span class="w"> </span>og
+<span class="nv">commits_to_cherry_pick</span><span class="o">=</span><span class="k">$(</span>git<span class="w"> </span>log<span class="w"> </span>--reverse<span class="w"> </span>--pretty<span class="o">=</span>format:<span class="s2">&quot;%H&quot;</span><span class="w"> </span>--<span class="w"> </span><span class="nv">$FILENAME</span><span class="k">)</span>
+
+<span class="c1"># Navigate back to the workspace and clone the &#39;canvas&#39; repository if not already cloned</span>
+<span class="nb">cd</span><span class="w"> </span>..
+rm<span class="w"> </span>-rf<span class="w"> </span>canvas
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;canvas&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Cloning &#39;canvas&#39; repository...&quot;</span>
+<span class="w">  </span>git<span class="w"> </span>clone<span class="w"> </span><span class="nv">$CANVAS_REPO</span><span class="w"> </span>canvas
+<span class="k">fi</span>
+
+<span class="c1"># Navigate to the &#39;canvas&#39; repository</span>
+<span class="nb">cd</span><span class="w"> </span>canvas
+
+<span class="c1"># Ensure that we&#39;re on the right branch or create one</span>
+<span class="k">if</span><span class="w"> </span>git<span class="w"> </span>show-ref<span class="w"> </span>--verify<span class="w"> </span>--quiet<span class="w"> </span>refs/heads/<span class="nv">$BRANCH_NAME</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>git<span class="w"> </span>checkout<span class="w"> </span><span class="nv">$BRANCH_NAME</span>
+<span class="k">else</span>
+<span class="w">    </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span><span class="nv">$BRANCH_NAME</span>
+<span class="k">fi</span>
+
+<span class="c1"># Cherry-pick commits related to the desired file into the &#39;canvas&#39; repository</span>
+<span class="k">for</span><span class="w"> </span>commit<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$commits_to_cherry_pick</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="c1"># Cherry-pick each commit</span>
+<span class="w">    </span>git<span class="w"> </span>cherry-pick<span class="w"> </span><span class="nv">$commit</span>
+
+<span class="w">    </span><span class="c1"># Check for conflicts specifically related to the FILENAME</span>
+<span class="w">    </span><span class="nv">CONFLICTS</span><span class="o">=</span><span class="k">$(</span>git<span class="w"> </span>diff<span class="w"> </span>--name-only<span class="w"> </span>--diff-filter<span class="o">=</span>U<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="nv">$FILENAME</span><span class="k">)</span>
+
+<span class="w">    </span><span class="c1"># If there are conflicts in FILENAME</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$CONFLICTS</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Conflict detected in </span><span class="nv">$FILENAME</span><span class="s2">. Please resolve manually.&quot;</span>
+<span class="w">        </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="k">done</span>
+
+<span class="c1"># Push the changes</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Pushing changes to the &#39;canvas&#39; repository...&quot;</span>
+<span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="nv">$SSH_KEY</span>
+ssh-add<span class="w"> </span>-D
+ssh-add<span class="w"> </span><span class="nv">$SSH_KEY</span>
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span><span class="nv">$CANVAS_REPO</span>
+ssh-add<span class="w"> </span><span class="nv">$SSH_KEY</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span><span class="nv">$BRANCH_NAME</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script executed successfully!&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="id11">
+<h3>872.3. gitlog<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>see above</p></li>
+<li><p>make it pretty</p></li>
+<li><p>with cherry-pick on top</p></li>
+</ul>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -3771,6 +3907,12 @@ Date:<span class="w">   </span>Sat<span class="w"> </span>Jun<span class="w"> </
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#victory">869. victory</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gh-sh">870. gh.sh</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gitlog">871. gitlog</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow7-0">872. workflow7.0</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bc-sh">872.1. bc.sh</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">872.2. gh.sh</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">872.3. gitlog</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
