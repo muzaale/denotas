@@ -4,7 +4,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "git log"
+git commit -m "new, combined ./gh.sh"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
