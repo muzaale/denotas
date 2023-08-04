@@ -439,6 +439,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables">1. Tables:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relationships">2. Relationships:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexes">3. Indexes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adversarial-learning">876. adversarial-learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#takeaways">Takeaways:</a></li>
 </ul>
 </li>
 </ul>
@@ -493,16 +495,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Molly Smith                   
-2          Brianna Williams              
-3          Christina English             
-4          Dawn Obrien                   
-5          Gregory Shaw                  
-6          Laura Welch                   
-7          Emma Price                    
-8          Sandra White                  
-9          Lori Munoz                    
-10         Jimmy Castillo                
+1          Chad Kerr                     
+2          Chris Dixon                   
+3          Julie Vasquez                 
+4          Veronica Warren               
+5          Veronica Lopez                
+6          Tammy Crawford                
+7          Zachary Tyler                 
+8          Carol Smith                   
+9          William Brown                 
+10         Laurie Beck                   
 </pre></div>
 </div>
 </div>
@@ -4235,6 +4237,247 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 </ul>
 <p>Always remember to be cautious with handling sensitive information, especially passwords. Always use industry-approved cryptographic methods for storage and transmission.</p>
 </section>
+<section id="adversarial-learning">
+<h2>876. adversarial-learning<a class="headerlink" href="#adversarial-learning" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>User
+brief<span class="w"> </span>schpiel<span class="w"> </span>on<span class="w"> </span>my<span class="w"> </span>gc.sh<span class="w"> </span>file:<span class="w"> </span><span class="c1">#!/bin/bash</span>
+
+<span class="nb">set</span><span class="w"> </span>-e<span class="w">  </span><span class="c1"># Stop on any error</span>
+
+<span class="c1"># Variables</span>
+<span class="nv">OG_REPO</span><span class="o">=</span><span class="s2">&quot;https://github.com/afecdvi/og&quot;</span>
+<span class="nv">CANVAS_REPO</span><span class="o">=</span><span class="s2">&quot;git@github.com:muzaale/canvas&quot;</span>
+<span class="nv">SSH_KEY</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.ssh/id_blankcanvas&quot;</span>
+<span class="nv">FILENAME</span><span class="o">=</span><span class="s2">&quot;seasons.docx&quot;</span>
+<span class="nv">BRANCH_NAME</span><span class="o">=</span><span class="s2">&quot;merge_seasons_docx&quot;</span>
+
+<span class="c1"># Ensure git is installedå</span>
+<span class="k">if</span><span class="w"> </span>!<span class="w"> </span><span class="nb">command</span><span class="w"> </span>-v<span class="w"> </span>git<span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;git could not be found. Please install git.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># Set up SSH</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Setting up SSH...&quot;</span>
+<span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="nv">$SSH_KEY</span>
+ssh-add<span class="w"> </span>-D
+ssh-add<span class="w"> </span><span class="nv">$SSH_KEY</span>
+
+<span class="c1"># Navigate to the working directory</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+
+<span class="c1"># Clone the &#39;og&#39; repository</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Cloning &#39;og&#39; repository...&quot;</span>
+rm<span class="w"> </span>-rf<span class="w"> </span>og_temp
+git<span class="w"> </span>clone<span class="w"> </span><span class="nv">$OG_REPO</span><span class="w"> </span>og_temp
+
+<span class="c1"># Navigate to the cloned &#39;og&#39; repository and filter out the history of $FILENAME</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Filtering out the history of </span><span class="nv">$FILENAME</span><span class="s2"> in &#39;og&#39; repository...&quot;</span>
+<span class="nb">cd</span><span class="w"> </span>og_temp
+git<span class="w"> </span>checkout<span class="w"> </span>--orphan<span class="w"> </span>temp_branch
+git<span class="w"> </span>add<span class="w"> </span><span class="nv">$FILENAME</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Init </span><span class="nv">$FILENAME</span><span class="s2">&quot;</span>
+git<span class="w"> </span>rebase<span class="w"> </span>--onto<span class="w"> </span>temp_branch<span class="w"> </span>--root<span class="w"> </span>master
+git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </span>master
+git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>temp_branch<span class="w"> </span>master
+git<span class="w"> </span>gc<span class="w"> </span>--prune<span class="o">=</span>all
+
+<span class="c1"># Navigate back to the working directory </span>
+<span class="nb">cd</span><span class="w"> </span>..
+
+<span class="c1"># Clone the &#39;canvas&#39; repository if not already cloned</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;canvas&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Cloning &#39;canvas&#39; repository...&quot;</span>
+<span class="w">  </span>git<span class="w"> </span>clone<span class="w"> </span><span class="nv">$CANVAS_REPO</span><span class="w"> </span>canvas
+<span class="k">fi</span>
+
+<span class="c1"># Navigate to the &#39;canvas&#39; repository and set up for the merge</span>
+<span class="nb">cd</span><span class="w"> </span>canvas
+
+<span class="c1"># Add the filtered &#39;og&#39; repo as a remote and fetch its commits</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Fetching the commits from &#39;og&#39; repository...&quot;</span>
+git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>og_temp<span class="w"> </span>../og_temp
+git<span class="w"> </span>fetch<span class="w"> </span>og_temp
+
+<span class="c1"># Ensure you&#39;re on the main branch of canvas before creating a new branch</span>
+git<span class="w"> </span>checkout<span class="w"> </span>main
+
+<span class="c1"># Create a new branch for the merge</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span><span class="nv">$BRANCH_NAME</span>
+
+<span class="c1"># Merge the commits from the &#39;og&#39; repository</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Merging the commits into &#39;canvas&#39; repository...&quot;</span>
+git<span class="w"> </span>merge<span class="w"> </span>og_temp/master<span class="w"> </span>--allow-unrelated-histories
+
+<span class="c1"># Push the new branch to the &#39;canvas&#39; repository</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Pushing changes to the &#39;canvas&#39; repository...&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span><span class="nv">$BRANCH_NAME</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script executed successfully!&quot;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>The provided <code class="docutils literal notranslate"><span class="pre">gc.sh</span></code> script seems to be designed to merge the history of a specific file (<code class="docutils literal notranslate"><span class="pre">seasons.docx</span></code>) from one Git repository (<code class="docutils literal notranslate"><span class="pre">og</span></code>) into another Git repository (<code class="docutils literal notranslate"><span class="pre">canvas</span></code>). Below is a breakdown of what the script does:</p>
+<ol class="arabic simple">
+<li><p><strong>Stop on Any Error</strong>: Using <code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">-e</span></code>, the script will halt if any command fails.</p></li>
+<li><p><strong>Variables</strong>: There are several predefined variables that configure the script:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">OG_REPO</span></code>: The original repository’s URL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CANVAS_REPO</span></code>: The destination repository’s URL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SSH_KEY</span></code>: The SSH key location for Git authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FILENAME</span></code>: The file name to filter from the original repo.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BRANCH_NAME</span></code>: The name of the new branch where the file’s history will be merged into the canvas repository.</p></li>
+</ul>
+</li>
+<li><p><strong>Git Installation Check</strong>: Checks if Git is installed on the machine. If not, it throws an error.</p></li>
+<li><p><strong>Setting up SSH</strong>: Sets up SSH by starting the agent, making sure the provided SSH key is only readable by the owner (for security), and adding the key to the agent.</p></li>
+<li><p><strong>Navigation</strong>: The script then navigates to a specified working directory.</p></li>
+<li><p><strong>Clone and Filter <code class="docutils literal notranslate"><span class="pre">og</span></code> Repository</strong>:</p>
+<ul class="simple">
+<li><p>Clones the original repository into a temporary directory (<code class="docutils literal notranslate"><span class="pre">og_temp</span></code>).</p></li>
+<li><p>Then, it navigates into this temporary directory and uses a combination of Git commands to isolate the history of <code class="docutils literal notranslate"><span class="pre">seasons.docx</span></code> while getting rid of the other files and their histories.</p></li>
+</ul>
+</li>
+<li><p><strong>Clone <code class="docutils literal notranslate"><span class="pre">canvas</span></code> Repository</strong>: If the <code class="docutils literal notranslate"><span class="pre">canvas</span></code> repository hasn’t been cloned yet, it will clone it.</p></li>
+<li><p><strong>Set Up for Merge in <code class="docutils literal notranslate"><span class="pre">canvas</span></code> Repository</strong>:</p>
+<ul class="simple">
+<li><p>Navigates to the <code class="docutils literal notranslate"><span class="pre">canvas</span></code> repo directory.</p></li>
+<li><p>Adds the filtered <code class="docutils literal notranslate"><span class="pre">og_temp</span></code> repo as a remote source.</p></li>
+<li><p>Fetches its commits.</p></li>
+<li><p>Checks out the main branch and creates a new branch (<code class="docutils literal notranslate"><span class="pre">merge_seasons_docx</span></code>).</p></li>
+</ul>
+</li>
+<li><p><strong>Merge</strong>: The script merges the isolated <code class="docutils literal notranslate"><span class="pre">seasons.docx</span></code> history from <code class="docutils literal notranslate"><span class="pre">og_temp</span></code> repository into the new branch of <code class="docutils literal notranslate"><span class="pre">canvas</span></code> repository.</p></li>
+<li><p><strong>Push</strong>: Pushes the changes of the new branch to the remote <code class="docutils literal notranslate"><span class="pre">canvas</span></code> repository.</p></li>
+<li><p><strong>Completion</strong>: A message “Script executed successfully!” is displayed once all the commands are executed without error.</p></li>
+</ol>
+</section>
+<section id="takeaways">
+<h2>Takeaways:<a class="headerlink" href="#takeaways" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Purpose</strong>: The script’s primary purpose is to transplant the history of a specific file from one repository into another repository, maintaining its commit history.</p></li>
+<li><p><strong>Usability</strong>: The script is well-structured with echo statements which guide the user through its steps, making it user-friendly.</p></li>
+<li><p><strong>Security</strong>: The script uses SSH for Git operations. Make sure that the provided SSH key has the right permissions on GitHub or whichever platform hosts the repositories.</p></li>
+<li><p><strong>Precautions</strong>: The script makes several changes that are hard or impossible to revert, like force cloning over directories and altering Git history. It’s always a good practice to backup your repositories before running such scripts.</p></li>
+</ul>
+<hr class="docutils" />
+<p>how would you improve <a class="reference external" href="http://gc.sh">gc.sh</a>? my work directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">d</span><span class="nd">@Poseidon</span> <span class="mf">1.</span><span class="n">ontology</span> <span class="o">%</span> <span class="n">pwd</span>
+<span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">d</span><span class="o">/</span><span class="n">dropbox</span><span class="o">/</span><span class="mi">1</span><span class="n">f</span><span class="o">.</span><span class="n">ἡἔρις</span><span class="p">,</span><span class="n">κ</span><span class="o">/</span><span class="mf">1.</span><span class="n">ontology</span>
+<span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">d</span><span class="nd">@Poseidon</span> <span class="mf">1.</span><span class="n">ontology</span> <span class="o">%</span> <span class="n">ls</span> <span class="o">-</span><span class="n">l</span>
+<span class="n">total</span> <span class="mi">24</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--@</span>   <span class="mi">1</span> <span class="n">d</span>  <span class="n">staff</span>   <span class="mi">601</span> <span class="n">Aug</span>  <span class="mi">4</span> <span class="mi">08</span><span class="p">:</span><span class="mi">06</span> <span class="n">bc</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span>  <span class="mi">21</span> <span class="n">d</span>  <span class="n">staff</span>   <span class="mi">672</span> <span class="n">Aug</span>  <span class="mi">4</span> <span class="mi">00</span><span class="p">:</span><span class="mi">38</span> <span class="n">blank</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span> <span class="mi">276</span> <span class="n">d</span>  <span class="n">staff</span>  <span class="mi">8832</span> <span class="n">Aug</span>  <span class="mi">3</span> <span class="mi">15</span><span class="p">:</span><span class="mi">54</span> <span class="n">bloc</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span>  <span class="mi">22</span> <span class="n">d</span>  <span class="n">staff</span>   <span class="mi">704</span> <span class="n">Aug</span>  <span class="mi">4</span> <span class="mi">08</span><span class="p">:</span><span class="mi">16</span> <span class="n">canvas</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span> <span class="mi">280</span> <span class="n">d</span>  <span class="n">staff</span>  <span class="mi">8960</span> <span class="n">Aug</span>  <span class="mi">3</span> <span class="mi">18</span><span class="p">:</span><span class="mi">46</span> <span class="n">denotas</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span>  <span class="mi">15</span> <span class="n">d</span>  <span class="n">staff</span>   <span class="mi">480</span> <span class="n">Aug</span>  <span class="mi">1</span> <span class="mi">14</span><span class="p">:</span><span class="mi">43</span> <span class="n">fenagas</span>
+<span class="o">-</span><span class="n">rwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span>   <span class="mi">1</span> <span class="n">d</span>  <span class="n">staff</span>  <span class="mi">1952</span> <span class="n">Aug</span>  <span class="mi">4</span> <span class="mi">08</span><span class="p">:</span><span class="mi">41</span> <span class="n">gc</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">-</span><span class="n">rwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span>   <span class="mi">1</span> <span class="n">d</span>  <span class="n">staff</span>  <span class="mi">1952</span> <span class="n">Aug</span>  <span class="mi">4</span> <span class="mi">08</span><span class="p">:</span><span class="mi">41</span> <span class="n">gh</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span>  <span class="mi">29</span> <span class="n">d</span>  <span class="n">staff</span>   <span class="mi">928</span> <span class="n">Jul</span> <span class="mi">20</span> <span class="mi">20</span><span class="p">:</span><span class="mi">26</span> <span class="n">libro</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span> <span class="mi">144</span> <span class="n">d</span>  <span class="n">staff</span>  <span class="mi">4608</span> <span class="n">Jun</span> <span class="mi">23</span> <span class="mi">23</span><span class="p">:</span><span class="mi">20</span> <span class="n">livre</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span>  <span class="mi">14</span> <span class="n">d</span>  <span class="n">staff</span>   <span class="mi">448</span> <span class="n">Aug</span>  <span class="mi">4</span> <span class="mi">09</span><span class="p">:</span><span class="mi">47</span> <span class="n">llc</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span>  <span class="mi">20</span> <span class="n">d</span>  <span class="n">staff</span>   <span class="mi">640</span> <span class="n">Aug</span>  <span class="mi">2</span> <span class="mi">13</span><span class="p">:</span><span class="mi">18</span> <span class="n">mb</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span>  <span class="mi">22</span> <span class="n">d</span>  <span class="n">staff</span>   <span class="mi">704</span> <span class="n">Aug</span>  <span class="mi">4</span> <span class="mi">08</span><span class="p">:</span><span class="mi">16</span> <span class="n">og</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span>  <span class="mi">15</span> <span class="n">d</span>  <span class="n">staff</span>   <span class="mi">480</span> <span class="n">Jul</span> <span class="mi">31</span> <span class="mi">01</span><span class="p">:</span><span class="mi">05</span> <span class="n">repos</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span>  <span class="mi">18</span> <span class="n">d</span>  <span class="n">staff</span>   <span class="mi">576</span> <span class="n">Jul</span> <span class="mi">18</span> <span class="mi">10</span><span class="p">:</span><span class="mi">57</span> <span class="n">spring</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span> <span class="mi">139</span> <span class="n">d</span>  <span class="n">staff</span>  <span class="mi">4448</span> <span class="n">Jun</span> <span class="mi">25</span> <span class="mi">08</span><span class="p">:</span><span class="mi">29</span> <span class="n">summer</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span>  <span class="mi">14</span> <span class="n">d</span>  <span class="n">staff</span>   <span class="mi">448</span> <span class="n">Jul</span> <span class="mi">31</span> <span class="mi">06</span><span class="p">:</span><span class="mi">24</span> <span class="n">track</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span><span class="o">@</span>  <span class="mi">25</span> <span class="n">d</span>  <span class="n">staff</span>   <span class="mi">800</span> <span class="n">Jul</span> <span class="mi">20</span> <span class="mi">20</span><span class="p">:</span><span class="mi">21</span> <span class="n">verano</span>
+<span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="n">d</span><span class="nd">@Poseidon</span> <span class="mf">1.</span><span class="n">ontology</span> <span class="o">%</span> 
+
+
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Given the structure of the current <code class="docutils literal notranslate"><span class="pre">gc.sh</span></code> script and the layout of your working directory, here are some improvements you can consider:</p>
+<ol class="arabic simple">
+<li><p><strong>Parameterization</strong>: Instead of hardcoding values in the script, accept them as arguments. This makes your script more versatile. For instance, if you need to merge a different file or branch in the future, you can easily do that without modifying the script.</p></li>
+<li><p><strong>Error Handling</strong>: Improve error handling. For instance, ensure directories exist before navigating into them and handle the case where they don’t.</p></li>
+<li><p><strong>Consistent Directory Naming</strong>: Instead of hardcoding directory names like “canvas” and “og_temp”, consider using consistent naming or even generating temporary directory names to avoid any clashes or unintentional overwrites.</p></li>
+<li><p><strong>Check Existing Remotes</strong>: Before adding a new remote, check if it already exists to avoid errors.</p></li>
+<li><p><strong>Cleanup</strong>: At the end of your script, consider cleaning up any temporary changes, like removing temporary directories or remotes.</p></li>
+<li><p><strong>Logging</strong>: Introduce logging so you can troubleshoot or verify actions later on.</p></li>
+<li><p><strong>Comments</strong>: While your script is quite self-explanatory, especially with the echo commands, adding comments for complex operations can aid future readers or yourself when revisiting the script.</p></li>
+<li><p><strong>Avoid Hard Exit</strong>: Instead of directly exiting the script when a certain condition isn’t met, consider printing a warning and then proceed with the rest of the script or provide alternatives.</p></li>
+</ol>
+<p>Here’s a revised version of the script with some of these suggestions implemented:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="nb">set</span><span class="w"> </span>-e<span class="w">  </span><span class="c1"># Stop on any error</span>
+
+<span class="c1"># Variables</span>
+<span class="nv">OG_REPO</span><span class="o">=</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="s2">&quot;https://github.com/afecdvi/og&quot;</span><span class="si">}</span>
+<span class="nv">CANVAS_REPO</span><span class="o">=</span><span class="si">${</span><span class="nv">2</span><span class="k">:-</span><span class="s2">&quot;git@github.com:muzaale/canvas&quot;</span><span class="si">}</span>
+<span class="nv">SSH_KEY</span><span class="o">=</span><span class="si">${</span><span class="nv">3</span><span class="k">:-</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.ssh/id_blankcanvas&quot;</span><span class="si">}</span>
+<span class="nv">FILENAME</span><span class="o">=</span><span class="si">${</span><span class="nv">4</span><span class="k">:-</span><span class="s2">&quot;seasons.docx&quot;</span><span class="si">}</span>
+<span class="nv">BRANCH_NAME</span><span class="o">=</span><span class="si">${</span><span class="nv">5</span><span class="k">:-</span><span class="s2">&quot;merge_seasons_docx&quot;</span><span class="si">}</span>
+
+<span class="c1"># Ensure git is installed</span>
+<span class="k">if</span><span class="w"> </span>!<span class="w"> </span><span class="nb">command</span><span class="w"> </span>-v<span class="w"> </span>git<span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;WARNING: git could not be found. Please install git.&quot;</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="c1"># Set up SSH</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Setting up SSH...&quot;</span>
+<span class="w">    </span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+<span class="w">    </span>chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="nv">$SSH_KEY</span>
+<span class="w">    </span>ssh-add<span class="w"> </span>-D
+<span class="w">    </span>ssh-add<span class="w"> </span><span class="nv">$SSH_KEY</span>
+
+<span class="w">    </span><span class="c1"># Navigate to the working directory</span>
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+
+<span class="w">    </span><span class="c1"># Clone the &#39;og&#39; repository</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Cloning &#39;og&#39; repository...&quot;</span>
+<span class="w">    </span><span class="nv">TEMP_DIR</span><span class="o">=</span><span class="s2">&quot;og_temp_</span><span class="k">$(</span>date<span class="w"> </span>+%s<span class="k">)</span><span class="s2">&quot;</span>
+<span class="w">    </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$TEMP_DIR</span>
+<span class="w">    </span>git<span class="w"> </span>clone<span class="w"> </span><span class="nv">$OG_REPO</span><span class="w"> </span><span class="nv">$TEMP_DIR</span>
+
+<span class="w">    </span><span class="c1"># Filter out the history of $FILENAME</span>
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$TEMP_DIR</span>
+<span class="w">    </span>git<span class="w"> </span>checkout<span class="w"> </span>--orphan<span class="w"> </span>temp_branch
+<span class="w">    </span>git<span class="w"> </span>add<span class="w"> </span><span class="nv">$FILENAME</span>
+<span class="w">    </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Init </span><span class="nv">$FILENAME</span><span class="s2">&quot;</span>
+<span class="w">    </span>git<span class="w"> </span>rebase<span class="w"> </span>--onto<span class="w"> </span>temp_branch<span class="w"> </span>--root<span class="w"> </span>master
+<span class="w">    </span>git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </span>master
+<span class="w">    </span>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>temp_branch<span class="w"> </span>master
+<span class="w">    </span>git<span class="w"> </span>gc<span class="w"> </span>--prune<span class="o">=</span>all
+
+<span class="w">    </span><span class="c1"># Navigate back to the working directory </span>
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>..
+
+<span class="w">    </span><span class="c1"># Clone the &#39;canvas&#39; repository if not already cloned</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;canvas&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Cloning &#39;canvas&#39; repository...&quot;</span>
+<span class="w">        </span>git<span class="w"> </span>clone<span class="w"> </span><span class="nv">$CANVAS_REPO</span><span class="w"> </span>canvas
+<span class="w">    </span><span class="k">fi</span>
+
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>canvas
+
+<span class="w">    </span><span class="c1"># Add the filtered &#39;og&#39; repo as a remote and fetch its commits</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-q<span class="w"> </span><span class="s2">&quot;og_temp&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">        </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>og_temp<span class="w"> </span>../<span class="nv">$TEMP_DIR</span>
+<span class="w">    </span><span class="k">fi</span>
+<span class="w">    </span>git<span class="w"> </span>fetch<span class="w"> </span>og_temp
+
+<span class="w">    </span>git<span class="w"> </span>checkout<span class="w"> </span>main
+<span class="w">    </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span><span class="nv">$BRANCH_NAME</span>
+<span class="w">    </span>git<span class="w"> </span>merge<span class="w"> </span>og_temp/master<span class="w"> </span>--allow-unrelated-histories
+
+<span class="w">    </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span><span class="nv">$BRANCH_NAME</span>
+
+<span class="w">    </span><span class="c1"># Cleanup</span>
+<span class="w">    </span>git<span class="w"> </span>remote<span class="w"> </span>remove<span class="w"> </span>og_temp
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>..
+<span class="w">    </span>rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$TEMP_DIR</span>
+<span class="k">fi</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script executed successfully!&quot;</span>
+</pre></div>
+</div>
+<p>Remember, the changes above are illustrative. Your actual requirements and constraints will dictate which changes make sense and which don’t. Always back up your data before running modified scripts or other operations.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -4372,6 +4615,8 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables">1. Tables:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relationships">2. Relationships:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexes">3. Indexes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adversarial-learning">876. adversarial-learning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#takeaways">Takeaways:</a></li>
 </ul>
 </li>
 </ul>
