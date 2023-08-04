@@ -424,6 +424,7 @@ document.write(`
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">08/04/2023</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#victory">869. victory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gh-sh">870. gh.sh</a></li>
 </ul>
 </li>
 </ul>
@@ -478,16 +479,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          David Rios                    
-2          Amanda Chavez                 
-3          Rebecca Adams                 
-4          Thomas Simmons                
-5          Kelly Mcfarland               
-6          Ashley Cooper                 
-7          Brian Jackson                 
-8          Crystal Nichols               
-9          Gregory Evans                 
-10         Richard Spencer               
+1          Kathleen Gomez                
+2          Stephen Baker                 
+3          Karen Ruiz                    
+4          Andrew Gross                  
+5          Nathaniel Dunn                
+6          Christopher Olson             
+7          Gregory Melendez              
+8          John Cain                     
+9          Brianna Boyer                 
+10         Anthony Johnson               
 </pre></div>
 </div>
 </div>
@@ -3482,6 +3483,8 @@ mv &quot;$GIT_INDEX_FILE.new&quot; &quot;$GIT_INDEX_FILE&quot;&#39; HEAD
 <h2>869. <a class="reference external" href="https://www.youtube.com/watch?v=755whUTJtN4">victory</a><a class="headerlink" href="#victory" title="Permalink to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+
 <span class="c1"># Ensure the script stops on first error</span>
 <span class="nb">set</span><span class="w"> </span>-e
 
@@ -3523,6 +3526,104 @@ rm<span class="w"> </span>../og/seasons.docx.patch
 rm<span class="w"> </span>-rf<span class="w"> </span>og
 
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Migration completed successfully!&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="gh-sh">
+<h2>870. <a class="reference external" href="http://gh.sh">gh.sh</a><a class="headerlink" href="#gh-sh" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span><span class="w"> </span>-e<span class="w">  </span><span class="c1"># Stop on any error</span>
+
+<span class="c1"># Variables</span>
+<span class="nv">OG_REPO</span><span class="o">=</span><span class="s2">&quot;https://github.com/afecdvi/og&quot;</span>
+<span class="nv">CANVAS_REPO</span><span class="o">=</span><span class="s2">&quot;git@github.com:muzaale/canvas&quot;</span>
+<span class="nv">SSH_KEY</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.ssh/id_blankcanvas&quot;</span>
+<span class="nv">FILENAME</span><span class="o">=</span><span class="s2">&quot;seasons.docx&quot;</span>
+<span class="nv">BRANCH_NAME</span><span class="o">=</span><span class="s2">&quot;merge_branch&quot;</span>
+
+<span class="c1"># Ensure git is installed</span>
+<span class="k">if</span><span class="w"> </span>!<span class="w"> </span><span class="nb">command</span><span class="w"> </span>-v<span class="w"> </span>git<span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;git could not be found. Please install git.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># Navigate to the working directory</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>workspace_for_merge<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>workspace_for_merge
+
+<span class="c1"># Set up SSH</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Setting up SSH...&quot;</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="nv">$SSH_KEY</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;SSH key not found. Exiting.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+<span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="nv">$SSH_KEY</span>
+ssh-add<span class="w"> </span>-D
+ssh-add<span class="w"> </span><span class="nv">$SSH_KEY</span>
+
+<span class="c1"># Clone the &#39;og&#39; repository</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Cloning &#39;og&#39; repository...&quot;</span>
+git<span class="w"> </span>clone<span class="w"> </span><span class="nv">$OG_REPO</span><span class="w"> </span>og-repo
+
+<span class="c1"># Navigate to the cloned &#39;og&#39; repository</span>
+<span class="nb">cd</span><span class="w"> </span>og-repo
+
+<span class="c1"># Fetch all branches</span>
+git<span class="w"> </span>fetch<span class="w"> </span>--all
+
+<span class="c1"># Cherry-pick commits related to the desired file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Cherry-picking commits related to </span><span class="nv">$FILENAME</span><span class="s2">...&quot;</span>
+<span class="k">for</span><span class="w"> </span>commit<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>git<span class="w"> </span>log<span class="w"> </span>--grep<span class="o">=</span><span class="s2">&quot;send this version to fawaz for review&quot;</span><span class="w"> </span>--grep<span class="o">=</span><span class="s2">&quot;1. jon synder added as co-author&quot;</span><span class="w"> </span>--grep<span class="o">=</span><span class="s2">&quot;Feedback from Abi on 07/25/2023&quot;</span><span class="w"> </span>--grep<span class="o">=</span><span class="s2">&quot;first &amp; a half substantive edit of preface, hub/papers, seasons_*.docx&quot;</span><span class="w"> </span>--pretty<span class="o">=</span>format:<span class="s2">&quot;%H&quot;</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>git<span class="w"> </span>cherry-pick<span class="w"> </span><span class="nv">$commit</span>
+<span class="k">done</span>
+
+<span class="c1"># Clone the &#39;canvas&#39; repository if not already cloned</span>
+<span class="nb">cd</span><span class="w"> </span>..
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;canvas-repo&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Cloning &#39;canvas&#39; repository...&quot;</span>
+<span class="w">  </span>git<span class="w"> </span>clone<span class="w"> </span><span class="nv">$CANVAS_REPO</span><span class="w"> </span>canvas-repo
+<span class="k">fi</span>
+
+<span class="c1"># Navigate to the &#39;canvas&#39; repository</span>
+<span class="nb">cd</span><span class="w"> </span>canvas-repo
+
+<span class="c1"># Ensure that we&#39;re on the right branch or create one</span>
+<span class="k">if</span><span class="w"> </span>git<span class="w"> </span>show-ref<span class="w"> </span>--verify<span class="w"> </span>--quiet<span class="w"> </span>refs/heads/<span class="nv">$BRANCH_NAME</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>git<span class="w"> </span>checkout<span class="w"> </span><span class="nv">$BRANCH_NAME</span>
+<span class="k">else</span>
+<span class="w">    </span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span><span class="nv">$BRANCH_NAME</span>
+<span class="k">fi</span>
+
+<span class="c1"># Cherry-pick the changes from the &#39;og&#39; repository</span>
+<span class="k">for</span><span class="w"> </span>commit<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span><span class="nb">cd</span><span class="w"> </span>../og-repo<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--grep<span class="o">=</span><span class="s2">&quot;send this version to fawaz for review&quot;</span><span class="w"> </span>--grep<span class="o">=</span><span class="s2">&quot;1. jon synder added as co-author&quot;</span><span class="w"> </span>--grep<span class="o">=</span><span class="s2">&quot;Feedback from Abi on 07/25/2023&quot;</span><span class="w"> </span>--grep<span class="o">=</span><span class="s2">&quot;first &amp; a half substantive edit of preface, hub/papers, seasons_*.docx&quot;</span><span class="w"> </span>--pretty<span class="o">=</span>format:<span class="s2">&quot;%H&quot;</span><span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>git<span class="w"> </span>cherry-pick<span class="w"> </span>--signoff<span class="w"> </span><span class="nv">$commit</span>
+<span class="k">done</span>
+
+<span class="c1"># Check for conflicts</span>
+<span class="nv">CONFLICTS</span><span class="o">=</span><span class="k">$(</span>git<span class="w"> </span>diff<span class="w"> </span>--name-only<span class="w"> </span>--diff-filter<span class="o">=</span>U<span class="k">)</span>
+
+<span class="c1"># If there are conflicts</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$CONFLICTS</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$CONFLICTS</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="c1"># For binary files, use your version</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*.pickle<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*.doctree<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*.buildinfo<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Resolving binary file conflict in </span><span class="nv">$file</span><span class="s2"> using local version...&quot;</span>
+<span class="w">            </span>git<span class="w"> </span>checkout<span class="w"> </span>--ours<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="w">            </span>git<span class="w"> </span>add<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="w">        </span><span class="k">else</span>
+<span class="w">            </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Textual conflict detected in </span><span class="nv">$file</span><span class="s2">. Please resolve manually.&quot;</span>
+<span class="w">            </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">        </span><span class="k">fi</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="w">    </span><span class="c1"># Commit the resolved conflicts</span>
+<span class="w">    </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Resolved merge conflicts&quot;</span>
+<span class="k">fi</span>
+
+<span class="c1"># Push the changes</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Pushing changes to the &#39;canvas&#39; repository...&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span><span class="nv">$BRANCH_NAME</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script executed successfully! Please check the &#39;canvas&#39; repository for any unexpected changes or issues.&quot;</span>
 </pre></div>
 </div>
 </section>
@@ -3648,6 +3749,7 @@ rm<span class="w"> </span>-rf<span class="w"> </span>og
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">08/04/2023</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#victory">869. victory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gh-sh">870. gh.sh</a></li>
 </ul>
 </li>
 </ul>

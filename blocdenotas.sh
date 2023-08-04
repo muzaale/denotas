@@ -4,7 +4,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "moving .git history"
+git commit -m "moving .git history, take30 -- kept me up all night on 08/03-08/04"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
