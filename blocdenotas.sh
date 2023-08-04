@@ -37,7 +37,7 @@ git commit -m "automate updates to denotas, with default SSH key"
 git remote set-url origin git@github.com:muzaale/denotas
 
 # Push changes to GitHub
-git push 
+git push origin main
 
 # Import the built HTML to gh-pages and push to GitHub
 ghp-import -n -p -f _build/html
