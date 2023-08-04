@@ -414,6 +414,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bloc-blocdenotas-sh">864. bloc/blocdenotas.sh</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">865. bloc/blocdenotas.sh</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mb-og">866. mb/og</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refine">867. refine</a></li>
 </ul>
 </li>
 </ul>
@@ -468,16 +469,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Mason Rios                    
-2          Jason Osborne                 
-3          Jessica Ferguson              
-4          Elizabeth King                
-5          Sarah White                   
-6          Jessica Huynh                 
-7          Jermaine Gates                
-8          Emily Crawford                
-9          Donald Keller                 
-10         John Smith                    
+1          Lisa Scott                    
+2          Craig Wilson                  
+3          Valerie Evans                 
+4          Randy Shelton                 
+5          David Miller                  
+6          Nicholas Martinez             
+7          Jessica Stanley               
+8          Stephen Martinez              
+9          Amy Thompson                  
+10         Laura James                   
 </pre></div>
 </div>
 </div>
@@ -3300,6 +3301,59 @@ Identity added: /Users/d/.ssh/id_mbog (afecdvi@gmail.com)
 </div>
 </aside>
 </section>
+<section id="refine">
+<h2>867. refine<a class="headerlink" href="#refine" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>workflow 6.0</p></li>
+<li><p>default ssh key</p></li>
+<li><p>lets try this again</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Default SSH Key path</span>
+<span class="nv">DEFAULT_SSH_KEY_PATH</span><span class="o">=</span><span class="s2">&quot;~/.ssh/id_blocdenotas&quot;</span>
+
+<span class="c1"># Prompt user for the path to their private SSH key</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter the path to your private SSH key [default: </span><span class="nv">$DEFAULT_SSH_KEY_PATH</span><span class="s2">]: &quot;</span><span class="w"> </span>SSH_KEY_PATH
+
+<span class="c1"># If user doesn&#39;t input anything, use the default</span>
+<span class="nv">SSH_KEY_PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">SSH_KEY_PATH</span><span class="k">:-</span><span class="nv">$DEFAULT_SSH_KEY_PATH</span><span class="si">}</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_KEY_PATH</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Error: SSH key not found at </span><span class="nv">$SSH_KEY_PATH</span><span class="s2">.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1"># Use the specified SSH key for git operations in this script</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">GIT_SSH_COMMAND</span><span class="o">=</span><span class="s2">&quot;ssh -i </span><span class="nv">$SSH_KEY_PATH</span><span class="s2">&quot;</span>
+
+<span class="c1"># Change directory to ~/dropbox/1f.ἡἔρις,κ/1.ontology</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+
+<span class="c1"># Build Jupyter Book with &#39;gano&#39; as the argument</span>
+jb<span class="w"> </span>build<span class="w"> </span>bloc
+cp<span class="w"> </span>-r<span class="w"> </span>bloc/*<span class="w"> </span>denotas
+
+<span class="c1"># Change directory to &#39;denotas&#39;</span>
+<span class="nb">cd</span><span class="w"> </span>denotas
+
+<span class="c1"># Add all files in the current directory to Git</span>
+git<span class="w"> </span>add<span class="w"> </span>./*
+
+<span class="c1"># Commit changes to Git with the given commit message</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;automate updates to denotas&quot;</span>
+
+<span class="c1"># Ensure using the SSH URL for the repository</span>
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:muzaale/denotas
+
+<span class="c1"># Push changes to GitHub</span>
+git<span class="w"> </span>push<span class="w"> </span>
+
+<span class="c1"># Import the built HTML to gh-pages and push to GitHub</span>
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -3412,6 +3466,7 @@ Identity added: /Users/d/.ssh/id_mbog (afecdvi@gmail.com)
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bloc-blocdenotas-sh">864. bloc/blocdenotas.sh</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">865. bloc/blocdenotas.sh</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mb-og">866. mb/og</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refine">867. refine</a></li>
 </ul>
 </li>
 </ul>

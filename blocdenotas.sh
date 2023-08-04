@@ -1,24 +1,26 @@
 #!/bin/bash
 
-# Ask the user for the path to the SSH key
-read -p "Please provide the path to your SSH key (e.g. ~/.ssh/id_blocdenotas): " SSH_KEY_PATH
+# Default SSH Key path
+DEFAULT_SSH_KEY_PATH="/users/d/.ssh/id_blocdenotas"
 
-# If no input is provided, exit the script
-if [[ -z "$SSH_KEY_PATH" ]]; then
-    echo "No SSH key provided. Exiting."
-    exit 1
-fi
+# Prompt user for the path to their private SSH key
+read -p "Enter the path to your private SSH key [default: $DEFAULT_SSH_KEY_PATH]: " SSH_KEY_PATH
 
-# Check if the SSH key exists
+# If user doesn't input anything, use the default
+SSH_KEY_PATH=${SSH_KEY_PATH:-$DEFAULT_SSH_KEY_PATH}
+
 if [[ ! -f "$SSH_KEY_PATH" ]]; then
-    echo "The provided SSH key does not exist. Exiting."
+    echo "Error: SSH key not found at $SSH_KEY_PATH."
     exit 1
 fi
+
+# Use the specified SSH key for git operations in this script
+export GIT_SSH_COMMAND="ssh -i $SSH_KEY_PATH"
 
 # Change directory to ~/dropbox/1f.ἡἔρις,κ/1.ontology
 cd ~/dropbox/1f.ἡἔρις,κ/1.ontology
 
-# Build Jupyter Book
+# Build Jupyter Book with 'gano' as the argument
 jb build bloc
 cp -r bloc/* denotas
 
@@ -29,19 +31,13 @@ cd denotas
 git add ./*
 
 # Commit changes to Git with the given commit message
-git commit -m "introducing SSH keys, take3"
-
-# Use the provided SSH key for the upcoming Git commands
-export GIT_SSH_COMMAND="ssh -i $SSH_KEY_PATH"
+git commit -m "automate updates to denotas, with default SSH key"
 
 # Ensure using the SSH URL for the repository
-git remote set-url origin git@github.com:muzaale/denotas.git
+git remote set-url origin git@github.com:muzaale/denotas
 
 # Push changes to GitHub
-git push origin main
+git push 
 
 # Import the built HTML to gh-pages and push to GitHub
 ghp-import -n -p -f _build/html
-
-# Unset the custom GIT_SSH_COMMAND to avoid affecting other git operations
-unset GIT_SSH_COMMAND
