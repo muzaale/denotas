@@ -445,6 +445,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onemoreiteration">878. onemoreiteration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alpha-beta">879. alpha-beta</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory">880. directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">881. intro</a></li>
 </ul>
 </li>
 </ul>
@@ -499,16 +500,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Meghan Edwards                
-2          Sandra Hernandez              
-3          Gregory Rogers                
-4          Kimberly Barber               
-5          Justin Mendez                 
-6          Mark Giles                    
-7          Jennifer Ramsey               
-8          Nicholas Anderson             
-9          Sherry Taylor                 
-10         Daniel Moreno                 
+1          Michelle Bailey               
+2          John Ruiz                     
+3          Katie Preston                 
+4          Robert Jones                  
+5          Michael Gould                 
+6          Dalton Solis                  
+7          Jill Ramirez                  
+8          Michael Taylor                
+9          Amanda Maxwell                
+10         Glen Clark                    
 </pre></div>
 </div>
 </div>
@@ -1995,12 +1996,11 @@ touch<span class="w"> </span><span class="s2">&quot;three40/dramatispersonae/col
 <h3>846.3. _toc.yaml<a class="headerlink" href="#toc-yaml" title="Permalink to this heading">#</a></h3>
 <div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>format: jb-book
 root: intro.ipynb
-title: Fenagas
+title: Play
 
 parts:
-- caption: Root
+- caption: 
   chapters:
-  - file: intro.ipynb
   - file: prologue.ipynb
 
 - caption: Act I
@@ -2060,86 +2060,76 @@ parts:
   - file: Gas &amp; Spoke/gas_3.ipynb
 
 - caption: Courses
-  chapters:  
+  chapters: 
   - url: https://publichealth.jhu.edu/courses
     title: Stata Programming 
-  - file: dramatispersonae/high_school_students/high_school_students.ipynb
-    chapters:
-    - file: dramatispersonae/high_school_students/high_school_students_1.ipynb
-    - file: dramatispersonae/high_school_students/high_school_students_2.ipynb
-    - file: dramatispersonae/high_school_students/high_school_students_3.ipynb
-    - file: dramatispersonae/high_school_students/high_school_students_4.ipynb
-    - file: dramatispersonae/high_school_students/high_school_students_5.ipynb
-  - file: dramatispersonae/undergraduates/undergraduates.ipynb
-    chapters:
-    - file: dramatispersonae/undergraduates/undergraduates_1.ipynb
-    - file: dramatispersonae/undergraduates/undergraduates_2.ipynb
-    - file: dramatispersonae/undergraduates/undergraduates_3.ipynb
-    - file: dramatispersonae/undergraduates/undergraduates_4.ipynb
-    - file: dramatispersonae/undergraduates/undergraduates_5.ipynb
-  - file: dramatispersonae/graduate_students/graduate_students.ipynb
-    chapters:
-    - file: dramatispersonae/graduate_students/graduate_students_1.ipynb
-    - file: dramatispersonae/graduate_students/graduate_students_2.ipynb
-    - file: dramatispersonae/graduate_students/graduate_students_3.ipynb
-    - file: dramatispersonae/graduate_students/graduate_students_4.ipynb
-    - file: dramatispersonae/graduate_students/graduate_students_5.ipynb
-  - file: dramatispersonae/medical_students/medical_students.ipynb
-    chapters:
-    - file: dramatispersonae/medical_students/medical_students_1.ipynb
-    - file: dramatispersonae/medical_students/medical_students_2.ipynb
-    - file: dramatispersonae/medical_students/medical_students_3.ipynb
-    - file: dramatispersonae/medical_students/medical_students_4.ipynb
-    - file: dramatispersonae/medical_students/medical_students_5.ipynb
-  - file: dramatispersonae/residents/residents.ipynb
-    chapters:
-    - file: dramatispersonae/residents/residents_1.ipynb
-    - file: dramatispersonae/residents/residents_2.ipynb
-    - file: dramatispersonae/residents/residents_3.ipynb
-    - file: dramatispersonae/residents/residents_4.ipynb
-    - file: dramatispersonae/residents/residents_5.ipynb
-  - file: dramatispersonae/fellows/fellows.ipynb
-    chapters:
-    - file: dramatispersonae/fellows/fellows_1.ipynb
-    - file: dramatispersonae/fellows/fellows_2.ipynb
-    - file: dramatispersonae/fellows/fellows_3.ipynb
-    - file: dramatispersonae/fellows/fellows_4.ipynb
-    - file: dramatispersonae/fellows/fellows_5.ipynb
-  - file: dramatispersonae/faculty/faculty.ipynb
-    chapters:
-    - file: dramatispersonae/faculty/faculty_1.ipynb
-    - file: dramatispersonae/faculty/faculty_2.ipynb
-    - file: dramatispersonae/faculty/faculty_3.ipynb
-    - file: dramatispersonae/faculty/faculty_4.ipynb
-    - file: dramatispersonae/faculty/faculty_5.ipynb
-  - file: dramatispersonae/analysts/analysts.ipynb
-    chapters:
-    - file: dramatispersonae/analysts/analysts_1.ipynb
-    - file: dramatispersonae/analysts/analysts_2.ipynb
-    - file: dramatispersonae/analysts/analysts_3.ipynb
-    - file: dramatispersonae/analysts/analysts_4.ipynb
-    - file: dramatispersonae/analysts/analysts_5.ipynb
-  - file: dramatispersonae/staff/staff.ipynb
-    chapters:
-    - file: dramatispersonae/staff/staff_1.ipynb
-    - file: dramatispersonae/staff/staff_2.ipynb
-    - file: dramatispersonae/staff/staff_3.ipynb
-    - file: dramatispersonae/staff/staff_4.ipynb
-    - file: dramatispersonae/staff/staff_5.ipynb
-  - file: dramatispersonae/collaborators/collaborators.ipynb
-    chapters:
-    - file: dramatispersonae/collaborators/collaborators_1.ipynb
-    - file: dramatispersonae/collaborators/collaborators_2.ipynb
-    - file: dramatispersonae/collaborators/collaborators_3.ipynb
-    - file: dramatispersonae/collaborators/collaborators_4.ipynb
-    - file: dramatispersonae/collaborators/collaborators_5.ipynb
-  - file: dramatispersonae/graduates/graduates.ipynb
-    chapters:
-    - file: dramatispersonae/graduates/graduates_1.ipynb
-    - file: dramatispersonae/graduates/graduates_2.ipynb
-    - file: dramatispersonae/graduates/graduates_3.ipynb
-    - file: dramatispersonae/graduates/graduates_4.ipynb
-    - file: dramatispersonae/graduates/graduates_5.ipynb
+  - file: dramatis_personae/high_school_students/high_school_students.ipynb
+  - file: dramatis_personae/high_school_students/high_school_students_1.ipynb
+  - file: dramatis_personae/high_school_students/high_school_students_2.ipynb
+  - file: dramatis_personae/high_school_students/high_school_students_3.ipynb
+  - file: dramatis_personae/high_school_students/high_school_students_4.ipynb
+  - file: dramatis_personae/high_school_students/high_school_students_5.ipynb
+  - file: dramatis_personae/under_grads/under_grads.ipynb
+  - file: dramatis_personae/under_grads/under_grads_1.ipynb
+  - file: dramatis_personae/under_grads/under_grads_2.ipynb
+  - file: dramatis_personae/under_grads/under_grads_3.ipynb
+  - file: dramatis_personae/under_grads/under_grads_4.ipynb
+  - file: dramatis_personae/under_grads/under_grads_5.ipynb
+  - file: dramatis_personae/grad_students/grad_students.ipynb
+  - file: dramatis_personae/grad_students_1/grad_students_1.ipynb
+  - file: dramatis_personae/grad_students_2/grad_students_2.ipynb
+  - file: dramatis_personae/grad_students_3/grad_students_3.ipynb
+  - file: dramatis_personae/grad_students_4/grad_students_4.ipynb
+  - file: dramatis_personae/grad_students_5/grad_students_5.ipynb
+  - file: dramatis_personae/medical_students/medical_students.ipynb
+  - file: dramatis_personae/medical_students/medical_students_1.ipynb
+  - file: dramatis_personae/medical_students/medical_students_2.ipynb
+  - file: dramatis_personae/medical_students/medical_students_3.ipynb
+  - file: dramatis_personae/medical_students/medical_students_4.ipynb
+  - file: dramatis_personae/medical_students/medical_students_5.ipynb
+  - file: dramatis_personae/residents/residents.ipynb
+  - file: dramatis_personae/residents/residents_1.ipynb
+  - file: dramatis_personae/residents/residents_2.ipynb
+  - file: dramatis_personae/residents/residents_3.ipynb
+  - file: dramatis_personae/residents/residents_4.ipynb
+  - file: dramatis_personae/residents/residents_5.ipynb
+  - file: dramatis_personae/fellows/fellows.ipynb
+  - file: dramatis_personae/fellows/fellows_1.ipynb
+  - file: dramatis_personae/fellows/fellows_2.ipynb
+  - file: dramatis_personae/fellows/fellows_3.ipynb
+  - file: dramatis_personae/fellows/fellows_4.ipynb
+  - file: dramatis_personae/fellows/fellows_5.ipynb
+  - file: dramatis_personae/faculty/faculty.ipynb
+  - file: dramatis_personae/faculty/faculty_1.ipynb
+  - file: dramatis_personae/faculty/faculty_2.ipynb
+  - file: dramatis_personae/faculty/faculty_3.ipynb
+  - file: dramatis_personae/faculty/faculty_4.ipynb
+  - file: dramatis_personae/faculty/faculty_5.ipynb
+  - file: dramatis_personae/analysts/analysts.ipynb
+  - file: dramatis_personae/analysts/analysts_1.ipynb
+  - file: dramatis_personae/analysts/analysts_2.ipynb
+  - file: dramatis_personae/analysts/analysts_3.ipynb
+  - file: dramatis_personae/analysts/analysts_4.ipynb
+  - file: dramatis_personae/analysts/analysts_5.ipynb
+  - file: dramatis_personae/staff/staff.ipynb
+  - file: dramatis_personae/staff/staff_1.ipynb
+  - file: dramatis_personae/staff/staff_2.ipynb
+  - file: dramatis_personae/staff/staff_3.ipynb
+  - file: dramatis_personae/staff/staff_4.ipynb
+  - file: dramatis_personae/staff/staff_5.ipynb
+  - file: dramatis_personae/collaborators/collaborators.ipynb
+  - file: dramatis_personae/collaborators/collaborators_1.ipynb
+  - file: dramatis_personae/collaborators/collaborators_2.ipynb
+  - file: dramatis_personae/collaborators/collaborators_3.ipynb
+  - file: dramatis_personae/collaborators/collaborators_4.ipynb
+  - file: dramatis_personae/collaborators/collaborators_5.ipynb
+  - file: dramatis_personae/graduates/graduates.ipynb
+  - file: dramatis_personae/graduates/graduates_1.ipynb
+  - file: dramatis_personae/graduates/graduates_2.ipynb
+  - file: dramatis_personae/graduates/graduates_3.ipynb
+  - file: dramatis_personae/graduates/graduates_4.ipynb
+  - file: dramatis_personae/graduates/graduates_5.ipynb
+
 
 </pre></div>
 </div>
@@ -4688,6 +4678,15 @@ drwxr-xr-x@<span class="w"> </span><span class="m">12</span><span class="w"> </s
 </pre></div>
 </div>
 </section>
+<section id="intro">
+<h2>881. <a class="reference external" href="https://jhutrc.github.io/beta/intro.html">intro</a><a class="headerlink" href="#intro" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple" start="51">
+<li><p>populate directories</p></li>
+<li><p>alpha/alphabeta.sh</p></li>
+<li><p>fix image paths</p></li>
+<li><p>.ipynb per dpersonae</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -4831,6 +4830,7 @@ drwxr-xr-x@<span class="w"> </span><span class="m">12</span><span class="w"> </s
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#onemoreiteration">878. onemoreiteration</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alpha-beta">879. alpha-beta</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory">880. directory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">881. intro</a></li>
 </ul>
 </li>
 </ul>
