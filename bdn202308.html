@@ -479,16 +479,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          James Jones                   
-2          Jessica Carr                  
-3          Carlos Clark                  
-4          Emily Hernandez               
-5          Crystal Stone                 
-6          Adam Garrett                  
-7          Laura Horton                  
-8          Kyle Christensen              
-9          Gloria Russell                
-10         Nicholas Herrera              
+1          Catherine Porter              
+2          Steven Huynh                  
+3          Amy Wilson                    
+4          Eddie Martin                  
+5          Mark Flores                   
+6          Brad Warren                   
+7          David Barnes                  
+8          Lisa Townsend                 
+9          Matthew Diaz                  
+10         Lisa Hernandez                
 </pre></div>
 </div>
 </div>
@@ -3485,33 +3485,43 @@ mv &quot;$GIT_INDEX_FILE.new&quot; &quot;$GIT_INDEX_FILE&quot;&#39; HEAD
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="id10">
 <h1><a class="reference external" href="http://githistory.sh">githistory.sh</a><a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h1>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>-rf<span class="w"> </span>og
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># 1. Remove the &quot;og&quot; directory</span>
+rm<span class="w"> </span>-rf<span class="w"> </span>og
+
+<span class="c1"># 2. Clone the &quot;og&quot; repository</span>
 git<span class="w"> </span>clone<span class="w"> </span>https://github.com/afecdvi/og
-<span class="c1"># 5. then, we need to cd into the repo:</span>
-<span class="nb">cd</span>
-<span class="c1"># 6. then, we need to extract the git commit history of seasons.docx:</span>
-git<span class="w"> </span>log<span class="w"> </span>--pretty<span class="o">=</span>format:<span class="s2">&quot;%h%x09%an%x09%ad%x09%s&quot;</span><span class="w"> </span>--date<span class="o">=</span>short<span class="w"> </span>seasons.docx<span class="w"> </span>&gt;<span class="w"> </span>seasons.docx
-<span class="c1"># 7. then, we need to cd out of the repo:</span>
+
+<span class="c1"># 3. Change directory to &quot;og&quot; and extract git commit history of seasons.docx</span>
+<span class="nb">cd</span><span class="w"> </span>og
+git<span class="w"> </span>log<span class="w"> </span>--pretty<span class="o">=</span>format:<span class="s2">&quot;%h%x09%an%x09%ad%x09%s&quot;</span><span class="w"> </span>--date<span class="o">=</span>short<span class="w"> </span>seasons.docx<span class="w"> </span>&gt;<span class="w"> </span>seasons.docx.log
+
+<span class="c1"># 4. Change directory back to the parent directory</span>
 <span class="nb">cd</span><span class="w"> </span>..
-<span class="c1"># 8. then, we need to clone the repo:</span>
-git<span class="w"> </span>clone
-<span class="c1"># 9. then, we need to cd into wich repo? the new repo:</span>
+
+<span class="c1"># 5. Clone a new repository </span>
+rm<span class="w"> </span>-rf<span class="w"> </span>canvas<span class="w"> </span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/muzaale/canvas
+
+<span class="c1"># 6. Copy seasons.docx.log to &quot;canvas&quot; repo, add, commit and setup for SSH push</span>
 <span class="nb">cd</span><span class="w"> </span>canvas
-<span class="c1"># 10. then, we need to import the git commit history of seasons.docx:</span>
-git<span class="w"> </span>add<span class="w"> </span>seasons.docx
-<span class="c1"># 11. then, we need to commit the git commit history of seasons.docx:</span>
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;seasons.docx&quot;</span>
-<span class="c1"># 12. then, we need to push the git commit history of seasons.docx:</span>
+cp<span class="w"> </span>../og/seasons.docx.log<span class="w"> </span>.
+git<span class="w"> </span>add<span class="w"> </span>seasons.docx.log
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add seasons.docx log, take 2: co-pilot + chatGPT&quot;</span>
+
+<span class="c1"># Set up SSH for secure push</span>
 chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/id_blankcanvas
-git<span class="w"> </span>remote<span class="w"> </span>-v
 ssh-add<span class="w"> </span>-D
 git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:muzaale/canvas
 ssh-add<span class="w"> </span>~/.ssh/id_blankcanvas
 git<span class="w"> </span>push
-<span class="c1"># 13. then, we need to cd out of the repo:</span>
+
+<span class="c1"># 7. Change directory back to parent and remove &quot;og&quot; (or &quot;canvas&quot; if you prefer)</span>
 <span class="nb">cd</span><span class="w"> </span>..
-<span class="c1"># 14. then, we need to rm the repo:</span>
-rm<span class="w"> </span>-rf
+rm<span class="w"> </span>-rf<span class="w"> </span>og
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script execution completed!&quot;</span>
 </pre></div>
 </div>
 </section>
