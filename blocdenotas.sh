@@ -4,11 +4,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "### 881. 51. populate directories
-52. alpha/alphabeta.sh
-53. fix image paths
-54. .ipynb per dpersonae
-55. _toc.yml bugs"
+git commit -m "### 882. tidy summary of fena"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
