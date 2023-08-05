@@ -4,7 +4,11 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "what exactly is the cost of a superlong commit message? lets find out: .. ok. its complicated. anyway, this is a test commit. "
+git commit -m "### 884. ip.sh
+
+- this signals an inflection point in human history
+- so I am going to call it `ip.sh`
+- `chmod +x ip.sh`"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D

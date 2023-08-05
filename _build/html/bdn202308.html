@@ -453,6 +453,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calvin">881. Calvin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-8-1">882. workflow 8.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-8-2">883. workflow 8.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh">884. ip.sh</a></li>
 </ul>
 </li>
 </ul>
@@ -507,16 +508,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Melissa Powell                
-2          Pamela Boyer                  
-3          Brian Mcpherson               
-4          Christina Daugherty           
-5          Michele Rodriguez             
-6          Brianna Owen                  
-7          Robert Simmons                
-8          Chelsea Cox                   
-9          Rebecca Romero                
-10         Kim Russell                   
+1          Shannon Williams              
+2          Virginia Walker               
+3          Michele Garcia                
+4          Danielle Donaldson            
+5          Robyn Nielsen                 
+6          Savannah Wells                
+7          Ian Kelly                     
+8          Jacob Hughes                  
+9          Daniel Rubio                  
+10         Katherine Johnson             
 </pre></div>
 </div>
 </div>
@@ -5457,6 +5458,86 @@ touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$roo
 </div>
 <p>All the above are 100% suggestions from <code class="docutils literal notranslate"><span class="pre">Fena</span></code> and <code class="docutils literal notranslate"><span class="pre">CoPilot</span></code>. I have no idea what I am doing. (The last statement is <code class="docutils literal notranslate"><span class="pre">100%</span></code> from me. – no… from <code class="docutils literal notranslate"><span class="pre">CoPilot</span></code>)</p>
 </section>
+<section id="ip-sh">
+<h2>884. <a class="reference external" href="http://ip.sh">ip.sh</a><a class="headerlink" href="#ip-sh" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>this signals an inflection point in human history</p></li>
+<li><p>so I am going to call it <code class="docutils literal notranslate"><span class="pre">ip.sh</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">ip.sh</span></code></p></li>
+</ul>
+<p>Certainly! I apologize for the confusion. Below is a complete and continuous script, combining everything you need to create directories, files, authentication keys, and push HTML content to the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch of your repository.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Set up directories and paths</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology/
+<span class="nv">root_dir</span><span class="o">=</span><span class="s2">&quot;be&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$root_dir</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$root_dir</span>
+
+<span class="c1"># Generate a new SSH key (replace with your email)</span>
+ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;muzaale@gmail.com&quot;</span><span class="w"> </span>-f<span class="w"> </span>~/.ssh/id_trackrepos
+
+<span class="c1"># Start the ssh-agent and add the key</span>
+<span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+ssh-add<span class="w"> </span>~/.ssh/id_trackrepos
+
+<span class="c1"># Copy the public key to your clipboard</span>
+pbcopy<span class="w"> </span>&lt;<span class="w"> </span>~/.ssh/id_trackrepos.pub
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;SSH public key copied to clipboard. Please add it to your GitHub account&#39;s SSH keys.&quot;</span>
+
+<span class="c1"># Define arrays for acts and the number of files for each act</span>
+<span class="nv">acts</span><span class="o">=(</span><span class="s2">&quot;be_0&quot;</span><span class="w"> </span><span class="s2">&quot;be_1&quot;</span><span class="w"> </span><span class="s2">&quot;be_2&quot;</span><span class="w"> </span><span class="s2">&quot;be_3&quot;</span><span class="w"> </span><span class="s2">&quot;be_4&quot;</span><span class="w"> </span><span class="s2">&quot;be_5&quot;</span><span class="w"> </span><span class="s2">&quot;be_6&quot;</span><span class="o">)</span>
+<span class="nv">act_files</span><span class="o">=(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">8</span><span class="o">)</span>
+
+<span class="c1"># Create Act directories and their corresponding files</span>
+<span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="si">${#</span><span class="nv">acts</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>i++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">acts</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">j</span><span class="o">=</span><span class="m">1</span><span class="p">;</span><span class="w"> </span>j&lt;<span class="o">=</span><span class="si">${</span><span class="nv">act_files</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>j++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span>touch<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">acts</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">/be_i</span><span class="k">$((</span><span class="nv">$i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span><span class="s2">_</span><span class="nv">$j</span><span class="s2">.ipynb&quot;</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="c1"># Create _toc.yml file</span>
+<span class="nv">toc_file</span><span class="o">=</span><span class="s2">&quot;_toc.yml&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+
+<span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="si">${#</span><span class="nv">acts</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>i++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;- part: Part </span><span class="k">$((</span><span class="nv">$i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  chapters:&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">j</span><span class="o">=</span><span class="m">1</span><span class="p">;</span><span class="w"> </span>j&lt;<span class="o">=</span><span class="si">${</span><span class="nv">act_files</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>j++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;    - file: </span><span class="si">${</span><span class="nv">acts</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">/be_i</span><span class="k">$((</span><span class="nv">$i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span><span class="s2">_</span><span class="nv">$j</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="c1"># Create __config.yml file</span>
+<span class="nv">config_file</span><span class="o">=</span><span class="s2">&quot;__config.yml&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;title: Your Book Title&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$config_file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;author: Your Name&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$config_file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;logo: logo.png&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$config_file</span>
+
+<span class="c1"># Build the book with Jupyter Book</span>
+jupyter-book<span class="w"> </span>build<span class="w"> </span>.
+
+<span class="c1"># Clone the repository</span>
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:muzaale/fe.git<span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology/fe
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology/fe
+
+<span class="c1"># Create or switch to the gh-pages branch</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>gh-pages
+
+<span class="c1"># Copy the HTML files from the build directory to the repository</span>
+cp<span class="w"> </span>-r<span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology/be/_build/html/*<span class="w"> </span>.
+
+<span class="c1"># Add, commit, and push changes to GitHub</span>
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;0.0 Update Jupyter Book content&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>gh-pages
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Jupyter Book content updated and pushed to muzaale/fe repository!&quot;</span>
+</pre></div>
+</div>
+<p>You can save this script as a <code class="docutils literal notranslate"><span class="pre">.sh</span></code> file and run it using <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">yourscript.sh</span></code>. Make sure to follow the printed instruction to add the SSH public key to your GitHub account. Ensure that the necessary tools like <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code>, <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code>, <code class="docutils literal notranslate"><span class="pre">pbcopy</span></code>, and <code class="docutils literal notranslate"><span class="pre">git</span></code> are installed on your system.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -5608,6 +5689,7 @@ touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$roo
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calvin">881. Calvin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-8-1">882. workflow 8.1</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-8-2">883. workflow 8.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh">884. ip.sh</a></li>
 </ul>
 </li>
 </ul>
