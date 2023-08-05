@@ -4,7 +4,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "great workflows emerging... "
+git commit -m "what exactly is the cost of a superlong commit message? lets find out: .. ok. its complicated. anyway, this is a test commit. "
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
