@@ -4,11 +4,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "### 884. ip.sh
-
-- this signals an inflection point in human history
-- so I am going to call it `ip.sh`
-- `chmod +x ip.sh`"
+git commit -m "### 885. ip.sh-i2"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
