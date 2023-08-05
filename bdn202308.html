@@ -459,6 +459,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-i4">887. ip.sh-i4</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-i6">888. ip.sh-i6</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-spjd">889. ip.sh-spjd</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spjdworkflow">890. spjdworkflow</a></li>
 </ul>
 </li>
 </ul>
@@ -513,16 +514,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Amanda Rodriguez              
-2          Christopher Sullivan          
-3          Kelsey Bradford               
-4          Laura Williams                
-5          Andrew Casey                  
-6          Aaron Benson                  
-7          Barbara Ortiz                 
-8          James Hill                    
-9          Tanya Phillips                
-10         Micheal King                  
+1          Harry Knapp                   
+2          Tommy Smith                   
+3          Nicole Clements               
+4          Angela Copeland               
+5          Darlene Wheeler               
+6          Jonathan Wallace              
+7          Jessica Bean                  
+8          Ian Marks                     
+9          Jimmy Jones                   
+10         Samantha Ruiz                 
 </pre></div>
 </div>
 </div>
@@ -6128,6 +6129,60 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 </div>
 <p>This script will prompt the user to enter their GitHub username, repository name, and email address, and then it will proceed to use those values throughout the script. Make sure that the user has appropriate permissions to the repository, and that the repository exists on GitHub.</p>
 </section>
+<section id="spjdworkflow">
+<h2>890. spjdworkflow<a class="headerlink" href="#spjdworkflow" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Input GitHub username, repository, and email address</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your GitHub username: &quot;</span><span class="w"> </span>GITHUB_USERNAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your GitHub repository name: &quot;</span><span class="w"> </span>REPO_NAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your email address: &quot;</span><span class="w"> </span>EMAIL_ADDRESS
+
+<span class="c1"># Set up directories and paths</span>
+<span class="nb">cd</span><span class="w"> </span>~/Dropbox/1f.ἡἔρις,κ/1.ontology/
+<span class="nv">root_dir</span><span class="o">=</span><span class="s2">&quot;be&quot;</span>
+
+<span class="c1"># mkdir -p $root_dir</span>
+<span class="c1"># cd $root_dir</span>
+
+<span class="c1"># Create the intro.ipynb file from populate_be.ipynb</span>
+<span class="c1"># cp ~/Dropbox/1f.ἡἔρις,κ/1.ontology/populate_be.ipynb intro.ipynb</span>
+
+<span class="c1"># Check if SSH keys already exist, and if not, generate a new one</span>
+<span class="c1"># SSH_KEY_PATH=&quot;$HOME/.ssh/id_befe&quot;</span>
+<span class="c1"># if [ ! -f &quot;$SSH_KEY_PATH&quot; ]; then</span>
+<span class="c1">#   ssh-keygen -t ed25519 -C &quot;$EMAIL_ADDRESS&quot; -f ~/.ssh/id_befe</span>
+<span class="c1">#   cat ~/.ssh/id_befe.pub</span>
+<span class="c1">#   eval &quot;$(ssh-agent -s)&quot;</span>
+<span class="c1">#   ssh-add ~/.ssh/id_befe</span>
+<span class="c1">#   pbcopy &lt; ~/.ssh/id_befe.pub</span>
+<span class="c1">#   echo &quot;SSH public key copied to clipboard. Please add it to your GitHub account&#39;s SSH keys.&quot;</span>
+<span class="c1"># else</span>
+<span class="c1">#   echo &quot;SSH keys already exist for this repository. Skipping key generation.&quot;</span>
+<span class="c1"># fi</span>
+
+<span class="c1"># ... rest of the code is unchanged ...</span>
+
+<span class="c1"># Build the book with Jupyter Book</span>
+<span class="c1"># cd ..</span>
+jb<span class="w"> </span>build<span class="w"> </span><span class="nv">$root_dir</span>
+<span class="c1"># git clone &quot;https://github.com/$GITHUB_USERNAME/$REPO_NAME&quot;</span>
+cp<span class="w"> </span>-r<span class="w"> </span>be/*<span class="w"> </span><span class="nv">$REPO_NAME</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$REPO_NAME</span>
+git<span class="w"> </span>add<span class="w"> </span>./*
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;spjd workflow&quot;</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/id_befe
+git<span class="w"> </span>remote<span class="w"> </span>-v
+ssh-add<span class="w"> </span>-D
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span><span class="s2">&quot;git@github.com:</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2">&quot;</span>
+ssh-add<span class="w"> </span>~/.ssh/id_befe
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Jupyter Book content updated and pushed to </span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2"> repository!&quot;</span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -6285,6 +6340,7 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-i4">887. ip.sh-i4</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-i6">888. ip.sh-i6</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-spjd">889. ip.sh-spjd</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spjdworkflow">890. spjdworkflow</a></li>
 </ul>
 </li>
 </ul>
