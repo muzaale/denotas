@@ -4,7 +4,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "the sweet in sweet chilli-fried whole jerk snapper!!"
+git commit -m "game changer workflow: ### 882"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D

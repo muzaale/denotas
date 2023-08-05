@@ -448,6 +448,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">881. intro</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">08/05/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-8-0">882. workflow 8.0</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -500,16 +504,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Ashley Mann                   
-2          Dylan Taylor                  
-3          Brett Mooney                  
-4          Casey Becker                  
-5          Savannah Gross                
-6          Kathy Wilkinson               
-7          Megan Nielsen                 
-8          Donald Oliver                 
-9          Michelle Ward                 
-10         Kevin Harding                 
+1          John Clark                    
+2          Julia Scott                   
+3          Brian Parker                  
+4          Tiffany Long                  
+5          John Bernard                  
+6          Rebecca Phillips              
+7          Maria Zuniga                  
+8          Eric Smith                    
+9          Emily Thomas                  
+10         Elizabeth Johnson             
 </pre></div>
 </div>
 </div>
@@ -5209,6 +5213,54 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 <hr class="docutils" />
 </section>
 </section>
+<section id="id12">
+<h1>08/05/2023<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h1>
+<section id="workflow-8-0">
+<h2>882. workflow 8.0<a class="headerlink" href="#workflow-8-0" title="Permalink to this heading">#</a></h2>
+<p>I see, you’d like to automate the creation of a directory and file structure based on some predefined parameters, such as the number of acts, the number of files in each act, and the categories under “dramatispersonae”.</p>
+<p>You can make your script more generic and less manual by using loops and arrays to generate these structures. Here’s a simplified version:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+<span class="nv">root_dir</span><span class="o">=</span><span class="s2">&quot;alpha&quot;</span>
+<span class="nv">acts</span><span class="o">=(</span><span class="w"> </span><span class="s2">&quot;Act I&quot;</span><span class="w"> </span><span class="s2">&quot;Act II&quot;</span><span class="w"> </span><span class="s2">&quot;Act III&quot;</span><span class="w"> </span><span class="s2">&quot;Act IV&quot;</span><span class="w"> </span><span class="s2">&quot;Act V&quot;</span><span class="w"> </span><span class="o">)</span>
+<span class="nv">act_files</span><span class="o">=(</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="c1"># change these values according to the number of files in each act</span>
+<span class="nv">branches</span><span class="o">=(</span><span class="w"> </span><span class="s2">&quot;high_school_students&quot;</span><span class="w"> </span><span class="s2">&quot;undergraduates&quot;</span><span class="w"> </span><span class="s2">&quot;graduates&quot;</span><span class="w"> </span><span class="s2">&quot;medical_students&quot;</span><span class="w"> </span><span class="s2">&quot;residents&quot;</span><span class="w"> </span><span class="s2">&quot;fellows&quot;</span><span class="w"> </span><span class="s2">&quot;faculty&quot;</span><span class="w"> </span><span class="s2">&quot;analysts&quot;</span><span class="w"> </span><span class="s2">&quot;staff&quot;</span><span class="w"> </span><span class="s2">&quot;collaborators&quot;</span><span class="w"> </span><span class="o">)</span>
+
+<span class="c1"># Create the root directory</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$root_dir</span>
+
+<span class="c1"># Create intro.ipynb and prologue.ipynb</span>
+touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$root_dir</span><span class="s2">/intro.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$root_dir</span><span class="s2">/prologue.ipynb&quot;</span>
+
+<span class="c1"># Create Act directories and their files</span>
+<span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="si">${#</span><span class="nv">acts</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>i++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nv">act_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$root_dir</span><span class="s2">/</span><span class="si">${</span><span class="nv">acts</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$act_dir</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">j</span><span class="o">=</span><span class="m">1</span><span class="p">;</span><span class="w"> </span>j&lt;<span class="o">=</span><span class="si">${</span><span class="nv">act_files</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>j++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span>touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$act_dir</span><span class="s2">/act</span><span class="si">${</span><span class="nv">i</span><span class="p">+1</span><span class="si">}</span><span class="s2">_</span><span class="nv">$j</span><span class="s2">.ipynb&quot;</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="c1"># Create the dramatispersonae directories and their files</span>
+<span class="k">for</span><span class="w"> </span>branch<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">branches</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">1</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="o">=</span><span class="m">5</span><span class="p">;</span><span class="w"> </span>i++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="nv">sub_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$root_dir</span><span class="s2">/dramatispersonae/</span><span class="nv">$branch</span><span class="s2">/</span><span class="si">${</span><span class="nv">branch</span><span class="si">}</span><span class="s2">_</span><span class="nv">$i</span><span class="s2">&quot;</span>
+<span class="w">        </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$sub_dir</span>
+<span class="w">        </span>touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$sub_dir</span><span class="s2">/</span><span class="si">${</span><span class="nv">branch</span><span class="si">}</span><span class="s2">_</span><span class="nv">$i</span><span class="s2">.ipynb&quot;</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="c1"># additional directories and files can be generated following similar pattern</span>
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>With this script, if you need to change the number of files in each Act, or add/remove Acts, or add/remove branches, you just need to modify the corresponding array at the top of the script, rather than adding/removing lines for each file/directory.</p>
+<p>Please note that you’ll need to add additional lines for other folders like “Epilogue”, “Git &amp; Spoke”, “Courses”, etc., following similar pattern to the “Act” folders or the “dramatispersonae” folders as appropriate.</p>
+<p>I tried to cover the main points in your script and simplify the logic for those parts. If you have some more specific requirements, let me know and I can help you adjust the script.</p>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -5352,6 +5404,10 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alpha-beta">879. alpha-beta</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory">880. directory</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intro">881. intro</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">08/05/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-8-0">882. workflow 8.0</a></li>
 </ul>
 </li>
 </ul>
