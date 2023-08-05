@@ -452,6 +452,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-8-0">882. workflow 8.0</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calvin">881. Calvin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-8-1">882. workflow 8.1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-8-2">883. workflow 8.2</a></li>
 </ul>
 </li>
 </ul>
@@ -506,16 +507,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Dustin Ward                   
-2          Kimberly Lewis                
-3          Tommy Rivera                  
-4          Anthony Little                
-5          Charles Graham                
-6          Andrew Hart                   
-7          Scott Meyer                   
-8          Tamara Hill                   
-9          Brian Parker                  
-10         Anthony Jordan                
+1          Melissa Powell                
+2          Pamela Boyer                  
+3          Brian Mcpherson               
+4          Christina Daugherty           
+5          Michele Rodriguez             
+6          Brianna Owen                  
+7          Robert Simmons                
+8          Chelsea Cox                   
+9          Rebecca Romero                
+10         Kim Russell                   
 </pre></div>
 </div>
 </div>
@@ -5321,6 +5322,141 @@ touch<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</
 </pre></div>
 </div>
 </section>
+<section id="workflow-8-2">
+<h2>883. workflow 8.2<a class="headerlink" href="#workflow-8-2" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># inflection point!</span>
+<span class="c1"># chmod +x ip.sh</span>
+<span class="c1"># folders appeared in parent directory</span>
+<span class="c1"># this should be fixed to be in the ./be/ directory</span>
+<span class="nb">cd</span><span class="w"> </span>~/dropbox/1f.ἡἔρις,κ/1.ontology
+<span class="nv">root_dir</span><span class="o">=</span><span class="s2">&quot;be&quot;</span>
+<span class="nv">acts</span><span class="o">=(</span><span class="w"> </span><span class="s2">&quot;be_0&quot;</span><span class="w"> </span><span class="s2">&quot;be_1&quot;</span><span class="w"> </span><span class="s2">&quot;be_2&quot;</span><span class="w"> </span><span class="s2">&quot;be_3&quot;</span><span class="w"> </span><span class="s2">&quot;be_4&quot;</span><span class="w"> </span><span class="s2">&quot;be_5&quot;</span><span class="w"> </span><span class="s2">&quot;be_6&quot;</span><span class="o">)</span>
+<span class="nv">act_files</span><span class="o">=(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">8</span><span class="o">)</span><span class="w"> </span><span class="c1"># change these values according to the number of files in each act</span>
+<span class="c1"># dramatis_personae=( &quot;dp_1&quot; &quot;dp_2&quot; &quot;dp_3&quot; &quot;dp_4&quot; &quot;dp_5&quot; &quot;dp_6&quot; &quot;dp_7&quot; &quot;dp_8&quot; &quot;dp_9&quot;)</span>
+
+<span class="c1"># Create the root directory</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$root_dir</span>
+<span class="c1"># cd $root_dir</span>
+
+<span class="c1"># Create intro.ipynb and prologue.ipynb</span>
+touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$root_dir</span><span class="s2">/be_0_0.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$root_dir</span><span class="s2">/be_0_1.ipynb&quot;</span>
+
+<span class="c1"># Create Act directories and their files</span>
+<span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="si">${#</span><span class="nv">acts</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>i++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nv">act_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$root_dir</span><span class="s2">/</span><span class="si">${</span><span class="nv">acts</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$act_dir</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">j</span><span class="o">=</span><span class="m">1</span><span class="p">;</span><span class="w"> </span>j&lt;<span class="o">=</span><span class="si">${</span><span class="nv">act_files</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>j++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span>touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$act_dir</span><span class="s2">/be_i</span><span class="si">${</span><span class="nv">i</span><span class="p">+1</span><span class="si">}</span><span class="s2">_</span><span class="nv">$j</span><span class="s2">.ipynb&quot;</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="c1"># Create the dramatispersonae directories and their files</span>
+<span class="k">for</span><span class="w"> </span>branch<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">branches</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">1</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="o">=</span><span class="m">5</span><span class="p">;</span><span class="w"> </span>i++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="nv">sub_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$root_dir</span><span class="s2">/dp/</span><span class="nv">$branch</span><span class="s2">/</span><span class="si">${</span><span class="nv">branch</span><span class="si">}</span><span class="s2">_</span><span class="nv">$i</span><span class="s2">&quot;</span>
+<span class="w">        </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$sub_dir</span>
+<span class="w">        </span>touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$sub_dir</span><span class="s2">/</span><span class="si">${</span><span class="nv">branch</span><span class="si">}</span><span class="s2">_</span><span class="nv">$i</span><span class="s2">.ipynb&quot;</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="c1"># additional directories and files can be generated following similar pattern</span>
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>Herein we populate an empty directory with the following structure:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>be
+├──<span class="w"> </span>be_0
+│<span class="w">   </span>├──<span class="w"> </span>be_0_0.ipynb
+│<span class="w">   </span>└──<span class="w"> </span>be_0_1.ipynb
+├──<span class="w"> </span>be_1
+│<span class="w">   </span>├──<span class="w"> </span>be_i1_1.ipynb
+│<span class="w">   </span>├──<span class="w"> </span>be_i1_2.ipynb
+│<span class="w">   </span>└──<span class="w"> </span>be_i1_3.ipynb
+├──<span class="w"> </span>be_2
+│<span class="w">   </span>├──<span class="w"> </span>be_i2_1.ipynb
+│<span class="w">   </span>├──<span class="w"> </span>be_i2_2.ipynb
+│<span class="w">   </span>├──<span class="w"> </span>be_i2_3.ipynb
+│<span class="w">   </span>└──<span class="w"> </span>be_i2_4.ipynb
+├──<span class="w"> </span>be_3
+│<span class="w">   </span>├──<span class="w"> </span>be_i3_1.ipynb
+│<span class="w">   </span>├──<span class="w"> </span>be_i3_2.ipynb
+│<span class="w">   </span>├──<span class="w"> </span>be_i3_3.ipynb
+│<span class="w">   </span>├──<span class="w"> </span>be_i3_4.ipynb
+│<span class="w">   </span>└──<span class="w"> </span>be_i3_5.ipynb
+├──<span class="w"> </span>be_4
+│<span class="w">   </span>├──<span class="w"> </span>be_i4_1.ipynb
+│<span class="w">   </span>├──<span class="w"> </span>be_i4_2.ipynb
+│<span class="w">   </span>├──<span class="w"> </span>be_i4_3.ipynb
+│<span class="w">   </span>├──<span class="w"> </span>be_i4_4.ipynb
+│<span class="w">   </span>├──<span class="w"> </span>be_i4_5.ipynb
+</pre></div>
+</div>
+<p>So the _config.yml will look something like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Site settings</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ἡἔρις,κ&quot;</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ἡἔρις,κ&quot;</span>
+<span class="nt">baseurl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/1f.ἡἔρις,κ&quot;</span>
+<span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;</span>
+
+<span class="s">#</span><span class="nv"> </span><span class="s">Build</span><span class="nv"> </span><span class="s">settings</span>
+<span class="s">markdown:</span><span class="nv"> </span><span class="s">kramdown</span>
+<span class="s">theme:</span><span class="nv"> </span><span class="s">jekyll-theme-cayman</span>
+<span class="s">plugins:</span>
+<span class="w">  </span><span class="s">-</span><span class="nv"> </span><span class="s">jekyll-feed</span>
+<span class="w">  </span><span class="s">-</span><span class="nv"> </span><span class="s">jekyll-seo-tag</span>
+<span class="w">  </span><span class="s">-</span><span class="nv"> </span><span class="s">jekyll-sitemap</span>
+<span class="w">  </span><span class="s">-</span><span class="nv"> </span><span class="s">jekyll-remote-theme</span>
+<span class="s">remote_theme:</span><span class="nv"> </span><span class="s">&quot;</span><span class="l l-Scalar l-Scalar-Plain">mmistakes/minimal-mistakes&quot;</span>
+</pre></div>
+</div>
+<p>And the _toc.yml will look something like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ἡἔρις,κ&quot;</span>
+<span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/1f.ἡἔρις,κ/</span>
+<span class="w">  </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">web</span>
+<span class="w">  </span><span class="nt">folderitems</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;be&quot;</span>
+<span class="w">      </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/1f.ἡἔρις,κ/be/</span>
+<span class="w">      </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">web</span>
+<span class="w">      </span><span class="nt">folderitems</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;be_0&quot;</span>
+<span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/1f.ἡἔρις,κ/be/be_0/</span>
+<span class="w">          </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">web</span>
+<span class="w">          </span><span class="nt">folderitems</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;be_0_0&quot;</span>
+<span class="w">              </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/1f.ἡἔρις,κ/be/be_0/be_0_0/</span>
+<span class="w">              </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">web</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;be_0_1&quot;</span>
+<span class="w">              </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/1f.ἡἔρις,κ/be/be_0/be_0_1/</span>
+<span class="w">              </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">web</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;be_1&quot;</span>
+<span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/1f.ἡἔρις,κ/be/be_1/</span>
+<span class="w">          </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">web</span>
+<span class="w">          </span><span class="nt">folderitems</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;be_i1_1&quot;</span>
+<span class="w">              </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/1f.ἡἔρις,κ/be/be_1/be_i1_1/</span>
+<span class="w">              </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">web</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;be_i1_2&quot;</span>
+<span class="w">              </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/1f.ἡἔρις,κ/be/be_1/be_i1_2/</span>
+<span class="w">              </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">web</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;be_i1_3&quot;</span>
+<span class="w">              </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/1f.ἡἔρις,κ/be/be_1/be_i1_3/</span>
+<span class="w">              </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">web</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;be_2&quot;</span>
+<span class="w">          </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/1f.ἡἔρις,κ/be/be_2/</span>
+<span class="w">          </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">web</span>
+<span class="w">          </span><span class="nt">folderitems</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;be_i2_1&quot;</span>
+<span class="w">              </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/1f.ἡἔρις,κ/be/be_2/be_i2_1/</span>
+<span class="w">              </span><span class="nt">output</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">web</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;be_i2_2&quot;</span>
+<span class="w">              </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/1f.ἡἔρις,κ/be/be_</span>
+</pre></div>
+</div>
+<p>All the above are 100% suggestions from <code class="docutils literal notranslate"><span class="pre">Fena</span></code> and <code class="docutils literal notranslate"><span class="pre">CoPilot</span></code>. I have no idea what I am doing. (The last statement is <code class="docutils literal notranslate"><span class="pre">100%</span></code> from me. – no… from <code class="docutils literal notranslate"><span class="pre">CoPilot</span></code>)</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -5471,6 +5607,7 @@ touch<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-8-0">882. workflow 8.0</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calvin">881. Calvin</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-8-1">882. workflow 8.1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-8-2">883. workflow 8.2</a></li>
 </ul>
 </li>
 </ul>
