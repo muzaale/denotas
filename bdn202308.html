@@ -451,6 +451,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">08/05/2023</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-8-0">882. workflow 8.0</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calvin">881. Calvin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-8-1">882. workflow 8.1</a></li>
 </ul>
 </li>
 </ul>
@@ -505,16 +506,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Anna Clark                    
-2          Alexander Little              
-3          Janice Williams               
-4          Kara Flores                   
-5          Dean Barker                   
-6          Richard Jones                 
-7          Mary Collins                  
-8          Michael Stevenson             
-9          Douglas Humphrey              
-10         Jennifer Ibarra               
+1          Dustin Ward                   
+2          Kimberly Lewis                
+3          Tommy Rivera                  
+4          Anthony Little                
+5          Charles Graham                
+6          Andrew Hart                   
+7          Scott Meyer                   
+8          Tamara Hill                   
+9          Brian Parker                  
+10         Anthony Jordan                
 </pre></div>
 </div>
 </div>
@@ -5278,6 +5279,48 @@ touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$roo
 <li><p>Because of <code class="docutils literal notranslate"><span class="pre">Fena</span></code> and <code class="docutils literal notranslate"><span class="pre">CoPilot</span></code>, I should be able to spend more time with Calvin</p></li>
 </ol>
 </section>
+<section id="workflow-8-1">
+<h2>882. workflow 8.1<a class="headerlink" href="#workflow-8-1" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># inflection point!</span>
+
+<span class="c1"># Set root directory</span>
+<span class="nv">root_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/dropbox/1f.ἡἔρις,κ/1.ontology/be&quot;</span>
+
+<span class="nv">acts</span><span class="o">=(</span><span class="s2">&quot;be_1&quot;</span><span class="w"> </span><span class="s2">&quot;be_2&quot;</span><span class="w"> </span><span class="s2">&quot;be_3&quot;</span><span class="w"> </span><span class="s2">&quot;be_4&quot;</span><span class="w"> </span><span class="s2">&quot;be_5&quot;</span><span class="o">)</span>
+<span class="nv">act_files</span><span class="o">=(</span><span class="m">5</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">5</span><span class="o">)</span><span class="w"> </span><span class="c1"># change these values according to the number of files in each act</span>
+<span class="nv">dramatis_personae</span><span class="o">=(</span><span class="s2">&quot;dp_1&quot;</span><span class="w"> </span><span class="s2">&quot;dp_2&quot;</span><span class="w"> </span><span class="s2">&quot;dp_3&quot;</span><span class="w"> </span><span class="s2">&quot;dp_4&quot;</span><span class="w"> </span><span class="s2">&quot;dp_5&quot;</span><span class="w"> </span><span class="s2">&quot;dp_6&quot;</span><span class="w"> </span><span class="s2">&quot;dp_7&quot;</span><span class="w"> </span><span class="s2">&quot;dp_8&quot;</span><span class="w"> </span><span class="s2">&quot;dp_9&quot;</span><span class="o">)</span>
+
+<span class="c1"># Create the root directory if not exists</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$root_dir</span>
+
+<span class="c1"># Create intro.ipynb and prologue.ipynb</span>
+touch<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">root_dir</span><span class="si">}</span><span class="s2">/be_0_0.ipynb&quot;</span>
+touch<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">root_dir</span><span class="si">}</span><span class="s2">/be_0_1.ipynb&quot;</span>
+
+<span class="c1"># Create Act directories and their files</span>
+<span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="si">${#</span><span class="nv">acts</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>i++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nv">act_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">root_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">acts</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$act_dir</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">j</span><span class="o">=</span><span class="m">1</span><span class="p">;</span><span class="w"> </span>j&lt;<span class="o">=</span><span class="si">${</span><span class="nv">act_files</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>j++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span>touch<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">act_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">acts</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">_</span><span class="nv">$j</span><span class="s2">.ipynb&quot;</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="c1"># Create the dramatis_personae directories and their files</span>
+<span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="si">${#</span><span class="nv">dramatis_personae</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>i++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">j</span><span class="o">=</span><span class="m">1</span><span class="p">;</span><span class="w"> </span>j&lt;<span class="o">=</span><span class="m">5</span><span class="p">;</span><span class="w"> </span>j++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="nv">dp_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">root_dir</span><span class="si">}</span><span class="s2">/dramatis_personae/</span><span class="si">${</span><span class="nv">dramatis_personae</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">        </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$dp_dir</span>
+<span class="w">        </span>touch<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">dp_dir</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">dramatis_personae</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">_</span><span class="nv">$j</span><span class="s2">.ipynb&quot;</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="c1"># additional directories and files can be generated following similar pattern</span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -5427,6 +5470,7 @@ touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$roo
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">08/05/2023</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-8-0">882. workflow 8.0</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calvin">881. Calvin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow-8-1">882. workflow 8.1</a></li>
 </ul>
 </li>
 </ul>
