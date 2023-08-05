@@ -510,16 +510,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Nicholas Thompson             
-2          Justin Grant                  
-3          Jacob Solomon                 
-4          Robert Freeman                
-5          Adrian Smith                  
-6          Whitney Gonzales              
-7          John Williams                 
-8          Corey White                   
-9          David Sanchez                 
-10         Christina Summers             
+1          Nancy Munoz                   
+2          Beth Melendez                 
+3          Jason Ryan                    
+4          Bethany Wilson                
+5          Brandi Mueller                
+6          Adam Kemp                     
+7          Luke Gonzalez                 
+8          Dillon Wright                 
+9          Amber Jones                   
+10         Matthew Baker                 
 </pre></div>
 </div>
 </div>
@@ -5705,6 +5705,69 @@ git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span
 </div>
 <p>Note: I’ve fixed the name of the config file to <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>, as mentioned in your previous comment.</p>
 <hr class="docutils" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(base) d@Poseidon 1.ontology % ./ip.sh              
+SSH keys already exist for this repository. Skipping key generation.
+Running Jupyter-Book v0.15.1
+Traceback (most recent call last):
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/jupyter_book/cli/main.py&quot;, line 242, in build
+    parse_toc_yaml(toc)
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sphinx_external_toc/parsing.py&quot;, line 90, in parse_toc_yaml
+    return parse_toc_data(data)
+           ^^^^^^^^^^^^^^^^^^^^
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/sphinx_external_toc/parsing.py&quot;, line 100, in parse_toc_data
+    raise MalformedError(f&quot;toc is not a mapping: {type(data)}&quot;)
+sphinx_external_toc.parsing.MalformedError: toc is not a mapping: &lt;class &#39;list&#39;&gt;
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.11/bin/jupyter-book&quot;, line 8, in &lt;module&gt;
+    sys.exit(main())
+             ^^^^^^
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/click/core.py&quot;, line 1130, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/click/core.py&quot;, line 1055, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/click/core.py&quot;, line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/click/core.py&quot;, line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/click/core.py&quot;, line 760, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/jupyter_book/cli/main.py&quot;, line 244, in build
+    _error(
+  File &quot;/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/jupyter_book/utils.py&quot;, line 48, in _error
+    raise kind(box)
+RuntimeError: 
+===============================================================================
+
+The Table of Contents file is malformed: toc is not a mapping: &lt;class &#39;list&#39;&gt;
+You may need to migrate from the old format, using:
+
+        jupyter-book toc migrate /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/be/_toc.yml -o /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/be/_toc.yml
+
+===============================================================================
+
+Cloning into &#39;/Users/d/dropbox/1f.ἡἔρις,κ/1.ontology/fe&#39;...
+warning: You appear to have cloned an empty repository.
+Switched to a new branch &#39;gh-pages&#39;
+cp: /Users/d/dropbox/1f.ἡἔρις,κ/1.ontology/be/_build/html/*: No such file or directory
+On branch gh-pages
+
+Initial commit
+
+nothing to commit (create/copy files and use &quot;git add&quot; to track)
+error: src refspec gh-pages does not match any
+error: failed to push some refs to &#39;github.com:muzaale/fe&#39;
+Jupyter Book content updated and pushed to muzaale/fe repository!
+(base) d@Poseidon 1.ontology % 
+</pre></div>
+</div>
 </section>
 </section>
 
