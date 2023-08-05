@@ -510,16 +510,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Nancy Munoz                   
-2          Beth Melendez                 
-3          Jason Ryan                    
-4          Bethany Wilson                
-5          Brandi Mueller                
-6          Adam Kemp                     
-7          Luke Gonzalez                 
-8          Dillon Wright                 
-9          Amber Jones                   
-10         Matthew Baker                 
+1          Jason Foster                  
+2          Mark Skinner                  
+3          Cheryl Humphrey               
+4          Lynn Martin                   
+5          Mark Morris                   
+6          Louis Bush                    
+7          Austin Schmidt                
+8          Alan Wade                     
+9          Robert Case                   
+10         Brent Torres                  
 </pre></div>
 </div>
 </div>
@@ -5768,6 +5768,44 @@ Jupyter Book content updated and pushed to muzaale/fe repository!
 (base) d@Poseidon 1.ontology % 
 </pre></div>
 </div>
+<hr class="docutils" />
+<p>The error you’re experiencing seems to originate from the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file format. The error message indicates:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sphinx_external_toc.parsing.MalformedError: toc is not a mapping: &lt;class &#39;list&#39;&gt;
+</pre></div>
+</div>
+<p>From the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> contents you’ve shown, the format seems to be a list, which is the default for newer versions of Jupyter Book. This suggests that the version of Jupyter Book you’re using expects the older format, where the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file starts with a dictionary (or “mapping”) rather than a list.</p>
+<p>Here’s what you can do:</p>
+<ol class="arabic">
+<li><p><strong>Migrate the Table of Contents</strong><br />
+The error message suggests you may need to migrate the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">toc</span> <span class="n">migrate</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">d</span><span class="o">/</span><span class="n">Dropbox</span> <span class="p">(</span><span class="n">Personal</span><span class="p">)</span><span class="o">/</span><span class="mi">1</span><span class="n">f</span><span class="o">.</span><span class="n">ἡἔρις</span><span class="p">,</span><span class="n">κ</span><span class="o">/</span><span class="mf">1.</span><span class="n">ontology</span><span class="o">/</span><span class="n">be</span><span class="o">/</span><span class="n">_toc</span><span class="o">.</span><span class="n">yml</span> <span class="o">-</span><span class="n">o</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">d</span><span class="o">/</span><span class="n">Dropbox</span> <span class="p">(</span><span class="n">Personal</span><span class="p">)</span><span class="o">/</span><span class="mi">1</span><span class="n">f</span><span class="o">.</span><span class="n">ἡἔρις</span><span class="p">,</span><span class="n">κ</span><span class="o">/</span><span class="mf">1.</span><span class="n">ontology</span><span class="o">/</span><span class="n">be</span><span class="o">/</span><span class="n">_toc</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Check the Jupyter Book Version</strong><br />
+Ensure you’re using a version of Jupyter Book that’s compatible with the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> format you’re employing. If you’re using an older version of Jupyter Book, consider updating it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">U</span> <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Manually Adjust the _toc.yml File</strong><br />
+If you’re sure you’re using a version of Jupyter Book that expects the newer format, then your <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> appears to be correct. However, if you need the older format, you’ll need to nest everything under a <code class="docutils literal notranslate"><span class="pre">root</span></code> key:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">root</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">part</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Part 1</span>
+<span class="w">    </span><span class="nt">chapters</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">be_0/be_i1_1</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Ensure Correct Directory Structure</strong><br />
+Verify that the paths listed in <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> (like <code class="docutils literal notranslate"><span class="pre">be_0/be_i1_1</span></code>) correspond to existing files or directories. If the files do not exist, the build process will fail.</p></li>
+<li><p><strong>Errors during Repository Operations</strong><br />
+The script also seems to have issues during the Git operations. Specifically, it tries to push to a branch that doesn’t exist in the repository. Make sure the repository is correctly initialized and the branch you’re trying to push to (in this case, <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>) exists.</p></li>
+<li><p><strong>File Copy Error</strong><br />
+The script tries to copy files from a directory (<code class="docutils literal notranslate"><span class="pre">be/_build/html/*</span></code>) that may not exist. Ensure that the <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">.</span></code> command runs successfully before the script attempts to copy files.</p></li>
+</ol>
+<p>After making these adjustments, re-run the script and see if it successfully builds and pushes the Jupyter Book.</p>
 </section>
 </section>
 
