@@ -458,6 +458,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-i3">886. ip.sh-i3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-i4">887. ip.sh-i4</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-i6">888. ip.sh-i6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-spjd">889. ip.sh-spjd</a></li>
 </ul>
 </li>
 </ul>
@@ -512,16 +513,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          John Sims                     
-2          Brittany Dixon                
-3          James Wells                   
-4          Brent Johnson                 
-5          Thomas Allen                  
-6          Peter Cox                     
-7          Daniel Fletcher               
-8          Glenn Vega                    
-9          Tina Sullivan                 
-10         Kimberly Lee                  
+1          Amanda Rodriguez              
+2          Christopher Sullivan          
+3          Kelsey Bradford               
+4          Laura Williams                
+5          Andrew Casey                  
+6          Aaron Benson                  
+7          Barbara Ortiz                 
+8          James Hill                    
+9          Tanya Phillips                
+10         Micheal King                  
 </pre></div>
 </div>
 </div>
@@ -6069,6 +6070,64 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 </pre></div>
 </div>
 </section>
+<hr class="docutils" />
+<section id="ip-sh-spjd">
+<h2>889. ip.sh-spjd<a class="headerlink" href="#ip-sh-spjd" title="Permalink to this heading">#</a></h2>
+<p>The revolution will be televised!</p>
+<hr class="docutils" />
+<p>Certainly! Below is a modified version of the script that generalizes the GitHub username, repository name, and email address by taking them as inputs at the beginning of the script. This way, the script can be used for different users and repositories.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Input GitHub username, repository, and email address</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your GitHub username: &quot;</span><span class="w"> </span>GITHUB_USERNAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your GitHub repository name: &quot;</span><span class="w"> </span>REPO_NAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your email address: &quot;</span><span class="w"> </span>EMAIL_ADDRESS
+
+<span class="c1"># Set up directories and paths</span>
+<span class="nb">cd</span><span class="w"> </span>~/Dropbox/1f.ἡἔρις,κ/1.ontology/
+<span class="nv">root_dir</span><span class="o">=</span><span class="s2">&quot;be&quot;</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$root_dir</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$root_dir</span>
+
+<span class="c1"># Create the intro.ipynb file from populate_be.ipynb</span>
+cp<span class="w"> </span>~/Dropbox/1f.ἡἔρις,κ/1.ontology/populate_be.ipynb<span class="w"> </span>intro.ipynb
+
+<span class="c1"># Check if SSH keys already exist, and if not, generate a new one</span>
+<span class="nv">SSH_KEY_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.ssh/id_befe&quot;</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_KEY_PATH</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EMAIL_ADDRESS</span><span class="s2">&quot;</span><span class="w"> </span>-f<span class="w"> </span>~/.ssh/id_befe
+<span class="w">    </span>cat<span class="w"> </span>~/.ssh/id_befe.pub
+<span class="w">    </span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+<span class="w">    </span>ssh-add<span class="w"> </span>~/.ssh/id_befe
+<span class="w">    </span>pbcopy<span class="w"> </span>&lt;<span class="w"> </span>~/.ssh/id_befe.pub
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;SSH public key copied to clipboard. Please add it to your GitHub account&#39;s SSH keys.&quot;</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;SSH keys already exist for this repository. Skipping key generation.&quot;</span>
+<span class="k">fi</span>
+
+<span class="c1"># ... rest of the code is unchanged ...</span>
+
+<span class="c1"># Build the book with Jupyter Book</span>
+<span class="nb">cd</span><span class="w"> </span>..
+jb<span class="w"> </span>build<span class="w"> </span><span class="nv">$root_dir</span>
+git<span class="w"> </span>clone<span class="w"> </span><span class="s2">&quot;https://github.com/</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2">&quot;</span>
+cp<span class="w"> </span>-r<span class="w"> </span>be/*<span class="w"> </span><span class="nv">$REPO_NAME</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$REPO_NAME</span>
+git<span class="w"> </span>add<span class="w"> </span>./*
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;1.1 Update Jupyter Book content&quot;</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/id_befe
+git<span class="w"> </span>remote<span class="w"> </span>-v
+ssh-add<span class="w"> </span>-D
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span><span class="s2">&quot;git@github.com:</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2">&quot;</span>
+ssh-add<span class="w"> </span>~/.ssh/id_befe
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Jupyter Book content updated and pushed to </span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2"> repository!&quot;</span>
+</pre></div>
+</div>
+<p>This script will prompt the user to enter their GitHub username, repository name, and email address, and then it will proceed to use those values throughout the script. Make sure that the user has appropriate permissions to the repository, and that the repository exists on GitHub.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -6225,6 +6284,7 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-i3">886. ip.sh-i3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-i4">887. ip.sh-i4</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-i6">888. ip.sh-i6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-spjd">889. ip.sh-spjd</a></li>
 </ul>
 </li>
 </ul>
