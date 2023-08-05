@@ -4,7 +4,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "### 886. ip.sh-i3"
+git commit -m "_toc.yml malfored for ### 886. ip.sh-i3"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
