@@ -6,7 +6,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "a bunch of unsuccesful attempts: treelib works, anytree deosn't"
+git commit -m "game changer? python -m ipykernel install --user --name=myenv. lets watch & see"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D

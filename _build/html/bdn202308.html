@@ -523,16 +523,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Misty Valencia                
-2          Lauren Hoffman                
-3          James Fields                  
-4          Robert Mendoza                
-5          Laurie Huerta                 
-6          Katherine Baker               
-7          Daniel Wheeler                
-8          Steve Williamson              
-9          Todd Zuniga                   
-10         Matthew Haley                 
+1          Yvonne Pacheco                
+2          Peggy Mcgee                   
+3          Stephanie Murray              
+4          Kimberly Jackson              
+5          Dominique Carlson             
+6          Nicholas Harvey               
+7          Daniel Burns                  
+8          Margaret Murray               
+9          Michael Franklin              
+10         Valerie Sanders               
 </pre></div>
 </div>
 </div>
@@ -6785,6 +6785,49 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
 </li>
 </ol>
 <p>By ensuring that Jupyter Notebook is running in the same Python environment where <code class="docutils literal notranslate"><span class="pre">treelib</span></code> is installed, you should be able to import the library without any issues. If the problem persists, please provide more details, and I’ll be happy to assist further!</p>
+<p>In a Jupyter Notebook, you can select the kernel that corresponds to a specific Python environment. The kernel defines the programming environment in which the notebook runs. Here’s how you can make sure your <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file uses the Python version located at <code class="docutils literal notranslate"><span class="pre">/Users/d/Dropbox</span> <span class="pre">(Personal)/1f.ἡἔρις,κ/1.ontology/myenv/bin/python</span></code>:</p>
+<ol class="arabic">
+<li><p><strong>Install the IPython Kernel in Your Virtual Environment</strong>: Make sure that your virtual environment (in this case, <code class="docutils literal notranslate"><span class="pre">myenv</span></code>) is activated and that the IPython kernel module is installed in it.</p>
+<p>You can install it using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>ipykernel
+</pre></div>
+</div>
+</li>
+<li><p><strong>Add Your Virtual Environment to Jupyter</strong>: You need to add a new kernel specification that points to your virtual environment’s Python binary. Run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>ipykernel<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>--name<span class="o">=</span>myenv
+</pre></div>
+</div>
+<p>This will create a new kernel specification that uses the Python interpreter from your virtual environment.</p>
+</li>
+<li><p><strong>Select the Kernel in Your Notebook</strong>:</p>
+<ul class="simple">
+<li><p>Open your <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file in Jupyter.</p></li>
+<li><p>From the menu, choose “Kernel” &gt; “Change kernel” &gt; “myenv” (or whatever name you provided in the above command).</p></li>
+<li><p>Your notebook will now be using the selected Python version from your virtual environment.</p></li>
+</ul>
+</li>
+<li><p><strong>Verify the Python Version</strong>: You can verify that you’re using the correct version of Python by running the following cell in your notebook:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It should print the path to the Python executable in your virtual environment.</p>
+</li>
+</ol>
+<p>By following these steps, you can ensure that your notebook uses the specific Python version you want, and any HTML export of the notebook will reflect this environment as well.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/bin/python
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
