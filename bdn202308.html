@@ -461,6 +461,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-spjd">889. ip.sh-spjd</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spjdworkflow">890. spjdworkflow</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideas">891. ideas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-finale">892. ip.sh-finale</a></li>
 </ul>
 </li>
 </ul>
@@ -515,16 +516,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Catherine Wood                
-2          Teresa Medina                 
-3          Deborah Kent                  
-4          Samuel Mccarthy               
-5          Victoria Walton               
-6          Jason Campbell                
-7          Jacqueline Hopkins            
-8          Christopher Baker             
-9          Shelia Miller                 
-10         Vincent Matthews              
+1          Melissa Robinson              
+2          Lori Gillespie                
+3          Natalie Peterson              
+4          Michael Whitehead             
+5          Alfred Colon                  
+6          Amy Moore                     
+7          Christina Mcconnell           
+8          Angela Riggs                  
+9          Tim Shields                   
+10         James Villegas                
 </pre></div>
 </div>
 </div>
@@ -6220,6 +6221,62 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 </ol>
 </div>
 </section>
+<section id="ip-sh-finale">
+<h2>892. ip.sh-finale<a class="headerlink" href="#ip-sh-finale" title="Permalink to this heading">#</a></h2>
+<p>Certainly! Here’s the complete script, taking into account your requirements:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Input GitHub username, repository, email address, root directory, subdirectory, and source path</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your GitHub username: &quot;</span><span class="w"> </span>GITHUB_USERNAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your GitHub repository name: &quot;</span><span class="w"> </span>REPO_NAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your email address: &quot;</span><span class="w"> </span>EMAIL_ADDRESS
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your root directory (e.g., ~/Dropbox/1f.ἡἔρις,κ/1.ontology/): &quot;</span><span class="w"> </span>ROOT_DIR
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter the name of the subdirectory to be created within the root directory: &quot;</span><span class="w"> </span>SUBDIR_NAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter the path to the populate_be.ipynb file: &quot;</span><span class="w"> </span>POPULATE_BE_PATH
+
+<span class="c1"># Set up directories and paths</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$ROOT_DIR</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$SUBDIR_NAME</span>
+
+<span class="c1"># Create the intro.ipynb file from populate_be.ipynb</span>
+cp<span class="w"> </span><span class="nv">$POPULATE_BE_PATH</span><span class="w"> </span>intro.ipynb
+
+<span class="c1"># Check if SSH keys already exist, and if not, generate a new one</span>
+<span class="nv">SSH_KEY_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.ssh/id_befe&quot;</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_KEY_PATH</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EMAIL_ADDRESS</span><span class="s2">&quot;</span><span class="w"> </span>-f<span class="w"> </span>~/.ssh/id_befe
+<span class="w">  </span>cat<span class="w"> </span>~/.ssh/id_befe.pub
+<span class="w">  </span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+<span class="w">  </span>ssh-add<span class="w"> </span>~/.ssh/id_befe
+<span class="w">  </span>pbcopy<span class="w"> </span>&lt;<span class="w"> </span>~/.ssh/id_befe.pub
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;SSH public key copied to clipboard. Please add it to your GitHub account&#39;s SSH keys.&quot;</span>
+<span class="k">else</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;SSH keys already exist for this repository. Skipping key generation.&quot;</span>
+<span class="k">fi</span>
+
+<span class="c1"># Build the book with Jupyter Book</span>
+<span class="nb">cd</span><span class="w"> </span>..
+jb<span class="w"> </span>build<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>
+git<span class="w"> </span>clone<span class="w"> </span><span class="s2">&quot;https://github.com/</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2">&quot;</span>
+cp<span class="w"> </span>-r<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>/*<span class="w"> </span><span class="nv">$REPO_NAME</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$REPO_NAME</span>
+git<span class="w"> </span>add<span class="w"> </span>./*
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;1.1 Update Jupyter Book content&quot;</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/id_befe
+git<span class="w"> </span>remote<span class="w"> </span>-v
+ssh-add<span class="w"> </span>-D
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span><span class="s2">&quot;git@github.com:</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2">&quot;</span>
+ssh-add<span class="w"> </span>~/.ssh/id_befe
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Jupyter Book content updated and pushed to </span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2"> repository!&quot;</span>
+</pre></div>
+</div>
+<p>This script allows users to specify the GitHub username, repository name, email address, root directory, subdirectory name, and path to the <code class="docutils literal notranslate"><span class="pre">populate_be.ipynb</span></code> file. It then carries out the tasks of setting up directories, copying files, managing SSH keys, and pushing updates to a GitHub repository.</p>
+<p>Make sure to have the necessary permissions, dependencies, and configurations properly set up in your environment for the script to execute all these tasks.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -6379,6 +6436,7 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-spjd">889. ip.sh-spjd</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spjdworkflow">890. spjdworkflow</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideas">891. ideas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-finale">892. ip.sh-finale</a></li>
 </ul>
 </li>
 </ul>
