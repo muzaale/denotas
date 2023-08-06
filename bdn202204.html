@@ -2085,7 +2085,18 @@ Pleasing
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/1f6ab238bce1ca0883994e7898d8d6c10d67415df77af2020996234188e4e65c.png" src="_images/1f6ab238bce1ca0883994e7898d8d6c10d67415df77af2020996234188e4e65c.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">sklearn</span> <span class="k">as</span> <span class="nn">skl</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1">#plt.figure(figsize=[2, 2])</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -2617,16 +2628,16 @@ Pleasing
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "myenv"
         },
         kernelOptions: {
-            name: "python3",
+            name: "myenv",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'myenv'</script>
 
                 </article>
               

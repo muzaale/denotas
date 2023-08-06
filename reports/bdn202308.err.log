@@ -18,82 +18,39 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from treelib import Node, Tree
-import sys
-print(sys.executable)
+from faker import Faker
 
+def generate_random_names(num_names):
+    fake = Faker()
+    names = [[fake.first_name(), fake.last_name()] for _ in range(num_names)]
+    return names
 
+def create_table(names):
+    header = ["Number", "Name"]
+    table = []
+    table.append(header)
+    for idx, name in enumerate(names, start=1):
+        full_name = " ".join(name)
+        row = [idx, full_name]
+        table.append(row)
 
+    # Printing the table
+    for row in table:
+        print(f"{row[0]:<10} {row[1]:<30}")
 
-# Define the directory structure
-structure = {
-    "Daily Grind": {
-        "Gratitude": ["journal.md"],
-        "Physical Exercise": ["swim.md", "gym.md", "jog.md"],
-        "Check on Loved Ones": ["whats_app.md"],
-        "Work": {
-            "PhD Thesis": ["..."],
-            "K08 Grant": ["..."],
-            "R03 Grant Application": ["..."],
-            "Mentoring": {
-                "High School Students": [],
-                "Undergraduates": [],
-                "Graduate Students": [],
-                "Medical Students": [],
-                "Residents": [],
-                "Fellows": [],
-                "Faculty": [],
-                "Analysts": [],
-                "Staff": [],
-                "Collaborators": [],
-                "Graduates": [],
-            },
-            "...": []
-        },
-        "...": []
-    }
-}
-
-counter = 0
-
-# Function to recursively add nodes to the tree
-def add_nodes(tree, parent, structure):
-    global counter
-    for key, value in structure.items():
-        node_name = key.replace(" ", "_")
-        if tree.contains(node_name):
-            counter += 1
-            node_name += "_" + str(counter) # Add suffix to make the node name unique
-        tree.create_node(key, node_name, parent=parent)
-        # If the value is a list, add file nodes
-        if isinstance(value, list):
-            for file_name in value:
-                file_node_name = file_name if file_name != "..." else "ellipsis_" + str(counter)
-                counter += 1
-                tree.create_node(file_name, file_node_name, parent=node_name)
-        # If the value is a dictionary, recurse into it
-        elif isinstance(value, dict):
-            add_nodes(tree, node_name, value)
-
-# Create tree and root node
-tree = Tree()
-tree.create_node("Daily Grind", "Daily Grind")
-
-# Add nodes based on the structure
-add_nodes(tree, "Daily Grind", structure["Daily Grind"])
-
-# Print the tree
-tree.show()
+# Generate 10 random names and call the function
+random_names = generate_random_names(10)
+create_table(random_names)
 
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[7], line 1[0m
-[0;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mtreelib[39;00m [38;5;28;01mimport[39;00m Node, Tree
-[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
-[1;32m      3[0m [38;5;28mprint[39m(sys[38;5;241m.[39mexecutable)
+Cell [0;32mIn[1], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mfaker[39;00m [38;5;28;01mimport[39;00m Faker
+[1;32m      3[0m [38;5;28;01mdef[39;00m [38;5;21mgenerate_random_names[39m(num_names):
+[1;32m      4[0m     fake [38;5;241m=[39m Faker()
 
-[0;31mModuleNotFoundError[0m: No module named 'treelib'
+[0;31mModuleNotFoundError[0m: No module named 'faker'
 
