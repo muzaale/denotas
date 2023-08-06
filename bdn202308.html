@@ -464,6 +464,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-finale">892. ip.sh-finale</a></li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">08/06/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agift2me">893. agift2me</a></li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -516,16 +520,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Angel Torres                  
-2          Kyle Bishop                   
-3          Lori Jackson                  
-4          Margaret Campbell             
-5          Andrew Charles                
-6          Michelle Moore                
-7          Karen Evans                   
-8          Daniel Lynch                  
-9          Cindy Boyd                    
-10         Maria Wells                   
+1          Ronald Powell                 
+2          Christopher Jones             
+3          Stephanie Barnes              
+4          Richard Allen                 
+5          Susan Price                   
+6          Marc Melendez                 
+7          Diane Lamb                    
+8          Jennifer Burns                
+9          Heather Sullivan              
+10         Brianna Underwood             
 </pre></div>
 </div>
 </div>
@@ -6332,6 +6336,76 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 <p>I replaced <code class="docutils literal notranslate"><span class="pre">&quot;id_befe&quot;</span></code> with <code class="docutils literal notranslate"><span class="pre">&quot;id_${SUBDIR_NAME}${REPO_NAME}&quot;</span></code> to include the subdirectory name and the GitHub repository name in the SSH key filename. Make sure that the <code class="docutils literal notranslate"><span class="pre">SUBDIR_NAME</span></code> and <code class="docutils literal notranslate"><span class="pre">REPO_NAME</span></code> variables are unique to avoid overwriting existing keys.</p>
 </section>
 </section>
+<section id="id13">
+<h1>08/06/2023<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h1>
+<section id="agift2me">
+<h2>893. agift2me<a class="headerlink" href="#agift2me" title="Permalink to this heading">#</a></h2>
+<p>Certainly! Here’s the updated script, with “be_” and “be_i” replaced with the <code class="docutils literal notranslate"><span class="pre">$SUBDIR_NAME</span></code> variable:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Input GitHub username, repository, email address, root directory, subdirectory, and source path</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your GitHub username: &quot;</span><span class="w"> </span>GITHUB_USERNAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your GitHub repository name: &quot;</span><span class="w"> </span>REPO_NAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your email address: &quot;</span><span class="w"> </span>EMAIL_ADDRESS
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your root directory (e.g., ~/Dropbox/1f.ἡἔρις,κ/1.ontology/): &quot;</span><span class="w"> </span>ROOT_DIR
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter the name of the subdirectory to be created within the root directory: &quot;</span><span class="w"> </span>SUBDIR_NAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter the path to the populate_be.ipynb file: &quot;</span><span class="w"> </span>POPULATE_BE_PATH
+
+<span class="c1"># Set up directories and paths</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$ROOT_DIR</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$SUBDIR_NAME</span>
+
+<span class="c1"># Create the intro.ipynb file from populate_be.ipynb</span>
+cp<span class="w"> </span><span class="nv">$POPULATE_BE_PATH</span><span class="w"> </span>intro.ipynb
+
+<span class="c1"># Check if SSH keys already exist, and if not, generate a new one</span>
+<span class="nv">SSH_KEY_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.ssh/id_</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}${</span><span class="nv">REPO_NAME</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_KEY_PATH</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EMAIL_ADDRESS</span><span class="s2">&quot;</span><span class="w"> </span>-f<span class="w"> </span><span class="nv">$SSH_KEY_PATH</span>
+<span class="w">  </span>cat<span class="w"> </span><span class="si">${</span><span class="nv">SSH_KEY_PATH</span><span class="si">}</span>.pub
+<span class="w">  </span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+<span class="w">  </span>ssh-add<span class="w"> </span><span class="nv">$SSH_KEY_PATH</span>
+<span class="w">  </span>pbcopy<span class="w"> </span>&lt;<span class="w"> </span><span class="si">${</span><span class="nv">SSH_KEY_PATH</span><span class="si">}</span>.pub
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;SSH public key copied to clipboard. Please add it to your GitHub account&#39;s SSH keys.&quot;</span>
+<span class="k">else</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;SSH keys already exist for this repository. Skipping key generation.&quot;</span>
+<span class="k">fi</span>
+
+<span class="c1"># Define arrays for acts and the number of files for each act</span>
+<span class="nv">acts</span><span class="o">=(</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_0&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_1&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_2&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_3&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_4&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_5&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_6&quot;</span><span class="o">)</span>
+<span class="nv">act_files</span><span class="o">=(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">8</span><span class="o">)</span>
+
+<span class="c1"># Create Act directories and their corresponding files</span>
+<span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="si">${#</span><span class="nv">acts</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>i++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">acts</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">j</span><span class="o">=</span><span class="m">1</span><span class="p">;</span><span class="w"> </span>j&lt;<span class="o">=</span><span class="si">${</span><span class="nv">act_files</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>j++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>cp<span class="w"> </span><span class="nv">$POPULATE_BE_PATH</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">acts</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_i</span><span class="k">$((</span><span class="nv">$i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span><span class="s2">_</span><span class="nv">$j</span><span class="s2">.ipynb&quot;</span>
+<span class="w">  </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="c1"># Build the book with Jupyter Book</span>
+<span class="nb">cd</span><span class="w"> </span>..
+jb<span class="w"> </span>build<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>
+git<span class="w"> </span>clone<span class="w"> </span><span class="s2">&quot;https://github.com/</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2">&quot;</span>
+cp<span class="w"> </span>-r<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>/*<span class="w"> </span><span class="nv">$REPO_NAME</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$REPO_NAME</span>
+git<span class="w"> </span>add<span class="w"> </span>./*
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;1.1 Update Jupyter Book content&quot;</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="nv">$SSH_KEY_PATH</span>
+git<span class="w"> </span>remote<span class="w"> </span>-v
+ssh-add<span class="w"> </span>-D
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span><span class="s2">&quot;git@github.com:</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2">&quot;</span>
+ssh-add<span class="w"> </span><span class="nv">$SSH_KEY_PATH</span>
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Jupyter Book content updated and pushed to </span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2"> repository!&quot;</span>
+</pre></div>
+</div>
+<p>This version utilizes the <code class="docutils literal notranslate"><span class="pre">$SUBDIR_NAME</span></code> variable throughout the script to refer to the specified subdirectory, providing consistency and adaptability to various use cases.</p>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -6491,6 +6565,10 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spjdworkflow">890. spjdworkflow</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideas">891. ideas</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ip-sh-finale">892. ip.sh-finale</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">08/06/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agift2me">893. agift2me</a></li>
 </ul>
 </li>
 </ul>
