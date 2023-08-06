@@ -523,16 +523,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Randy Nolan                   
-2          Julia King                    
-3          Jose Brown                    
-4          Jonathan Marshall             
-5          Lisa Brown                    
-6          Michelle Bean                 
-7          Eric Johnson                  
-8          Brian Meyer                   
-9          Debbie Baker                  
-10         Frank Collins                 
+1          Aaron Walker                  
+2          Charles Moore                 
+3          William Hayes                 
+4          Patricia Brock                
+5          Barbara Thomas                
+6          Michael Becker                
+7          Hannah Ramirez                
+8          Becky Smith                   
+9          Marissa Davidson              
+10         Brandon Brown                 
 </pre></div>
 </div>
 </div>
@@ -6673,7 +6673,12 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
 </div>
 <p>Since this script targets a specific interpreter, it should be less risky than the earlier, more aggressive script. If the Python interpreter at <code class="docutils literal notranslate"><span class="pre">/usr/local/anaconda3/bin/python</span></code> is part of a system installation, you might still need administrator permissions to run the script (e.g., using <code class="docutils literal notranslate"><span class="pre">sudo</span></code> on Linux).</p>
 <p>This script should ensure that the <code class="docutils literal notranslate"><span class="pre">anytree</span></code> package is installed for the Python interpreter you’ve specified. If that’s the interpreter being used by your Jupyter Book, it should resolve the <code class="docutils literal notranslate"><span class="pre">ModuleNotFoundError</span></code> you were encountering.</p>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">treelib</span> <span class="kn">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Tree</span>
 
@@ -6739,6 +6744,7 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
