@@ -18,41 +18,67 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from anytree import Node, RenderTree
+from treelib import Node, Tree
 
 # Define the directory structure
-daily_grind = Node("Daily Grind")
-gratitude = Node("Gratitude", parent=daily_grind)
-Node("journal.md", parent=gratitude)
-physical_exercise = Node("Physical Exercise", parent=daily_grind)
-Node("swim.md", parent=physical_exercise)
-Node("gym.md", parent=physical_exercise)
-Node("jog.md", parent=physical_exercise)
-check_on_loved_ones = Node("Check on Loved Ones", parent=daily_grind)
-Node("whats_app.md", parent=check_on_loved_ones)
-work = Node("Work", parent=daily_grind)
-phd_thesis = Node("PhD Thesis", parent=work)
-Node("...", parent=phd_thesis)
-k08_grant = Node("K08 Grant", parent=work)
-Node("...", parent=k08_grant)
-r03_grant_application = Node("R03 Grant Application", parent=work)
-Node("...", parent=r03_grant_application)
-mentoring = Node("Mentoring", parent=work)
-Node("High School Students", parent=mentoring)
-Node("Undergraduates", parent=mentoring)
-Node("Graduate Students", parent=mentoring)
-Node("Medical Students", parent=mentoring)
-Node("Residents", parent=mentoring)
-Node("Fellows", parent=mentoring)
-Node("Faculty", parent=mentoring)
-Node("Analysts", parent=mentoring)
-Node("Staff", parent=mentoring)
-Node("Collaborators", parent=mentoring)
-Node("Graduates", parent=mentoring)
+structure = {
+    "Daily Grind": {
+        "Gratitude": ["journal.md"],
+        "Physical Exercise": ["swim.md", "gym.md", "jog.md"],
+        "Check on Loved Ones": ["whats_app.md"],
+        "Work": {
+            "PhD Thesis": ["..."],
+            "K08 Grant": ["..."],
+            "R03 Grant Application": ["..."],
+            "Mentoring": {
+                "High School Students": [],
+                "Undergraduates": [],
+                "Graduate Students": [],
+                "Medical Students": [],
+                "Residents": [],
+                "Fellows": [],
+                "Faculty": [],
+                "Analysts": [],
+                "Staff": [],
+                "Collaborators": [],
+                "Graduates": [],
+            },
+            "...": []
+        },
+        "...": []
+    }
+}
 
-# Render the tree
-for pre, _, node in RenderTree(daily_grind):
-    print("%s%s" % (pre, node.name))
+counter = 0
+
+# Function to recursively add nodes to the tree
+def add_nodes(tree, parent, structure):
+    global counter
+    for key, value in structure.items():
+        node_name = key.replace(" ", "_")
+        if tree.contains(node_name):
+            counter += 1
+            node_name += "_" + str(counter) # Add suffix to make the node name unique
+        tree.create_node(key, node_name, parent=parent)
+        # If the value is a list, add file nodes
+        if isinstance(value, list):
+            for file_name in value:
+                file_node_name = file_name if file_name != "..." else "ellipsis_" + str(counter)
+                counter += 1
+                tree.create_node(file_name, file_node_name, parent=node_name)
+        # If the value is a dictionary, recurse into it
+        elif isinstance(value, dict):
+            add_nodes(tree, node_name, value)
+
+# Create tree and root node
+tree = Tree()
+tree.create_node("Daily Grind", "Daily Grind")
+
+# Add nodes based on the structure
+add_nodes(tree, "Daily Grind", structure["Daily Grind"])
+
+# Print the tree
+tree.show()
 
 ------------------
 
@@ -60,9 +86,14 @@ for pre, _, node in RenderTree(daily_grind):
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
 Cell [0;32mIn[6], line 1[0m
-[0;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01manytree[39;00m [38;5;28;01mimport[39;00m Node, RenderTree
+[0;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mtreelib[39;00m [38;5;28;01mimport[39;00m Node, Tree
 [1;32m      3[0m [38;5;66;03m# Define the directory structure[39;00m
-[1;32m      4[0m daily_grind [38;5;241m=[39m Node([38;5;124m"[39m[38;5;124mDaily Grind[39m[38;5;124m"[39m)
+[1;32m      4[0m structure [38;5;241m=[39m {
+[1;32m      5[0m     [38;5;124m"[39m[38;5;124mDaily Grind[39m[38;5;124m"[39m: {
+[1;32m      6[0m         [38;5;124m"[39m[38;5;124mGratitude[39m[38;5;124m"[39m: [[38;5;124m"[39m[38;5;124mjournal.md[39m[38;5;124m"[39m],
+[0;32m   (...)[0m
+[1;32m     29[0m     }
+[1;32m     30[0m }
 
-[0;31mModuleNotFoundError[0m: No module named 'anytree'
+[0;31mModuleNotFoundError[0m: No module named 'treelib'
 
