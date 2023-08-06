@@ -523,16 +523,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Justin Gallagher              
-2          Lance Lee                     
-3          Michael Hernandez             
-4          Matthew Brady                 
-5          Jamie Lewis                   
-6          Steven Reeves                 
-7          Carlos Page                   
-8          Melissa Cooper                
-9          Madison Mitchell              
-10         Renee Nelson                  
+1          Thomas Simpson                
+2          Timothy Russell               
+3          Frank Howard                  
+4          John Allen                    
+5          Suzanne Malone                
+6          Stephanie Bright              
+7          Gary Hernandez                
+8          Dustin Manning                
+9          Walter Torres                 
+10         Barbara Patton                
 </pre></div>
 </div>
 </div>
@@ -6510,96 +6510,6 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">treelib</span> <span class="kn">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Tree</span>
-
-<span class="c1"># Define the directory structure</span>
-<span class="n">structure</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;Daily Grind&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;Gratitude&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;journal.md&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;Physical Exercise&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;swim.md&quot;</span><span class="p">,</span> <span class="s2">&quot;gym.md&quot;</span><span class="p">,</span> <span class="s2">&quot;jog.md&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;Check on Loved Ones&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;whats_app.md&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;Work&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s2">&quot;PhD Thesis&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;...&quot;</span><span class="p">],</span>
-            <span class="s2">&quot;K08 Grant&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;...&quot;</span><span class="p">],</span>
-            <span class="s2">&quot;R03 Grant Application&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;...&quot;</span><span class="p">],</span>
-            <span class="s2">&quot;Mentoring&quot;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s2">&quot;High School Students&quot;</span><span class="p">:</span> <span class="p">[],</span>
-                <span class="s2">&quot;Undergraduates&quot;</span><span class="p">:</span> <span class="p">[],</span>
-                <span class="s2">&quot;Graduate Students&quot;</span><span class="p">:</span> <span class="p">[],</span>
-                <span class="s2">&quot;Medical Students&quot;</span><span class="p">:</span> <span class="p">[],</span>
-                <span class="s2">&quot;Residents&quot;</span><span class="p">:</span> <span class="p">[],</span>
-                <span class="s2">&quot;Fellows&quot;</span><span class="p">:</span> <span class="p">[],</span>
-                <span class="s2">&quot;Faculty&quot;</span><span class="p">:</span> <span class="p">[],</span>
-                <span class="s2">&quot;Analysts&quot;</span><span class="p">:</span> <span class="p">[],</span>
-                <span class="s2">&quot;Staff&quot;</span><span class="p">:</span> <span class="p">[],</span>
-                <span class="s2">&quot;Collaborators&quot;</span><span class="p">:</span> <span class="p">[],</span>
-                <span class="s2">&quot;Graduates&quot;</span><span class="p">:</span> <span class="p">[],</span>
-            <span class="p">},</span>
-            <span class="s2">&quot;...&quot;</span><span class="p">:</span> <span class="p">[]</span>
-        <span class="p">},</span>
-        <span class="s2">&quot;...&quot;</span><span class="p">:</span> <span class="p">[]</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="c1"># Function to recursively add nodes to the tree</span>
-<span class="k">def</span> <span class="nf">add_nodes</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">parent</span><span class="p">,</span> <span class="n">structure</span><span class="p">):</span>
-    <span class="k">global</span> <span class="n">counter</span>
-    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">structure</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="n">node_name</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">tree</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">node_name</span><span class="p">):</span>
-            <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="n">node_name</span> <span class="o">+=</span> <span class="s2">&quot;_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span> <span class="c1"># Add suffix to make the node name unique</span>
-        <span class="n">tree</span><span class="o">.</span><span class="n">create_node</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">node_name</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">)</span>
-        <span class="c1"># If the value is a list, add file nodes</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="n">value</span><span class="p">:</span>
-                <span class="n">file_node_name</span> <span class="o">=</span> <span class="n">file_name</span> <span class="k">if</span> <span class="n">file_name</span> <span class="o">!=</span> <span class="s2">&quot;...&quot;</span> <span class="k">else</span> <span class="s2">&quot;ellipsis_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
-                <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="n">tree</span><span class="o">.</span><span class="n">create_node</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">file_node_name</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">node_name</span><span class="p">)</span>
-        <span class="c1"># If the value is a dictionary, recurse into it</span>
-        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
-            <span class="n">add_nodes</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">node_name</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
-
-<span class="c1"># Create tree and root node</span>
-<span class="n">tree</span> <span class="o">=</span> <span class="n">Tree</span><span class="p">()</span>
-<span class="n">tree</span><span class="o">.</span><span class="n">create_node</span><span class="p">(</span><span class="s2">&quot;Daily Grind&quot;</span><span class="p">,</span> <span class="s2">&quot;Daily Grind&quot;</span><span class="p">)</span>
-
-<span class="c1"># Add nodes based on the structure</span>
-<span class="n">add_nodes</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="s2">&quot;Daily Grind&quot;</span><span class="p">,</span> <span class="n">structure</span><span class="p">[</span><span class="s2">&quot;Daily Grind&quot;</span><span class="p">])</span>
-
-<span class="c1"># Print the tree</span>
-<span class="n">tree</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">treelib</span> <span class="kn">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Tree</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Define the directory structure</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">structure</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="s2">&quot;Daily Grind&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="s2">&quot;Gratitude&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;journal.md&quot;</span><span class="p">],</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span>     <span class="p">}</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="p">}</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;treelib&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -6671,7 +6581,7 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/544254aa9066b1c77889bd8b38f85cd798ad3ceade79af07e25e9fb812d3a4c6.png" src="_images/544254aa9066b1c77889bd8b38f85cd798ad3ceade79af07e25e9fb812d3a4c6.png" />
+<img alt="_images/6984465ce5fad3fa87bb5f7b2bf7c9673c03cce9fdeabe0c1ea06d9cfaf500ac.png" src="_images/6984465ce5fad3fa87bb5f7b2bf7c9673c03cce9fdeabe0c1ea06d9cfaf500ac.png" />
 </div>
 </div>
 <p>Certainly! If you’re not concerned about exactly which Python environment you’re targeting and you simply want to install the <code class="docutils literal notranslate"><span class="pre">anytree</span></code> package into all discoverable environments on your system, you can create a shell script to attempt this.</p>
@@ -6829,45 +6739,23 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
 </pre></div>
 </div>
 </div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Works locally but not in Jupyter Notebook</span>
-<span class="kn">from</span> <span class="nn">anytree</span> <span class="kn">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">RenderTree</span>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">treelib</span> <span class="kn">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Tree</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Define the directory structure</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">structure</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="s2">&quot;Daily Grind&quot;</span><span class="p">:</span> <span class="p">{</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="s2">&quot;Gratitude&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;journal.md&quot;</span><span class="p">],</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span>     <span class="p">}</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="p">}</span>
 
-<span class="c1"># Define the directory structure</span>
-<span class="n">daily_grind</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Daily Grind&quot;</span><span class="p">)</span>
-<span class="n">gratitude</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Gratitude&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">daily_grind</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;journal.md&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">gratitude</span><span class="p">)</span>
-<span class="n">physical_exercise</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Physical Exercise&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">daily_grind</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;swim.md&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">physical_exercise</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;gym.md&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">physical_exercise</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;jog.md&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">physical_exercise</span><span class="p">)</span>
-<span class="n">check_on_loved_ones</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Check on Loved Ones&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">daily_grind</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;whats_app.md&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">check_on_loved_ones</span><span class="p">)</span>
-<span class="n">work</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Work&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">daily_grind</span><span class="p">)</span>
-<span class="n">phd_thesis</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;PhD Thesis&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">work</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;...&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">phd_thesis</span><span class="p">)</span>
-<span class="n">k08_grant</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;K08 Grant&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">work</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;...&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">k08_grant</span><span class="p">)</span>
-<span class="n">r03_grant_application</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;R03 Grant Application&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">work</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;...&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">r03_grant_application</span><span class="p">)</span>
-<span class="n">mentoring</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Mentoring&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">work</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;High School Students&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Undergraduates&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Graduate Students&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Medical Students&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Residents&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Fellows&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Faculty&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Analysts&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Staff&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Collaborators&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
-<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Graduates&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
-
-<span class="c1"># Render the tree</span>
-<span class="k">for</span> <span class="n">pre</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">RenderTree</span><span class="p">(</span><span class="n">daily_grind</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pre</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
-
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;treelib&#39;
 </pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
