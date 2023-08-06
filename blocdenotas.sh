@@ -6,8 +6,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "fancy: # Path to the Python interpreter that works
-python_path="/usr/local/anaconda3/bin/python""
+git commit -m "install packages in specified python environments"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
