@@ -523,16 +523,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Dillon Eaton                  
-2          Tyler Garcia                  
-3          Elizabeth Allen               
-4          Anthony Brooks                
-5          Marc Young                    
-6          Tyrone Singleton              
-7          Don Robbins                   
-8          Brian Herrera                 
-9          Eric Bennett                  
-10         Kayla Gibbs                   
+1          Jaime Wilcox                  
+2          Kayla Harris                  
+3          James Wilson                  
+4          Molly Mullen                  
+5          Michelle Hunt                 
+6          Daniel Jones                  
+7          Caitlin Horton                
+8          Shannon Snyder                
+9          Dana Henderson                
+10         Alex Hardy                    
 </pre></div>
 </div>
 </div>
@@ -6681,6 +6681,11 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">treelib</span> <span class="kn">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Tree</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
+
+
+
 
 <span class="c1"># Define the directory structure</span>
 <span class="n">structure</span> <span class="o">=</span> <span class="p">{</span>
@@ -6750,19 +6755,36 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">treelib</span> <span class="kn">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Tree</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Define the directory structure</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">structure</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="s2">&quot;Daily Grind&quot;</span><span class="p">:</span> <span class="p">{</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="s2">&quot;Gratitude&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;journal.md&quot;</span><span class="p">],</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span>     <span class="p">}</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span> <span class="p">}</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">sys</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
 
 <span class="ne">ModuleNotFoundError</span>: No module named &#39;treelib&#39;
 </pre></div>
 </div>
 </div>
 </div>
+<p>The <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">python</span></code> command shows that you are using the Python interpreter located at <code class="docutils literal notranslate"><span class="pre">/usr/local/anaconda3/bin/python</span></code>. This means that your terminal session is using the Python version installed through Anaconda in the <code class="docutils literal notranslate"><span class="pre">(base)</span></code> environment.</p>
+<p>Here’s what you can do to ensure that Jupyter Notebook uses the same Python environment:</p>
+<ol class="arabic">
+<li><p><strong>Check the Python Path in Jupyter Notebook</strong>: You can check the Python path being used in the Jupyter Notebook by running:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If the path printed doesn’t match <code class="docutils literal notranslate"><span class="pre">/usr/local/anaconda3/bin/python</span></code>, then Jupyter is using a different Python interpreter.</p>
+</li>
+<li><p><strong>Install Jupyter in the Same Environment</strong>: If you find that Jupyter is using a different Python interpreter, you may want to install Jupyter within the <code class="docutils literal notranslate"><span class="pre">(base)</span></code> environment where <code class="docutils literal notranslate"><span class="pre">treelib</span></code> is installed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>jupyter
+</pre></div>
+</div>
+</li>
+<li><p><strong>Start Jupyter from the Same Environment</strong>: Make sure you are starting Jupyter Notebook from the terminal where the correct Python environment is activated. You can launch Jupyter by simply running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook
+</pre></div>
+</div>
+</li>
+</ol>
+<p>By ensuring that Jupyter Notebook is running in the same Python environment where <code class="docutils literal notranslate"><span class="pre">treelib</span></code> is installed, you should be able to import the library without any issues. If the problem persists, please provide more details, and I’ll be happy to assist further!</p>
 </section>
 </section>
 
