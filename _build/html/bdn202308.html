@@ -523,17 +523,14 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Olivia Knight                 
-2          Rachel Huff                   
-3          Jeffrey Humphrey              
-4          Troy Floyd                    
-5          Tara Reilly                   
-6          Anthony Wise                  
-7          Sean Ramirez                  
-8          Nancy Ward                    
-9          Martha Manning                
-10         David Mccoy                   
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">def</span> <span class="nf">generate_random_names</span><span class="p">(</span><span class="n">num_names</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">()</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;faker&#39;
 </pre></div>
 </div>
 </div>
@@ -6752,14 +6749,37 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">treelib</span> <span class="kn">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Tree</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">sys</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;treelib&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/bin/python
+Daily Grind
+├── ...
+├── Check on Loved Ones
+│   └── whats_app.md
+├── Gratitude
+│   └── journal.md
+├── Physical Exercise
+│   ├── gym.md
+│   ├── jog.md
+│   └── swim.md
+└── Work
+    ├── ...
+    ├── K08 Grant
+    │   └── ...
+    ├── Mentoring
+    │   ├── Analysts
+    │   ├── Collaborators
+    │   ├── Faculty
+    │   ├── Fellows
+    │   ├── Graduate Students
+    │   ├── Graduates
+    │   ├── High School Students
+    │   ├── Medical Students
+    │   ├── Residents
+    │   ├── Staff
+    │   └── Undergraduates
+    ├── PhD Thesis
+    │   └── ...
+    └── R03 Grant Application
+        └── ...
 </pre></div>
 </div>
 </div>
@@ -6832,6 +6852,82 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
 </div>
 </div>
 </div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nbformat</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">change_kernel</span><span class="p">(</span><span class="n">notebook_path</span><span class="p">,</span> <span class="n">kernel_name</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">notebook_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">nb</span> <span class="o">=</span> <span class="n">nbformat</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">as_version</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="n">nb</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">kernelspec</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">kernel_name</span><span class="p">,</span>
+        <span class="s2">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;python&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="n">kernel_name</span>
+    <span class="p">}</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">notebook_path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">nbformat</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">nb</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+<span class="n">kernel_name</span> <span class="o">=</span> <span class="s2">&quot;myenv&quot;</span>
+<span class="n">notebook_directory</span> <span class="o">=</span> <span class="s2">&quot;bloc&quot;</span> <span class="c1"># Path to the directory containing your notebooks</span>
+
+<span class="c1"># This line will search for all .ipynb files within the specified directory and its subdirectories</span>
+<span class="n">notebooks</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">notebook_directory</span><span class="p">,</span> <span class="s1">&#39;**/*.ipynb&#39;</span><span class="p">),</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">notebook</span> <span class="ow">in</span> <span class="n">notebooks</span><span class="p">:</span>
+    <span class="n">change_kernel</span><span class="p">(</span><span class="n">notebook</span><span class="p">,</span> <span class="n">kernel_name</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Updated kernel to &#39;</span><span class="si">{</span><span class="n">kernel_name</span><span class="si">}</span><span class="s2">&#39; for </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">notebooks</span><span class="p">)</span><span class="si">}</span><span class="s2"> notebooks.&quot;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-rw-r--r--@<span class="w"> </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">34105</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">20</span>:09<span class="w"> </span>bloc/bdn202301.ipynb
+-rw-r--r--@<span class="w"> </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">47849</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">20</span>:12<span class="w"> </span>bloc/bdn202302.ipynb
+-rw-r--r--@<span class="w"> </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">     </span><span class="m">7841</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">08</span>:03<span class="w"> </span>bloc/bdn202303.ipynb
+-rw-r--r--@<span class="w"> </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">41438</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">10</span>:55<span class="w"> </span>bloc/bdn202304.ipynb
+-rw-r--r--@<span class="w"> </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">875558</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">27</span><span class="w"> </span><span class="m">12</span>:04<span class="w"> </span>bloc/bdn202305.ipynb
+-rw-r--r--@<span class="w"> </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">  </span><span class="m">2796060</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">13</span>:26<span class="w"> </span>bloc/bdn202306.ipynb
+-rw-r--r--@<span class="w"> </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">738204</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">31</span><span class="w"> </span><span class="m">20</span>:58<span class="w"> </span>bloc/bdn202307.ipynb
+-rw-r--r--@<span class="w"> </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">868015</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">6</span><span class="w"> </span><span class="m">16</span>:13<span class="w"> </span>bloc/bdn202308.ipynb
+-rw-r--r--@<span class="w"> </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">      </span><span class="m">214</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">05</span>:51<span class="w"> </span>bloc/bdn202309.ipynb
+-rw-r--r--@<span class="w"> </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">      </span><span class="m">214</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">05</span>:51<span class="w"> </span>bloc/bdn202310.ipynb
+-rw-r--r--@<span class="w"> </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">      </span><span class="m">214</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">05</span>:51<span class="w"> </span>bloc/bdn202311.ipynb
+-rw-r--r--@<span class="w"> </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">      </span><span class="m">214</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">05</span>:51<span class="w"> </span>bloc/bdn202312.ipynb
+<span class="o">(</span>myenv<span class="o">)</span><span class="w"> </span><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>d@Poseidon<span class="w"> </span><span class="m">1</span>.ontology<span class="w"> </span>%<span class="w"> </span>
+<span class="o">(</span>myenv<span class="o">)</span><span class="w"> </span><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>d@Poseidon<span class="w"> </span><span class="m">1</span>.ontology<span class="w"> </span>%<span class="w"> </span>python<span class="w"> </span>myscript.py
+Updated<span class="w"> </span>kernel<span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;myenv&#39;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="m">489</span><span class="w"> </span>notebooks.
+<span class="o">(</span>myenv<span class="o">)</span><span class="w"> </span><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>d@Poseidon<span class="w"> </span><span class="m">1</span>.ontology<span class="w"> </span>%<span class="w"> </span>
+<span class="o">(</span>myenv<span class="o">)</span><span class="w"> </span><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>d@Poseidon<span class="w"> </span><span class="m">1</span>.ontology<span class="w"> </span>%<span class="w"> </span>ls<span class="w"> </span>-l
+total<span class="w"> </span><span class="m">160</span>
+drwxr-xr-x@<span class="w">  </span><span class="m">21</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">672</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">4</span><span class="w"> </span><span class="m">16</span>:47<span class="w"> </span>alpha
+drwxr-xr-x@<span class="w">  </span><span class="m">14</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">448</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">20</span>:16<span class="w"> </span>be
+drwxr-xr-x@<span class="w">  </span><span class="m">23</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">736</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">6</span><span class="w"> </span><span class="m">01</span>:30<span class="w"> </span>beta
+drwxr-xr-x@<span class="w">  </span><span class="m">21</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">672</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">4</span><span class="w"> </span><span class="m">00</span>:38<span class="w"> </span>blank
+drwxr-xr-x@<span class="w"> </span><span class="m">277</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">8864</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">6</span><span class="w"> </span><span class="m">11</span>:38<span class="w"> </span>bloc
+drwxr-xr-x@<span class="w">  </span><span class="m">22</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">704</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">4</span><span class="w"> </span><span class="m">08</span>:16<span class="w"> </span>canvas
+drwxr-xr-x@<span class="w"> </span><span class="m">280</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">8960</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">3</span><span class="w"> </span><span class="m">18</span>:46<span class="w"> </span>denotas
+drwxr-xr-x@<span class="w">  </span><span class="m">15</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">480</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">20</span>:20<span class="w"> </span>fe
+drwxr-xr-x@<span class="w">  </span><span class="m">15</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">480</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">14</span>:43<span class="w"> </span>fenagas
+-rwxr-xr-x@<span class="w">   </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">1932</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">4</span><span class="w"> </span><span class="m">11</span>:07<span class="w"> </span>gc.sh
+-rwxr-xr-x@<span class="w">   </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">1524</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">5</span><span class="w"> </span><span class="m">19</span>:52<span class="w"> </span>ip.sh
+drwxr-xr-x@<span class="w">  </span><span class="m">29</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">928</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">20</span>:26<span class="w"> </span>libro
+drwxr-xr-x@<span class="w"> </span><span class="m">144</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">4608</span><span class="w"> </span>Jun<span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">23</span>:20<span class="w"> </span>livre
+drwxr-xr-x@<span class="w">  </span><span class="m">14</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">448</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">4</span><span class="w"> </span><span class="m">12</span>:21<span class="w"> </span>llc
+drwxr-xr-x@<span class="w">  </span><span class="m">20</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">640</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">2</span><span class="w"> </span><span class="m">13</span>:18<span class="w"> </span>mb
+drwxr-xr-x@<span class="w">   </span><span class="m">7</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">224</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">6</span><span class="w"> </span><span class="m">07</span>:33<span class="w"> </span>myenv
+-rw-r--r--@<span class="w">   </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">802</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">6</span><span class="w"> </span><span class="m">16</span>:20<span class="w"> </span>myscript.py
+drwxr-xr-x@<span class="w">  </span><span class="m">22</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">704</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">4</span><span class="w"> </span><span class="m">08</span>:16<span class="w"> </span>og
+-rw-r--r--@<span class="w">   </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">633</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">6</span><span class="w"> </span><span class="m">02</span>:34<span class="w"> </span>populate_be.ipynb
+-rw-r--r--@<span class="w">   </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">  </span><span class="m">61138</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">6</span><span class="w"> </span><span class="m">16</span>:14<span class="w"> </span>populate_fe.ipynb
+-rwxr-xr-x@<span class="w">   </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">618</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">6</span><span class="w"> </span><span class="m">16</span>:20<span class="w"> </span>random.sh
+drwxr-xr-x@<span class="w">  </span><span class="m">15</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">480</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">31</span><span class="w"> </span><span class="m">01</span>:05<span class="w"> </span>repos
+drwxr-xr-x@<span class="w">  </span><span class="m">18</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">576</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">10</span>:57<span class="w"> </span>spring
+drwxr-xr-x@<span class="w"> </span><span class="m">139</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">4448</span><span class="w"> </span>Jun<span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">08</span>:29<span class="w"> </span>summer
+drwxr-xr-x@<span class="w">  </span><span class="m">14</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">448</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">31</span><span class="w"> </span><span class="m">06</span>:24<span class="w"> </span>track
+drwxr-xr-x@<span class="w">  </span><span class="m">25</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">800</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">20</span>:21<span class="w"> </span>verano
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -6844,16 +6940,16 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "myenv"
         },
         kernelOptions: {
-            name: "python3",
+            name: "myenv",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'myenv'</script>
 
                 </article>
               

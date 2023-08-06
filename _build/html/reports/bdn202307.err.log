@@ -18,14 +18,36 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-%%R
+from tabulate import tabulate
 
-c(1:100)
+# Define the table data as a list of lists
+data = [
+    ["studentuniverse", "", "mozart", "shaKespeare", "2023-06-15"],
+    ["alaskan", "340733890", "mozart", "shaKespeare", "2023-02-05"],
+    ["frontier", "90102556651", "mozart", "shaKespeare", "2023-07-06"]
+]
+
+# Define the table headers
+headers = ["account", "number", "username", "password", "date"]
+
+# Generate the table
+table = tabulate(data, headers, tablefmt="")
+
+# Print the table
+print(table)
 ------------------
 
------ stderr -----
-UsageError: Cell magic `%%R` not found.
-------------------
 
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[6], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mtabulate[39;00m [38;5;28;01mimport[39;00m tabulate
+[1;32m      3[0m [38;5;66;03m# Define the table data as a list of lists[39;00m
+[1;32m      4[0m data [38;5;241m=[39m [
+[1;32m      5[0m     [[38;5;124m"[39m[38;5;124mstudentuniverse[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mmozart[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mshaKespeare[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124m2023-06-15[39m[38;5;124m"[39m],
+[1;32m      6[0m     [[38;5;124m"[39m[38;5;124malaskan[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124m340733890[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mmozart[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mshaKespeare[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124m2023-02-05[39m[38;5;124m"[39m],
+[1;32m      7[0m     [[38;5;124m"[39m[38;5;124mfrontier[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124m90102556651[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mmozart[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mshaKespeare[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124m2023-07-06[39m[38;5;124m"[39m]
+[1;32m      8[0m ]
 
+[0;31mModuleNotFoundError[0m: No module named 'tabulate'
 
