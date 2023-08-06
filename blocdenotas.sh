@@ -4,11 +4,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "done 🍺
-installation finished.
-==> Changing ownership of paths required by anaconda; your password may be necessary.
-🍺  anaconda was successfully installed!
-(base) d@Poseidon 1.ontology % "
+git commit -m "### 895. python -> anaconda, R"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
