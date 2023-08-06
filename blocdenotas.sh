@@ -4,7 +4,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "### 892. ip.sh-finale; lotta user input required upfront!!"
+git commit -m "### 892. ip.sh-finale; Variant of the script that includes source path for `populate_be.ipynb` file:"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
