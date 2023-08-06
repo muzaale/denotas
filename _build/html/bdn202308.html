@@ -523,14 +523,17 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">def</span> <span class="nf">generate_random_names</span><span class="p">(</span><span class="n">num_names</span><span class="p">):</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">()</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;faker&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
+1          Thomas Obrien                 
+2          Alice Allison                 
+3          Matthew Walker                
+4          Craig Ray                     
+5          Michelle Abbott               
+6          Aaron Lopez                   
+7          Katie Ware                    
+8          Nicholas Case                 
+9          David Turner                  
+10         Jared Kelley                  
 </pre></div>
 </div>
 </div>
@@ -769,30 +772,19 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Type of ML: Supervised
-Pros: Direct feedback, High accuracy with enough data
-Cons: Needs labeled data, Can overfit
-----------------------------------------
-Type of ML: Unsupervised
-Pros: Works with unlabeled data, Can uncover hidden patterns
-Cons: No feedback, Harder to verify results
-----------------------------------------
-Type of ML: Semi-Supervised
-Pros: Leverages large amounts of unlabeled data
-Cons: Needs some labeled data, Combines challenges of both supervised and unsupervised
-----------------------------------------
-Type of ML: Reinforcement
-Pros: Adapts to dynamic environments, Potential for real-time learning
-Cons: Requires careful reward design, Can be computationally expensive
-----------------------------------------
-Type of ML: Transfer
-Pros: Saves training time, Can leverage pre-trained models
-Cons: Not always straightforward, Domain differences can be an issue
-----------------------------------------
-Type of ML: GANs
-Pros: Generates new data, Can achieve impressive realism
-Cons: Training can be unstable, May require lots of data and time
-----------------------------------------
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="s2">&quot;Type of ML&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Supervised&quot;</span><span class="p">,</span> <span class="s2">&quot;Unsupervised&quot;</span><span class="p">,</span> <span class="s2">&quot;Semi-Supervised&quot;</span><span class="p">,</span> <span class="s2">&quot;Reinforcement&quot;</span><span class="p">,</span> <span class="s2">&quot;Transfer&quot;</span><span class="p">,</span> <span class="s2">&quot;GANs&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="s2">&quot;Pros&quot;</span><span class="p">:</span> <span class="p">[</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="p">}</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
 </pre></div>
 </div>
 </div>

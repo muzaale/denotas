@@ -18,39 +18,47 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from faker import Faker
+import pandas as pd
 
-def generate_random_names(num_names):
-    fake = Faker()
-    names = [[fake.first_name(), fake.last_name()] for _ in range(num_names)]
-    return names
+data = {
+    "Type of ML": ["Supervised", "Unsupervised", "Semi-Supervised", "Reinforcement", "Transfer", "GANs"],
+    "Pros": [
+        "Direct feedback, High accuracy with enough data",
+        "Works with unlabeled data, Can uncover hidden patterns",
+        "Leverages large amounts of unlabeled data",
+        "Adapts to dynamic environments, Potential for real-time learning",
+        "Saves training time, Can leverage pre-trained models",
+        "Generates new data, Can achieve impressive realism"
+    ],
+    "Cons": [
+        "Needs labeled data, Can overfit",
+        "No feedback, Harder to verify results",
+        "Needs some labeled data, Combines challenges of both supervised and unsupervised",
+        "Requires careful reward design, Can be computationally expensive",
+        "Not always straightforward, Domain differences can be an issue",
+        "Training can be unstable, May require lots of data and time"
+    ]
+}
 
-def create_table(names):
-    header = ["Number", "Name"]
-    table = []
-    table.append(header)
-    for idx, name in enumerate(names, start=1):
-        full_name = " ".join(name)
-        row = [idx, full_name]
-        table.append(row)
+df = pd.DataFrame(data)
 
-    # Printing the table
-    for row in table:
-        print(f"{row[0]:<10} {row[1]:<30}")
-
-# Generate 10 random names and call the function
-random_names = generate_random_names(10)
-create_table(random_names)
+for index, row in df.iterrows():
+    print(f"Type of ML: {row['Type of ML']}\nPros: {row['Pros']}\nCons: {row['Cons']}\n{'-'*40}")
 
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[1], line 1[0m
-[0;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mfaker[39;00m [38;5;28;01mimport[39;00m Faker
-[1;32m      3[0m [38;5;28;01mdef[39;00m [38;5;21mgenerate_random_names[39m(num_names):
-[1;32m      4[0m     fake [38;5;241m=[39m Faker()
+Cell [0;32mIn[3], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+[1;32m      3[0m data [38;5;241m=[39m {
+[1;32m      4[0m     [38;5;124m"[39m[38;5;124mType of ML[39m[38;5;124m"[39m: [[38;5;124m"[39m[38;5;124mSupervised[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mUnsupervised[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mSemi-Supervised[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mReinforcement[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mTransfer[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mGANs[39m[38;5;124m"[39m],
+[1;32m      5[0m     [38;5;124m"[39m[38;5;124mPros[39m[38;5;124m"[39m: [
+[0;32m   (...)[0m
+[1;32m     20[0m     ]
+[1;32m     21[0m }
+[1;32m     23[0m df [38;5;241m=[39m pd[38;5;241m.[39mDataFrame(data)
 
-[0;31mModuleNotFoundError[0m: No module named 'faker'
+[0;31mModuleNotFoundError[0m: No module named 'pandas'
 

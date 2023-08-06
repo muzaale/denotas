@@ -6,7 +6,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "game changer? python -m ipykernel install --user --name=myenv. lets watch & see"
+git commit -m "success!!! 897. myenv ... see .py script thats globally applied it to all notebooks"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
