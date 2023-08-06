@@ -6,7 +6,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "try tree lib after installing directed packages"
+git commit -m "treelib works, anytree deosn't"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
