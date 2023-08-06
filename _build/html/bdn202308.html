@@ -468,6 +468,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agift2me">893. agift2me</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">894. agift2me</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">895. python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dailygrind">896. dailygrind</a></li>
 </ul>
 </li>
 </ul>
@@ -522,16 +523,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Randy Torres                  
-2          Angel Rivas                   
-3          Glenn Collins                 
-4          Clayton Love                  
-5          Andre Hampton                 
-6          Crystal Allen                 
-7          Sally Doyle                   
-8          Anthony Sherman               
-9          Angela Snyder                 
-10         Allison Garcia                
+1          Jon Brown                     
+2          Charles Nelson                
+3          Janice Odonnell               
+4          Victor Olson                  
+5          Susan Lopez                   
+6          Benjamin Martinez             
+7          Julie Johnson                 
+8          Austin Miller                 
+9          Kristin Davis                 
+10         Michael Crawford              
 </pre></div>
 </div>
 </div>
@@ -6500,6 +6501,148 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
 </pre></div>
 </div>
 </section>
+<section id="dailygrind">
+<h2>896. dailygrind<a class="headerlink" href="#dailygrind" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">anytree</span> <span class="kn">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">RenderTree</span>
+
+<span class="c1"># Define the directory structure</span>
+<span class="n">daily_grind</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Daily Grind&quot;</span><span class="p">)</span>
+<span class="n">gratitude</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Gratitude&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">daily_grind</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;journal.md&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">gratitude</span><span class="p">)</span>
+<span class="n">physical_exercise</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Physical Exercise&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">daily_grind</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;swim.md&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">physical_exercise</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;gym.md&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">physical_exercise</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;jog.md&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">physical_exercise</span><span class="p">)</span>
+<span class="n">check_on_loved_ones</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Check on Loved Ones&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">daily_grind</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;whats_app.md&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">check_on_loved_ones</span><span class="p">)</span>
+<span class="n">work</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Work&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">daily_grind</span><span class="p">)</span>
+<span class="n">phd_thesis</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;PhD Thesis&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">work</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;...&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">phd_thesis</span><span class="p">)</span>
+<span class="n">k08_grant</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;K08 Grant&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">work</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;...&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">k08_grant</span><span class="p">)</span>
+<span class="n">r03_grant_application</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;R03 Grant Application&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">work</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;...&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">r03_grant_application</span><span class="p">)</span>
+<span class="n">mentoring</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Mentoring&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">work</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;High School Students&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Undergraduates&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Graduate Students&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Medical Students&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Residents&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Fellows&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Faculty&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Analysts&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Staff&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Collaborators&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
+<span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Graduates&quot;</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">mentoring</span><span class="p">)</span>
+
+<span class="c1"># Render the tree</span>
+<span class="k">for</span> <span class="n">pre</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">RenderTree</span><span class="p">(</span><span class="n">daily_grind</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pre</span><span class="p">,</span> <span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">anytree</span> <span class="kn">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">RenderTree</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Define the directory structure</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">daily_grind</span> <span class="o">=</span> <span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Daily Grind&quot;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;anytree&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Set seed for layout</span>
+<span class="n">seed</span> <span class="o">=</span> <span class="mi">42</span>
+
+<span class="c1"># Directory structure</span>
+<span class="n">structure</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Daily Grind&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Gratitude&quot;</span><span class="p">,</span> <span class="s2">&quot;Physical Exercise&quot;</span><span class="p">,</span> <span class="s2">&quot;Check On Loved Ones&quot;</span><span class="p">,</span> <span class="s2">&quot;Work&quot;</span><span class="p">,</span> <span class="s2">&quot;Music&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Gratitude&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Journal&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Physical Exercise&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Swim&quot;</span><span class="p">,</span> <span class="s2">&quot;Gym&quot;</span><span class="p">,</span> <span class="s2">&quot;Jog&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Check On Loved Ones&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;WhatsApp&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Work&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;PhD Thesis&quot;</span><span class="p">,</span> <span class="s2">&quot;K08 Grant&quot;</span><span class="p">,</span> <span class="s2">&quot;R03 Grant Application&quot;</span><span class="p">,</span> <span class="s2">&quot;Mentoring&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;PhD Thesis&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;...&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;K08 Grant&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;...&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;R03 Grant Application&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;...&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Mentoring&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;High School Students&quot;</span><span class="p">,</span> <span class="s2">&quot;Undergraduates&quot;</span><span class="p">,</span> <span class="s2">&quot;Graduate Students&quot;</span><span class="p">,</span> <span class="s2">&quot;Medical Students&quot;</span><span class="p">,</span> <span class="s2">&quot;Residents&quot;</span><span class="p">,</span> <span class="s2">&quot;Fellows&quot;</span><span class="p">,</span> <span class="s2">&quot;Faculty&quot;</span><span class="p">,</span> <span class="s2">&quot;Analysts&quot;</span><span class="p">,</span> <span class="s2">&quot;Staff&quot;</span><span class="p">,</span> <span class="s2">&quot;Collaborators&quot;</span><span class="p">,</span> <span class="s2">&quot;Graduates&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Music&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Gospel&quot;</span><span class="p">,</span> <span class="s2">&quot;Piano&quot;</span><span class="p">,</span> <span class="s2">&quot;Voice&quot;</span><span class="p">,</span> <span class="s2">&quot;Hymns&quot;</span><span class="p">,</span> <span class="s2">&quot;Classical&quot;</span><span class="p">,</span> <span class="s2">&quot;Annuŋŋamya&quot;</span><span class="p">],</span>
+<span class="p">}</span>
+
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+<span class="n">node_colors</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># Function to capitalize first letter of each word</span>
+<span class="k">def</span> <span class="nf">capitalize_name</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">))</span>
+
+<span class="c1"># Add parent nodes with a default color</span>
+<span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="n">structure</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="n">parent_name</span> <span class="o">=</span> <span class="n">capitalize_name</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">))</span>
+    <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">parent_name</span><span class="p">)</span>
+    <span class="n">node_colors</span><span class="p">[</span><span class="n">parent_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lightblue&#39;</span>
+
+<span class="k">for</span> <span class="n">parent</span><span class="p">,</span> <span class="n">children</span> <span class="ow">in</span> <span class="n">structure</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">parent_name</span> <span class="o">=</span> <span class="n">capitalize_name</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">children</span><span class="p">:</span>
+        <span class="n">child_name</span> <span class="o">=</span> <span class="n">capitalize_name</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">))</span>
+        <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">parent_name</span><span class="p">,</span> <span class="n">child_name</span><span class="p">)</span>
+        <span class="c1"># Override colors based on node type</span>
+        <span class="k">if</span> <span class="n">child_name</span> <span class="ow">in</span> <span class="n">structure</span><span class="p">[</span><span class="s2">&quot;Physical Exercise&quot;</span><span class="p">]:</span>
+            <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lightgreen&#39;</span>
+        <span class="k">elif</span> <span class="n">child_name</span> <span class="ow">in</span> <span class="n">structure</span><span class="p">[</span><span class="s2">&quot;Gratitude&quot;</span><span class="p">]:</span>
+            <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lavender&#39;</span>
+        <span class="k">elif</span> <span class="n">child_name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;PhD Thesis&quot;</span><span class="p">,</span> <span class="s2">&quot;K08 Grant&quot;</span><span class="p">,</span> <span class="s2">&quot;R03 Grant Application&quot;</span><span class="p">]:</span>
+            <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lightpink&#39;</span>
+        <span class="k">elif</span> <span class="n">child_name</span> <span class="ow">in</span> <span class="n">structure</span><span class="p">[</span><span class="s2">&quot;Music&quot;</span><span class="p">]:</span>
+            <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lightyellow&#39;</span>
+        <span class="k">elif</span> <span class="n">child_name</span> <span class="ow">in</span> <span class="n">structure</span><span class="p">[</span><span class="s2">&quot;Check On Loved Ones&quot;</span><span class="p">]:</span>
+            <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lightcoral&#39;</span>
+        <span class="k">elif</span> <span class="n">child_name</span> <span class="ow">in</span> <span class="n">structure</span><span class="p">[</span><span class="s2">&quot;Mentoring&quot;</span><span class="p">]:</span>
+            <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lightskyblue&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lightblue&#39;</span>
+
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">node_colors</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">()]</span>
+
+<span class="c1"># Set figure size</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+
+<span class="c1"># Draw the graph</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span> <span class="c1"># Boundary color set here</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/6984465ce5fad3fa87bb5f7b2bf7c9673c03cce9fdeabe0c1ea06d9cfaf500ac.png" src="_images/6984465ce5fad3fa87bb5f7b2bf7c9673c03cce9fdeabe0c1ea06d9cfaf500ac.png" />
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -6666,6 +6809,7 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agift2me">893. agift2me</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">894. agift2me</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">895. python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dailygrind">896. dailygrind</a></li>
 </ul>
 </li>
 </ul>
