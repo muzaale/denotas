@@ -523,16 +523,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Brandi Williams               
-2          Joshua Ayers                  
-3          Jeff Curtis                   
-4          Cynthia Harvey                
-5          Samantha Aguirre              
-6          Jasmine Shepard               
-7          Brandon Reed                  
-8          Mary Wilson                   
-9          Keith Gibson                  
-10         Michelle Johnson              
+1          David Zhang                   
+2          Erica Lopez                   
+3          Brittany Garcia               
+4          James Cantu                   
+5          Anne Castro                   
+6          Vanessa Patterson             
+7          Matthew Anderson              
+8          Ashley Bennett                
+9          Marcus Vasquez                
+10         Steven Moore                  
 </pre></div>
 </div>
 </div>
@@ -6674,6 +6674,35 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
 </div>
 <p>You would likely need to run this script with administrator permissions (e.g., using <code class="docutils literal notranslate"><span class="pre">sudo</span></code> on Linux) since some Python environments may be installed in system directories.</p>
 <p><strong>Important Note</strong>: This script attempts to find Python executables in common installation locations, and it may attempt to change environments that should not be altered (e.g., system Python). It’s meant as a “last resort” solution when the environment has become difficult to manage, and it should be used with an understanding of the potential impacts on your system. It may also require adaptation based on your specific system setup and preferences. Always back up important data and configurations before performing broad system changes like this.</p>
+<hr class="docutils" />
+<p>Certainly! If the path to the Python interpreter that you want to target is within a virtual environment (e.g., <code class="docutils literal notranslate"><span class="pre">myenv/bin/python</span></code>), you can update the script to point to that specific path. Here’s an updated version of the script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Path to the Python interpreter within your virtual environment</span>
+<span class="nv">python_path</span><span class="o">=</span><span class="s2">&quot;myenv/bin/python&quot;</span>
+
+<span class="c1"># Check if the specified path is indeed a Python 3 interpreter</span>
+<span class="k">if</span><span class="w"> </span><span class="nv">$python_path</span><span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import sys; exit(sys.version_info &lt; (3,))&#39;</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Found Python 3 interpreter at </span><span class="nv">$python_path</span><span class="s2">&quot;</span>
+
+<span class="w">    </span><span class="c1"># Install anytree using pip corresponding to the specified Python interpreter</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Installing anytree for </span><span class="nv">$python_path</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nv">$python_path</span><span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>anytree
+<span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;The specified path does not point to a Python 3 interpreter. Aborting.&quot;</span>
+<span class="k">fi</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Done.&quot;</span>
+</pre></div>
+</div>
+<p>Make sure to replace <code class="docutils literal notranslate"><span class="pre">myenv</span></code> with the full path to your virtual environment if it’s not in the same directory as the script.</p>
+<p>Save this script to a file (e.g., <code class="docutils literal notranslate"><span class="pre">install-anytree.sh</span></code>), make it executable, and then run it:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span>install-anytree.sh
+./install-anytree.sh
+</pre></div>
+</div>
+<p>This will install the <code class="docutils literal notranslate"><span class="pre">anytree</span></code> package specifically for the Python interpreter inside the virtual environment you’ve specified.</p>
+<p>If you’re running your Jupyter Book within this virtual environment, you should now be able to import the <code class="docutils literal notranslate"><span class="pre">anytree</span></code> package without any errors. Make sure that your Jupyter Book is using this specific environment when building, and you should be good to go!</p>
 </section>
 </section>
 
