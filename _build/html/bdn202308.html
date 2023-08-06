@@ -467,6 +467,16 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">08/06/2023</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agift2me">893. agift2me</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">894. agift2me</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">895. python</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-homebrew-and-anaconda-on-a-mac">Installing Homebrew and Anaconda on a Mac</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-homebrew">Install Homebrew</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-anaconda-through-homebrew">Install Anaconda through Homebrew</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-use-bash-instead-of-zsh-replace-steps-2-and-3-from-above-with-the-following">If you use bash instead of zsh, replace steps 2 and 3 from above with the following:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-ve-already-installed-anaconda-from-the-installation-file-from-anaconda-org">If you’ve already installed anaconda from the installation file from anaconda.org</a></li>
 </ul>
 </li>
 </ul>
@@ -521,16 +531,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Austin Webb                   
-2          Ashley Goodman                
-3          Aaron Wood                    
-4          Joshua Montgomery             
-5          Brandon Phillips              
-6          David Huynh                   
-7          Allison Rice                  
-8          Ryan Bautista                 
-9          Paul Garcia                   
-10         Wayne Bell                    
+1          Travis Ryan                   
+2          Susan Saunders                
+3          Vanessa Jackson               
+4          Anthony Miller                
+5          Marcus Smith                  
+6          Mallory Simmons               
+7          David White                   
+8          Kathleen Smith                
+9          Stephanie Miller              
+10         Randy Scott                   
 </pre></div>
 </div>
 </div>
@@ -6451,6 +6461,63 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 </div>
 </div>
 </section>
+<section id="python">
+<h2>895. python<a class="headerlink" href="#python" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://gist.github.com/ryanorsinger/7d89ad58901b5590ec3e1f23d7b9f887">anaconda</a></p></li>
+<li><p>conda</p></li>
+<li><p>pandas</p></li>
+<li><p>etc.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>done
+installation finished.
+==&gt; Changing ownership of paths required by anaconda; your password may be necessary.
+🍺  anaconda was successfully installed!
+(base) d@Poseidon 1.ontology %    
+</pre></div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="installing-homebrew-and-anaconda-on-a-mac">
+<h1>Installing Homebrew and Anaconda on a Mac<a class="headerlink" href="#installing-homebrew-and-anaconda-on-a-mac" title="Permalink to this heading">#</a></h1>
+<section id="install-homebrew">
+<h2>Install Homebrew<a class="headerlink" href="#install-homebrew" title="Permalink to this heading">#</a></h2>
+<p>Run the following command on your terminal to install Homebrew.
+Homebrew is a package manager for Macs and is used to install useful development tools and software.</p>
+<p><code class="docutils literal notranslate"><span class="pre">/bin/bash</span> <span class="pre">-c</span> <span class="pre">&quot;$(curl</span> <span class="pre">-fsSL</span> <span class="pre">https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span></code></p>
+</section>
+<section id="install-anaconda-through-homebrew">
+<h2>Install Anaconda through Homebrew<a class="headerlink" href="#install-anaconda-through-homebrew" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">--cask</span> <span class="pre">anaconda</span></code> to install Anaconda</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">'export</span> <span class="pre">PATH=/usr/local/anaconda3/bin:$PATH'</span> <span class="pre">&gt;&gt;</span> <span class="pre">~/.zshrc</span></code> from your terminal</p></li>
+<li><p>Also run <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">'export</span> <span class="pre">PATH=/opt/homebrew/anaconda3/bin:$PATH'</span> <span class="pre">&gt;&gt;</span> <span class="pre">~/.zshrc</span></code> from your terminal</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/.zshrc</span></code> from your terminal</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">conda</span></code> to ensure that anaconda linked correctly.</p></li>
+</ol>
+<section id="if-you-use-bash-instead-of-zsh-replace-steps-2-and-3-from-above-with-the-following">
+<h3>If you use bash instead of zsh, replace steps 2 and 3 from above with the following:<a class="headerlink" href="#if-you-use-bash-instead-of-zsh-replace-steps-2-and-3-from-above-with-the-following" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">'export</span> <span class="pre">PATH=/usr/local/anaconda3/bin:$PATH'</span> <span class="pre">&gt;&gt;</span> <span class="pre">~/.bash_profile</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">'export</span> <span class="pre">PATH=/opt/homebrew/anaconda3/bin:$PATH'</span> <span class="pre">&gt;&gt;</span> <span class="pre">~/.bash_profile</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/.bash_profile</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="if-you-ve-already-installed-anaconda-from-the-installation-file-from-anaconda-org">
+<h2>If you’ve already installed anaconda from the installation file from <a class="reference external" href="http://anaconda.org">anaconda.org</a><a class="headerlink" href="#if-you-ve-already-installed-anaconda-from-the-installation-file-from-anaconda-org" title="Permalink to this heading">#</a></h2>
+<p>If you installed Anaconda for only this user, run the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">'export</span> <span class="pre">PATH=/Users/$USER/anaconda3/bin:$PATH'</span> <span class="pre">&gt;&gt;</span> <span class="pre">~/.zshrc</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">'export</span> <span class="pre">PATH=/opt/homebrew/anaconda3/bin:$PATH'</span> <span class="pre">&gt;&gt;</span> <span class="pre">~/.zshrc</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/.zshrc</span></code></p></li>
+</ul>
+<p>If you installed Anaconda for all users on your computer, then run the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">'export</span> <span class="pre">PATH=/opt/anaconda3/bin:$PATH'</span> <span class="pre">&gt;&gt;</span> <span class="pre">~/.zshrc</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">~/.zshrc</span></code></p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -6616,6 +6683,16 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">08/06/2023</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agift2me">893. agift2me</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">894. agift2me</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">895. python</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-homebrew-and-anaconda-on-a-mac">Installing Homebrew and Anaconda on a Mac</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-homebrew">Install Homebrew</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-anaconda-through-homebrew">Install Anaconda through Homebrew</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-use-bash-instead-of-zsh-replace-steps-2-and-3-from-above-with-the-following">If you use bash instead of zsh, replace steps 2 and 3 from above with the following:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-you-ve-already-installed-anaconda-from-the-installation-file-from-anaconda-org">If you’ve already installed anaconda from the installation file from anaconda.org</a></li>
 </ul>
 </li>
 </ul>
