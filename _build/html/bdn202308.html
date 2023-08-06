@@ -523,16 +523,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Jon Brown                     
-2          Charles Nelson                
-3          Janice Odonnell               
-4          Victor Olson                  
-5          Susan Lopez                   
-6          Benjamin Martinez             
-7          Julie Johnson                 
-8          Austin Miller                 
-9          Kristin Davis                 
-10         Michael Crawford              
+1          George Jackson                
+2          Jessica Curry                 
+3          Steven Alexander              
+4          Jennifer Smith                
+5          Jessica Clark                 
+6          Adam Garcia                   
+7          Thomas Morgan                 
+8          Kenneth Stone                 
+9          Emily Crawford                
+10         Maria Watson                  
 </pre></div>
 </div>
 </div>
@@ -6642,6 +6642,37 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
 <img alt="_images/6984465ce5fad3fa87bb5f7b2bf7c9673c03cce9fdeabe0c1ea06d9cfaf500ac.png" src="_images/6984465ce5fad3fa87bb5f7b2bf7c9673c03cce9fdeabe0c1ea06d9cfaf500ac.png" />
 </div>
 </div>
+<p>Certainly! If you’re not concerned about exactly which Python environment you’re targeting and you simply want to install the <code class="docutils literal notranslate"><span class="pre">anytree</span></code> package into all discoverable environments on your system, you can create a shell script to attempt this.</p>
+<p>Below is a bash script that finds all Python executables on your system and then uses them to install the <code class="docutils literal notranslate"><span class="pre">anytree</span></code> package via <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
+<p>Please be aware that this script is somewhat aggressive and may change the environments of other projects on your system. Use with caution and understand what it’s doing before you execute it.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Find all python executables</span>
+<span class="nv">pythons</span><span class="o">=</span><span class="k">$(</span>find<span class="w"> </span>/usr<span class="w"> </span>/home<span class="w"> </span>/anaconda<span class="w"> </span>/opt<span class="w"> </span>-name<span class="w"> </span><span class="s1">&#39;python&#39;</span><span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="k">)</span>
+
+<span class="c1"># Iterate through the found Python executables</span>
+<span class="k">for</span><span class="w"> </span>python<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nv">$pythons</span>
+<span class="k">do</span>
+<span class="w">  </span><span class="c1"># Check if the executable corresponds to a Python interpreter</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="nv">$python</span><span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;import sys; exit(sys.version_info &lt; (3,))&#39;</span><span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Found Python 3 interpreter at </span><span class="nv">$python</span><span class="s2">&quot;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1"># Try to install anytree using pip corresponding to the found Python interpreter</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Installing anytree for </span><span class="nv">$python</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nv">$python</span><span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>anytree
+<span class="w">  </span><span class="k">fi</span>
+<span class="k">done</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Done installing anytree for all found Python 3 interpreters.&quot;</span>
+</pre></div>
+</div>
+<p>To use this script, you would save it to a file (e.g., <code class="docutils literal notranslate"><span class="pre">install-anytree.sh</span></code>), make it executable, and then run it:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span>install-anytree.sh
+./install-anytree.sh
+</pre></div>
+</div>
+<p>You would likely need to run this script with administrator permissions (e.g., using <code class="docutils literal notranslate"><span class="pre">sudo</span></code> on Linux) since some Python environments may be installed in system directories.</p>
+<p><strong>Important Note</strong>: This script attempts to find Python executables in common installation locations, and it may attempt to change environments that should not be altered (e.g., system Python). It’s meant as a “last resort” solution when the environment has become difficult to manage, and it should be used with an understanding of the potential impacts on your system. It may also require adaptation based on your specific system setup and preferences. Always back up important data and configurations before performing broad system changes like this.</p>
 </section>
 </section>
 
