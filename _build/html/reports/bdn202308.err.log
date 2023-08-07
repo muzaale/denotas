@@ -18,82 +18,82 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import os
-from music21 import *
-from IPython.display import Image, display
+from treelib import Node, Tree
+import sys
+print(sys.executable)
 
-# Set the path to the MuseScore executable
-musescore_path = '/Applications/MuseScore 4.app/Contents/MacOS/mscore'
-us = environment.UserSettings()
-us['musescoreDirectPNGPath'] = musescore_path
 
-# Create a score
-score = stream.Score()
 
-# Create a tempo
-tempo = tempo.MetronomeMark(number=120)
 
-# Create a key signature (C major)
-key_signature = key.KeySignature(0)
+# Define the directory structure
+structure = {
+    "Daily Grind": {
+        "Gratitude": ["journal.md"],
+        "Physical Exercise": ["swim.md", "gym.md", "jog.md"],
+        "Check on Loved Ones": ["whats_app.md"],
+        "Work": {
+            "PhD Thesis": ["..."],
+            "K08 Grant": ["..."],
+            "R03 Grant Application": ["..."],
+            "Mentoring": {
+                "High School Students": [],
+                "Undergraduates": [],
+                "Graduate Students": [],
+                "Medical Students": [],
+                "Residents": [],
+                "Fellows": [],
+                "Faculty": [],
+                "Analysts": [],
+                "Staff": [],
+                "Collaborators": [],
+                "Graduates": [],
+            },
+            "...": []
+        },
+        "...": []
+    }
+}
 
-# Create a time signature (4/4)
-time_signature = meter.TimeSignature('4/4')
+counter = 0
 
-# Create a music stream
-music_stream = stream.Stream()
+# Function to recursively add nodes to the tree
+def add_nodes(tree, parent, structure):
+    global counter
+    for key, value in structure.items():
+        node_name = key.replace(" ", "_")
+        if tree.contains(node_name):
+            counter += 1
+            node_name += "_" + str(counter) # Add suffix to make the node name unique
+        tree.create_node(key, node_name, parent=parent)
+        # If the value is a list, add file nodes
+        if isinstance(value, list):
+            for file_name in value:
+                file_node_name = file_name if file_name != "..." else "ellipsis_" + str(counter)
+                counter += 1
+                tree.create_node(file_name, file_node_name, parent=node_name)
+        # If the value is a dictionary, recurse into it
+        elif isinstance(value, dict):
+            add_nodes(tree, node_name, value)
 
-# Add the tempo, key signature, and time signature to the music stream
-music_stream.append(tempo)
-music_stream.append(key_signature)
-music_stream.append(time_signature)
+# Create tree and root node
+tree = Tree()
+tree.create_node("Daily Grind", "Daily Grind")
 
-# Define a list of note names
-notes = ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'C5']
+# Add nodes based on the structure
+add_nodes(tree, "Daily Grind", structure["Daily Grind"])
 
-# Create notes and add them to the music stream
-for note_name in notes:
-    new_note = note.Note(note_name, quarterLength=1)
-    music_stream.append(new_note)
-
-# Define a list of chords
-chords = [chord.Chord(['C', 'E', 'G']), chord.Chord(['F', 'A', 'C']), chord.Chord(['G', 'B', 'D'])]
-
-# Add chords to the music stream
-for c in chords:
-    music_stream.append(c)
-
-# Add the music stream to the score
-score.insert(0, music_stream)
-
-# Check the contents of the music_stream
-print(music_stream.show('text'))
-
-# Save the score as MusicXML and display it as a PNG image
-# musicxml_path = '/tmp/music21_example.musicxml'
-# png_path = '/tmp/music21_example.png'
-# score.write('musicxml.png', fp=musicxml_path)
-
-# Convert the MusicXML to a PNG image
-conv = converter.subConverters.ConverterMusicXML()
-# conv.write(score, 'png', png_path)
-
-# Display the PNG image
-# display(Image(filename=png_path))
-
-# Clean up temporary files
-# os.remove(musicxml_path)
-# os.remove(png_path)
+# Print the tree
+tree.show()
 
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[4], line 2[0m
-[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
-[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmusic21[39;00m [38;5;28;01mimport[39;00m [38;5;241m*[39m
-[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mIPython[39;00m[38;5;21;01m.[39;00m[38;5;21;01mdisplay[39;00m [38;5;28;01mimport[39;00m Image, display
-[1;32m      5[0m [38;5;66;03m# Set the path to the MuseScore executable[39;00m
+Cell [0;32mIn[7], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mfrom[39;00m [38;5;21;01mtreelib[39;00m [38;5;28;01mimport[39;00m Node, Tree
+[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
+[1;32m      3[0m [38;5;28mprint[39m(sys[38;5;241m.[39mexecutable)
 
-[0;31mModuleNotFoundError[0m: No module named 'music21'
+[0;31mModuleNotFoundError[0m: No module named 'treelib'
 
