@@ -18,47 +18,82 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import pandas as pd
+import os
+from music21 import *
+from IPython.display import Image, display
 
-data = {
-    "Type of ML": ["Supervised", "Unsupervised", "Semi-Supervised", "Reinforcement", "Transfer", "GANs"],
-    "Pros": [
-        "Direct feedback, High accuracy with enough data",
-        "Works with unlabeled data, Can uncover hidden patterns",
-        "Leverages large amounts of unlabeled data",
-        "Adapts to dynamic environments, Potential for real-time learning",
-        "Saves training time, Can leverage pre-trained models",
-        "Generates new data, Can achieve impressive realism"
-    ],
-    "Cons": [
-        "Needs labeled data, Can overfit",
-        "No feedback, Harder to verify results",
-        "Needs some labeled data, Combines challenges of both supervised and unsupervised",
-        "Requires careful reward design, Can be computationally expensive",
-        "Not always straightforward, Domain differences can be an issue",
-        "Training can be unstable, May require lots of data and time"
-    ]
-}
+# Set the path to the MuseScore executable
+musescore_path = '/Applications/MuseScore 4.app/Contents/MacOS/mscore'
+us = environment.UserSettings()
+us['musescoreDirectPNGPath'] = musescore_path
 
-df = pd.DataFrame(data)
+# Create a score
+score = stream.Score()
 
-for index, row in df.iterrows():
-    print(f"Type of ML: {row['Type of ML']}\nPros: {row['Pros']}\nCons: {row['Cons']}\n{'-'*40}")
+# Create a tempo
+tempo = tempo.MetronomeMark(number=120)
+
+# Create a key signature (C major)
+key_signature = key.KeySignature(0)
+
+# Create a time signature (4/4)
+time_signature = meter.TimeSignature('4/4')
+
+# Create a music stream
+music_stream = stream.Stream()
+
+# Add the tempo, key signature, and time signature to the music stream
+music_stream.append(tempo)
+music_stream.append(key_signature)
+music_stream.append(time_signature)
+
+# Define a list of note names
+notes = ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'C5']
+
+# Create notes and add them to the music stream
+for note_name in notes:
+    new_note = note.Note(note_name, quarterLength=1)
+    music_stream.append(new_note)
+
+# Define a list of chords
+chords = [chord.Chord(['C', 'E', 'G']), chord.Chord(['F', 'A', 'C']), chord.Chord(['G', 'B', 'D'])]
+
+# Add chords to the music stream
+for c in chords:
+    music_stream.append(c)
+
+# Add the music stream to the score
+score.insert(0, music_stream)
+
+# Check the contents of the music_stream
+print(music_stream.show('text'))
+
+# Save the score as MusicXML and display it as a PNG image
+# musicxml_path = '/tmp/music21_example.musicxml'
+# png_path = '/tmp/music21_example.png'
+# score.write('musicxml.png', fp=musicxml_path)
+
+# Convert the MusicXML to a PNG image
+conv = converter.subConverters.ConverterMusicXML()
+# conv.write(score, 'png', png_path)
+
+# Display the PNG image
+# display(Image(filename=png_path))
+
+# Clean up temporary files
+# os.remove(musicxml_path)
+# os.remove(png_path)
 
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[3], line 1[0m
-[0;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
-[1;32m      3[0m data [38;5;241m=[39m {
-[1;32m      4[0m     [38;5;124m"[39m[38;5;124mType of ML[39m[38;5;124m"[39m: [[38;5;124m"[39m[38;5;124mSupervised[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mUnsupervised[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mSemi-Supervised[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mReinforcement[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mTransfer[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mGANs[39m[38;5;124m"[39m],
-[1;32m      5[0m     [38;5;124m"[39m[38;5;124mPros[39m[38;5;124m"[39m: [
-[0;32m   (...)[0m
-[1;32m     20[0m     ]
-[1;32m     21[0m }
-[1;32m     23[0m df [38;5;241m=[39m pd[38;5;241m.[39mDataFrame(data)
+Cell [0;32mIn[4], line 2[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mos[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmusic21[39;00m [38;5;28;01mimport[39;00m [38;5;241m*[39m
+[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mIPython[39;00m[38;5;21;01m.[39;00m[38;5;21;01mdisplay[39;00m [38;5;28;01mimport[39;00m Image, display
+[1;32m      5[0m [38;5;66;03m# Set the path to the MuseScore executable[39;00m
 
-[0;31mModuleNotFoundError[0m: No module named 'pandas'
+[0;31mModuleNotFoundError[0m: No module named 'music21'
 

@@ -472,6 +472,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myenv">897. myenv</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">898. fena</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#idiomatic">899. idiomatic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#epilogue">900. epilogue</a></li>
 </ul>
 </li>
 </ul>
@@ -526,16 +527,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Joyce Mccarthy                
-2          Christopher Stewart           
-3          Jennifer Morris               
-4          Charles Reynolds              
-5          Sara Ortiz                    
-6          David Benton                  
-7          Brian Alexander               
-8          Robert Powell                 
-9          William Kramer                
-10         Amy Manning                   
+1          Jose Nelson                   
+2          Lisa Morris                   
+3          Darren Gordon                 
+4          Brian Washington              
+5          Christopher Schmidt           
+6          Tiffany Evans                 
+7          Michael Mendoza               
+8          Casey Smith                   
+9          Jonathan Williams             
+10         Rebecca Marquez               
 </pre></div>
 </div>
 </div>
@@ -774,19 +775,30 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="s2">&quot;Type of ML&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Supervised&quot;</span><span class="p">,</span> <span class="s2">&quot;Unsupervised&quot;</span><span class="p">,</span> <span class="s2">&quot;Semi-Supervised&quot;</span><span class="p">,</span> <span class="s2">&quot;Reinforcement&quot;</span><span class="p">,</span> <span class="s2">&quot;Transfer&quot;</span><span class="p">,</span> <span class="s2">&quot;GANs&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="s2">&quot;Pros&quot;</span><span class="p">:</span> <span class="p">[</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="p">}</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Type of ML: Supervised
+Pros: Direct feedback, High accuracy with enough data
+Cons: Needs labeled data, Can overfit
+----------------------------------------
+Type of ML: Unsupervised
+Pros: Works with unlabeled data, Can uncover hidden patterns
+Cons: No feedback, Harder to verify results
+----------------------------------------
+Type of ML: Semi-Supervised
+Pros: Leverages large amounts of unlabeled data
+Cons: Needs some labeled data, Combines challenges of both supervised and unsupervised
+----------------------------------------
+Type of ML: Reinforcement
+Pros: Adapts to dynamic environments, Potential for real-time learning
+Cons: Requires careful reward design, Can be computationally expensive
+----------------------------------------
+Type of ML: Transfer
+Pros: Saves training time, Can leverage pre-trained models
+Cons: Not always straightforward, Domain differences can be an issue
+----------------------------------------
+Type of ML: GANs
+Pros: Generates new data, Can achieve impressive realism
+Cons: Training can be unstable, May require lots of data and time
+----------------------------------------
 </pre></div>
 </div>
 </div>
@@ -1028,21 +1040,15 @@ Songwriters: Donald Lawrence / Marshon Lewis / William James Stokes / Robert Woo
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0.0} &lt;music21.tempo.MetronomeMark animato Quarter=120&gt;
-{0.0} &lt;music21.key.KeySignature of no sharps or flats&gt;
-{0.0} &lt;music21.meter.TimeSignature 4/4&gt;
-{0.0} &lt;music21.note.Note C&gt;
-{1.0} &lt;music21.note.Note D&gt;
-{2.0} &lt;music21.note.Note E&gt;
-{3.0} &lt;music21.note.Note F&gt;
-{4.0} &lt;music21.note.Note G&gt;
-{5.0} &lt;music21.note.Note A&gt;
-{6.0} &lt;music21.note.Note B&gt;
-{7.0} &lt;music21.note.Note C&gt;
-{8.0} &lt;music21.chord.Chord C E G&gt;
-{9.0} &lt;music21.chord.Chord F A C&gt;
-{10.0} &lt;music21.chord.Chord G B D&gt;
-None
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">os</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">music21</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Set the path to the MuseScore executable</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;music21&#39;
 </pre></div>
 </div>
 </div>
@@ -7014,88 +7020,130 @@ drwxr-xr-x@<span class="w">  </span><span class="m">25</span><span class="w"> </
 <section id="idiomatic">
 <h2>899. idiomatic<a class="headerlink" href="#idiomatic" title="Permalink to this heading">#</a></h2>
 <p>Certainly! Below is the full table with all the languages and their idiomatic translations for “We are all in this together.” As mentioned previously, some of these translations might not perfectly capture the idiomatic meaning, so consulting with native speakers would be ideal.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>English</p></th>
-<th class="head"><p>We are all in this together</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Luganda</p></td>
-<td><p>Yaffe FFena</p></td>
-</tr>
-<tr class="row-odd"><td><p>Spanish</p></td>
-<td><p>Todos estamos en esto juntos</p></td>
-</tr>
-<tr class="row-even"><td><p>French</p></td>
-<td><p>Nous sommes tous dans le même bateau</p></td>
-</tr>
-<tr class="row-odd"><td><p>German</p></td>
-<td><p>Wir sitzen alle im selben Boot</p></td>
-</tr>
-<tr class="row-even"><td><p>Italian</p></td>
-<td><p>Siamo tutti nella stessa barca</p></td>
-</tr>
-<tr class="row-odd"><td><p>Portuguese</p></td>
-<td><p>Estamos todos juntos nisso</p></td>
-</tr>
-<tr class="row-even"><td><p>Dutch</p></td>
-<td><p>We zitten hier allemaal samen in</p></td>
-</tr>
-<tr class="row-odd"><td><p>Russian</p></td>
-<td><p>Мы все в этом вместе</p></td>
-</tr>
-<tr class="row-even"><td><p>Hindi</p></td>
-<td><p>हम सब इसमें साथ हैं</p></td>
-</tr>
-<tr class="row-odd"><td><p>Persian</p></td>
-<td><p>ما همه در این هستیم به همراه</p></td>
-</tr>
-<tr class="row-even"><td><p>Japanese</p></td>
-<td><p>これは私たちみんなのものです</p></td>
-</tr>
-<tr class="row-odd"><td><p>Arabic</p></td>
-<td><p>نحن جميعًا في هذا معًا</p></td>
-</tr>
-<tr class="row-even"><td><p>Hebrew</p></td>
-<td><p>אנחנו כולנו בכלל בזה יחד</p></td>
-</tr>
-<tr class="row-odd"><td><p>Swahili</p></td>
-<td><p>Sisi sote tuko pamoja katika hili</p></td>
-</tr>
-<tr class="row-even"><td><p>Zulu</p></td>
-<td><p>Sisonke kule</p></td>
-</tr>
-<tr class="row-odd"><td><p>Yoruba</p></td>
-<td><p>Awa gbogbo ni lori e pelu</p></td>
-</tr>
-<tr class="row-even"><td><p>Igbo</p></td>
-<td><p>Anyị nile nọ n’ime ya</p></td>
-</tr>
-<tr class="row-odd"><td><p>Korean</p></td>
-<td><p>우리는 모두 함께 이것에 있습니다</p></td>
-</tr>
-<tr class="row-even"><td><p>Finnish</p></td>
-<td><p>Olemme kaikki tässä yhdessä</p></td>
-</tr>
-<tr class="row-odd"><td><p>Amharic</p></td>
-<td><p>እኛ ሁሉም በዚህ ተባበርንዋል</p></td>
-</tr>
-<tr class="row-even"><td><p>Oromo</p></td>
-<td><p>Hinqabu fi hinqabu jechuun</p></td>
-</tr>
-<tr class="row-odd"><td><p>Tigrinya</p></td>
-<td><p>ምንም ነገርና እኛ በእኛ</p></td>
-</tr>
-<tr class="row-even"><td><p>Gujarati</p></td>
-<td><p>આપણે બધા આમાં જ છીએ</p></td>
-</tr>
-<tr class="row-odd"><td><p>Simplified Chinese (idiomatic)</p></td>
-<td><p>我们同舟共济</p></td>
-</tr>
-</tbody>
-</table>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="c1"># Create data</span>
+<span class="n">languages</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;English&#39;</span><span class="p">,</span> <span class="s1">&#39;Luganda&#39;</span><span class="p">,</span> <span class="s1">&#39;Spanish&#39;</span><span class="p">,</span> <span class="s1">&#39;French&#39;</span><span class="p">,</span> <span class="s1">&#39;German&#39;</span><span class="p">,</span> <span class="s1">&#39;Italian&#39;</span><span class="p">,</span> <span class="s1">&#39;Portuguese&#39;</span><span class="p">,</span> <span class="s1">&#39;Dutch&#39;</span><span class="p">,</span> <span class="c1"># ... other languages</span>
+    <span class="s1">&#39;Russian&#39;</span><span class="p">,</span> <span class="s1">&#39;Hindi&#39;</span><span class="p">,</span> <span class="s1">&#39;Persian&#39;</span><span class="p">,</span> <span class="s1">&#39;Japanese&#39;</span><span class="p">,</span><span class="s1">&#39;Arabic&#39;</span><span class="p">,</span> <span class="s1">&#39;Hebrew&#39;</span><span class="p">,</span> <span class="s1">&#39;Swahili&#39;</span><span class="p">,</span> <span class="s1">&#39;Zulu&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Yoruba&#39;</span><span class="p">,</span> <span class="s1">&#39;Igbo&#39;</span><span class="p">,</span> <span class="s1">&#39;Korean&#39;</span><span class="p">,</span> <span class="s1">&#39;Finnish&#39;</span><span class="p">,</span><span class="s1">&#39;Amharic&#39;</span><span class="p">,</span> <span class="s1">&#39;Oromo&#39;</span><span class="p">,</span> <span class="s1">&#39;Tigrinya&#39;</span><span class="p">,</span> <span class="s1">&#39;Gujarati&#39;</span><span class="p">,</span><span class="s1">&#39; Chinese&#39;</span>
+<span class="p">]</span>
+
+<span class="n">translations</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;We are all in this together&#39;</span><span class="p">,</span> <span class="s1">&#39;Yaffe FFena&#39;</span><span class="p">,</span> <span class="s1">&#39;Todos estamos en esto juntos&#39;</span><span class="p">,</span> <span class="s1">&#39;Nous sommes tous dans le même bateau&#39;</span><span class="p">,</span> <span class="c1"># ... other translations</span>
+    <span class="s1">&#39;Wir sitzen alle im selben Boot&#39;</span><span class="p">,</span><span class="s1">&#39;Siamo tutti nella stessa barca&#39;</span><span class="p">,</span><span class="s1">&#39;Estamos todos juntos nisso&#39;</span><span class="p">,</span><span class="s1">&#39;We zitten hier allemaal samen in&#39;</span><span class="p">,</span><span class="s1">&#39;Мы все в этом вместе&#39;</span><span class="p">,</span>  
+    <span class="s1">&#39;हम सब इसमें साथ हैं&#39;</span><span class="p">,</span><span class="s1">&#39;ما همه در این هستیم به همراه&#39;</span><span class="p">,</span><span class="s1">&#39;これは私たちみんなのものです&#39;</span><span class="p">,</span><span class="s1">&#39;우리는 모두 함께 이것에 있습니다&#39;</span><span class="p">,</span><span class="s1">&#39;نحن جميعًا في هذا معًا&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;אנחנו כולנו בכלל בזה יחד&#39;</span><span class="p">,</span> <span class="s1">&#39;Sisi sote tuko pamoja katika hili&#39;</span><span class="p">,</span><span class="s1">&#39;Sisonke kule&#39;</span><span class="p">,</span><span class="s1">&#39;Awa gbogbo ni lori e pelu&#39;</span><span class="p">,</span><span class="s1">&#39;Anyị nile nọ n’ime ya&#39;</span><span class="p">,</span> 
+    <span class="s1">&#39;우리는 모두 함께 이것에 있습니다&#39;</span><span class="p">,</span> <span class="s1">&#39;Olemme kaikki tässä yhdessä&#39;</span><span class="p">,</span><span class="s1">&#39;እኛ ሁሉም በዚህ ተባበርንዋል&#39;</span><span class="p">,</span><span class="s1">&#39;Hinqabu fi hinqabu jechuun&#39;</span><span class="p">,</span><span class="s1">&#39;ምንም ነገርና እኛ በእኛ&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;આપણે બધા આમાં જ છીએ&#39;</span><span class="p">,</span><span class="s1">&#39;我们同舟共济&#39;</span>
+<span class="p">]</span>
+
+<span class="c1"># Variables to control the width of each column</span>
+<span class="n">column1_width</span> <span class="o">=</span> <span class="s2">&quot;50%&quot;</span>
+<span class="n">column2_width</span> <span class="o">=</span> <span class="s2">&quot;50%&quot;</span>
+
+<span class="c1"># Variable to control table style (&quot;plain&quot; for plain text table)</span>
+<span class="n">table_style</span> <span class="o">=</span> <span class="s2">&quot;plain&quot;</span>
+
+<span class="c1"># Create HTML table with custom styles</span>
+<span class="k">if</span> <span class="n">table_style</span> <span class="o">==</span> <span class="s2">&quot;plain&quot;</span><span class="p">:</span>
+    <span class="n">html_table</span> <span class="o">=</span> <span class="s1">&#39;&lt;table&gt;&#39;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">html_table</span> <span class="o">=</span> <span class="s1">&#39;&lt;table style=&quot;border-collapse: collapse; width: 100%; margin-left: auto; margin-right: auto;&quot;&gt;&#39;</span>
+
+<span class="k">for</span> <span class="n">lang</span><span class="p">,</span> <span class="n">trans</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">languages</span><span class="p">,</span> <span class="n">translations</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">table_style</span> <span class="o">==</span> <span class="s2">&quot;plain&quot;</span><span class="p">:</span>
+        <span class="n">html_table</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;&lt;tr&gt;&lt;td&gt;</span><span class="si">{</span><span class="n">lang</span><span class="si">}</span><span class="s1">&lt;/td&gt;&lt;td&gt;</span><span class="si">{</span><span class="n">trans</span><span class="si">}</span><span class="s1">&lt;/td&gt;&lt;/tr&gt;&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">html_table</span> <span class="o">+=</span> <span class="sa">f</span><span class="s1">&#39;&lt;tr&gt;&lt;td style=&quot;width: </span><span class="si">{</span><span class="n">column1_width</span><span class="si">}</span><span class="s1">; border: none; text-align: center;&quot;&gt;</span><span class="si">{</span><span class="n">lang</span><span class="si">}</span><span class="s1">&lt;/td&gt;&lt;td style=&quot;width: </span><span class="si">{</span><span class="n">column2_width</span><span class="si">}</span><span class="s1">; border: none; text-align: center;&quot;&gt;</span><span class="si">{</span><span class="n">trans</span><span class="si">}</span><span class="s1">&lt;/td&gt;&lt;/tr&gt;&#39;</span>
+<span class="n">html_table</span> <span class="o">+=</span> <span class="s1">&#39;&lt;/table&gt;&#39;</span>
+
+<span class="c1"># Display the HTML table</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">html_table</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><table><tr><td>English</td><td>We are all in this together</td></tr><tr><td>Luganda</td><td>Yaffe FFena</td></tr><tr><td>Spanish</td><td>Todos estamos en esto juntos</td></tr><tr><td>French</td><td>Nous sommes tous dans le même bateau</td></tr><tr><td>German</td><td>Wir sitzen alle im selben Boot</td></tr><tr><td>Italian</td><td>Siamo tutti nella stessa barca</td></tr><tr><td>Portuguese</td><td>Estamos todos juntos nisso</td></tr><tr><td>Dutch</td><td>We zitten hier allemaal samen in</td></tr><tr><td>Russian</td><td>Мы все в этом вместе</td></tr><tr><td>Hindi</td><td>हम सब इसमें साथ हैं</td></tr><tr><td>Persian</td><td>ما همه در این هستیم به همراه</td></tr><tr><td>Japanese</td><td>これは私たちみんなのものです</td></tr><tr><td>Arabic</td><td>우리는 모두 함께 이것에 있습니다</td></tr><tr><td>Hebrew</td><td>نحن جميعًا في هذا معًا</td></tr><tr><td>Swahili</td><td>אנחנו כולנו בכלל בזה יחד</td></tr><tr><td>Zulu</td><td>Sisi sote tuko pamoja katika hili</td></tr><tr><td>Yoruba</td><td>Sisonke kule</td></tr><tr><td>Igbo</td><td>Awa gbogbo ni lori e pelu</td></tr><tr><td>Korean</td><td>Anyị nile nọ n’ime ya</td></tr><tr><td>Finnish</td><td>우리는 모두 함께 이것에 있습니다</td></tr><tr><td>Amharic</td><td>Olemme kaikki tässä yhdessä</td></tr><tr><td>Oromo</td><td>እኛ ሁሉም በዚህ ተባበርንዋል</td></tr><tr><td>Tigrinya</td><td>Hinqabu fi hinqabu jechuun</td></tr><tr><td>Gujarati</td><td>ምንም ነገርና እኛ በእኛ</td></tr><tr><td> Chinese</td><td>આપણે બધા આમાં જ છીએ</td></tr></table></div></div>
+</div>
 <p>Again, these translations were made with the understanding of the idiomatic nature of the phrase, but variations and subtleties may exist within each language and culture. For example, in the case of the Chinese translation, the phrase “同舟共济” is a common idiom that means “to work together in times of trouble.” However, the literal translation of the phrase is “to share the same boat.” This is a great example of how the literal translation of a phrase may not always capture the full meaning of the phrase.</p>
+</section>
+<section id="epilogue">
+<h2>900. epilogue<a class="headerlink" href="#epilogue" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p><strong>epilogue</strong> <em>n.</em> a short concluding section at the end of a literary work, often dealing with the future of its characters after the main action of the plot is completed.</p>
+</div></blockquote>
+<hr class="docutils" />
+<p>and thats what co-pilot would have us believe. however, the word epilogue is also used in the context of a speech or a play. in this case, it is a short speech at the end of a play or a speech.</p>
+<hr class="docutils" />
+<p><em>No epilogue, I pray you; for your play needs no excuse.</em></p>
+<blockquote>
+<div><p><strong>epilogue</strong> <em>n.</em> a short speech at the end of a play or a speech.</p>
+</div></blockquote>
+<hr class="docutils" />
+<p>but i’m inspired by the fena image in 898 above. epilogue is really the <code class="docutils literal notranslate"><span class="pre">daily</span> <span class="pre">grind</span></code>:</p>
+<ol class="arabic simple">
+<li><p>folks come to fena from all walks of life</p></li>
+<li><p>then they take on a project</p></li>
+<li><p>challenges loom large</p></li>
+<li><p>but the idea is to overcome them</p></li>
+<li><p>and that involves acquiring new skills</p></li>
+<li><p>we can’t do it alone so we work together</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fena</span></code> is a community after all</p></li>
+</ul>
+</li>
+<li><p>and we learn from each other</p>
+<ul class="simple">
+<li><p>more novel we recruite ai each step of the way</p></li>
+<li><p>chatbots, gpt-3, co-pilot, etc.</p></li>
+<li><p>the prospect of exponential growth is exciting</p></li>
+</ul>
+</li>
+<li><p>of course we can talk of all the world being a stage</p>
+<ul class="simple">
+<li><p>but we are not actors</p></li>
+<li><p>we are real people</p></li>
+<li><p>and we are not playing a part</p></li>
+<li><p>we are living our lives</p></li>
+<li><p>and we are doing it together</p></li>
+<li><p>and we are doing it in the open</p></li>
+<li><p>and we are doing it for the world to see</p></li>
+</ul>
+</li>
+<li><p>all actors may have their exits and entrances</p>
+<ul class="simple">
+<li><p>but ours is a daily grind</p></li>
+<li><p>and we are in it for the long haul</p></li>
+<li><p>there’ll always be a tomorrow, and a tomorrow, and a tomorrow</p></li>
+<li><p>repeat, iteration, etc</p></li>
+<li><p>and so epilogue is really the daily grind:</p>
+<ul>
+<li><p>challenge-levels against skill-levels</p></li>
+<li><p>exponential growth of both</p></li>
+<li><p>as if we were in a game</p></li>
+<li><p>generative adversarial networks</p>
+<ul>
+<li><p>and we are the players</p></li>
+<li><p>and we are the game</p></li>
+<li><p>and we are the game masters</p></li>
+<li><p>and we are the game makers</p></li>
+<li><p>and we are the game changers</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 </section>
 </section>
 
@@ -7267,6 +7315,7 @@ drwxr-xr-x@<span class="w">  </span><span class="m">25</span><span class="w"> </
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#myenv">897. myenv</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">898. fena</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#idiomatic">899. idiomatic</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#epilogue">900. epilogue</a></li>
 </ul>
 </li>
 </ul>
