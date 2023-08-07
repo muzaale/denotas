@@ -6,7 +6,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "898. fena - logo.png"
+git commit -m "898. fena - logo.png, strikingly analogous to the silhoutte git & spoke logo."
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D

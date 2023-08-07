@@ -525,16 +525,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          John Bell                     
-2          Jason Williams                
-3          Kevin Flores                  
-4          Phillip Williams              
-5          Ronald Goodwin                
-6          Jamie Hughes                  
-7          Christy Edwards               
-8          Eric Mendoza                  
-9          Michelle Miller               
-10         Anthony Dean                  
+1          Maria Gray                    
+2          Tara Young                    
+3          Gary Maxwell                  
+4          Craig White                   
+5          Robin Le                      
+6          Amanda Sullivan               
+7          Doris Fuentes                 
+8          Erica Jefferson               
+9          Jessica Williams              
+10         Dwayne Hughes                 
 </pre></div>
 </div>
 </div>
@@ -6953,20 +6953,24 @@ drwxr-xr-x@<span class="w">  </span><span class="m">25</span><span class="w"> </
 <span class="p">}</span>
 
 <span class="c1"># Gentle colors for children</span>
-<span class="n">child_colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;lightblue&quot;</span><span class="p">,</span> <span class="s2">&quot;lightgreen&quot;</span><span class="p">,</span> <span class="s2">&quot;lightpink&quot;</span><span class="p">,</span> <span class="s2">&quot;lightyellow&quot;</span><span class="p">,</span>
-    <span class="s1">&#39;lavender&#39;</span><span class="p">,</span> <span class="s1">&#39;lightcoral&#39;</span><span class="p">,</span> <span class="s1">&#39;honeydew&#39;</span><span class="p">,</span> <span class="s1">&#39;azure&#39;</span>
+<span class="n">child_colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;lightgreen&quot;</span><span class="p">,</span> <span class="s2">&quot;lightpink&quot;</span><span class="p">,</span> <span class="s2">&quot;lightyellow&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;lavender&#39;</span><span class="p">,</span> <span class="s1">&#39;lightcoral&#39;</span><span class="p">,</span> <span class="s1">&#39;honeydew&#39;</span><span class="p">,</span> <span class="s1">&#39;azure&#39;</span><span class="p">,</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> 
 <span class="p">]</span>
 
-<span class="c1"># ,&#39;lightsteelblue&#39;, &#39;lightgray&#39;, &#39;mintcream&#39;, &#39;honeydew&#39;, &#39;azure&#39;, &#39;linen&#39;, &#39;aliceblue&#39;, &#39;lemonchiffon&#39;, &#39;mistyrose&#39;</span>
+<span class="c1"># &#39;lightsteelblue&#39;, &#39;lightgray&#39;, &#39;mintcream&#39;,&#39;mintcream&#39;, &#39;azure&#39;, &#39;linen&#39;, &#39;aliceblue&#39;, &#39;lemonchiffon&#39;, &#39;mistyrose&#39;</span>
+
+<span class="c1"># List of nodes to color light blue</span>
+<span class="n">light_blue_nodes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Epilogue&quot;</span><span class="p">,</span> <span class="s2">&quot;Skills&quot;</span><span class="p">,</span> <span class="s2">&quot;Dramatis Personae&quot;</span><span class="p">,</span> <span class="s2">&quot;Project&quot;</span><span class="p">,</span> <span class="s2">&quot;Challenges&quot;</span><span class="p">]</span>
 
 <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
 <span class="n">node_colors</span> <span class="o">=</span> <span class="p">{}</span>
+
 
 <span class="c1"># Function to capitalize the first letter of each word</span>
 <span class="k">def</span> <span class="nf">capitalize_name</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
     <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">))</span>
 
-<span class="c1"># Assign primary nodes a light blue color, except for &quot;Fena&quot; (lime), and unique colors to children</span>
+<span class="c1"># Assign colors to nodes</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">children</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">structure</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
     <span class="n">parent_name</span> <span class="o">=</span> <span class="n">capitalize_name</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">))</span>
     <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">parent_name</span><span class="p">)</span>
@@ -6975,13 +6979,16 @@ drwxr-xr-x@<span class="w">  </span><span class="m">25</span><span class="w"> </
     <span class="k">if</span> <span class="n">parent_name</span> <span class="o">==</span> <span class="s2">&quot;Fena&quot;</span><span class="p">:</span>
         <span class="n">node_colors</span><span class="p">[</span><span class="n">parent_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lightgray&#39;</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">node_colors</span><span class="p">[</span><span class="n">parent_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lightblue&#39;</span>
+        <span class="n">node_colors</span><span class="p">[</span><span class="n">parent_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">child_colors</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">child_colors</span><span class="p">)]</span>
         
-    <span class="n">parent_color</span> <span class="o">=</span> <span class="n">child_colors</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">child_colors</span><span class="p">)]</span>
     <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">children</span><span class="p">:</span>
         <span class="n">child_name</span> <span class="o">=</span> <span class="n">capitalize_name</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">))</span>
         <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">parent_name</span><span class="p">,</span> <span class="n">child_name</span><span class="p">)</span>
-        <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">parent_color</span>
+        <span class="k">if</span> <span class="n">child_name</span> <span class="ow">in</span> <span class="n">light_blue_nodes</span><span class="p">:</span>
+            <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lightblue&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">child_colors</span><span class="p">[(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">6</span><span class="p">)</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">child_colors</span><span class="p">)]</span>  <span class="c1"># You can customize the logic here to assign colors</span>
+
 
 <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">node_colors</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">()]</span>
 
@@ -6999,7 +7006,7 @@ drwxr-xr-x@<span class="w">  </span><span class="m">25</span><span class="w"> </
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/ee450c2d7a1be83ad24db73bad711ba62560efd2fe113161268f35706a607a27.png" src="_images/ee450c2d7a1be83ad24db73bad711ba62560efd2fe113161268f35706a607a27.png" />
+<img alt="_images/185f4dfc8fee4cd6d6e20986bbaaf1fe8f70197fc303d67a79b30aa7a1578933.png" src="_images/185f4dfc8fee4cd6d6e20986bbaaf1fe8f70197fc303d67a79b30aa7a1578933.png" />
 </div>
 </div>
 </section>
