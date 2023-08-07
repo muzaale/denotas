@@ -6,41 +6,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "### 905. fena
-
-0. dramatis personae - players
-1. project overview:
-   - git
-   - code
-   - manuscript
-2. skills:
-   - python
-   - ai
-   - r
-   - stata
-   - `numeracy`
-   - 2.1 estimates
-      + nonparametric
-      + semiparametric
-      + parametric
-      + simulation
-      + users/abuses
-   - 2.2 variance
-      + oneway
-      + twoway
-      + multivariable
-      + hierarchical
-      + clinical
-      + public
-3. challenges:
-   - truth
-   - rigor
-   - error
-   - sloppiness
-   - fraud
-   - learning
-   - `literacy`
-5. epilogue - the daily grind"
+git commit -m "### 905. fena refined structure to emphasize 1-3, include a 2.1,2.2,2.3"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
