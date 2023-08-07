@@ -534,16 +534,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Lisa Mann                     
-2          Matthew Hopkins               
-3          Suzanne Patel                 
-4          Jessica Harris                
-5          Angela Richmond               
-6          Margaret Morales              
-7          Megan Schwartz                
-8          Kim Curtis                    
-9          Sylvia Mckinney               
-10         Daniel Edwards                
+1          Dylan Merritt                 
+2          Robert Davis                  
+3          Justin Clark                  
+4          Virginia Waters               
+5          Stephanie Craig               
+6          Kelsey Day                    
+7          Cody Porter                   
+8          Michael Barrett               
+9          Terri Sawyer                  
+10         Melissa Hayes                 
 </pre></div>
 </div>
 </div>
@@ -977,14 +977,16 @@ Songwriters: Donald Lawrence / Marshon Lewis / William James Stokes / Robert Woo
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>music21
+
+<span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">music21</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
 
 <span class="c1"># Set the path to the MuseScore executable</span>
 <span class="n">musescore_path</span> <span class="o">=</span> <span class="s1">&#39;/Applications/MuseScore 4.app/Contents/MacOS/mscore&#39;</span>
 <span class="n">us</span> <span class="o">=</span> <span class="n">environment</span><span class="o">.</span><span class="n">UserSettings</span><span class="p">()</span>
-<span class="n">us</span><span class="p">[</span><span class="s1">&#39;musescoreDirectPNGPath&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">musescore_path</span>
+<span class="n">us</span><span class="p">[</span><span class="s1">&#39;musicxmlPath&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">musescore_path</span>
 
 <span class="c1"># Create a score</span>
 <span class="n">score</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">Score</span><span class="p">()</span>
@@ -1027,19 +1029,21 @@ Songwriters: Donald Lawrence / Marshon Lewis / William James Stokes / Robert Woo
 <span class="c1"># Check the contents of the music_stream</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">music_stream</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">))</span>
 
-<span class="c1"># Save the score as MusicXML and display it as a PNG image</span>
-<span class="c1"># musicxml_path = &#39;/tmp/music21_example.musicxml&#39;</span>
-<span class="c1"># png_path = &#39;/tmp/music21_example.png&#39;</span>
-<span class="c1"># score.write(&#39;musicxml.png&#39;, fp=musicxml_path)</span>
+<span class="c1"># Save the score as MusicXML</span>
+<span class="n">musicxml_path</span> <span class="o">=</span> <span class="s1">&#39;/users/d/desktop/music21_example.musicxml&#39;</span>
+<span class="n">score</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;musicxml&#39;</span><span class="p">,</span> <span class="n">fp</span><span class="o">=</span><span class="n">musicxml_path</span><span class="p">)</span>
+
+<span class="c1"># Define the path for the PNG image</span>
+<span class="n">png_path</span> <span class="o">=</span> <span class="s1">&#39;/users/d/desktop/music21_example.png&#39;</span>
 
 <span class="c1"># Convert the MusicXML to a PNG image</span>
 <span class="n">conv</span> <span class="o">=</span> <span class="n">converter</span><span class="o">.</span><span class="n">subConverters</span><span class="o">.</span><span class="n">ConverterMusicXML</span><span class="p">()</span>
-<span class="c1"># conv.write(score, &#39;png&#39;, png_path)</span>
+<span class="n">conv</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">score</span><span class="p">,</span> <span class="s1">&#39;png&#39;</span><span class="p">,</span> <span class="n">png_path</span><span class="p">)</span>
 
 <span class="c1"># Display the PNG image</span>
-<span class="c1"># display(Image(filename=png_path))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="n">png_path</span><span class="p">))</span>
 
-<span class="c1"># Clean up temporary files</span>
+<span class="c1"># Clean up temporary files if desired</span>
 <span class="c1"># os.remove(musicxml_path)</span>
 <span class="c1"># os.remove(png_path)</span>
 </pre></div>
@@ -1047,17 +1051,69 @@ Songwriters: Donald Lawrence / Marshon Lewis / William James Stokes / Robert Woo
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">os</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">music21</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Set the path to the MuseScore executable</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;music21&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting music21
+  Obtaining dependency information for music21 from https://files.pythonhosted.org/packages/a1/1b/ef7bdf01df19cc7ac9294531a9c991c6d382bde6bc15c9d106b9a5e547ef/music21-9.1.0-py3-none-any.whl.metadata
+  Using cached music21-9.1.0-py3-none-any.whl.metadata (4.8 kB)
+Requirement already satisfied: chardet in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (4.0.0)
+Requirement already satisfied: joblib in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (1.2.0)
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting jsonpickle (from music21)
+  Using cached jsonpickle-3.0.1-py2.py3-none-any.whl (40 kB)
+Requirement already satisfied: matplotlib in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (3.7.1)
+Requirement already satisfied: more-itertools in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (8.12.0)
+Requirement already satisfied: numpy in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (1.24.3)
+Requirement already satisfied: requests in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (2.31.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting webcolors&gt;=1.5 (from music21)
+  Using cached webcolors-1.13-py3-none-any.whl (14 kB)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.0.5)
+Requirement already satisfied: cycler&gt;=0.10 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.25.0)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
+Requirement already satisfied: packaging&gt;=20.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (23.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (9.4.0)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (3.0.9)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (2.8.2)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (2.0.4)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (3.4)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (1.26.16)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (2023.7.22)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six&gt;=1.5 in /usr/local/anaconda3/lib/python3.11/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib-&gt;music21) (1.16.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Using cached music21-9.1.0-py3-none-any.whl (22.8 MB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: webcolors, jsonpickle, music21
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed jsonpickle-3.0.1 music21-9.1.0 webcolors-1.13
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0.0} &lt;music21.tempo.MetronomeMark animato Quarter=120&gt;
+{0.0} &lt;music21.key.KeySignature of no sharps or flats&gt;
+{0.0} &lt;music21.meter.TimeSignature 4/4&gt;
+{0.0} &lt;music21.note.Note C&gt;
+{1.0} &lt;music21.note.Note D&gt;
+{2.0} &lt;music21.note.Note E&gt;
+{3.0} &lt;music21.note.Note F&gt;
+{4.0} &lt;music21.note.Note G&gt;
+{5.0} &lt;music21.note.Note A&gt;
+{6.0} &lt;music21.note.Note B&gt;
+{7.0} &lt;music21.note.Note C&gt;
+{8.0} &lt;music21.chord.Chord C E G&gt;
+{9.0} &lt;music21.chord.Chord F A C&gt;
+{10.0} &lt;music21.chord.Chord G B D&gt;
+None
+</pre></div>
+</div>
+<img alt="_images/6319dffe5192321d62878dffed76ff5683b5e278e4185a6d88cbd2a208fa523b.png" src="_images/6319dffe5192321d62878dffed76ff5683b5e278e4185a6d88cbd2a208fa523b.png" />
 </div>
 </div>
 </section>
@@ -6756,37 +6812,14 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/bin/python
-Daily Grind
-├── ...
-├── Check on Loved Ones
-│   └── whats_app.md
-├── Gratitude
-│   └── journal.md
-├── Physical Exercise
-│   ├── gym.md
-│   ├── jog.md
-│   └── swim.md
-└── Work
-    ├── ...
-    ├── K08 Grant
-    │   └── ...
-    ├── Mentoring
-    │   ├── Analysts
-    │   ├── Collaborators
-    │   ├── Faculty
-    │   ├── Fellows
-    │   ├── Graduate Students
-    │   ├── Graduates
-    │   ├── High School Students
-    │   ├── Medical Students
-    │   ├── Residents
-    │   ├── Staff
-    │   └── Undergraduates
-    ├── PhD Thesis
-    │   └── ...
-    └── R03 Grant Application
-        └── ...
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">treelib</span> <span class="kn">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Tree</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">sys</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;treelib&#39;
 </pre></div>
 </div>
 </div>
@@ -7223,16 +7256,16 @@ A part of unsupervised learning, where two networks (generator and discriminator
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "myenv"
+            mode: "python"
         },
         kernelOptions: {
-            name: "myenv",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'myenv'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
