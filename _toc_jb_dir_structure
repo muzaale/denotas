@@ -1,8 +1,6 @@
 digraph DirectoryStructure {
-	rankdir=LR size="10,10"
+	rankdir=LR size="5,5"
 	alpha [label=alpha]
-	"alpha/intro.ipynb" [label="intro.ipynb" shape=box]
-	"alpha/prologue.ipynb" [label="prologue.ipynb" shape=box]
 	"alpha/Act I" [label="Act I"]
 	alpha -> "alpha/Act I"
 	"alpha/Act I/acti_1.ipynb" [label="acti_1.ipynb" shape=box]
@@ -21,12 +19,30 @@ digraph DirectoryStructure {
 	"alpha/Act II" -> "alpha/Act II/actii_3.ipynb"
 	"alpha/Act III" [label="Act III"]
 	alpha -> "alpha/Act III"
-	"alpha/Act III/actiii_1.ipynb" [label="actiii_1.ipynb" shape=box]
-	"alpha/Act III" -> "alpha/Act III/actiii_1.ipynb"
-	"alpha/Act III/actiii_2.ipynb" [label="actiii_2.ipynb" shape=box]
-	"alpha/Act III" -> "alpha/Act III/actiii_2.ipynb"
-	"alpha/Act III/actiii_3.ipynb" [label="actiii_3.ipynb" shape=box]
-	"alpha/Act III" -> "alpha/Act III/actiii_3.ipynb"
+	"alpha/Act III/Act III (a)" [label="Act III (a)"]
+	"alpha/Act III" -> "alpha/Act III/Act III (a)"
+	"alpha/Act III/Act III (a)/Actiii(a)_1.ipynb" [label="Actiii(a)_1.ipynb" shape=box]
+	"alpha/Act III/Act III (a)" -> "alpha/Act III/Act III (a)/Actiii(a)_1.ipynb"
+	"alpha/Act III/Act III (a)/Actiii(a)_1.ipynb" [label="Actiii(a)_1.ipynb" shape=box]
+	"alpha/Act III/Act III (a)" -> "alpha/Act III/Act III (a)/Actiii(a)_1.ipynb"
+	"alpha/Act III/Act III (a)/Actiii(a)_1.ipynb" [label="Actiii(a)_1.ipynb" shape=box]
+	"alpha/Act III/Act III (a)" -> "alpha/Act III/Act III (a)/Actiii(a)_1.ipynb"
+	"alpha/Act III/Act III (b)" [label="Act III (b)"]
+	"alpha/Act III" -> "alpha/Act III/Act III (b)"
+	"alpha/Act III/Act III (b)/Actiii(b)_1.ipynb" [label="Actiii(b)_1.ipynb" shape=box]
+	"alpha/Act III/Act III (b)" -> "alpha/Act III/Act III (b)/Actiii(b)_1.ipynb"
+	"alpha/Act III/Act III (b)/Actiii(b)_1.ipynb" [label="Actiii(b)_1.ipynb" shape=box]
+	"alpha/Act III/Act III (b)" -> "alpha/Act III/Act III (b)/Actiii(b)_1.ipynb"
+	"alpha/Act III/Act III (b)/Actiii(b)_1.ipynb" [label="Actiii(b)_1.ipynb" shape=box]
+	"alpha/Act III/Act III (b)" -> "alpha/Act III/Act III (b)/Actiii(b)_1.ipynb"
+	"alpha/Act III/Act III c()" [label="Act III c()"]
+	"alpha/Act III" -> "alpha/Act III/Act III c()"
+	"alpha/Act III/Act III c()/Actiiic()_1.ipynb" [label="Actiiic()_1.ipynb" shape=box]
+	"alpha/Act III/Act III c()" -> "alpha/Act III/Act III c()/Actiiic()_1.ipynb"
+	"alpha/Act III/Act III c()/Actiiic()_1.ipynb" [label="Actiiic()_1.ipynb" shape=box]
+	"alpha/Act III/Act III c()" -> "alpha/Act III/Act III c()/Actiiic()_1.ipynb"
+	"alpha/Act III/Act III c()/Actiiic()_1.ipynb" [label="Actiiic()_1.ipynb" shape=box]
+	"alpha/Act III/Act III c()" -> "alpha/Act III/Act III c()/Actiiic()_1.ipynb"
 	"alpha/Act IV" [label="Act IV"]
 	alpha -> "alpha/Act IV"
 	"alpha/Act IV/activ_1.ipynb" [label="activ_1.ipynb" shape=box]
