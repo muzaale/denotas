@@ -6,7 +6,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "### 900. No epilogue, I pray you; for your play needs no excuse"
+git commit -m "### 901. colab"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
