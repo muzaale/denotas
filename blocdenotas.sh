@@ -6,7 +6,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "### 906. directory-structure - we now have some beautiful visuals!!"
+git commit -m "### 906. moved stuff around... now have hidden code-cell"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
