@@ -6,7 +6,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "### 906. directory-structure - from graphviz import Digraph"
+git commit -m "### 906. directory-structure - we now have some beautiful visuals!!"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
