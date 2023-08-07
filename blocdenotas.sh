@@ -6,7 +6,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "### 905. fena refined structure to emphasize 1-3, include a 2.1,2.2,2.3"
+git commit -m "### 906. directory-structure - from graphviz import Digraph"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D

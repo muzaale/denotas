@@ -1,0 +1,46 @@
+digraph DirectoryStructure {
+	rankdir=LR size="10,10"
+	alpha [label=alpha]
+	"alpha/intro.ipynb" [label="intro.ipynb" shape=box]
+	"alpha/prologue.ipynb" [label="prologue.ipynb" shape=box]
+	"alpha/Act I" [label="Act I"]
+	alpha -> "alpha/Act I"
+	"alpha/Act I/acti_1.ipynb" [label="acti_1.ipynb" shape=box]
+	"alpha/Act I" -> "alpha/Act I/acti_1.ipynb"
+	"alpha/Act I/acti_2.ipynb" [label="acti_2.ipynb" shape=box]
+	"alpha/Act I" -> "alpha/Act I/acti_2.ipynb"
+	"alpha/Act I/acti_3.ipynb" [label="acti_3.ipynb" shape=box]
+	"alpha/Act I" -> "alpha/Act I/acti_3.ipynb"
+	"alpha/Act II" [label="Act II"]
+	alpha -> "alpha/Act II"
+	"alpha/Act II/actii_1.ipynb" [label="actii_1.ipynb" shape=box]
+	"alpha/Act II" -> "alpha/Act II/actii_1.ipynb"
+	"alpha/Act II/actii_2.ipynb" [label="actii_2.ipynb" shape=box]
+	"alpha/Act II" -> "alpha/Act II/actii_2.ipynb"
+	"alpha/Act II/actii_3.ipynb" [label="actii_3.ipynb" shape=box]
+	"alpha/Act II" -> "alpha/Act II/actii_3.ipynb"
+	"alpha/Act III" [label="Act III"]
+	alpha -> "alpha/Act III"
+	"alpha/Act III/actiii_1.ipynb" [label="actiii_1.ipynb" shape=box]
+	"alpha/Act III" -> "alpha/Act III/actiii_1.ipynb"
+	"alpha/Act III/actiii_2.ipynb" [label="actiii_2.ipynb" shape=box]
+	"alpha/Act III" -> "alpha/Act III/actiii_2.ipynb"
+	"alpha/Act III/actiii_3.ipynb" [label="actiii_3.ipynb" shape=box]
+	"alpha/Act III" -> "alpha/Act III/actiii_3.ipynb"
+	"alpha/Act IV" [label="Act IV"]
+	alpha -> "alpha/Act IV"
+	"alpha/Act IV/activ_1.ipynb" [label="activ_1.ipynb" shape=box]
+	"alpha/Act IV" -> "alpha/Act IV/activ_1.ipynb"
+	"alpha/Act IV/activ_2.ipynb" [label="activ_2.ipynb" shape=box]
+	"alpha/Act IV" -> "alpha/Act IV/activ_2.ipynb"
+	"alpha/Act IV/activ_3.ipynb" [label="activ_3.ipynb" shape=box]
+	"alpha/Act IV" -> "alpha/Act IV/activ_3.ipynb"
+	"alpha/Act V" [label="Act V"]
+	alpha -> "alpha/Act V"
+	"alpha/Act V/actv_1.ipynb" [label="actv_1.ipynb" shape=box]
+	"alpha/Act V" -> "alpha/Act V/actv_1.ipynb"
+	"alpha/Act V/actv_2.ipynb" [label="actv_2.ipynb" shape=box]
+	"alpha/Act V" -> "alpha/Act V/actv_2.ipynb"
+	"alpha/Act V/actv_3.ipynb" [label="actv_3.ipynb" shape=box]
+	"alpha/Act V" -> "alpha/Act V/actv_3.ipynb"
+}
