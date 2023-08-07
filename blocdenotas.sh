@@ -6,7 +6,41 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "fixed the music21 issue, by installing it in the bloc/denotas environment - within a jupyter notebook - and then copying the music21 folder to the bloc/denotas environment"
+git commit -m "### 905. fena
+
+0. dramatis personae - players
+1. project overview:
+   - git
+   - code
+   - manuscript
+2. skills:
+   - python
+   - ai
+   - r
+   - stata
+   - `numeracy`
+   - 2.1 estimates
+      + nonparametric
+      + semiparametric
+      + parametric
+      + simulation
+      + users/abuses
+   - 2.2 variance
+      + oneway
+      + twoway
+      + multivariable
+      + hierarchical
+      + clinical
+      + public
+3. challenges:
+   - truth
+   - rigor
+   - error
+   - sloppiness
+   - fraud
+   - learning
+   - `literacy`
+5. epilogue - the daily grind"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
