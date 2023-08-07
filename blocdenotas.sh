@@ -6,7 +6,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "### 901. colab"
+git commit -m "### 903. images, loving this co-pilot suggested use of image urls"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
