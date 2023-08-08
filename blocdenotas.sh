@@ -6,7 +6,11 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "workflow 9.1 is on-fire!!!!"
+git commit -m "automate after this -- ### 916. [workflow9.2](https://muzaale.github.io/repos/intro.html)
+
++ some really cool unix stuff
++ and then some .git also
++ `fena` git-like logo!"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
