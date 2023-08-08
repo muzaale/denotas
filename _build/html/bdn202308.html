@@ -557,16 +557,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Melissa Jones                 
-2          Ellen Johnson                 
-3          Steven Cox                    
-4          Carla Harris                  
-5          Matthew Williams              
-6          Taylor Valentine              
-7          Paul Smith                    
-8          Lorraine Small                
-9          John Estrada                  
-10         Gregory Monroe                
+1          Jaclyn Stein                  
+2          David Carlson                 
+3          Destiny Brown                 
+4          Anthony Scott                 
+5          Alyssa Lin                    
+6          Robert Foster                 
+7          Brian Mason                   
+8          Samuel Hart                   
+9          Cindy Murphy                  
+10         Megan Perkins                 
 </pre></div>
 </div>
 </div>
@@ -1047,14 +1047,14 @@ Songwriters: Donald Lawrence / Marshon Lewis / William James Stokes / Robert Woo
     <span class="n">music_stream</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 
 <span class="c1"># Add the music stream to the score</span>
-<span class="n">score</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">music_stream</span><span class="p">)</span>
+<span class="c1"># score.insert(0, music_stream)</span>
 
 <span class="c1"># Check the contents of the music_stream</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">music_stream</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">))</span>
+<span class="c1"># print(music_stream.show(&#39;text&#39;))</span>
 
 <span class="c1"># Save the score as MusicXML</span>
 <span class="n">musicxml_path</span> <span class="o">=</span> <span class="s1">&#39;/users/d/desktop/music21_example.musicxml&#39;</span>
-<span class="n">score</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;musicxml&#39;</span><span class="p">,</span> <span class="n">fp</span><span class="o">=</span><span class="n">musicxml_path</span><span class="p">)</span>
+<span class="c1"># score.write(&#39;musicxml&#39;, fp=musicxml_path)</span>
 
 <span class="c1"># Define the path for the PNG image</span>
 <span class="c1"># png_path = &#39;/users/d/desktop/music21_example.png&#39;</span>
@@ -1075,7 +1075,9 @@ Songwriters: Donald Lawrence / Marshon Lewis / William James Stokes / Robert Woo
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: music21 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (9.1.0)
-Requirement already satisfied: chardet in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (5.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: chardet in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (5.2.0)
 Requirement already satisfied: joblib in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.3.1)
 Requirement already satisfied: jsonpickle in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (3.0.1)
 Requirement already satisfied: matplotlib in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (3.7.2)
@@ -1083,9 +1085,7 @@ Requirement already satisfied: more-itertools in /Users/d/Dropbox (Personal)/1f.
 Requirement already satisfied: numpy in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.25.2)
 Requirement already satisfied: requests in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (2.31.0)
 Requirement already satisfied: webcolors&gt;=1.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.13)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
 Requirement already satisfied: cycler&gt;=0.10 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
 Requirement already satisfied: fonttools&gt;=4.22.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.42.0)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
@@ -1093,33 +1093,15 @@ Requirement already satisfied: packaging&gt;=20.0 in /Users/d/Dropbox (Personal)
 Requirement already satisfied: pillow&gt;=6.2.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (10.0.0)
 Requirement already satisfied: pyparsing&lt;3.1,&gt;=2.3.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (3.0.9)
 Requirement already satisfied: python-dateutil&gt;=2.7 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (2.8.2)
-Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (3.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (3.2.0)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (3.4)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (2.0.4)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (2023.7.22)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six&gt;=1.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib-&gt;music21) (1.16.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0.0} &lt;music21.tempo.MetronomeMark animato Quarter=120&gt;
-{0.0} &lt;music21.key.KeySignature of no sharps or flats&gt;
-{0.0} &lt;music21.meter.TimeSignature 4/4&gt;
-{0.0} &lt;music21.note.Note C&gt;
-{1.0} &lt;music21.note.Note D&gt;
-{2.0} &lt;music21.note.Note E&gt;
-{3.0} &lt;music21.note.Note F&gt;
-{4.0} &lt;music21.note.Note G&gt;
-{5.0} &lt;music21.note.Note A&gt;
-{6.0} &lt;music21.note.Note B&gt;
-{7.0} &lt;music21.note.Note C&gt;
-{8.0} &lt;music21.chord.Chord C E G&gt;
-{9.0} &lt;music21.chord.Chord F A C&gt;
-{10.0} &lt;music21.chord.Chord G B D&gt;
-None
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;/users/d/desktop/music21_example.musicxml&#39;)
 </pre></div>
 </div>
 </div>
@@ -8077,10 +8059,10 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;../<
 <h1>08/08/2023<a class="headerlink" href="#id20" title="Permalink to this heading">#</a></h1>
 <section id="bmv">
 <h2>912. bmv<a class="headerlink" href="#bmv" title="Permalink to this heading">#</a></h2>
-<p><a class="reference download internal" download="" href="_downloads/94c1f5a7801d621c7558b5a530a9b4ef/music_bach300.pdf"><span class="xref download myst">music_bach300.pdf</span></a><br />
-<a class="reference download internal" download="" href="_downloads/f500757ef04d7b4a28045608f5f092d0/music_handel300.pdf"><span class="xref download myst">music_handel300.pdf</span></a><br />
-<span class="xref myst"></span><br />
-<span class="xref myst"></span></p>
+<p><a class="reference external" href="https://muzaale.github.io/denotas/_downloads/94c1f5a7801d621c7558b5a530a9b4ef/music_bach300.pdf"></a><br />
+<a class="reference external" href="https://muzaale.github.io/denotas/_downloads/f500757ef04d7b4a28045608f5f092d0/music_handel300.pdf"></a><br />
+<a class="reference download internal" download="" href="_downloads/785b2de4a22e4484f51cc6bf4d6e371c/music_mozart200.pdf"><span class="xref download myst">music_mozart200.pdf</span></a><br />
+<a class="reference download internal" download="" href="_downloads/c6e853f19e2f55f95dedfc51f606057b/music_paulhenrylang.pdf"><span class="xref download myst">music_paulhenrylang.pdf</span></a></p>
 </section>
 <hr class="docutils" />
 <section id="philosophe">
