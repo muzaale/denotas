@@ -6,7 +6,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "### 909. gchist.sh - get it to work!"
+git commit -m "### 910 tastes like victory, finally!!!"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
