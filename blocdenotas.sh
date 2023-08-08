@@ -6,7 +6,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "### 912. bmv - somethin to do with bach"
+git commit -m "workflow 9.1 is on-fire!!!!"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
