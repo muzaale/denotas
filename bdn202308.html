@@ -503,6 +503,12 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pitch-to-dr-ben-philosophe">A Pitch to Dr. Ben Philosophe:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow9-0">914. workflow9.0</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">914.1 directory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abikesa-sh">914.2 abikesa.sh</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chandr-sh">914.3 chandr.sh</a></li>
 </ul>
 </li>
 </ul>
@@ -557,16 +563,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Taylor Mack                   
-2          William Ruiz                  
-3          Dale Farmer                   
-4          Alexander Fletcher            
-5          Jessica Phillips              
-6          Christopher Hernandez         
-7          Thomas Mcmahon                
-8          Michael Allen                 
-9          Meagan Blair                  
-10         Margaret Patel                
+1          Benjamin Thomas               
+2          Dawn Ochoa                    
+3          Nathaniel Russell             
+4          Daniel Brooks                 
+5          Jim Smith                     
+6          Stephen Krueger               
+7          Sarah Hickman                 
+8          Hannah Bird                   
+9          Amanda Grant                  
+10         Austin Stokes                 
 </pre></div>
 </div>
 </div>
@@ -1083,16 +1089,16 @@ Requirement already satisfied: more-itertools in /Users/d/Dropbox (Personal)/1f.
 Requirement already satisfied: numpy in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.25.2)
 Requirement already satisfied: requests in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (2.31.0)
 Requirement already satisfied: webcolors&gt;=1.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.13)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
 Requirement already satisfied: cycler&gt;=0.10 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
 Requirement already satisfied: fonttools&gt;=4.22.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.42.0)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
 Requirement already satisfied: packaging&gt;=20.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (23.1)
 Requirement already satisfied: pillow&gt;=6.2.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (10.0.0)
 Requirement already satisfied: pyparsing&lt;3.1,&gt;=2.3.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (3.0.9)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: python-dateutil&gt;=2.7 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (2.8.2)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (2.8.2)
 Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (3.2.0)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (3.4)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (2.0.4)
@@ -8104,6 +8110,185 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;../<
 <h2>Conclusion:<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
 <p>Fena, with its innovative design and community-driven approach, seeks to become a trendsetter in medical research collaboration. Drawing parallels to the sensational impact of Facebook’s origins, Fena is positioned to capture a unique aspect of the current zeitgeist, transforming the medical community’s interaction, collaboration, and presentation of research. Dr. Ben Philosophe’s collaboration could be the key to unlocking Fena’s full potential.</p>
 </section>
+<section id="workflow9-0">
+<h2>914. workflow9.0<a class="headerlink" href="#workflow9-0" title="Permalink to this heading">#</a></h2>
+<section id="id21">
+<h3>914.1 directory<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>myenv<span class="o">)</span><span class="w"> </span><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>d@Poseidon<span class="w"> </span><span class="m">1</span>.ontology<span class="w"> </span>%<span class="w"> </span>ls<span class="w"> </span>-l
+total<span class="w"> </span><span class="m">152</span>
+drwxr-xr-x@<span class="w">  </span><span class="m">13</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">416</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">05</span>:19<span class="w"> </span>abi
+-rwxr-xr-x@<span class="w">   </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">2843</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">05</span>:16<span class="w"> </span>abikesa.sh
+drwxr-xr-x@<span class="w">  </span><span class="m">21</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">672</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">4</span><span class="w"> </span><span class="m">16</span>:47<span class="w"> </span>alpha
+drwxr-xr-x@<span class="w">  </span><span class="m">15</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">480</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">6</span><span class="w"> </span><span class="m">17</span>:14<span class="w"> </span>be
+drwxr-xr-x@<span class="w">  </span><span class="m">23</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">736</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="m">02</span>:44<span class="w"> </span>beta
+drwxr-xr-x@<span class="w"> </span><span class="m">280</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">8960</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="m">19</span>:59<span class="w"> </span>bloc
+-rwxr-xr-x@<span class="w">   </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">1342</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">06</span>:36<span class="w"> </span>chandr.sh
+drwxr-xr-x@<span class="w">  </span><span class="m">17</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">544</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="m">20</span>:45<span class="w"> </span>de
+drwxr-xr-x@<span class="w">  </span><span class="m">14</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">448</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="m">18</span>:30<span class="w"> </span>delta
+drwxr-xr-x@<span class="w"> </span><span class="m">283</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">9056</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="m">11</span>:17<span class="w"> </span>denotas
+drwxr-xr-x@<span class="w">  </span><span class="m">16</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">512</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">6</span><span class="w"> </span><span class="m">17</span>:16<span class="w"> </span>fe
+drwxr-xr-x@<span class="w">  </span><span class="m">14</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">448</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">06</span>:32<span class="w"> </span>fena
+drwxr-xr-x@<span class="w">  </span><span class="m">15</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">480</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">1</span><span class="w"> </span><span class="m">14</span>:43<span class="w"> </span>fenagas
+drwxr-xr-x@<span class="w">  </span><span class="m">16</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">512</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">04</span>:20<span class="w"> </span>ga
+drwxr-xr-x@<span class="w">  </span><span class="m">14</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">448</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="m">18</span>:31<span class="w"> </span>gamma
+drwxr-xr-x@<span class="w">  </span><span class="m">17</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">544</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">7</span><span class="w"> </span><span class="m">22</span>:35<span class="w"> </span>git-filter-repo
+drwxr-xr-x@<span class="w">  </span><span class="m">14</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">448</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">05</span>:19<span class="w"> </span>ikesa
+drwxr-xr-x@<span class="w">  </span><span class="m">29</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">928</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">20</span>:26<span class="w"> </span>libro
+drwxr-xr-x@<span class="w"> </span><span class="m">144</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">4608</span><span class="w"> </span>Jun<span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">23</span>:20<span class="w"> </span>livre
+drwxr-xr-x@<span class="w">  </span><span class="m">14</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">448</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">4</span><span class="w"> </span><span class="m">12</span>:21<span class="w"> </span>llc
+drwxr-xr-x@<span class="w">  </span><span class="m">20</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">640</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">2</span><span class="w"> </span><span class="m">13</span>:18<span class="w"> </span>mb
+drwxr-xr-x@<span class="w">   </span><span class="m">7</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">224</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">6</span><span class="w"> </span><span class="m">07</span>:33<span class="w"> </span>myenv
+drwxr-xr-x@<span class="w">  </span><span class="m">22</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">704</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">4</span><span class="w"> </span><span class="m">08</span>:16<span class="w"> </span>og
+-rw-r--r--@<span class="w">   </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">633</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">6</span><span class="w"> </span><span class="m">02</span>:34<span class="w"> </span>populate_be.ipynb
+-rw-r--r--@<span class="w">   </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">  </span><span class="m">61138</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">03</span>:40<span class="w"> </span>populate_fe.ipynb
+-rwxr-xr-x@<span class="w">   </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">618</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">6</span><span class="w"> </span><span class="m">16</span>:20<span class="w"> </span>random.sh
+drwxr-xr-x@<span class="w">  </span><span class="m">15</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">480</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">31</span><span class="w"> </span><span class="m">01</span>:05<span class="w"> </span>repos
+drwxr-xr-x@<span class="w">  </span><span class="m">18</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">576</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">10</span>:57<span class="w"> </span>spring
+drwxr-xr-x@<span class="w"> </span><span class="m">139</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">4448</span><span class="w"> </span>Jun<span class="w"> </span><span class="m">25</span><span class="w"> </span><span class="m">08</span>:29<span class="w"> </span>summer
+drwxr-xr-x@<span class="w">  </span><span class="m">14</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">448</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">31</span><span class="w"> </span><span class="m">06</span>:24<span class="w"> </span>track
+drwxr-xr-x@<span class="w">  </span><span class="m">25</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">800</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">20</span>:21<span class="w"> </span>verano
+drwxr-xr-x@<span class="w">  </span><span class="m">13</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">416</span><span class="w"> </span>Aug<span class="w">  </span><span class="m">8</span><span class="w"> </span><span class="m">06</span>:32<span class="w"> </span>yafe
+<span class="o">(</span>myenv<span class="o">)</span><span class="w"> </span><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>d@Poseidon<span class="w"> </span><span class="m">1</span>.ontology<span class="w"> </span>%<span class="w"> </span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="abikesa-sh">
+<h3>914.2 <a class="reference external" href="http://abikesa.sh">abikesa.sh</a><a class="headerlink" href="#abikesa-sh" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Input GitHub username, repository, email address, root directory, subdirectory, and source path</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your GitHub username: &quot;</span><span class="w"> </span>GITHUB_USERNAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your GitHub repository name: &quot;</span><span class="w"> </span>REPO_NAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your email address: &quot;</span><span class="w"> </span>EMAIL_ADDRESS
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your root directory (e.g., ~/Dropbox/1f.ἡἔρις,κ/1.ontology): &quot;</span><span class="w"> </span>ROOT_DIR
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter the name of the subdirectory to be created within the root directory: &quot;</span><span class="w"> </span>SUBDIR_NAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter the name of the populate_be.ipynb file in ROOT_DIR: &quot;</span><span class="w"> </span>POPULATE_BE
+
+<span class="c1"># Set up directories and paths; originally gd.sh</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$ROOT_DIR</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>
+cp<span class="w"> </span><span class="nv">$POPULATE_BE</span><span class="w"> </span><span class="nv">$SUBDIR_NAME</span>/intro.ipynb
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$SUBDIR_NAME</span>
+
+<span class="c1"># Check if SSH keys already exist, and if not, generate a new one</span>
+<span class="nv">SSH_KEY_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.ssh/id_</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}${</span><span class="nv">REPO_NAME</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_KEY_PATH</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EMAIL_ADDRESS</span><span class="s2">&quot;</span><span class="w"> </span>-f<span class="w"> </span><span class="nv">$SSH_KEY_PATH</span>
+<span class="w">  </span>cat<span class="w"> </span><span class="si">${</span><span class="nv">SSH_KEY_PATH</span><span class="si">}</span>.pub
+<span class="w">  </span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+<span class="w">  </span>ssh-add<span class="w"> </span><span class="nv">$SSH_KEY_PATH</span>
+<span class="w">  </span>pbcopy<span class="w"> </span>&lt;<span class="w"> </span><span class="si">${</span><span class="nv">SSH_KEY_PATH</span><span class="si">}</span>.pub
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;SSH public key copied to clipboard. Please add it to your GitHub account&#39;s SSH keys.&quot;</span>
+<span class="k">else</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;SSH keys already exist for this repository. Skipping key generation.&quot;</span>
+<span class="k">fi</span>
+
+<span class="c1"># Define arrays for acts and the number of files for each act</span>
+<span class="nv">acts</span><span class="o">=(</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_0&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_1&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_2&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_3&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_4&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_5&quot;</span><span class="w"> </span>
+<span class="s2">&quot;</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_6&quot;</span><span class="o">)</span>
+<span class="nv">act_files</span><span class="o">=(</span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="m">8</span><span class="o">)</span>
+
+<span class="c1"># Create Act directories and their corresponding files</span>
+<span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="si">${#</span><span class="nv">acts</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>i++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">acts</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">j</span><span class="o">=</span><span class="m">1</span><span class="p">;</span><span class="w"> </span>j&lt;<span class="o">=</span><span class="si">${</span><span class="nv">act_files</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>j++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>cp<span class="w"> </span><span class="s2">&quot;intro.ipynb&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">acts</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_</span><span class="k">$((</span><span class="nv">$i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span><span class="s2">_</span><span class="nv">$j</span><span class="s2">.ipynb&quot;</span>
+<span class="w">  </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="c1"># Create _toc.yml file</span>
+<span class="nv">toc_file</span><span class="o">=</span><span class="s2">&quot;_toc.yml&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;format: jb-book&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;root: intro.ipynb&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span><span class="w"> </span><span class="c1"># Make sure this file exists</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;title: Play&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;parts:&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+
+<span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="si">${#</span><span class="nv">acts</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>i++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  - caption: Part </span><span class="k">$((</span><span class="nv">$i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;    chapters:&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">j</span><span class="o">=</span><span class="m">1</span><span class="p">;</span><span class="w"> </span>j&lt;<span class="o">=</span><span class="si">${</span><span class="nv">act_files</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="p">;</span><span class="w"> </span>j++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;      - file: </span><span class="si">${</span><span class="nv">acts</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}</span><span class="s2">_</span><span class="k">$((</span><span class="nv">$i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span><span class="s2">_</span><span class="nv">$j</span><span class="s2">.ipynb&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="w">  </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="c1"># Create _config.yml file</span>
+<span class="nv">config_file</span><span class="o">=</span><span class="s2">&quot;_config.yml&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;title: Your Book Title&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$config_file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;author: Your Name&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$config_file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;logo: logo.png&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$config_file</span>
+
+<span class="c1"># Build the book with Jupyter Book</span>
+<span class="nb">cd</span><span class="w"> </span>..
+jb<span class="w"> </span>build<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>
+git<span class="w"> </span>clone<span class="w"> </span><span class="s2">&quot;https://github.com/</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2">&quot;</span>
+cp<span class="w"> </span>-r<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>/*<span class="w"> </span><span class="nv">$REPO_NAME</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$REPO_NAME</span>
+git<span class="w"> </span>add<span class="w"> </span>./*
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;now have gamma-delta &amp; ga-de to play with&quot;</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="nv">$SSH_KEY_PATH</span>
+git<span class="w"> </span>remote<span class="w"> </span>-v
+ssh-add<span class="w"> </span>-D
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span><span class="s2">&quot;git@github.com:</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2">&quot;</span>
+ssh-add<span class="w"> </span><span class="nv">$SSH_KEY_PATH</span>
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Jupyter Book content updated and pushed to </span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2"> repository!&quot;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">writing</span> <span class="n">output</span><span class="o">...</span> <span class="p">[</span><span class="mi">100</span><span class="o">%</span><span class="p">]</span> <span class="n">yafe_6</span><span class="o">/</span><span class="n">yafe_7_8</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="chandr-sh">
+<h2>914.3 <a class="reference external" href="http://chandr.sh">chandr.sh</a><a class="headerlink" href="#chandr-sh" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Repositories and file path; originally gchist.sh</span>
+<span class="nv">OG_REPO</span><span class="o">=</span><span class="s2">&quot;https://github.com/afecdvi/og&quot;</span><span class="w"> </span><span class="c1"># Replace with the original repo URL</span>
+<span class="nv">CANVAS_REPO</span><span class="o">=</span><span class="s2">&quot;https://github.com/muzaale/canvas&quot;</span><span class="w"> </span><span class="c1"># Replace with the target repo URL</span>
+<span class="nv">FILE_PATH</span><span class="o">=</span><span class="s2">&quot;seasons.docx&quot;</span>
+
+<span class="c1"># Temporary directories for cloning repositories</span>
+<span class="nv">TEMP_DIR_OG</span><span class="o">=</span><span class="s2">&quot;og_temp_</span><span class="k">$(</span>date<span class="w"> </span>+%s<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nv">TEMP_DIR_CANVAS</span><span class="o">=</span><span class="s2">&quot;canvas_temp_</span><span class="k">$(</span>date<span class="w"> </span>+%s<span class="k">)</span><span class="s2">&quot;</span>
+
+<span class="c1"># Clone the original and target repositories</span>
+git<span class="w"> </span>clone<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$OG_REPO</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$TEMP_DIR_OG</span><span class="s2">&quot;</span>
+git<span class="w"> </span>clone<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$CANVAS_REPO</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$TEMP_DIR_CANVAS</span><span class="s2">&quot;</span>
+
+<span class="c1"># Enter the original repository and filter for the file</span>
+<span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$TEMP_DIR_OG</span><span class="s2">&quot;</span>
+git<span class="w"> </span>filter-repo<span class="w"> </span>--path<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$FILE_PATH</span><span class="s2">&quot;</span><span class="w"> </span>--force
+git<span class="w"> </span>branch<span class="w"> </span>temp_filtered_branch
+
+<span class="c1"># Enter the temporary target repository</span>
+<span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;../</span><span class="nv">$TEMP_DIR_CANVAS</span><span class="s2">&quot;</span>
+
+<span class="c1"># Add the temporary directory of the original repository as a remote</span>
+git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>temp_remote<span class="w"> </span><span class="s2">&quot;../</span><span class="nv">$TEMP_DIR_OG</span><span class="s2">&quot;</span>
+
+<span class="c1"># Fetch the temporary branch</span>
+git<span class="w"> </span>fetch<span class="w"> </span>temp_remote<span class="w"> </span>temp_filtered_branch
+
+<span class="c1"># Create a new branch and merge the temporary branch into it</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>merge_seasons_docx
+git<span class="w"> </span>merge<span class="w"> </span>temp_remote/temp_filtered_branch<span class="w"> </span>--allow-unrelated-histories
+
+<span class="c1"># Push the new branch to the actual &#39;canvas&#39; repository</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>merge_seasons_docx
+
+<span class="c1"># Clean up temporary directories</span>
+rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;../</span><span class="nv">$TEMP_DIR_OG</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;../</span><span class="nv">$TEMP_DIR_CANVAS</span><span class="s2">&quot;</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Processing finished. Check the &#39;merge_seasons_docx&#39; branch in the &#39;canvas&#39; repository.&quot;</span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -8305,6 +8490,12 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;../<
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pitch-to-dr-ben-philosophe">A Pitch to Dr. Ben Philosophe:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow9-0">914. workflow9.0</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">914.1 directory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abikesa-sh">914.2 abikesa.sh</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chandr-sh">914.3 chandr.sh</a></li>
 </ul>
 </li>
 </ul>
