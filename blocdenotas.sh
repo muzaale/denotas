@@ -6,7 +6,7 @@ jb build bloc
 cp -r bloc/* denotas
 cd denotas
 git add ./*
-git commit -m "success after maybe 100 failures, no exaggeration"
+git commit -m "### 913. philosophe pitch!"
 chmod 600 ~/.ssh/id_blocdenotas
 git remote -v
 ssh-add -D
