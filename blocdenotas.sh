@@ -29,5 +29,6 @@ git remote set-url origin "git@github.com:$GITHUB_USERNAME/$REPO_NAME"
 ssh-add "$(eval echo $SSH_KEY_PATH)"
 git push -u origin main
 ghp-import -n -p -f _build/html
-
+cd ..
+rm -rf $REPO_NAME
 echo "Jupyter Book content updated and pushed to $GITHUB_USERNAME/$REPO_NAME repository!"
