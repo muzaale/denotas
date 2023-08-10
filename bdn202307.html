@@ -1710,18 +1710,11 @@ Y_i  =  \beta_0  +  \beta_1 X_1  +  \beta_2 X_2  +  \cdots  +  \beta_N X_N  +  \
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Define the table data as a list of lists</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="p">[</span><span class="s2">&quot;studentuniverse&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;mozart&quot;</span><span class="p">,</span> <span class="s2">&quot;shaKespeare&quot;</span><span class="p">,</span> <span class="s2">&quot;2023-06-15&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="p">[</span><span class="s2">&quot;alaskan&quot;</span><span class="p">,</span> <span class="s2">&quot;340733890&quot;</span><span class="p">,</span> <span class="s2">&quot;mozart&quot;</span><span class="p">,</span> <span class="s2">&quot;shaKespeare&quot;</span><span class="p">,</span> <span class="s2">&quot;2023-02-05&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="p">[</span><span class="s2">&quot;frontier&quot;</span><span class="p">,</span> <span class="s2">&quot;90102556651&quot;</span><span class="p">,</span> <span class="s2">&quot;mozart&quot;</span><span class="p">,</span> <span class="s2">&quot;shaKespeare&quot;</span><span class="p">,</span> <span class="s2">&quot;2023-07-06&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="p">]</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;tabulate&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>account          number       username    password     date
+---------------  -----------  ----------  -----------  ----------
+studentuniverse               mozart      shaKespeare  2023-06-15
+alaskan          340733890    mozart      shaKespeare  2023-02-05
+frontier         90102556651  mozart      shaKespeare  2023-07-06
 </pre></div>
 </div>
 </div>
@@ -1729,6 +1722,11 @@ Y_i  =  \beta_0  +  \beta_1 X_1  +  \beta_2 X_2  +  \cdots  +  \beta_N X_N  +  \
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2023-06-15&#39;
 </pre></div>
 </div>
 </div>
@@ -2333,6 +2331,9 @@ successfully converted <span class="s">&quot;/Users/d/Desktop/publish.html&quot;
 </div>
 </div>
 </details>
+<div class="cell_output docutils container">
+<img alt="_images/e4bd8b689277327e1af94fd72367f2949e9cb2ef61f24ab648e3d06d32012c4e.png" src="_images/e4bd8b689277327e1af94fd72367f2949e9cb2ef61f24ab648e3d06d32012c4e.png" />
+</div>
 </div>
 <ol class="arabic simple" start="6">
 <li><p>do the pat hack</p></li>
@@ -2773,6 +2774,35 @@ by the presence of our Lord
 </div>
 </div>
 </details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Language   Season 1 Season 2  Season 3   Season 4     Book
+0      English     Spring   Summer      Fall     Winter     Book
+1      Spanish  Primavera   Verano     Otoño   Invierno    Libro
+2       French  Printemps      Été   Automne      Hiver    Livre
+3       German   Frühling   Sommer    Herbst     Winter     Buch
+4      Italian  Primavera   Estate   Autunno    Inverno    Libro
+5   Portuguese  Primavera    Verão    Outono    Inverno    Livro
+6      Swedish        Vår   Sommar      Höst     Vinter      Bok
+7    Norwegian        Vår   Sommer      Høst     Vinter      Bok
+8   Icelandish        Vor    Sumar     Haust      Vetur      Bók
+9       Danish      Forår   Sommer   Efterår     Vinter      Bog
+10       Dutch      Lente    Zomer    Herfst     Winter     Boek
+11       Latin        Ver   Aestas  Autumnus      Hiems    Liber
+12     Russian      Весна     Лето     Осень       Зима    Книга
+13     Chinese         春季       夏季        秋季         冬季        书
+14      Korean          봄       여름        가을         겨울        책
+15    Japanese          春        夏         秋          冬        本
+16  Vietnamese   Mùa Xuân   Mùa Hè   Mùa Thu   Mùa Đông     Sách
+17      Arabic       ربيع      صيف      خريف       شتاء     كتاب
+18       Hindi       वसंत  ग्रीष्म      शरद्        शीत   पुस्तक
+19    Gujarati       વસંત  ગ્રીષ્મ      પતઝડ      શિયાળ   પુસ્તક
+20        Zulu     Lentha  Inhlaba   Inyanga     Injini  Incwadi
+21      Yoruba       Ọsan      Ètì       Ọla  Harmattan      Ìwe
+22     Luganda    Omukaka   Kyampa    Kwakya   Ssekidde  Empaako
+23     Swahili     Masika     Vuli   Kipupwe   Kiangazi   Kitabu
+</pre></div>
+</div>
+</div>
 </div>
 <p>The provided code will create a DataFrame with the translations for the specified languages. You can extend the list of languages and their translations as needed by following the same pattern used in the code.</p>
 <div class="cell tag_hide-input docutils container">
@@ -2818,6 +2848,35 @@ by the presence of our Lord
 </div>
 </div>
 </details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Language      Open       Science
+0      English      Open       Science
+1      Spanish   Abierto       Ciencia
+2       French    Ouvert       Science
+3       German     Offen  Wissenschaft
+4      Italian    Aperto       Scienza
+5   Portuguese    Aberto       Ciência
+6      Swedish     Öppen     Vetenskap
+7    Norwegian      Åpen     Vitenskap
+8   Icelandish      Opin       Vísindi
+9       Danish      Åben     Videnskab
+10       Dutch      Open    Wetenschap
+11       Latin   Apertus      Scientia
+12     Russian   Открыто         Наука
+13     Chinese        开放            科学
+14      Korean        열린            과학
+15    Japanese      オープン            科学
+16  Vietnamese        Mở      Khoa học
+17      Arabic     مفتوح           علم
+18       Hindi      खुला       विज्ञान
+19    Gujarati   ખોલ્યું       વિજ્ઞાન
+20        Zulu  Okuvulwe        Ulwazi
+21      Yoruba       Ọya           Ẹkọ
+22     Luganda   Ebisolo      Ebitonde
+23     Swahili      Wazi       Sayansi
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="vaughn">
@@ -2955,6 +3014,9 @@ by the presence of our Lord
 </div>
 </div>
 </details>
+<div class="cell_output docutils container">
+<img alt="_images/ec85559871fbcf5f231da59637bf7af8efedbeb4671ef66d3acb16319bc40957.png" src="_images/ec85559871fbcf5f231da59637bf7af8efedbeb4671ef66d3acb16319bc40957.png" />
+</div>
 </div>
 <ol class="arabic simple">
 <li><p><span style="color: #FFCC00;">engineering</span></p>
@@ -3020,6 +3082,35 @@ by the presence of our Lord
 </div>
 </div>
 </details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      language           note                    pad
+0      English           Note                    Pad
+1      Spanish           Nota          Bloc de notas
+2       French           Note             Bloc-notes
+3       German          Notiz             Notizblock
+4      Italian           Nota         Blocco di note
+5   Portuguese           Nota         Bloco de notas
+6      Swedish     Anteckning       Anteckningsblock
+7    Norwegian          Notat             Notatblokk
+8   Icelandish  Minnispunktur              Minnisbók
+9       Danish          Notat               Notesbog
+10       Dutch        Notitie            Notitieblok
+11       Latin           Nota                 Tabula
+12     Russian        Заметка                Блокнот
+13     Chinese             笔记                    记事本
+14      Korean             노트                   노트패드
+15    Japanese            ノート                 ノートパッド
+16  Vietnamese        Ghi chú             Sổ ghi chú
+17      Arabic          مذكرة         دفتر الملاحظات
+18       Hindi            नोट                 नोटपैड
+19    Gujarati            નોટ                 નોટપેડ
+20        Zulu         Inothi       Ikhadi lokubhala
+21      Yoruba         Akílẹ̀           Padi apileko
+22     Luganda           Yiga          Yiga empapula
+23     Swahili        Kumbuka  Kitabu cha kumbukumbu
+</pre></div>
+</div>
+</div>
 </div>
 <p>migrating my ‘note book’ journal to central place for all things python/jupyter and it will go by bloc de notas:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">~/</span><span class="n">dropbox</span><span class="o">/</span><span class="mi">1</span><span class="n">f</span><span class="o">.</span><span class="n">ἡἔρις</span><span class="p">,</span><span class="n">κ</span><span class="o">/</span><span class="mf">1.</span><span class="n">ontology</span>
@@ -3937,6 +4028,19 @@ function setup() {
 </div>
 </div>
 </details>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">requests</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Send a request to the Wikipedia page</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;bs4&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
@@ -4672,7 +4776,7 @@ _(Provide answer here)_
 <p>Euler’s identity, equation <a class="reference internal" href="#equation-euler">()</a>, was elected one of the
 most beautiful mathematical formulas.</p>
 <blockquote>
-<div><p>Aug 08, 2023 | 25587 words | 128 min read</p>
+<div><p>Aug 10, 2023 | 25587 words | 128 min read</p>
 </div></blockquote>
 </section>
 </section>
