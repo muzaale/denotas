@@ -573,16 +573,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Heather Hart                  
-2          Amanda Allen                  
-3          Alexis Thompson               
-4          Kevin Hines                   
-5          Wendy Jones                   
-6          Elizabeth Hicks               
-7          Melinda May                   
-8          John Phillips                 
-9          Wanda Wang                    
-10         Gloria Williams               
+1          Norman Williams               
+2          Amanda Martinez               
+3          Erin Anderson                 
+4          Matthew Cole                  
+5          Scott Baker                   
+6          Steven Jones                  
+7          Zachary Cox                   
+8          William Snyder                
+9          Theresa Foster                
+10         Morgan Davis                  
 </pre></div>
 </div>
 </div>
@@ -1097,12 +1097,12 @@ Requirement already satisfied: jsonpickle in /Users/d/Dropbox (Personal)/1f.ἡ
 Requirement already satisfied: matplotlib in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (3.7.2)
 Requirement already satisfied: more-itertools in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (10.1.0)
 Requirement already satisfied: numpy in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.25.2)
-Requirement already satisfied: requests in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (2.31.0)
-Requirement already satisfied: webcolors&gt;=1.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.13)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cycler&gt;=0.10 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: requests in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (2.31.0)
+Requirement already satisfied: webcolors&gt;=1.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.13)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
+Requirement already satisfied: cycler&gt;=0.10 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
 Requirement already satisfied: fonttools&gt;=4.22.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.42.0)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
 Requirement already satisfied: packaging&gt;=20.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (23.1)
@@ -8852,87 +8852,13 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 <hr class="docutils" />
 <section id="counterfeiting">
 <h2>921. counterfeiting<a class="headerlink" href="#counterfeiting" title="Permalink to this heading">#</a></h2>
-<p>Sure, you can simulate multivariate data using a given mean vector and covariance matrix by utilizing statistical libraries like NumPy and SciPy. Here’s a Python code snippet that shows how to do this:</p>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install numpy</span>
-<span class="c1"># !pip install scipy</span>
-
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">scipy.linalg</span> <span class="kn">import</span> <span class="n">cholesky</span>
-
-<span class="c1"># Define the mean vector and the variance-covariance matrix</span>
-<span class="n">mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># Mean of the distribution</span>
-<span class="n">cov_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
-    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
-    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-<span class="p">])</span>  <span class="c1"># Variance-covariance matrix</span>
-
-<span class="c1"># Check if the covariance matrix is positive semi-definite</span>
-<span class="c1"># If not, it cannot be a valid covariance matrix</span>
-<span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigvals</span><span class="p">(</span><span class="n">cov_matrix</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
-
-    <span class="c1"># Decompose the covariance matrix using Cholesky decomposition</span>
-    <span class="n">lower_cholesky</span> <span class="o">=</span> <span class="n">cholesky</span><span class="p">(</span><span class="n">cov_matrix</span><span class="p">)</span>
-
-    <span class="c1"># Number of data points to simulate</span>
-    <span class="n">num_samples</span> <span class="o">=</span> <span class="mi">1000</span>
-
-    <span class="c1"># Generate standard normal random variables</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="n">num_samples</span><span class="p">,</span> <span class="n">mean</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-
-    <span class="c1"># Generate multivariate normal random variables</span>
-    <span class="n">simulated_data</span> <span class="o">=</span> <span class="n">z</span> <span class="o">@</span> <span class="n">lower_cholesky</span><span class="o">.</span><span class="n">T</span> <span class="o">+</span> <span class="n">mean</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="n">simulated_data</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Covariance matrix is not positive semi-definite.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (1.25.2)
-Collecting scipy
-  Obtaining dependency information for scipy from https://files.pythonhosted.org/packages/c7/09/c07278f3c75018f80288032b09acd76aa4c2056cdb7fa9b0a145bac6b06b/scipy-1.11.1-cp311-cp311-macosx_10_9_x86_64.whl.metadata
-  Downloading scipy-1.11.1-cp311-cp311-macosx_10_9_x86_64.whl.metadata (54 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">54.1/54.1 kB</span> <span class=" -Color -Color-Red">561.3 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>a <span class=" -Color -Color-Cyan">0:00:01</span>
-?25hRequirement already satisfied: numpy&lt;1.28.0,&gt;=1.21.6 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from scipy) (1.25.2)
-Downloading scipy-1.11.1-cp311-cp311-macosx_10_9_x86_64.whl (37.0 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">37.0/37.0 MB</span> <span class=" -Color -Color-Red">33.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>00:0100:01
-?25hInstalling collected packages: scipy
-Successfully installed scipy-1.11.1
-[[-2.57304274 -0.05970271]
- [-0.62391017  0.99110524]
- [ 0.94744301  1.73040989]
- ...
- [-0.2539758  -0.73127296]
- [ 0.94847075  2.08988237]
- [ 0.68467797 -0.85820275]]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Make sure that your covariance matrix is positive semi-definite (all eigenvalues are non-negative), otherwise, it can’t represent a valid covariance matrix of a multivariate distribution. The code above first checks for this condition before proceeding with the simulation.</p>
-<p>Also, make sure that the dimensions of the mean vector and the covariance matrix are consistent. If you are simulating data for <code class="docutils literal notranslate"><span class="pre">n</span></code> variables, the mean vector should be of length <code class="docutils literal notranslate"><span class="pre">n</span></code>, and the covariance matrix should be <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">x</span> <span class="pre">n</span></code>.</p>
-<p>You can adjust the <code class="docutils literal notranslate"><span class="pre">mean</span></code> and <code class="docutils literal notranslate"><span class="pre">cov_matrix</span></code> variables to represent the coefficients and relationships between the variables you want to simulate.</p>
-<hr class="docutils" />
-<p>Splendid. Now could you get me the necessary inputs that generate a N=1000 dataset with the following variables: age (mean=40, sd=5), SBP (mean=124, sd=11), SCr (mean=1,sd=0.02), BMI (mean=27,sd=5), HbA1c (mean=6,sd=.8), uACR (mean=6,sd=3),Diabetes(12%), Hypertension(31%), Smoke(57%), Race (37% white, 23% black, 23% hispanic, 13% Asian, 4% Other), Education (16% K-8, 42% High School, 22% Some college, 20% College). The beta-coefficients from a Cox-regression comparing 30-year risk of end-stage kidney failure (hazard ratios) are age (0.5), Race (1 for white, 3.2 for hispanic, 4 for black, 0.7 for Asian, 1.1 for other, Male (1.2), Diabetes (5.2), Hypertension (1.0), uACR (4.0), eGFR (2.7), SBP (2.3), Smoke (1.8)</p>
-<hr class="docutils" />
-<p>Given the information, we can create a simulated dataset with the specified characteristics. I’ll split the task into several parts to make the process clear:</p>
+<p>Simulating data for a Cox regression model that reflects specific hazard ratios and correlation structures is a complex task. We’ll need to:</p>
 <ol class="arabic simple">
-<li><p><strong>Simulate Continuous Variables</strong>: We’ll simulate <code class="docutils literal notranslate"><span class="pre">age</span></code>, <code class="docutils literal notranslate"><span class="pre">SBP</span></code>, <code class="docutils literal notranslate"><span class="pre">SCr</span></code>, <code class="docutils literal notranslate"><span class="pre">BMI</span></code>, and <code class="docutils literal notranslate"><span class="pre">HbA1c</span></code> as continuous variables with the given means and standard deviations.</p></li>
-<li><p><strong>Simulate Binary Variables</strong>: We’ll simulate <code class="docutils literal notranslate"><span class="pre">Diabetes</span></code>, <code class="docutils literal notranslate"><span class="pre">Hypertension</span></code>, and <code class="docutils literal notranslate"><span class="pre">Smoke</span></code> as binary variables with the given proportions.</p></li>
-<li><p><strong>Simulate Categorical Variables</strong>: We’ll simulate <code class="docutils literal notranslate"><span class="pre">Race</span></code> and <code class="docutils literal notranslate"><span class="pre">Education</span></code> as categorical variables with the given proportions.</p></li>
-<li><p><strong>Calculate Hazard Ratios</strong>: We’ll calculate the hazard ratios using the given coefficients.</p></li>
+<li><p>Define a covariance structure between the predictors.</p></li>
+<li><p>Simulate survival times based on a specified hazard function, incorporating the given hazard ratios.</p></li>
 </ol>
-<p>The covariance matrix will be an identity matrix since the correlation between the variables is not specified.</p>
-<p>Let’s get started with the code:</p>
+<p>First, we’ll create the dataset with the defined means and standard deviations, and a reasonable covariance structure between continuous variables. Then, we’ll define a hazard function using the given hazard ratios, and finally, generate survival times and censoring indicators.</p>
+<p>Here’s a full code snippet:</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -8942,153 +8868,453 @@ Successfully installed scipy-1.11.1
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">os</span> 
-
-
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">multivariate_normal</span>
 
 <span class="c1"># Constants</span>
 <span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span>
 
-<span class="c1"># Continuous Variables</span>
-<span class="n">mean_cont</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">40</span><span class="p">,</span> <span class="mi">124</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>  <span class="c1"># Mean for age, SBP, SCr, BMI, HbA1c</span>
-<span class="n">std_cont</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">])</span>  <span class="c1"># Standard deviation</span>
-<span class="n">cont_vars</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mean_cont</span><span class="p">,</span> <span class="n">std_cont</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="c1"># Means and covariance matrix for continuous variables (age, SBP, SCr, BMI, HbA1c)</span>
+<span class="n">mean_cont</span> <span class="o">=</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">124</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">cov_matrix</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">121</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.02</span><span class="p">,</span> <span class="mf">0.0004</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.64</span><span class="p">]</span>
+<span class="p">]</span>
+<span class="n">cont_vars</span> <span class="o">=</span> <span class="n">multivariate_normal</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="n">mean_cont</span><span class="p">,</span> <span class="n">cov</span><span class="o">=</span><span class="n">cov_matrix</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
 
-<span class="c1"># Binary Variables</span>
-<span class="n">proportions</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.12</span><span class="p">,</span> <span class="mf">0.31</span><span class="p">,</span> <span class="mf">0.57</span><span class="p">]</span>  <span class="c1"># Diabetes, Hypertension, Smoke</span>
-<span class="n">binary_vars</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">N</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="o">-</span><span class="n">p</span><span class="p">,</span> <span class="n">p</span><span class="p">])</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">proportions</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+<span class="c1"># Simulating categorical variables (Race, Education) and binary variables (Diabetes, Hypertension, Smoke, Male)</span>
+<span class="n">race</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">N</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.37</span><span class="p">,</span> <span class="mf">0.23</span><span class="p">,</span> <span class="mf">0.23</span><span class="p">,</span> <span class="mf">0.13</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">])</span>
+<span class="n">education</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">N</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.16</span><span class="p">,</span> <span class="mf">0.42</span><span class="p">,</span> <span class="mf">0.22</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">])</span>
+<span class="n">diabetes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">N</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.88</span><span class="p">,</span> <span class="mf">0.12</span><span class="p">])</span>
+<span class="n">hypertension</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">N</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.69</span><span class="p">,</span> <span class="mf">0.31</span><span class="p">])</span>
+<span class="n">smoke</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">N</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.43</span><span class="p">,</span> <span class="mf">0.57</span><span class="p">])</span>
+<span class="n">male</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">N</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span> <span class="c1"># Assuming a 50-50 split</span>
 
-<span class="c1"># Categorical Variables - Race</span>
-<span class="n">race_categories</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">N</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.37</span><span class="p">,</span> <span class="mf">0.23</span><span class="p">,</span> <span class="mf">0.23</span><span class="p">,</span> <span class="mf">0.13</span><span class="p">,</span> <span class="mf">0.04</span><span class="p">])</span>
+<span class="c1"># Hazard function incorporating the given hazard ratios</span>
+<span class="k">def</span> <span class="nf">hazard_function</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">age</span><span class="p">,</span> <span class="n">race</span><span class="p">,</span> <span class="n">male</span><span class="p">,</span> <span class="n">diabetes</span><span class="p">,</span> <span class="n">hypertension</span><span class="p">,</span> <span class="n">uacr</span><span class="p">,</span> <span class="n">egfr</span><span class="p">,</span> <span class="n">sbp</span><span class="p">,</span> <span class="n">smoke</span> <span class="o">=</span> <span class="n">x</span>
+    <span class="n">hr</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">age</span> <span class="o">+</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">][</span><span class="n">race</span><span class="p">]</span> <span class="o">+</span> <span class="mf">1.2</span><span class="o">*</span><span class="n">male</span> <span class="o">+</span> <span class="mf">5.2</span><span class="o">*</span><span class="n">diabetes</span> <span class="o">+</span> <span class="mf">1.0</span><span class="o">*</span><span class="n">hypertension</span> <span class="o">+</span> <span class="mf">4.0</span><span class="o">*</span><span class="n">uacr</span> <span class="o">+</span> <span class="mf">2.7</span><span class="o">*</span><span class="n">egfr</span> <span class="o">+</span> <span class="mf">2.3</span><span class="o">*</span><span class="n">sbp</span> <span class="o">+</span> <span class="mf">1.8</span><span class="o">*</span><span class="n">smoke</span>
+    <span class="k">return</span> <span class="n">hr</span>
 
-<span class="c1"># Categorical Variables - Education</span>
-<span class="n">education_categories</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">N</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="p">[</span><span class="mf">0.16</span><span class="p">,</span> <span class="mf">0.42</span><span class="p">,</span> <span class="mf">0.22</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">])</span>
+<span class="c1"># Simulating time to event (kidney failure) based on the hazard function</span>
+<span class="n">time_to_failure</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">cont_vars</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">race</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">male</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">diabetes</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">hypertension</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">cont_vars</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">cont_vars</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">cont_vars</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">smoke</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">hr</span> <span class="o">=</span> <span class="n">hazard_function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">time_to_failure</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="mi">30</span><span class="o">/</span><span class="n">hr</span><span class="p">)</span>
+    <span class="n">status</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">time_to_failure</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">30</span>
 
-<span class="c1"># Combine variables</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">([</span><span class="n">cont_vars</span><span class="p">,</span> <span class="n">binary_vars</span><span class="p">,</span> <span class="n">race_categories</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">],</span> <span class="n">education_categories</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]])</span>
-
-<span class="c1"># Define the column names</span>
-<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;SBP&#39;</span><span class="p">,</span> <span class="s1">&#39;SCr&#39;</span><span class="p">,</span> <span class="s1">&#39;BMI&#39;</span><span class="p">,</span> <span class="s1">&#39;HbA1c&#39;</span><span class="p">,</span> <span class="s1">&#39;Diabetes&#39;</span><span class="p">,</span> <span class="s1">&#39;Hypertension&#39;</span><span class="p">,</span> <span class="s1">&#39;Smoke&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">,</span> <span class="s1">&#39;Education&#39;</span><span class="p">]</span>
-
-<span class="c1"># Create a DataFrame</span>
+<span class="c1"># Combine all variables into DataFrame</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">([</span><span class="n">cont_vars</span><span class="p">,</span> <span class="n">diabetes</span><span class="p">,</span> <span class="n">hypertension</span><span class="p">,</span> <span class="n">smoke</span><span class="p">,</span> <span class="n">race</span><span class="p">,</span> <span class="n">education</span><span class="p">,</span> <span class="n">male</span><span class="p">,</span> <span class="n">time_to_failure</span><span class="p">,</span> <span class="n">status</span><span class="p">])</span>
+<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;SBP&#39;</span><span class="p">,</span> <span class="s1">&#39;SCr&#39;</span><span class="p">,</span> <span class="s1">&#39;BMI&#39;</span><span class="p">,</span> <span class="s1">&#39;HbA1c&#39;</span><span class="p">,</span> <span class="s1">&#39;Diabetes&#39;</span><span class="p">,</span> <span class="s1">&#39;Hypertension&#39;</span><span class="p">,</span> <span class="s1">&#39;Smoke&#39;</span><span class="p">,</span> <span class="s1">&#39;Race&#39;</span><span class="p">,</span> <span class="s1">&#39;Education&#39;</span><span class="p">,</span> <span class="s1">&#39;Male&#39;</span><span class="p">,</span> <span class="s1">&#39;Time_to_Kidney_Failure&#39;</span><span class="p">,</span> <span class="s1">&#39;Status&#39;</span><span class="p">]</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
-
-<span class="c1"># Replace the Race and Education categories with appropriate labels</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Race&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Race&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;White&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;Black&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;Hispanic&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;Asian&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;Other&#39;</span><span class="p">})</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Education&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Education&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;K-8&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;High School&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;Some college&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;College&#39;</span><span class="p">})</span>
-
-<span class="c1"># Visualize the first few rows</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Race&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Race&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;White&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;Black&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;Hispanic&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;Asian&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="s1">&#39;Other&#39;</span><span class="p">})</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Education&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Education&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;K-8&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;High School&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="s1">&#39;Some college&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="s1">&#39;College&#39;</span><span class="p">})</span>
 
 <span class="c1"># Save to CSV</span>
-<span class="n">csv_file</span> <span class="o">=</span> <span class="s1">&#39;~/dropbox/1f.ἡἔρις,κ/1.ontology/simulated_data.csv&#39;</span>
-
+<span class="n">csv_file</span> <span class="o">=</span> <span class="s1">&#39;simulated_data.csv&#39;</span>
 <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved dataset to </span><span class="si">{</span><span class="n">csv_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="n">current_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Current working directory: </span><span class="si">{</span><span class="n">current_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Print summaries</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Time_to_Kidney_Failure&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Status&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>         age         SBP       SCr        BMI     HbA1c  Diabetes  \
-0  38.414433  131.092548  0.972852  32.605360  7.524143       0.0   
-1  44.270204  116.298219  1.001346  34.922255  5.560034       0.0   
-2  38.813098  121.996507  1.021914  29.904452  6.729113       1.0   
-3  45.074850  135.281669  1.045688  27.074034  5.988045       1.0   
-4  43.105077  112.818654  1.010488  26.306769  4.840854       1.0   
-
-   Hypertension  Smoke   Race     Education  
-0           0.0    0.0  Black  Some college  
-1           0.0    1.0  Asian       College  
-2           0.0    1.0  Black   High School  
-3           1.0    1.0  Black   High School  
-4           0.0    0.0  Asian  Some college  
-Saved dataset to ~/dropbox/1f.ἡἔρις,κ/1.ontology/simulated_data.csv
-Current working directory: /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/bloc
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved dataset to simulated_data.csv
+count    1000.000000
+mean        0.078462
+std         0.078522
+min         0.000042
+25%         0.021140
+50%         0.053919
+75%         0.107087
+max         0.496502
+Name: Time_to_Kidney_Failure, dtype: float64
+Status
+1.0    1000
+Name: count, dtype: int64
 </pre></div>
 </div>
 </div>
 </div>
-<p>This code creates a dataset with the specified characteristics. The continuous and binary variables are normally distributed and Bernoulli distributed, respectively. The categorical variables are multinomially distributed according to the given proportions.</p>
-<p>You can then use the <code class="docutils literal notranslate"><span class="pre">data</span></code> array to build a model to analyze the relationships between variables. Make sure to translate the <code class="docutils literal notranslate"><span class="pre">race_categories</span></code> and <code class="docutils literal notranslate"><span class="pre">education_categories</span></code> to the appropriate labels or dummy variables as needed for your analysis.</p>
-<hr class="docutils" />
-<p>This is a great dataset; however, given ” 30-year risk of end-stage kidney failure (hazard ratios) are age (0.5), Race (1 for white, 3.2 for hispanic, 4 for black, 0.7 for Asian, 1.1 for other, Male (1.2), Diabetes (5.2), Hypertension (1.0), uACR (4.0), eGFR (2.7), SBP (2.3), Smoke (1.8)” we need additional variables for time-to-kidney failure or end of study and status at end (0 or 1 for kidney failure). then when we run a Cox proportional hazards regression, we should get those Hazard ratios outlined. And that’s how you’ll determine the variance-covariance matrix.</p>
-<hr class="docutils" />
-<p>Certainly! We can simulate time-to-event data using the specified hazard ratios and add the variables for time-to-kidney failure or end of study, as well as the status at the end (0 or 1 for kidney failure). Here’s a step-by-step guide:</p>
+<p>Please note that the given hazard ratios and the hazard function here are simplified, and this simulation might not accurately represent real-world relationships. Adjusting the means, variances, and covariances to match real-world data and expert opinions would be necessary to obtain a realistic simulation. Additionally, the hazard function used here is a simplification. A more complex and appropriate model could be used to fit the hazard ratios more accurately. Consulting with a domain expert would be a crucial step in creating a realistic simulation.</p>
 <ol class="arabic simple">
-<li><p>Compute Baseline Hazard: Define a baseline hazard function. This can be a constant or a function depending on how you want to model the baseline risk.</p></li>
-<li><p>Compute Individual Hazards: Using the Cox Proportional Hazards model, calculate the individual hazard for each subject based on their covariates and the given hazard ratios.</p></li>
-<li><p>Simulate Survival Times: Use the Inverse Transform Sampling method to generate survival times based on individual hazards.</p></li>
-<li><p>Censoring: Apply a censoring mechanism to obtain the observed survival times and censoring indicator.</p></li>
-<li><p>Create DataFrame: Include the survival times and status into the DataFrame.</p></li>
+<li><p>Initial attempt</p></li>
 </ol>
-<p>Below is the code snippet:</p>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Constants for Hazard Ratios</span>
-<span class="n">hr_dict</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
-    <span class="s1">&#39;Race&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">],</span> <span class="c1"># White, Black, Hispanic, Asian, Other</span>
-    <span class="s1">&#39;Diabetes&#39;</span><span class="p">:</span> <span class="mf">5.2</span><span class="p">,</span>
-    <span class="s1">&#39;Hypertension&#39;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
-    <span class="s1">&#39;SBP&#39;</span><span class="p">:</span> <span class="mf">2.3</span><span class="p">,</span>
-    <span class="s1">&#39;Smoke&#39;</span><span class="p">:</span> <span class="mf">1.8</span>
-<span class="p">}</span>
-<span class="c1"># Assuming &#39;uACR&#39; and &#39;eGFR&#39; are available in your data</span>
-<span class="c1"># hr_dict[&#39;uACR&#39;] = 4.0</span>
-<span class="c1"># hr_dict[&#39;eGFR&#39;] = 2.7</span>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">capture log close</span>
+<span class="k">cd</span> <span class="o">~/</span>desktop
+<span class="k">log</span> using simulated_data<span class="m">.</span>log,<span class="k"> replace</span> 
+import delimited <span class="s">&quot;simulated_data.csv&quot;</span>,<span class="k"> clear</span> 
+<span class="k">g</span> time = time_to_kidney_failure <span class="o">*</span> <span class="m">100</span>
+<span class="k">stset</span> time, fail(status)
+#delimit ;
+<span class="k">sts graph</span>, 
+    fail 
+	per(<span class="m">100</span>) 
+	ylab(,
+<span class="k">	    format</span>(<span class="nx">%2.0f</span>)) 
+	yti(<span class="s">&quot;%&quot;</span>,
+	    orientation(horizontal)) 
+	xti(<span class="s">&quot;Years&quot;</span>)
+	ti(<span class="s">&quot;&quot;</span>)
+	tmax(<span class="m">30</span>)
+; 
+#delimit cr
+<span class="k">graph</span> export simulated_data<span class="m">.</span>png,<span class="k"> replace</span> 
+<span class="k">encode</span> race,g(racecat)
+<span class="k">encode</span> education,g(educat)
+<span class="k">stcox</span> age sbp scr bmi hba1c hypertension smoke i<span class="m">.</span>racecat i<span class="m">.</span>educat male
+<span class="k">matrix list e</span>(b)
+<span class="k">matrix list e</span>(V)
+<span class="k">log close</span> 
+</pre></div>
+</div>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------------------------------------------------------------------------------------</span>
+      name:  <span class="o">&lt;</span>unnamed<span class="o">&gt;</span>
+<span class="k">       log</span>:  <span class="o">/</span>Users<span class="o">/</span>d<span class="o">/</span>Desktop<span class="o">/</span>simulated_data<span class="m">.</span>log
+<span class="k">  log type</span>:  text
+ opened<span class="k"> on</span>:  <span class="m">10</span> Aug <span class="m">2023</span>, <span class="m">08</span>:<span class="m">18</span>:<span class="m">38</span>
 
-<span class="c1"># Baseline Hazard - this can be adjusted as per your requirement</span>
-<span class="n">lambda_0</span> <span class="o">=</span> <span class="mf">0.01</span>
+. import delimited <span class="s">&quot;simulated_data.csv&quot;</span>,<span class="k"> clear</span> 
+(encoding automatically selected: ISO<span class="m">-8859-1</span>)
+(<span class="m">13</span> vars, <span class="m">1</span>,<span class="m">000</span> obs)
 
-<span class="c1"># Compute individual hazards</span>
-<span class="n">individual_hazards</span> <span class="o">=</span> <span class="n">lambda_0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span>
-    <span class="n">hr_dict</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">+</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="n">hr_dict</span><span class="p">[</span><span class="s1">&#39;Race&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Race&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">&#39;White&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Black&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Hispanic&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;Asian&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Other&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}))</span> <span class="o">+</span>
-    <span class="n">hr_dict</span><span class="p">[</span><span class="s1">&#39;Diabetes&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Diabetes&#39;</span><span class="p">]</span> <span class="o">+</span>
-    <span class="n">hr_dict</span><span class="p">[</span><span class="s1">&#39;Hypertension&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Hypertension&#39;</span><span class="p">]</span> <span class="o">+</span>
-    <span class="n">hr_dict</span><span class="p">[</span><span class="s1">&#39;SBP&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;SBP&#39;</span><span class="p">]</span> <span class="o">+</span>
-    <span class="n">hr_dict</span><span class="p">[</span><span class="s1">&#39;Smoke&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Smoke&#39;</span><span class="p">]</span>
-    <span class="c1"># Add additional variables if needed</span>
-<span class="p">)</span>
+.<span class="k"> g</span> time = time_to_kidney_failure <span class="o">*</span> <span class="m">100</span>
 
-<span class="c1"># Simulate survival times</span>
-<span class="n">uniform_randoms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-<span class="n">survival_times</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">uniform_randoms</span><span class="p">)</span> <span class="o">/</span> <span class="n">individual_hazards</span>
+.<span class="k"> stset</span> time, fail(status)
 
-<span class="c1"># Apply censoring - assuming a study length of 30 years</span>
-<span class="n">study_length</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="n">status</span> <span class="o">=</span> <span class="p">(</span><span class="n">survival_times</span> <span class="o">&lt;</span> <span class="n">study_length</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-<span class="n">observed_times</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">minimum</span><span class="p">(</span><span class="n">survival_times</span><span class="p">,</span> <span class="n">study_length</span><span class="p">)</span>
+Survival<span class="o">-</span>time data settings
 
-<span class="c1"># Add to DataFrame</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Time_to_Kidney_Failure&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">observed_times</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Status&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">status</span>
+         Failure event: status<span class="o">!=</span><span class="m">0</span> <span class="o">&amp;</span> status<span class="o">&lt;</span>.
+Observed time interval: (<span class="m">0</span>, time]
+     Exit<span class="k"> on</span> or before: failure
+
+<span class="o">--------------------------------------------------------------------------</span>
+      <span class="m">1</span>,<span class="m">000</span> <span class="k"> total</span> observations
+          <span class="m">0</span>  exclusions
+<span class="o">--------------------------------------------------------------------------</span>
+      <span class="m">1</span>,<span class="m">000</span>  observations remaining, representing
+      <span class="m">1</span>,<span class="m">000</span>  failures<span class="k"> in</span> single<span class="o">-</span>record<span class="o">/</span>single<span class="o">-</span>failure data
+  <span class="m">7</span>,<span class="m">846.243</span> <span class="k"> total</span> analysis time at risk and under observation
+                                                At risk from t =         <span class="m">0</span>
+                                     Earliest observed entry t =         <span class="m">0</span>
+                                          Last observed<span class="k"> exit</span> t =  <span class="m">49.65025</span>
+
+. #delimit ;
+delimiter now ;
+.<span class="k"> sts graph</span>, 
+<span class="o">&gt;</span>     fail 
+<span class="o">&gt;</span>         per(<span class="m">100</span>) 
+<span class="o">&gt;</span>         ylab(,
+<span class="o">&gt;</span>            <span class="k"> format</span>(<span class="nx">%2.0f</span>)) 
+<span class="o">&gt;</span>         yti(<span class="s">&quot;%&quot;</span>,
+<span class="o">&gt;</span>             orientation(horizontal)) 
+<span class="o">&gt;</span>         xti(<span class="s">&quot;Years&quot;</span>)
+<span class="o">&gt;</span>         ti(<span class="s">&quot;&quot;</span>)
+<span class="o">&gt;</span>         tmax(<span class="m">30</span>)
+<span class="o">&gt;</span> ;
+
+        Failure _d: status
+  Analysis time _t: time
+
+.  #delimit cr
+delimiter now cr
+.<span class="k"> graph</span> export simulated_data<span class="m">.</span>png,<span class="k"> replace</span> 
+<span class="k">file</span> <span class="o">/</span>Users<span class="o">/</span>d<span class="o">/</span>Desktop<span class="o">/</span>simulated_data<span class="m">.</span>png saved<span class="k"> as</span> PNG<span class="k"> format</span>
+
+.<span class="k"> encode</span> race,g(racecat)
+
+.<span class="k"> encode</span> education,g(educat)
+
+.<span class="k"> stcox</span> age sbp scr bmi hba1c hypertension smoke i<span class="m">.</span>racecat i<span class="m">.</span>educat male
+
+        Failure _d: status
+  Analysis time _t: time
+
+Iteration <span class="m">0</span>:  Log likelihood = <span class="o">-</span><span class="m">5912.1282</span>
+Iteration <span class="m">1</span>:  Log likelihood = <span class="o">-</span><span class="m">5900.6377</span>
+Iteration <span class="m">2</span>:  Log likelihood = <span class="o">-</span><span class="m">5900.6298</span>
+Iteration <span class="m">3</span>:  Log likelihood = <span class="o">-</span><span class="m">5900.6298</span>
+Refining<span class="k"> estimates</span>:
+Iteration <span class="m">0</span>:  Log likelihood = <span class="o">-</span><span class="m">5900.6298</span>
+
+Cox regression with<span class="k"> no</span> ties
+
+No. of subjects =      <span class="m">1</span>,<span class="m">000</span>                            Number of obs =  <span class="m">1</span>,<span class="m">000</span>
+No. of failures =      <span class="m">1</span>,<span class="m">000</span>
+Time at risk    = <span class="m">7</span>,<span class="m">846.2435</span>
+                                                        LR <span class="nf">chi2</span>(<span class="m">15</span>)   =  <span class="m">23.00</span>
+Log likelihood = <span class="o">-</span><span class="m">5900.6298</span>                             Prob <span class="o">&gt;</span> chi2   = <span class="m">0.0842</span>
+
+<span class="o">-------------------------------------------------------------------------------</span>
+           _t | Haz.<span class="k"> ratio</span>   Std.<span class="k"> err</span>.      z    P<span class="o">&gt;</span>|z|     [<span class="m">95</span>%<span class="k"> conf</span>. interval]
+<span class="o">--------------+----------------------------------------------------------------</span>
+          age |   <span class="m">1.000975</span>   .<span class="m">0067914</span>     <span class="m">0.14</span>   <span class="m">0.886</span>     .<span class="m">9877519</span>    <span class="m">1.014374</span>
+          sbp |   <span class="m">1.006517</span>   .<span class="m">0029668</span>     <span class="m">2.20</span>   <span class="m">0.028</span>     <span class="m">1.000719</span>    <span class="m">1.012349</span>
+          scr |   .<span class="m">8907616</span>   <span class="m">1.431216</span>    <span class="o">-</span><span class="m">0.07</span>   <span class="m">0.943</span>     .<span class="m">0382039</span>    <span class="m">20.76897</span>
+          bmi |   .<span class="m">9961995</span>   .<span class="m">0066147</span>    <span class="o">-</span><span class="m">0.57</span>   <span class="m">0.566</span>      .<span class="m">983319</span>    <span class="m">1.009249</span>
+        hba1c |   <span class="m">1.147071</span>   .<span class="m">0477179</span>     <span class="m">3.30</span>   <span class="m">0.001</span>     <span class="m">1.057257</span>    <span class="m">1.244515</span>
+ hypertension |   <span class="m">1.100774</span>   .<span class="m">0780406</span>     <span class="m">1.35</span>   <span class="m">0.176</span>     .<span class="m">9579687</span>    <span class="m">1.264868</span>
+        smoke |   <span class="m">1.026346</span>   .<span class="m">0659869</span>     <span class="m">0.40</span>   <span class="m">0.686</span>     .<span class="m">9048311</span>     <span class="m">1.16418</span>
+              |
+      racecat |
+       Black  |   .<span class="m">9081203</span>   .<span class="m">1005787</span>    <span class="o">-</span><span class="m">0.87</span>   <span class="m">0.384</span>     .<span class="m">7309181</span>    <span class="m">1.128283</span>
+    Hispanic  |   .<span class="m">8198603</span>    .<span class="m">089963</span>    <span class="o">-</span><span class="m">1.81</span>   <span class="m">0.070</span>     .<span class="m">6612075</span>    <span class="m">1.016581</span>
+       Other  |   <span class="m">1.052135</span>   .<span class="m">1928423</span>     <span class="m">0.28</span>   <span class="m">0.782</span>     .<span class="m">7346115</span>    <span class="m">1.506904</span>
+       White  |   .<span class="m">8901913</span>   .<span class="m">0882279</span>    <span class="o">-</span><span class="m">1.17</span>   <span class="m">0.241</span>     .<span class="m">7330267</span>    <span class="m">1.081053</span>
+              |
+       educat |
+ High School  |   .<span class="m">9583789</span>   .<span class="m">0816347</span>    <span class="o">-</span><span class="m">0.50</span>   <span class="m">0.618</span>     .<span class="m">8110207</span>    <span class="m">1.132511</span>
+         K<span class="m">-8</span>  |   <span class="m">1.050765</span>   .<span class="m">1133652</span>     <span class="m">0.46</span>   <span class="m">0.646</span>     .<span class="m">8504933</span>    <span class="m">1.298196</span>
+Some college  |   .<span class="m">9902475</span>   .<span class="m">0914515</span>    <span class="o">-</span><span class="m">0.11</span>   <span class="m">0.915</span>     .<span class="m">8262919</span>    <span class="m">1.186736</span>
+              |
+         male |   <span class="m">1.005739</span>   .<span class="m">0646294</span>     <span class="m">0.09</span>   <span class="m">0.929</span>     .<span class="m">8867199</span>    <span class="m">1.140733</span>
+<span class="o">-------------------------------------------------------------------------------</span>
+
+.<span class="k"> matrix list e</span>(b)
+
+<span class="k">e</span>(b)[<span class="m">1</span>,<span class="m">17</span>]
+                                                                                                     
+             age           sbp           scr           bmi         hba1c  hypertension         smoke
+y1     .<span class="m">00097419</span>     .<span class="m">00649586</span>    <span class="o">-</span>.<span class="m">11567843</span>    <span class="o">-</span>.<span class="m">00380771</span>     .<span class="m">13721187</span>      .<span class="m">0960137</span>     .<span class="m">02600498</span>
+
+              1b.            <span class="m">2</span>.            <span class="m">3</span>.            <span class="m">4</span>.            <span class="m">5</span>.           1b.            <span class="m">2</span>.
+         racecat       racecat       racecat       racecat       racecat        educat        educat
+y1             <span class="m">0</span>    <span class="o">-</span>.<span class="m">09637839</span>    <span class="o">-</span>.<span class="m">19862137</span>     .<span class="m">05082174</span>     <span class="o">-</span>.<span class="m">1163189</span>             <span class="m">0</span>    <span class="o">-</span>.<span class="m">04251211</span>
+
+               <span class="m">3</span>.            <span class="m">4</span>.              
+          educat        educat          male
+y1     .<span class="m">04951838</span>    <span class="o">-</span>.<span class="m">00980032</span>      .<span class="m">0057224</span>
+
+.<span class="k"> matrix list e</span>(V)
+
+symmetric<span class="k"> e</span>(V)[<span class="m">17</span>,<span class="m">17</span>]
+                                                                                                               
+                       age           sbp           scr           bmi         hba1c  hypertension         smoke
+         age     .<span class="m">00004603</span>
+         sbp    <span class="o">-</span><span class="m">1.981e-06</span>     <span class="m">8.688e-06</span>
+         scr    <span class="o">-</span>.<span class="m">00020263</span>    <span class="o">-</span>.<span class="m">00021484</span>       <span class="m">2.58159</span>
+         bmi    <span class="o">-</span><span class="m">5.726e-06</span>    <span class="o">-</span><span class="m">1.049e-06</span>    <span class="o">-</span>.<span class="m">00055839</span>     .<span class="m">00004409</span>
+       hba1c     <span class="m">5.077e-06</span>    <span class="o">-</span><span class="m">2.916e-06</span>     <span class="o">-</span>.<span class="m">0053437</span>    <span class="o">-</span><span class="m">3.095e-06</span>     .<span class="m">00173054</span>
+hypertension    <span class="o">-</span><span class="m">8.904e-06</span>     <span class="m">9.251e-06</span>      .<span class="m">0003493</span>    <span class="o">-</span>.<span class="m">00002983</span>    <span class="o">-</span>.<span class="m">00001066</span>     .<span class="m">00502626</span>
+       smoke     <span class="m">5.508e-06</span>    <span class="o">-</span><span class="m">4.123e-06</span>     .<span class="m">00230588</span>       .<span class="m">000011</span>    <span class="o">-</span>.<span class="m">00008874</span>     .<span class="m">00014561</span>     .<span class="m">00413359</span>
+  1b<span class="m">.</span>racecat             <span class="m">0</span>             <span class="m">0</span>             <span class="m">0</span>             <span class="m">0</span>             <span class="m">0</span>             <span class="m">0</span>             <span class="m">0</span>
+   <span class="m">2.</span>racecat     .<span class="m">00001443</span>    <span class="o">-</span><span class="m">9.779e-06</span>      .<span class="m">0049377</span>    <span class="o">-</span>.<span class="m">00004861</span>     .<span class="m">00007833</span>     .<span class="m">00034173</span>    <span class="o">-</span>.<span class="m">00014829</span>
+   <span class="m">3.</span>racecat    <span class="o">-</span>.<span class="m">00001571</span>    <span class="o">-</span>.<span class="m">00002631</span>     .<span class="m">00689821</span>    <span class="o">-</span>.<span class="m">00002854</span>     .<span class="m">00017538</span>     .<span class="m">00005717</span>    <span class="o">-</span>.<span class="m">00007607</span>
+   <span class="m">4.</span>racecat    <span class="o">-</span>.<span class="m">00004832</span>     <span class="m">9.913e-06</span>      .<span class="m">0135565</span>     .<span class="m">00001269</span>     .<span class="m">00033953</span>    <span class="o">-</span>.<span class="m">00055507</span>     .<span class="m">00033795</span>
+   <span class="m">5.</span>racecat    <span class="o">-</span><span class="m">4.978e-06</span>    <span class="o">-</span>.<span class="m">00001205</span>     .<span class="m">00911722</span>    <span class="o">-</span>.<span class="m">00003206</span>     .<span class="m">00013383</span>    <span class="o">-</span>.<span class="m">00001345</span>     .<span class="m">00019594</span>
+   1b<span class="m">.</span>educat             <span class="m">0</span>             <span class="m">0</span>             <span class="m">0</span>             <span class="m">0</span>             <span class="m">0</span>             <span class="m">0</span>             <span class="m">0</span>
+    <span class="m">2.</span>educat    <span class="o">-</span><span class="m">6.130e-06</span>     <span class="m">5.540e-06</span>    <span class="o">-</span>.<span class="m">00257128</span>    <span class="o">-</span>.<span class="m">00001612</span>     <span class="m">7.235e-06</span>    <span class="o">-</span>.<span class="m">00009945</span>     .<span class="m">00009233</span>
+    <span class="m">3.</span>educat    <span class="o">-</span>.<span class="m">00002173</span>    <span class="o">-</span>.<span class="m">00001797</span>     .<span class="m">00055141</span>     <span class="m">6.090e-06</span>     .<span class="m">00010844</span>    <span class="o">-</span>.<span class="m">00001648</span>    <span class="o">-</span>.<span class="m">00009682</span>
+    <span class="m">4.</span>educat     <span class="m">4.749e-06</span>     <span class="m">3.198e-06</span>     .<span class="m">00407254</span>     .<span class="m">00001789</span>     .<span class="m">00008545</span>    <span class="o">-</span>.<span class="m">00005916</span>     .<span class="m">00009838</span>
+        male    <span class="o">-</span>.<span class="m">00001972</span>     .<span class="m">00001925</span>     .<span class="m">00137265</span>     <span class="o">-</span>.<span class="m">0000243</span>     .<span class="m">00005277</span>     .<span class="m">00022501</span>    <span class="o">-</span>.<span class="m">00003388</span>
+
+                        1b.            <span class="m">2</span>.            <span class="m">3</span>.            <span class="m">4</span>.            <span class="m">5</span>.           1b.            <span class="m">2</span>.
+                   racecat       racecat       racecat       racecat       racecat        educat        educat
+  1b<span class="m">.</span>racecat             <span class="m">0</span>
+   <span class="m">2.</span>racecat             <span class="m">0</span>     .<span class="m">01226663</span>
+   <span class="m">3.</span>racecat             <span class="m">0</span>     .<span class="m">00734394</span>      .<span class="m">0120406</span>
+   <span class="m">4.</span>racecat             <span class="m">0</span>     .<span class="m">00710681</span>     .<span class="m">00727447</span>     .<span class="m">03359399</span>
+   <span class="m">5.</span>racecat             <span class="m">0</span>     .<span class="m">00723199</span>     .<span class="m">00731763</span>      .<span class="m">0072888</span>     .<span class="m">00982301</span>
+   1b<span class="m">.</span>educat             <span class="m">0</span>             <span class="m">0</span>             <span class="m">0</span>             <span class="m">0</span>             <span class="m">0</span>             <span class="m">0</span>
+    <span class="m">2.</span>educat             <span class="m">0</span>     <span class="o">-</span>.<span class="m">0004988</span>    <span class="o">-</span>.<span class="m">00068961</span>    <span class="o">-</span>.<span class="m">00166119</span>    <span class="o">-</span>.<span class="m">00054906</span>             <span class="m">0</span>     .<span class="m">00725562</span>
+    <span class="m">3.</span>educat             <span class="m">0</span>     <span class="o">-</span>.<span class="m">0006126</span>     <span class="o">-</span>.<span class="m">0009112</span>    <span class="o">-</span>.<span class="m">00064009</span>    <span class="o">-</span>.<span class="m">00082472</span>             <span class="m">0</span>     .<span class="m">00452639</span>
+    <span class="m">4.</span>educat             <span class="m">0</span>    <span class="o">-</span>.<span class="m">00061023</span>    <span class="o">-</span>.<span class="m">00050447</span>    <span class="o">-</span>.<span class="m">00043566</span>    <span class="o">-</span>.<span class="m">00044294</span>             <span class="m">0</span>     .<span class="m">00452582</span>
+        male             <span class="m">0</span>     .<span class="m">00033395</span>     .<span class="m">00035275</span>    <span class="o">-</span>.<span class="m">00039819</span>      .<span class="m">0000884</span>             <span class="m">0</span>     .<span class="m">00024663</span>
+
+                         <span class="m">3</span>.            <span class="m">4</span>.              
+                    educat        educat          male
+    <span class="m">3.</span>educat     .<span class="m">01163988</span>
+    <span class="m">4.</span>educat      .<span class="m">0045199</span>     .<span class="m">00852891</span>
+        male     .<span class="m">00016174</span>     .<span class="m">00028983</span>     .<span class="m">00412943</span>
+
+.<span class="k"> log close</span> 
+      name:  <span class="o">&lt;</span>unnamed<span class="o">&gt;</span>
+<span class="k">       log</span>:  <span class="o">/</span>Users<span class="o">/</span>d<span class="o">/</span>Desktop<span class="o">/</span>simulated_data<span class="m">.</span>log
+<span class="k">  log type</span>:  text
+ closed<span class="k"> on</span>:  <span class="m">10</span> Aug <span class="m">2023</span>, <span class="m">08</span>:<span class="m">18</span>:<span class="m">40</span>
+<span class="o">---------------------------------------------------------------------------------------------------------------</span>
+</pre></div>
+</div>
+<p><img alt="" src="_images/simulated_data.png" /></p>
+<ol class="arabic simple" start="2">
+<li><p>Second attempt</p></li>
+</ol>
+<p>It seems like you are dealing with a statistical analysis using a Cox regression model and you’d like to generate simulated data that has specific hazard ratios (HRs) for various covariates. From your Stata output, you have noticed that most HRs are close to 1, and you want them to be greater than 2.</p>
+<p>The most common way to generate synthetic data that meets specific criteria is to start by defining the true underlying model from which the data are generated. You can then simulate data from that model, ensuring that the simulated data have the properties you want.</p>
+<p>Here’s a step-by-step guide that you can follow in Python, using packages like NumPy and SciPy, to generate the desired simulated data.</p>
+<ol class="arabic simple">
+<li><p><strong>Import Necessary Libraries</strong>:
+You’ll need to import some libraries to create and manipulate the data.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">expon</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Define the Baseline Hazard Function</strong>:
+The Cox model assumes that the hazard function is a product of a baseline hazard and an exponential function of the covariates. Here, you can define a simple baseline hazard using an exponential distribution.</p></li>
+<li><p><strong>Define the Covariate Structure</strong>:
+You’ll want to create the covariates based on the HRs you specified. Here’s an example for age, but you’ll want to do this for all your covariates.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span> <span class="c1"># Number of observations</span>
+
+<span class="c1"># Define age with a desired HR of 2.7 for eGFR</span>
+<span class="n">age</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">eGFR_effect</span> <span class="o">=</span> <span class="mf">2.7</span>
+
+<span class="c1"># Other covariates</span>
+<span class="c1"># ...</span>
+
+<span class="c1"># Constructing the hazard ratios</span>
+<span class="n">hazard_ratios</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">eGFR_effect</span> <span class="o">*</span> <span class="p">(</span><span class="n">age</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">age</span><span class="p">)))</span>
+<span class="c1"># ...</span>
+
+<span class="c1"># Other HRs here, multiplying them to get the total HR</span>
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p><strong>Generate Survival Times</strong>:
+Now, you can generate the survival times using the baseline hazard and the hazard ratios. Here’s how you can do that using an exponential distribution.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">baseline_hazard</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">event_times</span> <span class="o">=</span> <span class="n">expon</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">baseline_hazard</span> <span class="o">*</span> <span class="n">hazard_ratios</span><span class="p">))</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p><strong>Generate Censoring Times</strong>:
+Often in survival data, you’ll also have censoring. Here’s how you could generate censoring times and then use them to create the observed survival times and censoring indicators.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">censoring_times</span> <span class="o">=</span> <span class="n">expon</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">baseline_hazard</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<span class="n">observed_times</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">minimum</span><span class="p">(</span><span class="n">event_times</span><span class="p">,</span> <span class="n">censoring_times</span><span class="p">)</span>
+<span class="n">status</span> <span class="o">=</span> <span class="n">event_times</span> <span class="o">&lt;=</span> <span class="n">censoring_times</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p><strong>Create DataFrame</strong>:
+Finally, you can create a DataFrame containing the covariates, observed times, and censoring status.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span>
+    <span class="c1"># Other covariates here...</span>
+    <span class="s1">&#39;time_to_kidney_failure&#39;</span><span class="p">:</span> <span class="n">observed_times</span><span class="p">,</span>
+    <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="n">status</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p><strong>Export the DataFrame</strong>:
+You can then export this DataFrame to a CSV file and use it in your Stata code.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;simulated_data.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This process will generate data that have the hazard ratios you want. You’ll need to repeat steps 3-5 for each of the covariates, using the hazard ratios you specified. You’ll also likely need to tweak the distributions and parameters to get something that looks realistic for your particular setting. By modifying the parameters and distributions, you can generate simulated data that fits your desired HRs.</p>
+<hr class="docutils" />
+<p>Certainly! To produce hazard ratios (HRs) that are greater than 2, we’ll need to modify both the coefficient matrix and the variance-covariance matrix. Below, I’ll provide a script that achieves this by simulating data and running a Cox regression analysis. The script will first generate data, ensuring that the coefficients yield HRs greater than 2, and then perform the analysis using the Stata commands you provided earlier.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Function to simulate data</span>
+<span class="k">def</span> <span class="nf">simulate_data</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">sbp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">scr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">bmi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">hba1c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">hypertension</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">smoke</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">racecat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;Black&#39;</span><span class="p">,</span> <span class="s1">&#39;Hispanic&#39;</span><span class="p">,</span> <span class="s1">&#39;Other&#39;</span><span class="p">,</span> <span class="s1">&#39;White&#39;</span><span class="p">],</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">educat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;High School&#39;</span><span class="p">,</span> <span class="s1">&#39;K-8&#39;</span><span class="p">,</span> <span class="s1">&#39;Some college&#39;</span><span class="p">],</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">male</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+    
+    <span class="c1"># Coefficients to generate HRs greater than 2</span>
+    <span class="n">beta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">])</span>
+    
+    <span class="c1"># Simulate the linear predictor</span>
+    <span class="n">linear_pred</span> <span class="o">=</span> <span class="p">(</span><span class="n">beta</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">age</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">sbp</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">scr</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="n">bmi</span> <span class="o">+</span>
+                   <span class="n">beta</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">hba1c</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">*</span> <span class="n">hypertension</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">*</span> <span class="n">smoke</span> <span class="o">+</span>
+                   <span class="n">beta</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">racecat</span> <span class="o">==</span> <span class="s1">&#39;Black&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">racecat</span> <span class="o">==</span> <span class="s1">&#39;Hispanic&#39;</span><span class="p">)</span> <span class="o">+</span>
+                   <span class="n">beta</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">racecat</span> <span class="o">==</span> <span class="s1">&#39;Other&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">racecat</span> <span class="o">==</span> <span class="s1">&#39;White&#39;</span><span class="p">)</span> <span class="o">+</span>
+                   <span class="n">beta</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">educat</span> <span class="o">==</span> <span class="s1">&#39;High School&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">educat</span> <span class="o">==</span> <span class="s1">&#39;K-8&#39;</span><span class="p">)</span> <span class="o">+</span>
+                   <span class="n">beta</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">educat</span> <span class="o">==</span> <span class="s1">&#39;Some college&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span> <span class="o">*</span> <span class="n">male</span><span class="p">)</span>
+    
+    <span class="c1"># Simulate time to kidney failure</span>
+    <span class="n">time_to_kidney_failure</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">linear_pred</span><span class="p">))</span>
+    
+    <span class="c1"># Create status indicator (all failed)</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+    
+    <span class="c1"># Create a DataFrame</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span>
+        <span class="s1">&#39;sbp&#39;</span><span class="p">:</span> <span class="n">sbp</span><span class="p">,</span>
+        <span class="s1">&#39;scr&#39;</span><span class="p">:</span> <span class="n">scr</span><span class="p">,</span>
+        <span class="s1">&#39;bmi&#39;</span><span class="p">:</span> <span class="n">bmi</span><span class="p">,</span>
+        <span class="s1">&#39;hba1c&#39;</span><span class="p">:</span> <span class="n">hba1c</span><span class="p">,</span>
+        <span class="s1">&#39;hypertension&#39;</span><span class="p">:</span> <span class="n">hypertension</span><span class="p">,</span>
+        <span class="s1">&#39;smoke&#39;</span><span class="p">:</span> <span class="n">smoke</span><span class="p">,</span>
+        <span class="s1">&#39;race&#39;</span><span class="p">:</span> <span class="n">racecat</span><span class="p">,</span>
+        <span class="s1">&#39;education&#39;</span><span class="p">:</span> <span class="n">educat</span><span class="p">,</span>
+        <span class="s1">&#39;male&#39;</span><span class="p">:</span> <span class="n">male</span><span class="p">,</span>
+        <span class="s1">&#39;time_to_kidney_failure&#39;</span><span class="p">:</span> <span class="n">time_to_kidney_failure</span><span class="p">,</span>
+        <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="n">status</span>
+    <span class="p">})</span>
+    
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="c1"># Simulate the data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">simulate_data</span><span class="p">()</span>
 
 <span class="c1"># Save to CSV</span>
-<span class="n">csv_file</span> <span class="o">=</span> <span class="s1">&#39;~/dropbox/1f.ἡἔρις,κ/1.ontology/simulated_data_with_outcomes.csv&#39;</span>
-<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved dataset to </span><span class="si">{</span><span class="n">csv_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;simulated_data.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Stata commands</span>
+<span class="n">stata_commands</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">capture log close</span>
+<span class="s2">cd ~/desktop</span>
+<span class="s2">log using simulated_data.log, replace </span>
+<span class="s2">import delimited &quot;simulated_data.csv&quot;, clear </span>
+<span class="s2">g time = time_to_kidney_failure * 100</span>
+<span class="s2">stset time, fail(status)</span>
+<span class="s2">#delimit ;</span>
+<span class="s2">sts graph, </span>
+<span class="s2">    fail </span>
+<span class="s2">    per(100) </span>
+<span class="s2">    ylab(,</span>
+<span class="s2">        format(</span><span class="si">%2.0f</span><span class="s2">)) </span>
+<span class="s2">    yti(&quot;%&quot;,</span>
+<span class="s2">        orientation(horizontal)) </span>
+<span class="s2">    xti(&quot;Years&quot;)</span>
+<span class="s2">    ti(&quot;&quot;)</span>
+<span class="s2">    tmax(30)</span>
+<span class="s2">; </span>
+<span class="s2">#delimit cr</span>
+<span class="s2">graph export simulated_data.png, replace </span>
+<span class="s2">encode race,g(racecat)</span>
+<span class="s2">encode education,g(educat)</span>
+<span class="s2">stcox age sbp scr bmi hba1c hypertension smoke i.racecat i.educat male</span>
+<span class="s2">matrix list e(b)</span>
+<span class="s2">matrix list e(V)</span>
+<span class="s2">log close</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># Print the Stata commands to run</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stata_commands</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Saved dataset to simulated_data_with_outcomes.csv
-</pre></div>
-</div>
-</div>
-</div>
-<p>This code will create a DataFrame that includes the simulated survival times and event indicators (kidney failure or censored) and save it to a CSV file.</p>
-<p>Note: You’ll need to adjust the hazard ratios and possibly add more covariates based on the complete set of variables included in the model. The above code snippet assumes that you want to apply a constant baseline hazard, but this can be modified to include a more complex baseline hazard function if necessary. Make sure to customize the censoring mechanism according to the specifics of your study design.</p>
+<p>The above script first simulates data that should produce hazard ratios (HRs) greater than 2 for the given variables and then provides the Stata commands needed to perform the analysis.</p>
+<p>You can copy the Stata commands from the script and run them in Stata to perform the Cox regression analysis and obtain the results. Make sure to place the generated “simulated_data.csv” file in the appropriate location on your desktop before running the Stata commands.</p>
 </section>
 </section>
 
