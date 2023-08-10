@@ -1,14 +1,14 @@
 ---------------------------------------------------------------------------------------------------------------
       name:  <unnamed>
-       log:  /Users/d/Desktop/simulated_data.log
+       log:  /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/bloc/simulated_data.log
   log type:  text
- opened on:  10 Aug 2023, 08:18:38
+ opened on:  10 Aug 2023, 08:46:32
 
-. import delimited "simulated_data.csv", clear 
+. import delimited "simulated_data_2.csv", clear 
 (encoding automatically selected: ISO-8859-1)
-(13 vars, 1,000 obs)
+(12 vars, 1,000 obs)
 
-. g time = time_to_kidney_failure * 100
+. g time = time_to_kidney_failure * 10^20
 
 . stset time, fail(status)
 
@@ -20,14 +20,14 @@ Observed time interval: (0, time]
 
 --------------------------------------------------------------------------
       1,000  total observations
-          0  exclusions
+      1,000  observations end on or before enter()
 --------------------------------------------------------------------------
-      1,000  observations remaining, representing
-      1,000  failures in single-record/single-failure data
-  7,846.243  total analysis time at risk and under observation
+          0  observations remaining, representing
+          0  failures in single-record/single-failure data
+          0  total analysis time at risk and under observation
                                                 At risk from t =         0
-                                     Earliest observed entry t =         0
-                                          Last observed exit t =  49.65025
+                                     Earliest observed entry t =         .
+                                          Last observed exit t =         .
 
 . #delimit ;
 delimiter now ;
@@ -45,121 +45,24 @@ delimiter now ;
 
         Failure _d: status
   Analysis time _t: time
+no observations
+r(2000);
 
-.  #delimit cr
-delimiter now cr
-. graph export simulated_data.png, replace 
-file /Users/d/Desktop/simulated_data.png saved as PNG format
+end of do-file
 
-. encode race,g(racecat)
+r(2000);
 
-. encode education,g(educat)
+. codebook time
 
-. stcox age sbp scr bmi hba1c hypertension smoke i.racecat i.educat male
-
-        Failure _d: status
-  Analysis time _t: time
-
-Iteration 0:  Log likelihood = -5912.1282
-Iteration 1:  Log likelihood = -5900.6377
-Iteration 2:  Log likelihood = -5900.6298
-Iteration 3:  Log likelihood = -5900.6298
-Refining estimates:
-Iteration 0:  Log likelihood = -5900.6298
-
-Cox regression with no ties
-
-No. of subjects =      1,000                            Number of obs =  1,000
-No. of failures =      1,000
-Time at risk    = 7,846.2435
-                                                        LR chi2(15)   =  23.00
-Log likelihood = -5900.6298                             Prob > chi2   = 0.0842
-
--------------------------------------------------------------------------------
-           _t | Haz. ratio   Std. err.      z    P>|z|     [95% conf. interval]
---------------+----------------------------------------------------------------
-          age |   1.000975   .0067914     0.14   0.886     .9877519    1.014374
-          sbp |   1.006517   .0029668     2.20   0.028     1.000719    1.012349
-          scr |   .8907616   1.431216    -0.07   0.943     .0382039    20.76897
-          bmi |   .9961995   .0066147    -0.57   0.566      .983319    1.009249
-        hba1c |   1.147071   .0477179     3.30   0.001     1.057257    1.244515
- hypertension |   1.100774   .0780406     1.35   0.176     .9579687    1.264868
-        smoke |   1.026346   .0659869     0.40   0.686     .9048311     1.16418
-              |
-      racecat |
-       Black  |   .9081203   .1005787    -0.87   0.384     .7309181    1.128283
-    Hispanic  |   .8198603    .089963    -1.81   0.070     .6612075    1.016581
-       Other  |   1.052135   .1928423     0.28   0.782     .7346115    1.506904
-       White  |   .8901913   .0882279    -1.17   0.241     .7330267    1.081053
-              |
-       educat |
- High School  |   .9583789   .0816347    -0.50   0.618     .8110207    1.132511
-         K-8  |   1.050765   .1133652     0.46   0.646     .8504933    1.298196
-Some college  |   .9902475   .0914515    -0.11   0.915     .8262919    1.186736
-              |
-         male |   1.005739   .0646294     0.09   0.929     .8867199    1.140733
--------------------------------------------------------------------------------
-
-. matrix list e(b)
-
-e(b)[1,17]
-                                                                                                     
-             age           sbp           scr           bmi         hba1c  hypertension         smoke
-y1     .00097419     .00649586    -.11567843    -.00380771     .13721187      .0960137     .02600498
-
-              1b.            2.            3.            4.            5.           1b.            2.
-         racecat       racecat       racecat       racecat       racecat        educat        educat
-y1             0    -.09637839    -.19862137     .05082174     -.1163189             0    -.04251211
-
-               3.            4.              
-          educat        educat          male
-y1     .04951838    -.00980032      .0057224
-
-. matrix list e(V)
-
-symmetric e(V)[17,17]
-                                                                                                               
-                       age           sbp           scr           bmi         hba1c  hypertension         smoke
-         age     .00004603
-         sbp    -1.981e-06     8.688e-06
-         scr    -.00020263    -.00021484       2.58159
-         bmi    -5.726e-06    -1.049e-06    -.00055839     .00004409
-       hba1c     5.077e-06    -2.916e-06     -.0053437    -3.095e-06     .00173054
-hypertension    -8.904e-06     9.251e-06      .0003493    -.00002983    -.00001066     .00502626
-       smoke     5.508e-06    -4.123e-06     .00230588       .000011    -.00008874     .00014561     .00413359
-  1b.racecat             0             0             0             0             0             0             0
-   2.racecat     .00001443    -9.779e-06      .0049377    -.00004861     .00007833     .00034173    -.00014829
-   3.racecat    -.00001571    -.00002631     .00689821    -.00002854     .00017538     .00005717    -.00007607
-   4.racecat    -.00004832     9.913e-06      .0135565     .00001269     .00033953    -.00055507     .00033795
-   5.racecat    -4.978e-06    -.00001205     .00911722    -.00003206     .00013383    -.00001345     .00019594
-   1b.educat             0             0             0             0             0             0             0
-    2.educat    -6.130e-06     5.540e-06    -.00257128    -.00001612     7.235e-06    -.00009945     .00009233
-    3.educat    -.00002173    -.00001797     .00055141     6.090e-06     .00010844    -.00001648    -.00009682
-    4.educat     4.749e-06     3.198e-06     .00407254     .00001789     .00008545    -.00005916     .00009838
-        male    -.00001972     .00001925     .00137265     -.0000243     .00005277     .00022501    -.00003388
-
-                        1b.            2.            3.            4.            5.           1b.            2.
-                   racecat       racecat       racecat       racecat       racecat        educat        educat
-  1b.racecat             0
-   2.racecat             0     .01226663
-   3.racecat             0     .00734394      .0120406
-   4.racecat             0     .00710681     .00727447     .03359399
-   5.racecat             0     .00723199     .00731763      .0072888     .00982301
-   1b.educat             0             0             0             0             0             0
-    2.educat             0     -.0004988    -.00068961    -.00166119    -.00054906             0     .00725562
-    3.educat             0     -.0006126     -.0009112    -.00064009    -.00082472             0     .00452639
-    4.educat             0    -.00061023    -.00050447    -.00043566    -.00044294             0     .00452582
-        male             0     .00033395     .00035275    -.00039819      .0000884             0     .00024663
-
-                         3.            4.              
-                    educat        educat          male
-    3.educat     .01163988
-    4.educat      .0045199     .00852891
-        male     .00016174     .00028983     .00412943
-
-. log close 
-      name:  <unnamed>
-       log:  /Users/d/Desktop/simulated_data.log
-  log type:  text
- closed on:  10 Aug 2023, 08:18:40
 ---------------------------------------------------------------------------------------------------------------
+time                                                                                                (unlabeled)
+---------------------------------------------------------------------------------------------------------------
+
+                  Type: Numeric (float)
+
+                 Range: [0,0]                         Units: 1
+         Unique values: 1                         Missing .: 0/1,000
+
+            Tabulation: Freq.  Value
+                        1,000  0
+
