@@ -1,0 +1,676 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>07/2019 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn2019/bdn201907';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Nothin'</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter3.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn2019/bdn201907.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bdn2019/bdn201907.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>07/2019</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="id1">
+<h1>07/2019<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span><span class="n">Daniel</span> <span class="n">Kahneman</span> <span class="mi">360</span><span class="n">k</span> <span class="n">Biases</span>
+<span class="mf">2.</span><span class="n">Michael</span> <span class="n">Porter</span> <span class="mi">458</span><span class="n">k</span>  <span class="n">Strategy</span>
+<span class="mf">3.</span><span class="n">Tom</span> <span class="n">Maniatis</span> <span class="mi">348</span><span class="n">k</span> <span class="n">Neuroscience</span>
+<span class="mf">4.</span><span class="n">Noam</span> <span class="n">Chomsky</span> <span class="mi">387</span><span class="n">k</span> <span class="n">Linguistics</span>
+<span class="mf">5.</span><span class="n">Gary</span> <span class="n">Becker</span> <span class="mi">255</span><span class="n">k</span> <span class="n">Economics</span>
+<span class="mf">6.</span><span class="n">Hannah</span> <span class="n">Arendt</span> <span class="mi">224</span><span class="n">k</span> <span class="n">Politics</span> <span class="o">***</span> <span class="n">Human</span> <span class="n">Condition</span>
+<span class="mf">7.</span><span class="n">Albert</span> <span class="n">Bandura</span> <span class="mi">577</span><span class="n">k</span> <span class="n">Psychology</span>
+<span class="mf">8.</span><span class="n">Robert</span> <span class="n">Leftkowitz</span> <span class="mi">163</span><span class="n">k</span> <span class="n">GPCRs</span>
+<span class="mf">9.</span><span class="n">John</span> <span class="n">PA</span> <span class="n">Ioanndis</span> <span class="mi">215</span><span class="n">k</span> <span class="n">Meta</span><span class="o">-</span><span class="n">research</span> 
+<span class="mf">10.</span><span class="n">Bert</span> <span class="n">Vogelstein</span> <span class="mi">380</span><span class="n">k</span> <span class="n">Cancer</span>
+<span class="mf">11.</span><span class="n">Michael</span> <span class="n">Schmitt</span> <span class="mi">224</span><span class="n">k</span> <span class="n">Quantum</span> <span class="n">Mech</span><span class="o">.</span>
+<span class="mf">12.</span><span class="n">Si</span> <span class="n">Xie</span> <span class="mi">132</span><span class="n">k</span> <span class="n">High</span> <span class="n">Energy</span> <span class="n">Phy</span>
+<span class="mf">13.</span><span class="n">Kevin</span> <span class="n">Keller</span> <span class="mi">169</span><span class="n">k</span> <span class="n">Marketing</span> 
+<span class="mf">14.</span><span class="n">Meenakshi</span> <span class="n">Narain</span> <span class="mi">215</span><span class="n">k</span> <span class="n">Particle</span> <span class="n">Phy</span>
+<span class="mf">15.</span><span class="n">Julia</span> <span class="n">Velkovska</span> <span class="mi">136</span><span class="n">k</span> <span class="n">Nuclear</span> <span class="n">Phy</span>
+<span class="mf">16.</span><span class="n">Lewis</span> <span class="n">Cantley</span> <span class="mi">164</span><span class="n">k</span> <span class="n">Cancer</span>
+<span class="mf">17.</span><span class="n">Gustavo</span> <span class="n">Scuseria</span> <span class="mi">228</span><span class="n">k</span> <span class="n">Quantum</span> <span class="n">Chem</span>
+<span class="mf">18.</span><span class="n">David</span> <span class="n">Watson</span> <span class="mi">111</span><span class="n">k</span> <span class="n">Affect</span>
+<span class="mf">19.</span><span class="n">Peter</span> <span class="n">Bentler</span> <span class="mi">198</span><span class="n">k</span> <span class="n">Structural</span> <span class="n">Equa</span><span class="o">.</span> <span class="n">Modeling</span>
+<span class="mf">20.</span><span class="n">Graham</span> <span class="n">Colditz</span> <span class="mi">294</span><span class="n">k</span> <span class="n">Epidemiology</span>
+
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Curiosities</span>
+
+<span class="mf">1.</span><span class="n">Michel</span> <span class="n">Foucault</span>
+<span class="mf">2.</span><span class="n">Pierre</span> <span class="n">Bourdieu</span>
+<span class="mf">3.</span><span class="n">Sigmund</span> <span class="n">Freud</span>
+<span class="mf">4.</span><span class="n">Eric</span> <span class="n">Lander</span>
+<span class="mf">5.</span><span class="n">Douglas</span> <span class="n">Altman</span> <span class="mi">217</span> <span class="mi">416865</span>
+<span class="mf">6.</span><span class="n">Shizuo</span> <span class="n">Akira</span> <span class="mi">264</span> <span class="mi">332522</span>
+<span class="mf">7.</span><span class="n">Eugene</span> <span class="n">Braunwald</span> <span class="mi">260</span> <span class="mi">337339</span>
+<span class="mf">8.</span><span class="n">Michael</span> <span class="n">Graetzel</span> <span class="mi">253</span> <span class="mi">323056</span>
+<span class="mf">9.</span><span class="n">Salim</span> <span class="n">Yusuf</span> <span class="mi">235</span> <span class="mi">300475</span>
+<span class="mf">10.</span><span class="n">Amartya</span> <span class="n">Sen</span> <span class="mi">199</span> <span class="mi">302983</span>
+<span class="mf">11.</span><span class="n">Philip</span> <span class="n">Kotler</span> <span class="mi">178</span> <span class="mi">366151</span>
+
+<span class="mf">498.</span><span class="n">Andrei</span> <span class="n">Shleifer</span> <span class="mi">141</span> <span class="mi">268100</span>
+<span class="mf">573.</span><span class="n">Daniel</span> <span class="n">Kahneman</span> <span class="mi">138</span> <span class="mi">351718</span>
+<span class="mf">687.</span><span class="n">PAulo</span> <span class="n">Freire</span> <span class="mi">133</span> <span class="mi">334171</span>
+<span class="mf">1154.</span><span class="n">Masatoshi</span> <span class="n">Nei</span> <span class="mi">121</span> <span class="mi">327120</span>
+<span class="mf">1335.</span><span class="n">GEorge</span> <span class="n">SHeldrick</span> <span class="mi">118</span> <span class="mi">313707</span>
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>My latest Stuff 20190701
+
+Did my US-bias exclude the true #1?
+Namely Michel Foucault?
+Me thinks so!
+
+1.Daniel Kahneman 360k Biases
+2.Michael Porter 458k  Strategy
+3.Tom Maniatis 348k Neuroscience
+4.Noam Chomsky 387k Linguistics
+5.Gary Becker 255k Economics
+6.Hannah Arendt 224k Politics *** Human Condition
+7.Albert Bandura 577k Psychology
+8.Robert Leftkowitz 163k GPCRs
+9.John PA Ioanndis 215k Meta-research 
+10.Bert Vogelstein 380k Cancer
+11.Michael Schmitt 224k Quantum Mech.
+12.Si Xie 132k High Energy Phy
+13.Kevin Keller 169k Marketing 
+14.Meenakshi Narain 215k Particle Phy
+15.Julia Velkovska 136k Nuclear Phy
+16.Lewis Cantley 164k Cancer
+17.Gustavo Scuseria 228k Quantum Chem
+18.David Watson 111k Affect
+19.Peter Bentler 198k Structural Equa. Modeling
+20.Graham Colditz 294k Epidemiology
+
+Genealogy vs Ideology
+Process vs Variance 
+Free vs Chained 
+
+
+x
+
+
+Curiosities
+
+1.Michel Foucault
+2.Pierre Bourdieu
+3.Sigmund Freud
+4.Eric Lander
+5.Douglas Altman 217 416865
+6.Shizuo Akira 264 332522
+7.Eugene Braunwald 260 337339
+8.Michael Graetzel 253 323056
+9.Salim Yusuf 235 300475
+10.Amartya Sen 199 302983
+11.Philip Kotler 178 366151
+
+498.Andrei Shleifer 141 268100
+573.Daniel Kahneman 138 351718
+687.Paulo Freire 133 334171
+1154.Masatoshi Nei 121 327120
+1335.George SHeldrick 118 313707
+</pre></div>
+</div>
+<p>The answer was not to return to a faith in God, but at the same time to deny a faith in Man, and particularly in human reason. Foucault spoke of the “death of man” in the same way Nietzsche spoke of the “death of God.” And so we have the conflict between Noam Chomsky, who still believed in human reason and the value of the pursuit of justice, with Michel Foucault, who believed that truth and justice are ultimately manifestations of power and should not be glorified as though they had meaning outside of the power structures from which their meanings arose.</p>
+<p>.</p>
+<p>Set off for R. House at 7pm<br />
+Set off for Kleine Duivel at 8pm<br />
+Leave at 10pm</p>
+<p>5.Mans ass (salience &amp; bias)<br />
+1.Cosmos (our senses)<br />
+2.Obesity &amp; preventable disease (cvd epi)</p>
+<p>.</p>
+<p>Anu Bhagwati
+— DMN: unpracticed as child
+— CEN: overkill as Indian immigrant family
+— SN: decides CEN suppressing all she craves: e.g. basketball
+— AI: drops out of college and join’s Marine core
+— PNS: doesn’t like what she sees (CEN 2.0)</p>
+<p>x</p>
+<p>#Unbecoming</p>
+<p>x</p>
+<p>We first learn of Bhagwati’s childhood under the heels of her domineering and traditional Indian parents. They disapprove of her love for basketball and pressure her to be a perfect student. But they also attack her developing sexuality while imposing their own racist views on her social life: “Two women kissing. It’s disgusting,” her mother says upon learning 16-year-old Bhagwati has a girlfriend. “If you do not end this now, I will kill myself.” And when she is at Yale and has an African American boyfriend, her father says, “What on earth are you trying to do to your mother.”</p>
+<p>The second section is the most substantial, and depressing one, focusing Bhagwati’s training to be, and then becoming, a Marine Corps officer. She struggles to find her footing in this tear-down-a-human-to-build-a-warrior environment while chafing at the double standards for women, who are not expected to perform pull-ups or run like a man, who are not allowed to serve in combat and who are generally isolated within the Marine culture. There are moments of triumph, such as when she is danger of flunking out of training until an officer says she is failing because she is lazy. Then, she does the unthinkable: speaking out of turn to insist, “This candidate is not lazy. Sir.” This impresses the officer enough to earn her more time. She revels in the physical hardship and more than keeps up with the men, whether it’s in the grueling runs or on the firing range.</p>
+<p>x</p>
+<p>Very much a metamorphosis<br />
+But not willed by Das Ich —<br />
+Rather by Das Nicht Ich</p>
+<p>.</p>
+<p>PreviewPreview7:26Businessman Ham Kiggundu’s book “Success &amp; Failure” - PREVIEWYouTube · BM TV AfricaJul 28, 2018</p>
+<p>.</p>
+<p>Simpatico — handsome, good soul, approachable</p>
+<p>.</p>
+<p>— met Maithelee
+— Allan
+— philipno friend
+— with white husband (name??)
+— fun!!!
+— Carl Jung!!!
+— Allan read about Chicago study
+— kids from south side
+— less afraid of guns and shit
+— most afraid of spiders 🕷
+— snakes 🐍
+— and tigers 🐅
+— which they’ve never encountered
+— collective unconscious</p>
+<p>.</p>
+<p>God is still very much alive! Its just that ‘Our fearsome gods have only changed their names: they now rhyme with -ism’  — Carl Jung</p>
+<p>.</p>
+<p>— Estelle is 22yo
+— probably African
+— young
+— beautiful
+— restrained
+— fair
+— knee-torn jeans 👖
+— gave me name and number
+— wants me to call her
+— works at Honeygo
+— starts at 5pm
+— closes at 11pm
+— offer her everything!!!!!!!!!!!</p>
+<p>.</p>
+<p>Robert Sapolsky Michel Foucault</p>
+<p>More specifically, Sapolsky studies the cortisol levels between the alpha male and female and the subordinates to determine stress level. An early but still relevant example of his studies of olive baboons is to be found in his 1990 Scientific American article, “Stress in the Wild”. He has also written about neurological impairment and the insanity defense within the American legal system</p>
+<p>A representation of how a failure to inhibit immune function during stress can bias you toward autoimmune disease: (i.e., that which does not kill you makes you stronger — but in a bad way) &#64;Robot_Sapolsky</p>
+<p>How does the adrenal fare during ESRD? Benzo? Opioids?</p>
+<p>.</p>
+<p>Not everyone is on the right tail<br />
+So don’t interact with them<br />
+You’ll be misunderstood</p>
+<p>.</p>
+<p>Orombi
+— busy retirement
+— moves with team
+— those who don’t?
+— fear accountability
+— unaccountability of man 👨🏾
+— Job 36
+— Matthew 25:34-40
+— Bishop of Butabika (St. Luke)
+—  Married at 47yo
+— Bring my books to Butabika Library
+— Don’t give one big gift
+— One big meal
+— Instead split it into smaller gifts
+— And more frequent
+— Eternal recurrence
+— They want love
+— Rev Dismas Eddie Bwesigye
+— Job 36:22-33, Exodus -15:1-21
+— A God of wonders
+— Power, miracle, call back laws of nature
+— Resurrect from dead 💀
+— Sovereignty over future
+— What would you bring back with you?
+— In eternal recurrence?
+— Why not God?
+— What’s with peekaboo at 3yo?
+— He never fails</p>
+<p>.</p>
+<p>Power is not itself evil; power is simply the capacity to modify the actions of others</p>
+<p>.</p>
+<p>Specifically run interaction analysis for opioid:</p>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>margins, over(benzo_rx opioid_rx) expression(xb())<span class="k"> post</span>
+<span class="k">lincom</span> <span class="m">1.</span>benzo_rx#<span class="m">0.</span>opioid <span class="o">-</span> <span class="m">1.</span>benzo_rx#<span class="m">1.</span>opioid
+</pre></div>
+</div>
+<p>Yujo Izakaya 🏮<br />
+Banange IPA 🍻:-)<br />
+Soya + Wheat + Miller (Nutri Porridge)<br />
+Banange craft beer<br />
+Barley  vs Wheat 🌾<br />
+This place is way too organized<br />
+Just liked the Boston taphouses<br />
+Max’s revel in chaos<br />
+Just look at that menu!<br />
+And how frequently it changes<br />
+Photos for Bob</p>
+<p>.</p>
+<p>Divine Dreams Club<br />
+Marcus Kiryowa<br />
+Denis Kiryowe Mudhange</p>
+<p>.</p>
+<p>￼<br />
+Prince</p>
+<p>.</p>
+<p>A negative review referred to their music as “a daft punky thrash</p>
+<p>.</p>
+<p>Machine Guy Kelly<br />
+Young Blood<br />
+—&gt; listen</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "myenv"
+        },
+        kernelOptions: {
+            name: "myenv",
+            path: "./bdn2019"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'myenv'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

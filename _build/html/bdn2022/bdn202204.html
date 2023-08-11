@@ -1,0 +1,2847 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>04/2022 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn2022/bdn202204';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Nothin'</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter3.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn2022/bdn202204.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bdn2022/bdn202204.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>04/2022</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">04/2022</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#influence">55. influence</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#love-control">56. love, control</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#honesty">57. Honesty</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">04/16/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#killing-me-softly">58. killing me softly</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-wk3">59. edit wk3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aries">60. aries</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">04/17/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calendar">61. calendar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todoby042423">62. todoby042423</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ibtl">63. ibtl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hilger">64. hilger</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#death-on-the-nile">65. death on the nile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chatgpt">66. chatGPT</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#baptiste">67. baptiste</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verbs">68. verbs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class700">69. class700</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#group">70. group</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deus-ex-machina">71. deus ex machina</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fin">72. fin</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">04/18/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#all-nite-a">73. all nite’a</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coen-brothers">74. coen brothers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gender">75. gender</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strike-joshua-strike">76. <strike>joshua</strike></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ds4ph">77. ds4ph</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maidsmd-com">78. maidsmd.com</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dyndoc">79. dyndoc</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">04/19/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annuamya">80. annuŋŋamya</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ta-s">81. ta’s</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mickey">82. mickey</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#city">83. city</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">04/21/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#love">84 love</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sharon">85 sharon</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todoby04282023">86 todoby04282023</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">04/22/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#haydn">87 haydn</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vickings">88 vickings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coolstuff">89 coolstuff</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arking">90 arking</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control">91 control</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jvalentine">92 jvalentine</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spjd">93 spjd</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">04/23/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hand">94. hand</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wagner">95. wagner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hw1sol">96. hw1sol</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whitney">97. whitney</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beauty">98. beauty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hierachy">99. hierachy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kim">100. kim</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#darkchild">101 darkchild?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai">102 ai</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oral">103 oral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eufa">104 eufa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ph340700">104 ph340700</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xinran">105 xinran</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macro">106. macro</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">04/24/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aiko">107. aiko</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dawking">108. dawking</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#joshua">109. joshua</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">110. ds4ph</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">04/25/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diamonds">111. diamonds</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-hodgkins">112. non-Hodgkins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">113. ds4ph</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch">114. torch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autoencoders">115. autoencoders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cobb">116. cobb</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">04/26/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arsenal">117. arsenal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mylife">118. mylife</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reverence">119. reverence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l-homme">120. l’homme</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eli">121. eli</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xenotx">122. xenotx</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">04/27/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text">123. text</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emails">124. emails</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">04/28/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meetings">125. meetings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catchup">126. catchup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remember">127. remember?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#describe">128. describe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dropbox">129. dropbox</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">04/29/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inflection">130. inflection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#amy">131. amy</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">04/30/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#source">132. source</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fav">133. fav</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constraints">134. constraints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#innovate">135. innovate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grants">136. grants</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apple">137. apple</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guitarcenter">138. guitarcenter</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="id1">
+<h1>04/2022<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#exam</span>
+
+<span class="n">Muzaale</span><span class="p">,</span> <span class="n">POE</span><span class="o">/</span><span class="n">GTPCI</span> <span class="n">PhD</span>
+<span class="mi">04</span><span class="o">/</span><span class="mi">01</span><span class="o">/</span><span class="mi">22</span>
+
+<span class="mf">1.</span><span class="n">Logical</span> <span class="n">thinking</span>
+<span class="mf">2.</span><span class="n">Breadth</span> <span class="n">of</span> <span class="n">knowledge</span>
+<span class="mf">3.</span><span class="n">Develop</span> <span class="ow">and</span> <span class="n">conduct</span> <span class="n">research</span>
+
+<span class="mi">10</span><span class="o">-</span><span class="mi">15</span><span class="nb">min</span> <span class="n">presentation</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1.Julie
+— Insurance companies &amp; others may use your calculators for harm
+— Consider IRB implications of proposed EMR: consenting, aquisition
+— Publishing a paper that reduces access to donation
+— Accelerometer and hearing aids: pertinent to gerontology and in NHANES/EMR
+
+2.Karen
+— Big picture (increasing trends for older donors)
+— Gerontologist hat (confounding by indication in frailty for EMR: cause-inference methods)
+— Statistics hat
+— Effect-modification a big problem? What do we know? How common is donation over 50?
+
+3.Pete
+— Validating EMR for donors as NHANES has already be done
+— Quality of EMR data: I’m a lazy clinician for instance
+— Power size calculation: what difference in risk between groups is clinically relevant?
+
+4.Celentano
+— 
+
+5.Dorry
+— Missing data mechanisms
+— Validating new national registry
+— OPTN oversight encouraging on clinical practice (e.g. eGFR in donors, CMS flags, etc)
+</pre></div>
+</div>
+<p>.</p>
+<p>`#graçias``</p>
+<p>04/01/22<br />
+10am-12pm<br />
+🙏🏾</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#husbandsandwives</span>
+
+<span class="n">Roger</span><span class="o">/</span><span class="n">Ruth</span> <span class="p">(</span><span class="n">Knows</span> <span class="n">dad</span><span class="p">,</span> <span class="n">tribalism</span><span class="p">)</span>
+<span class="n">Mutabazi</span><span class="o">/</span><span class="n">Brandy</span>
+<span class="n">Tayebwa</span><span class="o">/</span><span class="n">Anita</span><span class="p">,</span> <span class="n">Joannita</span>
+<span class="n">Simeon</span><span class="o">/</span><span class="n">Shannie</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#film</span>
+
+<span class="s2">&quot;I got out there to entertain audiences the way Hollywood entertained me. Make them forget their lives for a few hours and be thrilled, awed, or excited at the big room where make believe lives,&quot;</span> <span class="n">Jackson</span> <span class="n">continued</span>
+</pre></div>
+</div>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=kglSBsGCJWY">Donald Lawrence</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#Morgann
+
+1.MPH vs PhD? She liked my recommendation
+2.From an affluent black family 
+3.West Baltimore 
+4.Transition in career
+5.From federal government (Forestry)
+6.And to health (MPH vs PhD nursing) 
+</pre></div>
+</div>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=4p4Cs2IVSXw">https://www.youtube.com/watch?v=4p4Cs2IVSXw</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#death
+
+To die proudly when it is no longer possible to live proudly. Death freely chosen, death at the right time, brightly and cheerfully accomplished amid children and witnesses: then a real farewell is still possible.. 
+               #36. Morality for physicians. Skirmishes of an untimely man. Twilight of Idols
+
+If it was a dog you’d put it down
+           11:47min left, Afterlife E1:S1 
+(Here we are introduced to Tony’s cantankerous funk — which he calls a superpower — that is founded on a contradiction: an atheistic view of the afterlife, but an idealization of a wife lost to cancer)
+
+Why do we give dogs a better death than we give ourselves?
+https://aeon.co/essays/why-do-we-give-dogs-a-better-death-than-we-give-ourselves
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#goingsoft
+
+Had a girlfriend at every time between 2007-2018
+
+Underestimated just how soft I’d grown in the interim 
+
+One needs a stern philosophy from as earlier in life as possible 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#faves </span>
+
+<span class="n">Julius</span> <span class="n">Caesar</span> <span class="mi">15</span>
+<span class="n">Cesare</span> <span class="n">Borgia</span> <span class="mi">7</span>
+<span class="n">Napoleon</span> <span class="mi">61</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#borgias
+
+This monk, with all the vengeful instincts of an unsuccessful priest in him, raised a rebellion against the Renaissance in Rome.... Instead of grasping, with profound thanksgiving, the miracle that had taken place: the conquest of Christianity at its capital — instead of this, his hatred was stimulated by the spectacle. 
+
+A religious man thinks only of himself. — Luther saw only the depravity of the papacy at the very moment when the opposite was becoming apparent: the old corruption, the peccatum originale, Christianity itself, no longer occupied the papal chair! 
+
+Instead there was life! Instead there was the triumph of life! Instead there was a great yea to all lofty, beautiful and daring things!... And Luther restored the church: he attacked it.... The Renaissance — an event without meaning, a great futility! — Ah, these Germans, what they have not cost us! 
+
+Futility — that has always been the work of the Germans. — The Reformation; Leibnitz; Kant and so-called German philosophy; the war of “liberation”; the empire — every time a futile substitute for something that once existed, for something irrecoverable.... These Germans, I confess, are my enemies: I despise all their uncleanliness in concept and valuation, their cowardice before every honest[…]”
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#saidi 
+
+04/08/22
+86min 07sec/17km
+86.12 min/10.563 miles 
+8.15393/MI
+8’09”/MI
+
+Vs
+
+74min 46sec/9miles
+8’18”/MI
+</pre></div>
+</div>
+<p>.</p>
+<p><a class="reference external" href="https://nypost.com/2022/04/07/will-smith-warns-jada-dont-use-me-for-clout-in-video/amp/">https://nypost.com/2022/04/07/will-smith-warns-jada-dont-use-me-for-clout-in-video/amp/</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#football</span>
+
+<span class="n">Man</span> <span class="n">City</span> <span class="n">vs</span> <span class="n">Liverpool</span>   
+<span class="mi">10</span><span class="p">:</span><span class="mi">30</span><span class="n">am</span>
+<span class="n">Sunday</span> <span class="mi">04</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="mi">22</span>
+
+</pre></div>
+</div>
+<p>.</p>
+<p>177.2 after swimming<br />
+178.9 after a Pilsner &amp; Larger (anticipated)</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+#max’s
+
+Max’s taphouse 
+There’s 3 Jason’s 
+Jason Saturday’s :-)
+Jason 1 y’already know 
+Jason 2 no affect, really nice, deep eyes
+Jason 3 slightly bald, big beard, shy, little affect, really really nice 
+Bob y’already know 
+Scooter (wife is with Bloomberg school) 
+Jeff (long-ass beard 🧔) confirmed 
+Diana/Big “D” (Cinco de Mayo birthday) 
+Jason (another one, who knows me, bushy 🧔, little affect!!)
+Tim (young, capped 🧢 dude)
+? Cheerful bold guy who knows me! 
+Mac: young, shy, goatee, cap, knows my name!!!!
+??? Bold dude, knows me, somewhat cheerful, is NOT scooter :-) Jammie 
+Jammie is def the most cheerful 👨‍🦲:-)
+Jay: knows me, no smiles, but really nice 
+Racheal: new 2021 chic 
+Didi: extremely pleasant big black dude. Upgraded to bartender from bouncer during the 2020 shitshow 
+
+
+Scooter really is the bold dude with 
+A wife at Hopkins who 
+Travels a lot to Africa and places 
+
+But who is the young dude?? 
+
+Confirmed (by 🛴, whose wife actual works at JHPIEGO, but does some mentor-mentee shit at  Bloomberg); the young dude with a reverse cap 🧢 is Tim (what are the odds???)
+
+Jason — looks like there’s 3 of them
+Yeah — 200% emotionless, no beard too 
+That’s also Jason! Jay!!
+
+Rachael — hot Jewish 
+Matthew — young, southern accent (Nice guy)
+</pre></div>
+</div>
+<p>Max’s <span id="id2">[<a class="reference internal" href="../references.html#id37" title="Yours truly. Folks at max's taphouse. 2022. URL: https://muzaale.github.io/denotas/bdn202204.html.">24</a>]</span></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+#summary
+
+Ambitious
+L’homme moyen
+Slacker
+
+*
+
+Mark 8: 34-38 : For what shall it profit a man, if he shall gain the whole world, and lose his own soul? 
+
+*
+
+Examples of slacker protagonist becoming ambitious (aka losing their soul)
+1.Henry V
+2.William James
+3.Not “The Dude”!
+4.Cédric
+5.[XXX]
+
+
+“To those who want to know where the hell’s my ambition, I say: and you, where the hell’s your well-being? Usually they stammer a few words and I understand by them that they’ve postponed it. Because first, they need:
+
+1.Money (and a job);
+2.Husband/wife;
+3.Car;
+4.A house; and,
+5.Retirement plan
+
+And people say I’m the one wasting my time!
+
+https://ir.lib.uwo.ca/cgi/viewcontent.cgi?article=9099&amp;context=etd
+
+*
+
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#narcicism
+
+2016 Oscars
+— Mexican Best Director for The Renevant 
+— Mexican Cinematographer for The Renevant
+
+2015 Oscars “So White” (87th Academy’s)
+— Birdman was biggest winner 
+— Written, Produced, Directed, Cinematography— All Mexican!! 
+
+2014 Oscars (86th Academy’s)
+— 12 Years a Slave won best picture 
+— Lupita won best supporting actress 
+— Gravity (Mexican cinematographer, director)
+
+2013 Oscars (85th Academy’s)
+— Jamie Foxx nominated for best actor 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>https://www.youtube.com/watch?v=ke_Syg4fj3c
+
+Anger
+Chris Rock
+Dr. Jamal H. Bryant
+Keep my wife’s name out your mouth 
+
+Romans 12:17-21
+Vengeance is mine
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+#life
+
+Life = Will to Power
+Evasion = Numbing this Will
+Methods = Ideology or Chemicals
+
+x
+
+Will (to do)
+Desire (to be)
+Senses 🐘 🦒 🦓 🦔 🐄 🐅 
+
+Only alcohol can keep man in hedonism 
+
+x
+
+She should have died hereafter;
+There would have been a time for such a word.--
+To-morrow, and to-morrow, and to-morrow,
+Creeps in this petty pace from day to day,
+To the last syllable of recorded time;
+And all our yesterdays have lighted fools
+The way to dusty death. Out, out, brief candle!
+Life&#39;s but a walking shadow; a poor player,
+That struts and frets his hour upon the stage,
+And then is heard no more: it is a tale
+Told by an idiot, full of sound and fury,
+Signifying nothing 
+
+Ambition — thou shalt be king 
+Meaning — signifying nothing 
+Pleasure — increases the desire?
+
+No, alcohol merely inhibits mans will 
+Or numbs man whose will is too weak to climb 
+What is left are base instincts, sensualist, etc 
+
+x
+
+0g.κοσμογονία,γ Mass/Energy
+— Egypticism
+— Roman 
+1f.ἡ ἔρις,κ Flux
+— Frailty 🐑 
+— Robustness 🦅 
+2e.πρᾶξις,σ Catabolism
+— Peace
+— War
+3e.ἄσκησις,μ Anabolism
+— Décadence 
+— Culture 
+4d.∫δυσφορία.dt,ψ Plus Ça Change 
+— Memory
+— Forgetfulness 
+5c.φάρμακον,δ HPA-Axis
+— Opium 
+— Frenzy
+6b.ομορφιά,β Exercise/Doping 
+— Pretentious 
+— Light footed 💃🏾 🕺🏾 
+7a.τάξη,α Performance 🎭 
+— Good &amp; Evil
+— Beyond Good &amp; Evil
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#shakespeare
+
+Ambitious 
+— Macbeth
+
+L’Homme Moyen
+— Hamlet
+
+Slacker
+— Falstaff
+
+
+</pre></div>
+</div>
+<p>Non plus ultra <span id="id3">[<a class="reference internal" href="../references.html#id38" title="Yours truly. Non plus ultra. 2022. URL: https://muzaale.github.io/denotas/bdn202204.html.">25</a>]</span></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#univariable
+
+1.World views like “Jesus is the answer”
+2.Virtually all ideologies 
+3.Punchlines, devices, etc.
+
+Metaphysical comforters
+</pre></div>
+</div>
+<p>.</p>
+<p>Study lucky daye — Teija is a fan &amp; she’d thus far been disappointed by Neo RnB</p>
+<p>Of course she’s an old soul — yob 1995 — and her late 50s dad was a DJ</p>
+<p>Tisha-like, but looks 10 years younger!!</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#art
+
+It’s art, and art only, that reveals us to ourselves 
+     — Portrait of Mr. W.H. 
+
+To err is human 
+     — Alexander Pope 
+
+All these things originate from that instinct which found in pain its most potent mnemonic. In a certain sense the whole of asceticism is to be ascribed to this
+     — What is the meaning of ascetic ideals?
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+<span class="c1">#shultz</span>
+
+<span class="mf">1.</span><span class="n">There</span> <span class="n">should</span> <span class="n">be</span> <span class="n">an</span> <span class="n">aristocracy</span>
+<span class="mf">2.</span><span class="n">There</span> <span class="n">should</span> <span class="n">be</span> <span class="n">mountains</span> <span class="ow">and</span> <span class="n">valleys</span>
+<span class="mf">3.</span><span class="n">Fresh</span> <span class="n">brooks</span> <span class="n">will</span> <span class="n">always</span> <span class="n">flow</span> <span class="kn">from</span> <span class="nn">high</span> <span class="n">places</span> <span class="n">to</span> <span class="n">low</span>
+<span class="mf">4.</span>
+<span class="mf">5.</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Psychology of money: the lesson here is.. 
+— Anecdotes 
+— Man of science isn’t moved 
+— Successful
+— Retired at 40
+— Died at 92 with $8m
+— Never trust retirement as achievement 
+— It’s frailty 
+— Patience as virtue 
+— Greed as Vice 
+Tremendous struggle reading this book 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#adams</span>
+
+<span class="n">Adams</span> <span class="n">was</span> <span class="n">a</span> <span class="n">dedicated</span> <span class="n">diarist</span> <span class="ow">and</span> <span class="n">regularly</span> <span class="n">corresponded</span> <span class="k">with</span> <span class="n">many</span> <span class="n">important</span> <span class="n">contemporaries</span><span class="p">,</span> <span class="n">including</span> <span class="n">his</span> <span class="n">wife</span> <span class="ow">and</span> <span class="n">adviser</span> <span class="n">Abigail</span> <span class="n">Adams</span> <span class="k">as</span> <span class="n">well</span> <span class="k">as</span> <span class="n">his</span> <span class="n">friend</span> <span class="ow">and</span> <span class="n">rival</span> <span class="n">Thomas</span> <span class="n">Jefferson</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Ambitious — Kim
+L’Femme Moyen — Khloe 
+Slacker — Kourtney*
+
+*PDA in S1E1 of both shows
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>80yo M
+
+Presented: x 5 years (Insidious onset)?
+— Palpitations
+— Weakness
+— Distance to bathroom
+
+Recent:
+— Otherwise a very active person
+— Above issues lead to Dx: NHL/CLL.. 2 cycles of CHOP including last one in march
+— Received several blood transfusions (Hb was 4 earlier in the year)
+— Bone marrow biopsy: CD20 immunofluorescence pattern on H&amp;E
+— Received x? Rounds of chemotherapy so far
+— Chief issue now is??
+
+Surgery: 10/2021
+— Intestinal Obstruction
+— Hernia
+
+Labs
+— HGB 8.2 g/dL (Origin of presenting symptoms)
+
+*
+
+Symptoms: nodes, fever, night sweats, weight loss, tiredness
+4 types of NHL (this case is CLL)
+60 sub-types
+Rx: slow vs. fast-growing, local vs. spread
+Chemotherapy increases risk of other cancers (e.g. R-CHOP: well tolerated)
+Affects 2% of Americans at some point in life, 4% of all cancers
+Mostly between 65-75yo
+5y survival is 71%
+Staging CT-scan after 3 cycles for response
+Of increased prevalence over last 29y
+Window of opportunity: had surgery in 10/2021.
+Did he have anemia then?
+Received a blood transfusion before surgery.. 
+
+*
+
+Hb at surgery
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Peter Thiel and <a class="reference external" href="https://www.youtube.com/watch?v=WOEsVjqoOfA">education reform</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Mighty
+— Imposing 
+— Lacrimosa 
+— What makes man, Mr. Lebowski?
+
+Q&amp;A
+— Formulaic
+— Lady, I got buddies who died facedown in the muck so that you and I could enjoy this restaurant!
+
+Pleasing
+— Circle of Fifths
+— White Russian
+— a “J” 🚬 
+— Bowling
+</pre></div>
+</div>
+</section>
+<section id="influence">
+<h1>55. influence<a class="headerlink" href="#influence" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Many african americans have musical sensibilities that are heavily influenced by their grand patents. This is a consequence of the social disadvantages that result in young babymomas and daddies and the outsourcing of parenting to grand parents.</p></li>
+<li><p>One beautiful unintended consequence is a strong generation-to-generation aesthetic, where type-I artists build their craft on a scaffolding of the past generations.</p></li>
+</ul>
+</section>
+<section id="love-control">
+<h1>56. love, control<a class="headerlink" href="#love-control" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=QDkpVWGxtWY">Ms.</a> Lauren Hill</p></li>
+</ul>
+</section>
+<section id="honesty">
+<h1>57. Honesty<a class="headerlink" href="#honesty" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Open up to <strong>both</strong> Vincent &amp; Johnathan about my:</p>
+<ul>
+<li><p>preferences</p></li>
+<li><p>constraints</p></li>
+<li><p>vision vs. what is best for them.</p></li>
+</ul>
+</li>
+<li><p>Who knows where this conversation will lead???</p></li>
+</ul>
+</section>
+<section id="id4">
+<h1>04/16/2023<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h1>
+<section id="killing-me-softly">
+<h2>58. killing me softly<a class="headerlink" href="#killing-me-softly" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Lori lieberman:</strong> Great songwriter, ok performer</p></li>
+<li><p><strong>Robert Flack:</strong> Restructured Lori’s <a class="reference external" href="https://en.wikipedia.org/wiki/Kadongo_Kamu">kadongo kamu</a>, opening with the F-minor chorus in a brief circle-of-fifths progression, which comes off as <em>a capella-like</em> given the subtle <a class="reference external" href="https://en.wikipedia.org/wiki/Rhodes_piano">Rhodes Piano</a> but prominent Roberta vocals, initially solo-like, but ~~gradually &amp;~~ magically suffusing the air with delicate harmonies from 9ths to 15ths, as we are ushered into a word-less wailing session, where a 1970s-style bass is fixed on the E-Flat dominant, accompanied by drums that skip a beat as they do in reggae.</p></li>
+<li><p><strong>Lauren Hill:</strong> Ancestral worship session. No worthy innovation or attempt at usurping Roberta!</p></li>
+</ul>
+</section>
+<section id="edit-wk3">
+<h2>59. edit wk3<a class="headerlink" href="#edit-wk3" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1">#import numpy as np</span>
+<span class="c1">#import sklearn as skl</span>
+<span class="c1"># </span>
+
+<span class="c1">#plt.figure(figsize=[2, 2])</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+<span class="c1">#G.add_node(&quot; &quot;,  pos = (0, 3) )</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;regress&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;lincom&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;r()&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;r()*&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.5</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;embed&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span>      <span class="p">(</span><span class="s2">&quot;regress&quot;</span><span class="p">,</span> <span class="s2">&quot;lincom&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;r()&quot;</span><span class="p">),</span>     <span class="p">(</span><span class="s2">&quot;lincom&quot;</span><span class="p">,</span> <span class="s2">&quot;r()*&quot;</span><span class="p">)</span> <span class="p">])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;r()&quot;</span><span class="p">,</span> <span class="s2">&quot;local&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;r()*&quot;</span><span class="p">,</span> <span class="s2">&quot;local&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;local&quot;</span><span class="p">,</span><span class="s2">&quot;embed&quot;</span><span class="p">)])</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> 
+        <span class="n">nx</span><span class="o">.</span><span class="n">get_node_attributes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">),</span> 
+        <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+        <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> 
+        <span class="n">node_size</span> <span class="o">=</span> <span class="mi">3500</span><span class="p">,</span>
+        <span class="n">node_color</span> <span class="o">=</span> <span class="s2">&quot;lightblue&quot;</span><span class="p">,</span>
+        <span class="n">linewidths</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">collections</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_edgecolor</span><span class="p">(</span><span class="s2">&quot;#000000&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/4fe5823213d08a9a88cfd20dc02a8b75b4bed9d7a174596189f0e802fb3381dc.png" src="../_images/4fe5823213d08a9a88cfd20dc02a8b75b4bed9d7a174596189f0e802fb3381dc.png" />
+</div>
+</div>
+</section>
+<section id="aries">
+<h2>60. aries<a class="headerlink" href="#aries" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://muzaale.github.io/book/_downloads/ae316e902f67bf58c6f29ac5f3f28a89/marc.bday.PNG">trip</a></p>
+<ul>
+<li><p>missed my train</p></li>
+<li><p>uber $68å</p></li>
+<li><p>inbound/outbound tickets unused on charm-city pass app</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://muzaale.github.io/book/_downloads/d4e3170696863ac9a7d8fcb9a64e7258/dc.bday.jpeg">plot</a></p>
+<ul>
+<li><p>oustanding stage director</p></li>
+<li><p>great, great cast</p></li>
+<li><p>left at intermission</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id5">
+<h1>04/17/2023<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h1>
+<section id="calendar">
+<h2>61. calendar<a class="headerlink" href="#calendar" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>March 27-May 19, 2023 - Baltimore, MD <a class="reference external" href="https://www.jhsph.edu/courses/course/36389/2022/340.600.01/stata-programming">Fourth Term</a></p></li>
+<li><p>May 19-June 2, 2023 - Baltimore, MD <a class="reference external" href="https://publichealth.jhu.edu/academics/academic-calendar/2022-2023">Grades Due at Academic Registrars Office</a></p></li>
+<li><p>June 3-7, 2023 - San Diego, CA <a class="reference external" href="https://atcmeeting.org/#">American Transplant Congress</a></p></li>
+<li><p>June 4, 2023 - Tijuana, BC <a class="reference external" href="https://en.wikipedia.org/wiki/Baja_California">One-day trip to Mexico</a></p></li>
+<li><p>June 7, 2023 - Baltimore, MD Dentist Appointment (unable to reschedule)</p></li>
+<li><p>June 19-23, 2023 - Baltimore, MD <a class="reference external" href="https://www.jhsph.edu/courses/course/36824/2023/340.600.11/stata-programming">Summer Institute</a></p></li>
+<li><p>July 20-21, 2023 - Stanford, CA <a class="reference external" href="https://www.stata.com/meeting/us23/">Stata Conference</a></p></li>
+</ul>
+<p>Reconcile with Paulo’s:</p>
+<ul class="simple">
+<li><p>arrives May 24</p></li>
+<li><p>leaves June 8</p></li>
+<li><p>booked June 1-4</p></li>
+<li><p>otherwise flexible</p></li>
+</ul>
+<p>Proposed activities:</p>
+<ul class="simple">
+<li><p>May 25 Washington DC</p></li>
+<li><p>May 26-28, Hamilton, BD</p></li>
+<li><p>May 29 Philadelphia, PA</p></li>
+<li><p>June 4 San Diego, CA</p></li>
+<li><p>June 5 Tijuana, BC</p></li>
+</ul>
+</section>
+<section id="todoby042423">
+<h2>62. todoby042423<a class="headerlink" href="#todoby042423" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>R03/R21</p></li>
+<li><p>IRB</p></li>
+<li><p>Rasheeda</p></li>
+<li><p>Vincent/Andrew/Johnathan</p></li>
+<li><p>NHANES/Invoice/Final</p></li>
+<li><p>DS4PH HW7-9</p></li>
+<li><p>Consider ATC: June 3-6 (to honor June 7 appt)</p></li>
+<li><p>When is Amy presentation?</p></li>
+<li><p>Maybe Tijuana for June 3-4?</p></li>
+<li><p>MD drivers license renewal</p></li>
+<li><p>Calvin: next steps</p></li>
+</ul>
+</section>
+<section id="ibtl">
+<h2>63. ibtl<a class="headerlink" href="#ibtl" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>2023: sui generis</p>
+<ul>
+<li><p>Unprecedented roles</p></li>
+<li><p>Mentoring, teaching, PhD</p></li>
+<li><p>Thrown me off-balance, schedule</p></li>
+<li><p>Return to relative normalcy after July</p></li>
+<li><p>Grants will be my focus, publication (Mickey!)</p></li>
+</ul>
+</li>
+<li><p>Funding questions</p></li>
+<li><p>Post-K award</p></li>
+<li><p>But of course!</p></li>
+<li><p>Fiscal year 2024</p></li>
+<li><p>Cost-cutting measures (SoM)</p></li>
+<li><p>1-Year time-frame</p></li>
+<li><p>If we can mitigate some stuff before: keep Diane in loop</p></li>
+<li><p>Output from Thesis -&gt; preliminary data for applications</p></li>
+<li><p>More than one: NIH/NIA by Oct with feedback score in Nov</p></li>
+<li><p>When will you be hear back… with score?</p></li>
+<li><p>So push for October: so that 1-year notice grabs you with estimate…</p></li>
+</ul>
+</section>
+<section id="hilger">
+<h2>64. hilger<a class="headerlink" href="#hilger" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>9980 ft^2</p></li>
+<li><p>12 units</p></li>
+<li><p>833 ft^2/unit</p></li>
+</ul>
+<p><span class="math notranslate nohighlight">\(or\)</span></p>
+<ul class="simple">
+<li><p>50-11 x 196-9</p></li>
+</ul>
+</section>
+<section id="death-on-the-nile">
+<h2>65. death on the nile<a class="headerlink" href="#death-on-the-nile" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>strength</p></li>
+<li><p>will</p></li>
+<li><p>cause</p></li>
+<li><p>&amp; means to do..</p></li>
+<li><p>opportunity &amp;</p></li>
+<li><p>what is more: the disposition to… kill</p></li>
+<li><p>motive</p></li>
+</ul>
+<p>&amp; means</p>
+</section>
+<section id="chatgpt">
+<h2>66. chatGPT<a class="headerlink" href="#chatgpt" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The error you are getting indicates that pd.read_fwf() is expecting a file-like object with a read method, but it is receiving a byte object instead.</p></li>
+</ul>
+<p>To fix this issue, you can use io.StringIO() instead of io.BytesIO() to convert the content of the response to a file-like object that pd.read_fwf() can read. Here’s an updated version of your code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">investigate</span> <span class="n">why</span> <span class="n">this</span> <span class="n">works</span> <span class="n">seamlessly</span> <span class="ow">in</span> <span class="n">interactive</span> <span class="n">session</span> <span class="n">but</span> <span class="ow">not</span> <span class="n">when</span> <span class="n">git</span> <span class="ow">is</span> <span class="n">pushed</span> <span class="n">to</span> <span class="n">hub</span>
+
+<span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>  
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://wwwn.cdc.gov/nchs/data/nhanes3/1a/adult.dat&quot;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span> <span class="c1"># does this timeout fix my issues?</span>
+<span class="n">content</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">StringIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_fwf</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">widths</span><span class="o">=</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;SEQN&quot;</span><span class="p">,</span><span class="s2">&quot;DMARETHN&quot;</span><span class="p">,</span><span class="s2">&quot;HSSEX&quot;</span><span class="p">,</span><span class="s2">&quot;HSAGEIR&quot;</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Here, we’re using io.StringIO() instead of io.BytesIO() to convert the response content to a file-like object that pd.read_fwf() can read. Note that we’re also using response.text instead of response.content to get the response content as a string, since io.StringIO() expects a string.</p></li>
+</ul>
+</section>
+<section id="baptiste">
+<h2>67. baptiste<a class="headerlink" href="#baptiste" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.gutenberg.org/files/1998/1998-h/1998-h.htm">long</a> <a class="reference external" href="https://www.youtube.com/watch?v=WhsX_OA6KAo">legs</a> 3:00/7.59</p></li>
+</ul>
+</section>
+<section id="verbs">
+<h2>68. verbs<a class="headerlink" href="#verbs" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>to do</p></li>
+<li><p>to be</p></li>
+<li><p>to have..<a class="reference external" href="https://www.gutenberg.org/files/1998/1998-h/1998-h.htm">.</a></p></li>
+<li><p>Of all that is written, I love only what a person hath written with his blood.</p></li>
+<li><p>Write with blood, and thou wilt find that blood is spirit.</p></li>
+<li><p>It is no easy task to understand unfamiliar blood; I hate the reading idlers.</p></li>
+<li><p>He who knoweth the reader, doeth nothing more for the reader.</p></li>
+<li><p>Another century of readers—and spirit itself will stink.</p></li>
+<li><p>Every one being allowed to learn to read,</p></li>
+<li><p>ruineth in the long run not only writing but also thinking.</p></li>
+<li><p>Once spirit was God, then it became man, and now it even becometh populace.</p></li>
+<li><p>He that writeth in blood and proverbs doth not want to be read, but learnt by heart.</p></li>
+<li><p>In the mountains the shortest way is from peak to peak, but for that route thou must have long legs.</p></li>
+<li><p>Proverbs should be peaks, and those spoken to should be big and tall.</p></li>
+</ul>
+</section>
+<section id="class700">
+<h2>69. class700<a class="headerlink" href="#class700" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>No-show for their appointment</p></li>
+<li><p>Motivations: Jupyter notebooks <a class="reference external" href="https://jhustata.github.io/book/ggg.html">https://jhustata.github.io/book/ggg.html</a></p></li>
+<li><p>Stata comments &amp; annotation vs. jupyter notebooks with code-blocks &amp; markdown</p></li>
+</ul>
+</section>
+<section id="group">
+<h2>70. group<a class="headerlink" href="#group" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Wafa: from 3/10 to 5/10</p></li>
+</ul>
+</section>
+<section id="deus-ex-machina">
+<h2>71. deus ex machina<a class="headerlink" href="#deus-ex-machina" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>death on the nile coda</p></li>
+<li><p>god emerges from the machine…</p></li>
+<li><p>brings complete resolution to the plot!</p></li>
+<li><p>sonata form a similar euripidean contrivance?</p></li>
+<li><p>cantata has mostly been free of this corruption</p></li>
+</ul>
+</section>
+<section id="fin">
+<h2>72. fin<a class="headerlink" href="#fin" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.imdb.com/title/tt0077413/characters/nm0001811">Hercule Poirot</a>:</p></li>
+<li><p>I was thinking of Molière:</p></li>
+<li><p><em>‘La grande ambition des femmes est d’inspirer l’amour.’</em></p></li>
+</ul>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1">#import numpy as np</span>
+<span class="c1">#import sklearn as skl</span>
+<span class="c1"># </span>
+
+<span class="c1">#plt.figure(figsize=[2, 2])</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;truth&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">700</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;women&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">960</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;nietzsche&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">950</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;ambition &quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">550</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;mrwh&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">550</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;beauty&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1900</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;stendhal&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1900</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;inspire&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;love&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">475</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;pon de ri&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">950</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;women&quot;</span><span class="p">,</span><span class="s2">&quot;ambition &quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;nietzsche&quot;</span><span class="p">,</span> <span class="s2">&quot;mrwh&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;ambition &quot;</span><span class="p">,</span> <span class="s2">&quot;beauty&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;mrwh&quot;</span><span class="p">,</span> <span class="s2">&quot;stendhal&quot;</span><span class="p">)</span> <span class="p">])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;beauty&quot;</span><span class="p">,</span> <span class="s2">&quot;inspire&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;stendhal&quot;</span><span class="p">,</span> <span class="s2">&quot;inspire&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;inspire&quot;</span><span class="p">,</span><span class="s2">&quot;love&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;love&quot;</span><span class="p">,</span><span class="s2">&quot;pon de ri&quot;</span><span class="p">)])</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> 
+        <span class="n">nx</span><span class="o">.</span><span class="n">get_node_attributes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">),</span> 
+        <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+        <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> 
+        <span class="n">node_size</span> <span class="o">=</span> <span class="mi">4500</span><span class="p">,</span>
+        <span class="n">node_color</span> <span class="o">=</span> <span class="s2">&quot;lightblue&quot;</span><span class="p">,</span>
+        <span class="n">linewidths</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">collections</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_edgecolor</span><span class="p">(</span><span class="s2">&quot;#000000&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">5000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/1ee2455504ee15d8bd57955ddea55f9b54e611509045958c75d9e8e805cc2ccf.png" src="../_images/1ee2455504ee15d8bd57955ddea55f9b54e611509045958c75d9e8e805cc2ccf.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="id6">
+<h1>04/18/2023<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h1>
+<section id="all-nite-a">
+<h2>73. all nite’a<a class="headerlink" href="#all-nite-a" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>wrap up ds4ph:</p></li>
+<li><p>hw7</p></li>
+<li><p>hw8</p></li>
+<li><p>hw9</p></li>
+</ul>
+</section>
+<section id="coen-brothers">
+<h2>74. coen brothers<a class="headerlink" href="#coen-brothers" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A shaggy dog on the very subject of <a class="reference external" href="https://www.passionweiss.com/2014/05/30/the-god-in-the-machine-the-coen-brothers-the-evolution-of-deus-ex-machina/">meaningless</a> planted in the middle of the film ironically seems to be the “moral” of the story, it’s amorality if you will</p></li>
+<li><p>In the final moments of the movie, the point is made by a huge, black, menacing tornado en route with Larry’s son at school. It’s the Coen’s most powerful and emblematic deus ex machina: an uncaring, unfeeling force of nature that needs no reason to appear, a literal finger of God that will destroy anything in its path</p></li>
+<li><p>Like the force of God in their films, the Coen’s are getting further away from the mortal trappings of their stories. Plot, resolution, character development, message — these elements still exist in their films but they’re becoming increasingly abstract and removed from the proceedings</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[vs\]</div>
+<ul class="simple">
+<li><p>In their disappointing new comedy <em>Hail, Caesar!</em>, Ethan and Coen have <a class="reference external" href="https://www.theglobeandmail.com/amp/arts/film/film-reviews/hail-caesar-coen-brothers-have-a-point-to-make-but-fail-in-their-purpose/article28556935/">a point to make</a>, but fail in their purpose.</p></li>
+<li><p>Never is there much sense that any of this is building towawrd anything. A soviet sub appears at one point, but it would take a much larger deus ex machina to rescue this shipwreck.</p></li>
+</ul>
+</section>
+<section id="gender">
+<h2>75. gender<a class="headerlink" href="#gender" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Not surprising that one critic is male and the other female</p></li>
+<li><p>Women, who we may suppose embody whatsoever one may call <em>Truth</em>, often demand that things have purpose</p></li>
+<li><p>Men are more open to meaninglessness. The female equivalent of The Dude will never get a cult following.</p></li>
+<li><p>Yet we have famous royals including King Solomon, Prince Hamlet, Friedrich Nietzsche, whose philosophy is of existential despair or the overcoming of such despair through creation.</p></li>
+</ul>
+</section>
+<section id="strike-joshua-strike">
+<h2>76. <strike>joshua</strike><a class="headerlink" href="#strike-joshua-strike" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://regentjames.yuhu.io/dashboard">https://regentjames.yuhu.io/dashboard</a></p></li>
+<li><p>$160 depo</p></li>
+<li><p>postdoc 07/01/2013-06/30/2016</p></li>
+<li><p>fac 07/01/2016 -</p></li>
+<li><p>note: annual appt letter</p></li>
+<li><p>landlord confirmation $775 on 04/20/2023</p></li>
+<li><p>silence from cece</p></li>
+</ul>
+</section>
+<section id="ds4ph">
+<h2>77. ds4ph<a class="headerlink" href="#ds4ph" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>zoom <a class="reference external" href="https://jh.zoom.us/j/4109553504?pwd=amdidU82QTc2QTRmdkpDSkd3RU5pZz09">link</a></p></li>
+</ul>
+</section>
+<section id="maidsmd-com">
+<h2>78. <a class="reference external" href="http://maidsmd.com">maidsmd.com</a><a class="headerlink" href="#maidsmd-com" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>$433 first</p></li>
+<li><p>$227 monthly</p></li>
+<li><p>M-F: This Friday</p></li>
+<li><p>Will call me before</p></li>
+<li><p>Local: 410-761-7300:</p></li>
+<li><p>Julie (410) 847-9145</p></li>
+<li><p>Towson manager</p></li>
+<li><p>$182/month for 3 months</p></li>
+<li><p>Includes $25/month discount</p></li>
+<li><p>Normal prices after expiration</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>isabel</p></li>
+<li><p>yeimy: <a class="reference external" href="mailto:yeymi&#37;&#52;&#48;maidsmd&#46;com">yeymi<span>&#64;</span>maidsmd<span>&#46;</span>com</a></p></li>
+<li><p>claudia</p></li>
+</ol>
+<ul class="simple">
+<li><p>call 24hr in advance to cancel</p></li>
+<li><p>oustanding service, worth each penny!</p></li>
+</ul>
+</section>
+<section id="dyndoc">
+<h2>79. dyndoc<a class="headerlink" href="#dyndoc" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Lets push <a class="reference external" href="https://raw.githubusercontent.com/muzaale/book/main/Dropbox%20(Personal)/4d.%E2%88%AB%CE%B4%CF%85%CF%83%CF%86%CE%BF%CF%81%CE%AF%CE%B1.dt%2C%CF%88/4.describe/book/nhanes-stmd.do">dyndoc</a></p></li>
+<li><p>As close to Python’s jupyter-book and</p></li>
+<li><p>R’s bookdown as is possible!</p></li>
+</ul>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>dyndoc nhanes<span class="o">-</span>stmd<span class="m">.</span>do, saving(nhanes<span class="m">.</span>html)
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>supporting documents:</p>
+<ul>
+<li><p><a class="reference external" href="https://raw.githubusercontent.com/jhustata/class700/main/nhanes-stmd.do">text</a></p></li>
+<li><p><a class="reference external" href="https://raw.githubusercontent.com/jhustata/class700/main/stmarkdown.css">css</a></p></li>
+<li><p><a class="reference external" href="https://raw.githubusercontent.com/jhustata/class700/main/header.txt">header</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id7">
+<h1>04/19/2023<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h1>
+<section id="annuamya">
+<h2>80. annuŋŋamya<a class="headerlink" href="#annuamya" title="Permalink to this heading">#</a></h2>
+<p>Flowcharts have proven themselves <code class="docutils literal notranslate"><span class="pre">good</span> <span class="pre">shepherds</span></code> in relieving the anxiety of students in my classes, amidst the bewildering assault on their senses and confidence that my class material typically and deliberately is</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1">#import numpy as np</span>
+<span class="c1">#import sklearn as skl</span>
+<span class="c1"># </span>
+
+<span class="c1">#plt.figure(figsize=[2, 2])</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;workflow&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">700</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;jupyter&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">960</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;dofile&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">950</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;python &quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">550</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;stata&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">550</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;build&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1900</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;dyndoc&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1900</span><span class="p">,</span> <span class="mi">150</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;html&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;push&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">475</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;ghp&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">950</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;jupyter&quot;</span><span class="p">,</span><span class="s2">&quot;python &quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;dofile&quot;</span><span class="p">,</span> <span class="s2">&quot;stata&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;python &quot;</span><span class="p">,</span> <span class="s2">&quot;build&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;stata&quot;</span><span class="p">,</span> <span class="s2">&quot;dyndoc&quot;</span><span class="p">)</span> <span class="p">])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;build&quot;</span><span class="p">,</span> <span class="s2">&quot;html&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;dyndoc&quot;</span><span class="p">,</span> <span class="s2">&quot;html&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;html&quot;</span><span class="p">,</span><span class="s2">&quot;push&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;push&quot;</span><span class="p">,</span><span class="s2">&quot;ghp&quot;</span><span class="p">)])</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> 
+        <span class="n">nx</span><span class="o">.</span><span class="n">get_node_attributes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">),</span> 
+        <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+        <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> 
+        <span class="n">node_size</span> <span class="o">=</span> <span class="mi">4500</span><span class="p">,</span>
+        <span class="n">node_color</span> <span class="o">=</span> <span class="s2">&quot;lightblue&quot;</span><span class="p">,</span>
+        <span class="n">linewidths</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">collections</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_edgecolor</span><span class="p">(</span><span class="s2">&quot;#000000&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">5000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/e76eb233787746035753e9b97e5c5c7a1458fa1d099113a0bd58edb2f3fb3332.png" src="../_images/e76eb233787746035753e9b97e5c5c7a1458fa1d099113a0bd58edb2f3fb3332.png" />
+</div>
+</div>
+</section>
+<section id="ta-s">
+<h2>81. ta’s<a class="headerlink" href="#ta-s" title="Permalink to this heading">#</a></h2>
+<p>general</p>
+<ol class="arabic simple">
+<li><p>rm help.ph34070071</p></li>
+<li><p>rm help.t4pmzoom</p></li>
+<li><p>rm tokenize.jasonhaw</p></li>
+<li><p>announce lab on T as in-person</p></li>
+<li><p>class content not identical to last years’</p></li>
+</ol>
+<p>hw1
+0. 1pt for correct .dofile name(everyone gets it), 1pt for correct .logname</p>
+<ol class="arabic simple">
+<li><p>quietly { }: 10 pt –&gt; 4 for <code class="docutils literal notranslate"><span class="pre">qui</span></code>, 3 for <code class="docutils literal notranslate"><span class="pre">{</span></code>, 3 for <code class="docutils literal notranslate"><span class="pre">}</span></code></p></li>
+<li><p>if 0 { }: 10 pt –&gt; 3 pt for <code class="docutils literal notranslate"><span class="pre">if</span></code>, 3 for <code class="docutils literal notranslate"><span class="pre">0</span></code>, 3 for <code class="docutils literal notranslate"><span class="pre">{</span></code>, 1 for <code class="docutils literal notranslate"><span class="pre">}</span></code></p></li>
+<li><p>if 1 { }: 10 pt –&gt; 3 pt for <code class="docutils literal notranslate"><span class="pre">if</span></code>, 3 for <code class="docutils literal notranslate"><span class="pre">0</span></code>, 3 for <code class="docutils literal notranslate"><span class="pre">{</span></code>, 1 for <code class="docutils literal notranslate"><span class="pre">}</span></code></p></li>
+<li><p>quietly, if 0 indentation: 10 pt</p></li>
+<li><p>if, code-block indentation: 10 pt</p></li>
+<li><p>alignment of all <code class="docutils literal notranslate"><span class="pre">if</span></code> lodestars: 10 pt</p></li>
+<li><p>comments/annotation at each <code class="docutils literal notranslate"><span class="pre">if</span></code>: 10 pt (if 3 blocks, then each is 10/3 pt; if 2 blocks,then each is 10/5 pt)</p></li>
+<li><p>more detailed annotation at <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">0</span></code>: 10 pt (general statements about the purpose of the entire .do file)</p></li>
+<li><p>.log file specified in <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">1</span></code> block: 10 pt (capture log close, log using, log close: ommission of anyone is -10/3)</p></li>
+<li><p>one point of ten (1/10) for each of these substantive issues:</p></li>
+</ol>
+<ul class="simple">
+<li><p>q1 1pt: <code class="docutils literal notranslate"><span class="pre">local</span> <span class="pre">maco</span></code> content appears in logfile, embedded in sentence</p></li>
+<li><p>q2 1pt: <code class="docutils literal notranslate"><span class="pre">local</span> <span class="pre">maco</span></code> content appears in logfile, embedded in sentence: 1/2 pt for male, 1/2 pt for female</p></li>
+<li><p>q3 1pt: <code class="docutils literal notranslate"><span class="pre">local</span> <span class="pre">maco</span></code> content appears in logfile, embedded in sentence: 1/2 pt for male, 1/2 pt for female</p></li>
+<li><p>q4 1pt: 1/3 pt for <code class="docutils literal notranslate"><span class="pre">generate</span> <span class="pre">htn</span></code>, 1/3 pt for <code class="docutils literal notranslate"><span class="pre">label</span> <span class="pre">define</span></code>, 1/3 pt for <code class="docutils literal notranslate"><span class="pre">tabulate</span> <span class="pre">htn</span></code></p></li>
+<li><p>q5 1pt: 1/3 pt for <code class="docutils literal notranslate"><span class="pre">capture</span> <span class="pre">program</span> <span class="pre">drop</span></code>, 1/3 pt for <code class="docutils literal notranslate"><span class="pre">program</span> <span class="pre">define</span></code>, 1/3 pt for <code class="docutils literal notranslate"><span class="pre">end</span></code>; 5 pt max bonus for correct output</p></li>
+<li><p>q6 1pt: 1/3 pt for <code class="docutils literal notranslate"><span class="pre">lincom</span></code>, 1/3 pt for <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">list</span></code>, 1/3 pt for any <code class="docutils literal notranslate"><span class="pre">(r)</span></code>; 5 pt max bonus for correct output</p></li>
+<li><p>q7 1pt: <code class="docutils literal notranslate"><span class="pre">local</span> <span class="pre">maco</span></code> content appears in logfile, embedded in sentence: 1/2 pt for <code class="docutils literal notranslate"><span class="pre">r(N)</span></code>, 1/2 pt for <code class="docutils literal notranslate"><span class="pre">c(N)</span></code></p></li>
+<li><p>q8 1pt: writes sentence 1/2 pt, includes estimated time 1/2 pt</p></li>
+<li><p>jianan</p></li>
+<li><p>noshow</p></li>
+<li><p>unresponsive</p></li>
+</ul>
+</section>
+<section id="mickey">
+<h2>82. mickey<a class="headerlink" href="#mickey" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>write a grant proposing your original phd stuff as a pilot</p></li>
+<li><p>larger u01 with hopkins as data-coordinating/ai-building center</p></li>
+<li><p>this can be your career plan and grow it over next 20 years :)</p></li>
+</ul>
+</section>
+<section id="city">
+<h2>83. city<a class="headerlink" href="#city" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>I live in the inner city, next to graffiti</p></li>
+<li><p>Which might look shitty, but is actually pretty</p></li>
+<li><p>And some would even say witty,</p>
+<ul>
+<li><p>So… I’m totally down wit’ it!</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="id8">
+<h1>04/21/2023<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h1>
+<section id="love">
+<h2>84 love<a class="headerlink" href="#love" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=aD_TK0tptfc">agent</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=y86kwKByJJE">place</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=OIKC2ggCed4">time</a></p></li>
+</ul>
+</section>
+<section id="sharon">
+<h2>85 sharon<a class="headerlink" href="#sharon" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>permit</p>
+<ul>
+<li><p>July 7, EU permit expires</p></li>
+</ul>
+</li>
+<li><p>conference</p>
+<ul>
+<li><p>July 2-7, Castelldefels, Barcelona, <a class="reference external" href="https://www.grc.org/biology-of-aging-conference/2023/">Gordon Research Conference</a>, Biology of Aging</p></li>
+<li><p>June 4, deadline for applications</p></li>
+</ul>
+</li>
+<li><p>ESOT <a class="reference external" href="https://www.esotcongress.org">Congress 2023</a></p>
+<ul>
+<li><p>September 17-20, Athens</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="todoby04282023">
+<h2>86 todoby04282023<a class="headerlink" href="#todoby04282023" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>ATC</p></li>
+<li><p>BGE</p></li>
+<li><p>Xfiniti</p></li>
+<li><p>Visa</p></li>
+</ol>
+</section>
+</section>
+<section id="id9">
+<h1>04/22/2023<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h1>
+<section id="haydn">
+<h2>87 haydn<a class="headerlink" href="#haydn" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://jhjhm.zoom.us/rec/share/Mau4mKfzoV87cee2irsYbdC3fguNXLyBHyZVKXwYjw9PrBrz593OJ5zpdzCD9fRM.SdYy8F_AbyjJmcXF?startTime=1682194647000">hiding</a></p>
+<p>Passcode: +F!U77Xz</p>
+</section>
+<section id="vickings">
+<h2>88 vickings<a class="headerlink" href="#vickings" title="Permalink to this heading">#</a></h2>
+<p>piers morgan
+<a class="reference external" href="https://www.youtube.com/watch?v=3hrFpIJHA9g">hilarious</a>
+3:33/15:22</p>
+<p>Who is gonna pay me and my family reparations for what the Vikings did to us?</p>
+</section>
+<section id="coolstuff">
+<h2>89 coolstuff<a class="headerlink" href="#coolstuff" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>coefplot //idea from R</p></li>
+<li><p>nmissing //install package</p></li>
+<li><p><a class="reference external" href="https://repec.sowi.unibe.ch/stata/coefplot/markers.html#h-3-1">here</a> are the references</p></li>
+</ul>
+</section>
+<section id="arking">
+<h2>90 arking<a class="headerlink" href="#arking" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>talk to HR (Diane Call) or admin (Diana Brown)</p></li>
+<li><p>how much would it cost me to hire him</p></li>
+<li><p>is he still in the system anyway?</p></li>
+</ul>
+</section>
+<section id="control">
+<h2>91 control<a class="headerlink" href="#control" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>old testament</p>
+<ul>
+<li><p>god creates man</p></li>
+<li><p>loses control</p></li>
+<li><p>gets pissed</p></li>
+</ul>
+</li>
+<li><p>new testament</p>
+<ul>
+<li><p>sends a fixer</p></li>
+<li><p>mixed results</p></li>
+<li><p>ongoing drama</p></li>
+</ul>
+</li>
+<li><p>before chatGPT</p>
+<ul>
+<li><p>man creates ai</p></li>
+<li><p>loses control (fiction)</p></li>
+<li><p>gets pissed (fiction)</p></li>
+<li><p>sends a fixer (fiction)</p></li>
+<li><p>mixed results (fiction)</p></li>
+</ul>
+</li>
+<li><p>after chatGPT</p>
+<ul>
+<li><p>openai creates chatGPT</p></li>
+<li><p>goes live in 12/2022</p></li>
+<li><p>1m subscribers in 1 month</p></li>
+<li><p>100m subscribers in 2 months</p></li>
+<li><p>tech titans and elon musk panic</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="jvalentine">
+<h2>92 jvalentine<a class="headerlink" href="#jvalentine" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>listen at <a class="reference external" href="https://www.youtube.com/watch?v=J6E8ZA9KNMM">26:00</a>/2:42:42</p></li>
+<li><p>what makes a banger?</p></li>
+<li><p>relatable to one who:</p>
+<ul>
+<li><p>can’t sing</p></li>
+<li><p>or is drunk</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="spjd">
+<h2>93 spjd<a class="headerlink" href="#spjd" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>sekimpi</p></li>
+<li><p>nicolas</p></li>
+<li><p>us, india, etc.</p></li>
+</ul>
+</section>
+</section>
+<section id="id10">
+<h1>04/23/2023<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h1>
+<section id="hand">
+<h2>94. hand<a class="headerlink" href="#hand" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>play the hand you are dealt whether it be:</p>
+<ul>
+<li><p>melody</p></li>
+<li><p>cards</p></li>
+<li><p>life</p></li>
+</ul>
+</li>
+<li><p>they yield infinite possibilities:</p>
+<ul>
+<li><p>harmonies</p></li>
+<li><p>plays</p></li>
+<li><p>tasks</p></li>
+</ul>
+</li>
+<li><p>case in point:</p>
+<ul>
+<li><p>annuŋŋamya</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=9IZcnRVdLtk">theme</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=qdoeiy2-oFw">variation1</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=y86kwKByJJE">variation2</a></p></li>
+<li><p><a class="reference external" href="https://muzaale.github.io/book/_downloads/2812646d9eb356cd85149abbb8b4fad1/arpeggiovariation.m4a">variation3</a></p></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="wagner">
+<h2>95. wagner<a class="headerlink" href="#wagner" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>symphony in c major, wwv 29</p></li>
+<li><p>composed in 1832</p></li>
+<li><p>he was only 19yo</p></li>
+<li><p>thought it was beethoven’s 1st or 2nd</p></li>
+<li><p>oh, the potential if he’d taken on the classical masters!</p></li>
+<li><p>but instead of usurpation he invented his own aesthetic:</p></li>
+<li><p>gesamtkunstwerk: chickened out against the big boys</p></li>
+</ul>
+</section>
+<section id="hw1sol">
+<h2>96. hw1sol<a class="headerlink" href="#hw1sol" title="Permalink to this heading">#</a></h2>
+<ul>
+<li><p>use as springboard for loops</p></li>
+<li><p>#delimit ;</p></li>
+<li><p>.dofile structure</p></li>
+<li><p>if 0 { –&gt; text, documentation &gt; annotation</p></li>
+<li><p>tidy summary of <code class="docutils literal notranslate"><span class="pre">pwd</span></code>, <code class="docutils literal notranslate"><span class="pre">r(mean)</span></code>, <code class="docutils literal notranslate"><span class="pre">by</span></code>, <code class="docutils literal notranslate"><span class="pre">program</span> <span class="pre">define</span></code></p></li>
+<li><p>now: <code class="docutils literal notranslate"><span class="pre">capture</span></code> plus added flexibility with <code class="docutils literal notranslate"><span class="pre">syntax</span> <span class="pre">varlist</span></code></p></li>
+<li><p>anyways, hw1sol is a most succinct summary of the content of 1st half of term</p>
+<ul>
+<li><p>created macros called <code class="docutils literal notranslate"><span class="pre">row1</span></code>, <code class="docutils literal notranslate"><span class="pre">row2</span></code>, <code class="docutils literal notranslate"><span class="pre">row3</span></code>, …, <code class="docutils literal notranslate"><span class="pre">row12</span></code></p></li>
+<li><p>in brief: macros <code class="docutils literal notranslate"><span class="pre">row1</span></code> thru <code class="docutils literal notranslate"><span class="pre">row12</span></code></p></li>
+<li><p>the way to express it in code is:</p>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">forvalues</span> i=<span class="m">1</span><span class="o">/</span><span class="m">12</span> {
+<span class="k">    </span>
+<span class="k">    di</span> <span class="nv">`row`i&#39;&#39;</span>
+
+} 
+</pre></div>
+</div>
+</li>
+<li><p>lines 170-174 in your hw1 <a class="reference external" href="https://raw.githubusercontent.com/jhustata/book/main/hw1.lastname.firstname.do">solution</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="whitney">
+<h2>97. whitney<a class="headerlink" href="#whitney" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>watching <a class="reference external" href="https://www.youtube.com/watch?v=easWqy08wr8">this</a> brings clarity to my mind:</p>
+<ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Bobbi_Kristina_Brown#Coma_and_death">bobbi kristina brown</a>, and every other child</p></li>
+<li><p>must be raised by the village</p></li>
+<li><p>never by their moma!!!</p></li>
+<li><p>and this is how</p></li>
+<li><p>it has been done</p></li>
+<li><p>since the beginning of time</p></li>
+<li><p>yet in these modern times</p></li>
+<li><p>this age of unbriddled</p></li>
+<li><p>das kapital:</p>
+<ol class="arabic simple">
+<li><p>family unit</p></li>
+<li><p>american dream</p></li>
+<li><p>suburban house</p></li>
+<li><p>narrow ambitions</p></li>
+<li><p>these things dominate</p></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>a renaissance is urgently needed</p></li>
+<li><p>back to the spirit of sparta</p></li>
+<li><p>some vestiges in the boarding-school system of the uk</p></li>
+</ul>
+</section>
+<section id="beauty">
+<h2>98. beauty<a class="headerlink" href="#beauty" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>circle of <a class="reference external" href="https://www.youtube.com/watch?v=6LaRggNKPHA">fifths</a> with <a class="reference external" href="https://en.wikipedia.org/wiki/Brownstone_(group)">brownstone</a></p></li>
+<li><p>taking chances (opposite of circle of fifths)</p></li>
+<li><p>playing games (mingling chromaticism &amp; circles…)</p></li>
+<li><p>gordon chambers (song <a class="reference external" href="https://en.wikipedia.org/wiki/Gordon_Chambers">writer</a>)</p>
+<ul>
+<li><p>i apologize - anita baker</p></li>
+<li><p>brownstone - if you love me, in the game of love (my personal fave)</p></li>
+<li><p>missing you - brandy, tamia, gladys knight, chaka khan</p></li>
+<li><p>someone watching over you - yolanda adams</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="hierachy">
+<h2>99. hierachy<a class="headerlink" href="#hierachy" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=tdgKO1jhaDc">silent</a> partner: daryl simmons</p></li>
+<li><p>the <a class="reference external" href="https://en.wikipedia.org/wiki/The_Underdogs_(record_producers)">underdogs</a></p></li>
+<li><p>higher up: babyface, dark child</p></li>
+</ul>
+</section>
+<section id="kim">
+<h2>100. kim<a class="headerlink" href="#kim" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>her life kris kross’ mine</p></li>
+<li><p>same year of birth</p></li>
+<li><p>and same state of birth</p></li>
+<li><p>plus more <a class="reference external" href="https://web.archive.org/web/20140101061600/http://www.people.com/people/kim_kardashian/biography/">nuance</a></p>
+<ul>
+<li><p>damon thomas (babyface)</p></li>
+<li><p>brandy (my fave in teenage)</p></li>
+<li><p>kanye (warming up to him after a decade or so)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="darkchild">
+<h2>101 darkchild?<a class="headerlink" href="#darkchild" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>i <a class="reference external" href="https://www.youtube.com/watch?v=uO-A74VAvpc">like</a> them girls</p></li>
+<li><p>and the actual <a class="reference external" href="https://genius.com/Tyrese-i-like-them-girls-lyrics">credits</a>?</p></li>
+<li><p>harvey mason, jr</p></li>
+</ul>
+</section>
+<section id="ai">
+<h2>102 ai<a class="headerlink" href="#ai" title="Permalink to this heading">#</a></h2>
+<p>sneak <span class="xref myst">peak</span></p>
+</section>
+<section id="oral">
+<h2>103 oral<a class="headerlink" href="#oral" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>tradition</p></li>
+<li><p>homer</p></li>
+<li><p>bible</p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=XRFW5MUwehc">slowjam</a></p></li>
+<li><p><a class="reference external" href="https://www.gutenberg.org/files/1998/1998-h/1998-h.htm#link2H_4_0012">audible</a></p></li>
+<li><p>collective</p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=8sF0R5XFcxk">memories</a></p></li>
+<li><p>kulture</p></li>
+</ul>
+</section>
+<section id="eufa">
+<h2>104 eufa<a class="headerlink" href="#eufa" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>rma vs. man city may 9: odds 365 +200 leg 1, + 130 leg 2, man city</p></li>
+<li><p>ac vs. inter may 10: odds 365 +170 leg 1, + 187 leg 2, inter</p></li>
+</ul>
+</section>
+<section id="ph340700">
+<h2>104 ph340700<a class="headerlink" href="#ph340700" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>i can’t recognize a few folks</p>
+<ol class="arabic simple">
+<li><p>wog</p></li>
+<li><p>jg</p></li>
+<li><p>jm</p></li>
+<li><p>sk</p></li>
+<li><p>xz</p></li>
+</ol>
+</li>
+<li><p>email me: 0% for participation thus far</p></li>
+</ul>
+</section>
+<section id="xinran">
+<h2>105 xinran<a class="headerlink" href="#xinran" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>trouble reproducing this: <a class="reference external" href="https://jhustata.github.io/book/ddd.html">https://jhustata.github.io/book/ddd.html</a></p>
+<ul>
+<li><p>split</p></li>
+<li><p>destring</p></li>
+<li><p>encode</p></li>
+</ul>
+</li>
+<li><p>similar trouble with hw1.q5</p>
+<ul>
+<li><p>dx</p></li>
+</ul>
+</li>
+<li><p>notes that classmates don’t seem to have similar issues:</p>
+<ul>
+<li><p>her “trumination” causes her to “overthink” things</p></li>
+<li><p>wonders how she may “distribute the energy” away from one issue</p></li>
+<li><p>constantly facing “decision trees”, which quickly get overgrown</p></li>
+<li><p>is self-confessed <span class="math notranslate nohighlight">\(3\sigma\)</span> extrovert</p></li>
+<li><p>responds to emails at 3am, maybe needing little in way of sleep</p></li>
+<li><p>distracted from in-person class sessions on Th by meeting with mentor</p></li>
+</ul>
+</li>
+<li><p>otherwise is all-round charming</p></li>
+</ul>
+</section>
+<section id="macro">
+<h2>106. macro<a class="headerlink" href="#macro" title="Permalink to this heading">#</a></h2>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">di</span> <span class="s">&quot;hello </span><span class="nv">`c(edition_real)&#39;</span><span class="s">&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>name</p></li>
+<li><p>content</p></li>
+</ul>
+</section>
+</section>
+<section id="id11">
+<h1>04/24/2023<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h1>
+<section id="aiko">
+<h2>107. aiko<a class="headerlink" href="#aiko" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>aiko birthday</p></li>
+<li><p>email to weinberg y</p>
+<ul>
+<li><p><a class="reference external" href="mailto:alexisperkins&#37;&#52;&#48;ymaryland&#46;org">alexisperkins<span>&#64;</span>ymaryland<span>&#46;</span>org</a></p></li>
+<li><p>cc aiko kodaira (insisted on it as her birthday gift)</p></li>
+</ul>
+</li>
+</ul>
+<p>Good morning,</p>
+<p>I wish to express our frustration at the inconsistency in the pool-related services at the Weinberg Y.  A number of us have very tight work-schedules with a narrow time-window from 5:00 AM - 6:30 AM to put in our 90min of lap-swimming.</p>
+<p>When a lifeguard is late or a no-show our start to the day the day is disrupted. Unfortunately this has become a well-established routine at Weinberg and, as such, the first question I always ask the front desk on arrival at 5am is “do we have a lifeguard today?”</p>
+<p>This isn’t a question I should ever be asking! Regardless of what difficulties you are facing in proving a consistent pool-service, the minimum your no-show lifeguards ought to do is send out a notification by 4am letting us know that the pool will not open.</p>
+<p>Maybe this is too much to ask?</p>
+<p>Abi</p>
+</section>
+<section id="dawking">
+<h2>108. dawking<a class="headerlink" href="#dawking" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>top 5 <a class="reference external" href="https://www.youtube.com/watch?v=J6E8ZA9KNMM&amp;t=7767s">rnb</a>: 2:13:13/2:42:42</p>
+<ul>
+<li><p>ribbon in the sky - stevie wonder</p></li>
+<li><p>a song for you - donny hathaway</p></li>
+<li><p>after the love is gone - earth, wind &amp; fire</p></li>
+<li><p>after all - al jarreau</p></li>
+<li><p>get here if you can - oleta adams</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="joshua">
+<h2>109. joshua<a class="headerlink" href="#joshua" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>BoA: $775 from nite</p></li>
+<li><p>GS: $799.25 ($775 + $24.25 processing fee); confirmed</p></li>
+<li><p>However, only $593.90 charged by NBX* Campus Living Cntr</p></li>
+<li><p>Deposit or rent, this first charge?</p></li>
+</ul>
+</section>
+<section id="id12">
+<h2>110. ds4ph<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>begin: 5:30pm</p>
+<ul>
+<li><p>~desktop/0g.κοσμογονία,γ/2.pantheon/python.ipynb</p></li>
+<li><p>my <code class="docutils literal notranslate"><span class="pre">pwd</span></code> for interactive, exploratory, learning session</p></li>
+</ul>
+</li>
+<li><p>end: 5:30am</p>
+<ul>
+<li><p>now able to run R in terminal, interactively</p></li>
+<li><p>still unable to run R scripts in .ipynb</p></li>
+</ul>
+</li>
+<li></li>
+</ul>
+</section>
+</section>
+<section id="id13">
+<h1>04/25/2023<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h1>
+<section id="diamonds">
+<h2>111. diamonds<a class="headerlink" href="#diamonds" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>sons in netflix series rought diamonds</p>
+<ul>
+<li><p>prodigal</p></li>
+<li><p>orthodox</p></li>
+<li><p>weakest</p></li>
+</ul>
+</li>
+<li><p>analogous to type I, II, III artists</p>
+<ul>
+<li><p>titanic (<a class="reference external" href="https://en.wikisource.org/wiki/An_Attempt_at_Self-Criticism#7">i am dynamite?</a>)</p></li>
+<li><p>classical</p></li>
+<li><p>romantic</p></li>
+</ul>
+</li>
+<li><p>god father series</p>
+<ul>
+<li><p>michael</p></li>
+<li><p>sonny</p></li>
+<li><p>fredo</p></li>
+</ul>
+</li>
+<li><p>my emergent credo:</p>
+<ul>
+<li><p>tameth</p></li>
+<li><p>whineth</p></li>
+<li><p>hideth</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="non-hodgkins">
+<h2>112. non-Hodgkins<a class="headerlink" href="#non-hodgkins" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>b-cell</p></li>
+<li><p>cd20+</p></li>
+<li><p>cd138-</p></li>
+</ul>
+</section>
+<section id="id14">
+<h2>113. ds4ph<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://smart-stats.github.io/ds4bio_book/book/_build/html/intro.html">basic</a></p></li>
+<li><p><a class="reference external" href="https://smart-stats.github.io/advanced_ds4bio_book/qbook/_book/intro.html">advanced</a></p></li>
+<li><p>more</p></li>
+</ul>
+</section>
+<section id="torch">
+<h2>114. torch<a class="headerlink" href="#torch" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sklearn</span> <span class="k">as</span> <span class="nn">skl</span>
+
+<span class="c1">#plt.figure(figsize=[2, 2])</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;X1&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;X2&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;X3&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;X4&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;X5&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;X6&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;X7&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;X8&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H11&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.4</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H12&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.8</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H13&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">4.2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H14&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.6</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H21&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H22&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">4.9</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">2.8</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">4.2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mf">5.6</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
+
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H41&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H42&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H43&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H44&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H45&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H46&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H47&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;H48&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;X1&quot;</span><span class="p">,</span> <span class="s2">&quot;H11&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X1&quot;</span><span class="p">,</span> <span class="s2">&quot;H12&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X1&quot;</span><span class="p">,</span> <span class="s2">&quot;H13&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X1&quot;</span><span class="p">,</span> <span class="s2">&quot;H14&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;X2&quot;</span><span class="p">,</span> <span class="s2">&quot;H11&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X2&quot;</span><span class="p">,</span> <span class="s2">&quot;H12&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X2&quot;</span><span class="p">,</span> <span class="s2">&quot;H13&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X2&quot;</span><span class="p">,</span> <span class="s2">&quot;H14&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;X3&quot;</span><span class="p">,</span> <span class="s2">&quot;H11&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X3&quot;</span><span class="p">,</span> <span class="s2">&quot;H12&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X3&quot;</span><span class="p">,</span> <span class="s2">&quot;H13&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X3&quot;</span><span class="p">,</span> <span class="s2">&quot;H14&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;X4&quot;</span><span class="p">,</span> <span class="s2">&quot;H11&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X4&quot;</span><span class="p">,</span> <span class="s2">&quot;H12&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X4&quot;</span><span class="p">,</span> <span class="s2">&quot;H13&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X4&quot;</span><span class="p">,</span> <span class="s2">&quot;H14&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;X5&quot;</span><span class="p">,</span> <span class="s2">&quot;H11&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X5&quot;</span><span class="p">,</span> <span class="s2">&quot;H12&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X5&quot;</span><span class="p">,</span> <span class="s2">&quot;H13&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X5&quot;</span><span class="p">,</span> <span class="s2">&quot;H14&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;X6&quot;</span><span class="p">,</span> <span class="s2">&quot;H11&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X6&quot;</span><span class="p">,</span> <span class="s2">&quot;H12&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X6&quot;</span><span class="p">,</span> <span class="s2">&quot;H13&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X6&quot;</span><span class="p">,</span> <span class="s2">&quot;H14&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;X7&quot;</span><span class="p">,</span> <span class="s2">&quot;H11&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X7&quot;</span><span class="p">,</span> <span class="s2">&quot;H12&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X7&quot;</span><span class="p">,</span> <span class="s2">&quot;H13&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X7&quot;</span><span class="p">,</span> <span class="s2">&quot;H14&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;X8&quot;</span><span class="p">,</span> <span class="s2">&quot;H11&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X8&quot;</span><span class="p">,</span> <span class="s2">&quot;H12&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X8&quot;</span><span class="p">,</span> <span class="s2">&quot;H13&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;X8&quot;</span><span class="p">,</span> <span class="s2">&quot;H14&quot;</span><span class="p">)])</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H11&quot;</span><span class="p">,</span> <span class="s2">&quot;H21&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H11&quot;</span><span class="p">,</span> <span class="s2">&quot;H22&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H12&quot;</span><span class="p">,</span> <span class="s2">&quot;H21&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H12&quot;</span><span class="p">,</span> <span class="s2">&quot;H22&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H13&quot;</span><span class="p">,</span> <span class="s2">&quot;H21&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H13&quot;</span><span class="p">,</span> <span class="s2">&quot;H22&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H14&quot;</span><span class="p">,</span> <span class="s2">&quot;H21&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H14&quot;</span><span class="p">,</span> <span class="s2">&quot;H22&quot;</span><span class="p">)])</span>
+
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H21&quot;</span><span class="p">,</span> <span class="s2">&quot;H31&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H21&quot;</span><span class="p">,</span> <span class="s2">&quot;H32&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H21&quot;</span><span class="p">,</span> <span class="s2">&quot;H33&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H21&quot;</span><span class="p">,</span> <span class="s2">&quot;H34&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H22&quot;</span><span class="p">,</span> <span class="s2">&quot;H31&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H22&quot;</span><span class="p">,</span> <span class="s2">&quot;H32&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H22&quot;</span><span class="p">,</span> <span class="s2">&quot;H33&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H22&quot;</span><span class="p">,</span> <span class="s2">&quot;H34&quot;</span><span class="p">)])</span>
+
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span> <span class="s2">&quot;H41&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span> <span class="s2">&quot;H42&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span> <span class="s2">&quot;H43&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span> <span class="s2">&quot;H44&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span> <span class="s2">&quot;H45&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span> <span class="s2">&quot;H46&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span> <span class="s2">&quot;H47&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H31&quot;</span><span class="p">,</span> <span class="s2">&quot;H48&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span> <span class="s2">&quot;H41&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span> <span class="s2">&quot;H42&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span> <span class="s2">&quot;H43&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span> <span class="s2">&quot;H44&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span> <span class="s2">&quot;H45&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span> <span class="s2">&quot;H46&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span> <span class="s2">&quot;H47&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H32&quot;</span><span class="p">,</span> <span class="s2">&quot;H48&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span> <span class="s2">&quot;H41&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span> <span class="s2">&quot;H42&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span> <span class="s2">&quot;H43&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span> <span class="s2">&quot;H44&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span> <span class="s2">&quot;H45&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span> <span class="s2">&quot;H46&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span> <span class="s2">&quot;H47&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H33&quot;</span><span class="p">,</span> <span class="s2">&quot;H48&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span> <span class="s2">&quot;H41&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span> <span class="s2">&quot;H42&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span> <span class="s2">&quot;H43&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span> <span class="s2">&quot;H44&quot;</span><span class="p">)])</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span> <span class="s2">&quot;H45&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span> <span class="s2">&quot;H46&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span> <span class="s2">&quot;H47&quot;</span><span class="p">),</span>  <span class="p">(</span><span class="s2">&quot;H34&quot;</span><span class="p">,</span> <span class="s2">&quot;H48&quot;</span><span class="p">)])</span>
+
+
+<span class="c1">#G.add_edges_from([(&quot;H11&quot;, &quot;H21&quot;), (&quot;H11&quot;, &quot;H22&quot;), (&quot;H12&quot;, &quot;H21&quot;), (&quot;H12&quot;, &quot;H22&quot;)])</span>
+<span class="c1">#G.add_edges_from([(&quot;H21&quot;, &quot;Y&quot;), (&quot;H22&quot;, &quot;Y&quot;)])</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> 
+        <span class="n">nx</span><span class="o">.</span><span class="n">get_node_attributes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">),</span> 
+        <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+        <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> 
+        <span class="n">node_size</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+        <span class="n">node_color</span> <span class="o">=</span> <span class="s2">&quot;lightblue&quot;</span><span class="p">,</span>
+        <span class="n">linewidths</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">collections</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_edgecolor</span><span class="p">(</span><span class="s2">&quot;#000000&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="o">-</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">sklearn</span> <span class="k">as</span> <span class="nn">skl</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1">#plt.figure(figsize=[2, 2])</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="autoencoders">
+<h2>115. autoencoders<a class="headerlink" href="#autoencoders" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>missing data</p></li>
+<li><p>bootstrap</p></li>
+<li><p>cryptography/disclosure risk</p></li>
+</ul>
+<p>review 04/25/23 ds4ph recording</p>
+</section>
+<section id="cobb">
+<h2>116. cobb<a class="headerlink" href="#cobb" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Cobb_salad">delicous</a></p></li>
+<li><p>convert</p></li>
+<li><p>best!</p></li>
+</ul>
+</section>
+</section>
+<section id="id15">
+<h1>04/26/2023<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h1>
+<section id="arsenal">
+<h2>117. arsenal<a class="headerlink" href="#arsenal" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>today: 1 -182 x +350 2 +450</p></li>
+<li><p>epl: -450 man city, +333 arsenal</p></li>
+<li><p>and the streets have spoke</p></li>
+<li><p>they were right: 4-1</p></li>
+</ul>
+</section>
+<section id="mylife">
+<h2>118. mylife<a class="headerlink" href="#mylife" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>X1 worship/revere</p></li>
+<li><p>X2 son</p></li>
+<li><p>X3 brother</p></li>
+<li><p>X4 playmate</p></li>
+<li><p>X5 classmate</p></li>
+<li><p>X6 aquaintance</p></li>
+<li><p>X7 friend</p></li>
+<li><p>X8 student</p>
+<ul>
+<li><p>H11 organist</p></li>
+<li><p>H12 pianist</p></li>
+<li><p>H13 heaven-bound</p></li>
+<li><p>H14 co-instructor</p>
+<ol class="arabic simple">
+<li><p>H21 rugby-coach</p></li>
+<li><p>H22 prefect</p>
+<ul>
+<li><p>H31 self-conscious</p></li>
+<li><p>H32 lover</p></li>
+<li><p>H33 navel-gazer</p></li>
+<li><p>H34 decadent</p>
+<ul>
+<li><p>H41 md</p></li>
+<li><p>H42 mph</p></li>
+<li><p>H43 phd</p></li>
+<li><p>H44 faculty</p></li>
+<li><p>H45 mentor</p></li>
+<li><p>H46 teacher</p></li>
+<li><p>H47 researcher</p></li>
+<li><p>H48 swimmer</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="reverence">
+<h2>119. <a class="reference external" href="https://muzaale.github.io/book/note.html#mylife">reverence</a><a class="headerlink" href="#reverence" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://muzaale.github.io/book/_downloads/beb4517d61140d5f8083d460c2e6db96/reverence.JPG">fave</a> hymn</p></li>
+<li><p>very engaging harmonies</p></li>
+<li><p>deeply poetic verses</p></li>
+</ul>
+</section>
+<section id="l-homme">
+<h2>120. l’homme<a class="headerlink" href="#l-homme" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://muzaale.github.io/book/note.html#id26">strong</a></p></li>
+<li><p>moyen</p></li>
+<li><p>weak</p></li>
+</ul>
+</section>
+<section id="eli">
+<h2>121. <a class="reference external" href="https://muzaale.github.io/book/note.html#diamonds">eli</a><a class="headerlink" href="#eli" title="Permalink to this heading">#</a></h2>
+<ul>
+<li><p>noah: rigorous</p></li>
+<li><p>eli: defrauded</p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=q9T8hcU6TSE">yanki</a>: <a class="reference external" href="https://www.biblegateway.com/passage/?search=Proverbs%2027%3A12&amp;version=KJV">simpleton</a></p>
+<p>the simpleton flirteth with wolves yet he really should be in hiding!</p>
+</li>
+</ul>
+</section>
+<section id="xenotx">
+<h2>122. xenotx<a class="headerlink" href="#xenotx" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>05/08/2023</p></li>
+<li><p>12-1pm</p></li>
+<li><p><a class="reference external" href="https://jhjhm.zoom.us/j/91938551726?pwd=eStqNVBmUDJxZUh2WVlZbWFiQjZPQT09">zoom</a></p></li>
+</ul>
+</section>
+</section>
+<section id="id16">
+<h1>04/27/2023<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h1>
+<section id="text">
+<h2>123. text<a class="headerlink" href="#text" title="Permalink to this heading">#</a></h2>
+<ul>
+<li><p>import <a class="reference external" href="https://smart-stats.github.io/advanced_ds4bio_book/qbook/_book/nlp.html">nltk</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="n">sentences</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="n">note</span><span class="p">)</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">tokenize</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">note</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sentences</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+
+</pre></div>
+</div>
+</li>
+<li><p>identify geriatric syndromes in a process of <a class="reference external" href="https://towardsdatascience.com/a-brief-introduction-to-unsupervised-learning-20db46445283">unsupervised</a> learning</p></li>
+<li><p>EHR from 2013-2023 (e.g. Kaiser Permanente, Hopkins)</p></li>
+<li><p><a class="reference external" href="https://grantome.com/grant/NIH/K08-AG065520-01">footprints</a> left in large databases not available for most research</p></li>
+<li><p>this is a major innovation that i’ve gots to pilot!</p></li>
+</ul>
+</section>
+<section id="emails">
+<h2>124. emails<a class="headerlink" href="#emails" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>check for conflicts!!!!!!!!!!!!!!!!!!!!!!!!</p></li>
+<li><p>diana call</p></li>
+<li><p>fawaz (diana call vs. diane brown)</p></li>
+<li><p>hotel, flights, conferences</p></li>
+<li><p>vincent emergency</p></li>
+<li><p>betsy, durand</p></li>
+<li><p>class700 office hour</p></li>
+<li><p>rasheeda response</p></li>
+<li><p>cltx ***</p></li>
+<li><p>irb</p></li>
+<li><p>nhanes invoice</p></li>
+<li><p><strong>ds4ph</strong> 7-9 ***</p></li>
+<li><p>amy presentation</p></li>
+<li><p>md drivers licence</p></li>
+<li><p>tijuana</p></li>
+<li><p>calvin</p></li>
+<li><p>arking</p></li>
+<li><p>voice memos</p></li>
+<li><p>wagner neatly fits without</p></li>
+<li><p>find henry lang essay on mozart at 250</p></li>
+<li><p>email noshow class700s</p></li>
+<li><p>kajjimbi, kase</p></li>
+<li><p>i say rejoice: nltk</p></li>
+<li><p>xujun gu</p></li>
+<li><p>ping</p></li>
+<li><p>asma rayani</p></li>
+<li><p>mahanna elsheik</p></li>
+<li><p>cris/gtpci</p></li>
+<li><p>amy chang</p></li>
+</ul>
+</section>
+</section>
+<section id="id17">
+<h1>04/28/2023<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h1>
+<section id="meetings">
+<h2>125. meetings<a class="headerlink" href="#meetings" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>01:30 Mahanna</p></li>
+<li><p>02:30 Mozart at 250</p></li>
+<li><p>04:00 Calvin</p></li>
+<li><p>05:00 Arking</p></li>
+<li><p>06:00 Cltx</p></li>
+<li><p>06:30 NHANES invoice</p></li>
+<li><p>07:00 Cris</p></li>
+<li><p>08:00 Diana/Vincent</p></li>
+<li><p>09:00 Kase/Kajjimbi</p></li>
+<li><p>10:00 Fawaz, Betsy/Durand</p></li>
+<li><p>12:00 <a class="reference external" href="https://github.com/microsoft/vscode-dev-containers/tree/main/containers/codespaces-linux">Class700</a></p></li>
+<li><p>14:30 Amy</p></li>
+<li><p>15:30 Asma</p></li>
+<li><p>16:30 Xujun</p></li>
+<li><p>17:30 MD license</p></li>
+<li><p>18:30 Rasheeda</p></li>
+<li><p>20:00 Fawaz</p></li>
+</ul>
+</section>
+<section id="catchup">
+<h2>126. catchup<a class="headerlink" href="#catchup" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>todoby</p></li>
+<li><p>emails</p></li>
+<li><p>other</p></li>
+</ul>
+</section>
+<section id="remember">
+<h2>127. remember?<a class="headerlink" href="#remember" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=UNxDg_HI4Yc">act one</a> 1:45/4:49</p></li>
+<li><p>secrets about</p></li>
+<li><p>hardier sex</p></li>
+</ul>
+</section>
+<section id="describe">
+<h2>128. describe<a class="headerlink" href="#describe" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>john singleton</p></li>
+<li><p>tyler perry</p></li>
+<li><p>david simon</p></li>
+<li><p>rich harrison</p></li>
+<li><p>raphaelsanzio</p></li>
+<li><p>general patton</p></li>
+<li><p>richarc ii</p></li>
+<li><p>verzuz</p></li>
+<li><p>elizabeth truss</p></li>
+<li><p>pearl of africa</p></li>
+<li><p>homerΟμηρος</p></li>
+<li><p>john falstaff</p></li>
+<li><p>julius caesar</p></li>
+<li><p>epicurus hamlet</p></li>
+<li><p>daft punk</p></li>
+<li><p>cornel west</p></li>
+<li><p>empedocles</p></li>
+<li><p>gaius cassius</p></li>
+<li><p>democritus</p></li>
+<li><p>aristotle</p></li>
+<li><p>armondo iannucci</p></li>
+<li><p>oscar wilde</p></li>
+<li><p>tucker carlson</p></li>
+<li><p>hamlet dane</p></li>
+<li><p>big lebowski</p></li>
+<li><p>kevin duncan</p></li>
+<li><p>anthony kennedy</p></li>
+<li><p>heraclitus ephesus</p></li>
+<li><p>epilogue</p></li>
+<li><p>aléjandro iñarritu</p></li>
+<li><p>dionysus</p></li>
+<li><p>st. paul</p></li>
+<li><p>linda fried 20747</p></li>
+<li><p>sigmund freud</p></li>
+<li><p>lucy-fa de telos</p></li>
+<li><p>james watson</p></li>
+<li><p>mohan kiwanuka</p></li>
+<li><p>théophile gautier</p></li>
+<li><p>augustine hippo</p></li>
+<li><p>jeff bezos</p></li>
+<li><p>gangubai kathiawadi</p></li>
+<li><p>worthy adversaries</p></li>
+</ul>
+</section>
+<section id="dropbox">
+<h2>129. dropbox<a class="headerlink" href="#dropbox" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>0g.κοσμογονία,γ</p>
+<ol class="arabic simple">
+<li><p>cosmogony</p></li>
+<li><p>pantheon</p></li>
+<li><p>dna.origins</p></li>
+<li><p>germline</p></li>
+<li><p>zero.woman</p></li>
+</ol>
+</li>
+<li><p>1f.ἡἔρις,κ</p>
+<ol class="arabic simple">
+<li><p>ontology</p></li>
+<li><p>theomachy</p></li>
+<li><p>histone.steroids</p></li>
+<li><p>forecast</p></li>
+<li><p>one.adversary</p></li>
+</ol>
+</li>
+<li><p>2e.πρᾶξις,σ</p>
+<ol class="arabic simple">
+<li><p>strong</p></li>
+<li><p>warfare</p></li>
+<li><p>acetyl.neurotrans</p></li>
+<li><p>explain</p></li>
+<li><p>two.changeable</p></li>
+</ol>
+</li>
+<li><p>3e.ἄσκησις,μ</p>
+<ol class="arabic simple">
+<li><p>weak.oppressed</p></li>
+<li><p>peace.guilds</p></li>
+<li><p>transferase.muscle</p></li>
+<li><p>xplicate</p></li>
+<li><p>three.faith</p></li>
+</ol>
+</li>
+<li><p>4d.∫δυσφορία.dt,ψ</p>
+<ol class="arabic simple">
+<li><p>shibboleth</p></li>
+<li><p>dystopia</p></li>
+<li><p>expression.skeleto</p></li>
+<li><p>describe</p></li>
+<li><p>four.hope</p></li>
+</ol>
+</li>
+<li><p>5c.φάρμακον,δ</p>
+<ol class="arabic simple">
+<li><p>plus.ça</p></li>
+<li><p>opium.utopia</p></li>
+<li><p>metabolome.diet</p></li>
+<li><p>change</p></li>
+<li><p>five.love</p></li>
+</ol>
+</li>
+<li><p>6b.ομορφιά,β</p>
+<ol class="arabic simple">
+<li><p>revelation</p></li>
+<li><p>powerwill</p></li>
+<li><p>wide.r2.climb</p></li>
+<li><p>become</p></li>
+<li><p>six.telos</p></li>
+</ol>
+</li>
+<li><p>7a.τάξη,α</p>
+<ol class="arabic simple">
+<li><p>epistemology</p></li>
+<li><p>hall.of.fame</p></li>
+<li><p>association.rank</p></li>
+<li><p>aesthetic</p></li>
+<li><p>seven.comfort</p></li>
+</ol>
+</li>
+</ul>
+</section>
+</section>
+<section id="id18">
+<h1>04/29/2023<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h1>
+<section id="inflection">
+<h2>130. inflection<a class="headerlink" href="#inflection" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>uc irvine has a position</p></li>
+<li><p>vincent should submit app by nonday</p></li>
+<li><p>the uci folks understand the process quite well</p></li>
+<li><p>hr will offer job and release necessary info or certification</p></li>
+<li><p>let vincent call fawaz at 9:00am PST tomorrow</p></li>
+<li><p>fawaz used Diane Brown, not Diana Call</p></li>
+<li><p><span class="math notranslate nohighlight">\(48/hr\)</span> + 34% fringe -&gt; <span class="math notranslate nohighlight">\(70k\)</span>?</p></li>
+<li><p>with f-&gt;60%, a-&gt;40%</p></li>
+<li><p>hopkins hires, uci subcontracts</p></li>
+<li><p>if f-&gt;100%, comes to $90k</p></li>
+<li><p>may ask diane brown what lowest pay for v is</p></li>
+<li><p>she can find the code for this</p></li>
+<li><p>f &amp; a -&gt; email diane brown on monday</p>
+<ul>
+<li><p>r03 is exclusively for k08/k23</p></li>
+<li><p>use to support analysts, extension of grant, etc</p></li>
+<li><p>its sort of guaranteed money</p></li>
+<li><p>because it is non-competitive</p></li>
+<li><p>r21 is competitive; may subsequently apply for it</p></li>
+<li><p>v !-&gt; trc, but 100% -&gt; f&amp;a</p></li>
+<li><p>asn may 23 abstract</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="amy">
+<h2>131. amy<a class="headerlink" href="#amy" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Use active voice throughout:</p>
+<ul class="simple">
+<li><p>We did this, then we did that</p></li>
+<li><p><strong>NOT</strong> this was done, then that was done</p></li>
+</ul>
+</li>
+<li><p>Great table1 that is native to .PPT:</p>
+<ul class="simple">
+<li><p>But highlight one item at a time, when you speak about it</p></li>
+<li><p><strong>NOT</strong> three items simultaneously; no one can process all that at once</p></li>
+<li><p>And you have an additional minute!!</p></li>
+</ul>
+</li>
+<li><p>Crude cumulative incidence:</p>
+<ul class="simple">
+<li><p>I’ve never heard of this term before</p></li>
+<li><p>Report a cumulative incidence or not at all, but there’s nothing like “crude” incidence</p></li>
+<li><p>How did you get these numbers? Kaplan-Meier? If so, then give us a graph!!!!</p></li>
+</ul>
+</li>
+<li><p>Figure 1 = Model 1; Figure 2 = Model 2</p>
+<ul class="simple">
+<li><p>Give each a name:</p></li>
+<li><p>Predonation risk (Model 1); mostly useful at donor evaluation and during the consent process</p></li>
+<li><p>Postdonation risk (Model 2); useful for postdonation vigilance</p></li>
+</ul>
+</li>
+<li><p>You talked of tests for interaction in your model</p>
+<ul class="simple">
+<li><p>Was this motivated in the background section?</p></li>
+<li><p>If not then completely eliminate that stuff from your talk</p></li>
+<li><p>Do not surprise us with new ideas like ADI in the results; motivate them in the background or remove them!</p></li>
+</ul>
+</li>
+<li><p>To recap:</p>
+<ul class="simple">
+<li><p>Show more interest in what you are presenting by TAKING YOUR TIME AND SAVORING IT</p></li>
+<li><p>We in the audience could tell that you couldn’t wait to get done :(</p></li>
+<li><p>Use highlighted boxes to <strong>HIGHLIGHT</strong> one-item-at-a-time</p></li>
+<li><p>*Never, <strong>EVER</strong> highlight more than one item at a time: you have a WHOLE extra minute, and less content!</p></li>
+<li><p>It’s perplexing to the audience when you do that; our delicate, distractible minds can only take so much at a time</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="id19">
+<h1>04/30/2023<a class="headerlink" href="#id19" title="Permalink to this heading">#</a></h1>
+<section id="source">
+<h2>132. source<a class="headerlink" href="#source" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>weihenstephaner (hefe weisßier, vitus)</p></li>
+<li><p>st. bernardus abt 12</p></li>
+<li><p>rocheforte 10</p></li>
+<li><p>orval</p></li>
+<li><p>3 fonteinen</p></li>
+<li><p>saison dupont</p></li>
+</ul>
+</section>
+<section id="fav">
+<h2>133. fav<a class="headerlink" href="#fav" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>jhu analysts $46800, $22/hr</p></li>
+<li><p>adds up to $25k at 100% effort</p></li>
+<li><p>its $21k at 80% effort</p></li>
+<li><p>f wants this analyst and i’m collaborating with him</p></li>
+<li><p>so it becomes cost-efficient, this arrangement</p></li>
+<li><p>talk to my post-award manager</p></li>
+</ul>
+</section>
+<section id="constraints">
+<h2>134. constraints<a class="headerlink" href="#constraints" title="Permalink to this heading">#</a></h2>
+<ul>
+<li><p>self-imposed</p>
+<ul class="simple">
+<li><p>neglected old customs</p></li>
+</ul>
+</li>
+<li><p>origin of aesthetics</p>
+<ul class="simple">
+<li><p>put my shackles off my feet so i can dance? or,</p></li>
+<li><p>dance in chains as one born <a class="reference external" href="https://muzaale.github.io/destruction/_downloads/d0e6cc09d976ab56c51eb8ef2814dcfd/mozart200.pdf">under the sway of etiquette</a></p></li>
+<li><p><a class="reference external" href="https://www.gutenberg.org/files/37841/37841-h/37841-h.html">freedom in fetters</a> – a princely freedom</p></li>
+<li><p>prince harry doesn’t get it and is thus not aesthetical</p></li>
+</ul>
+</li>
+<li><p>jhustata</p>
+<ul class="simple">
+<li><p>book chapters</p></li>
+<li><p>.dofile right margin</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">xxx</span> <span class="pre">{</span></code> code-blocks</p></li>
+<li><p>bare minimum of <strong>green</strong> annotation text</p></li>
+<li><p>absolutely no <code class="docutils literal notranslate"><span class="pre">///</span></code> line continuation</p></li>
+<li><p>incidental discovery of <code class="docutils literal notranslate"><span class="pre">*/</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*/</span></code> style line-continuation in <code class="docutils literal notranslate"><span class="pre">stcox.ado</span></code> v 06mar2023</p></li>
+<li><p>spurred even more innovations including:</p></li>
+</ul>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">local</span> q1p1:<span class="k"> di</span> <span class="s">&quot;a very long string1, the first half of one mega string&quot;</span>
+<span class="k">local</span> q1p2:<span class="k"> di</span> <span class="s">&quot;a very long string2, the second half of one mega string&quot;</span>
+
+<span class="k">di</span> <span class="s">&quot;</span><span class="nv">`q1p1` `q1p2`&quot; //concatenate</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><u><strong>mechanism</strong></u> by which tradition -&gt; innovation</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="innovate">
+<h2>135. innovate<a class="headerlink" href="#innovate" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>teaching</p>
+<ul>
+<li><p>2 classes in spring</p></li>
+<li><p>1 class in the summer</p></li>
+</ul>
+</li>
+<li><p>student</p>
+<ul>
+<li><p>1 class in the spring</p></li>
+</ul>
+</li>
+<li><p>mentoring TRC</p></li>
+<li><p>working on doctoral thesis</p></li>
+<li><p>completing grant research</p></li>
+<li><p>how to find time to apply for grants?</p></li>
+<li><p>absolutely critical that i hire!!</p></li>
+</ul>
+</section>
+<section id="grants">
+<h2>136. grants<a class="headerlink" href="#grants" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>r03/r21 <a class="reference external" href="https://grants.nih.gov/funding/searchguide/index.html#/?query=R03&amp;type=active,notices&amp;foa=all&amp;orgs=all&amp;ac=r03&amp;ct=all&amp;pfoa=all&amp;date=01021991-09202018&amp;fields=all">deadlines</a></p></li>
+<li><p>feb 16, june 16, oct 16</p></li>
+<li><p>limited to k awardees (100K max over two years)</p></li>
+<li><p>this would finance two analysts</p></li>
+</ul>
+</section>
+<section id="apple">
+<h2>137. apple<a class="headerlink" href="#apple" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://muzaale.github.io/book/_downloads/55554ad02dc11517cc7b94791c9ca15e/parsimony.PNG">subscriptions</a></p></li>
+<li><p>assess in 3 months</p></li>
+<li><p>then drop or keep</p></li>
+</ul>
+</section>
+<section id="guitarcenter">
+<h2>138. guitarcenter<a class="headerlink" href="#guitarcenter" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>digital <a class="reference external" href="https://www.guitarcenter.com/Casio/CDP-S110-Digital-Piano-With-CS-46-Stand-and-PL1250-Bench-Black-1500000376731.gc?pfm=krecs+1500000376731+30144+GCWPDPSI">piano</a></p></li>
+<li><p>my #1 recommendation</p></li>
+<li><p>for last 15y</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "myenv"
+        },
+        kernelOptions: {
+            name: "myenv",
+            path: "./bdn2022"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'myenv'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">04/2022</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#influence">55. influence</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#love-control">56. love, control</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#honesty">57. Honesty</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">04/16/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#killing-me-softly">58. killing me softly</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-wk3">59. edit wk3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aries">60. aries</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">04/17/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calendar">61. calendar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todoby042423">62. todoby042423</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ibtl">63. ibtl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hilger">64. hilger</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#death-on-the-nile">65. death on the nile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chatgpt">66. chatGPT</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#baptiste">67. baptiste</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verbs">68. verbs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class700">69. class700</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#group">70. group</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deus-ex-machina">71. deus ex machina</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fin">72. fin</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">04/18/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#all-nite-a">73. all nite’a</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coen-brothers">74. coen brothers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gender">75. gender</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#strike-joshua-strike">76. <strike>joshua</strike></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ds4ph">77. ds4ph</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maidsmd-com">78. maidsmd.com</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dyndoc">79. dyndoc</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">04/19/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#annuamya">80. annuŋŋamya</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ta-s">81. ta’s</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mickey">82. mickey</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#city">83. city</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">04/21/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#love">84 love</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sharon">85 sharon</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#todoby04282023">86 todoby04282023</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">04/22/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#haydn">87 haydn</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vickings">88 vickings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coolstuff">89 coolstuff</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arking">90 arking</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control">91 control</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jvalentine">92 jvalentine</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spjd">93 spjd</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">04/23/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hand">94. hand</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wagner">95. wagner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hw1sol">96. hw1sol</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whitney">97. whitney</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beauty">98. beauty</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hierachy">99. hierachy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kim">100. kim</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#darkchild">101 darkchild?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai">102 ai</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oral">103 oral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eufa">104 eufa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ph340700">104 ph340700</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xinran">105 xinran</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macro">106. macro</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">04/24/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aiko">107. aiko</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dawking">108. dawking</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#joshua">109. joshua</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">110. ds4ph</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">04/25/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diamonds">111. diamonds</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-hodgkins">112. non-Hodgkins</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">113. ds4ph</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#torch">114. torch</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autoencoders">115. autoencoders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cobb">116. cobb</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">04/26/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arsenal">117. arsenal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mylife">118. mylife</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reverence">119. reverence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l-homme">120. l’homme</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eli">121. eli</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#xenotx">122. xenotx</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">04/27/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#text">123. text</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emails">124. emails</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">04/28/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#meetings">125. meetings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#catchup">126. catchup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remember">127. remember?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#describe">128. describe</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dropbox">129. dropbox</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">04/29/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inflection">130. inflection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#amy">131. amy</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">04/30/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#source">132. source</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fav">133. fav</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constraints">134. constraints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#innovate">135. innovate</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grants">136. grants</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apple">137. apple</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guitarcenter">138. guitarcenter</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1720 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>04/2023 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn2023/bdn202304';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Nothin'</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter3.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn2023/bdn202304.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bdn2023/bdn202304.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>04/2023</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">04/2023</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">notes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">04/04/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hub">1. hub</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vscode">2. vscode</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local">3. local</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#y">4. y</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">04/05/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todoby">5. todoby</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter">6. jupyter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pages">7. pages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code">8. code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r-mean">9. r(mean)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ph-340-700">10. ph.340.700</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchy">10. hierarchy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macros">11. macros</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#servers">12. servers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batch">13. % batch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chatgpt">14. chatgpt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#push">15. push</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">04/05/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git">16. git</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">17. push</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grinder">18. grinder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sankey">19. sankey</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cltx">20. cltx</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b">21. -b</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">04/06/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nhanes">22. nhanes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#swim">23. swim</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gtpci">24. gtpci</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure">25. structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gitcodehub">26. gitcodehub</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rasheeda">27. rasheeda</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">04/08/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#patton">28. patton</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">29. nhanes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vincent">30. vincent</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#artists">31. artists</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ascesis">32. ascesis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kipchoge">33. kipchoge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smoke">34. smoke</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charmoffensive">35. charmoffensive</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">04/09/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ds4ph-hw7">36. ds4ph.hw7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ph340-700">37. ph340.700</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nhanes-alpha">38. nhanes-alpha</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#babysteps">39. babysteps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jason-haw">40. jason haw</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todoby031023">41. todoby031023</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tight-structure">42. tight-structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conferences">43. conferences</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wk3-ph340600">44. wk3 ph340600</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#crunchtime">45. crunchtime</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">04/13/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#musik">46. musik</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#amy">47. amy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usurp">48. usurp</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cece">49. cece</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fawaz">50. fawaz</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">04/14/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#webapp">51. webapp</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">52. τύραννος</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">04/15/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numero-uno">53. numero-uno</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v-monet">54. v monét</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+<span class="kn">import</span> <span class="nn">plotly.offline</span> <span class="k">as</span> <span class="nn">pyo</span>
+
+<span class="c1"># Set default renderer to notebook</span>
+<span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s2">&quot;notebook&quot;</span>
+
+<span class="n">label</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Donors&#39;</span><span class="p">,</span>
+         <span class="s2">&quot;General Population&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;Healthy Controls&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;Centers for Medicare&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;National Death Index&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;ESRD&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;Death&quot;</span><span class="p">]</span>
+
+<span class="n">source</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">target</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+
+<span class="n">value</span> <span class="o">=</span> <span class="p">[</span><span class="mf">57.1</span><span class="p">,</span> <span class="mf">38.1</span><span class="p">,</span> <span class="mf">4.8</span><span class="p">,</span> <span class="mf">57.1</span><span class="p">,</span> <span class="mf">38.1</span><span class="p">,</span> <span class="mf">4.8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
+
+<span class="c1"># Define colors for links and nodes</span>
+<span class="n">link_color</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#1f77b4&#39;</span><span class="p">,</span> <span class="s1">&#39;#1f77b4&#39;</span><span class="p">,</span> <span class="s1">&#39;#1f77b4&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;#ff7f0e&#39;</span><span class="p">,</span> <span class="s1">&#39;#ff7f0e&#39;</span><span class="p">,</span> <span class="s1">&#39;#ff7f0e&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;#2ca02c&#39;</span><span class="p">]</span>
+<span class="n">node_color</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#aec7e8&#39;</span><span class="p">,</span> <span class="s1">&#39;#ffbb78&#39;</span><span class="p">,</span> <span class="s1">&#39;#98df8a&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;#ff9896&#39;</span><span class="p">,</span> <span class="s1">&#39;#c5b0d5&#39;</span><span class="p">,</span> <span class="s1">&#39;#c49c94&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;#c7c7c7&#39;</span><span class="p">]</span>
+
+<span class="n">link</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="n">target</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">value</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="n">link_color</span><span class="p">)</span>
+<span class="n">node</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="n">node_color</span><span class="p">,</span>
+            <span class="n">line</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">))</span>
+
+<span class="c1"># Define figure layout</span>
+<span class="n">layout</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Sankey Diagram&quot;</span><span class="p">),</span>
+              <span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="s2">&quot;Arial&quot;</span><span class="p">),</span>
+              <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>
+              <span class="n">margin</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">l</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">t</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">50</span><span class="p">))</span>
+
+<span class="c1"># Create Sankey object</span>
+<span class="n">sankey</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Sankey</span><span class="p">(</span><span class="n">link</span><span class="o">=</span><span class="n">link</span><span class="p">,</span> <span class="n">node</span><span class="o">=</span><span class="n">node</span><span class="p">)</span>
+
+<span class="c1"># Define Figure object</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">sankey</span><span class="p">,</span> <span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
+
+<span class="c1"># Save the figure as an interactive HTML file</span>
+<span class="n">output_file</span> <span class="o">=</span> <span class="s2">&quot;/Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/bloc/interactive_sankey.html&quot;</span>
+<span class="n">pyo</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">output_file</span><span class="p">,</span> <span class="n">auto_open</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sankey diagram saved as </span><span class="si">{</span><span class="n">output_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">plotly.offline</span> <span class="k">as</span> <span class="nn">pyo</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;plotly&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><a class="reference external" href="https://muzaale.github.io/denotas/_downloads/9269611258bf67306d10eca34955344c/interactive_sankey.html">sankey</a></p>
+<section id="id1">
+<h1>04/2023<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>TRC Jupyter Book<br />
+GitHub accounts for decentralized version control</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">r</span><span class="p">(</span><span class="n">mean</span><span class="p">)</span>
+
+<span class="n">In</span> <span class="n">the</span> <span class="n">last</span> <span class="k">class</span> <span class="nc">we</span> <span class="n">learned</span> <span class="n">about</span> 
+
+
+
+<span class="c1">#queing tasks </span>
+
+<span class="n">timer</span> <span class="n">on</span> <span class="mf">1.1</span>
+<span class="n">do</span> <span class="n">adult</span><span class="o">.</span><span class="n">do</span>
+<span class="n">timer</span> <span class="n">off</span> <span class="mf">1.1</span>
+
+<span class="n">timer</span> <span class="n">on</span> <span class="mf">1.2</span>
+<span class="n">do</span> <span class="n">exam</span><span class="o">.</span><span class="n">do</span> 
+<span class="n">timer</span> <span class="n">off</span> <span class="mf">1.2</span>
+
+<span class="n">timer</span> <span class="n">on</span> <span class="mf">1.3</span>
+<span class="n">do</span> <span class="n">exam</span><span class="o">.</span><span class="n">do</span>
+<span class="n">timer</span> <span class="n">off</span> <span class="mf">1.3</span>
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Annuŋŋamya</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Nairobi: Fiction (Sarah &amp; I to collaborate on work of fiction: protect folks)
+
+2023
+
+All of use were gullible :
+
+Uncle Kgg = Drrk
+
+Nairobi: place things in context 
+
+Make this function 
+
+Kalnki — Mukungu
+Taltwla — upper class (only person they knew in Nairobi)
+Kgg — mummy 
+Naigre - tete-a-tete
+
+Srh: why did l accept uncle Kgg?
+
+- Henry’s dad (not Skwgu)
+- 
+Collaborate with family
+
+1. Srh will give info (long walks with o&#39;j)
+2. 
+3. 
+
+Btwla, wmpa, … 
+
+Swinging: they swapped chics, including Fna
+
+Gen-Z have returned to the baby boomer 
+
+Btwla was m7 first minister for health
+This click
+
+X
+
+Lyda:
+
+o&#39;j ayenda abantu ba wansi 
+That’s how he met your l 
+A teller
+
+Muzaale Tuma Batwala Bamowze Mutengu
+
+Muzaale send Batwala because Bamwoze is stubborn
+
+Dhadha Ikesa? Jay-Z ain’t got nothing on her
+
+x
+
+Albinism grandma’s condign 
+
+x
+
+Lets tell scandals the way we do in the Bible 
+
+“the Bible from genesis from revelation is all about crime”
+
+Why are we talking about sacrificing the lamb in OT
+
+And Jesus as the lamb of God?
+
+X
+
+Mythology with Gods from Bunyoro infesting Busoga
+
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#time
+
+2023
+
+Ancién regime
+Zeitgeist 
+Bide one’s time 
+</pre></div>
+</div>
+<p>.</p>
+<p>EPL</p>
+<p>2023/04/03</p>
+<p>Arsenal -138<br />
+MC +120</p>
+<p>Nothing to write home about:<br />
+You’d lose <span class="math notranslate nohighlight">\(138 for every \)</span>100<br />
+That you bet on Arsenal winning the EPL<br />
+Market place expects it!</p>
+<p>.</p>
+<p>THIS works (but I need to hide my code)</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="notes">
+<h1>notes<a class="headerlink" href="#notes" title="Permalink to this heading">#</a></h1>
+<section id="id2">
+<h2>04/04/2023<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<section id="hub">
+<h3>1. hub<a class="headerlink" href="#hub" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>learned about GitHub in my data science class by Caffo in the winter/spring of 2023</p></li>
+<li><p>I’m now moving all my documents online</p></li>
+<li><p>No longer beholden of any local machine or the software packages installed on it!</p></li>
+</ul>
+</section>
+<section id="vscode">
+<h3>2. vscode<a class="headerlink" href="#vscode" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>I may never use my iMac’s terminal again!</p></li>
+<li><p>This is a sweet and beautiful medium between git &amp; hub</p></li>
+</ul>
+</section>
+<section id="local">
+<h3>3. local<a class="headerlink" href="#local" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     ~/dropbox/0g.κοσμογονία,γ/1.cosmogony/existentialdread-&gt;libro @jhustata
+     ~/dropbox/2e.πρᾶξις,σ/3.acetyl.neurotrans/vscode.ds4ph/jhustata-&gt;book @jhustata
+     ~/dropbox/4d.∫δυσφορία.dt,ψ/1.shibboleth/dad-&gt;idioms @muzaalefamily
+     ~/dropbox/4d.∫δυσφορία.dt,ψ/4.describe/mybook-&gt;book @muzaale
+     ~/dropbox/4d.∫δυσφορία.dt,ψ/5.four.hope/literary-&gt;criticis @muzaale
+     ~/dropbox/6b.ομορφιά,β/3.wide.r2.climb/this.life-&gt;iago.github.io @iagouganda
+     ~/dropbox/7a.τάξη,α/4.aesthetic/stata-&gt;kitabo @jhustata
+     ~/dropbox/7a.τάξη,α/1.epistemology/class-&gt;notes @jhustata
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Caffo’s says Jupyter is ok for his <a class="reference external" href="https://github.com/smart-stats/ds4bio_book">class</a>: <a class="reference external" href="https://jh.zoom.us/j/4109553504?pwd=amdidU82QTc2QTRmdkpDSkd3RU5pZz09">zoom</a></p></li>
+<li><p>But that its not good for life since its python focused</p></li>
+<li><p>His <code class="docutils literal notranslate"><span class="pre">qbook</span></code> runs on a <a class="reference external" href="https://quarto.org">quarto</a> platform, which is multilingual like emacs and the right stuff for life</p></li>
+<li><p>I’ll stick to the shallow jupyter waters for now, thank you!</p></li>
+</ul>
+</section>
+<section id="y">
+<h3>4. y<a class="headerlink" href="#y" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple" start="0">
+<li><p>Ms. Linder (Senior-most fitness instructor)</p></li>
+<li><p>Romeko Morton (City of Baltimore Engineer)</p></li>
+<li><p>Tommy (ShaQ Doppelgänger, Pelvic radiation)</p></li>
+<li><p>Frank (Similar Dx, 65yo)</p></li>
+<li><p>Daytona (Lifeguard)</p></li>
+<li><p>Nina (Lifeguard, Tips for Dolphin 🐬)</p></li>
+<li><p>Daytona (Swimmer, Black weights) ** Mixup with a one Nina?</p></li>
+<li><p><a class="reference external" href="https://www.gutenberg.org/files/39955/39955-h/39955-h.html">Liz</a> (Former Hopkins RN🧑‍⚕️, 2 MSc, 1 PhD) <span id="id3">[<a class="reference internal" href="../references.html#id19" title="Yours Truly. Her thoughts echo the malcontent. 2022. URL: https://muzaale.github.io/denotas/bdn202304.html#y.">42</a>]</span></p></li>
+<li><p>Aiko (ie Geiko, Japanese-American at SICU, dob 04/24***)</p></li>
+<li><p>Buddy (Jeffs Buddy)</p></li>
+<li><p>Jeff (Red head swims with Buddy)</p></li>
+<li><p>Hugh (remembers me pretty well)</p></li>
+<li><p>Patrick (Towson psy professor, ☘️ tattoo on deltoid)</p></li>
+<li><p>Ed (Lime hair, student, talks a lot)</p></li>
+<li><p>Luc (Wishes to have a coffee with me, but is distractible)</p></li>
+<li><p>Julie (Flowery purple/blue/red swim cap, from Duluth, MN)</p></li>
+<li><p>Maggie (Sky-blue swim cap, smiling, is not Julie and is younger)</p></li>
+<li><p>David (CMS but retiring this year.. 2022!!)</p></li>
+<li><p>Natalie (Sister, tattoos, earplugs, nose-ring)</p></li>
+<li><p>Valentine (redhead, off-white, dreads, with Nat)</p></li>
+<li><p>Weiwei (Infectious diseases postdoc, 8th floor)</p></li>
+<li><p>Arthur (Liberia, Texas)</p></li>
+<li><p>Jeremiah (Son is a swimmer)</p></li>
+<li><p>Ethan (Salt &amp; pepper, Bushy beard, congenital arthritis)</p></li>
+<li><p>Ray (Somali/Asian, young, swim team, knew me!!)</p></li>
+<li><p>Dialo (Lifeguard, chill, quiet)</p></li>
+<li><p>Eric (Lifeguard, weekdays)</p></li>
+<li><p>Sean (Lifeguard, weekends)</p></li>
+<li><p>Vincent Daily (Bold, regular, introverted, only recently exchanged names, wishes to learn flip)</p></li>
+<li><p>Lauren (super consistent swimmer, in her 40s?)</p></li>
+<li><p>Todd (talk lawyer from old swim team)</p></li>
+<li><p>Stephen (Emory MPH, BSPH PHD, EH)</p></li>
+<li><p>Keith (Biker, had herniotomy at Hopkins)</p></li>
+<li><p>Brian (young fella, struck my head, made progress)</p></li>
+<li><p>Calvin (singing lifeguard)</p></li>
+<li><p>Monica1 (stress fracture metatarsal)</p></li>
+<li><p>Ron (Mistook him for Patrick)</p></li>
+<li><p>Gary (Talks of Idi Amin, friend Muwanga)</p></li>
+<li><p>Sali/Abi/Sali/Abi/Monica2 (partner)</p></li>
+<li><p>Chris (Teacher, goatee, tattoo “)</p></li>
+<li><p>Miriam (Nickname4me: splasher; “it’s enjoyable watching you swim; ~60yoWW)</p></li>
+<li><p>Mack (72yo,ggranddad, borat assistant?)</p></li>
+<li><p>Kayla (pyt, front desk)</p></li>
+</ol>
+</section>
+</section>
+<section id="id4">
+<h2>04/05/2023<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<section id="todoby">
+<h3>5. todoby<a class="headerlink" href="#todoby" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>gaby/andrew papers</p></li>
+<li><p>atc annual fee</p></li>
+<li><p>hotel</p></li>
+<li><p>flights</p></li>
+<li><p>euro aging conferences (get sharon’s link)</p></li>
+<li><p>tuition remission confirmation</p></li>
+<li><p>vincent offer</p></li>
+<li><p>etc…</p></li>
+</ul>
+</section>
+<section id="jupyter">
+<h3>6. jupyter<a class="headerlink" href="#jupyter" title="Permalink to this heading">#</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>a). hub: repo -&gt; utimately the name of jupyter-book
+
+b). vscode
+
+  mouse -&gt; linux
+  terminal -&gt; vscode
+  colab -&gt; vscode
+  rstudio -&gt; vscode
+
+c). git
+</pre></div>
+</div>
+</section>
+<section id="pages">
+<h3>7. pages<a class="headerlink" href="#pages" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jhustata.github.io">jhustata/github.io</a></p></li>
+<li><p><a class="reference external" href="https://jhustata.github.io/book/intro.html">jhustata/book</a></p></li>
+<li><p><a class="reference external" href="https://jhustata.github.io/libro/intro.html">jhustata/libro</a></p></li>
+<li><p>jhustata/kitabo</p></li>
+<li><p><a class="reference external" href="https://jhustata.github.io/notes/intro.html">jhustata/notes</a></p></li>
+<li><p><a class="reference external" href="https://jhutrc.github.io">jhutrc/github.io</a></p></li>
+<li><p><a class="reference external" href="https://jhutrc.github.io/book">jhutrc/book</a></p></li>
+<li><p><a class="reference external" href="https://github.com/jhutrc/manuscripts">jhutrc/manuscripts</a></p></li>
+<li><p><a class="reference external" href="https://muzaale.github.io">muzaale/github.io</a></p></li>
+<li><p><a class="reference external" href="https://muzaale.github.io/idioms/intro.html">muzaale/idioms</a></p></li>
+<li><p><a class="reference external" href="https://muzaale.github.io/book/intro.html">muzaale/book</a></p></li>
+<li><p><a class="reference external" href="https://github.com/muzaale/ds4ph-bme">muzaale/ds4ph-bme</a></p></li>
+<li><p><a class="reference external" href="https://iagouganda.github.io/iago.github.io/">iagouganda/iago.github.com</a></p></li>
+</ul>
+</section>
+<section id="code">
+<h3>8. code<a class="headerlink" href="#code" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     <span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">create</span> <span class="n">gitname</span>
+     <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">book</span>
+     <span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="n">gitname</span><span class="o">/*</span> <span class="n">book</span>
+     <span class="n">cd</span> <span class="n">book</span>
+
+     <span class="n">git</span> <span class="n">rm</span> <span class="n">old1</span><span class="o">.</span><span class="n">file</span> <span class="n">old2</span><span class="o">.</span><span class="n">file</span> <span class="n">old3</span><span class="o">..</span><span class="n">file</span>
+     <span class="n">git</span> <span class="n">add</span> <span class="o">./*</span>
+     <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;context&quot;</span>
+     <span class="n">git</span> <span class="n">push</span>
+     <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
+</pre></div>
+</div>
+</section>
+<section id="r-mean">
+<h3>9. r(mean)<a class="headerlink" href="#r-mean" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>In this class: clarify the difference betweeen r() &amp; c()</p></li>
+<li><p>Say r(N) vs. c(N)</p></li>
+<li><p>Return vs. current</p></li>
+<li><p>One returns values after some command</p></li>
+<li><p>While the other is just the current status</p></li>
+<li><p>As such, a multivariable regression with missingness in its variables</p></li>
+<li><p>May yield r(N) <span class="math notranslate nohighlight">\(\neq\)</span> c(N)</p></li>
+</ul>
+</section>
+<section id="ph-340-700">
+<h3>10. ph.340.700<a class="headerlink" href="#ph-340-700" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     global workdir ~/dropbox/7a.τάξη,α/4.aesthetic/ 
+     https://www.stata.com/manuals/gsub.pdf
+     /users/d/stata/profile.do
+     content: 
+         #delimit ;
+         log using `: display %tCCCYY-NN-DD-HH-MM-SS  
+             Clock(&quot;`c(current_date)&#39; `c(current_time)&#39;&quot;,&quot;DMYhms&quot;)&#39;,  
+             Clock(&quot;`c(current_date)&#39; `c(current_time)&#39;&quot;,&quot;DMYhms&quot;)&#39;,  
+             name(default_log_file)
+         #delimit cr
+</pre></div>
+</div>
+<p>Topics discussed in class:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://profile.do">profile.do</a></p></li>
+<li><p>content up to you!</p></li>
+<li><p>for me: pwd &amp; shell</p></li>
+<li><p>batch mode, remote computing</p></li>
+<li><p>runtime, memory, disk usage</p></li>
+<li><p>smart approaches to problem</p></li>
+<li><p><a class="reference external" href="http://raw.githubusercontent.com">raw.githubusercontent.com</a> for tasks</p></li>
+<li><p>get -b &amp; stata commands to work on terminal</p></li>
+<li><p>.html and how it is basis of course book</p></li>
+<li><p>why stata? its expensive and i used jupyter/python for book on stata!</p></li>
+<li><p>perks of workflow: git -&gt; vscode -&gt; hub</p></li>
+<li><p>set up in reverse order: hub -&gt; vscode -&gt; git</p></li>
+<li><p>zoom video <a class="reference external" href="https://jhjhm.zoom.us/rec/share/VVsgzwzUkaYQJHR4R5_bp0kf8GvoBszDD3bMax0kuSC_PeGUaeLX1ZwcV7Rhwa41.PjOE99QxZeyqB84a?startTime=1680639414000">link</a> for session -&gt; class book</p></li>
+<li><p>Passcode: !$.0*zwy</p></li>
+</ul>
+</section>
+<section id="hierarchy">
+<h3>10. hierarchy<a class="headerlink" href="#hierarchy" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>General Steps we can strive for as analysts (depending on your role in the project)</p></li>
+<li><p>Initial results to present to your co-lead or immediate mentor</p></li>
+<li><p>Work iteratively with co-lead mentor to finalize the analysis/figures/tables (be writing methods now too)</p></li>
+<li><p>Present to a higher mentor like Bill, Christine, the PI on the proposal (these are more polished slides with title slide, motivation, objectives, methods, and results)</p></li>
+<li><p>If approved, finalize the methods/results text in paper draft</p></li>
+<li><p>Start writing intro/discussion (if first author, its time to start on these), if not first, make sure first author has everything they need to write the rest of the paper (sometimes we write results as well- we are the most familiar with how our results should be interpreted, so i recommend writing the results)</p></li>
+<li><p>Send to co-authors</p></li>
+<li><p>Submit</p></li>
+</ul>
+</section>
+<section id="macros">
+<h3>11. macros<a class="headerlink" href="#macros" title="Permalink to this heading">#</a></h3>
+<p><a class="reference external" href="https://www.stata.com/manuals/pmacro.pdf">definition</a> &amp; <a class="reference external" href="https://www.stata.com/manuals/gsub.pdf">more…</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   local system macros
+
+      1. name
+      2. content
+      3.   c() 
+      4.   r()
+      5.   e()
+
+   user-defined macros
+
+      local, e.g. `m_iqr&#39;
+
+      global, e.g. ${workdir}
+      
+</pre></div>
+</div>
+</section>
+<section id="servers">
+<h3>12. servers<a class="headerlink" href="#servers" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Need two more local servers</p></li>
+<li><p>Designing, running apps, websites</p></li>
+<li><p>Part of grant but unanticipaited needs</p></li>
+<li><p>Caffo class and multiple gitHub accounts proof!</p></li>
+</ul>
+</section>
+<section id="batch">
+<h3>13. % batch<a class="headerlink" href="#batch" title="Permalink to this heading">#</a></h3>
+<p>how to approach <a class="reference external" href="https://jhustata.github.io/book/jjj.html">wk1.ph.340.700</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     <span class="o">%</span> <span class="n">stata</span> <span class="o">-</span><span class="n">b</span> <span class="n">do</span> <span class="n">wk1</span><span class="o">.</span><span class="n">ph</span><span class="mf">.340.700</span><span class="o">.</span><span class="n">do</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Background:</strong></p>
+<ul>
+<li><p>advanced Stata project</p></li>
+</ul>
+</li>
+<li><p><strong>Methods:</strong></p>
+<ul>
+<li><p>Stata code</p></li>
+<li><p>.Md, .html output</p></li>
+<li><p>post to class book</p></li>
+<li><p>Guided by teaching team</p></li>
+<li><p>From week 3-8</p></li>
+<li><p>Joint project by entire class</p></li>
+</ul>
+</li>
+<li><p><strong>Results:</strong></p>
+<ul>
+<li><p><a class="reference external" href="https://jhustata.github.io/nhanes">https://jhustata.github.io/nhanes</a>
+~/nhanes/2023</p></li>
+</ul>
+</li>
+<li><p><strong>Conclusion:</strong></p>
+<ul>
+<li><p>must be improvement on previous year!</p></li>
+</ul>
+</li>
+<li><p><strong>Acknowledgements</strong></p>
+<ul>
+<li><p>previous cohort</p></li>
+</ul>
+</li>
+<li><p><strong>References</strong></p></li>
+</ul>
+</section>
+<section id="chatgpt">
+<h3>14. chatgpt<a class="headerlink" href="#chatgpt" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">book</span> <span class="pre">%</span></code></p>
+<p>xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools)</p>
+<p>missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</p>
+<p>Based on the input provided, it appears that you are trying to use the git rm command to remove multiple files from a Git repository. The list of files you provided includes various image files (practice.png, generalpj2jpg.jpeg, dadlogo.png, dadlogo.jpg), notebook files (notebooks.ipynb, hub.ipynb), markdown files (<a class="reference external" href="http://markdown.md">markdown.md</a>, <a class="reference external" href="http://markdown-notebooks.md">markdown-notebooks.md</a>), and a log file (log).</p>
+<p>The error message xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun is related to the Command Line Tools for Xcode, which are required for some Git operations on macOS. It seems that the Command Line Tools are not properly installed or configured on your system.</p>
+<p>To fix this issue, you can try reinstalling the Command Line Tools for Xcode using the following steps:</p>
+<p>Open Terminal on your macOS system.
+Run the following command: <code class="docutils literal notranslate"><span class="pre">xcode-select</span> <span class="pre">--install</span></code>. This will prompt you to install the Command Line Tools for Xcode.
+Follow the on-screen instructions to complete the installation.
+Once the installation is complete, try running your git rm command again.
+If the issue persists, you may need to check your Xcode installation and make sure it is properly configured. You can also try resetting the developer path using the following command: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">xcode-select</span> <span class="pre">--reset</span></code>.</p>
+<p>Note: You may need administrative privileges to install or configure the Command Line Tools for Xcode. If you encounter any issues or need further assistance, it’s recommended to consult the official documentation or seek help from a qualified macOS expert. Remember to always backup your important files before making any changes to your system. &lt;|endoftext|&gt;</p>
+<p><strong>problem solved!</strong></p>
+</section>
+<section id="push">
+<h3>15. push<a class="headerlink" href="#push" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The human race is frantically pushing its accumulated knowledge to the cloud</p></li>
+<li><p>e.g., <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">-&gt;</span> <span class="pre">vscode</span> <span class="pre">-&gt;</span> <span class="pre">hub</span></code></p></li>
+<li><p>Artificial intelligence, as it were, is frantically training on it!!</p></li>
+</ul>
+</section>
+</section>
+<section id="id5">
+<h2>04/05/2023<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<section id="git">
+<h3>16. git<a class="headerlink" href="#git" title="Permalink to this heading">#</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> ~/dropbox/../note.md: WARNING: document isn&#39;t included in any toctree
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h3>17. push<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     <span class="n">a</span><span class="p">)</span> <span class="n">name</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span> <span class="p">(</span><span class="n">READ</span><span class="o">.</span><span class="n">ME</span> <span class="ow">or</span> <span class="n">index</span><span class="o">.</span><span class="n">html</span><span class="p">)</span>
+     <span class="n">b</span><span class="p">)</span> <span class="n">repo</span> <span class="p">(</span><span class="n">collaborators</span> <span class="n">may</span> <span class="n">push</span><span class="p">)</span>
+     <span class="n">c</span><span class="p">)</span> <span class="n">book</span>
+     <span class="n">d</span><span class="p">)</span> <span class="n">git</span> <span class="n">clone</span>
+     <span class="n">e</span><span class="p">)</span> <span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="n">master</span><span class="o">/*</span> <span class="n">origin</span>
+     <span class="n">f</span><span class="p">)</span> <span class="n">cd</span> <span class="n">origin</span>
+
+     <span class="n">g</span><span class="p">)</span> <span class="n">git</span> <span class="n">rm</span>
+     <span class="n">h</span><span class="p">)</span> <span class="n">git</span> <span class="n">add</span>
+     <span class="n">i</span><span class="p">)</span> <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span>
+     <span class="n">j</span><span class="p">)</span> <span class="n">git</span> <span class="n">push</span> <span class="p">(</span><span class="n">error</span> <span class="n">about</span> <span class="n">access</span> <span class="n">rights</span><span class="p">)</span>
+
+     <span class="n">k</span><span class="p">)</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span>
+     <span class="nn">l</span><span class="p">)</span> <span class="n">settings</span> <span class="o">&gt;</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span> <span class="o">&gt;</span> <span class="n">branch</span> <span class="n">ghp</span> <span class="p">(</span><span class="k">if</span> <span class="n">no</span> <span class="n">page</span> <span class="n">appears</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="grinder">
+<h3>18. grinder<a class="headerlink" href="#grinder" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>simple manual coffee grounder dead</p></li>
+<li><p>resorted to blending the beans with trail mix</p></li>
+<li><p>and grinding them by a process I one might refer to as <code class="docutils literal notranslate"><span class="pre">chewing</span></code></p></li>
+</ul>
+</section>
+<section id="sankey">
+<h3>19. sankey<a class="headerlink" href="#sankey" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>very well received gtpci phd presentation (q&amp;a from faculty, peers)</p></li>
+<li><p>sankey is now colorful, interactive (thanks to chatgpt)</p></li>
+<li><p>reveals to me that populations very imbalanced in size</p></li>
+</ul>
+</section>
+<section id="cltx">
+<h3>20. cltx<a class="headerlink" href="#cltx" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://mc.manuscriptcentral.com/cltx">https://mc.manuscriptcentral.com/cltx</a></p></li>
+<li><p>denominator (kidney transplant recipients); person-place</p></li>
+<li><p>numerator (outcomes: dgf, graft failure, death); time</p></li>
+<li><p>hypothesized risk-factor</p></li>
+<li><p>methods to hold everything else constant, as ‘twere</p></li>
+<li><p>too many moving parts and no clear narrative…</p></li>
+</ul>
+</section>
+<section id="b">
+<h3>21. -b<a class="headerlink" href="#b" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.stata.com/support/faqs/mac/advanced-topics/">Stata</a> [-option [-option […]]] [stata_command]</p></li>
+<li><p>powerful command: sudo find / -name StataSE -type f</p></li>
+<li><p>Password:</p></li>
+<li><p>find: /Library/Application Support/com.apple.TCC: Operation not permitted</p></li>
+<li><p>sudo find / -name StataSE -type f 2&gt;/dev/null</p></li>
+<li><p>/System/Volumes/Data/Applications/Stata/StataSE.app/Contents/MacOS/StataSE
+/Applications/Stata/StataSE.app/Contents/MacOS/StataSE</p></li>
+<li><p>not a directory!</p></li>
+<li><p>/System/Volumes/Data/Applications/Stata/StataSE.app/Contents/MacOS/StataSE [arguments]</p></li>
+<li><p>MacOS % ./StataSE -e “di 1+1”</p></li>
+<li><p>chmod +x ./StataSE</p></li>
+<li><p>cd /Applications/Stata/StataSE.app/Contents/MacOS</p></li>
+<li><p>ls -l</p></li>
+<li><p>stata-se -e “di 1+1”</p></li>
+<li><p>ls -l</p></li>
+<li><p>cat stata.log</p></li>
+<li><p>stata-se -e  “di c(current_date)”</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Smoke</span>
+
+<span class="mi">2023</span>
+
+<span class="n">What</span><span class="s1">&#39;s the difference between sus4 and 11th chords?</span>
+
+<span class="n">The</span> <span class="n">sus4</span> <span class="n">chord</span> <span class="n">implies</span> <span class="n">no</span> <span class="mi">3</span><span class="n">rd</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">chord</span><span class="o">.</span> <span class="n">So</span> <span class="n">the</span> <span class="n">notes</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">chord</span> <span class="n">are</span> <span class="mi">1</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mf">5.</span> <span class="n">The</span> <span class="mi">11</span><span class="n">th</span> <span class="n">chord</span> <span class="n">implies</span> <span class="n">a</span> <span class="mi">3</span><span class="n">rd</span> <span class="p">(</span><span class="ow">and</span> <span class="n">a</span> <span class="mi">7</span><span class="n">th</span> <span class="ow">and</span> <span class="n">a</span> <span class="mi">9</span><span class="n">th</span><span class="p">),</span> <span class="n">so</span> <span class="n">the</span> <span class="n">tones</span> <span class="n">are</span> <span class="mi">1</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mf">11.</span>
+
+<span class="n">The</span> <span class="mi">6</span> <span class="n">chord</span> <span class="n">implies</span> <span class="n">no</span> <span class="n">extensions</span> <span class="n">beyond</span> <span class="n">the</span> <span class="mi">6</span><span class="p">,</span> <span class="n">so</span> <span class="n">the</span> <span class="n">notes</span> <span class="n">are</span> <span class="mi">1</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mf">6.</span> <span class="n">The</span> <span class="mi">13</span><span class="n">th</span> <span class="n">chord</span> <span class="n">implies</span> <span class="n">the</span> <span class="mi">7</span><span class="n">th</span><span class="p">,</span> <span class="mi">9</span><span class="n">th</span><span class="p">,</span> <span class="ow">and</span> <span class="mi">11</span><span class="n">th</span> <span class="n">extensions</span><span class="p">,</span> <span class="n">so</span> <span class="n">the</span> <span class="n">notes</span> <span class="n">are</span> <span class="mi">1</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mf">13.</span>
+
+<span class="n">Likewise</span><span class="p">,</span> <span class="n">the</span> <span class="n">sus2</span> <span class="n">chord</span> <span class="n">implies</span> <span class="mi">1</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="n">whereas</span> <span class="n">the</span> <span class="mi">9</span><span class="n">th</span> <span class="n">chord</span> <span class="n">implies</span> <span class="mi">1</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mf">9.</span>
+
+<span class="n">If</span> <span class="n">you</span> <span class="n">play</span> <span class="n">a</span> <span class="n">C</span> <span class="n">major</span> <span class="n">triad</span> <span class="n">on</span> <span class="n">the</span> <span class="n">piano</span> <span class="ow">and</span> <span class="k">continue</span> <span class="n">playing</span> <span class="n">every</span> <span class="n">other</span> <span class="n">white</span> <span class="n">key</span> <span class="n">above</span> <span class="n">the</span> <span class="n">triad</span><span class="p">,</span> <span class="n">you</span><span class="s1">&#39;ll get the (major) 7th, 9th, 11th, and 13th extensions</span>
+</pre></div>
+</div>
+<p>.</p>
+<p>Kipchoge:</p>
+<p>4:33:93/Mile over 27 miles</p>
+<p>.</p>
+<p><a class="reference external" href="https://muzaale.github.io/book/bilowozo.html#ds4ph-hw7">ds4ph.hw7</a></p>
+<p>.</p>
+<p>King Lear</p>
+<p>04/16/23</p>
+<p>MARC: 12:40PM - 1:40PM<br />
+LUNCH: 2:00PM - 5:00PM<br />
+KLEIN: 7:30PM - 10:00PM</p>
+</section>
+</section>
+<section id="id7">
+<h2>04/06/2023<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
+<section id="nhanes">
+<h3>22. nhanes<a class="headerlink" href="#nhanes" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>nhanes.ado</p></li>
+<li><p>rudimentary</p></li>
+<li><p>advanced class?</p></li>
+</ul>
+</section>
+<section id="swim">
+<h3>23. swim<a class="headerlink" href="#swim" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>best swim ever (i seem to say this every day)</p></li>
+<li><p>he under-water month of march has paid off</p></li>
+<li><p>however, there’s still lots of room for improvement!</p></li>
+</ul>
+</section>
+<section id="gtpci">
+<h3>24. gtpci<a class="headerlink" href="#gtpci" title="Permalink to this heading">#</a></h3>
+<p>Dear GTPCI Friends and Family,</p>
+<p>We hope you are doing well!  Thanks for being part of the GTPCI Program.  We need your help.  This should take about 10 minutes of your time. Attached is a summary of the curriculum update that we are planning for AY 23-24.</p>
+<p>Based on the GTPCI Curriculum Retreat held in December at Mt. Washington, the GTPCI Program is introducing 4 pathways next year.  A summary of those 4 pathways is attached.</p>
+<p>As a reminder, all GTPCI students (independent of their chosen pathway) will be taking a set of Foundational Courses consisting of 51 credits (see attached handout page 4).</p>
+<p>MHS students will need to take an additional 19 credits that are pathway-specific to achieve a total of 70 credits to graduate.</p>
+<p>PhD students will need to take at least 14 credits in their 1st year and 5 additional courses in their 2nd/3rd years to graduate.</p>
+<p>These additional credits will be coming from pathway-specific courses.  Some of these pathway-specific courses are required (for either MHS, PhD, or both) and some are electives.</p>
+<p>For all the courses listed, we are creating a master document that lists the term that each course is offered and the pre-requisites for that course (an example is listed in the Appendix of the attached document- it is still incomplete).</p>
+<p>Please look at the attached summary for each of the pathways (feel free to focus on the pathway that is relevant to you) and help us answer the following questions:</p>
+<p>Are the pathway competencies listed reasonable?  Did we miss any important competency for that pathway? [remember that there are general competencies for GTPCI that apply to students of all pathways; the competencies listed here are pathway-specific competencies].</p>
+<p>Are the required pathway-specific courses (if any) for MHS and PhD students acceptable?  Do you think we should require any additional courses for either MHS or PhD (please specify if you think a course should be required for MHS, PhD, or both).</p>
+<p>Are the pathway-specific elective courses reasonable?  Did we miss an important class for that pathway?</p>
+<p>We know that we will experience some unanticipated obstacles when we introduce the pathways next year.  We will learn from them to ensure a smooth transition for the following year.</p>
+<p>hanks so much!
+XXX and XXX</p>
+<p>XXX XXX, MD, PhD<br />
+Professor of XXX<br />
+Division of XXX<br />
+XXX XXX University School of Medicine\</p>
+</section>
+<section id="structure">
+<h3>25. structure<a class="headerlink" href="#structure" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Backgound: Pathophysiology</p></li>
+<li><p>Methods: Datascience</p></li>
+<li><p>Results: Clinicaltrials</p></li>
+<li><p>Conclusions: Healthservicesresearch</p></li>
+<li><p>Acknowedgments: Undifferentiated</p></li>
+<li><p>References: GTPCI 1993-2023</p></li>
+</ol>
+</section>
+<section id="gitcodehub">
+<h3>26. gitcodehub<a class="headerlink" href="#gitcodehub" title="Permalink to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span>
+<span class="n">git</span> <span class="n">branch</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">upstream</span><span class="o">-</span><span class="n">to</span><span class="o">=</span><span class="n">origin</span><span class="o">/</span><span class="n">main</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="o">--</span><span class="n">allow</span><span class="o">-</span><span class="n">unrelated</span><span class="o">-</span><span class="n">histories</span>
+<span class="n">git</span> <span class="n">push</span>
+<span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="o">-</span><span class="n">n</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="n">f</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>vexing problem &amp; <a class="reference external" href="https://jupyterbook.org/en/stable/reference/cli.html">solution</a> <span id="id8">[<a class="reference internal" href="../references.html#id20" title="ChatGPT. Solution to a most vexing problem. 2023. URL: https://muzaale.github.io/denotas/bdn202306.html#jupyter-book.">43</a>]</span></p>
+</section>
+<section id="rasheeda">
+<h3>27. rasheeda<a class="headerlink" href="#rasheeda" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>work on project this weekend!</p></li>
+<li><p>establish efficient workflow</p></li>
+<li><p>not to spend &gt; 3 hrs next time</p></li>
+</ul>
+</section>
+</section>
+<section id="id9">
+<h2>04/08/2023<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
+<section id="patton">
+<h3>28. patton<a class="headerlink" href="#patton" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>übermensch</p></li>
+<li><p>people</p></li>
+<li><p>time</p></li>
+</ul>
+</section>
+<section id="id10">
+<h3>29. nhanes<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://github.com/jhustata/nhanes">github.com/jhustata/nhanes</a></p></li>
+<li><p><a class="reference external" href="https://jhustata.github.io/nhanes/">https://jhustata.github.io/nhanes/</a></p></li>
+<li><p>collaborative, didactic, template</p></li>
+</ul>
+</section>
+<section id="vincent">
+<h3>30. vincent<a class="headerlink" href="#vincent" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>charm offensive</p></li>
+<li><p>betsy, durand</p></li>
+<li><p>most value!</p></li>
+</ul>
+</section>
+<section id="artists">
+<h3>31. artists<a class="headerlink" href="#artists" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>type 1 artists use forebears as scaffold on which to plant their delicate new ideas</p>
+<ul>
+<li><p>medium:</p>
+<ol class="arabic simple">
+<li><p>cosmic sound</p></li>
+<li><p>chaos</p></li>
+<li><p>noise</p></li>
+</ol>
+<ul class="simple">
+<li><p>corelli, vivaldi</p></li>
+<li><p>handel, bach</p></li>
+<li><p>hadyn, mozart, beethoven</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>type 2 artists only find forebears useful as a source of building blocks</p>
+<ul>
+<li><p>medium:</p>
+<ol class="arabic simple">
+<li><p>metaphysics</p></li>
+</ol>
+<ul class="simple">
+<li><p>karl marx</p></li>
+<li><p>friedrich nietzche</p></li>
+<li><p>oscar wilde</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>type 3 artist:</p>
+<ul class="simple">
+<li><p>medium:</p>
+<ol class="arabic simple">
+<li><p>time?</p></li>
+<li><p>phase of career</p></li>
+<li><p>epoch of life</p></li>
+</ol>
+</li>
+<li><p>in this type one witnesses transition from:</p>
+<ul>
+<li><p>1-&gt;2 or</p></li>
+<li><p>2-&gt;1 or</p></li>
+<li><p>a cycle of such</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="ascesis">
+<h3>32. ascesis<a class="headerlink" href="#ascesis" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>3e.ἄσκησις,μ</p></li>
+<li><p>to live on $5/d</p></li>
+<li><p>from 04/09/23 - 04/14/23</p></li>
+<li><p>while breaking records in the pool</p></li>
+</ul>
+</section>
+<section id="kipchoge">
+<h3>33. kipchoge<a class="headerlink" href="#kipchoge" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>4:33:93/Mile</p></li>
+<li><p>over 27 miles</p></li>
+</ul>
+</section>
+<section id="smoke">
+<h3>34. smoke<a class="headerlink" href="#smoke" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>what a <a class="reference external" href="https://www.youtube.com/watch?v=cD0dy_1FsT0">melody</a>!</p></li>
+<li><p>initially got me thinking suspended 4th</p></li>
+<li><p>but later it occured to me that its <a class="reference external" href="https://www.reddit.com/r/musictheory/comments/221bid/whats_the_difference_between_sus4_and_11th_chords/">founded on the 9th</a>!</p></li>
+<li><p>What’s the difference between sus4 and 11th chords?</p></li>
+<li><p>The sus4 chord implies no 3rd in the chord. So the notes in the chord are 1-4-5. The 11th chord implies a 3rd (and a 7th and a 9th), so the tones are 1-3-5-7-9-11.</p></li>
+<li><p>The 6 chord implies no extensions beyond the 6, so the notes are 1-3-5-6. The 13th chord implies the 7th, 9th, and 11th extensions, so the notes are 1-3-5-7-9-11-13.</p></li>
+<li><p>Likewise, the sus2 chord implies 1-2-5, whereas the 9th chord implies 1-3-5-7-9.</p></li>
+<li><p>If you play a C major triad on the piano and continue playing every other white key above the triad, you’ll get the (major) 7th, 9th, 11th, and 13th extensions</p></li>
+</ul>
+</section>
+<section id="charmoffensive">
+<h3>35. charmoffensive<a class="headerlink" href="#charmoffensive" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://muzaale.github.io/book/_downloads/1f7448068ee5d001ee7d51a08f05b73e/charm.offensive.pdf">charm-offensive</a></p></li>
+<li><p>charm offensive</p></li>
+</ul>
+</section>
+</section>
+<section id="id11">
+<h2>04/09/2023<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h2>
+<section id="ds4ph-hw7">
+<h3>36. ds4ph.hw7<a class="headerlink" href="#ds4ph-hw7" title="Permalink to this heading">#</a></h3>
+<p>This will be my first assignment done in a purely git -&gt; vscode -&gt; hub workflow:</p>
+<p>Return an ipython notebook and python dash app with the following:</p>
+<ol class="arabic simple" start="0">
+<li><p>Write a python function that takes an X and Y vector and returns an estimated <span class="math notranslate nohighlight">\(\beta_0\)</span> and <span class="math notranslate nohighlight">\(\beta_1\)</span> from linear regression. Check your function versus one of the prewritten ones. Include this in code cells of your ipython notebook.</p></li>
+<li><p>Using Python and basic numpy functions, fit a linear regression model to the kirby 21 dataset into colab for the left telencelphalon (predictor) to the right telencephalon (outcome). Also, do the same reversing the predictor and response relationship. Do a scatterplot of the left telencephalon (type 1 level 1) volume by the right. Do not hold out any data (there’s only 21 observations).</p></li>
+<li><p>Consider a regression through the origin model  Y=BX . What would be the impact on the estimate of  B  if we replaced  X  by  cX  where  c  is a positive constant? Write your answer in a markdown cell of your ipython notebook.</p></li>
+<li><p>Let  <span class="math notranslate nohighlight">\(X_i\)</span>  be a group indicator so that <span class="math notranslate nohighlight">\(x_i=I(i\in G_1)\)</span>
+I.e. takes the value  1  when  <span class="math notranslate nohighlight">\(i\)</span>  is in group 1 and 0 if  i  is in group 0. Consider optimizing <span class="math notranslate nohighlight">\(\sum_i \frac{1}{n}(Y_i − \beta_0 - \beta_1 X_i)^2\)</span>.
+If <span class="math notranslate nohighlight">\(\hat Y = \hat \beta_0 + \hat \beta_1 X\)</span>, argue that <span class="math notranslate nohighlight">\(\hat Y\)</span> is the group mean for group 1 if <span class="math notranslate nohighlight">\(X=1\)</span> and the group mean for group 0 if <span class="math notranslate nohighlight">\(X=0\)</span>. You can either make a text argument in a markdown cell, or create a simulated example and show that the results holds.</p></li>
+<li><p>Argue that if you take the vectors <span class="math notranslate nohighlight">\(Y\)</span> and <span class="math notranslate nohighlight">\(X\)</span> and divide them by their standard deviations (respectively), the slope for either regressing <span class="math notranslate nohighlight">\(Y\)</span> on <span class="math notranslate nohighlight">\(X\)</span> or <span class="math notranslate nohighlight">\(X\)</span> on <span class="math notranslate nohighlight">\(Y\)</span> is simply the correlation.</p></li>
+<li><p>Consider the logistic curve</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+f(x) = \frac{e^{\beta_0 + \beta_1x}}{1 + e^{\beta_0 + \beta_1 x}}.
+\]</div>
+<p>Use streamlit to create a web page that shows the impact of changing <span class="math notranslate nohighlight">\(\beta_0\)</span> and <span class="math notranslate nohighlight">\(\beta_1\)</span>. That is, it takes in two inputs, as sliders, <span class="math notranslate nohighlight">\(\beta_0\)</span> and <span class="math notranslate nohighlight">\(\beta_1\)</span>, and plots the resulting logistic curve.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">cd</span> <span class="o">~/</span><span class="n">dropbox</span><span class="o">/</span><span class="mf">2.</span><span class="o">../</span><span class="mf">3.</span><span class="o">../</span><span class="n">vscode</span><span class="o">.</span><span class="n">ds4ph</span><span class="o">/</span><span class="n">vscode</span><span class="o">.</span><span class="n">vscode</span><span class="mf">.202305</span><span class="o">/</span><span class="n">hw7</span>
+<span class="o">%</span> <span class="n">echo</span> <span class="s2">&quot;Abimereki Muzaale&quot;</span> <span class="o">&gt;</span> <span class="n">hw7</span><span class="o">.</span><span class="n">ipynb</span> <span class="c1"># doesn&#39;t work, use dropdown menu &gt; new file</span>
+</pre></div>
+</div>
+</section>
+<section id="ph340-700">
+<h3>37. ph340.700<a class="headerlink" href="#ph340-700" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>notebook</p></li>
+<li><p>html</p></li>
+<li><p>website</p></li>
+<li><p>sharing</p></li>
+<li><p>documentation: markdown</p></li>
+<li><p>code: python, stata?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reproducibility</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">open-science</span></code>: <span class="math notranslate nohighlight">\(R^3\)</span></p></li>
+</ul>
+</section>
+<section id="nhanes-alpha">
+<h3>38. nhanes-alpha<a class="headerlink" href="#nhanes-alpha" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>tailor to Stata edition</p></li>
+<li><p>Stata/BE, SE, MP</p></li>
+<li><p>Stata/IC for some</p></li>
+</ul>
+</section>
+<section id="babysteps">
+<h3>39. babysteps<a class="headerlink" href="#babysteps" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>jupyter nbconvert –to html –no-input ggg.ipynb</p></li>
+</ul>
+</section>
+<section id="jason-haw">
+<h3>40. jason haw<a class="headerlink" href="#jason-haw" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>what a perfect fit for 340.700!!!</p></li>
+<li><p>python vs. r vs. stata</p></li>
+<li><p>collaboration,publication,etc</p></li>
+<li><p>Stata admit that they’re behind in the game</p></li>
+<li><p>What about SAS?</p></li>
+<li><p>These platforms are open, thus the exponential growth of their communities</p></li>
+<li><p>And contributors!!!</p></li>
+<li><p>For this class: jupyter-book and bookdown will “challenge” the advanced students to explore and test the very limits of Stata :)</p></li>
+<li><p>Each year will have access to the online books of the previous years</p></li>
+<li><p>No reinventing the wheel!!!!</p></li>
+</ul>
+</section>
+<section id="todoby031023">
+<h3>41. todoby031023<a class="headerlink" href="#todoby031023" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>340.700 book:</p></li>
+<li><p>articulate group task</p></li>
+<li><p>collaboration</p></li>
+<li><p>github</p></li>
+<li><p>publishing: jupyter-book, bookup</p></li>
+<li><p>where does stata stand?</p></li>
+<li><p>jupyter-book create &amp; build 100% from terminal</p></li>
+</ul>
+</section>
+<section id="tight-structure">
+<h3>42. tight-structure<a class="headerlink" href="#tight-structure" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>background:</strong></p>
+<ul>
+<li><p>turning point in the history of HCV Rx in 2013.</p></li>
+<li><p>AT $95k for curative dose, was clear to all insurance providers that this was cheaper than low cost, ineffective, drugs for life</p></li>
+</ul>
+</li>
+<li><p><strong>methods:</strong></p>
+<ul>
+<li><p>durand concurred that in her practice everyone eventually received treatment inspite of initial delays for SOME.</p></li>
+<li><p>So what would motivate a qualitative study when everything was pointing towards taking the new meds???</p></li>
+</ul>
+</li>
+<li><p><strong>results:</strong></p>
+<ul>
+<li><p>what is reported is plausible and consistent with what we’ve known from 2013-2023.</p></li>
+<li><p>so what exactly was the knowledge gap?</p></li>
+</ul>
+</li>
+<li><p><strong>conclusion:</strong></p>
+<ul>
+<li><p>and that is my question. maybe the background and intro should better align with anxiety about access to what is without a doubt a “miracle” cure!</p></li>
+</ul>
+</li>
+<li><p><strong>acknowledgments:</strong>
+*quantiative research? qualitative cannot keep on failing to acknowledge this!</p></li>
+<li><p><strong>references:</strong>
+*providers, providers who themselves received an HCV organ, etc,</p></li>
+</ul>
+<p>x</p>
+<ul class="simple">
+<li><p>Made no mention of the HCV Rx</p></li>
+<li><p>Hepatitis C infection is treated with antiviral medications intended to clear the virus from your body. The goal of treatment is to have no hepatitis C virus detected in your body at least 12 weeks after you complete treatment</p></li>
+<li><p>persons: English-speaking patients</p></li>
+<li><p>place: jhh</p></li>
+<li><p>time: 2017-2021</p></li>
+<li><p>Deep dive? Semi-structured interviews?</p></li>
+<li><p>ZERO mention of the Rx????</p></li>
+<li><p>Curative Rx arrived in 2013!!</p></li>
+<li><p>Basically this study found that patients were motivated by the efficacy of HCV Rx</p></li>
+<li><p>That they faced no alternative but death</p></li>
+<li><p>Nadine Brown</p></li>
+<li><p>Hannah Sung</p></li>
+</ul>
+</section>
+<section id="conferences">
+<h3>43. conferences<a class="headerlink" href="#conferences" title="Permalink to this heading">#</a></h3>
+<div class="highlight-Stata notranslate"><div class="highlight"><pre><span></span><span class="m">2023</span> Stata Conference
+StataCorp
+<span class="m">20</span>–<span class="m">21</span> July <span class="m">2023</span>, Stanford, CA
+
+APHA <span class="m">2023</span> Annual Meeting
+American Public Health Association
+<span class="m">12</span>–<span class="m">15</span> November <span class="m">2023</span>, Atlanta, GA
+Booths: <span class="m">905</span>, <span class="m">907</span>, <span class="m">909</span> 
+
+<span class="m">2023</span> SER Conference
+Society<span class="k"> for</span> Epidemiologic Research
+<span class="m">13</span>–<span class="m">16</span> June <span class="m">2023</span>, Portland, OR
+Attending from StataCorp: Chuck Huber, Director of Statistical Outreach
+
+https:<span class="o">//</span>www<span class="m">.</span>nature<span class="m">.</span>com<span class="o">/</span>nataging<span class="o">/</span>conferences
+</pre></div>
+</div>
+</section>
+<section id="wk3-ph340600">
+<h3>44. wk3 ph340600<a class="headerlink" href="#wk3-ph340600" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>creat dofile: structure, indentation, annotation</p></li>
+<li><p>run the script: do <a class="reference external" href="http://dofile.do">dofile.do</a> or click do</p></li>
+<li><p>find your output: pwd or cd /path/outputfolder</p></li>
+<li><p>macros: name, content (some derivative of a return value)</p></li>
+<li><p>programs:</p></li>
+</ul>
+</section>
+<section id="crunchtime">
+<h3>45. crunchtime<a class="headerlink" href="#crunchtime" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>atc membership</p></li>
+<li><p>flight</p></li>
+<li><p>hotel</p></li>
+<li><p>bge 98 ooo</p></li>
+<li><p>att 98 ooo</p></li>
+<li><p>comcast 123 xxx</p></li>
+<li><p>gs -&gt; 155.60 xxx</p></li>
+<li><p>visa -&gt; 169.00 xxx</p></li>
+</ul>
+</section>
+</section>
+<section id="id12">
+<h2>04/13/2023<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h2>
+<section id="musik">
+<h3>46. musik<a class="headerlink" href="#musik" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Annuŋŋamya</p>
+<ul>
+<li><p>theme &amp; variations:</p>
+<ul>
+<li><p><a class="reference external" href="https://muzaale.github.io/book/_downloads/b66c1fcac93c73c56479d88adf74d4b4/annu%C5%8B%C5%8Bamya.mp3">theme</a> from ayf</p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=9IZcnRVdLtk">variation1</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=qdoeiy2-oFw">variation2</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=y86kwKByJJE">variation3</a></p></li>
+<li><p><span class="xref myst">variation4</span>  <span id="id13">[<a class="reference internal" href="../references.html#id8" title="Yours Truly. Theme &amp; variations. 2023. URL: https://muzaale.github.io/denotas/bdn202304.html#musik.">44</a>]</span></p></li>
+</ul>
+</li>
+<li><p>invite ugandan artists to contribute variations</p></li>
+<li><p>we need to reach 99 <em>sui generis</em> variations on this most beautiful theme from inspired by Psalm 23</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="amy">
+<h3>47. amy<a class="headerlink" href="#amy" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Kyle Jackson, Characterizing the landscape and impact of infections following kidney transplantation. 2021</p></li>
+<li><p>Super- mario game</p></li>
+<li><p>Almost dead, out of juice</p></li>
+<li><p>Then hit this coin – Abi – that completely changed the game!</p></li>
+</ul>
+</section>
+<section id="usurp">
+<h3>48. usurp<a class="headerlink" href="#usurp" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Beethoven’s <a class="reference external" href="https://www.youtube.com/watch?v=LDTn10XeCmU">coda</a>: 12:00/15:34</p></li>
+<li><p>Mozart’s <a class="reference external" href="https://www.youtube.com/watch?v=J4_1TWxlmQE">aria</a>: 1:15/2:22</p></li>
+<li><p>Hey <span class="xref myst">chatGPT</span>, any comment on possible influence here?</p></li>
+<li><p>Google hasn’t yielded anything over the last 15 years of me searching!!</p></li>
+<li><p>Now’s your time to shine :)</p></li>
+</ul>
+</section>
+<section id="cece">
+<h3>49. cece<a class="headerlink" href="#cece" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Outstanding <a class="reference external" href="https://www.emerald.com/insight/content/doi/10.1108/JBIM-10-2022-0459/full/html">scholarly</a> work from fam :)</p></li>
+</ul>
+</section>
+<section id="fawaz">
+<h3>50. fawaz<a class="headerlink" href="#fawaz" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>We need to employ 2 additional analysts</p></li>
+<li><p>They are both TAs in my current class</p></li>
+<li><p>Absolutely outstanding (3<span class="math notranslate nohighlight">\(\sigma\)</span>)</p></li>
+<li><p>How much money do you have? Can we combine to make sure we are ok?</p></li>
+<li><p>Lets do this as a safety net in case the powers that be at TRC are unresponsive!!!</p></li>
+</ul>
+<p>Baltimore, MD</p>
+<p>09:24 PM 04/13/2023</p>
+</section>
+</section>
+<section id="id14">
+<h2>04/14/2023<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h2>
+<section id="webapp">
+<h3>51. webapp<a class="headerlink" href="#webapp" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Critique #2</p>
+<ul>
+<li><p>Research plan: weaknesses</p>
+<ol class="arabic simple">
+<li><p>There is no information provided about pilot testing this on-line tool, nor refinement of the tool before pursuing a large-scale study through an R01 application. Since the career development plan seems abbreviated for years 4 and 5, this might be the ideal time to conduct pilot research on the newly developed tool, which could yield valuable preliminary data to support an R-award application at the end of the five-year period.</p></li>
+<li><p>The other reviewers also believe this aim 3 (online risk tool) can be better developed
+Would you want me to make some revisions to the existing Aims 3 and then have you review them alongside these pink sheets?</p></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="id15">
+<h3>52. τύραννος<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>An individual who rose to power via unconstitutional or illegitimate means, usually not being an heir to an existing throne.</p></li>
+<li><p>Such individuals were perceived negatively by political philosophers such as Socrates, Plato and Aristotle.</p></li>
+<li><p>You betcha Nietzsche held these as the highest type: the übermensch!</p>
+<ol class="arabic simple">
+<li><p>Julius Caesar</p></li>
+<li><p>Cesare Borgia</p></li>
+<li><p>Napoleon Bonaparte.</p></li>
+</ol>
+</li>
+</ul>
+</section>
+</section>
+<section id="id16">
+<h2>04/15/2023<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h2>
+<section id="numero-uno">
+<h3>53. numero-uno<a class="headerlink" href="#numero-uno" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>In the Stack Overflow 2022 Developer Survey</p></li>
+<li><p>Visual Studio Code was ranked the most popular developer environment tool among 71,010 respondents</p></li>
+<li><p>With 74.48% reporting that they use it:</p>
+<ul>
+<li><p>I do too!!</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="v-monet">
+<h3>54. v monét<a class="headerlink" href="#v-monet" title="Permalink to this heading">#</a></h3>
+<p>songwriting <a class="reference external" href="https://www.youtube.com/watch?v=bgx7IYyZ9zg">process</a>: 18:50/28:04</p>
+<ol class="arabic simple">
+<li><p>melody</p></li>
+<li><p>emotion</p></li>
+<li><p>lyrics</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "myenv"
+        },
+        kernelOptions: {
+            name: "myenv",
+            path: "./bdn2023"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'myenv'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">04/2023</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">notes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">04/04/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hub">1. hub</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vscode">2. vscode</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#local">3. local</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#y">4. y</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">04/05/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todoby">5. todoby</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter">6. jupyter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pages">7. pages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code">8. code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#r-mean">9. r(mean)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ph-340-700">10. ph.340.700</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchy">10. hierarchy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#macros">11. macros</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#servers">12. servers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#batch">13. % batch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chatgpt">14. chatgpt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#push">15. push</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">04/05/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git">16. git</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">17. push</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grinder">18. grinder</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sankey">19. sankey</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cltx">20. cltx</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b">21. -b</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">04/06/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nhanes">22. nhanes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#swim">23. swim</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gtpci">24. gtpci</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#structure">25. structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gitcodehub">26. gitcodehub</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rasheeda">27. rasheeda</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">04/08/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#patton">28. patton</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">29. nhanes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vincent">30. vincent</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#artists">31. artists</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ascesis">32. ascesis</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kipchoge">33. kipchoge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#smoke">34. smoke</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#charmoffensive">35. charmoffensive</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">04/09/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ds4ph-hw7">36. ds4ph.hw7</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ph340-700">37. ph340.700</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nhanes-alpha">38. nhanes-alpha</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#babysteps">39. babysteps</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jason-haw">40. jason haw</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#todoby031023">41. todoby031023</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tight-structure">42. tight-structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conferences">43. conferences</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#wk3-ph340600">44. wk3 ph340600</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#crunchtime">45. crunchtime</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">04/13/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#musik">46. musik</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#amy">47. amy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usurp">48. usurp</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cece">49. cece</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fawaz">50. fawaz</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">04/14/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#webapp">51. webapp</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">52. τύραννος</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">04/15/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numero-uno">53. numero-uno</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#v-monet">54. v monét</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

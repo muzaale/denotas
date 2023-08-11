@@ -1,0 +1,569 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>01/2021 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn2021/bdn202101';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Nothin'</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter3.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn2021/bdn202101.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bdn2021/bdn202101.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>01/2021</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="id1">
+<h1>01/2021<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>8am UG Airlines<br />
+9-12 (Saturday, Tuesday)<br />
+UG Airlines 10pm</p>
+<p>.</p>
+<p>I don’t like the structure of 340.684.01 Pharmacoepi (includes group work)<br />
+And I don’t think I’ll like the philosophical XXX.XXX.XX either</p>
+<p>Drop Grant writing (4)</p>
+<p>— Lets add the Stata course<br />
+— Multilevel models (P/F)<br />
+— Biostats (P/F)<br />
+— Do the interpersonal communication class — Debra Roter (2) + Stata programming (2)</p>
+<p>.</p>
+<p>Bloomberg School<br />
+500 courses per term<br />
+4 terms per year<br />
+2000 courses in all</p>
+<p>.</p>
+<p>12pm — Monday (meet daph) xxx<br />
+Tell the boys  xxx</p>
+<p>— Buy ticket to Nairobi  xxx<br />
+— Andrew, Allan xxx<br />
+— Alert boys of Monday xxx<br />
+— Sandra &amp; Tasha condolence xxx<br />
+— Register: Pharmacoepi, Built Environment xxx</p>
+<p>.</p>
+<p>La Chouffe<br />
+Magma Obscura</p>
+<p>.</p>
+<p>NIRA — National ID (online)<br />
+Nexus approvals</p>
+<p>.</p>
+<p>Hama tribe — Ethiopia<br />
+Samburu tribe — Kenya</p>
+<p>.</p>
+<p>5 peter wedding<br />
+Jan 6 Edeet birthday<br />
+Jan 7 Jeff birthday</p>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>COVID19 test</p></li>
+<li><p>Packing (before test!!)</p></li>
+<li><p>Lido beach</p></li>
+<li><p>Hotel (Simeon) + Ridders</p></li>
+<li><p>Shuttle to airport</p></li>
+<li><p>Resend Allan email</p></li>
+<li><p>Yellow fever vaccine</p></li>
+<li><p>Victoria medical services</p></li>
+<li><p>Julia sebutinde road</p></li>
+<li><p>Send J the Nairobi schedule</p></li>
+<li><p>Sam of Admas Hotel</p></li>
+</ol>
+<p>.</p>
+<p>Holy trinity</p>
+<ol class="arabic simple">
+<li><p>Faith (or Research)</p></li>
+<li><p>Service</p></li>
+<li><p>Education<br />
+Tracey Abrams</p></li>
+</ol>
+<p>.</p>
+<p>A married philosopher is ridiculous<br />
+They have already shown commitment<br />
+— irrational, steadfast commitment</p>
+<p>.</p>
+<p>Download the “signal” app in lieu of WhatsApp</p>
+<p>.</p>
+<p>Prada L’Homme — Duncan xxx<br />
+BVLGRI/Dior — Saidi xxx<br />
+Criteria — Response<br />
+Massie — Email  xxx<br />
+Fawaz</p>
+<p>.</p>
+<p>14,321 Ruhindo North</p>
+<p>.</p>
+<p>Wild waters, Jinja<br />
+— Simeon recommended</p>
+<p>.</p>
+<p>Tragedy of their disappointments/Death
+Comedy of their incongruity/Sin<br />
+Jesus and St. Paul: the very worst exemplars!<br />
+For those seeking guidance to marriage :-)<br />
+And especially for those already married 🎭</p>
+<p>.</p>
+<p>18,321 — Tayebwa, FINAL</p>
+<p>.</p>
+<p>1.Khalil email Jan 13 (two week meeting)<br />
+— send five</p>
+<p>.</p>
+<p>Hi Dorry — I wish to bring you up-to-speed with my GTPCI endeavors:</p>
+<p>My 1st Term GPA was 2.50, weighted down mostly by two Cs (Biostats 651 and Intro to US healthcare systems). And my 2nd Term GPA was 3.11, weighted down by one C (Life Course Perspectives on Health). The GTPCI PhD program expects only A/B grades and a GPA&gt;3.0 and so my performance has been flagged.</p>
+<p>I was mostly an A student during the MPH program and this recent performance is inconsistent with my track record. I’m happy to discuss what might have contributed to these recent Cs. But I’ll be having a discussion with Khalil some time next week regarding my plans to get back on track with the expectations of the GTPCI PhD.</p>
+<p>Of course I got As for the GTPCI program requirements (Epi &amp; Biostats) during my MPH. The Cs I’ve received were for elective coursework, some of it tangentially relevant to my interests in Aging. I’ll keep you in the loop with what I discuss with Khalil next week and will also update you on what else I’ve been doing beyond the GTPCI efforts.</p>
+<p>Abi</p>
+<p>.</p>
+<p>Trudy’s delicious lunch luwombo<br />
+&#64;Rainbow road/Gaba road junction<br />
+Worth trying one of these days!</p>
+<p>.</p>
+<p>It is thought abroad that ‘twixt my sheets he has done my office</p>
+<p>.</p>
+<p>Ann is Belge/Lingala<br />
+Miriam is from Ottawa<br />
+Prefer to meet around 12pm<br />
+Of course at quality Hill<br />
+Tomorrow is in on the table</p>
+<p>.</p>
+<p>Troubadour Obscura<br />
+At. Bernadus<br />
+Westmalle<br />
+Lefort<br />
+Duvel</p>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=n-ppu9uyO6s">empeta</a></p>
+<p>.</p>
+<p>“A first, tentative example: at all times morality has aimed to “improve” men — this aim is above all what was called morality. Under the same word, however, the most divergent tendencies have been concealed. But “improvement” has meant both taming the beast called man, and breeding a particular kind of man. Such zoological concepts are required to express the realities — realities of which the typical “improver,” the priest, admittedly neither knows anything nor wants to know anything.</p>
+<p>To call the taming of an animal its “improvement” sounds almost like a joke to our ears. Whoever knows what goes on in kennels doubts that dogs are “improved” there. They are weakened, they are made less harmful, and through the depressive effect of fear, through pain, through wounds, and through hunger, they become sickly beasts. It is no different with the tamed man whom the priest has “improved.” In the early Middle Ages, when the church was indeed, above all, a kennel, the most perfect specimens of the “blond beast” were hunted down everywhere; and the noble Teutons, for example, were “improved.” But how did such an “improved” Teuton look after he had been drawn into a monastery? Like a caricature of man, a miscarriage: he had become a “sinner,” he was stuck in a cage, tormented with all sorts of painful concepts. And there he lay, sick, miserable, hateful to himself, full of evil feelings against the impulses of his own life, full of suspicion against all that was still strong and happy. In short, a “Christian.”</p>
+<p>Physiologically speaking: in the struggle with beasts, making them sick may be the only way to make them weak. The church understood this: it sickened and weakened man — and by so doing “improved” him.”</p>
+<p>Excerpt From<br />
+Twilight of the Idols<br />
+Friedrich Nietzsche<br />
+<a class="reference external" href="https://books.apple.com/us/book/twilight-of-the-idols/id1101368153">https://books.apple.com/us/book/twilight-of-the-idols/id1101368153</a><br />
+This material may be protected by copyright.</p>
+<p>.</p>
+<p>Expedited passport application — same day</p>
+<p>.</p>
+<p>I shall not be moved</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "myenv"
+        },
+        kernelOptions: {
+            name: "myenv",
+            path: "./bdn2021"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'myenv'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

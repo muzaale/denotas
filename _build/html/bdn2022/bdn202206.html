@@ -1,0 +1,740 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>06/2022 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn2022/bdn202206';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Nothin'</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter3.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn2022/bdn202206.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bdn2022/bdn202206.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>06/2022</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="id1">
+<h1>06/2022<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#jonbaptiste
+
+The ultimate aesthetic statement
+— New Orleans
+— Julliard School
+— Etc.
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#mustdothis</span>
+
+<span class="n">Smithonian</span>  <span class="n">national</span> <span class="n">museum</span> <span class="n">o</span> <span class="n">American</span> <span class="n">history</span>
+<span class="n">Paiting</span> <span class="n">o</span> <span class="n">indians</span> <span class="n">hunting</span> <span class="n">bison</span>
+
+<span class="n">Bison</span>
+<span class="n">Indians</span>
+<span class="n">Mural</span>
+<span class="n">Painting</span>
+<span class="n">DC</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#firstever10daystreak
+
+05/25/22 — 06/03/22
+🏊🏾‍♂️ 
+Of single 1000 calorie workouts 
+Based on 13-18 swim sets 
+All strokes with back dolphin
+Supportive diet of almonds, cheese, dates 
+Weight stable but with muscle growth 
+Loss of fat &amp; appearance of contours &amp; abs 
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#siblings</span>
+
+<span class="n">Sarah</span> <span class="n">Babirye</span> <span class="mi">01</span><span class="o">/</span><span class="mi">12</span><span class="o">/</span><span class="mi">63</span>
+<span class="n">Charles</span> <span class="n">Nabongo</span> <span class="mi">10</span><span class="o">/</span><span class="mi">26</span><span class="o">/</span><span class="mi">65</span>
+<span class="n">Andrew</span> <span class="n">Kairu</span> <span class="mi">01</span><span class="o">/</span><span class="mi">03</span><span class="o">/</span><span class="mi">67</span>
+<span class="n">Sarah</span> <span class="n">Namukasa</span> <span class="mi">04</span><span class="o">/</span><span class="mi">19</span><span class="o">/</span><span class="mi">68</span>
+<span class="n">Harriet</span> <span class="n">Timulungi</span> <span class="n">XX</span><span class="o">/</span><span class="n">XX</span><span class="o">/</span><span class="mi">71</span>
+<span class="n">Patrick</span> <span class="n">Muinda</span> <span class="mi">06</span><span class="o">/</span><span class="mi">07</span><span class="o">/</span><span class="mi">74</span>
+<span class="n">Martin</span> <span class="n">Muwaga</span> <span class="mi">01</span><span class="o">/</span><span class="mi">20</span><span class="o">/</span><span class="mi">76</span>
+<span class="n">Abimereki</span> <span class="n">Dhatemwa</span> <span class="mi">04</span><span class="o">/</span><span class="mi">17</span><span class="o">/</span><span class="mi">80</span>
+</pre></div>
+</div>
+<p>.</p>
+<p>Yonnie Busingye<br />
+Keith Kibirango</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#busboys
+
+Teija — a lot like Tisha (look alike &amp; vibes)
+Alana — other young chic, more energy, not a morning person kinda girl, standing in for Teija one specific morning :)
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#breakthrough
+
+May 18-26
+— Four strokes 
+— Back Dolphin 
+— Increased burn
+— Equivalent to 9MI run 
+</pre></div>
+</div>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=VfJ105NN68U">https://www.youtube.com/watch?v=VfJ105NN68U</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Heart rate
+— 6 years worth of records
+— Max 207 (01/07/2018 after 1592/1000 calorie swim)
+— Min 30 (01/18 &amp; 24/2018 after 1683 &amp; 1350/1000 calorie elliptical)
+— Started record-keeping in 11/2017 and this may reflect youth
+— Both youth and unconscious energy produced these extremes
+— The Max 207 is a result of energy
+— And the Min 30 is a result of the Max 207 and cardio endurance/fitness
+— VO2Max &gt; 45 from 12/2017-01/2018
+</pre></div>
+</div>
+<p>.</p>
+<p>Who needs a <a class="reference external" href="https://www.gutenberg.org/files/52263/52263-h/52263-h.htm">dynamometer</a> when<br />
+You have the <a class="reference external" href="https://www.youtube.com/watch?v=zvD21OntHgI">Hopak</a>?<br />
+Shouldn’t a doctors first question be:<br />
+The last time you performed the Hopak? <span id="id2">[<a class="reference internal" href="../references.html#id31" title="F Nietzsche. Ugliness. 1888. URL: https://muzaale.github.io/denotas/bdn202206.html.">27</a>]</span></p>
+<p>.</p>
+<p>Ambitious, Inherent&amp;Driven<br />
+Rules&amp;Guides, Mortal&amp;Unsure<br />
+Slacker, Backstory&amp;Numbed</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#prankishness
+
+1.Overture K. 620. Unlike other fugues
+2.Wonderer 159. Respect of convention
+3.Born to etiquette. Yet dancing in fetters
+4.No revolutionary “shackles off my feet…”
+5.Classical or at least a renaissance style 
+6.Illegal acts not aesthetically pleasing
+7.Perhaps immoral acts also fit this bill
+8.Therefore aesthetics is about social class
+9.And this leads us to a damning realization
+
+#alone4life
+#nowalkoneggshells
+#thishasendedmanyrelationships
+
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#usurpation</span>
+
+<span class="n">Hamlet</span> <span class="ow">and</span> <span class="n">Macbeth</span> <span class="n">both</span> <span class="n">portray</span> <span class="n">usurpers</span> <span class="k">as</span> <span class="n">ruling</span> <span class="n">kings</span><span class="p">,</span> <span class="ow">and</span> <span class="ow">in</span> <span class="n">each</span> <span class="n">case</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">made</span> <span class="n">clear</span> <span class="n">that</span> <span class="n">such</span> <span class="n">rule</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">to</span> <span class="n">be</span> <span class="n">tolerated</span> <span class="n">either</span> <span class="n">by</span> <span class="n">the</span> <span class="n">ruled</span> <span class="ow">or</span> <span class="n">by</span> <span class="n">the</span> <span class="n">universe</span><span class="o">.</span> <span class="n">Indeed</span><span class="p">,</span> <span class="n">the</span> <span class="n">fate</span> <span class="n">of</span> <span class="n">kings</span> <span class="ow">is</span> <span class="n">tied</span> <span class="n">to</span> <span class="n">the</span> <span class="n">order</span> <span class="n">of</span> <span class="n">the</span> <span class="n">universe</span><span class="p">,</span> <span class="ow">and</span> <span class="n">dissension</span> <span class="ow">and</span> <span class="n">tension</span> <span class="ow">in</span> <span class="n">one</span> <span class="ow">is</span> <span class="n">reflected</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">other</span><span class="o">.</span> <span class="n">Yet</span><span class="p">,</span> <span class="n">the</span> <span class="n">issue</span> <span class="ow">is</span> <span class="nb">complex</span><span class="p">,</span> <span class="ow">and</span> <span class="k">while</span> <span class="n">the</span> <span class="n">usurper</span> <span class="n">has</span> <span class="n">no</span> <span class="n">right</span> <span class="n">to</span> <span class="n">rule</span><span class="p">,</span> <span class="n">it</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">always</span> <span class="n">clear</span> <span class="n">who</span> <span class="n">has</span> <span class="n">the</span> <span class="n">right</span> <span class="n">to</span> <span class="n">prevent</span> <span class="n">him</span> <span class="kn">from</span> <span class="nn">ruling.</span> <span class="n">In</span> <span class="n">Macbeth</span><span class="p">,</span> <span class="n">the</span> <span class="n">fate</span> <span class="n">of</span> <span class="n">the</span> <span class="n">usurper</span> <span class="ow">is</span> <span class="n">ordained</span><span class="p">,</span> <span class="ow">and</span> <span class="n">his</span> <span class="n">downfall</span> <span class="n">at</span> <span class="n">the</span> <span class="n">hands</span> <span class="n">of</span> <span class="n">the</span> <span class="n">wronged</span> <span class="n">Macduff</span><span class="p">,</span> <span class="n">who</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">rightful</span> <span class="n">king</span><span class="o">.</span> <span class="n">Macduff</span> <span class="n">has</span> <span class="n">the</span> <span class="n">right</span> <span class="n">to</span> <span class="n">retake</span> <span class="n">his</span> <span class="n">throne</span> <span class="n">by</span> <span class="n">force</span><span class="o">.</span> <span class="n">The</span> <span class="n">hesitation</span> <span class="n">of</span> <span class="n">Hamlet</span><span class="p">,</span> <span class="n">much</span> <span class="n">commented</span> <span class="n">on</span> <span class="n">by</span> <span class="n">critics</span><span class="p">,</span> <span class="n">may</span> <span class="n">derive</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">fact</span> <span class="n">that</span> <span class="k">while</span> <span class="n">he</span> <span class="n">knows</span> <span class="n">Claudio</span> <span class="n">to</span> <span class="n">be</span> <span class="n">a</span> <span class="n">regicide</span><span class="p">,</span> <span class="n">to</span> <span class="n">kill</span> <span class="n">Claudio</span> <span class="n">would</span> <span class="n">make</span> <span class="n">him</span> <span class="n">a</span> <span class="n">regicide</span> <span class="k">as</span> <span class="n">well</span><span class="o">.</span> <span class="n">In</span> <span class="n">both</span> <span class="n">plays</span><span class="p">,</span> <span class="n">the</span> <span class="n">usurpation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">throne</span> <span class="n">leads</span> <span class="n">to</span> <span class="n">a</span> <span class="n">more</span> <span class="n">dangerous</span> <span class="ow">and</span> <span class="n">uncertain</span> <span class="n">environment</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">land</span><span class="p">,</span> <span class="ow">and</span> <span class="n">nature</span> <span class="n">concurs</span> <span class="n">by</span> <span class="n">expressing</span> <span class="n">through</span> <span class="n">storms</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">travails</span> <span class="n">visited</span> <span class="n">upon</span> <span class="n">the</span> <span class="n">people</span> <span class="n">that</span> <span class="n">a</span> <span class="n">great</span> <span class="n">political</span> <span class="n">wrong</span> <span class="ow">is</span> <span class="n">also</span> <span class="n">a</span> <span class="n">great</span> <span class="n">moral</span> <span class="ow">and</span> <span class="n">religious</span> <span class="n">wrong</span>
+
+<span class="n">Reference</span><span class="p">:</span> 
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">lotsofessays</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">viewpaper</span><span class="o">/</span><span class="mf">1691621.</span><span class="n">html</span>
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="c1">#usurpation </span>
+
+<span class="n">Antiquity</span><span class="p">:</span> <span class="n">Greek</span><span class="p">,</span> <span class="n">Viking</span>
+<span class="n">Romans</span>
+<span class="n">Christians</span> 
+<span class="n">Philosophers</span> 
+<span class="n">Schopenhauer</span> 
+<span class="n">Wagner</span>
+<span class="n">Nietzsche</span>
+<span class="n">Freud</span>
+
+<span class="n">Tidier</span> <span class="n">than</span> <span class="n">neologisms</span> <span class="n">by</span> <span class="n">usurpers</span>
+<span class="n">Theomachy</span> 
+<span class="n">Superior</span> 
+<span class="n">Order</span> <span class="n">of</span> <span class="n">rank</span>
+<span class="n">Parricide</span>
+<span class="n">Regicide</span>
+<span class="n">Anxiety</span> <span class="n">of</span> <span class="n">influence</span>
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+#swim
+#sets
+
+06/18/227
+Set:
+100yd breast
+100yd butterfly 
+100yd freestyle
+100yd backstroke
+
+x6 sets 
+nose plug for backstroke 
+2:00:48
+2400yd
+583 calories 
+pace 5’02”/37 strokes/100yd
+
+#goal
+pace 2’00”/30 strokes/100yd
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#divine</span>
+<span class="c1">#meaning</span>
+<span class="c1">#beast</span>
+
+
+<span class="c1">#beast</span>
+<span class="n">But</span> <span class="n">beauty</span><span class="p">,</span> <span class="n">real</span> <span class="n">beauty</span><span class="p">,</span> <span class="n">ends</span> <span class="n">where</span> <span class="n">an</span> <span class="n">intellectual</span> <span class="n">expression</span> <span class="n">begins</span> 
+
+<span class="n">He</span> <span class="ow">is</span> <span class="n">some</span> <span class="n">brainless</span> <span class="n">beautiful</span> <span class="n">creature</span> <span class="n">who</span> <span class="n">should</span> <span class="n">always</span> <span class="n">be</span> <span class="n">here</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">winter</span> <span class="n">when</span> <span class="n">we</span> <span class="n">have</span> <span class="n">no</span> <span class="n">flowers</span> <span class="n">to</span> <span class="n">look</span> <span class="n">at</span> 
+
+<span class="c1">#meaning</span>
+<span class="n">Look</span> <span class="n">at</span> <span class="n">the</span> <span class="n">successful</span> <span class="n">men</span> <span class="ow">in</span> <span class="nb">any</span> <span class="n">of</span> <span class="n">the</span> <span class="n">learned</span> <span class="n">professions</span>
+
+<span class="c1">#divine</span>
+<span class="n">Except</span><span class="p">,</span> <span class="n">of</span> <span class="n">course</span><span class="p">,</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">Church</span> 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#swim
+
+06/21/22
+— set: 400y individual medley
+— order: bbbf
+— x4 on 06/20/22, x5 on 06/21/22
+— consider x6 on 06/22/22
+— develop habits around the medley set
+— reduce strain on given muscle group
+
+#imset
+
+https://www.youtube.com/watch?app=desktop&amp;v=p54US-IGqNo
+
+https://www.swimmingcam.com/camera-systems.php#prod5
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#symptoms
+#prankishness 
+#comedy
+#marktwain
+#jonstewart
+#bellweather
+
+Its not the fresh prince that’s a threat to comedy
+Its the crown prince!
+Its the fragility of leaders!
+
+Comedy doesn’t change the world
+But its a bellwether 
+When a society is under threat, comedians are the ones who get sent away first
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#prankishness 
+
+Nothing succeeds if prankishness had no part in it — Friedrich Nietzsche
+Moderation is a fatal thing. Nothing succeeds like excess  — Oscar Wilde
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+#homervshesiod
+#kadivsgigi
+#poetryvscatalogue 
+
+Have you ever read the Theogony? It’s a fairly short book, although a fascinating account of the Greek gods. The Iliad and The Odyssey are epic works. So that’s for starters. I would argue that the Iliad and the Odyssey are also just more interesting, being histories that had it all: war, murder, rape, betrayal, adultery, gods, witches, magic, victory, defeat, misfortune, revenge, vindication—you name it, it’s in the Iliad or the Odyssey. Each of them could make a fine mini-series!
+                                                                                               —    Bryan Roth
+
+
+Because it’s rubbish.
+
+I’m joking, of course. To an extent. But the Theogony isn’t as famous as the Homeric epics for a number of reasons!
+
+Firstly, it isn’t a coherent narrative in the same way as Homer’s works are. It’s really more of an epic catalogue (which, as we’ll know from the catalogue of ships in Iliad 2, are everyone’s favourite parts of an ancient text… not).
+
+It’s also significant that the Homeric epics document a very popular set of stories — the Epic Cycle was epic indeed! Battles at Troy? Enduring heroes struggling to get home? Mythical monsters? Everyone wants to hear about those! Can we really pretend that a blunt list of the 50+ children of ‘Nereus and rich-haired Doris’ is as gripping as Achilles telling Hektor he’d like to hack him up and eat his flesh raw?
+
+It hasn’t been studied in the school system (ancient to modern) like the Homeric epics have been; that’s one of the main reasons for the tenacity of Homer’s works — they’ve been very popular for a long time! The Theogony just hasn’t been treated with quite so much affection, over the years… it isn’t as easy to read, nor necessarily as much of a pleasure.
+
+The Theogony also just isn’t quite as impressive as the Homeric epics. It’s only about 1000 lines, compared to the Odyssey’s ~12,000, or the Iliad’s ~15,000.
+                                                                                               —    Amy Dakin
+
+</pre></div>
+</div>
+<p><a class="reference external" href="https://muzaale.github.io/denotas/bdn202306.html#children">hilarious</a> <span id="id3">[<a class="reference internal" href="../references.html#id32" title="Yours truly. Why children like me. 1988. URL: https://muzaale.github.io/denotas/bdn202306.html?highlight=children#children.">28</a>]</span></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#agon
+#gesture
+#usurpation 
+#threatening
+#smellstench
+#listeningtodarkchild
+
+— Wrapped up, tied up, tangled up
+— Dawkins &amp; Dawkins, 1998
+— That beat provokes the gesture
+— Harp arpeggios recall The Boy is Mine, 1998
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#jerktaco</span>
+
+<span class="mf">1.</span><span class="n">Jerk</span> <span class="n">chicken</span> <span class="n">burrito</span> 
+<span class="mf">2.</span><span class="n">Large</span> <span class="n">oxtail</span> 
+<span class="mf">3.</span><span class="n">Meat</span> <span class="n">patty</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#gospel
+#marcushodge
+
+— Will Smith — Will, Chapter Fourteen: Boom, 10:04/-47:03
+— That’s what caught my attention
+— Its the brilliance of Marcus Hodge
+— Now to investigate him a little 
+
+https://www.youtube.com/watch?v=noaURkEc6gc
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#swim 
+#flip
+
+https://www.youtube.com/watch?v=Nrn-vHXCoM8
+
+</pre></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "myenv"
+        },
+        kernelOptions: {
+            name: "myenv",
+            path: "./bdn2022"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'myenv'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
