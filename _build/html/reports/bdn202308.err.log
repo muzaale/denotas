@@ -90,6 +90,7 @@ tree.show()
 
 ----- stdout -----
 Requirement already satisfied: treelib in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (1.6.4)
+----- stdout -----
 Requirement already satisfied: six in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from treelib) (1.16.0)
 ------------------
 
