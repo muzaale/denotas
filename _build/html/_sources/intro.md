@@ -6,7 +6,7 @@ unsure & mortal [-](https://en.wikipedia.org/wiki/Trilemma)> will
 
 beastly oblivion -> cause
 
-..[.](bdn000000.ipynb) and means `to do`
+..[.](bloc_0.ipynb) and means `to do`
 
 ```{tableofcontents}
 ```
