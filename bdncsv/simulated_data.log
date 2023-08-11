@@ -66,3 +66,77 @@ time                                                                            
             Tabulation: Freq.  Value
                         1,000  0
 
+. do "/Users/d/Desktop/nhanes1.do"
+
+. *! NHANES Dataset Fast Creation
+. *! By Vincent Jin and Abimereki Muzaale
+. 
+. qui {
+
+. 
+end of do-file
+
+. nhanes1
+NHANES Dataset Creation Summary
+Requested Start Year: 1999
+Requested End Year: 2000
+Requested Year To Be Excluded: None
+Requested Dataset Information: base
+Current Saving Directory: /Users/d/Desktop
+Please Confirm To Proceed (Y/N) . y
+Appending All Datasets.............................. Done
+Dataset Saved!
+
+. stset time, fail(status)
+
+Survival-time data settings
+
+         Failure event: status!=0 & status<.
+Observed time interval: (0, time]
+     Exit on or before: failure
+
+--------------------------------------------------------------------------
+      1,000  total observations
+      1,000  observations end on or before enter()
+--------------------------------------------------------------------------
+          0  observations remaining, representing
+          0  failures in single-record/single-failure data
+          0  total analysis time at risk and under observation
+                                                At risk from t =         0
+                                     Earliest observed entry t =         .
+                                          Last observed exit t =         .
+
+. tab status
+
+     status |      Freq.     Percent        Cum.
+------------+-----------------------------------
+          1 |      1,000      100.00      100.00
+------------+-----------------------------------
+      Total |      1,000      100.00
+
+. nhanes, ys(1988) ye(2018)
+command nhanes is unrecognized
+r(199);
+
+. nhanes1, ys(1988) ye(2018)
+***********************WARNING**************************
+*****Data For Year Between 1988 To 1994 Requested*******
+****NHANES III Data For That Period Will Be Loaded******
+********************************************************
+***********************WARNING**************************
+********No Data Between 1995 And 1999 Available*********
+********************************************************
+***********************WARNING**************************
+*****Data For Year Between 2017 To 2020 Requested*******
+**NHANES Pre-Pandemic Data For That Period Will Be Load*
+********************************************************
+NHANES Dataset Creation Summary
+Requested Start Year: 1988
+Requested End Year: 2018
+Requested Year To Be Excluded: None
+Requested Dataset Information: base
+Current Saving Directory: /Users/d/Desktop
+Please Confirm To Proceed (Y/N) . y
+Loading NHANES III Data For 1988-1994................... connection timed out
+r(2);
+
