@@ -1,0 +1,87 @@
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/d/Library/Python/3.11/lib/python/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import pandas as pd
+import plotly.graph_objects as go
+import plotly.io as pio
+import plotly.offline as pyo
+
+# Set default renderer to notebook
+pio.renderers.default = "notebook"
+
+label = ['Donors',
+         "General Population",
+         "Healthy Controls",
+         "Centers for Medicare",
+         "National Death Index",
+         "ESRD",
+         "Death"]
+
+source = [0, 1, 2, 0, 1, 2, 3, 4]
+
+target = [3, 3, 3, 4, 4, 4, 5, 6]
+
+value = [57.1, 38.1, 4.8, 57.1, 38.1, 4.8, 10, 90]
+
+# Define colors for links and nodes
+link_color = ['#1f77b4', '#1f77b4', '#1f77b4',
+              '#ff7f0e', '#ff7f0e', '#ff7f0e',
+              '#2ca02c']
+node_color = ['#aec7e8', '#ffbb78', '#98df8a',
+              '#ff9896', '#c5b0d5', '#c49c94',
+              '#c7c7c7']
+
+link = dict(source=source, target=target, value=value,
+            color=link_color)
+node = dict(label=label, pad=50, thickness=30,
+            color=node_color,
+            line=dict(color='white', width=0.5))
+
+# Define figure layout
+layout = dict(title=dict(text="Sankey Diagram"),
+              font=dict(size=14, family="Arial"),
+              height=600, width=800,
+              margin=dict(l=50, r=50, t=50, b=50))
+
+# Create Sankey object
+sankey = go.Sankey(link=link, node=node)
+
+# Define Figure object
+fig = go.Figure(data=sankey, layout=layout)
+
+# Save the figure as an interactive HTML file
+output_file = "/Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/bloc/interactive_sankey.html"
+pyo.plot(fig, filename=output_file, auto_open=False)
+
+print(f"Sankey diagram saved as {output_file}")
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[1], line 2[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+[0;32m----> 2[0m [38;5;28;01mimport[39;00m [38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01mgraph_objects[39;00m [38;5;28;01mas[39;00m [38;5;21;01mgo[39;00m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01mio[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpio[39;00m
+[1;32m      4[0m [38;5;28;01mimport[39;00m [38;5;21;01mplotly[39;00m[38;5;21;01m.[39;00m[38;5;21;01moffline[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpyo[39;00m
+
+[0;31mModuleNotFoundError[0m: No module named 'plotly'
+

@@ -1,0 +1,684 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>12/2020 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn2020/bdn202012';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Nothin'</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter3.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn2020/bdn202012.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bdn2020/bdn202012.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>12/2020</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="id1">
+<h1>12/2020<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>NEXUS
+Expense Account: K08AG065520 (90087695)
+Investigator: Muzaale, Abimereki
+Cost Center: 1707211301: Transplant Surgery</p>
+<p>.</p>
+<p><strike>Life course perspectives</strike><br />
+— Boundary of common knowledge<br />
+— Not established through didactic lectures<br />
+— So unprepared for battle or contests<br />
+— Pushing the envelope is impossible<br />
+— Later on understanding data generation process</p>
+<p>.</p>
+<p>The stars and Empedocles align today at 7:49 AM on 12/03/20:</p>
+<ol class="arabic simple">
+<li><p>Zeus (iPhone 12 Pro Max)</p></li>
+<li><p>Demeter (HomePod))</p></li>
+<li><p>Hades (MacBook Pro 16”)</p></li>
+<li><p>Kronus (Apple Watch Series 3)</p></li>
+<li><p>Poseidon (iMac Pro)</p></li>
+</ol>
+<p>Xfiniti: Reminder that your automatic payment will process soon :-)</p>
+<p>.</p>
+<p>Health issues for aging populations: outstanding stuff</p>
+<p>QUIZ<br />
+Final one<br />
+Family giving, death and palliative care, LTSS</p>
+<p>PRESENTATION<br />
+1.Signing up for time-slots<br />
+2.Can only sign up for Thursday<br />
+3.Background, significance, challenges, policy — topic of choice<br />
+4.Use those sections as a guide; practice<br />
+5.Ten minutes only</p>
+<p>ESSAYS (Same topic as presentation)<br />
+Less than 1000 words<br />
+Sample papers are on course plus<br />
+To be submitted by December 20th</p>
+<p>.</p>
+<p>Statistics is the art of averaging things<br />
+Weighted average is the fanciest<br />
+This was a long answer to a v. good question</p>
+<p>.</p>
+<p>Vector<br />
+Matrix<br />
+Array</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$40/hour for assisted living in Maryland 
+40*8*365
+$116,800 per year
+</pre></div>
+</div>
+<p>.</p>
+<p><a class="reference external" href="mailto:Lieber&#37;&#52;&#48;post&#46;harvard&#46;edu">Lieber<span>&#64;</span>post<span>&#46;</span>harvard<span>&#46;</span>edu</a></p>
+<p>Sarah Lieber, MD<br />
+UNC</p>
+<p>My #1 Reviewer of all time</p>
+<p>.</p>
+<p>— Empedocles/Force —
+0. Love ❤️</p>
+<ol class="arabic simple">
+<li><p>Strife 🏹</p></li>
+</ol>
+<p>— Thales/Mass —
+2. Water 🌊
+3. Air 💨
+4. Fire 🔥
+5. Earth 🌍</p>
+<p>— Democritus/Acceleration —
+6. Tomos 🔪
+7. Utmost 🎯</p>
+<p>.</p>
+<p>Maradona led Napoli to the club’s first Serie A title in 1987 and a second in 1990. Murals of the Argentine still adorn walls across the city.</p>
+<p>.</p>
+<p>Napoli (0) champions in 1987<br />
+Diego joined in 1984, never champions before<br />
+58y drought</p>
+<p>Barcelona (17) champions in 2004<br />
+Messi joined in 2004, last champions in 1998<br />
+6y drought</p>
+<p>Real Madrid (32) champions in 2011<br />
+Ronaldo joined in 2009, last champs in 2007<br />
+2y drought</p>
+<p>Juventus (28) champions 2011-2020<br />
+Ronaldo joined in 2018<br />
++7y surplus</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>“to the grave, or rather to his death, for he had no grave. He died of the swelling which was an abomination to the earth goddess. When a man was afflicted with swelling in the stomach and the limbs he was not allowed to die in the house. He was carried to the Evil Forest and left there to die. There was the story of a very stubborn man who staggered back to his house and had to be carried again to the forest and tied to a tree. The sickness was an abomination to the earth, and so the victim could not be buried in her bowels. He died and rotted away above the earth, and was not given the first or the second burial. Such was Unoka’s fate. When they carried him away, he took with him his flute.”
+
+Excerpt From
+Things Fall Apart
+Chinua Achebe
+https://books.apple.com/us/book/things-fall-apart/id1230757278
+This material may be protected by copyright.
+
+Alcohol steatosis vs NASH  
+</pre></div>
+</div>
+<p>.</p>
+<p>$740B defense</p>
+<p>.</p>
+<p>The essence of civilization, as we know, is dullness. In an ultimate analysis, it is only an elaborate invention … for abolishing the fierce passions, the unchastened enjoyments, the awakening dangers, the desperate conflicts, … the excitements of a barbarous age, and to substitute for them indoor pleasures, placid feelings, and rational amusements. That a grown man should be found to write reviews is in itself a striking fact. Suppose you asked Achilles to do such a thing, do you imagine he would consent?<br />
+—Walter Bagehot, on Matthew Arnold (1853)</p>
+<p>.</p>
+<p>Dawson’s Creek!</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Once you have a MyChart account, follow these steps to access the COVID-19 vaccine request form:
+ 
+	1	Log into MyChart with your username and password.
+	2	You will then be directed to the home screen, where you will see “COVID-19 Vaccine Request Form for JHM Personnel” near the top of the screen.
+	3	Click on the green “Fill out form” button to access the form.
+ 
+If you don’t see the form when you access MyChart, navigate to Menu &gt; Questionnaires &gt; COVID-19 Vaccine Request Form for JHM Personnel. If you have issues or questions, please contact the Epic MyChart help desk
+</pre></div>
+</div>
+<p>.</p>
+<p>Dawson’s Creak!!<br />
+Never before seen kids<br />
+Talk, talk, and talk<br />
+About sex<br />
+But never do it</p>
+<p>.</p>
+<p>“I mistrust all systematizers and avoid them. The will to a system is a lack of integrity.”</p>
+<p>Excerpt From<br />
+Twilight of the Idols<br />
+Friedrich Nietzsche<br />
+<a class="reference external" href="https://books.apple.com/us/book/twilight-of-the-idols/id1101368153">https://books.apple.com/us/book/twilight-of-the-idols/id1101368153</a><br />
+This material may be protected by copyright.</p>
+<p>.</p>
+<p>“I have explained how it was that Socrates could repel: it is therefore all the more necessary to explain how he could fascinate. That he discovered a new kind of contest, that he became its first fencing master for the noble circles of Athens, is one point. He fascinated by appealing to the competitive impulse of the Greeks — he introduced a variation into the wrestling match between young men and youths. Socrates was a great erotic.”</p>
+<p>Excerpt From<br />
+Twilight of the Idols<br />
+Friedrich Nietzsche<br />
+<a class="reference external" href="https://books.apple.com/us/book/twilight-of-the-idols/id1101368153">https://books.apple.com/us/book/twilight-of-the-idols/id1101368153</a><br />
+This material may be protected by copyright.</p>
+<p>.</p>
+<p>Dawson’s Creek — lousiest TV series ever?<br />
+Probably just laughable ever!<br />
+The protagonist is so gay —<br />
+Always rescued from having sex by the cosmos<br />
+But that never bothered him<br />
+He just wants to talk!!<br />
+Mostly about his feelings :-)</p>
+<p>.</p>
+<p>Dawson’s Creek — lousiest TV series ever?<br />
+Probably just laughable ever!<br />
+The protagonist is so gay —<br />
+Always rescued from having sex by the cosmos<br />
+But that never bothered him<br />
+He just wants to talk!!<br />
+Mostly about his feelings :-)</p>
+<p>.</p>
+<p>2020!!!<br />
+Apple has a higher P/E ratio than Facebook<br />
+Than any of the big boys, save Amazon</p>
+<p>.</p>
+<p>Platonic<br />
+1.Definition: like anything in Dawson’s Creek!<br />
+Eros as contrasted with Eris</p>
+<p>I think it was 💯 Eris with Ms. Eli Woodson</p>
+<p>There were bite marks and hickeys as proof</p>
+<p>.</p>
+<p>Notes from the first 30min of BST 651 that I missed</p>
+<ol class="arabic simple">
+<li><p>Work on HWs continuously before due date announced (daily grind)</p></li>
+<li><p>Use the textbook since it complements the lectures (we invested a lot in it — 3yrs)</p></li>
+<li><p>And these 30 minutes, <code class="docutils literal notranslate"><span class="pre">omitted</span></code>, have left me in a precarious situation</p></li>
+</ol>
+<p>Chaos theory, initial conditions, and their importance!</p>
+<p>.</p>
+<p>Describe —</p>
+<p>Change — destruction of forbears’ edifice<br />
+Beauty — remnant building blocks<br />
+Aesthetics — new edifice, the becoming</p>
+<p>“I am often asked why, after all, I write in German: nowhere am I read worse than in the Fatherland. But who knows in the end whether I even wish to be read today? To create things on which time tests its teeth in vain; in form, in substance, to strive for a little immortality — I have never yet been modest enough to demand less of myself. The aphorism, the apothegm, in which I am the first among the Germans to be a master, are the forms of “eternity”; it is my ambition to say in ten sentences what everyone else says in a book — what everyone else does not say in a book.</p>
+<p>I have given mankind the most profound book it possesses, my Zarathustra; shortly I shall give it the most independent.”</p>
+<p>Twilight of the Idols<br />
+Friedrich Nietzsche</p>
+<p>Aphorism ~ Fractal<br />
+Zarathustra ~ Eternal recurrence</p>
+<p>.</p>
+<p>Dynamometer: strength vs ugliness</p>
+<p>“Nothing is beautiful, except man alone: all aesthetics rests upon this naïveté, which is its first truth. Let us immediately add the second: nothing is ugly except the degenerating man — and with this the realm of aesthetic judgment is circumscribed. Physiologically, everything ugly weakens and saddens man. It reminds him of decay, danger, impotence; it actually deprives him of strength. One can measure the effect of the ugly with a dynamometer. Wherever man is depressed at all, he senses the proximity of something “ugly.” His feeling of power, his will to power, his courage, his pride — all fall with the ugly and rise with the beautiful. In both cases we draw an inference: the premises for it are piled up in the greatest abundance in instinct. The ugly is understood as a sign and symptom of degeneration: whatever reminds us in the least of degeneration causes in us the judgment of “ugly.” Every suggestion of exhaustion, of heaviness, of age, of weariness; every kind of lack of freedom, such as cramps, such as paralysis; and above all, the smell, the color, the form of dissolution, of decomposition — even in the ultimate attenuation into a symbol — all evoke the same[…]”</p>
+<p>Excerpt From
+Twilight of the Idols
+Friedrich Nietzsche
+<a class="reference external" href="https://books.apple.com/us/book/twilight-of-the-idols/id1101368153">https://books.apple.com/us/book/twilight-of-the-idols/id1101368153</a>
+This material may be protected by copyright.</p>
+<p>.</p>
+<p>The Economists recurrent wonderment at the elusive “Happiness” — say, for instance, why Ugandans may seem <a class="reference external" href="https://www.economist.com/christmas-specials/2013/12/21/bleak-chic">happier than Parisians</a> — often yields essays that are too clever by a half. But really the error of the question of happiness is the error of teleology, of eternity, of idealism, of concepts, of systematizing, of metaphysical philosophy. This is the primal sin and all human errors have inverted this “end” into a “beginning”, a foundation.</p>
+<p>The simple cure, then, is a return to the testimony of — first and foremost — the chemistry, of today, of reality, of senses, of simplicity, of historical philosophy. This is whence primeval man comes and where the primitive and savage tribes are in close proximity, and therefore happier! But also more miserable at the same time. There is <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#credo">flux</a>, stimulation, there is strife, there is life!! <span id="id2">[<a class="reference internal" href="../references.html#id47" title="Yours truly. The mustard seed of my philosophy. 2021. URL: https://muzaale.github.io/denotas/bdn202012.html.">13</a>]</span></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="mf">3.</span><span class="n">Familiar</span><span class="p">,</span> <span class="n">μ</span>
+                 \
+                 <span class="mf">4.</span><span class="n">Comfort</span><span class="p">,</span> <span class="n">ψ</span>
+                 <span class="o">/</span>
+                <span class="mf">2.</span><span class="n">Unknown</span><span class="p">,</span> <span class="n">σ</span>
+</pre></div>
+</div>
+<p>.</p>
+<p>Power relations: the building blocks of all things bright and beautiful</p>
+<p>Aesthetics: how a given artist builds an edifice based on power relations</p>
+<p>.</p>
+<p>Nutshell<br />
+Aphorisms<br />
+Oscar Wilde<br />
+Nietzsche<br />
+Eternity</p>
+<p>.</p>
+<p>Frank Dewhurst donated one of his tow kidney to Linda Hall on May..<br />
+But KT is not the most recently utilized therapeutic modality<br />
+Dialysis is associated with muscle crumps, itching..<br />
+Many more hours have to be committed to pharmacy visits…<br />
+Living kidney donor. Transplantation is thus superior to dialysis<br />
+Why, then, do 120 000 patients receive dialysis.. compared with..?<br />
+An eligible donor is able to donate on behalf of<br />
+Thus there  is a need to improve our understanding of the risks most pertinent to older donors</p>
+<p>.</p>
+<p>Wed, Dec 23, 2020<br />
+Baltimore to Entebbe<br />
+J3Y9WD | Abimereki Muzaale<br />
+SFP95641 | <a class="reference external" href="https://travel.info-coronavirus.be">United Airlines</a><br />
+KTN: TT129232B (TSA Pre)</p>
+<p>.</p>
+<p>handed in my final exam some where over the atlantic!</p>
+<p>.</p>
+<p>How preponderating under the atmospheric comsmogan of the classical universe?</p>
+<p>I am in a good soul/bright and there are no symptoms whatsoever to symbolize the mabisity!</p>
+<p>.</p>
+<p>WW II general<br />
+Victory speech
+.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Access</span> <span class="n">mobile</span> <span class="n">money</span>   
+<span class="o">*</span><span class="mi">131</span><span class="c1"># Balance  </span>
+<span class="o">*</span><span class="mi">165</span><span class="c1"># MTN menu   </span>
+<span class="o">*</span><span class="mi">165</span><span class="o">*</span><span class="mi">8</span><span class="o">*</span><span class="mi">1</span>  
+<span class="o">*</span><span class="mi">131</span><span class="o">*</span><span class="mi">4</span><span class="c1"># decay of various bundles  </span>
+<span class="n">Pin</span><span class="c1"># 16181</span>
+<span class="o">*</span><span class="mi">165</span><span class="o">*</span><span class="mi">3</span><span class="c1">#</span>
+<span class="o">*</span><span class="mi">150</span><span class="o">*</span><span class="mi">3</span><span class="c1"># OTT status</span>
+<span class="o">*</span><span class="mi">165</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="mi">3</span><span class="o">*</span><span class="mi">1</span><span class="o">*</span><span class="mi">1</span><span class="c1">#</span>
+</pre></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "myenv"
+        },
+        kernelOptions: {
+            name: "myenv",
+            path: "./bdn2020"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'myenv'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

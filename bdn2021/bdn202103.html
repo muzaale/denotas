@@ -1,0 +1,571 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>03/2021 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn2021/bdn202103';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Nothin'</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter3.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn2021/bdn202103.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bdn2021/bdn202103.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>03/2021</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="id1">
+<h1>03/2021<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p>The slippery slope: Updated 03/03/21</p>
+<p>Objective<br />
+Rigorous<br />
+Error (Process)<br />
+Sloppy (Reviewers)<br />
+Fraud (Investigators)</p>
+<p>.</p>
+<p>Tayebwa, Anita<br />
+Alex, Sheba<br />
+Instanbul, Turkey</p>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>Zoom with Tayebwa: 7pm Turkey</p></li>
+<li><p>Send him the link</p></li>
+<li><p>Michael B</p></li>
+</ol>
+<p>.</p>
+<p>The first, purely theoretical, article was written by Watson and Crick from the University of Cambridge. Immediately following this article were two data-rich papers by researchers from King’s College London: one by Maurice Wilkins and two colleagues, the other by Franklin and a PhD student, Ray Gosling.</p>
+<p>Deductive (Watson and Crick) —&gt; One offspring battles with Schizophrenia; Cognitive Power
+Inductive (Franklin and Wilkins) —&gt; Typical career professionals in their brood; Sensory Power<br />
+?? —&gt; ??; Rhetorical Power</p>
+<p>.</p>
+<p>I can’t stand Tyler Perry’s art
+Do recognize the strength of the “School of Resentment”<br />
+Power in numbers.. of the normal distribution<br />
+Not my aesthetic</p>
+<p>.</p>
+<p>The show is called “Sisters”, but the TRUE sisters are the dudes!</p>
+<p>.</p>
+<p>March 9, 2021</p>
+<p>Abideth these three: sensory, cognitive, and rhetorical power.</p>
+<p>The greatest of all is —</p>
+<p>.</p>
+<p>Oprah is a hardly surprising phenomenon<br />
+You can say of the sensory, cognitive, rhetorical<br />
+Those who have been chained have developed<br />
+Most advanced cognitive powers<br />
+And these have been filled by the passions</p>
+<p>X</p>
+<p>Friendship between Tyler Perry and Oprah<br />
+Can be deduced to be founded on this<br />
+A resonance that strikes quite deeply<br />
+Having survived as double-minorities<br />
+School of resentment has no higher priests</p>
+<p>.</p>
+<p>Robustness can’t be measured?<br />
+How about time taken to run a mile?</p>
+<p>.</p>
+<p>Video conferencing relighting from<br />
+Lumecube??<br />
+Yup -/ gotta get it</p>
+<p>.</p>
+<p>Lyrics and music have never been better-matched:</p>
+<p>Out to tour the places he would not<br />
+And some you never knew would get you hot<br />
+Nothin’ is forbidden when we touch</p>
+<p>Watch Madea’s farewell for vivid portrayal of case</p>
+<p>.</p>
+<p>How to make background blurry on Zoom</p>
+<p>I like this!!!</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Like in Molier’s 1670 play Le bourgeois gentilhomme, when Mr. Jourdain is surprised and delighted to learn that he has been speaking prose all his life without knowing it, many scientists such as Richard Feynman and Stephen Hawking are practicing philosophy without knowing. They discourse on ontology (the nature of things), epistemology (the nature of knowledge), identity, change, causality, necessity and the entire range of issues that one might rightly describe as metaphysics. 
+
+Einstein, in a lecture delivered to the Nordic Assembly of Naturalists at Gothenburg, in lieu of his Nobel Lecture on the photoelectric effect, states the following at the outset:
+
+“If we consider that part of the theory of relative which may nowadays in a sense be regarded as bona fide scientific knowledge, we note two aspects which have a major bearing on this theory. The whole development of the theory turns on the question of whether there are physically preferred stats of motion in Nature (physical relativity problem). Also, concepts and distinctions are only admissible to the extent that observable facts cam be assigned to them without ambiguity (stipulation that concepts and distinctions should have meaning). This postulate, pertaining to epistemology, proves to be of fundamental importance.“ (1)
+
+The prominent Einstein consciously practiced philosophy, explicitly conducted thought experiments, brought the rigor of metaphysics to bear upon untenable assumptions that had dogged the world of classical physics since the time of Newton, and set off a scientific and technological revolution that is still in its infancy today. Technology is still playing “catchup” with the insights articulated by Einstein between 1905 and 1935. 
+
+Such dependency between metaphysical concepts and empirical verification is not in any way opposed to Feyman’s conceptualization of the scientific enterprise: postulates, precise predictions, verification (or failure), revision of the postulates, etc. In my final project on the revolution of Organ Transplantation, the “concept” of replacing a failed human organ with a functioning one from an animal, identical twin, full-sibling, parent, or non-biological relative started just as that — a concept. How identical the allograft has to be to the recipient, such as with regard to HLA-DR and immunogenetics, is a matter of metaphysics. Whether such HLA-identity is necessary. Whether such an allograft will survive for a few days or more. Whether the immune rejection of the organ is an ontological fact, or whether it can be changed by immunosuppressive therapy. Whether one can find a donor with identical HLA (i.e., what we now know epistemologically as “neccessary” through tissue typing vs. identical twin in our earlier, more naive epistemology). All these are metaphysical questions the field of transplant grappled with in its early days and still does today. Whether or not transplant professionals are aware they are prating philosophy is one thing. But the fact is that they are. 
+
+A conscious recognition of this fact may give science the sort of impetus and razor-focus that Einstein had. Maybe the slow progress of science is symptomatic of the neglect of philosophy among prominent modern scientists. We find ourselves “reinventing the wheel“ of metaphysics, unwittingly, like Mr. Jourdain.
+
+References
+1. Einstein, A. Fundamental ideas and problems of the theory of relativity. July 11, 1923.  https://www.nobelprize.org/uploads/2018/06/einstein-lecture.pdf
+
+</pre></div>
+</div>
+<p>.</p>
+<p>“The earth has been a madhouse”, he says in the Genealogy of Morals, and otherworldly philosophers, along with priests, theologians, and others, have played a large a part in making it so. Such claims demand rigorous scrutiny, so it’s pleasing that in the book under review Nietzsche’s account of ressentiment is carefully investigated and diligently analyzed.</p>
+<p>x</p>
+<p>“By your patience, Aunchient Pistol. Fortune is painted blind, with a muffler afore his eyes, to signify to you that Fortune is blind; and she is painted also with a wheel, to signify to you, which is the moral of it, that she is turning, and inconstant, and mutability, and variation; and her foot, look you, is fixed upon a spherical stone, which rolls, and rolls, and rolls. In good truth, the poet makes a most excellent description of it. Fortune is an excellent moral.”</p>
+<p>Excerpt From<br />
+Works of William Shakespeare<br />
+William Shakespeare<br />
+<a class="reference external" href="https://books.apple.com/us/book/works-of-william-shakespeare/id370188174">https://books.apple.com/us/book/works-of-william-shakespeare/id370188174</a><br />
+This material may be protected by copyright.</p>
+<p>x</p>
+<p>—Sensory vs otherness/Ascetic-Weak<br />
+Things base and vile, holding no quantity,</p>
+<p>—Cognitive vs metaphysics/Ressentiment<br />
+Love can transpose to form and dignity.<br />
+Love looks not with the eyes, but with the mind;<br />
+And therefore is wing’d Cupid painted blind.<br />
+Nor hath love’s mind of any judgment taste</p>
+<p>— Motor vs rhetoric/Peacetime<br />
+Wings and no eyes figure unheedy haste</p>
+<p>Excerpt From<br />
+Works of William Shakespeare<br />
+William Shakespeare
+<a class="reference external" href="https://books.apple.com/us/book/works-of-william-shakespeare/id370188174">https://books.apple.com/us/book/works-of-william-shakespeare/id370188174</a><br />
+This material may be protected by copyright.</p>
+<p>.</p>
+<p>Statistics is at the interface of science and its concerns with precision<br />
+—- Zeger</p>
+<p>.</p>
+<p>Lin Wang, doctoral thesis!!!</p>
+<p>.</p>
+<p>Shakespeare sacrificed Sir John Falstaff after only two plays (plus merry wives of Windsor)</p>
+<p>Tyler Perry only sacrificed Ms. Mabel “Madea” Simmons after 30 plays, films, and TV shows</p>
+<p>One insisted on the development of Harry the Prince of Wales from a rascal to a dutiful Henry V. The other is totally stunted — perhaps also harming his audience? Or merely putting a mirror up to it?</p>
+<p>.</p>
+<p>Here feel we not the penalty of Adam?</p>
+<p>.</p>
+<p>He that hath learned no wit by nature nor art may complain of good breeding, or comes of a very dull kindred<br />
+— As You Like It</p>
+<p>.</p>
+<p>For ever and a day<br />
+— As You Like It</p>
+<p>.</p>
+<p>Counterfeit</p>
+<p>.</p>
+<p>Look up his publications, they touch on multilevel models and Scot Zeger</p>
+<p>Alessandro Orlando, MPH PhD Candidate (Joe Coresh)<br />
+Update/Progress = Evidence/Likelihood * Prior/Intuition<br />
+Overcoming = Man*Beast</p>
+<p>Thats awesome!</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "myenv"
+        },
+        kernelOptions: {
+            name: "myenv",
+            path: "./bdn2021"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'myenv'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

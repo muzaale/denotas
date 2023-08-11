@@ -1,0 +1,747 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>08/2021 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn2021/bdn202108';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Nothin'</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter3.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn2021/bdn202108.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bdn2021/bdn202108.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>08/2021</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="id1">
+<h1>08/2021<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<p><a class="reference external" href="https://www.beeradvocate.com/beer/profile/25888/457684/">https://www.beeradvocate.com/beer/profile/25888/457684/</a></p>
+<p>Coffee stout (2020 dark matter coffee)</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>9 mile run records as of 8/3/2021
+2021
+8/5 - 8’37” *** second best over 9 miles 
+8/3 - 8’39” *** third best over 9 miles 
+7/31 - 8’34” *** best over 9 miles 
+7/3 - 8’58”
+
+2020
+12/12 - 9’13”
+12/06 - 9’04”
+
+2019
+9/14 - 9’14”
+9/07 - 9’56”
+3/17 - 8’48” 
+2/23 - 8’56”
+
+2018
+12/18 - 9’09”
+12/10 - 8’42”  *** Fourth best ever 
+12/04 - 9’05”
+11/11 - 10’34”
+
+2017
+12/03 - 8’34” (3 mile)
+12/02 - 7’32” (3mile) * best on record over 3mi
+9/08 - 8’41” (3 mile) 
+07/2021 — 100miles
+05/2021 — 111miles
+11/2018 — 110miles
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Tyler Perry is a self-made billionaire<br />
+He understands what it takes to become<br />
+Yet instead he creates preachy characters<br />
+We are never seduced by any story of becoming<br />
+At bottom of his film and TV one finds this failure</p>
+<p>.</p>
+<p>Explains why artist seduce millions of folks
+May even seduce one into a relationship<br />
+But because a relationship is about becoming,<br />
+And art about magic, illusions, genius beings—<br />
+The man is found out and the relationship fails</p>
+<p>.</p>
+<p>I’m poorly calibrated for calorie replacement after a run</p>
+<p>Hence forth, I’ll only savor food — never for the “fill”</p>
+<p>Maybe enjoy beer more?</p>
+<p>.</p>
+<p>Ones gotta learn Italian<br />
+And maybe Español<br />
+So musical, dulcet —</p>
+<p>.</p>
+<p>This was the era of the “Gentleman’s C” -<br />
+Where overzealous studiousness was<br />
+Frowned upon by the scions of<br />
+American’s regnant WASP aristocracy.<br />
+— Stephen Greenblatt at Yale</p>
+<p>.</p>
+<p>When Paul Chelimo wins bronze for USA<br />
+Is it an American process at work?<br />
+Say openness to immigration ??</p>
+<p>And when Marvell Jacob’s wins gold for Italy<br />
+Does one celebrate an Italian process?<br />
+Like intermarriage with an African-American?</p>
+<p>But witness Italy win the men’s 100m x 4<br />
+Lorenzo Patta, Marcell Jacobs, Eseosa Desalu<br />
+Filippo Tortu — Only the Italian process counts!!</p>
+<p>.</p>
+<p>I’m not interested in burning calories<br />
+I’m interested in performance</p>
+<p>.</p>
+<p>Oxtail<br />
+Two patties — beef only<br />
+Coconut bread</p>
+<p>.</p>
+<p>Benoni</p>
+<p>.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/NN_Running_Team">https://en.wikipedia.org/wiki/NN_Running_Team</a></p>
+<p>.</p>
+<p>Olympics<br />
+Male/Female competitions<br />
+Intersex<br />
+Semenya<br />
+Christine Mboma</p>
+<p>x</p>
+<p>Values<br />
+Fairness<br />
+Nature<br />
+Interventions<br />
+Gaussian distribution of testosterone</p>
+<p>.</p>
+<p>Hamlet is Shakespeare moralizing about all sorts of things<br />
+There is really no action throughout the play<br />
+And somehow folks think it’s a great work?<br />
+Probably because we like to read self-help<br />
+Especially when its from a “proven” authority</p>
+<p>.</p>
+<p>Ms. Shirley — Thomas is the manager (earphones with mic 🎙)</p>
+<p>He calls me by name and handed me a loyalty card :)</p>
+<p>Ms. Micheala has served me most. She’s nice. And she brought me tea and asked whether I’d be having Grapefruit brûlée without me prompting!</p>
+<p>Brian’s looks like Thomas — at least with mask on, physique is same. Maybe jelled hair? Find what distinguishes him</p>
+<p>.</p>
+<p>TV series written by women<br />
+— Talk<br />
+— Talk<br />
+— Talk<br />
+— Know how you feel<br />
+Men would rather commit suicide</p>
+<p>.</p>
+<p>Movie that inspired end of the road!!</p>
+<p>.</p>
+<p>“I shall th’ effect of this good lesson keep<br />
+As watchman to my heart. But, good my brother,<br />
+Do not, as some ungracious pastors do,<br />
+Show me the steep and thorny way to heaven;<br />
+Whilst, like a puff’d and reckless libertine,<br />
+Himself the primrose path of dalliance treads<br />
+And recks not his own read”</p>
+<p>Excerpt From<br />
+Works of William Shakespeare<br />
+William Shakespeare<br />
+<a class="reference external" href="https://books.apple.com/us/book/works-of-william-shakespeare/id370188174">https://books.apple.com/us/book/works-of-william-shakespeare/id370188174</a><br />
+This material may be protected by copyright.</p>
+<p>.</p>
+<p>Thrift, thrift, Horacio!<br />
+Indeed, indeed, sirs, but this troubles me.<br />
+Fear it, Ophelia, fear it, my dear sister;<br />
+For the apparel oft proclaims the man;</p>
+<p>.</p>
+<p>Grubhub<br />
+8/15/21<br />
+Savior African Restaurant<br />
+<span class="math notranslate nohighlight">\(45.35  
+Did they cutoff \)</span>17??<br />
+For the Tilapia they didn’t send??</p>
+<p>.</p>
+<p>8/15/21</p>
+<p>Episcopalian church on University
+The two J’s<br />
+— Jay?
+— Jen?
+Great conversation<br />
+Show up!<br />
+Organists on demand !!</p>
+<p>.</p>
+<p>Sour Flanders<br />
+Flanders Red<br />
+Great styles!!</p>
+<p>.</p>
+<p>“We gave them everything… What we couldn’t give them was the Will to Fight..”<br />
+— Biden</p>
+<p>.</p>
+<p>Tarantino doesn’t do rushed plots or scenes<br />
+He indulges in every scene and clearly enjoys himself<br />
+Overflowing banter and obsequious stuff is in overplus<br />
+Serves to define the resentment felt by lead<br />
+Prepares the audience for the ultimate catharsis in revenge</p>
+<p>.</p>
+<p>Tyler Perry:<br />
+Are you sure?<br />
+SMH!</p>
+<p>.</p>
+<p>Nike Flyknit — Nike engineered a fabric that fits like a sock</p>
+<p>.</p>
+<p>One should not mistake Malthus for nature</p>
+<p>.</p>
+<p>— While watching Gossip Girl —</p>
+<p>Why do people like The Wire so much?</p>
+<p>Because the true villain is the system</p>
+<p>The Wire treated its audiences as intelligent people</p>
+<p>When television history is written, little else will rival ‘The Wire.’</p>
+<p>Because it resists typecasting. The vast majority of shows fit people into something of a mold, and usually into a binary set of categories— hero vs. villain, smart vs. stupid, calculated vs. impulsive. The Wire doesn’t do that. Every significant character is multi-layered and complex. Their flaws and their virtues are gradually revealed through their actions rather than expressed in simple terms. Characters who are tragically flawed in some ways are prodigious in others. And the show does a phenomenal job of showing how most of those characters became who they were. That makes it maybe the most impressive TV series ever created.</p>
+<p>.</p>
+<p>Episode after episode of earth-shattering pettiness<br />
+And rushed scenes of glamour as an excuse for a plot point</p>
+<p>.</p>
+<p>Injuries after upgrading to size 12<br />
+— left big toe<br />
+— left shin</p>
+<p>.</p>
+<p>Forescast<br />
+Heinrich<br />
+Nietzsche</p>
+<p>.</p>
+<p>Bagel, schmear &amp; lox</p>
+<p>.</p>
+<p>Pleasure from senses<br />
+But what about from power?</p>
+<p>.</p>
+<p>Explanations!<br />
+Apologies!<br />
+Makeup’s<br />
+Breakups<br />
+Plotting<br />
+Conniving<br />
+Soapbox</p>
+<p>.</p>
+<p>“You look like a million bucks before taxes!” he declared to the long-legged blonde</p>
+<p>.</p>
+<p>Gelato 🍨 vs Ice-cream 🍦</p>
+<p>.</p>
+<p>Gossip girl<br />
+— Anticipated social media frenzy, influencers<br />
+— But missed the financial angle to it all<br />
+— That’s where Zuckerberg came in</p>
+<p>.</p>
+<p>Gossip Girls<br />
+S5 E13: G.G.<br />
+27:46/42:12</p>
+<p>Only redeeming moment:<br />
+Oh, Siras, one father is not enough!</p>
+<p>Oh, another redeeming moment:<br />
+S5 E24: The Return of the Ring<br />
+32:56/42:10</p>
+<p>Chuck: Now I have nothing<br />
+Blair: You have me<br />
+Chuck: It’s not enough! … I don’t wanna be Mr. Blair Waldorf (with contorted face)</p>
+<p>Episode &amp; series should have ended here!!</p>
+<p>.</p>
+<p>How about looking for redeeming qualities in people, organizations, cultures? Never criticize! Leverage!</p>
+<p>.</p>
+<p>Houblon Chouffe!!<br />
+IPA Tripel :)</p>
+<p>.</p>
+<p>Watch gossip girls<br />
+Ask yourself this:<br />
+Is this depiction of men real?<br />
+From the female perspective?<br />
+No, no, no!</p>
+<p>Might women view male<br />
+Depictions of women<br />
+Similarly?<br />
+Likely so<br />
+Balanced out!</p>
+<p>.</p>
+<p>Gossip girl has the incoherence of<br />
+Midsummer Nights dream<br />
+But no compelling origin of the frenzy<br />
+The Bard gave us errant fairies 🧚‍♀️<br />
+Here we have dull, contrived relationships</p>
+<p>.</p>
+<p>Busboys make better Burgers than Koopers<br />
+Maybe it’s the gentler traffic?<br />
+Overheated grills screw shitup</p>
+<p>.</p>
+<p>Diet or exercise?</p>
+<p>— % body fat, BMI/2, 15% for me, 31 lbs<br />
+— % muscle, 85%, 172 lbs<br />
+— insulin resistance vs multi-system regulation<br />
+— demand (body) vs supply (diet, oxygen)<br />
+— exercise is proportionately largest demand</p>
+<ol class="arabic simple">
+<li><p>Impossible to exercise without eating, but possible to eat without exercising</p></li>
+<li><p>Since use-disuse atrophy is a fact, no amount of good food can build muscle. Only exercise!</p></li>
+<li><p>Therefore emphasize should be on exercise alone. Dietary demands will adapt to it :)</p></li>
+</ol>
+<p>.</p>
+<p>Annual activity by Apple Watch</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="mi">18</span><span class="o">+</span><span class="mi">27</span><span class="o">+</span><span class="mi">82</span><span class="o">+</span><span class="mi">111</span><span class="o">+</span><span class="mi">64</span><span class="o">+</span><span class="mi">100</span><span class="o">+</span><span class="mi">100</span>
+<span class="mi">500</span> <span class="n">miles</span> <span class="n">run</span> <span class="kn">from</span> <span class="nn">Jan</span> <span class="o">-</span> <span class="n">Aug</span><span class="p">,</span> <span class="mi">2021</span>
+
+<span class="mi">27</span><span class="o">+</span><span class="mi">25</span><span class="o">+</span><span class="mi">46</span>
+<span class="mi">98</span> <span class="n">miles</span> <span class="n">run</span> <span class="kn">from</span> <span class="nn">Sep</span> <span class="o">-</span> <span class="n">Dec</span><span class="p">,</span> <span class="mi">2020</span>
+
+<span class="mi">36</span><span class="o">+</span><span class="mi">36</span><span class="o">+</span><span class="mi">73</span><span class="o">+</span><span class="mi">73</span><span class="o">+</span><span class="mi">46</span><span class="o">+</span><span class="mi">25</span><span class="o">+</span><span class="mi">27</span>
+<span class="mi">316</span> <span class="n">miles</span> <span class="n">run</span> <span class="kn">from</span> <span class="nn">Feb</span> <span class="o">-</span> <span class="n">Dec</span><span class="p">,</span> <span class="mi">2019</span>
+
+<span class="mi">13</span><span class="o">+</span><span class="mi">23</span><span class="o">+</span><span class="mi">35</span><span class="o">+</span><span class="mi">7</span><span class="o">+</span><span class="mi">5</span><span class="o">+</span><span class="mi">110</span><span class="o">+</span><span class="mi">73</span>
+<span class="mi">266</span> <span class="n">miles</span> <span class="n">run</span> <span class="kn">from</span> <span class="nn">Jan</span> <span class="o">-</span> <span class="n">Dec</span><span class="p">,</span> <span class="mi">2018</span>
+
+<span class="mi">25</span><span class="o">+</span><span class="mi">25</span>
+<span class="mi">50</span> <span class="n">miles</span> <span class="n">run</span> <span class="kn">from</span> <span class="nn">Nov</span> <span class="o">-</span> <span class="n">Dec</span><span class="p">,</span> <span class="mi">2017</span>
+</pre></div>
+</div>
+<p>.</p>
+<p>Entourage (2004-2011)</p>
+<p>vs</p>
+<p>Gossip Girls (2007-2012)</p>
+<p>.</p>
+<p>Weight goals (BMI/Construct-Driven) .</p>
+<p>vs.</p>
+<p>Performance goals (Minutes/Mile-Driven)</p>
+<p>.</p>
+<p>Tentative names.</p>
+<ul class="simple">
+<li><p>GTPCI Advisor: Julie Hoover-Fong</p></li>
+<li><p>Thesis Mentor: Dorry Segev</p></li>
+<li><p>Someone in GTPCI: Karen Bandeen-Roche</p></li>
+<li><p>Primary SPH: David Celentano</p></li>
+<li><p>SPH or SOM: Pete Miller</p></li>
+</ul>
+<p>Alternates</p>
+<ul class="simple">
+<li><p>GTPCI: Fabian Johnston  <a class="reference external" href="mailto:fjohnst4&#37;&#52;&#48;jhmi&#46;edu">fjohnst4<span>&#64;</span>jhmi<span>&#46;</span>edu</a></p></li>
+<li><p>SPH: Brian Caffo</p></li>
+</ul>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "myenv"
+        },
+        kernelOptions: {
+            name: "myenv",
+            path: "./bdn2021"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'myenv'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

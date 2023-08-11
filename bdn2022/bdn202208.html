@@ -1,0 +1,806 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>08/2022 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bdn2022/bdn202208';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Nothin'</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter3.html">prudence</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbdn2022/bdn202208.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bdn2022/bdn202208.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>08/2022</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="id1">
+<h1>08/2022<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+#nietzsche 
+#quantum
+#relativity 
+
+The physicists believe in a &quot;true world&quot; after their own kind; a fixed systematizing of atoms to perform necessary movements, and holding good equally of all creatures, so that, according to them, the &quot;world of appearance&quot; reduces itself to the side of general and generally-needed Being, which is accessible to every one according to his kind (accessible and also adjusted,—made &quot;subjective&quot;). But here they are in error. The atom which they postulate is arrived at by the logic of that perspective of consciousness; it is in itself therefore a subjective fiction. This picture of the world which they project is in no way essentially different from the subjective picture: the only difference is, that it is composed simply with more extended senses, but certainly with our senses.... And in the end, without knowing it, they left something out of the constellation: precisely the necessary perspective factor, by means of which every centre of power—and not man alone—constructs the rest of the world from its point of view—that is to say, measures it, feels it, and moulds it according to its degree of strength.... They forgot to reckon with this perspective-fixing power, in &quot;true being,&quot;—or, in school-terms, subject-being. They suppose that this was &quot;evolved&quot; and added;—but even the chemical investigator needs it: it is indeed specific Being, which determines action and reaction according to circumstances
+
+Aphorism 636
+Will to Power
+
+</pre></div>
+</div>
+<p>.</p>
+<p>All art glorifies or vilifies some value system<br />
+For this reason it exposed the artist<br />
+Tyler Perry is an open book<br />
+Shakespeare less so<br />
+Less so is it!!</p>
+<p>.</p>
+<p>08/07/22
+An older woman (always an older woman) remarked that I swam like a Dolphin!</p>
+<p>I approached her in the butterfly stroke, half-way on my 4000YD x10 set IM swim</p>
+<p>Today I achieved my weight goal of 170lbs, set on May 30, 2021</p>
+<p>.</p>
+<p>#loseit
+#colories</p>
+<p>08/07/22</p>
+<p>— 170 lbs goal achieved
+— Budget automatically updated
+— From 1710 CAL/day to 2459 CAL/day
+— 1710 only catered to BMR (10<em>79+6.25</em>180-5*42+5)
+— 749 is average calorie burn expected per day</p>
+<p>#mifflin
+#equation</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>07/09/19 at 08:25 HRS
+— Subtle breakthrough 
+— Reality vs Metaphysics 
+— Later at 17:46 HRS
+— Attribute it to Sapolsky
+— But Sapolsky picked lNietzsche 
+— From 3 —&gt; 5 —&gt; 8 variables 
+— That’s the metaphysics, the error 
+
+09/18/19 at 18:41 HRS
+— Inflection
+— Move kappa*
+— Over to beginning 
+
+01/28/20 at 09:00 HRS
+— Naivety  
+— Ontology
+— Epistemology 
+— Differentiation
+— Ranking 
+
+03/12/20 at 16:23 HRS
+— Raphael rooms 
+— Testing my framework
+— Only worked with kappa to left*
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#longfeet
+#raphael
+#metaphors
+#poetry
+#art
+
+Raphael has long feet 
+Dancing spirit from 
+Antiquity to Christianity 
+Brings these into harmony! 
+Now this is princely freedom 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+#cuddle
+#struggle
+
+That’s it!
+For me a 
+Cuddle is a
+Struggle :(
+</pre></div>
+</div>
+<p>.</p>
+<p>#schoolofresentment</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=1HdnjTCMzpg">https://www.youtube.com/watch?v=1HdnjTCMzpg</a></p>
+<p>The fact that I’m first hearing of Hazel Scott from Alicia Keys on 08/18/22 just might lead me to revise my stance on the school of resentment</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#breakthrough</span></code></p>
+<p>08/19/22</p>
+<p>— <a class="reference external" href="https://muzaale.github.io/denotas/_downloads/cace9aae79f7495bb0c47a0e1f406082/particles.dimensions.png">monotheism</a>
+— <a class="reference external" href="https://muzaale.github.io/denotas/bdn202106.html">ingredient</a>
+— tension
+— narratives
+— consequence
+*
+— theogony?
+— alternative?
+— necessary?
+— symptomatic?
+— overflowing? <span id="id2">[<a class="reference internal" href="../references.html#id26" title="P Pralavolio. History of elementary particles. 2013. URL: https://muzaale.github.io/denotas/bdn202305.html#types.">32</a>]</span>
+.</p>
+<p>Monk’s Cafe:<br />
+— S. Broad St<br />
+— Market St<br />
+— 16th</p>
+<p>.</p>
+<p>Mark lives exactly 10 miles from me!</p>
+<p>.</p>
+<p>De Ranke Guldenberg 8%<br />
+<a class="reference external" href="https://www.monkscafe.com/bottles/">https://www.monkscafe.com/bottles/</a></p>
+<p>.</p>
+<p>Idiom: The devil is in the details<br />
+Antithesis: Line of best fit (mean)<br />
+Synthesis: De devil is in de tail (spread)</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>*!lazy
+
+#beauty 
+0g.κοσμογονία,γ theomachy morals 
+1f.ἡ ἔρις,κ dionysian beyond
+2e.πρᾶξις,σ r2 olympics zarathustra
+
+   #ugly
+   3e.ἄσκησις,μ temples gay
+   4d.∫δυσφορία.dt,ψ #i. pessimism dawn
+   5c.φάρμακον,δ Ho frenzy human*
+
+   #aesthetics  
+   6b.ομορφιά,β elderly untimely
+      7a.τάξη,α X=0 youth tragedy
+
+     *!faithful
+
+ #II 96 on 08/17/22
+— protestant church: spread with startling rapidity
+— old time creed: costly masses, symbolism, pomp &amp; ceremony
+— leisure? oremus nos, deus laboret!
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>*!evolution 
+
+#beauty Inference
+0g.κοσμογονία,γ universe
+1f.ἡ ἔρις,κ vibes 
+2e.πρᾶξις,σ r2 muscle
+
+   #ugly Lincom
+   3e.ἄσκησις,μ atrophy
+   4d.∫δυσφορία.dt,ψ #i. hpa-axis
+   5c.φάρμακον,δ Ho psilocybin
+
+   #aesthetics  Coefficients
+   6b.ομορφιά,β gerontology
+      7a.τάξη,α X=0 youth
+
+     *!metaphysics 
+
+ #adm I #2 on 08/18/22
+— 0.cosmology,γ
+— 1.ecology,κ
+— 2.biology,σ r2
+— 3.maths,μ error #1
+— 4.philosophy,ψ #i. result #1 (de devil is in de tail)
+— 5.tech/rx,δ Ho fix #1
+— 6.art,β narrative #1
+— 7.life,α X=0 offbeat #1
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>*!alicia
+
+#beauty Inference
+0g.κοσμογονία,γ universe
+1f.ἡ ἔρις,κ vibes 
+2e.πρᾶξις,σ r2 muscle
+
+   #ugly Lincom
+   3e.ἄσκησις,μ atrophy
+   4d.∫δυσφορία.dt,ψ #i. hpa-axis
+   5c.φάρμακον,δ Ho opium
+
+   #aesthetics  Coefficients
+   6b.ομορφιά,β gerontology
+      7a.τάξη,α X=0 youth
+
+     *!keys
+
+ #adm I #3 on 08/18/22
+— chapters covering first 2 albums top-notch
+— but later chapters are woke &amp; dull (egypticism):
+— music, lyrics, activism
+*
+When I saw Alicia at the MTV Video Music Awards, the only thing I noticed was her hair and outfit. She looked like that woke vegan auntie who travels to Africa every year. I’m into it! Her skin is fresh and beautiful. Why would she even need makeup?
+*
+— the “big” questions
+— even answers!
+— sisterhoods
+*
+Hazel Scott, Progression in C# Major 
+https://www.youtube.com/watch?v=LmujUkwU19I
+https://www.youtube.com/watch?v=1HdnjTCMzpg
+</pre></div>
+</div>
+<p>a neat reference <span id="id3">[<a class="reference internal" href="../references.html#id27" title="F Nietzsche. Egyptianism. 1887. URL: https://muzaale.github.io/denotas/bdn202305.html?highlight=egyptian#egypticism.">33</a>]</span></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#noseplugs
+#noseclips
+#technique
+#backstroke 
+
+08/23/22
+Backstroke - Nose Plugs
+#noseplugchamp 
+
+https://www.youtube.com/watch?app=desktop&amp;v=qD4u2xwnt4E
+
+Missy Franklin
+
+https://en.m.wikipedia.org/wiki/Missy_Franklin
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#aiko</span></code></p>
+<p>3pm-8pm, 08/27/22<br />
+6901 Barrett Ind, Bethesda MD</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#loseit</span></code><br />
+Mifflin formula (men)<br />
+5 - 5<em>AGE + 6.25</em>HEIGHT + 10*WEIGHT</p>
+<p>Or</p>
+<p>166<em>MALE - 161 - 5</em>AGE + 6.25<em>HEIGHT + 10</em>WEIGHT</p>
+<p>.</p>
+<p>One can only be silent and sit peacefully when one hath arrow and bow; otherwise one prateth and quarrelleth. Let your peace be a victory!</p>
+<p>.</p>
+<p>The happiness of man is, “I will.” The happiness of woman is, “He will.”</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#LDA</span></code></p>
+<p>Class only available 1st term</p>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#poolparty</span></code></p>
+<p>6901 Barette Lane<br />
+Off Bradley boulevard<br />
+Mere 5min from Wisconsin</p>
+<p>Leffe blonde x 3<br />
+Westmalle dubbel x 2<br />
+Duvel x 2<br />
+Rocheford 10 x 2<br />
+Orval x 2<br />
+WoB &amp; Silver x 4 pack cans (Tripel-style)<br />
+Hefeweizen x 2 (Weihenstephaner)<br />
+Dogfish IPA 60min x 2</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#student</span>
+<span class="n">Calvin</span> <span class="n">Mathew</span>
+<span class="n">South</span> <span class="n">Florida</span> 
+<span class="n">High</span> <span class="n">school</span>
+<span class="n">Interested</span> <span class="ow">in</span> <span class="n">mentorship</span>
+<span class="n">Organ</span> <span class="n">transplantation</span>
+
+
+
+
+
+
+<span class="n">American</span> <span class="n">Heritage</span> <span class="n">Schools</span> <span class="n">finalist</span> <span class="k">for</span> <span class="n">ISEF</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span> 
+
+
+<span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">miamilivingmagazine</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">post</span><span class="o">/</span><span class="n">american</span><span class="o">-</span><span class="n">heritage</span><span class="o">-</span><span class="n">schools</span><span class="o">-</span><span class="n">claims</span><span class="o">-</span><span class="n">top</span><span class="o">-</span><span class="n">honors</span><span class="o">-</span><span class="ow">in</span><span class="o">-</span><span class="n">stem</span><span class="o">-</span><span class="n">competitions</span>
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">#perfection</span></code><br />
+Raquel Roxanne “Rocsi” Diaz</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#universalconstants
+
+08/29/22
+
+Marx —&gt; Class Struggles
+Nietzsche —&gt; Will-to-Power
+Einstein —&gt; Speed-of-Light
+</pre></div>
+</div>
+<p>.</p>
+<p>Paris Hilton<br />
+<a class="reference external" href="https://www.youtube.com/watch?v=wOg0TY1jG3w">https://www.youtube.com/watch?v=wOg0TY1jG3w</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#turkey
+
+08/29/22
+googled: Turkish renaissance 
+motive: quality of medical services, aviation, film
+
+1.Live donor liver transplantation: Johns Hopkins sent Nabil Dagher to Turkey for a year for an apprenticeship
+
+2.Turkish airlines: spokesmen and women are americas A-list celebrities including…
+
+3.Another self: unremarkable Turkish limited series on Netflix. The quality of the cinematography and editing is world-class. But its really the dialogue that has moments that say something profound about the people, the nation.
+
+### 
+
+Turkey has witnessed sustained economic growth during the last ten years, with the country achieving average growth of 5% during 2002-2012, despite the fact that it is surrounded by neighbours facing political or economic crisis, representing a rather unstable external environment. Among its neighbours, Cyprus and Greece were deeply affected by the financial crisis that hit the Euro zone while Syria is being ravaged by civil war, and Iraq is unstable.  The latest demonstrations against the Turkish government’s plan to redevelop Gezi Park turned into nationwide protests, particularly by the youth, and constitute a warning message that the views of the youth of Turkey require serious consideration. An important fact that cannot be overlooked is that the youth movements in the region were the main antecedents for substantial revolutionary changes.
+
+Despite the need for caution in assessing Turkey’s economic prospects for the coming years, the country’s success in achieving strong growth so far, amid regional instability, is worth contemplating. In fact, Turkey lacks natural resources such as oil and natural gas that neighboring countries have. However the country generated growth by focusing on enhancing industry, services and tourism, which helped boost its competitiveness. The tourism sector attracted more than 36 million tourists in 2012, rendering Turkey one of the top tourist destinations worldwide. However, this level of growth requires more than reliance on market forces and official development assistance. In order to obtain long-term benefits for growth and poverty alleviation, Turkey engaged in private sector development and structural reforms that enhanced its education and healthcare services, placed stricter controls on public finances and made progress towards combating corruption. Through effective support policies that promote financial resilience, investment, productivity growth and technological change, the country has integrated itself into the global economy and has become one of the major foreign direct investment (FDI) recipients in the Middle East region. (It was rated as the 13th most attractive FDI destination in the world in A.T. Kearney’s FDI Confidence Index 2012).
+
+At the macro-level there is a modern infrastructure with highways and railways that link Ankara, the capital, with other parts of the country. To stimulate technological development, the country has been transformed into an important higher education hub that attracts an increasing number of university students from Asia and Africa. Effective university-industry collaboration has contributed to providing domestic industry with its needs in important fields, including aeronautical technology, IT and electronics. The country has invested heavily in technology development zones with 34 operational technoparks and 16 under construction to support research and development activities and attract investment into high technology fields. Turkey has focused on environmental technology aimed at generating sustainable energy that benefits from wind and other renewable energy resources, enabling it to compete globally in innovative green technologies and products. Furthermore, the country has succeeded in solid waste management, turning Ankara into a safer and greener place to live. Methanol gas and organic waste are used to generate electricity and to produce fertilizers for agricultural products, including strawberries, tomatoes and orchids.
+
+Turkey’s trade and investment strategy is based upon a strategic ‘opening up’ to emerging markets in Asia and Africa and the Middle East, with low entry barriers. Turkey benefits from a Customs Union agreement with the EU, and free trade agreements with several countries including EFTA ( European Free Trade Association) member countries Switzerland, Norway, Iceland and Liechtenstein, and also Egypt, Jordan, Morocco, Palestine, Syria, and Tunisia. This has contributed to growth and increased productivity in both the industrial and services sectors, including green technology and IT.
+
+These achievements would not have been possible without the strong political will of the policy-makers to attain a turnaround in Turkey’s economy and move forward with its EU accession process. They embarked on an incremental process of institutional building and reforms that started in 2003 and aimed at addressing Turkey’s structural problems. The reforms had a positive impact on the banking sector, the management and control of the public budget, and directing domestic investment towards infrastructure, health, education and technology.  In the field of education, concerted efforts by the government and education institutions aim to bridge the gender gap and enhance the quality of education and higher education.
+
+A consistent and incremental path of institutional reforms has led to robust economic growth, increased resilience to the global economic crisis and a remarkable surge in exports, reaching $153 billion by the end of 2012, up from $36 billion in 2002.  Most notably, Turkey was registered on the world economic scale as the 16th largest economy in the world, and as 6th largest economy when compared to EU countries in 2012.
+Turkey’s remarkable achievements show that facing the challenge of enhancing international competitiveness and achieving sustainable growth could be met by combining national support policies for investment, productivity growth, and technological change (based in high value-added sectors) with emerging opportunities in the global economy. That is not to say that Turkey has developed a policy for development that can be replicated everywhere. Any process of reform and private sector development MUST take into account the large differences amongst countries and their individual, unique characteristics. Nevertheless, general policies could be considered – as common features among countries do exist – especially where these can be translated into country-specific policies.
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#survivingtranslation
+
+08/20/22
+
+1.Marx in Communist Manifesto
+2.Nietzsche in Attempt at Self-Criticism
+3.Of whom else may this be said?
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>*!use&amp;abuse
+
+#monumental 
+0g.κοσμογονία,γ history
+1f.ἡ ἔρις,κ* class
+2e.πρᾶξις,σ r2 freeman
+
+   #antiquarian 
+   3e.ἄσκησις,μ slave
+   4d.∫δυσφορία.dt,ψ #.i uninterrupted
+   5c.φάρμακον,δ Ho revolution
+
+   #critical 
+   6b.ομορφιά,β epochs
+      7a.τάξη,α X=0 ranks
+
+     *!history
+
+ #adm IV #5 on 08/20/22
+— action &amp; struggle
+— conservatism &amp; reverence
+— suffering &amp; deliverance 
+
+</pre></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "myenv"
+        },
+        kernelOptions: {
+            name: "myenv",
+            path: "./bdn2022"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'myenv'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
