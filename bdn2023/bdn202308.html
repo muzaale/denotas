@@ -550,6 +550,19 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">08/12/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#be-se-mp">932. be-se-mp</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nhanes1">933. nhanes1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deletedrepo">934. deletedrepo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-available-branches">1. Check Available Branches</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-log-for-the-specific-branch">2. Check the Log for the Specific Branch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checkout-the-specific-branch">3. Checkout the Specific Branch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-remote-repository-if-needed">4. Create a New Remote Repository (if needed)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#push-the-branch-to-the-new-remote-repository">5. Push the Branch to the New Remote Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recovering-a-specific-file">6. Recovering a Specific File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">1. Checkout the Specific Branch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-the-file-s-existence">2. Verify the File’s Existence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-remote-repository">3. Create a New Remote Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-the-new-remote-repository">4. Add the New Remote Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">5. Push the Branch to the New Remote Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#note">Note</a></li>
 </ul>
 </li>
 </ul>
@@ -606,16 +619,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Lance Rice                    
-2          Amy Barnett                   
-3          George Nguyen                 
-4          Amanda Jones                  
-5          Paul Brock                    
-6          Danielle Ford                 
-7          Sara Roberts                  
-8          Michelle Jones                
-9          Steven Dickson                
-10         Christine Wheeler             
+1          Christopher Riley             
+2          Marvin Green                  
+3          Peggy Day                     
+4          Justin Ortiz                  
+5          James Garrett                 
+6          Kurt Williams                 
+7          Ashley Washington             
+8          Jenna Ewing                   
+9          David Casey                   
+10         Edward Dean                   
 </pre></div>
 </div>
 </div>
@@ -1128,13 +1141,13 @@ Requirement already satisfied: chardet in /Users/d/Dropbox (Personal)/1f.ἡε�
 Requirement already satisfied: joblib in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.3.1)
 Requirement already satisfied: jsonpickle in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (3.0.1)
 Requirement already satisfied: matplotlib in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (3.7.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: more-itertools in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (10.1.0)
+Requirement already satisfied: more-itertools in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (10.1.0)
 Requirement already satisfied: numpy in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.25.2)
 Requirement already satisfied: requests in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (2.31.0)
 Requirement already satisfied: webcolors&gt;=1.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.13)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
 Requirement already satisfied: cycler&gt;=0.10 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
 Requirement already satisfied: fonttools&gt;=4.22.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.42.0)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
@@ -11202,6 +11215,111 @@ Appending All Datasets..............................<span class="k"> file</span>
 </pre></div>
 </div>
 </section>
+<section id="deletedrepo">
+<h3>934. deletedrepo<a class="headerlink" href="#deletedrepo" title="Permalink to this heading">#</a></h3>
+<p>git remove -v</p>
+<hr class="docutils" />
+<p>Yes, if your old Git history still exists locally, you should be able to access it and even restore specific branches or files. Here’s how you can proceed:</p>
+</section>
+<section id="check-available-branches">
+<h3>1. Check Available Branches<a class="headerlink" href="#check-available-branches" title="Permalink to this heading">#</a></h3>
+<p>First, check what branches are available in your local repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>-a
+</pre></div>
+</div>
+</section>
+<section id="check-the-log-for-the-specific-branch">
+<h3>2. Check the Log for the Specific Branch<a class="headerlink" href="#check-the-log-for-the-specific-branch" title="Permalink to this heading">#</a></h3>
+<p>If you find the branch you’re looking for, you can check its log to ensure it has the history you need:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>log<span class="w"> </span>&lt;branch-name&gt;
+</pre></div>
+</div>
+</section>
+<section id="checkout-the-specific-branch">
+<h3>3. Checkout the Specific Branch<a class="headerlink" href="#checkout-the-specific-branch" title="Permalink to this heading">#</a></h3>
+<p>If everything looks good, you can checkout the branch:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>&lt;branch-name&gt;
+</pre></div>
+</div>
+</section>
+<section id="create-a-new-remote-repository-if-needed">
+<h3>4. Create a New Remote Repository (if needed)<a class="headerlink" href="#create-a-new-remote-repository-if-needed" title="Permalink to this heading">#</a></h3>
+<p>Since the original remote repository is deleted, you’ll likely want to create a new one on GitHub to push your recovered branch to.</p>
+</section>
+<section id="push-the-branch-to-the-new-remote-repository">
+<h3>5. Push the Branch to the New Remote Repository<a class="headerlink" href="#push-the-branch-to-the-new-remote-repository" title="Permalink to this heading">#</a></h3>
+<p>After setting up the new remote repository (as described in previous messages), you can push the recovered branch:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>&lt;branch-name&gt;
+</pre></div>
+</div>
+</section>
+<section id="recovering-a-specific-file">
+<h3>6. Recovering a Specific File<a class="headerlink" href="#recovering-a-specific-file" title="Permalink to this heading">#</a></h3>
+<p>If you just need to recover a specific file, you can do that from the branch where it existed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>&lt;branch-name&gt;<span class="w"> </span>--<span class="w"> </span>path/to/seasons.docx
+</pre></div>
+</div>
+<p>This will restore the <code class="docutils literal notranslate"><span class="pre">seasons.docx</span></code> file from the specified branch to your working directory.</p>
+<p>Remember to replace <code class="docutils literal notranslate"><span class="pre">&lt;branch-name&gt;</span></code> with the actual name of the branch you want to work with. By following these steps, you should be able to access and restore the history, branches, and files that exist in your local repository.</p>
+<hr class="docutils" />
+<p>git branch -a</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>myenv<span class="o">)</span><span class="w"> </span><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>d@Poseidon<span class="w"> </span><span class="m">1</span>.ontology<span class="w"> </span>%<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-a
+<span class="w">  </span>gh-pages
+<span class="w">  </span>main
+<span class="w">  </span>merge_branch
+*<span class="w"> </span>merge_seasons_docx_1691462724
+<span class="w">  </span>remotes/book/gh-pages
+<span class="w">  </span>remotes/book/main
+<span class="w">  </span>remotes/origin/gh-pages
+<span class="w">  </span>remotes/origin/main
+<span class="w">  </span>remotes/origin/merge_branch
+<span class="o">(</span>myenv<span class="o">)</span><span class="w"> </span><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>d@Poseidon<span class="w"> </span><span class="m">1</span>.ontology<span class="w"> </span>%<span class="w"> </span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Great! Since you can see the <code class="docutils literal notranslate"><span class="pre">merge_seasons_docx_1691462724</span></code> branch, you can work with it. Here’s how to proceed:</p>
+</section>
+<section id="id30">
+<h3>1. Checkout the Specific Branch<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h3>
+<p>Switch to the branch you’re interested in:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>merge_seasons_docx_1691462724
+</pre></div>
+</div>
+</section>
+<section id="verify-the-file-s-existence">
+<h3>2. Verify the File’s Existence<a class="headerlink" href="#verify-the-file-s-existence" title="Permalink to this heading">#</a></h3>
+<p>You can check the file’s existence in that branch by looking in your file explorer or using a command-line tool like <code class="docutils literal notranslate"><span class="pre">ls</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>path/to/seasons.docx
+</pre></div>
+</div>
+<p>Make sure to replace <code class="docutils literal notranslate"><span class="pre">path/to/</span></code> with the actual path where the file should be located.</p>
+</section>
+<section id="create-a-new-remote-repository">
+<h3>3. Create a New Remote Repository<a class="headerlink" href="#create-a-new-remote-repository" title="Permalink to this heading">#</a></h3>
+<p>If you want to push this branch to GitHub, create a new repository on GitHub, as the previous repository was deleted.</p>
+</section>
+<section id="add-the-new-remote-repository">
+<h3>4. Add the New Remote Repository<a class="headerlink" href="#add-the-new-remote-repository" title="Permalink to this heading">#</a></h3>
+<p>You can add the new remote repository with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/yourusername/yournewrepo.git
+</pre></div>
+</div>
+</section>
+<section id="id31">
+<h3>5. Push the Branch to the New Remote Repository<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h3>
+<p>Now you can push the branch to the new remote repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>merge_seasons_docx_1691462724
+</pre></div>
+</div>
+</section>
+<section id="note">
+<h3>Note<a class="headerlink" href="#note" title="Permalink to this heading">#</a></h3>
+<p>If you already have an “origin” remote configured (pointing to the old, deleted repository), you’ll need to remove it before adding the new one:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>remote<span class="w"> </span>remove<span class="w"> </span>origin
+</pre></div>
+</div>
+<p>By following these steps, you should be able to recover the branch and the specific file from your local repository and push them to a new remote repository on GitHub if desired. If you only need the file, you can simply copy it from your local directory after checking out the branch.</p>
+</section>
 </section>
 </section>
 
@@ -11452,6 +11570,19 @@ Appending All Datasets..............................<span class="k"> file</span>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">08/12/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#be-se-mp">932. be-se-mp</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nhanes1">933. nhanes1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deletedrepo">934. deletedrepo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-available-branches">1. Check Available Branches</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-log-for-the-specific-branch">2. Check the Log for the Specific Branch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#checkout-the-specific-branch">3. Checkout the Specific Branch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-remote-repository-if-needed">4. Create a New Remote Repository (if needed)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#push-the-branch-to-the-new-remote-repository">5. Push the Branch to the New Remote Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recovering-a-specific-file">6. Recovering a Specific File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">1. Checkout the Specific Branch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-the-file-s-existence">2. Verify the File’s Existence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-remote-repository">3. Create a New Remote Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-the-new-remote-repository">4. Add the New Remote Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">5. Push the Branch to the New Remote Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#note">Note</a></li>
 </ul>
 </li>
 </ul>
