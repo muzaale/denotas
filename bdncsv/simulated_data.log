@@ -6466,3 +6466,20 @@ Loading NHANES III Data For 1988-1994................... (20,050 observations re
 Appending All Datasets.............................. file ds2 not found
 r(601);
 
+. use "/Users/d/Desktop/ds1.dta", clear
+
+. count
+  20,050
+
+. lookfor month
+
+. lookfor age
+
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+hsageir         float   %9.0g                 
+
+. hist hsageir
+(bin=43, start=17, width=1.6976744)
+
