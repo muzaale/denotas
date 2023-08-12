@@ -546,7 +546,13 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">🙏🏿</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">🙏🏿</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">08/12/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#be-se-mp">932. be-se-mp</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -599,16 +605,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Katherine Allen               
-2          Daniel Turner                 
-3          Frank Johnson                 
-4          Thomas Nelson                 
-5          Thomas Johnson                
-6          Timothy Carlson               
-7          Tyler Johnson                 
-8          Dustin Howard                 
-9          Angela Daniel                 
-10         Ryan Reeves                   
+1          Angelica Davis                
+2          Stephanie Hayes               
+3          John Powell                   
+4          Jonathan Stone                
+5          Linda Vaughn                  
+6          John Figueroa                 
+7          Martin Jones                  
+8          Jennifer Faulkner             
+9          Leslie Bennett                
+10         Carla Ross                    
 </pre></div>
 </div>
 </div>
@@ -1125,10 +1131,10 @@ Requirement already satisfied: more-itertools in /Users/d/Dropbox (Personal)/1f.
 Requirement already satisfied: numpy in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.25.2)
 Requirement already satisfied: requests in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (2.31.0)
 Requirement already satisfied: webcolors&gt;=1.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.13)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cycler&gt;=0.10 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
+Requirement already satisfied: cycler&gt;=0.10 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
 Requirement already satisfied: fonttools&gt;=4.22.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.42.0)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
 Requirement already satisfied: packaging&gt;=20.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (23.1)
@@ -11164,6 +11170,23 @@ or be nothing worth!</p>
 <hr class="docutils" />
 <section class="tex2jax_ignore mathjax_ignore" id="id28">
 <h1>🙏🏿<a class="headerlink" href="#id28" title="Permalink to this heading">#</a></h1>
+<section id="id29">
+<h2>08/12/2023<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h2>
+<section id="be-se-mp">
+<h3>932. be-se-mp<a class="headerlink" href="#be-se-mp" title="Permalink to this heading">#</a></h3>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>import sasxport5 https:<span class="o">//</span>wwwn<span class="m">.</span>cdc<span class="m">.</span>gov<span class="o">/</span>Nchs<span class="o">/</span>Nhanes<span class="o">/</span><span class="m">2001-2002</span><span class="o">/</span>DEMO_B<span class="m">.</span>XPT,<span class="k"> clear</span>
+<span class="k">qui sum</span> ridageyr
+<span class="k">global</span> min=<span class="nf">r</span>(min)
+<span class="k">global</span> max=<span class="nf">r</span>(max)
+<span class="k">qui g</span> age=<span class="nf">rnormal</span>(<span class="nf">r</span>(mean),<span class="nf">r</span>(sd))
+<span class="k">sum</span> ridageyr age
+<span class="k">kdensity</span> ridageyr, addplot(kdensity age<span class="k"> if</span> <span class="nf">inrange</span>(age,<span class="vg">${min}</span>,<span class="vg">${max}</span>))
+<span class="k">graph</span> export obs_exp_age<span class="m">.</span>png,<span class="k"> replace</span>
+</pre></div>
+</div>
+<p><img alt="png" src="../_images/obs_exp_age.png" /></p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -11409,7 +11432,13 @@ or be nothing worth!</p>
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">🙏🏿</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">🙏🏿</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">08/12/2023</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#be-se-mp">932. be-se-mp</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
   </nav></div>
