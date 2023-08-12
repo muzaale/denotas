@@ -5999,3 +5999,470 @@ file /Users/d/Desktop/obs_exp_age.png saved as PNG format
 . 
 end of do-file
 
+. nhanes1
+NHANES Dataset Creation Summary
+Requested Start Year: 1999
+Requested End Year: 2000
+Requested Year To Be Excluded: None
+Requested Dataset Information: base
+Current Saving Directory: /Users/d/Desktop
+Please Confirm To Proceed (Y/N) . y
+Appending All Datasets.............................. Done
+Dataset Saved!
+
+. sum
+
+    Variable |        Obs        Mean    Std. dev.       Min        Max
+-------------+---------------------------------------------------------
+        seqn |     11,039       15485    3186.829       9966      21004
+    sddsrvyr |     11,039           2           0          2          2
+    ridstatr |     11,039     1.94909    .2198247          1          2
+    ridexmon |     10,477    1.506729    .4999786          1          2
+    riagendr |     11,039    1.517076     .499731          1          2
+-------------+---------------------------------------------------------
+    ridageyr |     11,039    29.25401     24.8918          0         85
+    ridagemn |     10,803     341.881    284.9394          0       1019
+    ridageex |     10,304    335.9034    279.5586          0       1019
+    ridreth1 |     11,039    2.776248    1.188264          1          5
+    ridreth2 |     11,039    2.032249    1.103722          1          5
+-------------+---------------------------------------------------------
+    dmqmilit |      6,323    1.871738    .3737215          1          9
+     dmdborn |     11,034    1.206181    .5371994          1          7
+    dmdcitzn |     11,035    1.108382    .3590381          1          9
+    dmdyrsus |      1,619    5.259419    10.76766          1         99
+    dmdeduc3 |      3,729    7.998391    9.432986          0         99
+-------------+---------------------------------------------------------
+    dmdeduc2 |      5,407    3.215461    1.361023          1          9
+     dmdeduc |      9,136    1.735989    .9249451          1          9
+    dmdschol |      3,463    1.388103    .6739328          1          3
+    dmdmartl |      7,257    2.980984    2.582524          1         77
+    dmdhhsiz |     11,039    3.904158    1.743743          1          7
+-------------+---------------------------------------------------------
+    indhhinc |     10,013    7.153201     5.81128          1         99
+    indfminc |     10,846    8.055965    11.77904          1         99
+    indfmpir |     10,245    2.342763    1.615622          0          5
+    ridexprg |      3,547    2.036651     .491104          1          3
+     ridpreg |      3,201    2.255233    1.645303          1          9
+-------------+---------------------------------------------------------
+    dmdhrgnd |     11,037    1.436079    .4959197          1          2
+    dmdhrage |     11,037     44.4773    16.46257         15         85
+    dmdhrbrn |     10,687    1.338355    .6427374          1          7
+    dmdhredu |     10,691    3.174072     1.37058          1          9
+    dmdhrmar |     10,592    2.461764    5.555605          1         99
+-------------+---------------------------------------------------------
+    dmdhsedu |      5,782    3.242996    1.375622          1          9
+    wtint2yr |     11,039    25362.15    24443.76   1492.094   201188.1
+    wtint4yr |     11,039     13363.4    12757.85   683.4562    94900.9
+    wtmec2yr |     11,039    25362.15     25767.5          0   211850.7
+    wtmec4yr |     11,039    13553.76    13708.83          0   103831.2
+-------------+---------------------------------------------------------
+     sdmvpsu |     11,039    1.496784    .5000123          1          2
+    sdmvstra |     11,039    20.85008    4.267391         14         28
+         age |     11,039    29.46751    24.79127  -72.24351   119.3336
+
+. descr wtint
+wtint ambiguous abbreviation
+r(111);
+
+. descr wtint*
+
+Variable      Storage   Display    Value
+    name         type    format    label      Variable label
+---------------------------------------------------------------------------------------------------------------
+wtint2yr        double  %10.0g                Full Sample 2 Year Interview Weight
+wtint4yr        double  %10.0g                Full Sample 4 Year Interview Weight
+
+. which nhanes1
+command nhanes1 not found as either built-in or ado-file
+r(111);
+
+. cat nhanes1
+file nhanes1 not found
+r(601);
+
+. view source nhanes1
+
+. nhanes, ys(1999) ye(2018) ex(1999) ds(wtint2yr)
+command nhanes is unrecognized
+r(199);
+
+. nhanes1, ys(1999) ye(2018) ex(1999) ds(wtint2yr)
+option ds() incorrectly specified
+r(198);
+
+. nhanes1, ys(1999) ye(2018) ex(1999) 
+***********************WARNING**************************
+*****Data For Year Between 2017 To 2020 Requested*******
+**NHANES Pre-Pandemic Data For That Period Will Be Load*
+********************************************************
+NHANES Dataset Creation Summary
+Requested Start Year: 1999
+Requested End Year: 2018
+Requested Year To Be Excluded:  1999
+Requested Dataset Information: base
+Current Saving Directory: /Users/d/Desktop
+Please Confirm To Proceed (Y/N) . y
+Appending All Datasets.............................. file ds1 not found
+r(601);
+
+. nhanes1, ys(1999) ye(2018)  
+***********************WARNING**************************
+*****Data For Year Between 2017 To 2020 Requested*******
+**NHANES Pre-Pandemic Data For That Period Will Be Load*
+********************************************************
+NHANES Dataset Creation Summary
+Requested Start Year: 1999
+Requested End Year: 2018
+Requested Year To Be Excluded: None
+Requested Dataset Information: base
+Current Saving Directory: /Users/d/Desktop
+Please Confirm To Proceed (Y/N) . y
+Appending All Datasets.............................. file ds1 not found
+r(601);
+
+. nhanes1, ys(1999) ye(2018) ex(1999) ds(wtint2yr)
+option ds() incorrectly specified
+r(198);
+
+. nhanes1, ys(1999) ye(2018) ex(1999) ds(base)
+option ds() incorrectly specified
+r(198);
+
+. nhanes1, ys(1999) ye(2018) ex(1999) ds(1)
+***********************WARNING**************************
+*****Data For Year Between 2017 To 2020 Requested*******
+**NHANES Pre-Pandemic Data For That Period Will Be Load*
+********************************************************
+NHANES Dataset Creation Summary
+Requested Start Year: 1999
+Requested End Year: 2018
+Requested Year To Be Excluded:  1999
+Requested Dataset Information: demographic
+Current Saving Directory: /Users/d/Desktop
+Please Confirm To Proceed (Y/N) . u
+User Requested To Abort Creation
+invalid syntax
+r(198);
+
+. nhanes1, ys(1999) ye(2018) ex(1999) ds(1)
+***********************WARNING**************************
+*****Data For Year Between 2017 To 2020 Requested*******
+**NHANES Pre-Pandemic Data For That Period Will Be Load*
+********************************************************
+NHANES Dataset Creation Summary
+Requested Start Year: 1999
+Requested End Year: 2018
+Requested Year To Be Excluded:  1999
+Requested Dataset Information: demographic
+Current Saving Directory: /Users/d/Desktop
+Please Confirm To Proceed (Y/N) . y
+Loading NHANES Data For 2001-2002................... (11039 observations read)
+Loading NHANES Data For 2003-2004................... (10122 observations read)
+Loading NHANES Data For 2005-2006................... (10348 observations read)
+Loading NHANES Data For 2007-2008................... (10149 observations read)
+Loading NHANES Data For 2009-2010................... (10537 observations read)
+Loading NHANES Data For 2011-2012................... (9756 observations read)
+Loading NHANES Data For 2013-2014................... (10175 observations read)
+Loading NHANES Data For 2015-2016................... (9971 observations read)
+Loading NHANES Data For 2017-2020................... (15560 observations read)
+Appending All Datasets.............................. Done
+Dataset Saved!
+
+. count
+  97,657
+
+. stset time,fail(status)
+variable time not found
+r(111);
+
+. ls -l in 1/10
+in range not allowed
+r(101);
+
+. l in 1/10
+
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+  1. |   seqn | sddsrvyr | ridstatr | riagendr | ridageyr | ridagemn | ridreth1 | ridreth3 | ridexmon | dmdborn4 | dmdyrusz | dmdeduc2 | dmdmartz | ridexprg | sialang | siaproxy | siaintrp  |
+     | 109263 |       66 |        2 |        1 |        2 |        . |        5 |        6 |        2 |        1 |        . |        . |        . |        . |       1 |        1 |        2  |
+     |-----------------------------------------+----------+----------+----------+-------------------------------------------------------------------------------------------------------------|
+     | fialang | fiaproxy | fiaintrp | mialang | miaproxy | miaintrp | aialanga |  wtintprp |  wtmecprp | sdmvpsu | sdmvstra | indfmpir | year_s~t | ridageex | ridreth2 | dmqmilit | dmdborn |
+     |       1 |        2 |        2 |       . |        . |        . |        . | 7891.7624 | 8951.8156 |       3 |      156 |     4.66 |     2017 |        . |        . |        . |       . |
+     |--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------|
+     | dmdcitzn | dmdyrsus | dmdeduc3 | dmdeduc | dmdschol | dmdmartl | dmdhhsiz | indhhinc | indfminc | ridpreg | dmdhrgnd | dmdhrage | dmdhrbrn | dmdhredu | dmdhrmar | dmdhsedu | wtint2yr |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |
+     |----------+----------+----------+---------+----------+----------+----------+----------+----------+------------------------------------------+----------+----------+----------+----------|
+     | wtint4yr | wtmec2yr | wtmec4yr | aialang | dmdfmsiz | dmdborn2 | indhhin2 | indfmin2 | dmdhrbr2 | ridexagy | ridexagm | dmqmiliz | dmqadfc | dmdhhsza | dmdhhszb | dmdhhsze | dmdhrbr4 |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+  2. |   seqn | sddsrvyr | ridstatr | riagendr | ridageyr | ridagemn | ridreth1 | ridreth3 | ridexmon | dmdborn4 | dmdyrusz | dmdeduc2 | dmdmartz | ridexprg | sialang | siaproxy | siaintrp  |
+     | 109264 |       66 |        2 |        2 |       13 |        . |        1 |        1 |        2 |        1 |        . |        . |        . |        . |       1 |        1 |        2  |
+     |-----------------------------------------+----------+----------+----------+-------------------------------------------------------------------------------------------------------------|
+     | fialang | fiaproxy | fiaintrp | mialang | miaproxy | miaintrp | aialanga |  wtintprp |  wtmecprp | sdmvpsu | sdmvstra | indfmpir | year_s~t | ridageex | ridreth2 | dmqmilit | dmdborn |
+     |       1 |        2 |        2 |       1 |        2 |        2 |        1 | 11689.747 | 12271.157 |       1 |      155 |      .83 |     2017 |        . |        . |        . |       . |
+     |--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------|
+     | dmdcitzn | dmdyrsus | dmdeduc3 | dmdeduc | dmdschol | dmdmartl | dmdhhsiz | indhhinc | indfminc | ridpreg | dmdhrgnd | dmdhrage | dmdhrbrn | dmdhredu | dmdhrmar | dmdhsedu | wtint2yr |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |
+     |----------+----------+----------+---------+----------+----------+----------+----------+----------+------------------------------------------+----------+----------+----------+----------|
+     | wtint4yr | wtmec2yr | wtmec4yr | aialang | dmdfmsiz | dmdborn2 | indhhin2 | indfmin2 | dmdhrbr2 | ridexagy | ridexagm | dmqmiliz | dmqadfc | dmdhhsza | dmdhhszb | dmdhhsze | dmdhrbr4 |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+  3. |   seqn | sddsrvyr | ridstatr | riagendr | ridageyr | ridagemn | ridreth1 | ridreth3 | ridexmon | dmdborn4 | dmdyrusz | dmdeduc2 | dmdmartz | ridexprg | sialang | siaproxy | siaintrp  |
+     | 109265 |       66 |        2 |        1 |        2 |        . |        3 |        3 |        2 |        1 |        . |        . |        . |        . |       1 |        1 |        2  |
+     |-----------------------------------------+----------+----------+----------+-------------------------------------------------------------------------------------------------------------|
+     | fialang | fiaproxy | fiaintrp | mialang | miaproxy | miaintrp | aialanga |  wtintprp |  wtmecprp | sdmvpsu | sdmvstra | indfmpir | year_s~t | ridageex | ridreth2 | dmqmilit | dmdborn |
+     |       1 |        2 |        2 |       . |        . |        . |        . | 16273.826 | 16658.764 |       1 |      157 |     3.06 |     2017 |        . |        . |        . |       . |
+     |--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------|
+     | dmdcitzn | dmdyrsus | dmdeduc3 | dmdeduc | dmdschol | dmdmartl | dmdhhsiz | indhhinc | indfminc | ridpreg | dmdhrgnd | dmdhrage | dmdhrbrn | dmdhredu | dmdhrmar | dmdhsedu | wtint2yr |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |
+     |----------+----------+----------+---------+----------+----------+----------+----------+----------+------------------------------------------+----------+----------+----------+----------|
+     | wtint4yr | wtmec2yr | wtmec4yr | aialang | dmdfmsiz | dmdborn2 | indhhin2 | indfmin2 | dmdhrbr2 | ridexagy | ridexagm | dmqmiliz | dmqadfc | dmdhhsza | dmdhhszb | dmdhhsze | dmdhrbr4 |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+  4. |   seqn | sddsrvyr | ridstatr | riagendr | ridageyr | ridagemn | ridreth1 | ridreth3 | ridexmon | dmdborn4 | dmdyrusz | dmdeduc2 | dmdmartz | ridexprg | sialang | siaproxy | siaintrp  |
+     | 109266 |       66 |        2 |        2 |       29 |        . |        5 |        6 |        2 |        2 |        2 |        5 |        3 |        2 |       1 |        2 |        2  |
+     |-----------------------------------------+----------+----------+----------+-------------------------------------------------------------------------------------------------------------|
+     | fialang | fiaproxy | fiaintrp | mialang | miaproxy | miaintrp | aialanga |  wtintprp |  wtmecprp | sdmvpsu | sdmvstra | indfmpir | year_s~t | ridageex | ridreth2 | dmqmilit | dmdborn |
+     |       1 |        2 |        2 |       1 |        2 |        2 |        1 | 7825.6461 | 8154.9682 |       2 |      168 |        5 |     2017 |        . |        . |        . |       . |
+     |--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------|
+     | dmdcitzn | dmdyrsus | dmdeduc3 | dmdeduc | dmdschol | dmdmartl | dmdhhsiz | indhhinc | indfminc | ridpreg | dmdhrgnd | dmdhrage | dmdhrbrn | dmdhredu | dmdhrmar | dmdhsedu | wtint2yr |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |
+     |----------+----------+----------+---------+----------+----------+----------+----------+----------+------------------------------------------+----------+----------+----------+----------|
+     | wtint4yr | wtmec2yr | wtmec4yr | aialang | dmdfmsiz | dmdborn2 | indhhin2 | indfmin2 | dmdhrbr2 | ridexagy | ridexagm | dmqmiliz | dmqadfc | dmdhhsza | dmdhhszb | dmdhhsze | dmdhrbr4 |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+  5. |   seqn | sddsrvyr | ridstatr | riagendr | ridageyr | ridagemn | ridreth1 | ridreth3 | ridexmon | dmdborn4 | dmdyrusz | dmdeduc2 | dmdmartz | ridexprg | sialang | siaproxy | siaintrp  |
+     | 109267 |       66 |        1 |        2 |       21 |        . |        2 |        2 |        . |        2 |        3 |        4 |        3 |        3 |       1 |        2 |        2  |
+     |-----------------------------------------+----------+----------+----------+-------------------------------------------------------------------------------------------------------------|
+     | fialang | fiaproxy | fiaintrp | mialang | miaproxy | miaintrp | aialanga |  wtintprp |  wtmecprp | sdmvpsu | sdmvstra | indfmpir | year_s~t | ridageex | ridreth2 | dmqmilit | dmdborn |
+     |       1 |        2 |        2 |       . |        . |        . |        . | 26379.992 |         0 |       1 |      156 |        5 |     2017 |        . |        . |        . |       . |
+     |--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------|
+     | dmdcitzn | dmdyrsus | dmdeduc3 | dmdeduc | dmdschol | dmdmartl | dmdhhsiz | indhhinc | indfminc | ridpreg | dmdhrgnd | dmdhrage | dmdhrbrn | dmdhredu | dmdhrmar | dmdhsedu | wtint2yr |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |
+     |----------+----------+----------+---------+----------+----------+----------+----------+----------+------------------------------------------+----------+----------+----------+----------|
+     | wtint4yr | wtmec2yr | wtmec4yr | aialang | dmdfmsiz | dmdborn2 | indhhin2 | indfmin2 | dmdhrbr2 | ridexagy | ridexagm | dmqmiliz | dmqadfc | dmdhhsza | dmdhhszb | dmdhhsze | dmdhrbr4 |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+  6. |   seqn | sddsrvyr | ridstatr | riagendr | ridageyr | ridagemn | ridreth1 | ridreth3 | ridexmon | dmdborn4 | dmdyrusz | dmdeduc2 | dmdmartz | ridexprg | sialang | siaproxy | siaintrp  |
+     | 109268 |       66 |        1 |        2 |       18 |        . |        3 |        3 |        . |        1 |        . |        . |        . |        . |       1 |        2 |        2  |
+     |-----------------------------------------+----------+----------+----------+-------------------------------------------------------------------------------------------------------------|
+     | fialang | fiaproxy | fiaintrp | mialang | miaproxy | miaintrp | aialanga |  wtintprp |  wtmecprp | sdmvpsu | sdmvstra | indfmpir | year_s~t | ridageex | ridreth2 | dmqmilit | dmdborn |
+     |       1 |        2 |        2 |       . |        . |        . |        . | 19639.221 |         0 |       1 |      155 |     1.66 |     2017 |        . |        . |        . |       . |
+     |--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------|
+     | dmdcitzn | dmdyrsus | dmdeduc3 | dmdeduc | dmdschol | dmdmartl | dmdhhsiz | indhhinc | indfminc | ridpreg | dmdhrgnd | dmdhrage | dmdhrbrn | dmdhredu | dmdhrmar | dmdhsedu | wtint2yr |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |
+     |----------+----------+----------+---------+----------+----------+----------+----------+----------+------------------------------------------+----------+----------+----------+----------|
+     | wtint4yr | wtmec2yr | wtmec4yr | aialang | dmdfmsiz | dmdborn2 | indhhin2 | indfmin2 | dmdhrbr2 | ridexagy | ridexagm | dmqmiliz | dmqadfc | dmdhhsza | dmdhhszb | dmdhhsze | dmdhrbr4 |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+  7. |   seqn | sddsrvyr | ridstatr | riagendr | ridageyr | ridagemn | ridreth1 | ridreth3 | ridexmon | dmdborn4 | dmdyrusz | dmdeduc2 | dmdmartz | ridexprg | sialang | siaproxy | siaintrp  |
+     | 109269 |       66 |        2 |        1 |        2 |        . |        2 |        2 |        1 |        1 |        . |        . |        . |        . |       1 |        1 |        2  |
+     |-----------------------------------------+----------+----------+----------+-------------------------------------------------------------------------------------------------------------|
+     | fialang | fiaproxy | fiaintrp | mialang | miaproxy | miaintrp | aialanga |  wtintprp |  wtmecprp | sdmvpsu | sdmvstra | indfmpir | year_s~t | ridageex | ridreth2 | dmqmilit | dmdborn |
+     |       2 |        2 |        2 |       . |        . |        . |        . | 5906.2505 | 6848.2718 |       2 |      152 |      .96 |     2017 |        . |        . |        . |       . |
+     |--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------|
+     | dmdcitzn | dmdyrsus | dmdeduc3 | dmdeduc | dmdschol | dmdmartl | dmdhhsiz | indhhinc | indfminc | ridpreg | dmdhrgnd | dmdhrage | dmdhrbrn | dmdhredu | dmdhrmar | dmdhsedu | wtint2yr |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |
+     |----------+----------+----------+---------+----------+----------+----------+----------+----------+------------------------------------------+----------+----------+----------+----------|
+     | wtint4yr | wtmec2yr | wtmec4yr | aialang | dmdfmsiz | dmdborn2 | indhhin2 | indfmin2 | dmdhrbr2 | ridexagy | ridexagm | dmqmiliz | dmqadfc | dmdhhsza | dmdhhszb | dmdhhsze | dmdhrbr4 |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+  8. |   seqn | sddsrvyr | ridstatr | riagendr | ridageyr | ridagemn | ridreth1 | ridreth3 | ridexmon | dmdborn4 | dmdyrusz | dmdeduc2 | dmdmartz | ridexprg | sialang | siaproxy | siaintrp  |
+     | 109270 |       66 |        2 |        2 |       11 |        . |        4 |        4 |        1 |        1 |        . |        . |        . |        . |       1 |        1 |        2  |
+     |-----------------------------------------+----------+----------+----------+-------------------------------------------------------------------------------------------------------------|
+     | fialang | fiaproxy | fiaintrp | mialang | miaproxy | miaintrp | aialanga |  wtintprp |  wtmecprp | sdmvpsu | sdmvstra | indfmpir | year_s~t | ridageex | ridreth2 | dmqmilit | dmdborn |
+     |       1 |        2 |        2 |       1 |        2 |        2 |        . | 4613.0577 | 4886.9304 |       1 |      150 |     1.88 |     2017 |        . |        . |        . |       . |
+     |--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------|
+     | dmdcitzn | dmdyrsus | dmdeduc3 | dmdeduc | dmdschol | dmdmartl | dmdhhsiz | indhhinc | indfminc | ridpreg | dmdhrgnd | dmdhrage | dmdhrbrn | dmdhredu | dmdhrmar | dmdhsedu | wtint2yr |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |
+     |----------+----------+----------+---------+----------+----------+----------+----------+----------+------------------------------------------+----------+----------+----------+----------|
+     | wtint4yr | wtmec2yr | wtmec4yr | aialang | dmdfmsiz | dmdborn2 | indhhin2 | indfmin2 | dmdhrbr2 | ridexagy | ridexagm | dmqmiliz | dmqadfc | dmdhhsza | dmdhhszb | dmdhhsze | dmdhrbr4 |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+  9. |   seqn | sddsrvyr | ridstatr | riagendr | ridageyr | ridagemn | ridreth1 | ridreth3 | ridexmon | dmdborn4 | dmdyrusz | dmdeduc2 | dmdmartz | ridexprg | sialang | siaproxy | siaintrp  |
+     | 109271 |       66 |        2 |        1 |       49 |        . |        3 |        3 |        2 |        1 |        . |        2 |        3 |        . |       1 |        2 |        2  |
+     |-----------------------------------------+----------+----------+----------+-------------------------------------------------------------------------------------------------------------|
+     | fialang | fiaproxy | fiaintrp | mialang | miaproxy | miaintrp | aialanga |  wtintprp |  wtmecprp | sdmvpsu | sdmvstra | indfmpir | year_s~t | ridageex | ridreth2 | dmqmilit | dmdborn |
+     |       1 |        2 |        2 |       1 |        2 |        2 |        1 | 8481.5898 | 8658.7329 |       1 |      167 |        . |     2017 |        . |        . |        . |       . |
+     |--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------|
+     | dmdcitzn | dmdyrsus | dmdeduc3 | dmdeduc | dmdschol | dmdmartl | dmdhhsiz | indhhinc | indfminc | ridpreg | dmdhrgnd | dmdhrage | dmdhrbrn | dmdhredu | dmdhrmar | dmdhsedu | wtint2yr |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |
+     |----------+----------+----------+---------+----------+----------+----------+----------+----------+------------------------------------------+----------+----------+----------+----------|
+     | wtint4yr | wtmec2yr | wtmec4yr | aialang | dmdfmsiz | dmdborn2 | indhhin2 | indfmin2 | dmdhrbr2 | ridexagy | ridexagm | dmqmiliz | dmqadfc | dmdhhsza | dmdhhszb | dmdhhsze | dmdhrbr4 |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ 10. |   seqn | sddsrvyr | ridstatr | riagendr | ridageyr | ridagemn | ridreth1 | ridreth3 | ridexmon | dmdborn4 | dmdyrusz | dmdeduc2 | dmdmartz | ridexprg | sialang | siaproxy | siaintrp  |
+     | 109272 |       66 |        2 |        1 |        0 |        3 |        1 |        1 |        2 |        1 |        . |        . |        . |        . |       1 |        1 |        2  |
+     |-----------------------------------------+----------+----------+----------+-------------------------------------------------------------------------------------------------------------|
+     | fialang | fiaproxy | fiaintrp | mialang | miaproxy | miaintrp | aialanga |  wtintprp |  wtmecprp | sdmvpsu | sdmvstra | indfmpir | year_s~t | ridageex | ridreth2 | dmqmilit | dmdborn |
+     |       1 |        2 |        2 |       . |        . |        . |        . | 7037.3802 | 7872.7762 |       1 |      155 |      .73 |     2017 |        . |        . |        . |       . |
+     |--------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------|
+     | dmdcitzn | dmdyrsus | dmdeduc3 | dmdeduc | dmdschol | dmdmartl | dmdhhsiz | indhhinc | indfminc | ridpreg | dmdhrgnd | dmdhrage | dmdhrbrn | dmdhredu | dmdhrmar | dmdhsedu | wtint2yr |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |
+     |----------+----------+----------+---------+----------+----------+----------+----------+----------+------------------------------------------+----------+----------+----------+----------|
+     | wtint4yr | wtmec2yr | wtmec4yr | aialang | dmdfmsiz | dmdborn2 | indhhin2 | indfmin2 | dmdhrbr2 | ridexagy | ridexagm | dmqmiliz | dmqadfc | dmdhhsza | dmdhhszb | dmdhhsze | dmdhrbr4 |
+     |        . |        . |        . |       . |        . |        . |        . |        . |        . |        . |        . |        . |       . |        . |        . |        . |        . |
+     +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+. nhanes1, ys(1999) ye(2018) ex(1999) ds(2)
+***********************WARNING**************************
+*****Data For Year Between 2017 To 2020 Requested*******
+**NHANES Pre-Pandemic Data For That Period Will Be Load*
+********************************************************
+NHANES Dataset Creation Summary
+Requested Start Year: 1999
+Requested End Year: 2018
+Requested Year To Be Excluded:  1999
+Requested Dataset Information: exam
+Current Saving Directory: /Users/d/Desktop
+Please Confirm To Proceed (Y/N) . n
+User Requested To Abort Creation
+invalid syntax
+r(198);
+
+. nhanes1, ys(1999) ye(2018) ex(1999) ds(1 2 3 4 5 6 7)
+option ds() incorrectly specified
+r(198);
+
+. nhanes1, ys(1999) ye(2018) ex(1999) ds(1 2 3 4 5 6)
+option ds() incorrectly specified
+r(198);
+
+. nhanes1, ys(1999) ye(2018) ex(1999) ds(1 2 3 4 5)
+option ds() incorrectly specified
+r(198);
+
+. nhanes1, ys(1999) ye(2018) ex(1999) ds(2)
+***********************WARNING**************************
+*****Data For Year Between 2017 To 2020 Requested*******
+**NHANES Pre-Pandemic Data For That Period Will Be Load*
+********************************************************
+NHANES Dataset Creation Summary
+Requested Start Year: 1999
+Requested End Year: 2018
+Requested Year To Be Excluded:  1999
+Requested Dataset Information: exam
+Current Saving Directory: /Users/d/Desktop
+Please Confirm To Proceed (Y/N) . y
+Appending All Datasets.............................. Done
+Dataset Saved!
+
+. lookfor bmi
+
+. nhanes1,ys(1988) ye(2018)
+***********************WARNING**************************
+*****Data For Year Between 1988 To 1994 Requested*******
+****NHANES III Data For That Period Will Be Loaded******
+********************************************************
+***********************WARNING**************************
+********No Data Between 1995 And 1999 Available*********
+********************************************************
+***********************WARNING**************************
+*****Data For Year Between 2017 To 2020 Requested*******
+**NHANES Pre-Pandemic Data For That Period Will Be Load*
+********************************************************
+NHANES Dataset Creation Summary
+Requested Start Year: 1988
+Requested End Year: 2018
+Requested Year To Be Excluded: None
+Requested Dataset Information: base
+Current Saving Directory: /Users/d/Desktop
+Please Confirm To Proceed (Y/N) . y
+Loading NHANES III Data For 1988-1994................... connection timed out
+r(2);
+
+. nhanes1,ys(1988) ye(2018)
+***********************WARNING**************************
+*****Data For Year Between 1988 To 1994 Requested*******
+****NHANES III Data For That Period Will Be Loaded******
+********************************************************
+***********************WARNING**************************
+********No Data Between 1995 And 1999 Available*********
+********************************************************
+***********************WARNING**************************
+*****Data For Year Between 2017 To 2020 Requested*******
+**NHANES Pre-Pandemic Data For That Period Will Be Load*
+********************************************************
+NHANES Dataset Creation Summary
+Requested Start Year: 1988
+Requested End Year: 2018
+Requested Year To Be Excluded: None
+Requested Dataset Information: base
+Current Saving Directory: /Users/d/Desktop
+Please Confirm To Proceed (Y/N) . y
+Loading NHANES III Data For 1988-1994................... connection timed out
+r(2);
+
+. set timeout1
+nothing found where number expected
+r(198);
+
+. set timeout 1
+-set timeout- not allowed; 'timeout' not recognized
+r(199);
+
+. set timeout1 500
+
+. nhanes1,ys(1988) ye(2018)
+***********************WARNING**************************
+*****Data For Year Between 1988 To 1994 Requested*******
+****NHANES III Data For That Period Will Be Loaded******
+********************************************************
+***********************WARNING**************************
+********No Data Between 1995 And 1999 Available*********
+********************************************************
+***********************WARNING**************************
+*****Data For Year Between 2017 To 2020 Requested*******
+**NHANES Pre-Pandemic Data For That Period Will Be Load*
+********************************************************
+NHANES Dataset Creation Summary
+Requested Start Year: 1988
+Requested End Year: 2018
+Requested Year To Be Excluded: None
+Requested Dataset Information: base
+Current Saving Directory: /Users/d/Desktop
+Please Confirm To Proceed (Y/N) . y
+Loading NHANES III Data For 1988-1994................... (20,050 observations read)
+Appending All Datasets.............................. file ds10 not found
+r(601);
+
+. nhanes1,ys(1988) ye(2018)
+***********************WARNING**************************
+*****Data For Year Between 1988 To 1994 Requested*******
+****NHANES III Data For That Period Will Be Loaded******
+********************************************************
+***********************WARNING**************************
+********No Data Between 1995 And 1999 Available*********
+********************************************************
+***********************WARNING**************************
+*****Data For Year Between 2017 To 2020 Requested*******
+**NHANES Pre-Pandemic Data For That Period Will Be Load*
+********************************************************
+NHANES Dataset Creation Summary
+Requested Start Year: 1988
+Requested End Year: 2018
+Requested Year To Be Excluded: None
+Requested Dataset Information: base
+Current Saving Directory: /Users/d/Desktop
+Please Confirm To Proceed (Y/N) . y
+Loading NHANES III Data For 1988-1994................... (20,050 observations read)
+Appending All Datasets.............................. file ds2 not found
+r(601);
+
