@@ -89,8 +89,8 @@ tree.show()
 ------------------
 
 ----- stdout -----
-Requirement already satisfied: treelib in /usr/local/anaconda3/lib/python3.11/site-packages (1.6.4)
-Requirement already satisfied: six in /usr/local/anaconda3/lib/python3.11/site-packages (from treelib) (1.16.0)
+Requirement already satisfied: treelib in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (1.6.4)
+Requirement already satisfied: six in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from treelib) (1.16.0)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
