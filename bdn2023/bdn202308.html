@@ -570,6 +570,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#nejm-style">947.3 nejm-style</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#nty">947.3 nty</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ers-jhu-edu">948. ers.jhu.edu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-l8tr">949. 100{i}l8tr</a></li>
 </ul>
 </li>
 </ul>
@@ -624,16 +625,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Christopher Padilla           
-2          Christina Estrada             
-3          Mary Gilmore                  
-4          Paul Martinez                 
-5          Molly Martin                  
-6          Brandon Cox                   
-7          Lisa Dyer                     
-8          Morgan Villegas               
-9          Michael Kennedy               
-10         Diane Marshall                
+1          Dennis Johnson                
+2          Ronald Green                  
+3          Jody Huff                     
+4          Andrew Ruiz                   
+5          Mary Cardenas                 
+6          Maria Chen                    
+7          Barbara Aguilar               
+8          Sheena Anthony                
+9          Mary Morrison                 
+10         Natasha Oneill                
 </pre></div>
 </div>
 </div>
@@ -1150,11 +1151,11 @@ Requirement already satisfied: more-itertools in /usr/local/anaconda3/lib/python
 Requirement already satisfied: numpy in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (1.24.3)
 Requirement already satisfied: requests in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (2.31.0)
 Requirement already satisfied: webcolors&gt;=1.5 in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (1.13)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.0.5)
-Requirement already satisfied: cycler&gt;=0.10 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.25.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.0.5)
+Requirement already satisfied: cycler&gt;=0.10 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.25.0)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
 Requirement already satisfied: packaging&gt;=20.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (23.0)
 Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (9.4.0)
@@ -12310,6 +12311,60 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;</sp
 <li><p>5% academic</p></li>
 </ul>
 </section>
+<section id="i-l8tr">
+<h2>949. 100{i}l8tr<a class="headerlink" href="#i-l8tr" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>digraph<span class="w"> </span>G<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>//<span class="w"> </span>Graph<span class="w"> </span>layout<span class="w"> </span>parameters
+<span class="w">    </span>graph<span class="w"> </span><span class="o">[</span><span class="nv">splines</span><span class="o">=</span>polyline,<span class="w"> </span><span class="nv">nodesep</span><span class="o">=</span><span class="m">0</span>.5<span class="o">]</span><span class="p">;</span>
+<span class="w">    </span>edge<span class="w"> </span><span class="o">[</span><span class="nv">dir</span><span class="o">=</span>none,<span class="w"> </span><span class="nv">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span>node<span class="w"> </span><span class="o">[</span><span class="nv">shape</span><span class="o">=</span>box,<span class="w"> </span><span class="nv">style</span><span class="o">=</span><span class="s2">&quot;rounded, filled&quot;</span><span class="o">]</span><span class="p">;</span>
+
+<span class="w">    </span>//<span class="w"> </span>Define<span class="w"> </span>nodes
+<span class="w">    </span>start<span class="w"> </span><span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Recruitment&quot;</span>,<span class="w"> </span><span class="nv">pos</span><span class="o">=</span><span class="s2">&quot;0,4!&quot;</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span>eligibility<span class="w"> </span><span class="o">[</span><span class="nv">shape</span><span class="o">=</span>point,<span class="w"> </span><span class="nv">width</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">height</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">pos</span><span class="o">=</span><span class="s2">&quot;0,2!&quot;</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span>random1<span class="w"> </span><span class="o">[</span><span class="nv">shape</span><span class="o">=</span>point,<span class="w"> </span><span class="nv">width</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">height</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">pos</span><span class="o">=</span><span class="s2">&quot;0,0!&quot;</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span>random_aspirin<span class="w"> </span><span class="o">[</span><span class="nv">shape</span><span class="o">=</span>point,<span class="w"> </span><span class="nv">width</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">height</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">pos</span><span class="o">=</span><span class="s2">&quot;-2,0!&quot;</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span>random_no_aspirin<span class="w"> </span><span class="o">[</span><span class="nv">shape</span><span class="o">=</span>point,<span class="w"> </span><span class="nv">width</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">height</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">pos</span><span class="o">=</span><span class="s2">&quot;2,0!&quot;</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span>beta_aspirin<span class="w"> </span><span class="o">[</span><span class="nv">shape</span><span class="o">=</span>point,<span class="w"> </span><span class="nv">width</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">height</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">pos</span><span class="o">=</span><span class="s2">&quot;-3.5,-2!&quot;</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span>placebo_aspirin<span class="w"> </span><span class="o">[</span><span class="nv">shape</span><span class="o">=</span>point,<span class="w"> </span><span class="nv">width</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">height</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">pos</span><span class="o">=</span><span class="s2">&quot;-.5,-2!&quot;</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span>random2<span class="w"> </span><span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Aspirin+&quot;</span>,<span class="w"> </span><span class="nv">fillcolor</span><span class="o">=</span><span class="s2">&quot;lightblue&quot;</span>,<span class="w"> </span><span class="nv">pos</span><span class="o">=</span><span class="s2">&quot;-2,-2!&quot;</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span>random3<span class="w"> </span><span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Aspirin-&quot;</span>,<span class="w"> </span><span class="nv">fillcolor</span><span class="o">=</span><span class="s2">&quot;lightpink&quot;</span>,<span class="w"> </span><span class="nv">pos</span><span class="o">=</span><span class="s2">&quot;2,-2!&quot;</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span>beta_no_aspirin<span class="w"> </span><span class="o">[</span><span class="nv">shape</span><span class="o">=</span>point,<span class="w"> </span><span class="nv">width</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">height</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">pos</span><span class="o">=</span><span class="s2">&quot;.5,-2!&quot;</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span>placebo_no_aspirin<span class="w"> </span><span class="o">[</span><span class="nv">shape</span><span class="o">=</span>point,<span class="w"> </span><span class="nv">width</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">height</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">pos</span><span class="o">=</span><span class="s2">&quot;3.5,-2!&quot;</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span>follow_up1<span class="w"> </span><span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Carotene+&quot;</span>,<span class="w"> </span><span class="nv">fillcolor</span><span class="o">=</span><span class="s2">&quot;lightyellow&quot;</span>,<span class="w"> </span><span class="nv">pos</span><span class="o">=</span><span class="s2">&quot;-3.5,-5!&quot;</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span>follow_up2<span class="w"> </span><span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Carotene-&quot;</span>,<span class="w"> </span><span class="nv">fillcolor</span><span class="o">=</span><span class="s2">&quot;lightcoral&quot;</span>,<span class="w"> </span><span class="nv">pos</span><span class="o">=</span><span class="s2">&quot;-.5,-5!&quot;</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span>follow_up3<span class="w"> </span><span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Carotene+&quot;</span>,<span class="w"> </span><span class="nv">fillcolor</span><span class="o">=</span><span class="s2">&quot;lightyellow&quot;</span>,<span class="w"> </span><span class="nv">pos</span><span class="o">=</span><span class="s2">&quot;.5,-5!&quot;</span><span class="o">]</span><span class="p">;</span>
+<span class="w">    </span>follow_up4<span class="w"> </span><span class="o">[</span><span class="nv">label</span><span class="o">=</span><span class="s2">&quot;Carotene-&quot;</span>,<span class="w"> </span><span class="nv">fillcolor</span><span class="o">=</span><span class="s2">&quot;lightcoral&quot;</span>,<span class="w"> </span><span class="nv">pos</span><span class="o">=</span><span class="s2">&quot;3.5,-5!&quot;</span><span class="o">]</span><span class="p">;</span>
+
+<span class="w">    </span>//<span class="w"> </span>Define<span class="w"> </span>edges
+<span class="w">    </span>start<span class="w"> </span>-&gt;<span class="w"> </span>eligibility<span class="p">;</span>
+<span class="w">    </span>eligibility<span class="w"> </span>-&gt;<span class="w"> </span>random1<span class="p">;</span>
+<span class="w">    </span>random1<span class="w"> </span>-&gt;<span class="w"> </span>random_aspirin<span class="p">;</span>
+<span class="w">    </span>random1<span class="w"> </span>-&gt;<span class="w"> </span>random_no_aspirin<span class="p">;</span>
+<span class="w">    </span>random_aspirin<span class="w"> </span>-&gt;<span class="w"> </span>random2<span class="p">;</span>
+<span class="w">    </span>random2<span class="w"> </span>-&gt;<span class="w"> </span>beta_aspirin<span class="p">;</span>
+<span class="w">    </span>random2<span class="w"> </span>-&gt;<span class="w"> </span>placebo_aspirin<span class="p">;</span>
+<span class="w">    </span>random_no_aspirin<span class="w"> </span>-&gt;<span class="w"> </span>random3<span class="p">;</span>
+<span class="w">    </span>random3<span class="w"> </span>-&gt;<span class="w"> </span>beta_no_aspirin<span class="p">;</span>
+<span class="w">    </span>random3<span class="w"> </span>-&gt;<span class="w"> </span>placebo_no_aspirin<span class="p">;</span>
+<span class="w">    </span>beta_aspirin<span class="w"> </span>-&gt;<span class="w"> </span>follow_up1<span class="p">;</span>
+<span class="w">    </span>placebo_aspirin<span class="w"> </span>-&gt;<span class="w"> </span>follow_up2<span class="p">;</span>
+<span class="w">    </span>beta_no_aspirin<span class="w"> </span>-&gt;<span class="w"> </span>follow_up3<span class="p">;</span>
+<span class="w">    </span>placebo_no_aspirin<span class="w"> </span>-&gt;<span class="w"> </span>follow_up4<span class="p">;</span>
+
+<span class="w">    </span>//<span class="w"> </span>Same<span class="w"> </span>level<span class="w"> </span>definition
+<span class="w">    </span><span class="o">{</span>
+<span class="w">        </span><span class="nv">rank</span><span class="o">=</span>same<span class="p">;</span>
+<span class="w">        </span>random_no_aspirin<span class="p">;</span>
+<span class="w">        </span>random_aspirin<span class="p">;</span>
+<span class="w">        </span>random1<span class="p">;</span><span class="w"> </span>//<span class="w"> </span>Centered<span class="w"> </span>random<span class="w"> </span>node
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
+
+//neato<span class="w"> </span>-Tpng<span class="w"> </span>gravitz2.dot<span class="w"> </span>-o<span class="w"> </span>gravitz2.png
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -12579,6 +12634,7 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;</sp
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#nejm-style">947.3 nejm-style</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#nty">947.3 nty</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ers-jhu-edu">948. ers.jhu.edu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-l8tr">949. 100{i}l8tr</a></li>
 </ul>
 </li>
 </ul>
