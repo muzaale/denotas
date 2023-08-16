@@ -571,6 +571,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#nty">947.3 nty</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ers-jhu-edu">948. ers.jhu.edu</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-l8tr">949. 100{i}l8tr</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consilience">950. consilience</a></li>
 </ul>
 </li>
 </ul>
@@ -625,16 +626,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Kathleen Cox                  
-2          Lauren Sawyer                 
-3          John Poole                    
-4          Molly Martinez                
-5          Ashley Ware                   
-6          Jessica Matthews              
-7          Stephanie Morris              
-8          Cameron Green                 
-9          Michael Briggs                
-10         Elizabeth Patterson           
+1          Gregory Brown                 
+2          Jason Sherman                 
+3          Troy Young                    
+4          Pamela Brown                  
+5          Ryan Hanson                   
+6          Juan Jackson                  
+7          David Matthews                
+8          Jessica Murphy                
+9          Jacob Miller                  
+10         Audrey Hunt                   
 </pre></div>
 </div>
 </div>
@@ -12371,6 +12372,109 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;</sp
 </pre></div>
 </div>
 </section>
+<section id="consilience">
+<h2>950. consilience<a class="headerlink" href="#consilience" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>generalist</p>
+<ol class="arabic simple">
+<li><p>challenges</p></li>
+<li><p>skills</p></li>
+</ol>
+</li>
+<li><p>specialist
+3. project
+4. epilogue</p></li>
+<li><p>dramatis personae
+5. clinical, 20%
+- research, 75%
+- academic, 5%</p></li>
+</ul>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Set seed for layout</span>
+<span class="n">seed</span> <span class="o">=</span> <span class="mi">2</span> 
+
+<span class="c1"># Directory structure</span>
+<span class="n">structure</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;Fena&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Epilogue&quot;</span><span class="p">,</span> <span class="s2">&quot;Project&quot;</span><span class="p">,</span> <span class="s2">&quot;Skills&quot;</span><span class="p">,</span> <span class="s2">&quot;Dramatis Personae&quot;</span><span class="p">,</span> <span class="s2">&quot;Challenges&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Numbers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Variance&quot;</span><span class="p">,</span> <span class="s2">&quot;R01&quot;</span><span class="p">,</span> <span class="s2">&quot;K24&quot;</span><span class="p">,</span> <span class="s2">&quot;U01&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Epilogue&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Open-Science&quot;</span><span class="p">,</span> <span class="s2">&quot;Self-Publish&quot;</span><span class="p">,</span> <span class="s2">&quot;Peer-Reviewed&quot;</span><span class="p">,</span> <span class="s2">&quot;Grants&quot;</span><span class="p">,</span> <span class="s2">&quot;Proposals&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Skills&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Python&quot;</span><span class="p">,</span> <span class="s2">&quot;AI&quot;</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;Stata&quot;</span><span class="p">,</span> <span class="s2">&quot;Numbers&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;AI&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ChatGPT&quot;</span><span class="p">,</span> <span class="s2">&quot;Co-Pilot&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Project&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Manuscript&quot;</span><span class="p">,</span> <span class="s2">&quot;Code&quot;</span><span class="p">,</span> <span class="s2">&quot;Git&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Estimates&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Nonparametric&quot;</span><span class="p">,</span> <span class="s2">&quot;Semiparametric&quot;</span><span class="p">,</span> <span class="s2">&quot;Parametric&quot;</span><span class="p">,</span> <span class="s2">&quot;Simulation&quot;</span><span class="p">,</span> <span class="s2">&quot;Uses/Abuses&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Numbers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Estimates&quot;</span><span class="p">,</span> <span class="s2">&quot;Variance&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Variance&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Oneway&quot;</span><span class="p">,</span> <span class="s2">&quot;Twoway&quot;</span><span class="p">,</span> <span class="s2">&quot;Multivariable&quot;</span><span class="p">,</span> <span class="s2">&quot;Hierarchical&quot;</span><span class="p">,</span> <span class="s2">&quot;Clinical&quot;</span><span class="p">,</span> <span class="s2">&quot;Public&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Dramatis Personae&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;High School Students&quot;</span><span class="p">,</span> <span class="s2">&quot;Undergraduates&quot;</span><span class="p">,</span> <span class="s2">&quot;Graduate Students&quot;</span><span class="p">,</span> <span class="s2">&quot;Medical Students&quot;</span><span class="p">,</span> <span class="s2">&quot;Residents&quot;</span><span class="p">,</span> <span class="s2">&quot;Fellows&quot;</span><span class="p">,</span> <span class="s2">&quot;Faculty&quot;</span><span class="p">,</span> <span class="s2">&quot;Analysts&quot;</span><span class="p">,</span> <span class="s2">&quot;Staff&quot;</span><span class="p">,</span> <span class="s2">&quot;Collaborators&quot;</span><span class="p">,</span> <span class="s2">&quot;Graduates&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;Challenges&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Truth&quot;</span><span class="p">,</span> <span class="s2">&quot;Rigor&quot;</span><span class="p">,</span> <span class="s2">&quot;Error&quot;</span><span class="p">,</span> <span class="s2">&quot;Sloppiness&quot;</span><span class="p">,</span> <span class="s2">&quot;Fraud&quot;</span><span class="p">,</span> <span class="s2">&quot;Learning&quot;</span><span class="p">],</span>
+<span class="p">}</span>
+
+<span class="c1"># Gentle colors for children</span>
+<span class="n">child_colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;lightgreen&quot;</span><span class="p">,</span> <span class="s2">&quot;lightpink&quot;</span><span class="p">,</span> <span class="s2">&quot;lightyellow&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;lavender&#39;</span><span class="p">,</span> <span class="s1">&#39;lightcoral&#39;</span><span class="p">,</span> <span class="s1">&#39;honeydew&#39;</span><span class="p">,</span> <span class="s1">&#39;azure&#39;</span><span class="p">,</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> 
+<span class="p">]</span>
+
+<span class="c1"># &#39;lightsteelblue&#39;, &#39;lightgray&#39;, &#39;mintcream&#39;,&#39;mintcream&#39;, &#39;azure&#39;, &#39;linen&#39;, &#39;aliceblue&#39;, &#39;lemonchiffon&#39;, &#39;mistyrose&#39;</span>
+
+<span class="c1"># List of nodes to color light blue</span>
+<span class="n">light_blue_nodes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Epilogue&quot;</span><span class="p">,</span> <span class="s2">&quot;Skills&quot;</span><span class="p">,</span> <span class="s2">&quot;Dramatis Personae&quot;</span><span class="p">,</span> <span class="s2">&quot;Project&quot;</span><span class="p">,</span> <span class="s2">&quot;Challenges&quot;</span><span class="p">]</span>
+
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+<span class="n">node_colors</span> <span class="o">=</span> <span class="p">{}</span>
+
+
+<span class="c1"># Function to capitalize the first letter of each word</span>
+<span class="k">def</span> <span class="nf">capitalize_name</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">))</span>
+
+<span class="c1"># Assign colors to nodes</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">children</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">structure</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+    <span class="n">parent_name</span> <span class="o">=</span> <span class="n">capitalize_name</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">))</span>
+    <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">parent_name</span><span class="p">)</span>
+    
+    <span class="c1"># Set the color for Fena</span>
+    <span class="k">if</span> <span class="n">parent_name</span> <span class="o">==</span> <span class="s2">&quot;Fena&quot;</span><span class="p">:</span>
+        <span class="n">node_colors</span><span class="p">[</span><span class="n">parent_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lightgray&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">node_colors</span><span class="p">[</span><span class="n">parent_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">child_colors</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">child_colors</span><span class="p">)]</span>
+        
+    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">children</span><span class="p">:</span>
+        <span class="n">child_name</span> <span class="o">=</span> <span class="n">capitalize_name</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">))</span>
+        <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">parent_name</span><span class="p">,</span> <span class="n">child_name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">child_name</span> <span class="ow">in</span> <span class="n">light_blue_nodes</span><span class="p">:</span>
+            <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lightblue&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">child_colors</span><span class="p">[(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">6</span><span class="p">)</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">child_colors</span><span class="p">)]</span>  <span class="c1"># You can customize the logic here to assign colors</span>
+
+
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">node_colors</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">()]</span>
+
+<span class="c1"># Set figure size</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+
+<span class="c1"># Draw the graph</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>  <span class="c1"># Boundary color set here</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/185f4dfc8fee4cd6d6e20986bbaaf1fe8f70197fc303d67a79b30aa7a1578933.png" src="../_images/185f4dfc8fee4cd6d6e20986bbaaf1fe8f70197fc303d67a79b30aa7a1578933.png" />
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -12641,6 +12745,7 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="s2">&quot;</sp
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#nty">947.3 nty</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ers-jhu-edu">948. ers.jhu.edu</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-l8tr">949. 100{i}l8tr</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#consilience">950. consilience</a></li>
 </ul>
 </li>
 </ul>
