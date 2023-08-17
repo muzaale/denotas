@@ -579,6 +579,14 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">08/17/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#old2newrepotransfer">956. old2newrepotransfer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uses-abusesofgit">957. uses&amp;abusesofgit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uses-abusesofhistory">958. uses&amp;abusesofhistory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">957. uses&amp;abusesofgit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">958. uses&amp;abusesofhistory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">960. uses&amp;abusesofhistory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uses-of-history">Uses of History</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abuses-of-history">Abuses of History</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">Conclusion</a></li>
 </ul>
 </li>
 </ul>
@@ -635,16 +643,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Joseph Meyers                 
-2          Joshua Estrada                
-3          Taylor Jones                  
-4          Steve White                   
-5          Paul Webb                     
-6          Mackenzie Roberts             
-7          Brenda Miranda                
-8          Kara Howard                   
-9          Bradley Hansen                
-10         Sara Lang                     
+1          Stephanie Mahoney             
+2          Daniel Harmon                 
+3          Jared Morgan                  
+4          Kerri Rodgers                 
+5          Antonio King                  
+6          Rebecca Larson                
+7          Amy Villarreal                
+8          Hunter Washington             
+9          Crystal Durham                
+10         Pamela Castro                 
 </pre></div>
 </div>
 </div>
@@ -1156,14 +1164,14 @@ Songwriters: Donald Lawrence / Marshon Lewis / William James Stokes / Robert Woo
 Requirement already satisfied: chardet in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (5.2.0)
 Requirement already satisfied: joblib in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.3.1)
 Requirement already satisfied: jsonpickle in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (3.0.1)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: matplotlib in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (3.7.2)
+Requirement already satisfied: matplotlib in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (3.7.2)
 Requirement already satisfied: more-itertools in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (10.1.0)
 Requirement already satisfied: numpy in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.25.2)
 Requirement already satisfied: requests in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (2.31.0)
 Requirement already satisfied: webcolors&gt;=1.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.13)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
 Requirement already satisfied: cycler&gt;=0.10 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
 Requirement already satisfied: fonttools&gt;=4.22.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.42.0)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
@@ -12920,6 +12928,155 @@ git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </sp
 <p>And that’s it! You’ve moved the content to the new repository with a completely different folder structure while preserving the git history of each file.</p>
 <p>Always remember to be careful when manipulating git history, especially when it involves shared repositories. Make sure to backup the repository or work on a branch to avoid any irreversible mistakes.</p>
 </section>
+<section id="uses-abusesofgit">
+<h3>957. uses&amp;abusesofgit<a class="headerlink" href="#uses-abusesofgit" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Repo</p></li>
+<li><p>Branch</p></li>
+<li><p>File</p></li>
+<li><p>Commit</p></li>
+<li><p>Pull Request</p></li>
+<li><p>Merge</p></li>
+<li><p>Fork</p></li>
+<li><p>Clone</p></li>
+<li><p>Stash</p></li>
+<li><p>Tag</p></li>
+<li><p>Submodule</p></li>
+</ol>
+<ul class="simple">
+<li><p>Update</p></li>
+<li><p>Add</p></li>
+<li><p>Remove</p></li>
+<li><p>Init</p></li>
+<li><p>Sync</p></li>
+<li><p>Status</p></li>
+<li><p>Foreach</p></li>
+<li><p>Deinit</p></li>
+<li><p>Summary</p></li>
+<li><p>Absorbgitdirs</p></li>
+<li><p>Mv</p></li>
+</ul>
+<p>-copilot interjected, chatgpt edited</p>
+</section>
+<section id="uses-abusesofhistory">
+<h3>958. uses&amp;abusesofhistory<a class="headerlink" href="#uses-abusesofhistory" title="Permalink to this heading">#</a></h3>
+<p>Certainly! You can present the list without the repetitive “git” while maintaining the understanding that these are Git commands:</p>
+</section>
+<section id="id40">
+<h3>957. uses&amp;abusesofgit<a class="headerlink" href="#id40" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Log</p></li>
+<li><p>Blame</p></li>
+<li><p>Show</p></li>
+<li><p>Diff</p></li>
+<li><p>Revert</p></li>
+<li><p>Reset</p></li>
+<li><p>Reflog</p></li>
+<li><p>Cherry-pick</p></li>
+<li><p>Bisect</p></li>
+<li><p>Rebase</p></li>
+</ol>
+<ul class="simple">
+<li><p>-i</p></li>
+<li><p>–onto</p></li>
+<li><p>–continue</p></li>
+<li><p>–abort</p></li>
+<li><p>–skip</p></li>
+<li><p>–edit-todo</p></li>
+<li><p>–quit</p></li>
+<li><p>–show-current-patch</p></li>
+<li><p>–show-current-patch=diff</p></li>
+</ul>
+<p>-copilot interjected, chatgpt edited</p>
+</section>
+<section id="id41">
+<h3>958. uses&amp;abusesofhistory<a class="headerlink" href="#id41" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Checkout</p></li>
+<li><p>Switch</p></li>
+<li><p>Restore</p></li>
+<li><p>Clean</p></li>
+<li><p>Rm</p></li>
+<li><p>Archive</p></li>
+<li><p>Sparse-checkout</p></li>
+<li><p>Filter-repo</p></li>
+<li><p>Subtree</p></li>
+<li><p>Worktree</p></li>
+<li><p>Notes</p></li>
+<li><p>Rerere</p></li>
+<li><p>Instaweb</p></li>
+<li><p>Daemon</p></li>
+<li><p>Update-server-info</p></li>
+<li><p>Bundle</p></li>
+<li><p>Describe</p></li>
+</ol>
+<p>-copilot interjected, without chatgpt editing (atta boy copilot!)</p>
+</section>
+<hr class="docutils" />
+<section id="id42">
+<h3>960. uses&amp;abusesofhistory<a class="headerlink" href="#id42" title="Permalink to this heading">#</a></h3>
+<p>uses and abuses of history. discuss.</p>
+<hr class="docutils" />
+<p>The uses and abuses of history are complex and multifaceted. They reflect both the value of historical study in understanding the present and the ways in which history can be manipulated for various purposes. Below, I’ll outline some of the key uses and abuses:</p>
+</section>
+<section id="uses-of-history">
+<h3>Uses of History<a class="headerlink" href="#uses-of-history" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Understanding Context</strong>: History provides the context for understanding how societies develop and how current events have been shaped by the past. It allows us to see the roots of cultural, social, political, and economic trends.</p></li>
+<li><p><strong>Learning from the Past</strong>: By studying history, people can learn from past successes and failures. This knowledge can inform present-day decisions and prevent the repetition of past mistakes.</p></li>
+<li><p><strong>Cultural Identity</strong>: History plays a role in forming and understanding a shared cultural identity. It fosters a sense of continuity and connection to ancestors, traditions, and shared experiences.</p></li>
+<li><p><strong>Teaching Critical Thinking</strong>: The study of history encourages critical thinking, analysis, and interpretation. It requires students to assess evidence, understand different perspectives, and build logical arguments.</p></li>
+<li><p><strong>Conflict Resolution</strong>: An understanding of historical context can contribute to the resolution of current conflicts by revealing underlying causes and previous solutions.</p></li>
+</ol>
+</section>
+<section id="abuses-of-history">
+<h3>Abuses of History<a class="headerlink" href="#abuses-of-history" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Historical Revisionism</strong>: This involves the deliberate distortion or misrepresentation of historical facts to serve a particular agenda. It can be used to justify current political ideologies or actions, foster nationalism, or suppress minority viewpoints.</p></li>
+<li><p><strong>Selective Interpretation</strong>: People may selectively interpret or emphasize certain historical events to support their views. This can lead to biased or one-sided views of history that lack nuance and complexity.</p></li>
+<li><p><strong>Instrumentalization for Political Ends</strong>: Governments or political groups may use history as a tool to legitimize their power, rally support, or demonize opponents. This can lead to a distorted view of history that serves political ends rather than an accurate understanding of the past.</p></li>
+<li><p><strong>Erasure of Uncomfortable Truths</strong>: Some societies may choose to ignore or erase certain aspects of their history, particularly those that are uncomfortable or that reflect poorly on the nation. This erasure prevents an honest and complete understanding of the past.</p></li>
+<li><p><strong>Commercialization</strong>: History can also be abused through commercialization, where it is reduced to mere entertainment or used to market products. This can trivialize significant events or personalities and lead to a shallow understanding of historical complexities.</p></li>
+</ol>
+</section>
+<section id="id43">
+<h3>Conclusion<a class="headerlink" href="#id43" title="Permalink to this heading">#</a></h3>
+<p>History holds significant value as a means of understanding the world, informing decisions, nurturing cultural identity, and developing critical thinking skills. However, it can also be misused through revisionism, selective interpretation, politicization, erasure, and commercialization.</p>
+<p>A responsible approach to history requires acknowledging its complexity, engaging with different perspectives, and striving for an honest and nuanced understanding. Recognizing both the uses and potential abuses of history is vital in ensuring that it remains a valuable tool for understanding the human condition.</p>
+<hr class="docutils" />
+<p>I’ve a tidier summary: history may mean three different things, reflecting three needs: 1. equip one with skills to face challenges today. 2. articulate a credo, to justify ones renouncements off anything today that departs from this. 3. teach one how to be prudent, by avoiding all that doesn’t work for you and creating your idea in a secure environment that you can control</p>
+<hr class="docutils" />
+<p>Certainly, your tidier summary encapsulates some core concepts about how history can be used and understood, focusing on practical applications, ideology, and prudence. Here’s a brief explanation for each point:</p>
+<ol class="arabic simple">
+<li><p><strong>Equip with Skills</strong>: By studying history, individuals gain insight into past challenges, solutions, and the complexities of human behavior. This can equip them with the understanding and analytical skills needed to face contemporary challenges, make informed decisions, and develop empathy for others.</p></li>
+<li><p><strong>Articulate a Credo</strong>: History is often used to form or justify a particular belief system or ideology. By adhering to a specific interpretation of history, individuals or groups can justify their actions, beliefs, or renouncements of anything that departs from that interpretation. This can lead to a strong sense of identity and purpose but can also result in a narrow or biased view of the world.</p></li>
+<li><p><strong>Teach Prudence</strong>: History provides examples of what has worked and what hasn’t, across various contexts and time periods. By studying these examples, one can learn to avoid past mistakes and pursue successful strategies. It also allows individuals to shape their ideas and goals within a context that they understand and can control, thus acting with prudence and foresight.</p></li>
+</ol>
+<p>Your summary highlights the multifaceted nature of history and how it can be applied in everyday life for personal growth, ideological grounding, and wise decision-making. It also implicitly acknowledges the potential for misuse, particularly in the way history can be selectively interpreted to support particular beliefs or agendas. Understanding history in these terms helps to underscore its enduring relevance and the importance of approaching it with an open and critical mind.</p>
+<hr class="docutils" />
+<p>are you aware that Nietzsche wrote an essay on the uses and abuses of history? how would that compare with my summary?</p>
+<hr class="docutils" />
+<p>Yes, Friedrich Nietzsche’s essay “On the Uses and Abuses of History for Life” is an important work that explores the relationship between historical understanding and living a meaningful life. Your summary touches on some themes that align with Nietzsche’s thoughts, but his philosophy adds some unique nuances.</p>
+<p>Here’s a brief comparison:</p>
+<ol class="arabic simple">
+<li><p><strong>Equip with Skills</strong>: Your point about equipping one with the skills to face challenges aligns with Nietzsche’s argument that history can be used to develop individual and societal vigor. Nietzsche argues that historical knowledge can be used instrumentally to enhance life, but he also warns against an excessive preoccupation with history, which can hinder action and creativity.</p></li>
+<li><p><strong>Articulate a Credo</strong>: Your second point about articulating a credo resonates with Nietzsche’s critique of the use of history to support existing values and systems. He observes that history can be manipulated to justify current beliefs and practices, but again warns against the potential stifling of individual growth and the creation of a rigid and life-denying society.</p></li>
+<li><p><strong>Teach Prudence</strong>: The idea of using history to teach prudence is somewhat reflected in Nietzsche’s thoughts on the “monumental” aspect of history, where history is used to inspire and provide models for action. He sees value in recognizing greatness in history, but he also acknowledges the risk of misusing history by making inappropriate comparisons between different historical contexts.</p></li>
+</ol>
+<p>Nietzsche’s essay focuses on three ways history is used: the “monumental,” the “antiquarian,” and the “critical.” Monumental history inspires and guides action, antiquarian history preserves and honors tradition, and critical history allows for self-reflection and growth. Throughout the essay, he warns of the dangers of each approach if taken to an extreme and emphasizes the importance of engaging with history in a way that serves life and individual flourishing.</p>
+<p>Your summary captures some of the practical aspects of how history can be used and highlights the potential for misuse, but Nietzsche’s philosophy adds depth by considering the existential implications of engaging with history and how it might either enhance or diminish the quality of life. His unique perspective challenges conventional views of history and offers a more nuanced understanding of how history can be both a tool for living and a potential obstacle to authentic existence.</p>
+<hr class="docutils" />
+<p>can’t one find these parallels: monumental ~ equip with skills, antiquarian ~articulate a credo, and critical ~ teach prudence?</p>
+<hr class="docutils" />
+<p>Certainly, the parallels you’ve drawn between your summary and Nietzsche’s three categories of history (monumental, antiquarian, and critical) can be justified as follows:</p>
+<ol class="arabic simple">
+<li><p><strong>Monumental ~ Equip with Skills</strong>: Monumental history looks at the past as a source of inspiration, offering examples of greatness to emulate. This aligns with the idea of equipping individuals with skills, as the study of significant figures and events from history can provide guidance for contemporary challenges.</p></li>
+<li><p><strong>Antiquarian ~ Articulate a Credo</strong>: Antiquarian history is concerned with preserving and honoring the past, particularly one’s own cultural and familial heritage. This resonates with your point about articulating a credo, where history is used to form or justify a particular belief system or identity.</p></li>
+<li><p><strong>Critical ~ Teach Prudence</strong>: Critical history involves a thoughtful and analytical engagement with the past, where one assesses historical events to inform present actions. This parallels your idea of teaching prudence, where history is used to learn from past mistakes and successes to act wisely in the present.</p></li>
+</ol>
+<p>These parallels capture some of the essence of Nietzsche’s categories and reflect a thoughtful engagement with the ways history can be used and misused. While the concepts might not align perfectly in every detail, the connections you’ve drawn help to illuminate the multifaceted nature of historical understanding and its relationship to human life, thought, and action.</p>
+<hr class="docutils" />
+</section>
 </section>
 </section>
 
@@ -13199,6 +13356,14 @@ git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </sp
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">08/17/2023</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#old2newrepotransfer">956. old2newrepotransfer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uses-abusesofgit">957. uses&amp;abusesofgit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uses-abusesofhistory">958. uses&amp;abusesofhistory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">957. uses&amp;abusesofgit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">958. uses&amp;abusesofhistory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">960. uses&amp;abusesofhistory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uses-of-history">Uses of History</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abuses-of-history">Abuses of History</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">Conclusion</a></li>
 </ul>
 </li>
 </ul>
