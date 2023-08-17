@@ -600,6 +600,8 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bestsimulationyet">970 <code class="docutils literal notranslate"><span class="pre">bestsimulationyet*</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchical">971. hierarchical</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instances">972. instances</a></li>
 </ul>
 </li>
 </ul>
@@ -656,16 +658,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Melissa Booker                
-2          Thomas Taylor                 
-3          Justin Kelly                  
-4          David Perez                   
-5          Dustin Thompson               
-6          Sean Dalton                   
-7          Eric Wright                   
-8          Christopher Drake             
-9          Cindy Fuller                  
-10         Bonnie Rivera                 
+1          April Bailey                  
+2          Mackenzie Robinson            
+3          Juan Gray                     
+4          Michael Stewart               
+5          Heather Young                 
+6          Leah Riley                    
+7          Christian Farmer              
+8          William Miller                
+9          Dawn Wallace                  
+10         Destiny Randall               
 </pre></div>
 </div>
 </div>
@@ -1175,16 +1177,16 @@ Songwriters: Donald Lawrence / Marshon Lewis / William James Stokes / Robert Woo
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: music21 in /usr/local/anaconda3/lib/python3.11/site-packages (9.1.0)
 Requirement already satisfied: chardet in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (4.0.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: joblib in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (1.2.0)
+Requirement already satisfied: joblib in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (1.2.0)
 Requirement already satisfied: jsonpickle in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (3.0.1)
 Requirement already satisfied: matplotlib in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (3.7.1)
 Requirement already satisfied: more-itertools in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (8.12.0)
 Requirement already satisfied: numpy in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (1.24.3)
 Requirement already satisfied: requests in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (2.31.0)
 Requirement already satisfied: webcolors&gt;=1.5 in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (1.13)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.0.5)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.0.5)
 Requirement already satisfied: cycler&gt;=0.10 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
 Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.25.0)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
@@ -1192,9 +1194,7 @@ Requirement already satisfied: packaging&gt;=20.0 in /usr/local/anaconda3/lib/py
 Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (9.4.0)
 Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (3.0.9)
 Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (2.8.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (2.0.4)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (2.0.4)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (3.4)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (1.26.16)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (2023.7.22)
@@ -9470,8 +9470,16 @@ You can then export this DataFrame to a CSV file and use it in your Stata code.<
                    <span class="n">beta</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">educat</span> <span class="o">==</span> <span class="s1">&#39;High School&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">educat</span> <span class="o">==</span> <span class="s1">&#39;K-8&#39;</span><span class="p">)</span> <span class="o">+</span>
                    <span class="n">beta</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">educat</span> <span class="o">==</span> <span class="s1">&#39;Some college&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span> <span class="o">*</span> <span class="n">male</span><span class="p">)</span>
     
-    <span class="c1"># Simulate time to kidney failure</span>
-    <span class="n">time_to_kidney_failure</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">linear_pred</span><span class="p">))</span>
+  <span class="c1"># no pain, no gain: figured this out after adversarial exchanges with chatgpt</span>
+    <span class="n">median_time_to_failure</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="n">mean_time_to_failure</span> <span class="o">=</span> <span class="mi">19</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">mean_time_to_failure</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">median_time_to_failure</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    <span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">median_time_to_failure</span><span class="p">)</span>
+    <span class="n">time_to_kidney_failure</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">lognormal</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="n">sigma</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">time_to_kidney_failure</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">time_to_kidney_failure</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+
+    <span class="c1"># disastrous failure, no pun intended</span>
+    <span class="c1"># time_to_kidney_failure = np.random.exponential(scale=np.exp(-linear_pred))</span>
     
     <span class="c1"># Create status indicator (all failed)</span>
     <span class="n">status</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
@@ -9498,40 +9506,10 @@ You can then export this DataFrame to a CSV file and use it in your Stata code.<
 <span class="n">df</span> <span class="o">=</span> <span class="n">simulate_data</span><span class="p">()</span>
 
 <span class="c1"># Save to CSV</span>
-<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;simulated_data_2.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="c1"># Stata commands</span>
-<span class="n">stata_commands</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">capture log close</span>
-<span class="s2">cd ~/desktop</span>
-<span class="s2">log using simulated_data.log, replace </span>
-<span class="s2">import delimited &quot;simulated_data.csv&quot;, clear </span>
-<span class="s2">g time = time_to_kidney_failure * 100</span>
-<span class="s2">stset time, fail(status)</span>
-<span class="s2">#delimit ;</span>
-<span class="s2">sts graph, </span>
-<span class="s2">    fail </span>
-<span class="s2">    per(100) </span>
-<span class="s2">    ylab(,</span>
-<span class="s2">        format(</span><span class="si">%2.0f</span><span class="s2">)) </span>
-<span class="s2">    yti(&quot;%&quot;,</span>
-<span class="s2">        orientation(horizontal)) </span>
-<span class="s2">    xti(&quot;Years&quot;)</span>
-<span class="s2">    ti(&quot;&quot;)</span>
-<span class="s2">    tmax(30)</span>
-<span class="s2">; </span>
-<span class="s2">#delimit cr</span>
-<span class="s2">graph export simulated_data.png, replace </span>
-<span class="s2">encode race,g(racecat)</span>
-<span class="s2">encode education,g(educat)</span>
-<span class="s2">stcox age sbp scr bmi hba1c hypertension smoke i.racecat i.educat male</span>
-<span class="s2">matrix list e(b)</span>
-<span class="s2">matrix list e(V)</span>
-<span class="s2">log close</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="c1"># df.to_csv(&quot;simulated_data_2.csv&quot;, index=False)</span>
 
 <span class="c1"># Print the Stata commands to run</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">stata_commands</span><span class="p">)</span>
+<span class="c1"># print(stata_commands)</span>
 
 <span class="c1"># Print summaries</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
@@ -9539,6 +9517,29 @@ You can then export this DataFrame to a CSV file and use it in your Stata code.<
 </div>
 </div>
 </details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>               age          sbp          scr          bmi        hba1c  \
+count  1000.000000  1000.000000  1000.000000  1000.000000  1000.000000   
+mean     60.193321   121.062544     1.002917    24.906404     4.950726   
+std       9.792159    14.961816     0.491727     5.135663     0.992380   
+min      27.587327    75.894170    -0.509756    10.352757     1.823296   
+25%      53.524097   110.906375     0.676000    21.312898     4.317395   
+50%      60.253006   120.946157     0.999875    25.000923     4.981758   
+75%      66.479439   130.933233     1.330458    28.334727     5.639123   
+max      98.527315   167.896614     2.963119    41.215465     8.112910   
+
+       hypertension        smoke        male  time_to_kidney_failure  status  
+count   1000.000000  1000.000000  1000.00000             1000.000000  1000.0  
+mean       0.505000     0.493000     0.50000               16.766739     1.0  
+std        0.500225     0.500201     0.50025                8.719552     0.0  
+min        0.000000     0.000000     0.00000                1.439196     1.0  
+25%        0.000000     0.000000     0.00000                9.467670     1.0  
+50%        1.000000     0.000000     0.50000               15.184791     1.0  
+75%        1.000000     1.000000     1.00000               24.459598     1.0  
+max        1.000000     1.000000     1.00000               30.000000     1.0  
+</pre></div>
+</div>
+</div>
 </div>
 <ol class="arabic simple" start="3">
 <li><p>Now a third attempt in Python</p></li>
@@ -9580,59 +9581,14 @@ You can then export this DataFrame to a CSV file and use it in your Stata code.<
 
 <span class="c1"># Variance-covariance matrix</span>
 <span class="n">variance_covariance_matrix</span> <span class="o">=</span> <span class="n">cph</span><span class="o">.</span><span class="n">variance_matrix_</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variance-Covariance Matrix:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">variance_covariance_matrix</span><span class="p">)</span>
+<span class="c1"># print(&quot;Variance-Covariance Matrix:&quot;)</span>
+<span class="c1"># print(variance_covariance_matrix)</span>
  
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting lifelines
-  Using cached lifelines-0.27.7-py3-none-any.whl (409 kB)
-Requirement already satisfied: numpy&gt;=1.14.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from lifelines) (1.25.2)
-Requirement already satisfied: scipy&gt;=1.2.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from lifelines) (1.11.1)
-Requirement already satisfied: pandas&gt;=1.0.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from lifelines) (2.0.3)
-Requirement already satisfied: matplotlib&gt;=3.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from lifelines) (3.7.2)
-Collecting autograd&gt;=1.5 (from lifelines)
-  Obtaining dependency information for autograd&gt;=1.5 from https://files.pythonhosted.org/packages/81/70/d5c7c2a458b8be96495c8b1634c2155beab58cbe864b7a9a5c06c2e52520/autograd-1.6.2-py3-none-any.whl.metadata
-  Downloading autograd-1.6.2-py3-none-any.whl.metadata (706 bytes)
-Collecting autograd-gamma&gt;=0.3 (from lifelines)
-  Using cached autograd_gamma-0.5.0-py3-none-any.whl
-Collecting formulaic&gt;=0.2.2 (from lifelines)
-  Obtaining dependency information for formulaic&gt;=0.2.2 from https://files.pythonhosted.org/packages/db/97/2ac97273f77138c4248ab63cdc4799ea3c87ea2be2d28bb726562e0d0827/formulaic-0.6.4-py3-none-any.whl.metadata
-  Downloading formulaic-0.6.4-py3-none-any.whl.metadata (6.0 kB)
-Collecting future&gt;=0.15.2 (from autograd&gt;=1.5-&gt;lifelines)
-  Using cached future-0.18.3-py3-none-any.whl
-Collecting astor&gt;=0.8 (from formulaic&gt;=0.2.2-&gt;lifelines)
-  Using cached astor-0.8.1-py2.py3-none-any.whl (27 kB)
-Collecting interface-meta&gt;=1.2.0 (from formulaic&gt;=0.2.2-&gt;lifelines)
-  Using cached interface_meta-1.3.0-py3-none-any.whl (14 kB)
-Collecting typing-extensions&gt;=4.2.0 (from formulaic&gt;=0.2.2-&gt;lifelines)
-  Obtaining dependency information for typing-extensions&gt;=4.2.0 from https://files.pythonhosted.org/packages/ec/6b/63cc3df74987c36fe26157ee12e09e8f9db4de771e0f3404263117e75b95/typing_extensions-4.7.1-py3-none-any.whl.metadata
-  Downloading typing_extensions-4.7.1-py3-none-any.whl.metadata (3.1 kB)
-Collecting wrapt&gt;=1.0 (from formulaic&gt;=0.2.2-&gt;lifelines)
-  Downloading wrapt-1.15.0-cp311-cp311-macosx_10_9_x86_64.whl (35 kB)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib&gt;=3.0-&gt;lifelines) (1.1.0)
-Requirement already satisfied: cycler&gt;=0.10 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib&gt;=3.0-&gt;lifelines) (0.11.0)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib&gt;=3.0-&gt;lifelines) (4.42.0)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib&gt;=3.0-&gt;lifelines) (1.4.4)
-Requirement already satisfied: packaging&gt;=20.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib&gt;=3.0-&gt;lifelines) (23.1)
-Requirement already satisfied: pillow&gt;=6.2.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib&gt;=3.0-&gt;lifelines) (10.0.0)
-Requirement already satisfied: pyparsing&lt;3.1,&gt;=2.3.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib&gt;=3.0-&gt;lifelines) (3.0.9)
-Requirement already satisfied: python-dateutil&gt;=2.7 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib&gt;=3.0-&gt;lifelines) (2.8.2)
-Requirement already satisfied: pytz&gt;=2020.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from pandas&gt;=1.0.0-&gt;lifelines) (2023.3)
-Requirement already satisfied: tzdata&gt;=2022.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from pandas&gt;=1.0.0-&gt;lifelines) (2023.3)
-Requirement already satisfied: six&gt;=1.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib&gt;=3.0-&gt;lifelines) (1.16.0)
-Downloading autograd-1.6.2-py3-none-any.whl (49 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">49.3/49.3 kB</span> <span class=" -Color -Color-Red">1.5 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hDownloading formulaic-0.6.4-py3-none-any.whl (88 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">88.9/88.9 kB</span> <span class=" -Color -Color-Red">2.9 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hUsing cached typing_extensions-4.7.1-py3-none-any.whl (33 kB)
-Installing collected packages: wrapt, typing-extensions, interface-meta, future, astor, autograd, formulaic, autograd-gamma, lifelines
-Successfully installed astor-0.8.1 autograd-1.6.2 autograd-gamma-0.5.0 formulaic-0.6.4 future-0.18.3 interface-meta-1.3.0 lifelines-0.27.7 typing-extensions-4.7.1 wrapt-1.15.0
-</pre></div>
-</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -9675,11 +9631,11 @@ Successfully installed astor-0.8.1 autograd-1.6.2 autograd-gamma-0.5.0 formulaic
     </tr>
     <tr>
       <th>partial log-likelihood</th>
-      <td>-3463.10</td>
+      <td>-5908.13</td>
     </tr>
     <tr>
       <th>time fit was run</th>
-      <td>2023-08-10 12:52:30 UTC</td>
+      <td>2023-08-17 23:01:13 UTC</td>
     </tr>
   </tbody>
 </table>
@@ -9703,185 +9659,185 @@ Successfully installed astor-0.8.1 autograd-1.6.2 autograd-gamma-0.5.0 formulaic
   <tbody>
     <tr>
       <th>age</th>
-      <td>0.71</td>
-      <td>2.04</td>
-      <td>0.02</td>
-      <td>0.68</td>
-      <td>0.75</td>
-      <td>1.97</td>
-      <td>2.12</td>
+      <td>-0.00</td>
+      <td>1.00</td>
       <td>0.00</td>
-      <td>38.36</td>
-      <td>&lt;0.005</td>
-      <td>inf</td>
+      <td>-0.01</td>
+      <td>0.01</td>
+      <td>0.99</td>
+      <td>1.01</td>
+      <td>0.00</td>
+      <td>-0.20</td>
+      <td>0.84</td>
+      <td>0.25</td>
     </tr>
     <tr>
       <th>sbp</th>
-      <td>0.82</td>
-      <td>2.27</td>
-      <td>0.02</td>
-      <td>0.78</td>
-      <td>0.86</td>
-      <td>2.18</td>
-      <td>2.37</td>
+      <td>-0.00</td>
+      <td>1.00</td>
       <td>0.00</td>
-      <td>38.71</td>
-      <td>&lt;0.005</td>
-      <td>inf</td>
+      <td>-0.01</td>
+      <td>0.00</td>
+      <td>0.99</td>
+      <td>1.00</td>
+      <td>0.00</td>
+      <td>-0.42</td>
+      <td>0.68</td>
+      <td>0.56</td>
     </tr>
     <tr>
       <th>scr</th>
-      <td>0.83</td>
-      <td>2.29</td>
-      <td>0.07</td>
-      <td>0.69</td>
-      <td>0.97</td>
-      <td>1.99</td>
-      <td>2.64</td>
+      <td>0.09</td>
+      <td>1.09</td>
+      <td>0.06</td>
+      <td>-0.04</td>
+      <td>0.21</td>
+      <td>0.96</td>
+      <td>1.24</td>
       <td>0.00</td>
-      <td>11.40</td>
-      <td>&lt;0.005</td>
-      <td>97.53</td>
+      <td>1.36</td>
+      <td>0.17</td>
+      <td>2.54</td>
     </tr>
     <tr>
       <th>bmi</th>
-      <td>0.63</td>
-      <td>1.87</td>
-      <td>0.02</td>
-      <td>0.59</td>
-      <td>0.66</td>
-      <td>1.81</td>
-      <td>1.93</td>
+      <td>-0.01</td>
+      <td>0.99</td>
+      <td>0.01</td>
+      <td>-0.02</td>
+      <td>0.01</td>
+      <td>0.98</td>
+      <td>1.01</td>
       <td>0.00</td>
-      <td>35.88</td>
-      <td>&lt;0.005</td>
-      <td>934.01</td>
+      <td>-0.84</td>
+      <td>0.40</td>
+      <td>1.32</td>
     </tr>
     <tr>
       <th>hba1c</th>
-      <td>0.71</td>
-      <td>2.03</td>
-      <td>0.04</td>
-      <td>0.63</td>
-      <td>0.78</td>
-      <td>1.88</td>
-      <td>2.19</td>
+      <td>-0.04</td>
+      <td>0.96</td>
+      <td>0.03</td>
+      <td>-0.10</td>
+      <td>0.02</td>
+      <td>0.90</td>
+      <td>1.02</td>
       <td>0.00</td>
-      <td>18.49</td>
-      <td>&lt;0.005</td>
-      <td>251.26</td>
+      <td>-1.29</td>
+      <td>0.20</td>
+      <td>2.35</td>
     </tr>
     <tr>
       <th>hypertension</th>
-      <td>0.81</td>
-      <td>2.25</td>
-      <td>0.07</td>
-      <td>0.67</td>
-      <td>0.94</td>
-      <td>1.96</td>
-      <td>2.57</td>
+      <td>0.04</td>
+      <td>1.04</td>
+      <td>0.06</td>
+      <td>-0.09</td>
+      <td>0.16</td>
+      <td>0.91</td>
+      <td>1.17</td>
       <td>0.00</td>
-      <td>11.71</td>
-      <td>&lt;0.005</td>
-      <td>102.82</td>
+      <td>0.56</td>
+      <td>0.58</td>
+      <td>0.79</td>
     </tr>
     <tr>
       <th>smoke</th>
-      <td>0.75</td>
-      <td>2.12</td>
-      <td>0.07</td>
-      <td>0.62</td>
-      <td>0.89</td>
-      <td>1.85</td>
-      <td>2.42</td>
+      <td>0.04</td>
+      <td>1.04</td>
+      <td>0.06</td>
+      <td>-0.09</td>
+      <td>0.16</td>
+      <td>0.91</td>
+      <td>1.18</td>
       <td>0.00</td>
-      <td>10.89</td>
-      <td>&lt;0.005</td>
-      <td>89.29</td>
+      <td>0.57</td>
+      <td>0.57</td>
+      <td>0.81</td>
     </tr>
     <tr>
       <th>male</th>
-      <td>-0.36</td>
-      <td>0.70</td>
-      <td>0.07</td>
-      <td>-0.49</td>
-      <td>-0.23</td>
-      <td>0.61</td>
-      <td>0.80</td>
+      <td>0.01</td>
+      <td>1.01</td>
+      <td>0.06</td>
+      <td>-0.11</td>
+      <td>0.14</td>
+      <td>0.90</td>
+      <td>1.15</td>
       <td>0.00</td>
-      <td>-5.30</td>
-      <td>&lt;0.005</td>
-      <td>23.06</td>
+      <td>0.22</td>
+      <td>0.82</td>
+      <td>0.28</td>
     </tr>
     <tr>
       <th>race_Hispanic</th>
-      <td>0.06</td>
-      <td>1.07</td>
+      <td>0.11</td>
+      <td>1.12</td>
       <td>0.09</td>
-      <td>-0.12</td>
-      <td>0.25</td>
-      <td>0.89</td>
-      <td>1.28</td>
+      <td>-0.07</td>
+      <td>0.29</td>
+      <td>0.94</td>
+      <td>1.33</td>
       <td>0.00</td>
-      <td>0.68</td>
-      <td>0.50</td>
-      <td>1.01</td>
+      <td>1.24</td>
+      <td>0.22</td>
+      <td>2.21</td>
     </tr>
     <tr>
       <th>race_Other</th>
-      <td>0.20</td>
-      <td>1.22</td>
+      <td>0.12</td>
+      <td>1.13</td>
       <td>0.09</td>
-      <td>0.02</td>
-      <td>0.38</td>
-      <td>1.02</td>
-      <td>1.46</td>
+      <td>-0.05</td>
+      <td>0.29</td>
+      <td>0.95</td>
+      <td>1.34</td>
       <td>0.00</td>
-      <td>2.21</td>
-      <td>0.03</td>
-      <td>5.20</td>
+      <td>1.42</td>
+      <td>0.15</td>
+      <td>2.69</td>
     </tr>
     <tr>
       <th>race_White</th>
-      <td>0.39</td>
-      <td>1.48</td>
+      <td>0.07</td>
+      <td>1.08</td>
       <td>0.09</td>
-      <td>0.21</td>
-      <td>0.57</td>
-      <td>1.23</td>
-      <td>1.77</td>
+      <td>-0.10</td>
+      <td>0.25</td>
+      <td>0.90</td>
+      <td>1.28</td>
       <td>0.00</td>
-      <td>4.21</td>
-      <td>&lt;0.005</td>
-      <td>15.29</td>
+      <td>0.82</td>
+      <td>0.41</td>
+      <td>1.29</td>
     </tr>
     <tr>
       <th>education_K-8</th>
-      <td>0.13</td>
-      <td>1.14</td>
+      <td>-0.04</td>
+      <td>0.96</td>
       <td>0.08</td>
-      <td>-0.03</td>
-      <td>0.29</td>
-      <td>0.97</td>
-      <td>1.34</td>
-      <td>0.00</td>
-      <td>1.57</td>
+      <td>-0.19</td>
       <td>0.12</td>
-      <td>3.10</td>
+      <td>0.82</td>
+      <td>1.13</td>
+      <td>0.00</td>
+      <td>-0.47</td>
+      <td>0.64</td>
+      <td>0.65</td>
     </tr>
     <tr>
       <th>education_Some college</th>
+      <td>-0.06</td>
+      <td>0.94</td>
       <td>0.08</td>
-      <td>1.09</td>
-      <td>0.08</td>
-      <td>-0.07</td>
-      <td>0.24</td>
-      <td>0.93</td>
-      <td>1.27</td>
+      <td>-0.21</td>
+      <td>0.09</td>
+      <td>0.81</td>
+      <td>1.10</td>
       <td>0.00</td>
-      <td>1.07</td>
-      <td>0.29</td>
-      <td>1.80</td>
+      <td>-0.76</td>
+      <td>0.45</td>
+      <td>1.16</td>
     </tr>
   </tbody>
 </table><br><div>
@@ -9902,102 +9858,38 @@ Successfully installed astor-0.8.1 autograd-1.6.2 autograd-gamma-0.5.0 formulaic
   <tbody>
     <tr>
       <th>Concordance</th>
-      <td>0.97</td>
+      <td>0.53</td>
     </tr>
     <tr>
       <th>Partial AIC</th>
-      <td>6952.20</td>
+      <td>11842.26</td>
     </tr>
     <tr>
       <th>log-likelihood ratio test</th>
-      <td>4898.05 on 13 df</td>
+      <td>8.00 on 13 df</td>
     </tr>
     <tr>
       <th>-log2(p) of ll-ratio test</th>
-      <td>inf</td>
+      <td>0.25</td>
     </tr>
   </tbody>
 </table>
 </div></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Coefficient Matrix:
 covariate
-age                       0.714595
-sbp                       0.821749
-scr                       0.828384
-bmi                       0.625474
-hba1c                     0.708745
-hypertension              0.808728
-smoke                     0.750394
-male                     -0.357358
-race_Hispanic             0.063952
-race_Other                0.200362
-race_White                0.388712
-education_K-8             0.129548
-education_Some college    0.084941
+age                      -0.000685
+sbp                      -0.000897
+scr                       0.087583
+bmi                      -0.005239
+hba1c                    -0.041717
+hypertension              0.035385
+smoke                     0.036102
+male                      0.014295
+race_Hispanic             0.111726
+race_Other                0.123766
+race_White                0.072786
+education_K-8            -0.037315
+education_Some college   -0.058551
 Name: coef, dtype: float64
-Variance-Covariance Matrix:
-covariate                    age       sbp       scr       bmi     hba1c  \
-covariate                                                                  
-age                     0.000347  0.000388  0.000387  0.000297  0.000339   
-sbp                     0.000388  0.000451  0.000457  0.000342  0.000389   
-scr                     0.000387  0.000457  0.005284  0.000353  0.000253   
-bmi                     0.000297  0.000342  0.000353  0.000304  0.000299   
-hba1c                   0.000339  0.000389  0.000253  0.000299  0.001469   
-hypertension            0.000372  0.000429  0.000601  0.000297  0.000388   
-smoke                   0.000332  0.000377  0.000436  0.000300  0.000471   
-male                   -0.000188 -0.000234 -0.000465 -0.000186 -0.000264   
-race_Hispanic           0.000023  0.000065  0.000226  0.000053  0.000103   
-race_Other              0.000065  0.000108  0.000345  0.000060  0.000141   
-race_White              0.000167  0.000232  0.000405  0.000159  0.000263   
-education_K-8           0.000091  0.000109  0.000325  0.000150  0.000109   
-education_Some college  0.000067  0.000088  0.000527  0.000103  0.000028   
-
-covariate               hypertension     smoke      male  race_Hispanic  \
-covariate                                                                 
-age                         0.000372  0.000332 -0.000188       0.000023   
-sbp                         0.000429  0.000377 -0.000234       0.000065   
-scr                         0.000601  0.000436 -0.000465       0.000226   
-bmi                         0.000297  0.000300 -0.000186       0.000053   
-hba1c                       0.000388  0.000471 -0.000264       0.000103   
-hypertension                0.004769  0.000320 -0.000152      -0.000171   
-smoke                       0.000320  0.004750 -0.000020       0.000435   
-male                       -0.000152 -0.000020  0.004543       0.000387   
-race_Hispanic              -0.000171  0.000435  0.000387       0.008820   
-race_Other                  0.000031  0.000075  0.000352       0.003866   
-race_White                  0.000346  0.000288  0.000451       0.003937   
-education_K-8               0.000163  0.000311  0.000288       0.000015   
-education_Some college      0.000314  0.000227  0.000162       0.000043   
-
-covariate               race_Other  race_White  education_K-8  \
-covariate                                                       
-age                       0.000065    0.000167       0.000091   
-sbp                       0.000108    0.000232       0.000109   
-scr                       0.000345    0.000405       0.000325   
-bmi                       0.000060    0.000159       0.000150   
-hba1c                     0.000141    0.000263       0.000109   
-hypertension              0.000031    0.000346       0.000163   
-smoke                     0.000075    0.000288       0.000311   
-male                      0.000352    0.000451       0.000288   
-race_Hispanic             0.003866    0.003937       0.000015   
-race_Other                0.008240    0.003952      -0.000592   
-race_White                0.003952    0.008506      -0.000145   
-education_K-8            -0.000592   -0.000145       0.006811   
-education_Some college   -0.000198    0.000117       0.003330   
-
-covariate               education_Some college  
-covariate                                       
-age                                   0.000067  
-sbp                                   0.000088  
-scr                                   0.000527  
-bmi                                   0.000103  
-hba1c                                 0.000028  
-hypertension                          0.000314  
-smoke                                 0.000227  
-male                                  0.000162  
-race_Hispanic                         0.000043  
-race_Other                           -0.000198  
-race_White                            0.000117  
-education_K-8                         0.003330  
-education_Some college                0.006358  
 </pre></div>
 </div>
 </div>
@@ -10037,7 +9929,7 @@ education_Some college                0.006358
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0df1c51b37386527d3dd20e920bd4074327b8c6e73c7a35dc52ed284466eb662.png" src="../_images/0df1c51b37386527d3dd20e920bd4074327b8c6e73c7a35dc52ed284466eb662.png" />
+<img alt="../_images/44ebeaede961d6dcdb61f7314d275c6a026a77368350c8c87cca696572b055c9.png" src="../_images/44ebeaede961d6dcdb61f7314d275c6a026a77368350c8c87cca696572b055c9.png" />
 </div>
 </div>
 <p>It seems like the survival function is behaving unexpectedly, jumping straight from 1 to 0 at time 0. This may indicate an issue with the data itself. It might be helpful to look at the summary statistics of the time-to-event and status columns, and perhaps plot a histogram to visualize the distribution of the time-to-event variable.</p>
@@ -10080,137 +9972,11 @@ education_Some college                0.006358
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">lifelines</span> <span class="kn">import</span> <span class="n">KaplanMeierFitter</span>
-
-<span class="c1"># Function to simulate data (same as before)</span>
-<span class="k">def</span> <span class="nf">simulate_data</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-    <span class="n">age</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-    <span class="n">sbp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-    <span class="n">scr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-    <span class="n">bmi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-    <span class="n">hba1c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-    <span class="n">hypertension</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
-    <span class="n">smoke</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
-    <span class="n">racecat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;Black&#39;</span><span class="p">,</span> <span class="s1">&#39;Hispanic&#39;</span><span class="p">,</span> <span class="s1">&#39;Other&#39;</span><span class="p">,</span> <span class="s1">&#39;White&#39;</span><span class="p">],</span> <span class="n">n</span><span class="p">)</span>
-    <span class="n">educat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;High School&#39;</span><span class="p">,</span> <span class="s1">&#39;K-8&#39;</span><span class="p">,</span> <span class="s1">&#39;Some college&#39;</span><span class="p">],</span> <span class="n">n</span><span class="p">)</span>
-    <span class="n">male</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
-
-    <span class="c1"># Coefficients to generate HRs greater than 2</span>
-    <span class="n">beta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">])</span>
-
-    <span class="c1"># Simulate the linear predictor</span>
-    <span class="n">linear_pred</span> <span class="o">=</span> <span class="p">(</span><span class="n">beta</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">age</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">sbp</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">scr</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="n">bmi</span> <span class="o">+</span>
-                   <span class="n">beta</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">hba1c</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">*</span> <span class="n">hypertension</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">*</span> <span class="n">smoke</span> <span class="o">+</span>
-                   <span class="n">beta</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">racecat</span> <span class="o">==</span> <span class="s1">&#39;Black&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">racecat</span> <span class="o">==</span> <span class="s1">&#39;Hispanic&#39;</span><span class="p">)</span> <span class="o">+</span>
-                   <span class="n">beta</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">racecat</span> <span class="o">==</span> <span class="s1">&#39;Other&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">racecat</span> <span class="o">==</span> <span class="s1">&#39;White&#39;</span><span class="p">)</span> <span class="o">+</span>
-                   <span class="n">beta</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">educat</span> <span class="o">==</span> <span class="s1">&#39;High School&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">educat</span> <span class="o">==</span> <span class="s1">&#39;K-8&#39;</span><span class="p">)</span> <span class="o">+</span>
-                   <span class="n">beta</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">educat</span> <span class="o">==</span> <span class="s1">&#39;Some college&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span> <span class="o">*</span> <span class="n">male</span><span class="p">)</span>
-
-    <span class="c1"># Simulate time to kidney failure</span>
-    <span class="n">time_to_kidney_failure</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">linear_pred</span><span class="p">))</span>
-
-    <span class="c1"># Rescale time to desired range</span>
-    <span class="n">time_to_kidney_failure</span> <span class="o">*</span> <span class="o">=</span> <span class="mi">300</span>
-
-    <span class="c1"># Create status indicator (all failed)</span>
-    <span class="n">status</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
-
-    <span class="c1"># Create a DataFrame</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-        <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span>
-        <span class="s1">&#39;sbp&#39;</span><span class="p">:</span> <span class="n">sbp</span><span class="p">,</span>
-        <span class="s1">&#39;scr&#39;</span><span class="p">:</span> <span class="n">scr</span><span class="p">,</span>
-        <span class="s1">&#39;bmi&#39;</span><span class="p">:</span> <span class="n">bmi</span><span class="p">,</span>
-        <span class="s1">&#39;hba1c&#39;</span><span class="p">:</span> <span class="n">hba1c</span><span class="p">,</span>
-        <span class="s1">&#39;hypertension&#39;</span><span class="p">:</span> <span class="n">hypertension</span><span class="p">,</span>
-        <span class="s1">&#39;smoke&#39;</span><span class="p">:</span> <span class="n">smoke</span><span class="p">,</span>
-        <span class="s1">&#39;race&#39;</span><span class="p">:</span> <span class="n">racecat</span><span class="p">,</span>
-        <span class="s1">&#39;education&#39;</span><span class="p">:</span> <span class="n">educat</span><span class="p">,</span>
-        <span class="s1">&#39;male&#39;</span><span class="p">:</span> <span class="n">male</span><span class="p">,</span>
-        <span class="s1">&#39;time_to_kidney_failure&#39;</span><span class="p">:</span> <span class="n">time_to_kidney_failure</span><span class="p">,</span>
-        <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="n">status</span>
-    <span class="p">})</span>
-
-    <span class="k">return</span> <span class="n">df</span>
-
-
-<span class="c1"># Simulate the data</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">simulate_data</span><span class="p">()</span>
-
-<span class="c1"># Kaplan-Meier fitting</span>
-<span class="n">kmf</span> <span class="o">=</span> <span class="n">KaplanMeierFitter</span><span class="p">()</span>
-<span class="n">kmf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;time_to_kidney_failure&#39;</span><span class="p">],</span> <span class="n">event_observed</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">])</span>
-
-<span class="c1"># Plot Kaplan-Meier survival function</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
-<span class="n">kmf</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Kaplan-Meier Survival Curve&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Survival Probability&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># Plot 1 - KM failure function (1 - KM survival function)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kmf</span><span class="o">.</span><span class="n">survival_function_</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">kmf</span><span class="o">.</span><span class="n">survival_function_</span><span class="p">[</span><span class="s1">&#39;KM_estimate&#39;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Kaplan-Meier Failure Function&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Failure Probability&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># Histogram of Time to Kidney Failure</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;time_to_kidney_failure&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Histogram of Time to Kidney Failure&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># Summary statistics</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
-
-<span class="c1"># Summary of Kaplan-Meier estimate</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">kmf</span><span class="o">.</span><span class="n">survival_function_</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># irrelevant after figuring out things on 08/17/2023</span>
 </pre></div>
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<img alt="../_images/4572648c5e259dcc0a81fa2aaa1f14b639fc4365ba862bf9fe29790cb61e18d5.png" src="../_images/4572648c5e259dcc0a81fa2aaa1f14b639fc4365ba862bf9fe29790cb61e18d5.png" />
-<img alt="../_images/967977ad063665d41eff2919d5a09cc56ccd6f58c2dd11a0452341e38fe11a5d.png" src="../_images/967977ad063665d41eff2919d5a09cc56ccd6f58c2dd11a0452341e38fe11a5d.png" />
-<img alt="../_images/e66baaa14be30915cccc2ea541bb54ca10af450503b71bc648888f5595fce6a5.png" src="../_images/e66baaa14be30915cccc2ea541bb54ca10af450503b71bc648888f5595fce6a5.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>               age          sbp          scr          bmi        hba1c  \
-count  1000.000000  1000.000000  1000.000000  1000.000000  1000.000000   
-mean     60.193321   121.062544     1.002917    24.906404     4.950726   
-std       9.792159    14.961816     0.491727     5.135663     0.992380   
-min      27.587327    75.894170    -0.509756    10.352757     1.823296   
-25%      53.524097   110.906375     0.676000    21.312898     4.317395   
-50%      60.253006   120.946157     0.999875    25.000923     4.981758   
-75%      66.479439   130.933233     1.330458    28.334727     5.639123   
-max      98.527315   167.896614     2.963119    41.215465     8.112910   
-
-       hypertension        smoke        male  time_to_kidney_failure  status  
-count   1000.000000  1000.000000  1000.00000            1.000000e+03  1000.0  
-mean       0.505000     0.493000     0.50000            4.159984e-51     1.0  
-std        0.500225     0.500201     0.50025            1.133528e-49     0.0  
-min        0.000000     0.000000     0.00000            1.353364e-87     1.0  
-25%        0.000000     0.000000     0.00000            5.374310e-71     1.0  
-50%        1.000000     0.000000     0.50000            1.100292e-66     1.0  
-75%        1.000000     1.000000     1.00000            3.268844e-63     1.0  
-max        1.000000     1.000000     1.00000            3.557128e-48     1.0  
-              KM_estimate
-timeline                 
-0.000000e+00        1.000
-1.353364e-87        0.999
-4.460628e-85        0.998
-1.549092e-84        0.997
-4.574651e-84        0.996
-</pre></div>
-</div>
-</div>
 </div>
 <p>Certainly! Given the data simulation code, we can add a few more diagnostic checks and visualizations to ensure that the Kaplan-Meier (KM) survival function is plausible. Let’s also create the Kaplan-Meier curve using Python so we can visualize the survival data directly.</p>
 <p>Here’s the extended code with the diagnostics and visualizations:</p>
@@ -10272,163 +10038,11 @@ timeline
 <span class="expanded">Hide code cell source</span>
 </summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">lifelines</span> <span class="kn">import</span> <span class="n">KaplanMeierFitter</span>
-
-<span class="c1"># Function to simulate data (same as before)</span>
-<span class="k">def</span> <span class="nf">simulate_data</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
-    <span class="n">age</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-    <span class="n">sbp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-    <span class="n">scr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-    <span class="n">bmi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-    <span class="n">hba1c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-    <span class="n">hypertension</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
-    <span class="n">smoke</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
-    <span class="n">racecat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;Black&#39;</span><span class="p">,</span> <span class="s1">&#39;Hispanic&#39;</span><span class="p">,</span> <span class="s1">&#39;Other&#39;</span><span class="p">,</span> <span class="s1">&#39;White&#39;</span><span class="p">],</span> <span class="n">n</span><span class="p">)</span>
-    <span class="n">educat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;High School&#39;</span><span class="p">,</span> <span class="s1">&#39;K-8&#39;</span><span class="p">,</span> <span class="s1">&#39;Some college&#39;</span><span class="p">],</span> <span class="n">n</span><span class="p">)</span>
-    <span class="n">male</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
-
-    <span class="c1"># Coefficients to generate HRs greater than 2</span>
-    <span class="n">beta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">])</span>
-
-    <span class="c1"># Simulate the linear predictor</span>
-    <span class="n">linear_pred</span> <span class="o">=</span> <span class="p">(</span><span class="n">beta</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">age</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">sbp</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">scr</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="n">bmi</span> <span class="o">+</span>
-                   <span class="n">beta</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">hba1c</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">*</span> <span class="n">hypertension</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">*</span> <span class="n">smoke</span> <span class="o">+</span>
-                   <span class="n">beta</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">racecat</span> <span class="o">==</span> <span class="s1">&#39;Black&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">racecat</span> <span class="o">==</span> <span class="s1">&#39;Hispanic&#39;</span><span class="p">)</span> <span class="o">+</span>
-                   <span class="n">beta</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">racecat</span> <span class="o">==</span> <span class="s1">&#39;Other&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">racecat</span> <span class="o">==</span> <span class="s1">&#39;White&#39;</span><span class="p">)</span> <span class="o">+</span>
-                   <span class="n">beta</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">educat</span> <span class="o">==</span> <span class="s1">&#39;High School&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">educat</span> <span class="o">==</span> <span class="s1">&#39;K-8&#39;</span><span class="p">)</span> <span class="o">+</span>
-                   <span class="n">beta</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">educat</span> <span class="o">==</span> <span class="s1">&#39;Some college&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span> <span class="o">*</span> <span class="n">male</span><span class="p">)</span>
-
-    <span class="c1"># Simulate time to kidney failure</span>
-    <span class="n">time_to_kidney_failure</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">linear_pred</span><span class="p">))</span>
-
-    <span class="c1"># Rescale time to desired range</span>
-    <span class="n">time_to_kidney_failure</span> <span class="o">*=</span> <span class="mi">300</span>
-
-    <span class="c1"># Create status indicator (all failed)</span>
-    <span class="n">status</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
-
-    <span class="c1"># Create a DataFrame</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-        <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span>
-        <span class="s1">&#39;sbp&#39;</span><span class="p">:</span> <span class="n">sbp</span><span class="p">,</span>
-        <span class="s1">&#39;scr&#39;</span><span class="p">:</span> <span class="n">scr</span><span class="p">,</span>
-        <span class="s1">&#39;bmi&#39;</span><span class="p">:</span> <span class="n">bmi</span><span class="p">,</span>
-        <span class="s1">&#39;hba1c&#39;</span><span class="p">:</span> <span class="n">hba1c</span><span class="p">,</span>
-        <span class="s1">&#39;hypertension&#39;</span><span class="p">:</span> <span class="n">hypertension</span><span class="p">,</span>
-        <span class="s1">&#39;smoke&#39;</span><span class="p">:</span> <span class="n">smoke</span><span class="p">,</span>
-        <span class="s1">&#39;race&#39;</span><span class="p">:</span> <span class="n">racecat</span><span class="p">,</span>
-        <span class="s1">&#39;education&#39;</span><span class="p">:</span> <span class="n">educat</span><span class="p">,</span>
-        <span class="s1">&#39;male&#39;</span><span class="p">:</span> <span class="n">male</span><span class="p">,</span>
-        <span class="s1">&#39;time_to_kidney_failure&#39;</span><span class="p">:</span> <span class="n">time_to_kidney_failure</span><span class="p">,</span>
-        <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="n">status</span>
-    <span class="p">})</span>
-
-    <span class="k">return</span> <span class="n">df</span>
-
-
-<span class="c1"># Simulate the data</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">simulate_data</span><span class="p">()</span>
-
-<span class="c1"># Kaplan-Meier fitting</span>
-<span class="n">kmf</span> <span class="o">=</span> <span class="n">KaplanMeierFitter</span><span class="p">()</span>
-<span class="n">kmf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;time_to_kidney_failure&#39;</span><span class="p">],</span> <span class="n">event_observed</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">])</span>
-
-<span class="c1"># Plot Kaplan-Meier survival function</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
-<span class="n">kmf</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Kaplan-Meier Survival Curve&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Survival Probability&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># Plot 1 - KM failure function (1 - KM survival function)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kmf</span><span class="o">.</span><span class="n">survival_function_</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">kmf</span><span class="o">.</span><span class="n">survival_function_</span><span class="p">[</span><span class="s1">&#39;KM_estimate&#39;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Kaplan-Meier Failure Function&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Failure Probability&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># Histogram of Time to Kidney Failure</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;time_to_kidney_failure&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Histogram of Time to Kidney Failure&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># Summary statistics</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
-
-<span class="c1"># Summary of Kaplan-Meier estimate</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">kmf</span><span class="o">.</span><span class="n">survival_function_</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># irrelevant: see 08/17/2023</span>
 </pre></div>
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: lifelines in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (0.27.7)
-Requirement already satisfied: numpy&gt;=1.14.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from lifelines) (1.25.2)
-Requirement already satisfied: scipy&gt;=1.2.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from lifelines) (1.11.1)
-Requirement already satisfied: pandas&gt;=1.0.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from lifelines) (2.0.3)
-Requirement already satisfied: matplotlib&gt;=3.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from lifelines) (3.7.2)
-Requirement already satisfied: autograd&gt;=1.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from lifelines) (1.6.2)
-Requirement already satisfied: autograd-gamma&gt;=0.3 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from lifelines) (0.5.0)
-Requirement already satisfied: formulaic&gt;=0.2.2 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from lifelines) (0.6.4)
-Requirement already satisfied: future&gt;=0.15.2 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from autograd&gt;=1.5-&gt;lifelines) (0.18.3)
-Requirement already satisfied: astor&gt;=0.8 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from formulaic&gt;=0.2.2-&gt;lifelines) (0.8.1)
-Requirement already satisfied: interface-meta&gt;=1.2.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from formulaic&gt;=0.2.2-&gt;lifelines) (1.3.0)
-Requirement already satisfied: typing-extensions&gt;=4.2.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from formulaic&gt;=0.2.2-&gt;lifelines) (4.7.1)
-Requirement already satisfied: wrapt&gt;=1.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from formulaic&gt;=0.2.2-&gt;lifelines) (1.15.0)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib&gt;=3.0-&gt;lifelines) (1.1.0)
-Requirement already satisfied: cycler&gt;=0.10 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib&gt;=3.0-&gt;lifelines) (0.11.0)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib&gt;=3.0-&gt;lifelines) (4.42.0)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib&gt;=3.0-&gt;lifelines) (1.4.4)
-Requirement already satisfied: packaging&gt;=20.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib&gt;=3.0-&gt;lifelines) (23.1)
-Requirement already satisfied: pillow&gt;=6.2.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib&gt;=3.0-&gt;lifelines) (10.0.0)
-Requirement already satisfied: pyparsing&lt;3.1,&gt;=2.3.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib&gt;=3.0-&gt;lifelines) (3.0.9)
-Requirement already satisfied: python-dateutil&gt;=2.7 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib&gt;=3.0-&gt;lifelines) (2.8.2)
-Requirement already satisfied: pytz&gt;=2020.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from pandas&gt;=1.0.0-&gt;lifelines) (2023.3)
-Requirement already satisfied: tzdata&gt;=2022.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from pandas&gt;=1.0.0-&gt;lifelines) (2023.3)
-Requirement already satisfied: six&gt;=1.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib&gt;=3.0-&gt;lifelines) (1.16.0)
-</pre></div>
-</div>
-<img alt="../_images/4572648c5e259dcc0a81fa2aaa1f14b639fc4365ba862bf9fe29790cb61e18d5.png" src="../_images/4572648c5e259dcc0a81fa2aaa1f14b639fc4365ba862bf9fe29790cb61e18d5.png" />
-<img alt="../_images/967977ad063665d41eff2919d5a09cc56ccd6f58c2dd11a0452341e38fe11a5d.png" src="../_images/967977ad063665d41eff2919d5a09cc56ccd6f58c2dd11a0452341e38fe11a5d.png" />
-<img alt="../_images/e66baaa14be30915cccc2ea541bb54ca10af450503b71bc648888f5595fce6a5.png" src="../_images/e66baaa14be30915cccc2ea541bb54ca10af450503b71bc648888f5595fce6a5.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>               age          sbp          scr          bmi        hba1c  \
-count  1000.000000  1000.000000  1000.000000  1000.000000  1000.000000   
-mean     60.193321   121.062544     1.002917    24.906404     4.950726   
-std       9.792159    14.961816     0.491727     5.135663     0.992380   
-min      27.587327    75.894170    -0.509756    10.352757     1.823296   
-25%      53.524097   110.906375     0.676000    21.312898     4.317395   
-50%      60.253006   120.946157     0.999875    25.000923     4.981758   
-75%      66.479439   130.933233     1.330458    28.334727     5.639123   
-max      98.527315   167.896614     2.963119    41.215465     8.112910   
-
-       hypertension        smoke        male  time_to_kidney_failure  status  
-count   1000.000000  1000.000000  1000.00000            1.000000e+03  1000.0  
-mean       0.505000     0.493000     0.50000            4.159984e-51     1.0  
-std        0.500225     0.500201     0.50025            1.133528e-49     0.0  
-min        0.000000     0.000000     0.00000            1.353364e-87     1.0  
-25%        0.000000     0.000000     0.00000            5.374310e-71     1.0  
-50%        1.000000     0.000000     0.50000            1.100292e-66     1.0  
-75%        1.000000     1.000000     1.00000            3.268844e-63     1.0  
-max        1.000000     1.000000     1.00000            3.557128e-48     1.0  
-              KM_estimate
-timeline                 
-0.000000e+00        1.000
-1.353364e-87        0.999
-4.460628e-85        0.998
-1.549092e-84        0.997
-4.574651e-84        0.996
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="causality">
@@ -14596,6 +14210,169 @@ Some college  |   .<span class="m">8767124</span>   .<span class="m">0992101</sp
 </div>
 </div>
 </section>
+<section id="hierarchical">
+<h3>971. hierarchical<a class="headerlink" href="#hierarchical" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>perform a meticulous simulation for donors</p></li>
+<li><p>do likewise for nondonors (e.g. mean time to event x 1.5)</p></li>
+<li><p>then combine them to produce a beautiful var-cov matrix i couldn’t simulate</p></li>
+<li><p>use to train all my automated scripts and thesis before IRB approval</p></li>
+<li><p>produce webapps for individualized risk estimates for nx-attributable risk</p></li>
+</ul>
+</section>
+<section id="instances">
+<h3>972. instances<a class="headerlink" href="#instances" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>who are you working for? lebowski? jackie treehorn?</p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=r_mxDYOPQp4">the knudsens</a> …</p></li>
+<li><p>apocalypto’s final scene with the <a class="reference external" href="https://www.youtube.com/watch?v=CzNy7fNo-gI">spanish ships</a> on the horizon</p></li>
+<li><p>only two kinds of humans emerge from these contemplations: those who view this hierachy as fixed (was, is, and ever shall be), and those who view it as fluid (there’s a contest, will-to-power, usurpation). but perhaps the third prudent group are onto something: those who avoid the question altogether (big lebowski, the dude abides)</p></li>
+<li><p>so adding a time dimension to the hierarchy, we have a 4th group: those who view the hierarchy as a time series  or a multilevel model.</p></li>
+</ol>
+<hr class="docutils" />
+<p>some of the best tv and film approaches aesthetics in a pure fashion where a most localized hierarchy is the bane and the boon of the protagonist. think:</p>
+<ul class="simple">
+<li><p>the wire</p></li>
+<li><p>breaking bad</p></li>
+<li><p>sopranos</p></li>
+<li><p>warriors</p></li>
+<li><p>star wars</p></li>
+<li><p>the godfather</p></li>
+<li><p>the matrix</p></li>
+<li><p>the big lebowski</p></li>
+<li><p>apocalypto</p></li>
+</ul>
+<hr class="docutils" />
+<p>these aesthetics morph into a moral philosophy as hierarchies above the locally relevant one are revealed. and because life is chiefly aesethetic, we quickly get bored and join the prudent group. think:</p>
+<ul class="simple">
+<li><p>sir john falstaff</p></li>
+<li><p>the dude</p></li>
+<li><p>etc.</p></li>
+</ul>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Create data for the skill and challenge levels</span>
+<span class="n">skill_levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">challenge_levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># Define the flow channel boundaries</span>
+<span class="n">flow_channel</span> <span class="o">=</span> <span class="n">skill_levels</span>
+
+<span class="c1"># Adjust the phase and amplitude of the sinusoid wave</span>
+<span class="n">phase</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">16</span>  <span class="c1"># Reducing the wavelength by a quarter</span>
+<span class="n">amplitude</span> <span class="o">=</span> <span class="mf">1.5</span>
+<span class="n">flow_channel</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">skill_levels</span> <span class="o">+</span> <span class="n">phase</span><span class="p">)</span> <span class="o">*</span> <span class="n">amplitude</span>
+
+<span class="c1"># Define the yellow zone boundaries</span>
+<span class="n">yellow_zone_low</span> <span class="o">=</span> <span class="n">flow_channel</span> <span class="o">-</span> <span class="mf">1.5</span>
+<span class="n">yellow_zone_high</span> <span class="o">=</span> <span class="n">flow_channel</span> <span class="o">+</span> <span class="mf">1.5</span>
+
+<span class="c1"># Define the sinusoid function with the middle yellow line as its axis</span>
+<span class="n">sinusoid</span> <span class="o">=</span> <span class="n">flow_channel</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">skill_levels</span> <span class="o">+</span> <span class="n">phase</span><span class="p">)</span> <span class="o">*</span> <span class="n">amplitude</span>
+
+<span class="c1"># Define the anxiety and boredom areas</span>
+<span class="n">anxiety_area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">challenge_levels</span> <span class="o">&gt;</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="n">challenge_levels</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<span class="n">boredom_area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">challenge_levels</span> <span class="o">&lt;</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="n">challenge_levels</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="c1"># Plotting</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Plot the anxiety and boredom areas</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Place/Identification&#39;</span><span class="p">,</span> <span class="n">interpolate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Time/Revelation&#39;</span><span class="p">,</span> <span class="n">interpolate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="n">yellow_zone_low</span><span class="p">,</span> <span class="n">yellow_zone_high</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Agent/Evolution&#39;</span><span class="p">,</span> <span class="n">interpolate</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Plot the sinusoid function</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="n">sinusoid</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add arrowhead to the sinusoid line (flipped direction)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">sinusoid</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">skill_levels</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">skill_levels</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="n">sinusoid</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">sinusoid</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span>
+          <span class="n">color</span><span class="o">=</span><span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">head_width</span><span class="o">=-</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">head_length</span><span class="o">=-</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Plot the flow channel boundaries</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">skill_levels</span><span class="p">,</span> <span class="n">flow_channel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="c1"># Set plot labels and title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;xline&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;yline&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>  <span class="c1"># Rotate the label horizontally</span>
+
+<span class="c1"># Set plot limits and grid</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Set tick labels</span>
+<span class="n">tick_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">tick_labels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">tick_labels</span><span class="p">)</span>
+
+<span class="c1"># Add text annotations to label the areas</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s1">&#39;future&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">4.5</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">,</span> <span class="s1">&#39;today&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;past&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;lightgreen&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;lightgreen&#39;</span><span class="p">,</span> <span class="n">boxstyle</span><span class="o">=</span><span class="s1">&#39;round&#39;</span><span class="p">))</span>
+
+<span class="c1"># Display the plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/73a77ca8c279e6212f3878312e58f46f23092cb6022c066977fbe59bd507417c.png" src="../_images/73a77ca8c279e6212f3878312e58f46f23092cb6022c066977fbe59bd507417c.png" />
+</div>
+</div>
+<ol class="arabic simple">
+<li><p>anarchy/today</p>
+<ul class="simple">
+<li><p>reactive</p>
+<ul>
+<li><p>will always equal or best the competition</p></li>
+<li><p>life is essentially strife</p></li>
+<li><p>discord is the natural state of things</p></li>
+</ul>
+</li>
+<li><p>combustible</p></li>
+<li><p><strike>inert</strike></p></li>
+</ul>
+</li>
+<li><p>order/past</p>
+<ul class="simple">
+<li><p>dutiful</p>
+<ul>
+<li><p>conditional on the law</p></li>
+<li><p>follows prescriptions to the dot</p></li>
+<li><p>harmony is the preferred state of things</p></li>
+</ul>
+</li>
+<li><p>tame</p></li>
+<li><p>lauded</p></li>
+</ul>
+</li>
+<li><p>utopia/future</p>
+<ul class="simple">
+<li><p>epicurean</p>
+<ul>
+<li><p><strong>remains in their lane</strong></p></li>
+<li><p>non-confrontational</p></li>
+<li><p>skills are honed to perfection (but probably not transferable)</p></li>
+</ul>
+</li>
+<li><p>prudent</p></li>
+<li><p>hedonistic</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<p>this is altogether comical, tragic, and epic. because its impossible for man to comprehend the limits of hierarchy, then like stephen dedalus, and leopold bloom, <em>we must be content to live in the middle of the road</em>. - <code class="docutils literal notranslate"><span class="pre">copilot</span></code> most of all, we must be somewhat humble in our judgement of others. who are we to judge one who thinks hierachies were ordained (or just to say god!) and another who thinks hierarchies are a social construct (or just to say the devil!). - <code class="docutils literal notranslate"><span class="pre">copilot</span></code></p>
+</section>
 </section>
 </section>
 
@@ -14896,6 +14673,8 @@ Some college  |   .<span class="m">8767124</span>   .<span class="m">0992101</sp
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bestsimulationyet">970 <code class="docutils literal notranslate"><span class="pre">bestsimulationyet*</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hierarchical">971. hierarchical</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instances">972. instances</a></li>
 </ul>
 </li>
 </ul>
