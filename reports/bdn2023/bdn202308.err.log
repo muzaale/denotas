@@ -18,89 +18,51 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-!pip install treelib 
-from treelib import Node, Tree
-import sys
-print(sys.executable)
+import nbformat
+import os
 
+# Define the path to the input and output files
+input_path = os.path.expanduser('~/dropbox/1f.ἡἔρις,κ/1.ontology/be/be_6/be_i7_8.ipynb')
+output_path = os.path.expanduser('~/dropbox/1f.ἡἔρις,κ/1.ontology/populate_fe.ipynb')
 
+# Read the existing notebook
+with open(input_path, 'r', encoding='utf-8') as f:
+    notebook = nbformat.read(f, as_version=4)
 
+# Create a new notebook for the organized content
+new_notebook = nbformat.v4.new_notebook()
 
-# Define the directory structure
-structure = {
-    "Daily Grind": {
-        "Gratitude": ["journal.md"],
-        "Physical Exercise": ["swim.md", "gym.md", "jog.md"],
-        "Check on Loved Ones": ["whats_app.md"],
-        "Work": {
-            "PhD Thesis": ["..."],
-            "K08 Grant": ["..."],
-            "R03 Grant Application": ["..."],
-            "Mentoring": {
-                "High School Students": [],
-                "Undergraduates": [],
-                "Graduate Students": [],
-                "Medical Students": [],
-                "Residents": [],
-                "Fellows": [],
-                "Faculty": [],
-                "Analysts": [],
-                "Staff": [],
-                "Collaborators": [],
-                "Graduates": [],
-            },
-            "...": []
-        },
-        "...": []
-    }
-}
+# Copy all cells as markdown
+for cell in notebook.cells:
+    markdown_cell = nbformat.v4.new_markdown_cell(cell['source'])
+    new_notebook.cells.append(markdown_cell)
 
-counter = 0
+# Save the new notebook
+with open(output_path, 'w', encoding='utf-8') as f:
+    nbformat.write(new_notebook, f)
 
-# Function to recursively add nodes to the tree
-def add_nodes(tree, parent, structure):
-    global counter
-    for key, value in structure.items():
-        node_name = key.replace(" ", "_")
-        if tree.contains(node_name):
-            counter += 1
-            node_name += "_" + str(counter) # Add suffix to make the node name unique
-        tree.create_node(key, node_name, parent=parent)
-        # If the value is a list, add file nodes
-        if isinstance(value, list):
-            for file_name in value:
-                file_node_name = file_name if file_name != "..." else "ellipsis_" + str(counter)
-                counter += 1
-                tree.create_node(file_name, file_node_name, parent=node_name)
-        # If the value is a dictionary, recurse into it
-        elif isinstance(value, dict):
-            add_nodes(tree, node_name, value)
-
-# Create tree and root node
-tree = Tree()
-tree.create_node("Daily Grind", "Daily Grind")
-
-# Add nodes based on the structure
-add_nodes(tree, "Daily Grind", structure["Daily Grind"])
-
-# Print the tree
-tree.show()
+print(f"Organized content saved to {output_path}")
 
 ------------------
 
------ stdout -----
-Requirement already satisfied: treelib in /usr/local/anaconda3/lib/python3.11/site-packages (1.6.4)
------ stdout -----
-Requirement already satisfied: six in /usr/local/anaconda3/lib/python3.11/site-packages (from treelib) (1.16.0)
-------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[7], line 2[0m
-[1;32m      1[0m get_ipython()[38;5;241m.[39msystem([38;5;124m'[39m[38;5;124mpip install treelib[39m[38;5;124m'[39m)
-[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mtreelib[39;00m [38;5;28;01mimport[39;00m Node, Tree
-[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01msys[39;00m
-[1;32m      4[0m [38;5;28mprint[39m(sys[38;5;241m.[39mexecutable)
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Cell [0;32mIn[5], line 9[0m
+[1;32m      6[0m output_path [38;5;241m=[39m os[38;5;241m.[39mpath[38;5;241m.[39mexpanduser([38;5;124m'[39m[38;5;124m~/dropbox/1f.ἡἔρις,κ/1.ontology/populate_fe.ipynb[39m[38;5;124m'[39m)
+[1;32m      8[0m [38;5;66;03m# Read the existing notebook[39;00m
+[0;32m----> 9[0m [38;5;28;01mwith[39;00m [38;5;28;43mopen[39;49m[43m([49m[43minput_path[49m[43m,[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mr[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43mencoding[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mutf-8[39;49m[38;5;124;43m'[39;49m[43m)[49m [38;5;28;01mas[39;00m f:
+[1;32m     10[0m     notebook [38;5;241m=[39m nbformat[38;5;241m.[39mread(f, as_version[38;5;241m=[39m[38;5;241m4[39m)
+[1;32m     12[0m [38;5;66;03m# Create a new notebook for the organized content[39;00m
 
-[0;31mModuleNotFoundError[0m: No module named 'treelib'
+File [0;32m~/Library/Python/3.11/lib/python/site-packages/IPython/core/interactiveshell.py:282[0m, in [0;36m_modified_open[0;34m(file, *args, **kwargs)[0m
+[1;32m    275[0m [38;5;28;01mif[39;00m file [38;5;129;01min[39;00m {[38;5;241m0[39m, [38;5;241m1[39m, [38;5;241m2[39m}:
+[1;32m    276[0m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
+[1;32m    277[0m         [38;5;124mf[39m[38;5;124m"[39m[38;5;124mIPython won[39m[38;5;124m'[39m[38;5;124mt let you open fd=[39m[38;5;132;01m{[39;00mfile[38;5;132;01m}[39;00m[38;5;124m by default [39m[38;5;124m"[39m
+[1;32m    278[0m         [38;5;124m"[39m[38;5;124mas it is likely to crash IPython. If you know what you are doing, [39m[38;5;124m"[39m
+[1;32m    279[0m         [38;5;124m"[39m[38;5;124myou can use builtins[39m[38;5;124m'[39m[38;5;124m open.[39m[38;5;124m"[39m
+[1;32m    280[0m     )
+[0;32m--> 282[0m [38;5;28;01mreturn[39;00m [43mio_open[49m[43m([49m[43mfile[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '/Users/d/dropbox/1f.ἡἔρις,κ/1.ontology/be/be_6/be_i7_8.ipynb'
 
