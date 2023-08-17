@@ -600,6 +600,7 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#essential-skills-for-research">969.3. Essential Skills for Research</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation">970 simulation</a></li>
 </ul>
 </li>
 </ul>
@@ -656,16 +657,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Austin Smith                  
-2          Timothy Johnson               
-3          Jennifer Pruitt               
-4          Larry Schwartz                
-5          Travis Rowe                   
-6          Michelle Jackson              
-7          Ashley Keller                 
-8          Matthew Green                 
-9          Samantha Austin               
-10         Gordon Gilbert                
+1          Trevor Gaines                 
+2          Laura Levy                    
+3          Albert Hester                 
+4          Barbara Parker                
+5          Alexis Blackburn              
+6          Hunter Lane                   
+7          Reginald Leon                 
+8          Andres Brown                  
+9          Kimberly Miller               
+10         Marissa Stewart               
 </pre></div>
 </div>
 </div>
@@ -6603,7 +6604,25 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Organized content saved to /Users/d/dropbox/1f.ἡἔρις,κ/1.ontology/populate_fe.ipynb
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">9</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">output_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s1">&#39;~/dropbox/1f.ἡἔρις,κ/1.ontology/populate_fe.ipynb&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># Read the existing notebook</span>
+<span class="ne">----&gt; </span><span class="mi">9</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">input_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">notebook</span> <span class="o">=</span> <span class="n">nbformat</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">as_version</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="c1"># Create a new notebook for the organized content</span>
+
+<span class="nn">File ~/Library/Python/3.11/lib/python/site-packages/IPython/core/interactiveshell.py:282,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">275</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
+<span class="g g-Whitespace">    </span><span class="mi">276</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">277</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">279</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">282</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/Users/d/dropbox/1f.ἡἔρις,κ/1.ontology/be/be_6/be_i7_8.ipynb&#39;
 </pre></div>
 </div>
 </div>
@@ -6908,21 +6927,39 @@ If<span class="w"> </span>you<span class="w"> </span>installed<span class="w"> <
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: treelib in /usr/local/anaconda3/lib/python3.11/site-packages (1.6.4)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six in /usr/local/anaconda3/lib/python3.11/site-packages (from treelib) (1.16.0)
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;pip install treelib&#39;</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">treelib</span> <span class="kn">import</span> <span class="n">Node</span><span class="p">,</span> <span class="n">Tree</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">sys</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;treelib&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: treelib in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (1.6.4)
+Requirement already satisfied: six in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from treelib) (1.16.0)
+/Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/bin/python
+Daily Grind
+├── ...
+├── Check on Loved Ones
+│   └── whats_app.md
+├── Gratitude
+│   └── journal.md
+├── Physical Exercise
+│   ├── gym.md
+│   ├── jog.md
+│   └── swim.md
+└── Work
+    ├── ...
+    ├── K08 Grant
+    │   └── ...
+    ├── Mentoring
+    │   ├── Analysts
+    │   ├── Collaborators
+    │   ├── Faculty
+    │   ├── Fellows
+    │   ├── Graduate Students
+    │   ├── Graduates
+    │   ├── High School Students
+    │   ├── Medical Students
+    │   ├── Residents
+    │   ├── Staff
+    │   └── Undergraduates
+    ├── PhD Thesis
+    │   └── ...
+    └── R03 Grant Application
+        └── ...
 </pre></div>
 </div>
 </div>
@@ -13907,6 +13944,136 @@ The inner door may be bolted for reasons of security, privacy, or personal comfo
 <p>Remember to provide interactive examples, step-by-step guides, and possibly video tutorials where appropriate, to make the content engaging and accessible to a broad range of readers.</p>
 </section>
 </section>
+<section id="simulation">
+<h3>970 simulation<a class="headerlink" href="#simulation" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="c1"># Function to simulate data</span>
+<span class="k">def</span> <span class="nf">simulate_data</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">sbp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">120</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">scr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">bmi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">hba1c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">hypertension</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">smoke</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">racecat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;Black&#39;</span><span class="p">,</span> <span class="s1">&#39;Hispanic&#39;</span><span class="p">,</span> <span class="s1">&#39;Other&#39;</span><span class="p">,</span> <span class="s1">&#39;White&#39;</span><span class="p">],</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">educat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">&#39;High School&#39;</span><span class="p">,</span> <span class="s1">&#39;K-8&#39;</span><span class="p">,</span> <span class="s1">&#39;Some college&#39;</span><span class="p">],</span> <span class="n">n</span><span class="p">)</span>
+    <span class="n">male</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+
+    <span class="c1"># Coefficients to generate HRs greater than 2</span>
+    <span class="n">beta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.7</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">])</span>
+
+    <span class="c1"># Simulate the linear predictor</span>
+    <span class="n">linear_pred</span> <span class="o">=</span> <span class="p">(</span><span class="n">beta</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">age</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">sbp</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="n">scr</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="n">bmi</span> <span class="o">+</span>
+                   <span class="n">beta</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="n">hba1c</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">*</span> <span class="n">hypertension</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">*</span> <span class="n">smoke</span> <span class="o">+</span>
+                   <span class="n">beta</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">racecat</span> <span class="o">==</span> <span class="s1">&#39;Black&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">racecat</span> <span class="o">==</span> <span class="s1">&#39;Hispanic&#39;</span><span class="p">)</span> <span class="o">+</span>
+                   <span class="n">beta</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">racecat</span> <span class="o">==</span> <span class="s1">&#39;Other&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">racecat</span> <span class="o">==</span> <span class="s1">&#39;White&#39;</span><span class="p">)</span> <span class="o">+</span>
+                   <span class="n">beta</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">educat</span> <span class="o">==</span> <span class="s1">&#39;High School&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">educat</span> <span class="o">==</span> <span class="s1">&#39;K-8&#39;</span><span class="p">)</span> <span class="o">+</span>
+                   <span class="n">beta</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">educat</span> <span class="o">==</span> <span class="s1">&#39;Some college&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span> <span class="o">*</span> <span class="n">male</span><span class="p">)</span>
+
+    <span class="c1"># Simulate time to kidney failure using a log-normal distribution</span>
+    <span class="c1"># with a median of 15 and within the range 0-30</span>
+    <span class="n">mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>  <span class="c1"># Median of 15</span>
+    <span class="n">sigma</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># Standard deviation; can be adjusted to achieve the desired shape</span>
+    <span class="n">time_to_kidney_failure</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">lognormal</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="n">sigma</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">time_to_kidney_failure</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">time_to_kidney_failure</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>  <span class="c1"># Ensuring the values are within 0-30</span>
+
+    <span class="c1"># Create status indicator (all failed)</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+
+    <span class="c1"># Create a DataFrame</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span>
+        <span class="s1">&#39;sbp&#39;</span><span class="p">:</span> <span class="n">sbp</span><span class="p">,</span>
+        <span class="s1">&#39;scr&#39;</span><span class="p">:</span> <span class="n">scr</span><span class="p">,</span>
+        <span class="s1">&#39;bmi&#39;</span><span class="p">:</span> <span class="n">bmi</span><span class="p">,</span>
+        <span class="s1">&#39;hba1c&#39;</span><span class="p">:</span> <span class="n">hba1c</span><span class="p">,</span>
+        <span class="s1">&#39;hypertension&#39;</span><span class="p">:</span> <span class="n">hypertension</span><span class="p">,</span>
+        <span class="s1">&#39;smoke&#39;</span><span class="p">:</span> <span class="n">smoke</span><span class="p">,</span>
+        <span class="s1">&#39;race&#39;</span><span class="p">:</span> <span class="n">racecat</span><span class="p">,</span>
+        <span class="s1">&#39;education&#39;</span><span class="p">:</span> <span class="n">educat</span><span class="p">,</span>
+        <span class="s1">&#39;male&#39;</span><span class="p">:</span> <span class="n">male</span><span class="p">,</span>
+        <span class="s1">&#39;time_to_kidney_failure&#39;</span><span class="p">:</span> <span class="n">time_to_kidney_failure</span><span class="p">,</span> <span class="c1"># Use the log-normal simulated variable</span>
+        <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="n">status</span>
+    <span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">df</span>  <span class="c1"># Fixed indentation here</span>
+
+<span class="c1"># Simulate the data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">simulate_data</span><span class="p">()</span>
+
+<span class="c1"># Save to CSV</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;simulated_data_2.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Print summaries</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># !pip install lifelines</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">lifelines</span> <span class="kn">import</span> <span class="n">CoxPHFitter</span>
+
+<span class="c1"># Convert categorical variables to dummies</span>
+<span class="n">df_dummies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;race&#39;</span><span class="p">,</span> <span class="s1">&#39;education&#39;</span><span class="p">],</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Instantiate the Cox Proportional Hazards model</span>
+<span class="n">cph</span> <span class="o">=</span> <span class="n">CoxPHFitter</span><span class="p">()</span>
+
+<span class="c1"># Fit the model to the data</span>
+<span class="n">cph</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_dummies</span><span class="p">,</span> <span class="n">duration_col</span><span class="o">=</span><span class="s1">&#39;time_to_kidney_failure&#39;</span><span class="p">,</span> <span class="n">event_col</span><span class="o">=</span><span class="s1">&#39;status&#39;</span><span class="p">)</span>
+
+<span class="c1"># Print the summary table, which includes HRs and 95% CIs</span>
+<span class="n">cph</span><span class="o">.</span><span class="n">print_summary</span><span class="p">()</span>
+
+<span class="c1"># Coefficient matrix (log hazard ratios)</span>
+<span class="n">coefficients</span> <span class="o">=</span> <span class="n">cph</span><span class="o">.</span><span class="n">params_</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Coefficient Matrix:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">coefficients</span><span class="p">)</span>
+
+<span class="c1"># Variance-covariance matrix</span>
+<span class="n">variance_covariance_matrix</span> <span class="o">=</span> <span class="n">cph</span><span class="o">.</span><span class="n">variance_matrix_</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variance-Covariance Matrix:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">variance_covariance_matrix</span><span class="p">)</span>
+ 
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>import delimited simulated_data_2<span class="m">.</span>csv,<span class="k"> clear</span> 
+<span class="k">encode</span> race,<span class="k"> g</span>(racecat)
+<span class="k">encode</span> education,<span class="k"> g</span>(educat)
+<span class="k">drop if</span> time<span class="o">&gt;</span><span class="m">29</span>
+<span class="k">hist</span> time
+<span class="k">stset</span> time, fail(status)
+<span class="k">sts graph</span>, fail per(<span class="m">100</span>)
+<span class="k">stcox</span> age male i<span class="m">.</span>racecat 
+</pre></div>
+</div>
+<p>This is a very plausible simulation</p>
+</section>
 </section>
 </section>
 
@@ -14207,6 +14374,7 @@ The inner door may be bolted for reasons of security, privacy, or personal comfo
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#essential-skills-for-research">969.3. Essential Skills for Research</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation">970 simulation</a></li>
 </ul>
 </li>
 </ul>
