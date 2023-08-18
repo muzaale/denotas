@@ -624,6 +624,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling">985. modeling</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hide">986. hide</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jhu">987. jhu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explain">988. explain</a></li>
 </ul>
 </li>
 </ul>
@@ -676,16 +677,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Ryan Jenkins                  
-2          Gregory Key                   
-3          Larry Garrett                 
-4          Katie Ferguson                
-5          Philip Watkins                
-6          David Morrow                  
-7          Marissa Patterson             
-8          Ashley Miller                 
-9          Chad Powell                   
-10         Jeremy Irwin                  
+1          Mary Davis                    
+2          Tiffany Ellis                 
+3          Christopher Reese             
+4          Paul Young                    
+5          Mark Reid                     
+6          Eileen Hudson                 
+7          Melinda Terrell               
+8          Kaitlyn Jones                 
+9          Theresa Bennett               
+10         David Johnson                 
 </pre></div>
 </div>
 </div>
@@ -1193,9 +1194,7 @@ Songwriters: Donald Lawrence / Marshon Lewis / William James Stokes / Robert Woo
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: music21 in /usr/local/anaconda3/lib/python3.11/site-packages (9.1.0)
 Requirement already satisfied: chardet in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (4.0.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: joblib in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (1.2.0)
+Requirement already satisfied: joblib in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (1.2.0)
 Requirement already satisfied: jsonpickle in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (3.0.1)
 Requirement already satisfied: matplotlib in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (3.7.1)
 Requirement already satisfied: more-itertools in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (8.12.0)
@@ -1203,16 +1202,16 @@ Requirement already satisfied: numpy in /usr/local/anaconda3/lib/python3.11/site
 Requirement already satisfied: requests in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (2.31.0)
 Requirement already satisfied: webcolors&gt;=1.5 in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (1.13)
 Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.0.5)
-Requirement already satisfied: cycler&gt;=0.10 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cycler&gt;=0.10 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
 Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.25.0)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
 Requirement already satisfied: packaging&gt;=20.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (23.0)
 Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (9.4.0)
 Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (3.0.9)
 Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (2.8.2)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (2.0.4)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (2.0.4)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (3.4)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (1.26.16)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (2023.7.22)
@@ -15030,6 +15029,40 @@ While the lack of specific information about The Dude’s college and the archet
 <p>The Latin phrase “Veritas vos liberabit” translates to “The truth will set you free” in English. This saying is often associated with the pursuit of truth and wisdom, and it holds significant meaning in various contexts, including philosophical, religious, and intellectual discourse.</p>
 <p>In the context of our discussion, this phrase could resonate with the idea of understanding the deeper truth of characters like The Dude and Falstaff. Through analysis and contemplation, we attempt to uncover the underlying truths of their personalities, actions, and roles within their respective narratives. By seeking this truth, we gain insight into not just these fictional characters but also broader aspects of human nature, behavior, and the human condition. Understanding these truths can indeed be liberating, as it helps us connect with these characters and recognize aspects of ourselves within them.</p>
 </section>
+<section id="explain">
+<h3>988. explain<a class="headerlink" href="#explain" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>d@Poseidon<span class="w"> </span>Dropbox<span class="w"> </span><span class="o">(</span>Personal<span class="o">)</span><span class="w"> </span>%<span class="w"> </span>ls<span class="w"> </span>-kla
+total<span class="w"> </span><span class="m">16</span>
+drwx------@<span class="w"> </span><span class="m">13</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">416</span><span class="w"> </span>Aug<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">08</span>:06<span class="w"> </span>.
+drwxr-xr-x+<span class="w"> </span><span class="m">56</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">  </span><span class="m">1792</span><span class="w"> </span>Aug<span class="w"> </span><span class="m">18</span><span class="w"> </span><span class="m">15</span>:02<span class="w"> </span>..
+-rw-r--r--@<span class="w">  </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">  </span><span class="m">8196</span><span class="w"> </span>Jul<span class="w"> </span><span class="m">29</span><span class="w"> </span><span class="m">23</span>:36<span class="w"> </span>.DS_Store
+-rw-r--r--<span class="w">   </span><span class="m">1</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">    </span><span class="m">39</span><span class="w"> </span>Dec<span class="w">  </span><span class="m">2</span><span class="w">  </span><span class="m">2020</span><span class="w"> </span>.dropbox
+drwxr-xr-x@<span class="w">  </span><span class="m">9</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">288</span><span class="w"> </span>Aug<span class="w"> </span><span class="m">14</span><span class="w"> </span><span class="m">08</span>:05<span class="w"> </span>.dropbox.cache
+drwxr-xr-x@<span class="w">  </span><span class="m">8</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">256</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">15</span><span class="w">  </span><span class="m">2022</span><span class="w"> </span>0g.κοσμογονία,γ
+drwxr-xr-x@<span class="w">  </span><span class="m">8</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">256</span><span class="w"> </span>Aug<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">07</span>:37<span class="w"> </span>1f.ἡἔρις,κ
+drwxr-xr-x@<span class="w">  </span><span class="m">8</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">256</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">15</span><span class="w">  </span><span class="m">2022</span><span class="w"> </span>2e.πρᾶξις,σ
+drwxr-xr-x@<span class="w">  </span><span class="m">8</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">256</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">15</span><span class="w">  </span><span class="m">2022</span><span class="w"> </span>3e.ἄσκησις,μ
+drwxr-xr-x@<span class="w">  </span><span class="m">8</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">256</span><span class="w"> </span>Jul<span class="w">  </span><span class="m">2</span><span class="w"> </span><span class="m">10</span>:49<span class="w"> </span>4d.∫δυσφορία.dt,ψ
+drwxr-xr-x@<span class="w">  </span><span class="m">8</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">256</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">15</span><span class="w">  </span><span class="m">2022</span><span class="w"> </span>5c.φάρμακον,δ
+drwxr-xr-x@<span class="w">  </span><span class="m">8</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">256</span><span class="w"> </span>Sep<span class="w"> </span><span class="m">15</span><span class="w">  </span><span class="m">2022</span><span class="w"> </span>6b.ομορφιά,β
+drwxr-xr-x@<span class="w">  </span><span class="m">8</span><span class="w"> </span>d<span class="w">  </span>staff<span class="w">   </span><span class="m">256</span><span class="w"> </span>May<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">17</span>:33<span class="w"> </span>7a.τάξη,α
+d@Poseidon<span class="w"> </span>Dropbox<span class="w"> </span><span class="o">(</span>Personal<span class="o">)</span><span class="w"> </span>%<span class="w"> </span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<ol class="arabic simple" start="0">
+<li><p>cosmogonia is the question that arose yesterday with unending hierachies</p></li>
+<li><p>eris has been a theme for a while now thanks to nietzsche</p></li>
+<li><p>armed with the formula <code class="docutils literal notranslate"><span class="pre">face,</span> <span class="pre">seek,</span> <span class="pre">hide</span></code> we can now explore the concept of praxis (but didn’t the greeks getRdone?)</p></li>
+<li><p>which would speed us to ascesis: self-discipline and self-denial, typically for religious reasons, or diet. but thats dull or sort of common place.</p></li>
+<li><p>so perhaps lets blaze toward dysphoria. isn’t it what launched all these contemplation in the first place? so i’ll non of that</p></li>
+<li><p>lets instead go for the cure: pharmakon. most cures release dopamine; i’ve found mine in coding, with copious amounts of coffee, copilot, and chatgpt</p></li>
+<li><p>damn! this brings us back to the question of beauty and aeshetics. we’ve developed a powerful epistemology: <code class="docutils literal notranslate"><span class="pre">face,</span> <span class="pre">seek,</span> <span class="pre">hide</span></code> (literary) &amp; icc (numeracy)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hierachy</span></code> is a powerful tool for understanding the world. taxis: greek word for order. and order is the first step to understanding. and so we’ve come full circle.</p></li>
+</ol>
+<hr class="docutils" />
+<p>you’re welcome!</p>
+</section>
 </section>
 </section>
 
@@ -15354,6 +15387,7 @@ While the lack of specific information about The Dude’s college and the archet
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling">985. modeling</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hide">986. hide</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jhu">987. jhu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#explain">988. explain</a></li>
 </ul>
 </li>
 </ul>
