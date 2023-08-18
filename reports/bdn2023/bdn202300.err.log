@@ -18,36 +18,19 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from faker import Faker
-
-def generate_random_names(num_names):
-    fake = Faker()
-    names = [[fake.first_name(), fake.last_name()] for _ in range(num_names)]
-    return names
-
-def create_table(names):
-    header = ["Number", "Name"]
-    table = []
-    table.append(header)
-    for idx, name in enumerate(names, start=1):
-        full_name = " ".join(name)
-        row = [idx, full_name]
-        table.append(row)
-
-    # Printing the table
-    for row in table:
-        print(f"{row[0]:<10} {row[1]:<30}")
-
-# Generate 10 random names and call the function
-random_names = generate_random_names(10)
-create_table(random_names)
-
+# Creating Dataset With All Years
+demo <- bind_rows(nhanes("DEMO"),
+                  nhanes("DEMO_B","DEMO_C", "DEMO_D", "DEMO_E", "DEMO_F", 
+                         "DEMO_G", "DEMO_H", "DEMO_I", "DEMO_J", "DEMO_P")
+                )
 ------------------
 
 
-Error in parse(text = x, srcfile = src): <text>:1:6: unexpected symbol
-1: from faker
-         ^
+Error in nhanes("DEMO_B", "DEMO_C", "DEMO_D", "DEMO_E", "DEMO_F", "DEMO_G", : unused arguments ("DEMO_D", "DEMO_E", "DEMO_F", "DEMO_G", "DEMO_H", "DEMO_I", "DEMO_J", "DEMO_P")
 Traceback:
 
+1. bind_rows(nhanes("DEMO"), nhanes("DEMO_B", "DEMO_C", "DEMO_D", 
+ .     "DEMO_E", "DEMO_F", "DEMO_G", "DEMO_H", "DEMO_I", "DEMO_J", 
+ .     "DEMO_P"))
+2. list2(...)
 
