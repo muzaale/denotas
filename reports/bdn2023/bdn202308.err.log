@@ -18,36 +18,51 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-from faker import Faker
+import nbformat
+import os
 
-def generate_random_names(num_names):
-    fake = Faker()
-    names = [[fake.first_name(), fake.last_name()] for _ in range(num_names)]
-    return names
+# Define the path to the input and output files
+input_path = os.path.expanduser('~/dropbox/1f.ἡἔρις,κ/1.ontology/be/be_6/be_i7_8.ipynb')
+output_path = os.path.expanduser('~/dropbox/1f.ἡἔρις,κ/1.ontology/populate_fe.ipynb')
 
-def create_table(names):
-    header = ["Number", "Name"]
-    table = []
-    table.append(header)
-    for idx, name in enumerate(names, start=1):
-        full_name = " ".join(name)
-        row = [idx, full_name]
-        table.append(row)
+# Read the existing notebook
+with open(input_path, 'r', encoding='utf-8') as f:
+    notebook = nbformat.read(f, as_version=4)
 
-    # Printing the table
-    for row in table:
-        print(f"{row[0]:<10} {row[1]:<30}")
+# Create a new notebook for the organized content
+new_notebook = nbformat.v4.new_notebook()
 
-# Generate 10 random names and call the function
-random_names = generate_random_names(10)
-create_table(random_names)
+# Copy all cells as markdown
+for cell in notebook.cells:
+    markdown_cell = nbformat.v4.new_markdown_cell(cell['source'])
+    new_notebook.cells.append(markdown_cell)
+
+# Save the new notebook
+with open(output_path, 'w', encoding='utf-8') as f:
+    nbformat.write(new_notebook, f)
+
+print(f"Organized content saved to {output_path}")
 
 ------------------
 
 
-Error in parse(text = x, srcfile = src): <text>:1:6: unexpected symbol
-1: from faker
-         ^
-Traceback:
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Cell [0;32mIn[5], line 9[0m
+[1;32m      6[0m output_path [38;5;241m=[39m os[38;5;241m.[39mpath[38;5;241m.[39mexpanduser([38;5;124m'[39m[38;5;124m~/dropbox/1f.ἡἔρις,κ/1.ontology/populate_fe.ipynb[39m[38;5;124m'[39m)
+[1;32m      8[0m [38;5;66;03m# Read the existing notebook[39;00m
+[0;32m----> 9[0m [38;5;28;01mwith[39;00m [38;5;28;43mopen[39;49m[43m([49m[43minput_path[49m[43m,[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mr[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43mencoding[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mutf-8[39;49m[38;5;124;43m'[39;49m[43m)[49m [38;5;28;01mas[39;00m f:
+[1;32m     10[0m     notebook [38;5;241m=[39m nbformat[38;5;241m.[39mread(f, as_version[38;5;241m=[39m[38;5;241m4[39m)
+[1;32m     12[0m [38;5;66;03m# Create a new notebook for the organized content[39;00m
 
+File [0;32m~/Library/Python/3.11/lib/python/site-packages/IPython/core/interactiveshell.py:282[0m, in [0;36m_modified_open[0;34m(file, *args, **kwargs)[0m
+[1;32m    275[0m [38;5;28;01mif[39;00m file [38;5;129;01min[39;00m {[38;5;241m0[39m, [38;5;241m1[39m, [38;5;241m2[39m}:
+[1;32m    276[0m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
+[1;32m    277[0m         [38;5;124mf[39m[38;5;124m"[39m[38;5;124mIPython won[39m[38;5;124m'[39m[38;5;124mt let you open fd=[39m[38;5;132;01m{[39;00mfile[38;5;132;01m}[39;00m[38;5;124m by default [39m[38;5;124m"[39m
+[1;32m    278[0m         [38;5;124m"[39m[38;5;124mas it is likely to crash IPython. If you know what you are doing, [39m[38;5;124m"[39m
+[1;32m    279[0m         [38;5;124m"[39m[38;5;124myou can use builtins[39m[38;5;124m'[39m[38;5;124m open.[39m[38;5;124m"[39m
+[1;32m    280[0m     )
+[0;32m--> 282[0m [38;5;28;01mreturn[39;00m [43mio_open[49m[43m([49m[43mfile[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '/Users/d/dropbox/1f.ἡἔρις,κ/1.ontology/be/be_6/be_i7_8.ipynb'
 
