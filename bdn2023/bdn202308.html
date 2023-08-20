@@ -672,6 +672,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id53">1022 abikesa_jbc5.sh</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monkeyking">1023 monkeyking</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bach">1024 bach</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#branch">1025 branch</a></li>
 </ul>
 </li>
 </ul>
@@ -724,16 +725,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Linda Lopez                   
-2          Scott Torres                  
-3          Melanie Rodriguez             
-4          Diane Gonzalez                
-5          Brandon Franklin              
-6          Joseph Wilson                 
-7          Mary Thompson                 
-8          Anita Marks                   
-9          Rhonda Clark                  
-10         Samantha Ruiz                 
+1          Todd Larson                   
+2          Shannon Murphy                
+3          April Price                   
+4          Mary Wilson                   
+5          Andrew Huynh                  
+6          Cameron Compton               
+7          William Reyes                 
+8          Danielle Navarro              
+9          Edgar Peterson                
+10         Theresa Sullivan              
 </pre></div>
 </div>
 </div>
@@ -16160,6 +16161,54 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME
 </ol>
 <p>In summary, Lutheranism contributed significantly to the boldness of the English in breaking away from Rome, both through its direct theological influence and through the cultural exchange of ideas and music. J.S. Bach’s harmonization of “O Sacred Head, Now Wounded” is a specific instance of how this influence was carried through the centuries, touching both the sacred music tradition and theological understanding in England.</p>
 </section>
+<hr class="docutils" />
+<section id="branch">
+<h3>1025 branch<a class="headerlink" href="#branch" title="Permalink to this heading">#</a></h3>
+<p>Creating a new branch to overhaul the backend structure is a great way to experiment with changes without affecting the main branch. If you’re satisfied with the new structure, you can merge it back into the main branch. Here’s how you can do that:</p>
+<ol class="arabic">
+<li><p><strong>Ensure You’re in the Right Directory</strong>: Navigate to the directory where your local copy of the repository is located using a command-line interface.</p></li>
+<li><p><strong>Fetch the Latest Changes</strong>: Make sure your local copy is up to date with the remote repository by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">main</span>
+</pre></div>
+</div>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">main</span></code> with the name of your default branch if it’s not called “main.”</p>
+</li>
+<li><p><strong>Create a New Branch</strong>: Create a new branch where you can make your changes. You might call it something descriptive like “new-backend.” Run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">new</span><span class="o">-</span><span class="n">backend</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Make Your Changes</strong>: You can now start working on your new backend structure in this branch. Feel free to make any changes you like.</p></li>
+<li><p><strong>Commit Your Changes</strong>: As you make changes, commit them to your branch with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Description of the changes made&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Push the Branch</strong>: If you want to push this branch to the remote repository (perhaps for backup or to share with others), run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">new</span><span class="o">-</span><span class="n">backend</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Test Thoroughly</strong>: Before merging the changes into the main branch, make sure to thoroughly test the new backend to ensure it works as expected.</p></li>
+<li><p><strong>Merge the Branch</strong>: Once you’re satisfied with the new backend structure, you can merge the branch back into the main branch. Here’s how:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">main</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="n">new</span><span class="o">-</span><span class="n">backend</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Push the Changes</strong>: To update the remote repository with your new backend structure, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">main</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Clean Up</strong>: If you want, you can delete the local branch now that it’s been merged:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="n">new</span><span class="o">-</span><span class="n">backend</span>
+</pre></div>
+</div>
+<p>By using a branch, you’re keeping all the history of your changes, and you have the flexibility to experiment without affecting the existing code. If something goes wrong, you can always switch back to the main branch, and your changes will be safe in the separate branch.</p>
+</section>
 </section>
 </section>
 
@@ -16532,6 +16581,7 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id53">1022 abikesa_jbc5.sh</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monkeyking">1023 monkeyking</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bach">1024 bach</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#branch">1025 branch</a></li>
 </ul>
 </li>
 </ul>
