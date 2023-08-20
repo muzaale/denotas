@@ -673,6 +673,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monkeyking">1023 monkeyking</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bach">1024 bach</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#branch">1025 branch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#success">1026. success</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id54">1022 abikesa_jbc5.sh</a></li>
 </ul>
 </li>
 </ul>
@@ -725,16 +727,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Todd Larson                   
-2          Shannon Murphy                
-3          April Price                   
-4          Mary Wilson                   
-5          Andrew Huynh                  
-6          Cameron Compton               
-7          William Reyes                 
-8          Danielle Navarro              
-9          Edgar Peterson                
-10         Theresa Sullivan              
+1          Peter Fuller                  
+2          Roy Gilbert                   
+3          Daniel Cox                    
+4          Thomas Massey                 
+5          Randall Smith                 
+6          John Gonzales                 
+7          Roy Rojas                     
+8          Eric Jacobs                   
+9          Bradley Jones                 
+10         Kevin Miller                  
 </pre></div>
 </div>
 </div>
@@ -16209,6 +16211,288 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME
 </div>
 <p>By using a branch, you’re keeping all the history of your changes, and you have the flexibility to experiment without affecting the existing code. If something goes wrong, you can always switch back to the main branch, and your changes will be safe in the separate branch.</p>
 </section>
+<section id="success">
+<h3>1026. success<a class="headerlink" href="#success" title="Permalink to this heading">#</a></h3>
+<p>Sun Aug 20 5:44 PM</p>
+<ul class="simple">
+<li><p>Peace’s wedding</p></li>
+<li><p>Aug 26, 2023</p></li>
+<li><p>Otchy’s residence</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id54">
+<h3>1022 abikesa_jbc5.sh<a class="headerlink" href="#id54" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Check if required commands are available</span>
+<span class="k">for</span><span class="w"> </span>cmd<span class="w"> </span><span class="k">in</span><span class="w"> </span>git<span class="w"> </span>ssh-keygen<span class="w"> </span>jb<span class="w"> </span>ghp-import<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span><span class="nb">command</span><span class="w"> </span>-v<span class="w"> </span><span class="nv">$cmd</span><span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Error: </span><span class="nv">$cmd</span><span class="s2"> is not installed.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="k">done</span>
+
+<span class="c1"># Input information</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your GitHub username: &quot;</span><span class="w"> </span>GITHUB_USERNAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your GitHub repository name: &quot;</span><span class="w"> </span>REPO_NAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your email address: &quot;</span><span class="w"> </span>EMAIL_ADDRESS
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your root directory (e.g., ~/Dropbox/1f.ἡἔρις,κ/1.ontology): &quot;</span><span class="w"> </span>ROOT_DIR
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter the name of the subdirectory to be created within the root directory: &quot;</span><span class="w"> </span>SUBDIR_NAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter the name of the populate_be.ipynb file in ROOT_DIR: &quot;</span><span class="w"> </span>POPULATE_BE
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your git commit message: &quot;</span><span class="w"> </span>GIT_COMMIT_MESSAGE
+
+<span class="c1"># Set up directories and paths</span>
+git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EMAIL_ADDRESS</span><span class="s2">&quot;</span>
+<span class="nb">cd</span><span class="w"> </span><span class="k">$(</span><span class="nb">eval</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$ROOT_DIR</span><span class="k">)</span>
+rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>
+cp<span class="w"> </span><span class="nv">$POPULATE_BE</span><span class="w"> </span><span class="nv">$SUBDIR_NAME</span>/intro.ipynb
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$SUBDIR_NAME</span>
+
+<span class="c1"># Check if SSH keys already exist, and if not, generate a new one</span>
+<span class="nv">SSH_KEY_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.ssh/id_</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}${</span><span class="nv">REPO_NAME</span><span class="si">}</span><span class="s2">&quot;</span>
+rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$SSH_KEY_PATH</span>*
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_KEY_PATH</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EMAIL_ADDRESS</span><span class="s2">&quot;</span><span class="w"> </span>-f<span class="w"> </span><span class="nv">$SSH_KEY_PATH</span>
+<span class="k">fi</span>
+
+cat<span class="w"> </span><span class="si">${</span><span class="nv">SSH_KEY_PATH</span><span class="si">}</span>.pub
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Please manually add the above SSH public key to your GitHub account&#39;s SSH keys.&quot;</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Once you have added the SSH key to your GitHub account, press Enter to continue...&quot;</span>
+<span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+ssh-add<span class="w"> </span>--apple-use-keychain<span class="w"> </span><span class="nv">$SSH_KEY_PATH</span>
+
+<span class="c1"># Number of acts, files per act, and sub-files per file</span>
+<span class="nv">NUMBER_OF_ACTS</span><span class="o">=</span><span class="m">9</span>
+<span class="nv">NUMBER_OF_FILES_PER_ACT</span><span class="o">=</span><span class="m">9</span>
+<span class="nv">NUMBER_OF_SUB_FILES_PER_FILE</span><span class="o">=</span><span class="m">2</span>
+<span class="nv">NUMBER_OF_NOTEBOOKS</span><span class="o">=</span><span class="m">3</span>
+
+<span class="c1"># Create _toc.yml file</span>
+<span class="nv">toc_file</span><span class="o">=</span><span class="s2">&quot;_toc.yml&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;format: jb-book&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;root: intro.ipynb&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span><span class="w"> </span><span class="c1"># Make sure this file exists</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;title: Play&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;parts:&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+
+<span class="c1"># Iterate through the acts, files per act, and sub-files per file</span>
+<span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="nv">$NUMBER_OF_ACTS</span><span class="p">;</span><span class="w"> </span>i++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  - caption: Part </span><span class="k">$((</span><span class="nv">$i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;    chapters:&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">j</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>j&lt;<span class="nv">$NUMBER_OF_FILES_PER_ACT</span><span class="p">;</span><span class="w"> </span>j++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">/act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">k</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>k&lt;<span class="nv">$NUMBER_OF_SUB_FILES_PER_FILE</span><span class="p">;</span><span class="w"> </span>k++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">      </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">/act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">/act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">k</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">n</span><span class="o">=</span><span class="m">1</span><span class="p">;</span><span class="w"> </span>n&lt;<span class="o">=</span><span class="nv">$NUMBER_OF_NOTEBOOKS</span><span class="p">;</span><span class="w"> </span>n++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="nv">new_file</span><span class="o">=</span><span class="s2">&quot;act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">/act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">/act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">k</span><span class="si">}</span><span class="s2">/act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">k</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">n</span><span class="si">}</span><span class="s2">.ipynb&quot;</span>
+<span class="w">        </span>touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$new_file</span><span class="s2">&quot;</span>
+<span class="w">        </span>cp<span class="w"> </span><span class="s2">&quot;intro.ipynb&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$new_file</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># This line copies the content into the new file</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;      - file: </span><span class="nv">$new_file</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="w">      </span><span class="k">done</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="w">  </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="c1"># Create _config.yml file</span>
+<span class="nv">config_file</span><span class="o">=</span><span class="s2">&quot;_config.yml&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;title: Your Book Title&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$config_file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;copyright: Mwaka&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$config_file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;author: Your Name&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$config_file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;logo: https://raw.githubusercontent.com/jhutrc/jhutrc.github.io/main/hub_and_spoke.jpg&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$config_file</span>
+
+<span class="c1"># Build the book with Jupyter Book</span>
+<span class="nb">cd</span><span class="w"> </span>..
+jb<span class="w"> </span>build<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>
+git<span class="w"> </span>clone<span class="w"> </span><span class="s2">&quot;https://github.com/</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2">&quot;</span>
+cp<span class="w"> </span>-r<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>/*<span class="w"> </span><span class="nv">$REPO_NAME</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$REPO_NAME</span>
+git<span class="w"> </span>add<span class="w"> </span>./*
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GIT_COMMIT_MESSAGE</span><span class="s2">&quot;</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="nv">$SSH_KEY_PATH</span>
+
+<span class="c1"># Configure the remote URL with SSH</span>
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span><span class="s2">&quot;git@github.com:</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2">&quot;</span>
+
+<span class="c1"># Push changes</span>
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Jupyter Book content updated and pushed to </span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2"> repository!&quot;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Here’s a more detailed textual representation of the directory structure created by the script, aiming to clarify the relationships between directories, subdirectories, and sub-subdirectories:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ROOT_DIR<span class="w"> </span><span class="o">(</span>user-specified<span class="w"> </span>root<span class="w"> </span>directory<span class="p">;</span><span class="w"> </span>e.g.,<span class="w"> </span>~dropbox/1f.ἡἔρις,κ/1.ontology<span class="o">)</span>
+│
+├──<span class="w"> </span>SUBDIR_NAME<span class="w"> </span><span class="o">(</span>subdirectory<span class="w"> </span>created<span class="w"> </span>within<span class="w"> </span>root<span class="w"> </span>directory<span class="o">)</span>
+│<span class="w">   </span>├──<span class="w"> </span>intro.ipynb
+│<span class="w">   </span>├──<span class="w"> </span>_config.yml
+│<span class="w">   </span>├──<span class="w"> </span>_toc.yml
+│<span class="w">   </span>└──<span class="w"> </span>act_0<span class="w"> </span><span class="o">(</span>subdirectory<span class="o">)</span>
+│<span class="w">       </span>├──<span class="w"> </span>act_0_0<span class="w"> </span><span class="o">(</span>sub-subdirectory<span class="o">)</span>
+│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0_0<span class="w"> </span><span class="o">(</span>sub-sub-subdirectory<span class="o">)</span>
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0_0_1.ipynb
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0_0_2.ipynb
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>...
+│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0_1<span class="w"> </span><span class="o">(</span>sub-sub-subdirectory<span class="o">)</span>
+│<span class="w">       </span>│<span class="w">   </span>└──<span class="w"> </span>...
+│<span class="w">       </span>│<span class="w">    </span>
+│<span class="w">       </span>│<span class="w">   </span>
+│<span class="w">       </span>├──<span class="w"> </span>act_1<span class="w"> </span>
+│<span class="w">       </span>├──<span class="w"> </span>act_1_1<span class="w">  </span>
+│<span class="w">       </span>├──<span class="w"> </span>act_1_0<span class="w">  </span>
+│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>act_1_0_0<span class="w">  </span>
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_1_0_0_1.ipynb
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_1_0_0_2.ipynb
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>...
+│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>act_1_0_1<span class="w">  </span>
+│<span class="w">       </span>│<span class="w">   </span>└──<span class="w"> </span>...
+│<span class="w">       </span>│<span class="w">    </span>
+│<span class="w">       </span>│<span class="w">   </span>
+│<span class="w">       </span>├──<span class="w"> </span>act_2<span class="w"> </span>
+│<span class="w">       </span>├──<span class="w"> </span>act_2_1<span class="w">  </span>
+│<span class="w">       </span>├──<span class="w"> </span>act_2_0<span class="w">  </span>
+│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>act_2_0_0<span class="w">  </span>
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_2_0_0_1.ipynb
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_2_0_0_2.ipynb
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>...
+│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>act_2_0_1<span class="w">  </span>
+│<span class="w">       </span>│<span class="w">   </span>└──<span class="w"> </span>...
+│<span class="w">       </span>│<span class="w">   </span>└──<span class="w"> </span>...
+│<span class="w">       </span>│<span class="w">    </span>
+│<span class="w">       </span>│<span class="w">  </span>
+│<span class="w">       </span>└──<span class="w"> </span>...
+├──<span class="w"> </span>REPO_NAME<span class="w"> </span><span class="o">(</span>cloned<span class="w"> </span>GitHub<span class="w"> </span>repository<span class="o">)</span>
+│<span class="w">   </span>├──<span class="w"> </span>same<span class="w"> </span>content<span class="w"> </span>as<span class="w"> </span>SUBDIR_NAME<span class="w"> </span><span class="o">(</span>including<span class="w"> </span>subdirectories<span class="w"> </span>and<span class="w"> </span>files<span class="o">)</span>
+└──<span class="w"> </span>...
+</pre></div>
+</div>
+<p>Explanation:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ROOT_DIR</span></code>: The user-specified root directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SUBDIR_NAME</span></code>: A subdirectory created within the root directory, specified by the user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">act_X</span></code>: Subdirectories within <code class="docutils literal notranslate"><span class="pre">SUBDIR_NAME</span></code>, representing acts in a play.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">act_X_Y</span></code>: Sub-subdirectories within each act, representing files for each act.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">act_X_Y_Z</span></code>: Sub-sub-subdirectories within each file, containing individual <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">REPO_NAME</span></code>: A cloned GitHub repository, which is copied with the content of <code class="docutils literal notranslate"><span class="pre">SUBDIR_NAME</span></code>, including all the subdirectories and files.</p></li>
+</ul>
+<p>The above structure illustrates how acts, files within acts, and individual <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files are organized within the directory structure. The exact depth and complexity would depend on the specific values set for <code class="docutils literal notranslate"><span class="pre">NUMBER_OF_ACTS</span></code>, <code class="docutils literal notranslate"><span class="pre">NUMBER_OF_FILES_PER_ACT</span></code>, <code class="docutils literal notranslate"><span class="pre">NUMBER_OF_SUB_FILES_PER_FILE</span></code>, and <code class="docutils literal notranslate"><span class="pre">NUMBER_OF_NOTEBOOKS</span></code>.</p>
+<hr class="docutils" />
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/muzaale/got
+<span class="nb">cd</span><span class="w"> </span>got<span class="w">  </span>
+git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main<span class="w">  </span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>new-backend<span class="w">  </span>
+<span class="nb">cd</span><span class="w"> </span>..
+cp<span class="w"> </span>-r<span class="w"> </span>yafe/*<span class="w"> </span>got<span class="w"> </span>
+cp<span class="w">  </span>got/git_0/git_1_1.ipynb<span class="w"> </span>got/act_5/act_5_9/act_5_9_0/act_5_9_0_1.ipynb
+cp<span class="w">  </span>got/git_0/git_1_2.ipynb<span class="w"> </span>got/act_5/act_5_9/act_5_9_0/act_5_9_0_2.ipynb
+cp<span class="w">  </span>got/git_1/git_2_1.ipynb<span class="w"> </span>got/act_5/act_5_9/act_5_9_0/act_5_9_0_3.ipynb
+cp<span class="w">  </span>got/git_3/git_4_1.ipynb<span class="w"> </span>got/act_5/act_5_9/act_5_9_1/act_5_9_1_1.ipynb
+cp<span class="w">  </span>got/git_5/git_6_7.ipynb<span class="w"> </span>got/act_5/act_5_9/act_5_9_1/act_5_9_1_2.ipynb
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">0</span>..6<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-d<span class="w"> </span><span class="s2">&quot;got/git_</span><span class="nv">$i</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ls<span class="w"> </span>-A<span class="w"> </span>got/git_<span class="nv">$i</span>/*.dta<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>mv<span class="w"> </span>got/git_<span class="nv">$i</span>/*.dta<span class="w"> </span>got/act_5/act_5_9/
+<span class="w">  </span><span class="k">fi</span>
+<span class="k">done</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">0</span>..6<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span>rm<span class="w"> </span>-r<span class="w"> </span>got/git_<span class="nv">$i</span>
+<span class="k">done</span>
+mv<span class="w"> </span>got<span class="w"> </span>get
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;</span>
+<span class="s2">git clone https://github.com/muzaale/got</span>
+<span class="s2">cd got  </span>
+<span class="s2">git pull origin main  </span>
+<span class="s2">git checkout -b new-backend  </span>
+<span class="s2">cd ..</span>
+<span class="s2">cp -r yafe/* got </span>
+<span class="s2">cp  got/git_0/git_1_1.ipynb got/act_5/act_5_9/act_5_9_0/act_5_9_0_1.ipynb</span>
+<span class="s2">cp  got/git_0/git_1_2.ipynb got/act_5/act_5_9/act_5_9_0/act_5_9_0_2.ipynb</span>
+<span class="s2">cp  got/git_1/git_2_1.ipynb got/act_5/act_5_9/act_5_9_0/act_5_9_0_3.ipynb</span>
+<span class="s2">cp  got/git_3/git_4_1.ipynb got/act_5/act_5_9/act_5_9_1/act_5_9_1_1.ipynb</span>
+<span class="s2">cp  got/git_5/git_6_7.ipynb got/act_5/act_5_9/act_5_9_1/act_5_9_1_2.ipynb</span>
+<span class="s2">for i in {0..6}; do</span>
+<span class="s2">  if [ -d &quot;</span>got/git_<span class="nv">$i</span><span class="s2">&quot; ] &amp;&amp; [ -n &quot;</span><span class="k">$(</span>ls<span class="w"> </span>-A<span class="w"> </span>got/git_<span class="nv">$i</span>/*.dta<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="k">)</span><span class="s2">&quot; ]; then</span>
+<span class="s2">    mv got/git_</span><span class="nv">$i</span><span class="s2">/*.dta got/act_5/act_5_9/</span>
+<span class="s2">  fi</span>
+<span class="s2">done</span>
+<span class="s2">for i in {0..6}; do</span>
+<span class="s2">  rm -r got/git_</span><span class="nv">$i</span>
+<span class="s2">done</span>
+<span class="s2">mv got get</span>
+<span class="s2">git add .</span>
+<span class="s2">git commit -m xxx&quot;</span>
+
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/id_gitgot
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span><span class="s2">&quot;git@github.com:muzaale/new-backend&quot;</span>
+git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>merge<span class="w"> </span>new-backend
+
+git<span class="w"> </span>remote<span class="w"> </span>-v
+ssh-add<span class="w"> </span>-D<span class="w"> </span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/id_gitgot
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span><span class="s2">&quot;git@github.com:muzaale/got&quot;</span>
+ssh-add<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">eval</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>~/.ssh/id_gitgot<span class="k">)</span><span class="s2">&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;muzaale&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;muzaale@gmail.com&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>rename<span class="w"> </span>git_0/git_1_1.ipynb<span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9/act_5_9_0/act_5_9_0_1.ipynb<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span>git_0/git_1_2.ipynb<span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9/act_5_9_0/act_5_9_0_2.ipynb<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span>git_1/git_2_1.ipynb<span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9/act_5_9_0/act_5_9_0_3.ipynb<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span>git_3/git_4_1.ipynb<span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9/act_5_9_1/act_5_9_1_1.ipynb<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span>git_5/git_6_7.ipynb<span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9/act_5_9_1/act_5_9_1_2.ipynb<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>act_5/act_5_9/act_5_9_1/act_5_9_1_3.ipynb
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/cod.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_5</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/donor_live_esrd.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_5</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/donor_live_keep.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/esrd.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/esrd_pt.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/malignancy.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/p2010anemia_summary.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/p2010artall.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/p2010bmi.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/p2010ckd_long.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/p2010ckd_summary.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/p2010diab_summary.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/p2010haart1st.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/p2010hcv_summary.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/p2010ht_long.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/p2010ht_summary.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/p2010lipid_summary.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/p2010nadi.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/p2010smoking_tf_imputed.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/p2010vlsum2.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/patient.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+<span class="w"> </span>rename<span class="w"> </span><span class="o">{</span><span class="nv">git_6</span><span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span>act_5/act_5_9<span class="o">}</span>/tcellsum.dta<span class="w"> </span><span class="o">(</span><span class="m">100</span>%<span class="o">)</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>get
+git<span class="w"> </span>branch
+git<span class="w"> </span>checkout<span class="w"> </span>new-backend
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;_toc.yml didn&#39;t include act_5&quot;</span>
+git<span class="w"> </span>remote<span class="w"> </span>-v
+ssh-add<span class="w"> </span>-D<span class="w"> </span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/id_gitgot
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span><span class="s2">&quot;git@github.com:muzaale/got&quot;</span>
+ssh-add<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">eval</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span>~/.ssh/id_gitgot<span class="k">)</span><span class="s2">&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;muzaale&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;muzaale@gmail.com&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>new-backend
+</pre></div>
+</div>
+<hr class="docutils" />
+</section>
 </section>
 </section>
 
@@ -16582,6 +16866,8 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monkeyking">1023 monkeyking</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bach">1024 bach</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#branch">1025 branch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#success">1026. success</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id54">1022 abikesa_jbc5.sh</a></li>
 </ul>
 </li>
 </ul>
