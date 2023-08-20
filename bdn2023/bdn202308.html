@@ -650,6 +650,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cult">1007. cult</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numeracy-literacy">1008. numeracy&amp;literacy</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#science">1009. science</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id46">1010. boards</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abikesa-jbc5-sh">1011. abikesa_jbc5.sh</a></li>
 </ul>
 </li>
 </ul>
@@ -702,16 +704,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Kyle Rogers                   
-2          Kayla Peters                  
-3          James Manning                 
-4          Lisa Moreno                   
-5          Emily Hicks                   
-6          Martin Stephens               
-7          Nicole Copeland               
-8          Denise Thompson               
-9          Edward Walker                 
-10         Vickie Fernandez              
+1          Thomas Molina                 
+2          Brian Olsen                   
+3          Amy Stevenson                 
+4          Patricia Foley                
+5          Danielle Ortiz                
+6          David Moore                   
+7          Joshua Holden                 
+8          Bruce Lewis                   
+9          Nicolas Davis                 
+10         David Gray                    
 </pre></div>
 </div>
 </div>
@@ -1227,10 +1229,10 @@ Requirement already satisfied: numpy in /usr/local/anaconda3/lib/python3.11/site
 Requirement already satisfied: requests in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (2.31.0)
 Requirement already satisfied: webcolors&gt;=1.5 in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (1.13)
 Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.0.5)
+Requirement already satisfied: cycler&gt;=0.10 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cycler&gt;=0.10 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.25.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.25.0)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
 Requirement already satisfied: packaging&gt;=20.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (23.0)
 Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (9.4.0)
@@ -15557,6 +15559,123 @@ can’t just be the spur of of the moments emotion &amp; feelings and turn out t
 <p>In sum, while the methods and epistemologies of social sciences may differ from those of the natural sciences, they still involve systematic investigation, empirical observation, and the generation and testing of hypotheses. The diversity of methods reflects the complexity of human behavior and social interactions, and qualitative or “literary” approaches can provide valuable insights into these phenomena.</p>
 <p>The debate over what constitutes “science” often involves deep philosophical questions about knowledge, truth, and methodology. Different disciplines may approach these questions in various ways, reflecting the diversity and richness of human inquiry and understanding.</p>
 </section>
+<section id="id46">
+<h3>1010. boards<a class="headerlink" href="#id46" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>these exams are a joke - <code class="docutils literal notranslate"><span class="pre">copilot</span></code></p></li>
+<li><p>seek to test the ability to memorize</p></li>
+<li><p>not the ability to think</p></li>
+<li><p>how they related to <code class="docutils literal notranslate"><span class="pre">icc</span></code>?</p>
+<ol class="arabic simple">
+<li><p>from the perspective of a professions archetype, a high icc would mean you are reliably like the specialist you are being trained to be</p></li>
+<li><p>you wouldn’t be sui generis, which is a high icc from the perspective of the mainstream</p></li>
+<li><p>this is  a reminder that the interpretation of icc is <code class="docutils literal notranslate"><span class="pre">relative</span></code> to the context</p></li>
+</ol>
+</li>
+</ul>
+</section>
+<section id="abikesa-jbc5-sh">
+<h3>1011. abikesa_jbc5.sh<a class="headerlink" href="#abikesa-jbc5-sh" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Check if required commands are available</span>
+<span class="k">for</span><span class="w"> </span>cmd<span class="w"> </span><span class="k">in</span><span class="w"> </span>git<span class="w"> </span>ssh-keygen<span class="w"> </span>jb<span class="w"> </span>ghp-import<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span>!<span class="w"> </span><span class="nb">command</span><span class="w"> </span>-v<span class="w"> </span><span class="nv">$cmd</span><span class="w"> </span><span class="p">&amp;</span>&gt;<span class="w"> </span>/dev/null<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Error: </span><span class="nv">$cmd</span><span class="s2"> is not installed.&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="k">done</span>
+
+<span class="c1"># Input information</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your GitHub username: &quot;</span><span class="w"> </span>GITHUB_USERNAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your GitHub repository name: &quot;</span><span class="w"> </span>REPO_NAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your email address: &quot;</span><span class="w"> </span>EMAIL_ADDRESS
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your root directory (e.g., ~/Dropbox/1f.ἡἔρις,κ/1.ontology): &quot;</span><span class="w"> </span>ROOT_DIR
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter the name of the subdirectory to be created within the root directory: &quot;</span><span class="w"> </span>SUBDIR_NAME
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter the name of the populate_be.ipynb file in ROOT_DIR: &quot;</span><span class="w"> </span>POPULATE_BE
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Enter your git commit message: &quot;</span><span class="w"> </span>GIT_COMMIT_MESSAGE
+
+<span class="c1"># Set up directories and paths</span>
+git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EMAIL_ADDRESS</span><span class="s2">&quot;</span>
+<span class="nb">cd</span><span class="w"> </span><span class="k">$(</span><span class="nb">eval</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$ROOT_DIR</span><span class="k">)</span>
+rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>
+cp<span class="w"> </span><span class="nv">$POPULATE_BE</span><span class="w"> </span><span class="nv">$SUBDIR_NAME</span>/intro.ipynb
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$SUBDIR_NAME</span>
+
+<span class="c1"># Check if SSH keys already exist, and if not, generate a new one</span>
+<span class="nv">SSH_KEY_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.ssh/id_</span><span class="si">${</span><span class="nv">SUBDIR_NAME</span><span class="si">}${</span><span class="nv">REPO_NAME</span><span class="si">}</span><span class="s2">&quot;</span>
+rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$SSH_KEY_PATH</span>*
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$SSH_KEY_PATH</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$EMAIL_ADDRESS</span><span class="s2">&quot;</span><span class="w"> </span>-f<span class="w"> </span><span class="nv">$SSH_KEY_PATH</span>
+<span class="k">fi</span>
+
+cat<span class="w"> </span><span class="si">${</span><span class="nv">SSH_KEY_PATH</span><span class="si">}</span>.pub
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Please manually add the above SSH public key to your GitHub account&#39;s SSH keys.&quot;</span>
+<span class="nb">read</span><span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;Once you have added the SSH key to your GitHub account, press Enter to continue...&quot;</span>
+<span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">&quot;</span>
+ssh-add<span class="w"> </span>--apple-use-keychain<span class="w"> </span><span class="nv">$SSH_KEY_PATH</span>
+
+<span class="c1"># Number of acts, files per act, and sub-files per file</span>
+<span class="nv">NUMBER_OF_ACTS</span><span class="o">=</span><span class="m">3</span>
+<span class="nv">NUMBER_OF_FILES_PER_ACT</span><span class="o">=</span><span class="m">3</span>
+<span class="nv">NUMBER_OF_SUB_FILES_PER_FILE</span><span class="o">=</span><span class="m">2</span>
+<span class="nv">NUMBER_OF_NOTEBOOKS</span><span class="o">=</span><span class="m">3</span>
+
+<span class="c1"># Create _toc.yml file</span>
+<span class="nv">toc_file</span><span class="o">=</span><span class="s2">&quot;_toc.yml&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;format: jb-book&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;root: intro.ipynb&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span><span class="w"> </span><span class="c1"># Make sure this file exists</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;title: Play&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;parts:&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+
+<span class="c1"># Iterate through the acts, files per act, and sub-files per file</span>
+<span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i&lt;<span class="nv">$NUMBER_OF_ACTS</span><span class="p">;</span><span class="w"> </span>i++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  - caption: Part </span><span class="k">$((</span><span class="nv">$i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;    chapters:&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">j</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>j&lt;<span class="nv">$NUMBER_OF_FILES_PER_ACT</span><span class="p">;</span><span class="w"> </span>j++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">/act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">k</span><span class="o">=</span><span class="m">0</span><span class="p">;</span><span class="w"> </span>k&lt;<span class="nv">$NUMBER_OF_SUB_FILES_PER_FILE</span><span class="p">;</span><span class="w"> </span>k++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">      </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">&quot;act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">/act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">/act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">k</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">n</span><span class="o">=</span><span class="m">1</span><span class="p">;</span><span class="w"> </span>n&lt;<span class="o">=</span><span class="nv">$NUMBER_OF_NOTEBOOKS</span><span class="p">;</span><span class="w"> </span>n++<span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">        </span><span class="nv">new_file</span><span class="o">=</span><span class="s2">&quot;act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">/act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">/act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">k</span><span class="si">}</span><span class="s2">/act_</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">j</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">k</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">n</span><span class="si">}</span><span class="s2">.ipynb&quot;</span>
+<span class="w">        </span>touch<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$new_file</span><span class="s2">&quot;</span>
+<span class="w">        </span>cp<span class="w"> </span><span class="s2">&quot;intro.ipynb&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$new_file</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># This line copies the content into the new file</span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;      - file: </span><span class="nv">$new_file</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$toc_file</span>
+<span class="w">      </span><span class="k">done</span>
+<span class="w">    </span><span class="k">done</span>
+<span class="w">  </span><span class="k">done</span>
+<span class="k">done</span>
+
+<span class="c1"># Create _config.yml file</span>
+<span class="nv">config_file</span><span class="o">=</span><span class="s2">&quot;_config.yml&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;title: Your Book Title&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="nv">$config_file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;author: Your Name&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$config_file</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;logo: https://raw.githubusercontent.com/jhutrc/jhutrc.github.io/main/hub_and_spoke.jpg&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$config_file</span>
+
+<span class="c1"># Build the book with Jupyter Book</span>
+<span class="nb">cd</span><span class="w"> </span>..
+jb<span class="w"> </span>build<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>
+git<span class="w"> </span>clone<span class="w"> </span><span class="s2">&quot;https://github.com/</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2">&quot;</span>
+cp<span class="w"> </span>-r<span class="w"> </span><span class="nv">$SUBDIR_NAME</span>/*<span class="w"> </span><span class="nv">$REPO_NAME</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$REPO_NAME</span>
+git<span class="w"> </span>add<span class="w"> </span>./*
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$GIT_COMMIT_MESSAGE</span><span class="s2">&quot;</span>
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="nv">$SSH_KEY_PATH</span>
+
+<span class="c1"># Configure the remote URL with SSH</span>
+git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span><span class="s2">&quot;git@github.com:</span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2">&quot;</span>
+
+<span class="c1"># Push changes</span>
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
+rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Jupyter Book content updated and pushed to </span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2"> repository!&quot;</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
@@ -15907,6 +16026,8 @@ can’t just be the spur of of the moments emotion &amp; feelings and turn out t
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cult">1007. cult</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numeracy-literacy">1008. numeracy&amp;literacy</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#science">1009. science</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id46">1010. boards</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abikesa-jbc5-sh">1011. abikesa_jbc5.sh</a></li>
 </ul>
 </li>
 </ul>
