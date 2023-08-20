@@ -652,6 +652,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#science">1009. science</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id46">1010. boards</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abikesa-jbc5-sh">1011. abikesa_jbc5.sh</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id47">1012. structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cop">1013. cop</a></li>
 </ul>
 </li>
 </ul>
@@ -704,16 +706,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Thomas Molina                 
-2          Brian Olsen                   
-3          Amy Stevenson                 
-4          Patricia Foley                
-5          Danielle Ortiz                
-6          David Moore                   
-7          Joshua Holden                 
-8          Bruce Lewis                   
-9          Nicolas Davis                 
-10         David Gray                    
+1          Matthew Murray                
+2          John Johnson                  
+3          Jesse Clark                   
+4          Edward Goodwin                
+5          Carolyn Davis                 
+6          Bianca Ross                   
+7          Judy Mcgrath                  
+8          Adrian Durham                 
+9          Steven Brock                  
+10         Ronnie Medina                 
 </pre></div>
 </div>
 </div>
@@ -1230,10 +1232,10 @@ Requirement already satisfied: requests in /usr/local/anaconda3/lib/python3.11/s
 Requirement already satisfied: webcolors&gt;=1.5 in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (1.13)
 Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.0.5)
 Requirement already satisfied: cycler&gt;=0.10 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.25.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.25.0)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
 Requirement already satisfied: packaging&gt;=20.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (23.0)
 Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (9.4.0)
 Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (3.0.9)
@@ -15676,6 +15678,39 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME
 </pre></div>
 </div>
 </section>
+<section id="id47">
+<h3>1012. structure<a class="headerlink" href="#id47" title="Permalink to this heading">#</a></h3>
+<p>textual representation of the expected directory structure based on the script provided. You can visualize it as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ROOT_DIR
+├──<span class="w"> </span>REPO_NAME<span class="w"> </span><span class="o">(</span>a<span class="w"> </span>cloned<span class="w"> </span>repository,<span class="w"> </span><span class="k">if</span><span class="w"> </span>applicable<span class="o">)</span>
+└──<span class="w"> </span>SUBDIR_NAME
+<span class="w">    </span>├──<span class="w"> </span>intro.ipynb
+<span class="w">    </span>├──<span class="w"> </span>act_0
+<span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0
+<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0_0
+<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0_0_1.ipynb
+<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0_0_2.ipynb
+<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>act_0_0_0_3.ipynb
+<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0_1
+<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>...
+<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>act_0_0_9
+<span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_1
+<span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>...
+<span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>act_0_2
+<span class="w">    </span>├──<span class="w"> </span>act_1
+<span class="w">    </span>├──<span class="w"> </span>...
+<span class="w">    </span>└──<span class="w"> </span>act_3
+</pre></div>
+</div>
+</section>
+<section id="cop">
+<h3>1013. cop<a class="headerlink" href="#cop" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>high icc when N = 1 individual defines <em>sui generis</em> like the dude</p></li>
+<li><p>but a high icc when N = 1 group points to a professional community of practice</p></li>
+<li><p>the one gathers a very passionate following, the cother fee-paying clients and members who want buy-in to the client base</p></li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -16028,6 +16063,8 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#science">1009. science</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id46">1010. boards</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abikesa-jbc5-sh">1011. abikesa_jbc5.sh</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id47">1012. structure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cop">1013. cop</a></li>
 </ul>
 </li>
 </ul>
