@@ -675,6 +675,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#branch">1025 branch</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#success">1026. success</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id54">1022 abikesa_jbc5.sh</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oldstructure">1027. oldstructure</a></li>
 </ul>
 </li>
 </ul>
@@ -727,16 +728,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Peter Fuller                  
-2          Roy Gilbert                   
-3          Daniel Cox                    
-4          Thomas Massey                 
-5          Randall Smith                 
-6          John Gonzales                 
-7          Roy Rojas                     
-8          Eric Jacobs                   
-9          Bradley Jones                 
-10         Kevin Miller                  
+1          Jose Pierce                   
+2          Vincent Monroe                
+3          Dale Jackson                  
+4          Gabriella Donovan             
+5          Regina Knapp                  
+6          Tiffany Moore                 
+7          William Myers                 
+8          Christine Murray              
+9          Brenda Hubbard                
+10         Michael Crawford              
 </pre></div>
 </div>
 </div>
@@ -1251,12 +1252,12 @@ Requirement already satisfied: more-itertools in /Users/d/Dropbox (Personal)/1f.
 Requirement already satisfied: numpy in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.25.2)
 Requirement already satisfied: requests in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (2.31.0)
 Requirement already satisfied: webcolors&gt;=1.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.13)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
 Requirement already satisfied: cycler&gt;=0.10 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
 Requirement already satisfied: fonttools&gt;=4.22.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.42.0)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: kiwisolver&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
 Requirement already satisfied: packaging&gt;=20.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (23.1)
 Requirement already satisfied: pillow&gt;=6.2.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (10.0.0)
 Requirement already satisfied: pyparsing&lt;3.1,&gt;=2.3.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (3.0.9)
@@ -16491,7 +16492,40 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>new-backend
 </pre></div>
 </div>
+</section>
 <hr class="docutils" />
+<section id="oldstructure">
+<h3>1027. oldstructure<a class="headerlink" href="#oldstructure" title="Permalink to this heading">#</a></h3>
+<p>If you want to remove the old structure from the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch, you’ll need to first switch to that branch, then delete the files and directories as required, and finally commit and push the changes. Here’s how you can do that:</p>
+<ol class="arabic">
+<li><p><strong>Switch to the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> Branch</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>checkout<span class="w"> </span>gh-pages
+</pre></div>
+</div>
+</li>
+<li><p><strong>Delete the Old Structure</strong>: You’ll need to manually delete the files and directories that constitute the old structure. Use the <code class="docutils literal notranslate"><span class="pre">rm</span></code> command for files and <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-r</span></code> for directories. For example, if you need to delete a directory called <code class="docutils literal notranslate"><span class="pre">old_directory</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>-r<span class="w"> </span>old_directory
+</pre></div>
+</div>
+</li>
+<li><p><strong>Stage the Deletion</strong>: Since you’ve removed files, you’ll need to stage these changes:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>-A
+</pre></div>
+</div>
+</li>
+<li><p><strong>Commit the Changes</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Removed old structure from gh-pages branch&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Push the Changes to the Remote Repository</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>gh-pages
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Now the old structure has been removed from the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch both locally and in the remote repository.</p>
+<p>If you’re uncertain about which files and directories need to be removed, you might want to carefully review the branch’s contents before proceeding, perhaps consulting any documentation or team members involved in the project. Remember, deleting files is a significant action and can’t easily be undone, so take care to ensure that you’re removing only what’s necessary.</p>
 </section>
 </section>
 </section>
@@ -16868,6 +16902,7 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#branch">1025 branch</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#success">1026. success</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id54">1022 abikesa_jbc5.sh</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#oldstructure">1027. oldstructure</a></li>
 </ul>
 </li>
 </ul>
