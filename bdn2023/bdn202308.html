@@ -724,16 +724,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Christopher Alexander         
-2          William Mcbride               
-3          Cheryl Patel                  
-4          Christopher Underwood         
-5          Cheryl Nichols                
-6          Peter Ward                    
-7          Michael Stewart               
-8          Phillip Cook                  
-9          Lisa Harris                   
-10         Paul Kelley                   
+1          Linda Lopez                   
+2          Scott Torres                  
+3          Melanie Rodriguez             
+4          Diane Gonzalez                
+5          Brandon Franklin              
+6          Joseph Wilson                 
+7          Mary Thompson                 
+8          Anita Marks                   
+9          Rhonda Clark                  
+10         Samantha Ruiz                 
 </pre></div>
 </div>
 </div>
@@ -1248,11 +1248,11 @@ Requirement already satisfied: more-itertools in /Users/d/Dropbox (Personal)/1f.
 Requirement already satisfied: numpy in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.25.2)
 Requirement already satisfied: requests in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (2.31.0)
 Requirement already satisfied: webcolors&gt;=1.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.13)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
-Requirement already satisfied: cycler&gt;=0.10 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: fonttools&gt;=4.22.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.42.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
+Requirement already satisfied: cycler&gt;=0.10 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.42.0)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
 Requirement already satisfied: packaging&gt;=20.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (23.1)
 Requirement already satisfied: pillow&gt;=6.2.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (10.0.0)
@@ -16053,8 +16053,64 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Jupyter Book content updated and pushed to </span><span class="nv">$GITHUB_USERNAME</span><span class="s2">/</span><span class="nv">$REPO_NAME</span><span class="s2"> repository!&quot;</span>
 </pre></div>
 </div>
-</section>
 <hr class="docutils" />
+<p>Here’s a more detailed textual representation of the directory structure created by the script, aiming to clarify the relationships between directories, subdirectories, and sub-subdirectories:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ROOT_DIR<span class="w"> </span><span class="o">(</span>user-specified<span class="w"> </span>root<span class="w"> </span>directory<span class="p">;</span><span class="w"> </span>e.g.,<span class="w"> </span>~dropbox/1f.ἡἔρις,κ/1.ontology<span class="o">)</span>
+│
+├──<span class="w"> </span>SUBDIR_NAME<span class="w"> </span><span class="o">(</span>subdirectory<span class="w"> </span>created<span class="w"> </span>within<span class="w"> </span>root<span class="w"> </span>directory<span class="o">)</span>
+│<span class="w">   </span>├──<span class="w"> </span>intro.ipynb
+│<span class="w">   </span>├──<span class="w"> </span>_config.yml
+│<span class="w">   </span>├──<span class="w"> </span>_toc.yml
+│<span class="w">   </span>└──<span class="w"> </span>act_0<span class="w"> </span><span class="o">(</span>subdirectory<span class="o">)</span>
+│<span class="w">       </span>├──<span class="w"> </span>act_0_0<span class="w"> </span><span class="o">(</span>sub-subdirectory<span class="o">)</span>
+│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0_0<span class="w"> </span><span class="o">(</span>sub-sub-subdirectory<span class="o">)</span>
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0_0_1.ipynb
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0_0_2.ipynb
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>...
+│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0_1<span class="w"> </span><span class="o">(</span>sub-sub-subdirectory<span class="o">)</span>
+│<span class="w">       </span>│<span class="w">   </span>└──<span class="w"> </span>...
+│<span class="w">       </span>│<span class="w">    </span>
+│<span class="w">       </span>│<span class="w">   </span>
+│<span class="w">       </span>├──<span class="w"> </span>act_1<span class="w"> </span>
+│<span class="w">       </span>├──<span class="w"> </span>act_1_1<span class="w">  </span>
+│<span class="w">       </span>├──<span class="w"> </span>act_1_0<span class="w">  </span>
+│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>act_1_0_0<span class="w">  </span>
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_1_0_0_1.ipynb
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_1_0_0_2.ipynb
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>...
+│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>act_1_0_1<span class="w">  </span>
+│<span class="w">       </span>│<span class="w">   </span>└──<span class="w"> </span>...
+│<span class="w">       </span>│<span class="w">    </span>
+│<span class="w">       </span>│<span class="w">   </span>
+│<span class="w">       </span>├──<span class="w"> </span>act_2<span class="w"> </span>
+│<span class="w">       </span>├──<span class="w"> </span>act_2_1<span class="w">  </span>
+│<span class="w">       </span>├──<span class="w"> </span>act_2_0<span class="w">  </span>
+│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>act_2_0_0<span class="w">  </span>
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_2_0_0_1.ipynb
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_2_0_0_2.ipynb
+│<span class="w">       </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>...
+│<span class="w">       </span>│<span class="w">   </span>├──<span class="w"> </span>act_2_0_1<span class="w">  </span>
+│<span class="w">       </span>│<span class="w">   </span>└──<span class="w"> </span>...
+│<span class="w">       </span>│<span class="w">   </span>└──<span class="w"> </span>...
+│<span class="w">       </span>│<span class="w">    </span>
+│<span class="w">       </span>│<span class="w">  </span>
+│<span class="w">       </span>└──<span class="w"> </span>...
+├──<span class="w"> </span>REPO_NAME<span class="w"> </span><span class="o">(</span>cloned<span class="w"> </span>GitHub<span class="w"> </span>repository<span class="o">)</span>
+│<span class="w">   </span>├──<span class="w"> </span>same<span class="w"> </span>content<span class="w"> </span>as<span class="w"> </span>SUBDIR_NAME<span class="w"> </span><span class="o">(</span>including<span class="w"> </span>subdirectories<span class="w"> </span>and<span class="w"> </span>files<span class="o">)</span>
+└──<span class="w"> </span>...
+</pre></div>
+</div>
+<p>Explanation:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ROOT_DIR</span></code>: The user-specified root directory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SUBDIR_NAME</span></code>: A subdirectory created within the root directory, specified by the user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">act_X</span></code>: Subdirectories within <code class="docutils literal notranslate"><span class="pre">SUBDIR_NAME</span></code>, representing acts in a play.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">act_X_Y</span></code>: Sub-subdirectories within each act, representing files for each act.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">act_X_Y_Z</span></code>: Sub-sub-subdirectories within each file, containing individual <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">REPO_NAME</span></code>: A cloned GitHub repository, which is copied with the content of <code class="docutils literal notranslate"><span class="pre">SUBDIR_NAME</span></code>, including all the subdirectories and files.</p></li>
+</ul>
+<p>The above structure illustrates how acts, files within acts, and individual <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files are organized within the directory structure. The exact depth and complexity would depend on the specific values set for <code class="docutils literal notranslate"><span class="pre">NUMBER_OF_ACTS</span></code>, <code class="docutils literal notranslate"><span class="pre">NUMBER_OF_FILES_PER_ACT</span></code>, <code class="docutils literal notranslate"><span class="pre">NUMBER_OF_SUB_FILES_PER_FILE</span></code>, and <code class="docutils literal notranslate"><span class="pre">NUMBER_OF_NOTEBOOKS</span></code>.</p>
+</section>
 <section id="monkeyking">
 <h3>1023 monkeyking<a class="headerlink" href="#monkeyking" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
@@ -16081,6 +16137,8 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME
 <li><p>seek: the girl</p></li>
 <li><p>hide: villagers</p></li>
 </ul>
+<hr class="docutils" />
+<p>? there was mention of 99 problems right before the #1 fun (the girl) who <code class="docutils literal notranslate"><span class="pre">seeks</span></code> her patch in paradise by aligning with the prospective monkey king makes her first appearance!</p>
 </section>
 <hr class="docutils" />
 <section id="bach">
