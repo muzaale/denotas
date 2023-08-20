@@ -654,6 +654,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abikesa-jbc5-sh">1011. abikesa_jbc5.sh</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id47">1012. structure</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cop">1013. cop</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#riskcalc">1014. riskcalc</a></li>
 </ul>
 </li>
 </ul>
@@ -706,16 +707,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Matthew Murray                
-2          John Johnson                  
-3          Jesse Clark                   
-4          Edward Goodwin                
-5          Carolyn Davis                 
-6          Bianca Ross                   
-7          Judy Mcgrath                  
-8          Adrian Durham                 
-9          Steven Brock                  
-10         Ronnie Medina                 
+1          Jennifer Payne                
+2          Joseph Ellis                  
+3          Lisa Martinez                 
+4          Michael Whitaker              
+5          Dawn Smith                    
+6          Anna Nguyen                   
+7          Maria Grant                   
+8          Dennis Walker                 
+9          Jason Ferguson                
+10         Julie Scott                   
 </pre></div>
 </div>
 </div>
@@ -1221,32 +1222,34 @@ Songwriters: Donald Lawrence / Marshon Lewis / William James Stokes / Robert Woo
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: music21 in /usr/local/anaconda3/lib/python3.11/site-packages (9.1.0)
-Requirement already satisfied: chardet in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (4.0.0)
-Requirement already satisfied: joblib in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (1.2.0)
-Requirement already satisfied: jsonpickle in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (3.0.1)
-Requirement already satisfied: matplotlib in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (3.7.1)
-Requirement already satisfied: more-itertools in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (8.12.0)
-Requirement already satisfied: numpy in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (1.24.3)
-Requirement already satisfied: requests in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (2.31.0)
-Requirement already satisfied: webcolors&gt;=1.5 in /usr/local/anaconda3/lib/python3.11/site-packages (from music21) (1.13)
-Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.0.5)
-Requirement already satisfied: cycler&gt;=0.10 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
-Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.25.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: music21 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (9.1.0)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: kiwisolver&gt;=1.0.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
-Requirement already satisfied: packaging&gt;=20.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (23.0)
-Requirement already satisfied: pillow&gt;=6.2.0 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (9.4.0)
-Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (3.0.9)
-Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/anaconda3/lib/python3.11/site-packages (from matplotlib-&gt;music21) (2.8.2)
-Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (2.0.4)
-Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (3.4)
-Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (1.26.16)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/anaconda3/lib/python3.11/site-packages (from requests-&gt;music21) (2023.7.22)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: chardet in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (5.2.0)
+Requirement already satisfied: joblib in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.3.1)
+Requirement already satisfied: jsonpickle in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (3.0.1)
+Requirement already satisfied: matplotlib in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (3.7.2)
+Requirement already satisfied: more-itertools in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (10.1.0)
+Requirement already satisfied: numpy in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.25.2)
+Requirement already satisfied: requests in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (2.31.0)
+Requirement already satisfied: webcolors&gt;=1.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.13)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
+Requirement already satisfied: cycler&gt;=0.10 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.42.0)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
+Requirement already satisfied: packaging&gt;=20.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (23.1)
+Requirement already satisfied: pillow&gt;=6.2.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (10.0.0)
+Requirement already satisfied: pyparsing&lt;3.1,&gt;=2.3.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (3.0.9)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (2.8.2)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six&gt;=1.5 in /usr/local/anaconda3/lib/python3.11/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib-&gt;music21) (1.16.0)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (3.2.0)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (3.4)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (2.0.4)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (2023.7.22)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six&gt;=1.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib-&gt;music21) (1.16.0)
 </pre></div>
 </div>
 </div>
@@ -15682,24 +15685,27 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME
 <h3>1012. structure<a class="headerlink" href="#id47" title="Permalink to this heading">#</a></h3>
 <p>textual representation of the expected directory structure based on the script provided. You can visualize it as follows:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ROOT_DIR
-├──<span class="w"> </span>REPO_NAME<span class="w"> </span><span class="o">(</span>a<span class="w"> </span>cloned<span class="w"> </span>repository,<span class="w"> </span><span class="k">if</span><span class="w"> </span>applicable<span class="o">)</span>
+├──<span class="w"> </span>REPO_NAME<span class="w">  </span><span class="o">(</span>Temporary<span class="w"> </span>folder,<span class="w"> </span>deleted<span class="w"> </span>at<span class="w"> </span>the<span class="w"> </span>end<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>script<span class="o">)</span>
 └──<span class="w"> </span>SUBDIR_NAME
-<span class="w">    </span>├──<span class="w"> </span>intro.ipynb
+<span class="w">    </span>├──<span class="w"> </span>_toc.yml
+<span class="w">    </span>├──<span class="w"> </span>_config.yml
+<span class="w">    </span>├──<span class="w"> </span>intro.ipynb<span class="w"> </span><span class="o">(</span>copied<span class="w"> </span>from<span class="w"> </span>POPULATE_BE<span class="o">)</span>
 <span class="w">    </span>├──<span class="w"> </span>act_0
 <span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0
 <span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0_0
 <span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0_0_1.ipynb
 <span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0_0_2.ipynb
-<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>act_0_0_0_3.ipynb
+<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>...
+<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>act_0_0_0_NUMBER_OF_NOTEBOOKS.ipynb
 <span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_0_1
-<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>...
-<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>act_0_0_9
+<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>...
+<span class="w">    </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>act_0_0_NUMBER_OF_SUB_FILES_PER_FILE
 <span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>act_0_1
-<span class="w">    </span>│<span class="w">   </span>├──<span class="w"> </span>...
-<span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>act_0_2
+<span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>...
+<span class="w">    </span>│<span class="w">   </span>└──<span class="w"> </span>act_0_NUMBER_OF_FILES_PER_ACT
 <span class="w">    </span>├──<span class="w"> </span>act_1
-<span class="w">    </span>├──<span class="w"> </span>...
-<span class="w">    </span>└──<span class="w"> </span>act_3
+<span class="w">    </span>└──<span class="w"> </span>...
+<span class="w">    </span>└──<span class="w"> </span>act_NUMBER_OF_ACTS-1
 </pre></div>
 </div>
 </section>
@@ -15708,7 +15714,31 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME
 <ul class="simple">
 <li><p>high icc when N = 1 individual defines <em>sui generis</em> like the dude</p></li>
 <li><p>but a high icc when N = 1 group points to a professional community of practice</p></li>
-<li><p>the one gathers a very passionate following, the cother fee-paying clients and members who want buy-in to the client base</p></li>
+<li><p>one gathers a very passionate following, the other exclusive rights to offer a service</p>
+<ol class="arabic simple">
+<li><p>to fee-paying clients</p></li>
+<li><p>but also to members who want buy-in to the client base</p></li>
+<li><p>witness how both create a frenzy among young folks contemplating a career in the field!</p></li>
+</ol>
+</li>
+</ul>
+</section>
+<section id="riskcalc">
+<h3>1014. riskcalc<a class="headerlink" href="#riskcalc" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>imagine a dataset with 32,850 rows representing 1 patients record each day of their life for 90 years</p></li>
+<li><p>and 100 columns representing 100 characteristics (fixed &amp; variable) of the patient</p></li>
+<li><p>demographic, clinical, social, wearable, activity, loseit, etc</p></li>
+<li><p>the last 10 columns are the outcomes of interest: vital status, disability, frailty, icd10, bmi, calories burned, intake, etc</p></li>
+<li><p>we can use this dataset to build a risk calculator for each of the 10 outcomes for this one individual in a given clinic visit</p></li>
+<li><p>but such datasets are for the future since wearables have only just arrived and no one has been collecting data for 90 years</p></li>
+<li><p>from this perspective the risk calculator is a <code class="docutils literal notranslate"><span class="pre">prediction</span></code> tool for the future dataset that will be collected for this individual</p></li>
+<li><p>hope you see where i’m going with this: to highlight that we are on the right track, this frenzy of jupyter-book deployment</p></li>
+<li><p>once deployed then we can host calculators on the web for the world to use and benefit from; and we can do this for each of the 10 outcomes</p></li>
+<li><p>class &amp; class-distinction must then be comprehended from the perspective of hierachical models of all kingds</p></li>
+<li><p>those with the individual as a class and time as the “members” of that class will be the most powerful (think of the dude’s rug)</p></li>
+<li><p>groups of individuuals will be the next most powerful (think of the cult leader) where one fits a stereotype (high icc) and is distinct from the mainstream</p></li>
+<li><p>medicine has classically trained the doctor to contemplate the mainstream and the individual in a homogenous context (think of the boards)</p></li>
 </ul>
 </section>
 </section>
@@ -16065,6 +16095,7 @@ rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$REPO_NAME
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abikesa-jbc5-sh">1011. abikesa_jbc5.sh</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id47">1012. structure</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cop">1013. cop</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#riskcalc">1014. riskcalc</a></li>
 </ul>
 </li>
 </ul>
