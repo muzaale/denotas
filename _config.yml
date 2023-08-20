@@ -44,3 +44,4 @@ exclude_patterns: [pattern1/*, path/to/myfile.ipynb]
 sphinx:
   extra_extensions:
     - sphinxcontrib.bibtex
+   extra_css: ["custom.css"]

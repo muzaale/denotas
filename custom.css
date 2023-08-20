@@ -1,0 +1,11 @@
+/* Style code blocks with black background and white text */
+div.highlight {
+   background-color: black;
+   color: white;
+}
+
+/* Style markdown text with a gray background */
+div.markdown {
+   background-color: #f0f0f0;
+}
+
