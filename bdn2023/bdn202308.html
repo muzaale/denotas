@@ -728,6 +728,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id67">1055 openai</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#samaltman">1056 samaltman</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joschu">1057 joschu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pmatrix">1058 pmatrix</a></li>
 </ul>
 </li>
 </ul>
@@ -780,16 +781,16 @@ document.write(`
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number     Name                          
-1          Sheila Costa                  
-2          Elizabeth Henry               
-3          Hector Johnson                
-4          Catherine King                
-5          Brittany Kramer               
-6          Jordan Patel                  
-7          Amanda Thomas                 
-8          Michael Sandoval              
-9          Tina Lutz                     
-10         Whitney Barnett               
+1          Chelsea Mitchell              
+2          Susan Gutierrez               
+3          Lisa Murphy                   
+4          Lisa Jones                    
+5          Zachary Holt                  
+6          Emily Flores                  
+7          Oscar Guzman                  
+8          Cody Cline                    
+9          Marcus Clark                  
+10         Laurie Franco                 
 </pre></div>
 </div>
 </div>
@@ -1305,16 +1306,16 @@ Requirement already satisfied: numpy in /Users/d/Dropbox (Personal)/1f.ἡἐ�
 Requirement already satisfied: requests in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (2.31.0)
 Requirement already satisfied: webcolors&gt;=1.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from music21) (1.13)
 Requirement already satisfied: contourpy&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.1.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: cycler&gt;=0.10 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
+Requirement already satisfied: cycler&gt;=0.10 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (0.11.0)
 Requirement already satisfied: fonttools&gt;=4.22.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (4.42.0)
 Requirement already satisfied: kiwisolver&gt;=1.0.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (1.4.4)
 Requirement already satisfied: packaging&gt;=20.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (23.1)
 Requirement already satisfied: pillow&gt;=6.2.0 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (10.0.0)
 Requirement already satisfied: pyparsing&lt;3.1,&gt;=2.3.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (3.0.9)
 Requirement already satisfied: python-dateutil&gt;=2.7 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from matplotlib-&gt;music21) (2.8.2)
-Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (3.2.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (3.2.0)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (3.4)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (2.0.4)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /Users/d/Dropbox (Personal)/1f.ἡἔρις,κ/1.ontology/myenv/lib/python3.11/site-packages (from requests-&gt;music21) (2023.7.22)
@@ -17662,15 +17663,38 @@ Creating a pyschologically compelling anarchist character</p>
 <p>It’s an example of a world in which good ideas are the limit for what we can do, not specific skills.</p>
 <p>You should trade being short-term low-status for being long-term high-status, which most people seem unwilling to do. A common way this happens is by eventually being right about an important but deeply non-consensus bet. But there are lots of other ways–the key observation is that as long as you are right, being misunderstood by most people is a strength not a weakness. You and a small group of rebels get the space to solve an important problem that might otherwise not get solved.</p>
 <p>The best people in both groups spend a lot of time reflecting on some version of the Hamming question—“what are the most important problems in your field, and why aren’t you working on them?” In general, no one reflects on this question enough, but the best people do it the most, and have the best ‘problem taste’, which is some combination of learning to think independently, reason about the future, and identify attack vectors. (This from John Schulman is worth reading: <a class="reference external" href="http://joschu.net/blog/opinionated-guide-ml-research.html">http://joschu.net/blog/opinionated-guide-ml-research.html</a>).</p>
-<ul class="simple">
-<li><p>Sam Altman</p></li>
-</ul>
 </section>
 <hr class="docutils" />
 <section id="joschu">
 <h3>1057 joschu<a class="headerlink" href="#joschu" title="Permalink to this heading">#</a></h3>
 <p>Keep a Notebook, and Review It</p>
 <p>I strongly advise you to keep a notebook, where you record your daily ideas and experiments. I have done this through 5 years of grad school and 2 years at OpenAI, and I feel that it has been tremendously helpful.</p>
+</section>
+<section id="pmatrix">
+<h3>1058 pmatrix<a class="headerlink" href="#pmatrix" title="Permalink to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{pmatrix}
+a_1 \\
+a_2 \\
+a_3 \\
+a_4 \\
+a_5 \\
+a_6
+\end{pmatrix}
+\begin{pmatrix}
+b_1 &amp; b_2 &amp; b_3
+\end{pmatrix}
+=
+\begin{pmatrix}
+a_1 b_1 &amp; a_1 b_2 &amp; a_1 b_3 \\
+a_2 b_1 &amp; a_2 b_2 &amp; a_2 b_3 \\
+a_3 b_1 &amp; a_3 b_2 &amp; a_3 b_3 \\
+a_4 b_1 &amp; a_4 b_2 &amp; a_4 b_3 \\
+a_5 b_1 &amp; a_5 b_2 &amp; a_5 b_3 \\
+a_6 b_1 &amp; a_6 b_2 &amp; a_6 b_3
+\end{pmatrix}
+\end{split}\]</div>
 </section>
 </section>
 </section>
@@ -18100,6 +18124,7 @@ Creating a pyschologically compelling anarchist character</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id67">1055 openai</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#samaltman">1056 samaltman</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#joschu">1057 joschu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pmatrix">1058 pmatrix</a></li>
 </ul>
 </li>
 </ul>
