@@ -18,79 +18,51 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import statsmodels.api as sm
-import numpy as np
 import requests
-import io
-import os
+from bs4 import BeautifulSoup
+import pandas as pd
 
-# Load the data from the URL using requests
-url = 'https://raw.githubusercontent.com/jhustata/livre/main/transplants.txt'
+# Fetch the HTML content of the book
+url = "https://www.gutenberg.org/files/38226/38226-h/38226-h.htm"
 response = requests.get(url)
-content = response.content.decode('utf-8')
-file = io.StringIO(content)
-data = pd.read_csv(file, sep='\t')
+html_content = response.text
 
-# Extract relevant columns
-age = data['age']
-x = [1] * len(age)
+# Parse the HTML content using BeautifulSoup
+soup = BeautifulSoup(html_content, "html.parser")
 
-# Calculate mean and standard deviation
-mean_age = age.mean()
-std_age = age.std()
+# Find all the paragraphs in the book
+paragraphs = soup.find_all("p")
 
-# Calculate upper and lower bounds for 95% confidence interval
-ub = mean_age + std_age * 1.96
-lb = mean_age - std_age * 1.96
+# Initialize counters for Mozart and Beethoven mentions
+mozart_count = 0
+beethoven_count = 0
 
-# Add jitter to x-axis values
-x_jitter = x + np.random.normal(0, 0.02, size=len(x))
+# Iterate over each paragraph and count mentions of Mozart and Beethoven
+for paragraph in paragraphs:
+    text = paragraph.get_text()
+    mozart_count += text.lower().count("mozart")
+    beethoven_count += text.lower().count("beethoven")
 
-# Scatter plot of age with increased jitter
-plt.scatter(x_jitter, age, c='lime', alpha=0.5)
+# Create a pandas DataFrame to store the results
+data = {
+    "Word": ["Mozart", "Beethoven"],
+    "Frequency": [mozart_count, beethoven_count]
+}
+df = pd.DataFrame(data)
 
-# Mean point
-plt.scatter(1, mean_age, c='blue', s=25)
-
-# Confidence interval with thicker line
-plt.errorbar(1, mean_age, yerr=[[mean_age - lb], [ub - mean_age]], color='orange', linewidth=2)
-
-# Styling
-plt.ylabel('Age at Transplant, y', rotation='horizontal', ha='right')  # Rotate the y-axis title horizontally
-plt.title('Mean & 95% CI')
-plt.text(1.01, mean_age, r'$\beta_0$', va='center', fontsize=24)
-plt.xticks([])
-plt.grid(True)
-
-# Get the filename from the URL
-file_name = os.path.basename(url)
-
-# Calculate the total number of observations
-total_observations = len(age)
-
-# Text annotation with the source and total observations
-source_info = f'Source: {file_name}\nTotal Observations: {total_observations}'
-plt.text(0.5, 0.1, source_info, transform=plt.gca().transAxes, fontsize=8, ha='left', va='bottom')
-
-# Save the figure
-plt.savefig('age_m_95ci.png')
-plt.show()
+# Display the tabulated frequencies
+print(df)
 
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[14], line 4[0m
-[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
-[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
-[0;32m----> 4[0m [38;5;28;01mimport[39;00m [38;5;21;01mseaborn[39;00m [38;5;28;01mas[39;00m [38;5;21;01msns[39;00m
-[1;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01mstatsmodels[39;00m[38;5;21;01m.[39;00m[38;5;21;01mapi[39;00m [38;5;28;01mas[39;00m [38;5;21;01msm[39;00m
-[1;32m      6[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+Cell [0;32mIn[38], line 2[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mrequests[39;00m
+[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mbs4[39;00m [38;5;28;01mimport[39;00m BeautifulSoup
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
+[1;32m      5[0m [38;5;66;03m# Fetch the HTML content of the book[39;00m
 
-[0;31mModuleNotFoundError[0m: No module named 'seaborn'
+[0;31mModuleNotFoundError[0m: No module named 'bs4'
 
