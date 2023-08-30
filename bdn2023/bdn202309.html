@@ -654,7 +654,7 @@ document.write(`
     rownames(df) &lt;- 1:nrow(df)
     df
 }
-&lt;bytecode: 0x7fcce04e9158&gt;
+&lt;bytecode: 0x7fb469ac0ba8&gt;
 &lt;environment: namespace:icdpicr&gt;
 </pre></div>
 </div>
@@ -806,20 +806,20 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ─────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.1
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2  </span> 3.4.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.0
 <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ───────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
 <span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
 <span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The downloaded binary packages are in
-	/var/folders/sx/fd6zgj191mx45hspzbgwzlnr0000gn/T//RtmpIU8zC5/downloaded_packages
+	/var/folders/sx/fd6zgj191mx45hspzbgwzlnr0000gn/T//RtmpssDj2v/downloaded_packages
 </pre></div>
 </div>
 </div>
@@ -831,6 +831,17 @@ document.write(`
 <span class="w">                  </span><span class="nf">nhanes</span><span class="p">(</span><span class="s">&quot;DEMO_B&quot;</span><span class="p">,</span><span class="s">&quot;DEMO_C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DEMO_D&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DEMO_E&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DEMO_F&quot;</span><span class="p">,</span><span class="w"> </span>
 <span class="w">                         </span><span class="s">&quot;DEMO_G&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DEMO_H&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DEMO_I&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DEMO_J&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DEMO_P&quot;</span><span class="p">)</span>
 <span class="w">                </span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="nn">Error</span> in <span class="ni">nhanes(&quot;DEMO_B&quot;, &quot;DEMO_C&quot;, &quot;DEMO_D&quot;, &quot;DEMO_E&quot;, &quot;DEMO_F&quot;, &quot;DEMO_G&quot;, : unused arguments </span><span class="nt">(&quot;DEMO_D&quot;, &quot;DEMO_E&quot;, &quot;DEMO_F&quot;, &quot;DEMO_G&quot;, &quot;DEMO_H&quot;, &quot;DEMO_I&quot;, &quot;DEMO_J&quot;, &quot;DEMO_P&quot;)</span>
+<span class="ne">Traceback</span>:
+
+<span class="mi">1</span><span class="o">.</span> <span class="n">bind_rows</span><span class="p">(</span><span class="n">nhanes</span><span class="p">(</span><span class="s2">&quot;DEMO&quot;</span><span class="p">),</span> <span class="n">nhanes</span><span class="p">(</span><span class="s2">&quot;DEMO_B&quot;</span><span class="p">,</span> <span class="s2">&quot;DEMO_C&quot;</span><span class="p">,</span> <span class="s2">&quot;DEMO_D&quot;</span><span class="p">,</span> 
+ <span class="o">.</span>     <span class="s2">&quot;DEMO_E&quot;</span><span class="p">,</span> <span class="s2">&quot;DEMO_F&quot;</span><span class="p">,</span> <span class="s2">&quot;DEMO_G&quot;</span><span class="p">,</span> <span class="s2">&quot;DEMO_H&quot;</span><span class="p">,</span> <span class="s2">&quot;DEMO_I&quot;</span><span class="p">,</span> <span class="s2">&quot;DEMO_J&quot;</span><span class="p">,</span> 
+ <span class="o">.</span>     <span class="s2">&quot;DEMO_P&quot;</span><span class="p">))</span>
+<span class="mi">2</span><span class="o">.</span> <span class="n">list2</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
