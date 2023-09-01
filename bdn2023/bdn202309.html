@@ -352,6 +352,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">08/18/2023</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matt-abi-cat-trauma-function">1. Matt/Abi &amp; ‘cat_trauma’ function</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-relevant-packages">1.1 Install the relevant packages</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-some-documentation">1.2 Get some documentation</a></li>
@@ -362,6 +363,14 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calvin-matthews-and-nhanes-table-1">2. Calvin Matthews and NHANES Table 1</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">09/01/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1101</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#worthyadversary">1102 worthyadversary</a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -414,21 +423,29 @@ document.write(`
 <h3>1.1 Install the relevant packages<a class="headerlink" href="#install-the-relevant-packages" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">suppressWarnings</span><span class="p">({</span>
-<span class="w">  </span><span class="nf">invisible</span><span class="p">({</span>
-<span class="w">    </span><span class="nf">rm</span><span class="p">(</span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ls</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">suppressWarnings</span><span class="p">({</span>
+  <span class="n">invisible</span><span class="p">({</span>
+    <span class="n">rm</span><span class="p">(</span><span class="nb">list</span> <span class="o">=</span> <span class="n">ls</span><span class="p">())</span>
 
-<span class="w">    </span><span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="n">icdpicr</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">))</span><span class="w"> </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;icdpicr&#39;</span><span class="p">)</span>
-<span class="w">    </span><span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="n">dplyr</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">))</span><span class="w"> </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;dplyr&#39;</span><span class="p">)</span>
-<span class="w">    </span><span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="n">readr</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">))</span><span class="w"> </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;readr&#39;</span><span class="p">)</span>
-<span class="w">    </span><span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="n">tidyr</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">))</span><span class="w"> </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&#39;tidyr&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span>require<span class="o">(</span>icdpicr,<span class="w"> </span><span class="nv">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TRUE,<span class="w"> </span>warn.conflicts<span class="w"> </span><span class="o">=</span><span class="w"> </span>FALSE<span class="o">))</span><span class="w"> </span>install.packages<span class="o">(</span><span class="s1">&#39;icdpicr&#39;</span><span class="o">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span>require<span class="o">(</span>dplyr,<span class="w"> </span><span class="nv">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TRUE,<span class="w"> </span>warn.conflicts<span class="w"> </span><span class="o">=</span><span class="w"> </span>FALSE<span class="o">))</span><span class="w"> </span>install.packages<span class="o">(</span><span class="s1">&#39;dplyr&#39;</span><span class="o">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span>require<span class="o">(</span>readr,<span class="w"> </span><span class="nv">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TRUE,<span class="w"> </span>warn.conflicts<span class="w"> </span><span class="o">=</span><span class="w"> </span>FALSE<span class="o">))</span><span class="w"> </span>install.packages<span class="o">(</span><span class="s1">&#39;readr&#39;</span><span class="o">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span>require<span class="o">(</span>tidyr,<span class="w"> </span><span class="nv">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TRUE,<span class="w"> </span>warn.conflicts<span class="w"> </span><span class="o">=</span><span class="w"> </span>FALSE<span class="o">))</span><span class="w"> </span>install.packages<span class="o">(</span><span class="s1">&#39;tidyr&#39;</span><span class="o">)</span>
 
-<span class="w">    </span><span class="nf">library</span><span class="p">(</span><span class="n">icdpicr</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
-<span class="w">    </span><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
-<span class="w">    </span><span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
-<span class="w">    </span><span class="nf">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
-<span class="w">  </span><span class="p">})</span>
+    <span class="n">library</span><span class="p">(</span><span class="n">icdpicr</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">warn</span><span class="o">.</span><span class="n">conflicts</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
+    <span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">warn</span><span class="o">.</span><span class="n">conflicts</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
+    <span class="n">library</span><span class="p">(</span><span class="n">readr</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">warn</span><span class="o">.</span><span class="n">conflicts</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
+    <span class="n">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">warn</span><span class="o">.</span><span class="n">conflicts</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
+  <span class="p">})</span>
 <span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span>require<span class="o">(</span>icdpicr,<span class="w"> </span><span class="nv">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TRUE,<span class="w"> </span>warn.conflicts<span class="w"> </span><span class="o">=</span><span class="w"> </span>FALSE<span class="o">))</span><span class="w"> </span>install.packages<span class="o">(</span><span class="s1">&#39;icdpicr&#39;</span><span class="o">)</span>
+        <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
 </div>
@@ -438,7 +455,7 @@ document.write(`
 <h3>1.2 Get some documentation<a class="headerlink" href="#get-some-documentation" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ls</span><span class="p">(</span><span class="s">&quot;package:icdpicr&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span><span class="p">(</span><span class="s2">&quot;package:icdpicr&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -456,7 +473,7 @@ document.write(`
 <h3>1.3 Study the syntax<a class="headerlink" href="#study-the-syntax" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">cat_trauma</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cat_trauma</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -654,7 +671,7 @@ document.write(`
     rownames(df) &lt;- 1:nrow(df)
     df
 }
-&lt;bytecode: 0x7fb469ac0ba8&gt;
+&lt;bytecode: 0x7fd970c13ac8&gt;
 &lt;environment: namespace:icdpicr&gt;
 </pre></div>
 </div>
@@ -665,25 +682,25 @@ document.write(`
 <h3>1.4 What is the value of dx_pre?<a class="headerlink" href="#what-is-the-value-of-dx-pre" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">injury</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">injury</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 100,477 × 11
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span># A tibble: 100,477 x 11
    dx1      dx2      dx3      dx4      dx5   dx6   dx7   dx8   dx9   dx10   died
    &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt;
  1 S72.342A <span class=" -Color -Color-Red">NA</span>       <span class=" -Color -Color-Red">NA</span>       <span class=" -Color -Color-Red">NA</span>       <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>        0
  2 S05.22XA <span class=" -Color -Color-Red">NA</span>       <span class=" -Color -Color-Red">NA</span>       <span class=" -Color -Color-Red">NA</span>       <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>        0
- 3 S00.01XA S00.03XA S00.11XA S00.12XA S00.… S00.… S00.… S01.… S02.… S80.…     0
+ 3 S00.01XA S00.03XA S00.11XA S00.12XA S00.~ S00.~ S00.~ S01.~ S02.~ S80.~     0
  4 S21.119A <span class=" -Color -Color-Red">NA</span>       <span class=" -Color -Color-Red">NA</span>       <span class=" -Color -Color-Red">NA</span>       <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>        0
  5 S82.191A <span class=" -Color -Color-Red">NA</span>       <span class=" -Color -Color-Red">NA</span>       <span class=" -Color -Color-Red">NA</span>       <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>        0
  6 S22.42XA <span class=" -Color -Color-Red">NA</span>       <span class=" -Color -Color-Red">NA</span>       <span class=" -Color -Color-Red">NA</span>       <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>        0
- 7 S92.052A S92.065A S92.325A S92.335A S92.… S93.… <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>        0
- 8 S02.112A S06.5X0A S12.090A S12.100A S12.… S20.… S20.… S22.… S22.… S22.…     0
- 9 S00.03XA S22.058A S22.068A S22.078A S22.… S30.… S42.… S62.… S81.… S82.…     0
-10 S61.411A S62.624B S62.626B S66.300A S66.… S66.… S66.… <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>        0
-# ℹ 100,467 more rows
+ 7 S92.052A S92.065A S92.325A S92.335A S92.~ S93.~ <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>        0
+ 8 S02.112A S06.5X0A S12.090A S12.100A S12.~ S20.~ S20.~ S22.~ S22.~ S22.~     0
+ 9 S00.03XA S22.058A S22.068A S22.078A S22.~ S30.~ S42.~ S62.~ S81.~ S82.~     0
+10 S61.411A S62.624B S62.626B S66.300A S66.~ S66.~ S66.~ <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>    <span class=" -Color -Color-Red">NA</span>        0
+# i 100,467 more rows
 </pre></div>
 </div>
 </div>
@@ -693,17 +710,17 @@ document.write(`
 <h3>1.5 As such, the syntax is:<a class="headerlink" href="#as-such-the-syntax-is" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># use subset of injury given its size</span>
-<span class="n">inj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">injury</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]</span>
-<span class="n">df_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">cat_trauma</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">inj</span><span class="p">,</span><span class="w"> </span><span class="n">dx_pre</span><span class="o">=</span><span class="s">&quot;dx&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">icd10</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">i10_iss_method</span><span class="o">=</span><span class="s">&quot;roc_max_NIS&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">calc_method</span><span class="o">=</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">verbose</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># use subset of injury given its size</span>
+<span class="n">inj</span> <span class="o">=</span> <span class="n">injury</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">df_score</span> <span class="o">=</span> <span class="n">cat_trauma</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">inj</span><span class="p">,</span> <span class="n">dx_pre</span><span class="o">=</span><span class="s2">&quot;dx&quot;</span><span class="p">,</span> <span class="n">icd10</span><span class="o">=</span><span class="n">TRUE</span><span class="p">,</span> <span class="n">i10_iss_method</span><span class="o">=</span><span class="s2">&quot;roc_max_NIS&quot;</span><span class="p">,</span> <span class="n">calc_method</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="n">FALSE</span><span class="p">)</span>
 <span class="c1"># visualize the output</span>
-<span class="n">df_score</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">];</span><span class="w"> </span><span class="n">df_score</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">,</span><span class="m">10</span><span class="o">:</span><span class="m">14</span><span class="p">];</span><span class="w"> </span><span class="n">df_score</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">,</span><span class="m">15</span><span class="o">:</span><span class="m">18</span><span class="p">];</span><span class="w"> </span><span class="n">df_score</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">,</span><span class="m">34</span><span class="o">:</span><span class="m">35</span><span class="p">]</span>
+<span class="n">df_score</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">9</span><span class="p">];</span> <span class="n">df_score</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">:</span><span class="mi">14</span><span class="p">];</span> <span class="n">df_score</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span><span class="mi">15</span><span class="p">:</span><span class="mi">18</span><span class="p">];</span> <span class="n">df_score</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span><span class="mi">34</span><span class="p">:</span><span class="mi">35</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><table class="dataframe">
-<caption>A data.frame: 9 × 9</caption>
+<caption>A data.frame: 9 x 9</caption>
 <thead>
 	<tr><th></th><th scope=col>dx1</th><th scope=col>sev_1</th><th scope=col>issbr_1</th><th scope=col>dx2</th><th scope=col>sev_2</th><th scope=col>issbr_2</th><th scope=col>dx3</th><th scope=col>sev_3</th><th scope=col>issbr_3</th></tr>
 	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
@@ -721,7 +738,7 @@ document.write(`
 </tbody>
 </table>
 </div><div class="output text_html"><table class="dataframe">
-<caption>A data.frame: 9 × 5</caption>
+<caption>A data.frame: 9 x 5</caption>
 <thead>
 	<tr><th></th><th scope=col>mxaisbr_General</th><th scope=col>mxaisbr_HeadNeck</th><th scope=col>mxaisbr_Face</th><th scope=col>mxaisbr_Extremities</th><th scope=col>mxaisbr_Chest</th></tr>
 	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
@@ -739,7 +756,7 @@ document.write(`
 </tbody>
 </table>
 </div><div class="output text_html"><table class="dataframe">
-<caption>A data.frame: 9 × 4</caption>
+<caption>A data.frame: 9 x 4</caption>
 <thead>
 	<tr><th></th><th scope=col>mxaisbr_Abdomen</th><th scope=col>maxais</th><th scope=col>riss</th><th scope=col>niss</th></tr>
 	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
@@ -757,7 +774,7 @@ document.write(`
 </tbody>
 </table>
 </div><div class="output text_html"><table class="dataframe">
-<caption>A data.frame: 9 × 2</caption>
+<caption>A data.frame: 9 x 2</caption>
 <thead>
 	<tr><th></th><th scope=col>intent4</th><th scope=col>Pmort</th></tr>
 	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
@@ -782,55 +799,43 @@ document.write(`
 <h2>2. Calvin Matthews and NHANES Table 1<a class="headerlink" href="#calvin-matthews-and-nhanes-table-1" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># This code will be used only if needed to install packages</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This code will be used only if needed to install packages</span>
 
-<span class="nf">suppressWarnings</span><span class="p">({</span>
-<span class="w">  </span><span class="nf">invisible</span><span class="p">({</span>
-<span class="w">    </span><span class="nf">rm</span><span class="p">(</span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ls</span><span class="p">())</span>
+<span class="n">suppressWarnings</span><span class="p">({</span>
+  <span class="n">invisible</span><span class="p">({</span>
+    <span class="n">rm</span><span class="p">(</span><span class="nb">list</span> <span class="o">=</span> <span class="n">ls</span><span class="p">())</span>
 
-<span class="w">    </span><span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="n">tableone</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">))</span><span class="w"> </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;tableone&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">))</span><span class="w"> </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;tidyverse&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="n">NHANES</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">))</span><span class="w"> </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;NHANES&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="n">dplyr</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">))</span><span class="w"> </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;dplyr&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="n">tinhanesAdyr</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">))</span><span class="w"> </span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;nhanesA&quot;</span><span class="p">)</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
-<span class="w">    </span><span class="nf">library</span><span class="p">(</span><span class="n">NHANES</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
-<span class="w">    </span><span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
-<span class="w">    </span><span class="nf">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
-<span class="w">    </span><span class="nf">library</span><span class="p">(</span><span class="n">nhanesA</span><span class="p">,</span><span class="w"> </span><span class="n">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">warn.conflicts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span>require<span class="o">(</span>tableone,<span class="w"> </span><span class="nv">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TRUE,<span class="w"> </span>warn.conflicts<span class="w"> </span><span class="o">=</span><span class="w"> </span>FALSE<span class="o">))</span><span class="w"> </span>install.packages<span class="o">(</span><span class="s2">&quot;tableone&quot;</span><span class="o">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span>require<span class="o">(</span>tidyverse,<span class="w"> </span><span class="nv">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TRUE,<span class="w"> </span>warn.conflicts<span class="w"> </span><span class="o">=</span><span class="w"> </span>FALSE<span class="o">))</span><span class="w"> </span>install.packages<span class="o">(</span><span class="s2">&quot;tidyverse&quot;</span><span class="o">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span>require<span class="o">(</span>NHANES,<span class="w"> </span><span class="nv">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TRUE,<span class="w"> </span>warn.conflicts<span class="w"> </span><span class="o">=</span><span class="w"> </span>FALSE<span class="o">))</span><span class="w"> </span>install.packages<span class="o">(</span><span class="s2">&quot;NHANES&quot;</span><span class="o">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span>require<span class="o">(</span>dplyr,<span class="w"> </span><span class="nv">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TRUE,<span class="w"> </span>warn.conflicts<span class="w"> </span><span class="o">=</span><span class="w"> </span>FALSE<span class="o">))</span><span class="w"> </span>install.packages<span class="o">(</span><span class="s2">&quot;dplyr&quot;</span><span class="o">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span>require<span class="o">(</span>tinhanesAdyr,<span class="w"> </span><span class="nv">quietly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>TRUE,<span class="w"> </span>warn.conflicts<span class="w"> </span><span class="o">=</span><span class="w"> </span>FALSE<span class="o">))</span><span class="w"> </span>install.packages<span class="o">(</span><span class="s2">&quot;nhanesA&quot;</span><span class="o">)</span>
+    
+    <span class="n">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">warn</span><span class="o">.</span><span class="n">conflicts</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
+    <span class="n">library</span><span class="p">(</span><span class="n">NHANES</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">warn</span><span class="o">.</span><span class="n">conflicts</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
+    <span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">warn</span><span class="o">.</span><span class="n">conflicts</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
+    <span class="n">library</span><span class="p">(</span><span class="n">tidyr</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">warn</span><span class="o">.</span><span class="n">conflicts</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
+    <span class="n">library</span><span class="p">(</span><span class="n">nhanesA</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">warn</span><span class="o">.</span><span class="n">conflicts</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">)</span>
 
-<span class="w">  </span><span class="p">})</span>
+  <span class="p">})</span>
 <span class="p">})</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Attaching core tidyverse packages</span> ─────────────────────────────────────────────────────────────── tidyverse 2.0.0 ──
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">forcats  </span> 1.0.0     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">purrr    </span> 1.0.1
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">ggplot2  </span> 3.4.3     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">stringr  </span> 1.5.0
-<span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">lubridate</span> 1.9.2     <span class=" -Color -Color-Green">✔</span> <span class=" -Color -Color-Blue">tibble   </span> 3.2.1
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>── <span class=" -Color -Color-Bold">Conflicts</span> ───────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">filter()</span> masks <span class=" -Color -Color-Blue">stats</span>::filter()
-<span class=" -Color -Color-Red">✖</span> <span class=" -Color -Color-Blue">dplyr</span>::<span class=" -Color -Color-Green">lag()</span>    masks <span class=" -Color -Color-Blue">stats</span>::lag()
-<span class=" -Color -Color-Cyan">ℹ</span> Use the conflicted package (<span class=" -Color -Color-Blue">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The downloaded binary packages are in
-	/var/folders/sx/fd6zgj191mx45hspzbgwzlnr0000gn/T//RtmpssDj2v/downloaded_packages
+	/var/folders/sx/fd6zgj191mx45hspzbgwzlnr0000gn/T//RtmpPWV6JU/downloaded_packages
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating Dataset With All Years</span>
-<span class="n">demo</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">bind_rows</span><span class="p">(</span><span class="nf">nhanes</span><span class="p">(</span><span class="s">&quot;DEMO&quot;</span><span class="p">),</span>
-<span class="w">                  </span><span class="nf">nhanes</span><span class="p">(</span><span class="s">&quot;DEMO_B&quot;</span><span class="p">,</span><span class="s">&quot;DEMO_C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DEMO_D&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DEMO_E&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DEMO_F&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">                         </span><span class="s">&quot;DEMO_G&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DEMO_H&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DEMO_I&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DEMO_J&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;DEMO_P&quot;</span><span class="p">)</span>
-<span class="w">                </span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating Dataset With All Years</span>
+<span class="n">demo</span> <span class="o">&lt;-</span> <span class="n">bind_rows</span><span class="p">(</span><span class="n">nhanes</span><span class="p">(</span><span class="s2">&quot;DEMO&quot;</span><span class="p">),</span>
+                  <span class="n">nhanes</span><span class="p">(</span><span class="s2">&quot;DEMO_B&quot;</span><span class="p">,</span><span class="s2">&quot;DEMO_C&quot;</span><span class="p">,</span> <span class="s2">&quot;DEMO_D&quot;</span><span class="p">,</span> <span class="s2">&quot;DEMO_E&quot;</span><span class="p">,</span> <span class="s2">&quot;DEMO_F&quot;</span><span class="p">,</span> 
+                         <span class="s2">&quot;DEMO_G&quot;</span><span class="p">,</span> <span class="s2">&quot;DEMO_H&quot;</span><span class="p">,</span> <span class="s2">&quot;DEMO_I&quot;</span><span class="p">,</span> <span class="s2">&quot;DEMO_J&quot;</span><span class="p">,</span> <span class="s2">&quot;DEMO_P&quot;</span><span class="p">)</span>
+                <span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -848,35 +853,37 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Categorical Data</span>
-<span class="n">demo</span><span class="p">[</span><span class="s">&quot;RIAGENDR&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">count</span><span class="p">(</span><span class="n">RIAGENDR</span><span class="p">)</span>
-<span class="n">catVars</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;DMDEDUC2&quot;</span><span class="p">,</span><span class="s">&quot;RIAGENDR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;RIDRETH1&quot;</span><span class="p">)</span>
-<span class="n">demo</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">subset</span><span class="p">(</span><span class="n">demo</span><span class="p">,</span><span class="w"> </span><span class="n">RIDAGEYR</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">17</span><span class="p">)</span>
-<span class="n">tab</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">CreateTableOne</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">demo</span><span class="p">,</span><span class="w"> </span><span class="n">factorVars</span><span class="o">=</span><span class="n">catVars</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
 
-<span class="c1"># Sorted Categorical and Continuous Outputs</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">tab</span><span class="o">$</span><span class="n">CatTable</span><span class="p">,</span><span class="w"> </span><span class="n">showAllLevels</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">tab</span><span class="o">$</span><span class="n">ContTable</span><span class="p">,</span><span class="w"> </span><span class="n">nonnormal</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
-<span class="n">summary_table</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">all_years_data</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">summarize</span><span class="p">(</span>
-<span class="n">MedianAge</span><span class="o">=</span><span class="nf">median</span><span class="p">(</span><span class="n">Age</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
-<span class="n">MedianSBP</span><span class="o">=</span><span class="nf">median</span><span class="p">(</span><span class="n">BPSysAve</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
-<span class="n">MedianDBP</span><span class="o">=</span><span class="nf">median</span><span class="p">(</span><span class="n">BPDiaAve</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
-<span class="n">MedianCreatinine</span><span class="o">=</span><span class="nf">median</span><span class="p">(</span><span class="n">LBDSCRSI</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
-<span class="n">MedianBMI</span><span class="o">=</span><span class="nf">median</span><span class="p">(</span><span class="n">BMI</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
-<span class="n">MedianHbA1c</span><span class="o">=</span><span class="nf">median</span><span class="p">(</span><span class="n">HbA1c</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
-<span class="n">MedianuACR</span><span class="o">=</span><span class="nf">median</span><span class="p">(</span><span class="n">uACR</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
-<span class="n">MedianGlucose</span><span class="o">=</span><span class="nf">median</span><span class="p">(</span><span class="n">Pulse</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
-<span class="n">FemalePercentage</span><span class="o">=</span><span class="nf">mean</span><span class="p">(</span><span class="n">Sex</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Female&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
-<span class="n">HypertensionPercentage</span><span class="o">=</span><span class="nf">mean</span><span class="p">(</span><span class="n">Hypertension</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Yes&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
-<span class="n">SmokePercentage</span><span class="o">=</span><span class="nf">mean</span><span class="p">(</span><span class="n">SmokingStatus</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Current&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">na.rm</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">),</span>
-<span class="n">RaceEthnicityPercentage</span><span class="o">=</span><span class="nf">table</span><span class="p">(</span><span class="n">RaceEthnicity</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nf">length</span><span class="p">(</span><span class="n">RaceEthnicity</span><span class="p">),</span>
-<span class="n">EducationPercentage</span><span class="o">=</span><span class="nf">table</span><span class="p">(</span><span class="n">Education</span><span class="p">)</span>
-<span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">summary_table</span><span class="p">)</span>
+# Categorical Data
+demo[&quot;RIAGENDR&quot;] %&gt;% count(RIAGENDR)
+catVars &lt;- c(&quot;DMDEDUC2&quot;,&quot;RIAGENDR&quot;, &quot;RIDRETH1&quot;)
+demo &lt;- subset(demo, RIDAGEYR &gt; 17)
+tab &lt;- CreateTableOne(data=demo, factorVars=catVars)
 
-<span class="c1"># Cohort Percentage One-by-One</span>
-<span class="n">nhanes</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">subset</span><span class="p">(</span><span class="nf">nhanes</span><span class="p">(</span><span class="s">&quot;DEMO_P&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">RIDAGEYR</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">17</span><span class="p">)</span>
-<span class="n">divisor</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">count</span><span class="p">(</span><span class="n">nhanes</span><span class="p">)</span>
+# Sorted Categorical and Continuous Outputs
+print(tab$CatTable, showAllLevels=TRUE)
+print(tab$ContTable, nonnormal=TRUE)
+summary_table &lt;- all_years_data %&gt;% summarize(
+MedianAge=median(Age, na.rm=TRUE),
+MedianSBP=median(BPSysAve, na.rm=TRUE),
+MedianDBP=median(BPDiaAve, na.rm=TRUE),
+MedianCreatinine=median(LBDSCRSI, na.rm=TRUE),
+MedianBMI=median(BMI, na.rm=TRUE),
+MedianHbA1c=median(HbA1c, na.rm=TRUE),
+MedianuACR=median(uACR, na.rm=TRUE),
+MedianGlucose=median(Pulse, na.rm=TRUE),
+FemalePercentage=mean(Sex == &quot;Female&quot;, na.rm=TRUE),
+HypertensionPercentage=mean(Hypertension == &quot;Yes&quot;, na.rm=TRUE),
+SmokePercentage=mean(SmokingStatus == &quot;Current&quot;, na.rm=TRUE),
+RaceEthnicityPercentage=table(RaceEthnicity) / length(RaceEthnicity),
+EducationPercentage=table(Education)
+)
+print(summary_table)
+
+# Cohort Percentage One-by-One
+nhanes &lt;- subset(nhanes(&quot;DEMO_P&quot;), RIDAGEYR &gt; 17)
+divisor &lt;- count(nhanes)
 </pre></div>
 </div>
 </div>
@@ -932,6 +939,115 @@ The downloaded binary packages are in
 </div>
 </section>
 </section>
+<section id="id2">
+<h1>09/01/2023<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h1>
+<section id="id3">
+<h2>1101<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<p>Einstein is more Parminedes, Niels Bohr more Heraclitus – as is Nietzsche. From an empirical perspective, who seems to be on the winning side a century later?</p>
+<hr class="docutils" />
+<p>The comparison between Einstein and Parmenides, and between Niels Bohr and Heraclitus, is an interesting philosophical analogy. Parmenides argued for the fundamental unity and unchanging nature of existence, while Heraclitus is famous for saying that everything is in a state of flux (“You cannot step into the same river twice”). Similarly, Einstein’s theories of Special and General Relativity provide a deterministic framework for understanding the universe, whereas Bohr was one of the pioneers of quantum mechanics, which incorporates fundamental probabilities and uncertainties.</p>
+<p><strong>Empirical Developments</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Quantum Mechanics</strong>: A century later, the quantum mechanical view—often interpreted to align more with Heraclitean flux than Parmenidean unity—seems to have a stronger empirical basis in terms of experimental confirmations. Quantum theory has been confirmed to extraordinary degrees of accuracy and forms the basis for many technologies, including transistors, lasers, and other devices. Quantum mechanics also allows for phenomena like superposition and entanglement, which seem to defy classical intuitions about reality.</p></li>
+<li><p><strong>Relativity</strong>: However, it should be noted that Einstein’s theories of relativity are also extraordinarily well-confirmed and crucial for GPS technology, understanding cosmological phenomena, and much else. General relativity has passed every test thrown at it so far, including the detection of gravitational waves.</p></li>
+<li><p><strong>Unification</strong>: One of the grand challenges of contemporary physics is to reconcile general relativity with quantum mechanics in a theory of quantum gravity. So far, this has not been successfully achieved, though efforts like string theory and loop quantum gravity are active areas of research. Therefore, it’s difficult to say that one of the two approaches—relativity or quantum mechanics—is empirically superior to the other; each is extraordinarily successful in its domain.</p></li>
+</ol>
+<p><strong>Philosophical Interpretations</strong></p>
+<p>Philosophically, the debate about determinism and indeterminism, unity and flux, continues. Bohr’s complementarity principle, the Copenhagen interpretation of quantum mechanics, and various other interpretations (Many-Worlds, de Broglie-Bohm, etc.) grapple with these deep questions.</p>
+<p><strong>Conclusion</strong></p>
+<p>In summary, both “sides”—that of deterministic, continuous theories exemplified by Einstein and the probabilistic, “quantized” theories exemplified by Bohr—have had enormous empirical success, but neither has been able to fully subsume the other. As of now, physics retains both perspectives, using each where it is most successful, while searching for a deeper theory that can unify them.</p>
+</section>
+<hr class="docutils" />
+<section id="worthyadversary">
+<h2>1102 worthyadversary<a class="headerlink" href="#worthyadversary" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Set seed for layout</span>
+<span class="n">seed</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c1"># Directory structure</span>
+<span class="n">structure</span> <span class="o">=</span> <span class="p">{</span>
+
+
+    <span class="s2">&quot;Challenges&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Rigor&quot;</span><span class="p">,</span> <span class="s2">&quot;Sloppiness&quot;</span><span class="p">,</span> <span class="s2">&quot;Error&quot;</span><span class="p">,],</span>
+    <span class="s2">&quot;Fena&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Skills&quot;</span><span class="p">,</span> <span class="s2">&quot;Challenges&quot;</span><span class="p">,</span> <span class="s2">&quot;Morality&quot;</span><span class="p">,</span> <span class="s2">&quot;Truth&quot;</span><span class="p">,],</span>
+    <span class="s2">&quot;Skills&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Literacy&quot;</span><span class="p">,</span> <span class="s2">&quot;Numeracy&quot;</span><span class="p">,</span><span class="s2">&quot;Workflow&quot;</span><span class="p">,],</span>
+<span class="p">}</span>
+
+<span class="c1"># Gentle colors for children</span>
+<span class="n">child_colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;lightgreen&quot;</span><span class="p">,</span> <span class="s2">&quot;lightpink&quot;</span><span class="p">,</span> <span class="s2">&quot;lightyellow&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;lavender&#39;</span><span class="p">,</span> <span class="s1">&#39;lightcoral&#39;</span><span class="p">,</span> <span class="s1">&#39;honeydew&#39;</span><span class="p">,</span> <span class="s1">&#39;azure&#39;</span><span class="p">,</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> 
+<span class="p">]</span>
+
+<span class="n">child_colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;lightgreen&quot;</span><span class="p">,</span> <span class="s2">&quot;lightpink&quot;</span><span class="p">,</span> <span class="s2">&quot;lightyellow&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;lavender&#39;</span><span class="p">,</span> <span class="s1">&#39;lightcoral&#39;</span><span class="p">,</span> <span class="s1">&#39;honeydew&#39;</span><span class="p">,</span> <span class="s1">&#39;azure&#39;</span><span class="p">,</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> 
+<span class="p">]</span>
+
+<span class="c1"># &#39;lightsteelblue&#39;, &#39;lightgray&#39;, &#39;mintcream&#39;,&#39;mintcream&#39;, &#39;azure&#39;, &#39;linen&#39;, &#39;aliceblue&#39;, &#39;lemonchiffon&#39;, &#39;mistyrose&#39;</span>
+
+<span class="c1"># List of nodes to color light blue</span>
+<span class="n">light_blue_nodes</span> <span class="o">=</span> <span class="p">[</span> <span class="s2">&quot;Numeracy&quot;</span><span class="p">,</span> <span class="s2">&quot;Challenges&quot;</span><span class="p">]</span>
+
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+<span class="n">node_colors</span> <span class="o">=</span> <span class="p">{}</span>
+
+
+<span class="c1"># Function to capitalize the first letter of each word</span>
+<span class="k">def</span> <span class="nf">capitalize_name</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">))</span>
+
+<span class="c1"># Assign colors to nodes</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">children</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">structure</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+    <span class="n">parent_name</span> <span class="o">=</span> <span class="n">capitalize_name</span><span class="p">(</span><span class="n">parent</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">))</span>
+    <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">parent_name</span><span class="p">)</span>
+    
+    <span class="c1"># Set the color for Skills</span>
+    <span class="k">if</span> <span class="n">parent_name</span> <span class="o">==</span> <span class="s2">&quot;Fena&quot;</span><span class="p">:</span>
+        <span class="n">node_colors</span><span class="p">[</span><span class="n">parent_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lightgray&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">node_colors</span><span class="p">[</span><span class="n">parent_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">child_colors</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">child_colors</span><span class="p">)]</span>
+        
+    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">children</span><span class="p">:</span>
+        <span class="n">child_name</span> <span class="o">=</span> <span class="n">capitalize_name</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">))</span>
+        <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">parent_name</span><span class="p">,</span> <span class="n">child_name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">child_name</span> <span class="ow">in</span> <span class="n">light_blue_nodes</span><span class="p">:</span>
+            <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lightblue&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">child_colors</span><span class="p">[(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">child_colors</span><span class="p">)]</span>  <span class="c1"># You can customize the logic here to assign colors</span>
+
+
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">node_colors</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">()]</span>
+
+<span class="c1"># Set figure size</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+
+<span class="c1"># Draw the graph</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">70000</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>  <span class="c1"># Boundary color set here</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/baa6f87c1c64cb040e92ef7da98c55cdb5185085e839e6eae52837a66aa1f577.png" src="../_images/baa6f87c1c64cb040e92ef7da98c55cdb5185085e839e6eae52837a66aa1f577.png" />
+</div>
+</div>
+<ul class="simple">
+<li><p>you are always on team “skills”</p></li>
+<li><p>look for or imagine your adversary “challenges”</p></li>
+<li><p>best them in rigor, exploit their sloppiness, and force them to err</p></li>
+<li><p>the face of <code class="docutils literal notranslate"><span class="pre">knowledge</span></code> is a worthy adversary, eternally recurrently challenging you</p></li>
+<li><p>our proof of concept is in a lifetime of learning, growing, becoming, innovating, and creating</p></li>
+<li><p>generative adversarial networks are the very best example of this</p></li>
+<li><p>apps in chord progression, sports dummying, chess, and go</p></li>
+</ul>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -942,16 +1058,16 @@ The downloaded binary packages are in
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "r"
+            mode: "python"
         },
         kernelOptions: {
-            name: "ir",
+            name: "python3",
             path: "./bdn2023"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'ir'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -982,6 +1098,7 @@ The downloaded binary packages are in
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">08/18/2023</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matt-abi-cat-trauma-function">1. Matt/Abi &amp; ‘cat_trauma’ function</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-relevant-packages">1.1 Install the relevant packages</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-some-documentation">1.2 Get some documentation</a></li>
@@ -992,6 +1109,14 @@ The downloaded binary packages are in
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calvin-matthews-and-nhanes-table-1">2. Calvin Matthews and NHANES Table 1</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">09/01/2023</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1101</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#worthyadversary">1102 worthyadversary</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>

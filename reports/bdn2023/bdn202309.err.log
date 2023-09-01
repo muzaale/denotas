@@ -18,19 +18,27 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# Creating Dataset With All Years
-demo <- bind_rows(nhanes("DEMO"),
-                  nhanes("DEMO_B","DEMO_C", "DEMO_D", "DEMO_E", "DEMO_F", 
-                         "DEMO_G", "DEMO_H", "DEMO_I", "DEMO_J", "DEMO_P")
-                )
+suppressWarnings({
+  invisible({
+    rm(list = ls())
+
+    if (!require(icdpicr, quietly = TRUE, warn.conflicts = FALSE)) install.packages('icdpicr')
+    if (!require(dplyr, quietly = TRUE, warn.conflicts = FALSE)) install.packages('dplyr')
+    if (!require(readr, quietly = TRUE, warn.conflicts = FALSE)) install.packages('readr')
+    if (!require(tidyr, quietly = TRUE, warn.conflicts = FALSE)) install.packages('tidyr')
+
+    library(icdpicr, quietly = TRUE, warn.conflicts = FALSE)
+    library(dplyr, quietly = TRUE, warn.conflicts = FALSE)
+    library(readr, quietly = TRUE, warn.conflicts = FALSE)
+    library(tidyr, quietly = TRUE, warn.conflicts = FALSE)
+  })
+})
 ------------------
 
 
-Error in nhanes("DEMO_B", "DEMO_C", "DEMO_D", "DEMO_E", "DEMO_F", "DEMO_G", : unused arguments ("DEMO_D", "DEMO_E", "DEMO_F", "DEMO_G", "DEMO_H", "DEMO_I", "DEMO_J", "DEMO_P")
-Traceback:
+[0;36m  Cell [0;32mIn[1], line 5[0;36m[0m
+[0;31m    if (!require(icdpicr, quietly = TRUE, warn.conflicts = FALSE)) install.packages('icdpicr')[0m
+[0m        ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
 
-1. bind_rows(nhanes("DEMO"), nhanes("DEMO_B", "DEMO_C", "DEMO_D", 
- .     "DEMO_E", "DEMO_F", "DEMO_G", "DEMO_H", "DEMO_I", "DEMO_J", 
- .     "DEMO_P"))
-2. list2(...)
 
