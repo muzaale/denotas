@@ -350,7 +350,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1101</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ontology">1101. ontology</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#worthyadversary">1102 worthyadversary</a></li>
 </ul>
             </nav>
@@ -365,8 +365,8 @@ document.write(`
                   
   <section id="id1">
 <h1>09/01/2023<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
-<section id="id2">
-<h2>1101<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<section id="ontology">
+<h2>1101. ontology<a class="headerlink" href="#ontology" title="Permalink to this heading">#</a></h2>
 <p>Einstein is more Parminedes, Niels Bohr more Heraclitus – as is Nietzsche. From an empirical perspective, who seems to be on the winning side a century later?</p>
 <hr class="docutils" />
 <p>The comparison between Einstein and Parmenides, and between Niels Bohr and Heraclitus, is an interesting philosophical analogy. Parmenides argued for the fundamental unity and unchanging nature of existence, while Heraclitus is famous for saying that everything is in a state of flux (“You cannot step into the same river twice”). Similarly, Einstein’s theories of Special and General Relativity provide a deterministic framework for understanding the universe, whereas Bohr was one of the pioneers of quantum mechanics, which incorporates fundamental probabilities and uncertainties.</p>
@@ -402,7 +402,7 @@ document.write(`
 
 
     <span class="s2">&quot;Challenges&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Rigor&quot;</span><span class="p">,</span> <span class="s2">&quot;Sloppiness&quot;</span><span class="p">,</span> <span class="s2">&quot;Error&quot;</span><span class="p">,],</span>
-    <span class="s2">&quot;Fena&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Skills&quot;</span><span class="p">,</span> <span class="s2">&quot;Challenges&quot;</span><span class="p">,</span> <span class="s2">&quot;Morality&quot;</span><span class="p">,</span> <span class="s2">&quot;Truth&quot;</span><span class="p">,],</span>
+    <span class="s2">&quot;Knowledge&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Skills&quot;</span><span class="p">,</span> <span class="s2">&quot;Challenges&quot;</span><span class="p">,</span> <span class="s2">&quot;Morality&quot;</span><span class="p">,</span> <span class="s2">&quot;Truth&quot;</span><span class="p">,],</span>
     <span class="s2">&quot;Skills&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Literacy&quot;</span><span class="p">,</span> <span class="s2">&quot;Numeracy&quot;</span><span class="p">,</span><span class="s2">&quot;Workflow&quot;</span><span class="p">,],</span>
 <span class="p">}</span>
 
@@ -434,7 +434,7 @@ document.write(`
     <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">parent_name</span><span class="p">)</span>
     
     <span class="c1"># Set the color for Skills</span>
-    <span class="k">if</span> <span class="n">parent_name</span> <span class="o">==</span> <span class="s2">&quot;Fena&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">parent_name</span> <span class="o">==</span> <span class="s2">&quot;Knowledge&quot;</span><span class="p">:</span>
         <span class="n">node_colors</span><span class="p">[</span><span class="n">parent_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lightgray&#39;</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">node_colors</span><span class="p">[</span><span class="n">parent_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">child_colors</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">child_colors</span><span class="p">)]</span>
@@ -445,7 +445,7 @@ document.write(`
         <span class="k">if</span> <span class="n">child_name</span> <span class="ow">in</span> <span class="n">light_blue_nodes</span><span class="p">:</span>
             <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;lightblue&#39;</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">child_colors</span><span class="p">[(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">child_colors</span><span class="p">)]</span>  <span class="c1"># You can customize the logic here to assign colors</span>
+            <span class="n">node_colors</span><span class="p">[</span><span class="n">child_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">child_colors</span><span class="p">[(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">child_colors</span><span class="p">)]</span>  <span class="c1"># You can customize the logic here to assign colors</span>
 
 
 <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">node_colors</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">()]</span>
@@ -464,7 +464,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/baa6f87c1c64cb040e92ef7da98c55cdb5185085e839e6eae52837a66aa1f577.png" src="../_images/baa6f87c1c64cb040e92ef7da98c55cdb5185085e839e6eae52837a66aa1f577.png" />
+<img alt="../_images/256009d5294f8e557ff1f1fe98f61f08544d3705ecdd0a20dabc413aa871638c.png" src="../_images/256009d5294f8e557ff1f1fe98f61f08544d3705ecdd0a20dabc413aa871638c.png" />
 </div>
 </div>
 <ul class="simple">
@@ -528,7 +528,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1101</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ontology">1101. ontology</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#worthyadversary">1102 worthyadversary</a></li>
 </ul>
   </nav></div>
