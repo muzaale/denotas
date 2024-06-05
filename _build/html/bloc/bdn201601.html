@@ -1,0 +1,549 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>01/2016 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bloc/bdn201601';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/practicing.png" class="logo__image only-light" alt="Nothin' - Home"/>
+    <script>document.write(`<img src="../_static/practicing.png" class="logo__image only-dark" alt="Nothin' - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbloc/bdn201601.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bloc/bdn201601.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>01/2016</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>01/2016<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Confession and absolution (Kyrie)<br />
+Praise and worship (Gloria)<br />
+Creed and intercession (Credo)<br />
+Benediction (Sanctus)<br />
+(Agnus Dei)</p>
+<p>.</p>
+<p>An excellent piece on Britishness:</p>
+<ol class="arabic simple">
+<li><p>A polity of muddling through;</p></li>
+<li><p>Opposition to wide-eyed ideas; and,</p></li>
+<li><p>Long history of slow &amp; patchy changes to society</p></li>
+</ol>
+<p>Evidenced by:</p>
+<p>Incrementalism (EU, Euro, Schengen, etc);<br />
+Lack of a written constitution; and,<br />
+Creation and devolution of the Union</p>
+<p>Britain | Bagehot<br />
+Bring on the tempest<br />
+Britain’s interlocking political dramas may be just what the country needs</p>
+<p>BRITONS have much to look forward to in 2016. Street parties will take place on the queen’s 90th birthday. The English, Welsh and Northern Irish football teams will all contest the European Championship. The Royal Shakespeare Company is promising the biggest-ever celebration of the Bard’s work to mark the 400th anniversary of his death, and the Globe theatre will stage a new production of “The Tempest”.</p>
+<p>Yet in politics, as in the skies, storms loom. Jeremy Corbyn, the far-left leader of the Labour Party, is consolidating his grip on the opposition. In an imminent shadow-cabinet reshuffle he will show moderates the business end of his proverbial ice-axe. North of the border, the pro-independence Scottish National Party will consolidate its political hegemony at elections in May. Another vote on separation is now only a matter of time. London’s mayoral election, also in May, will accentuate the growing divide between the rich, worldly capital and the rest of Britain. And with its EU referendum expected to take place as early as June, the country’s status as a leading European power hangs by a thread.</p>
+<p>Small wonder, then, that its allies are perturbed. Barack Obama privately talks of Britain’s “mid-life crisis”. As a commentary in the New York Times in 2014 put it: “Britain is having a kind of nervous breakdown, and its friends aren’t sure whether to say something or just look away.” Such observers are right to imply that the traumas were long in the making; more than freak intrusions on a country that has been calm and stable for decades.</p>
+<p>Why? Each polity has its pathology and Britain’s, as Walter Bagehot noted, is muddling through. Just as its people pride themselves on their—only partly imagined—“mustn’t grumble” stoicism, its leaders possess the institutional equivalent of the stiff upper lip: a preference for patching and fudging over abolishing and remaking. It has no written constitution; its union is the messy product of years of tweaks; its political bodies, from local councils to the Lords, are great mounds of sticking plasters.</p>
+<p>This predilection has its pros and cons. On the one hand, Britons’ mistrust of wide-eyed ideas (“Don’t you know it’s gonna be all right”, the Beatles sang in their sceptical hit, “Revolution”) explains their historical aversion to political extremism. It steers the country away from risky ventures like, some would argue, the euro. Thomas Kielinger, a veteran German correspondent in London, claims Britain’s seafaring history has made it flexible but cautious; more comfortable tacking with the winds than its uncompromising continental neighbours.</p>
+<p>On the other hand, a penchant for the zigzag and the gentle curve over the straight line comes at a cost. Consider the Palace of Westminster. Bombed during the war, it was quickly repaired and is now crumbling. A rolling programme of restoration struggles to keep up with its decay. Muddling through, in other words, can leave big problems unresolved. It stores up contradictions that occasionally unleash thoroughly un-British political earthquakes: the Labour landslide of 1945 would have been unthinkable without the hemming and hawing of pre-war governments, just as Margaret Thatcher’s economic revolution would have been without her predecessors’ procrastinations.</p>
+<p>The same pattern is in evidence now. Thatcherism created doubts about Britain’s place in Europe, divided England from other parts of the union, propelled London towards vast wealth and presented socialists with an existential challenge. Labour inherited these tensions when it came to power in 1997, but a combination of political skill and benign economic circumstances allowed it to fudge them. It sought European integration without convincing voters of the need for it; devolved powers to Edinburgh, Cardiff and Belfast without reforming the architecture of the union; encouraged the capital to boom without building up a counterweight and made its peace with markets without finally defeating anti-capitalists on the left. Today’s crises are, in other words, Tony Blair’s unfinished business.</p>
+<p>O brave new world<br />
+Thus Britain’s current period of upheaval is not just overdue. It is necessary. The EU referendum forces pro-Europeans to make the gutsy case for continental co-operation. If they succeed, the vote should give British leaders a fresh mandate to build and wield influence in Brussels. Scotland’s swerve towards independence, and the accompanying grievances in England, should push politicians to transform Britain into a federation, at last putting the union on a stable footing. This should also precipitate the long-overdue decentralisation of England (a process that has already begun; Manchester will run its own health service from April). Lastly, Mr Corbyn’s leadership should force his moderate MPs to take on a reality that even Mr Blair ducked: Labour has always been two parties, one social democratic and the other anti-capitalist. Over the years it has muddled through, as concessions, feints and tactical battles have postponed a decisive confrontation. No longer: as Mr Corbyn bears down on the moderates, they will have to decide whether to push back, concede the party to him or quit—en masse, not in a dribble, as did their predecessors in 1981 when Labour last swung left—and form a new party.</p>
+<p>Britain’s crises may yet go to waste. But today’s flux gives the country a rare chance: to forge happier relations with continental Europe, to federalise the union and to update creaky institutions (asked to vote on a painfully expensive renovation of the Palace of Westminster in the spring, MPs should demand that Parliament move to a new, modern building). It is a test not just of Britain’s ability to evolve, but also of the very practice of muddling through. A political entity can only be sceptical and incremental most of the time if, when events demand it, it can bring about a sea-change. So let Britain’s leaders take in “The Tempest” and heed its wisdom: storms may be destructive, but they can also bring redemption.</p>
+<p>.</p>
+<p>Culture | Non-Western classical music<br />
+<a class="reference external" href="https://www.economist.com/books-and-arts/2015/12/30/voyages-of-discovery?frsc=dg%7Cc">Voyages of discovery</a>
+Classical music that no one talks about</p>
+<p>The Other Classical Musics: Fifteen Great Traditions. Edited by Michael Church. Boydell Press; 426 pages; £25.</p>
+<p>ANY self-respecting arts-lover living in America or Europe is familiar with a smattering of writers, painters and sculptors from outside the West. But few cultural buffs could name a single composer from, say, China or Turkey, let alone give any detail about them. A collection of essays, entitled “The Other Classical Musics”, shows how much they are missing.</p>
+<p>Intelligently edited by Michael Church, a British critic, the book looks at the canons of different parts of the world (India and China are deemed worthy of two chapters each, though Latin America is ignored). Written by different scholars, each chapter has a common structure, with a concise outline of the instruments, the style and the social relations behind the music. Lots of beautiful pictures and extracts of musical notation break up the text.</p>
+<p>The chapters on Indian classical music will be of particular interest to many readers, who may already have a vague understanding of it through the works of Ravi Shankar, a sitar-player (pictured). The book shows important differences between north (Hindustani) and south (Carnatic) Indian styles. For instance, tablas—drums with heads usually fashioned from goat skin—are more commonly used in Hindustani music; Carnatic melodies tend to contain more flourishes. (Shankar played largely Hindustani music.)</p>
+<p>Such characterisations are helpful for the lay reader; but the contributors also show a keen eye for historical nuance. Many of them question the usefulness of the term “classical”, arguing that what people may now perceive to be traditional has in fact constantly changed over time. In the chapter on classical Japanese music there is a wonderful illustration of two sheets of musical notation, one from 1303 and the other from the present day; their different styles hint at how the form has evolved.</p>
+<p>Classical Iranian music has likewise seen much change. During the 1950s it fell under the sway of European musical practices, but as the government grew concerned about Westernisation it sponsored efforts to reassert a Persian flavour. As for India, before the 20th century the country’s music was no more than “a variety of musical traditions performed in different places by different social groups”. Some historians argue that Indian “classical” music was really a cobbling together of different traditions by 20th-century nationalists.</p>
+<p>Alongside other chapters on places like Tajikistan, north Africa and Java, the book has one on European classical music. For many readers this chapter will be rather familiar; but for those who know little about composers like Pérotin (who was born in Paris and active in the late 12th century, when he came to be known as Pérotin the Great) or John Dunstable (c.1390-1453), a celebrated English composer of polyphonic music, it will be just as interesting as the others. And in fewer than 30 pages it offers as good a summary of the Western canon as can be found anywhere.</p>
+<p>Readers should not try and digest the whole book in one go; far better to use it for reference. Indeed, the best way to appreciate it is to read it while listening to the music under discussion (your reviewer searched for the relevant compositions on YouTube and played the extracts of notation on the piano). There is a treasure trove of underappreciated music out there; this book will convince many to explore it.</p>
+<p>.</p>
+<p>How did the two articulate Doctor kasente’s, God-fearing, beget many girls who, in brief, turned out to be anything but scholars, pious – but perhaps xxxs</p>
+<p>.</p>
+<p>+256772712552 <a class="reference external" href="mailto:muhororo&#37;&#52;&#48;gmail&#46;com">muhororo<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<p>.</p>
+<p>Van Gogh’s quarrel with Gaugin was all about – Gaugin’s dependence on imagination and Van Gogh’s insistence on reality as – what the true reference and origins of art should be</p>
+<p>.</p>
+<p>Winners are typically cheats. You may want to remind yourselves about the biblical story in which Jacob cheated his twin Brother Esau into selling him the inheritance due to Esau. For this evil move, Jacob was blessed.</p>
+<p>.</p>
+<p>International | Global Pentecostalism<br />
+<a class="reference external" href="https://www.economist.com/international/2016/01/23/ecstasy-and-exodus">Ecstasy and exodus</a><br />
+Charismatic Christianity thrives among people on the move</p>
+<p>TEJU HASSAN has come far, and so have most of his flock. Born near Lagos 50 years ago, he converted to Christianity as a young man and now ministers in the far north of Ireland to a multinational congregation. Like many a “reverse missionary” from the devout developing world to the secular north, he sees his task as repaying the lands that exported Christianity. “The Gospel was brought to Africa by English and Irish priests. White people also did bitter things, but we are still grateful for the faith and we are bringing it back.”</p>
+<p>His 100 followers are an outpost of Christendom’s fastest-growing segment: people who seek an ecstatic experience described as “baptism in the Holy Spirit” and insist that biblical feats, from healing to exorcism to speaking in tongues, should be part of present-day worship. They are sometimes described as “charismatic” or “renewalist”. Within this category are Pentecostal churches that stem from a revival begun in America over a century ago; subgroups within established churches, which after 1960 began worshipping in a similar way; and newer churches that use Pentecostal style and language, with a fresh stress on prosperity. This can mean offering business tips, involving the faithful in ventures or telling them that God will enrich them if they donate money.</p>
+<p>Todd Johnson of America’s Centre for the Study of Global Christianity reckons that as of 2010, these charismatic worshippers amounted to a quarter of the world’s 2.3 billion Christians; by 2025 he expects their number to reach 800m (see chart). It is often noted by religion-watchers that Christianity globally is becoming more southern and exuberant. But the success of Pentecostalism and its imitators also highlights a more subtle point: the need for a kind of religion that is flexible enough to suit people in transit, whether between the southern hemisphere and the northern, between the countryside and the city, or between poverty and wealth.</p>
+<p><strong>Speaking in tongues</strong><br />
+For uprooted peasants, too, coping with the anonymity of a megacity slum, charismatic churches provide a paradoxical blend of social support, discipline and emotional release. As Don Miller of the University of Southern California puts it: “Pentecostal worship is joyous, ecstatic and offers a sense of self-transcendence that fills a void in the lives of migrants—and exorcising demons, literally or metaphorically, can be a way of gaining control over individual or family problems.” Migrants travelling between countries need the same balance of solidarity and catharsis, and are well served by the loose structure of charismatic churches, which can spring up quickly wherever the need arises.</p>
+<p>Pastor Teju’s is a typical tale. His chance to migrate came when the multinational firm he worked for as an accountant sent him from Lagos to England for training. Hearing that Ireland’s economy was booming (in 2000), he got a job there. As his career progressed, so did his spare-time role as a pastor with another successful multinational concern, the Redeemed Christian Church of God (RCCG), a Nigeria-based organisation that ministers to the country’s diaspora and all other comers.</p>
+<p>His flock includes people from across Africa, and a few Irish looking for an alternative to Catholicism. His church claims to have thousands of communities worldwide. Though a prolonged slump means the pool of recruits in Ireland’s northwestern tip may be drying up, globally it seems on track. In Nigeria its Redemption Camp attracts millions to its annual meetings. A 10,000-seat stadium in Texas acts as a hub in America and last year David Cameron paid a pre-election visit to its London gathering, where the faithful cheered the prime minister as he lauded the family, the Bible and self-improvement.</p>
+<p>“Our people are very practical,” says Pastor Teju. So too is his brand of religion. Like migrants in search of safety and prosperity, charismatic Christianity has proved adaptable, almost chameleonic. To people whose lives are in flux, it offers a mix of ecstasy, discipline and professional and personal support. In Brazil an initially sober kind of Pentecostalism has been replaced by a brasher kind (see article). In South Korea (see article), a style of worship that suited a poorish, insecure country has been replaced by one that flaunts success.</p>
+<p>Whatever their style, Pentecostal pastors are culturally closer to their flock than are the learned clerics of the Catholic or Lutheran churches; and they are numerous. A study in 2007 found that in Brazil Pentecostal churches had 18 times more clerics per believer than the majority Catholics. As Mr Miller points out, older churches move slowly because they are lumbered with hierarchies and rules; the Pentecostal world is one of quick startups, low barriers to entry and instant reaction to change.</p>
+<p>At worst, this flexibility shades into opportunism. In every country where Pentecostalism has thrived, its leading practitioners have faced investigations of their finances. In 2011 Forbes magazine estimated the combined worth of five Nigerian pastors as at least $200m. In Brazil the faithful seem tolerant of pastors who are light-fingered with their tithes; many see giving as a virtuous act, regardless of the money’s ultimate destination. Estevam Hernandes, one of Brazil’s best-known preachers, cheerfully resumed his career after returning, in 2009, from five months in an American jail for smuggling undeclared cash.</p>
+<p>Some, though, have emerged unscathed. Last year Britain’s Charity Commission gave a clean bill of health to the British branch of one of Nigeria’s richest churches, the Winners’ Chapel. Or take Sunday Adelaja, a Nigerian-born cleric who is a player in the affairs of Ukraine. His Embassy of God church claims 25,000 followers (almost all white) in Kiev and outposts in over 20 countries. In 2009 he was questioned over the collapse of an investment firm which had touted for business in his church; he satisfied the police that he was not responsible.</p>
+<p>In the past migrating religious groups either merged into their host societies or else pickled the culture of the old country in aspic. Thanks to technology, today’s roaming worshippers have no such dilemma; a Nigerian or Brazilian in transit can adapt while maintaining contact with home. Globally dispersed Pentecostal churches meet both those needs. An outlying branch of the RCCG can offer job advice and a way to keep links with home. Global charismatic movements act as transmission belts along which ideas and worship styles can travel quickly. “A hymn can be composed in one continent and sung in another a few days later,” says Allan Anderson of Birmingham University.</p>
+<p>Like water, charismatic religion takes the path of least resistance. Philip Jenkins, a scholar of global Christianity, cites several little-noticed examples. Dubai is now a bastion of Pentecostal-style worship, among migrants; the Muslim authorities do not mind as long as local Emiratis are not proselytised. Thanks to a shared language, Brazilian neo-Pentecostal churches do well in Angola and Mozambique. And though Filipino Christianity is almost entirely Catholic, the export variety, adapted to the diaspora’s needs, is intensely charismatic, offering a combination of mysticism and practical advice. One movement, El Shaddai, claims 8m members across the world. Worshippers at its Manila base wave their passports in the air as they pray for successful travels.</p>
+<p>Politically, too, Pentecostal churches tend to be pragmatic rather than consistently conservative. Brazil’s globally successful Universal Church of the Kingdom of God (UCKG) initially resisted the rise of the centre-left Workers’ Party, but went on to back its presidential candidates, including Dilma Rousseff, the incumbent. In Ukraine Mr Adelaja was close to the 2004 Orange revolution but also wooed the pro-Russian president, Viktor Yanukovych. Peru’s right-wing authoritarian leader, Alberto Fujimori, enjoyed Pentecostal support, but in El Salvador, Pentecostal preachers strike a leftist tone. In America Latino Protestants (mostly charismatic) are contested electoral terrain. Almost all Pentecostal churches are anti-abortion and anti-gay, but the UCKG has made statements that are pro-choice and comparatively gay-friendly.</p>
+<p>Predicting the future of such a volatile phenomenon is difficult. But wherever people are on the move, and are culturally receptive to Christianity in some form, charismatic religion will surely follow.</p>
+<p>.</p>
+<p>Doesn’t Abe look like Don Cheadle?</p>
+<p>.</p>
+<p>mozart’s g minor symphony<br />
+free chromaticity (half-steps)<br />
+elegantly contained in diatonic (circle of fifths)<br />
+utterly controlled (marvel of ambiguity: diatonic containment of chr<br />
+a work of utmost passion (dominant seeking tonic..)</p>
+<p>.</p>
+<p>DURING the crisis of 2008-09, Warren Buffett made two big bets in the midst of the panic. He bought a slug of preferred stock in Goldman Sachs. And he took over BNSF, a huge railway. Goldman’s 32,500 bankers and BSNF’s 32,000 miles of tracks, stretching from the Pacific to Texas, had nothing in common, except that it was impossible to imagine American capitalism without them.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./bloc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,692 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>04/2020 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bloc/bdn202004';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/practicing.png" class="logo__image only-light" alt="Nothin' - Home"/>
+    <script>document.write(`<img src="../_static/practicing.png" class="logo__image only-dark" alt="Nothin' - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbloc/bdn202004.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bloc/bdn202004.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>04/2020</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>04/2020<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Pro and Contra Chapter Four of Brothers Karamazov</p>
+<p>vs</p>
+<p>Genealogy of Morality: Dostoevsky becomes to Nietzsche what Nietzsche was to Freud; namely, almost a contemporary, but in fact a predecessor whose psychological insights anticipate the successors’ — and surpass them in profundity and simplicity</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+
+                                             3.Moral μ 🎭 
+                                                        \ 
+                      —&gt; 1.Dissonance κ                 4.Psychology ψ —&gt; 5.Harmony 𝛿 
+                                                       / 
+                                                       2.Suffering σ   
+</pre></div>
+</div>
+<p><a class="reference external" href="https://muzaale.github.io/book/bilowozo.html#avoidance">struggle</a> -&gt; victory -&gt; dopamine <a class="footnote-reference brackets" href="#id3" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a>
+.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Education. It should be about only one thing and nothing else: practicing how to confront dissonance head on. 
+
+Disease. Only one origin is to be blamed for all disease: the outsourcing of dissonance-confrontation to the high priest or warrior 
+
+Morality. This is the rotten fruit  🍌 🍎 🍉 of the tree called cowardice 🌲. The other rotten fruit plucked from the same tree is disease 
+
+Harmony. What is promised by doctors, priests, noblemen to the wretched poor who have fled from dissonance 
+
+Amor. From the military school of life: love ones fate and crave, beg providence to repeats your life eternally, recurrently. Because it all makes you stronger and more anxious for the iteration  
+</pre></div>
+</div>
+<p>.</p>
+<p>Egoistic = One point of view</p>
+<p>“…This note of personal feeling, this harsh reality of actual experience, undoubtedly gives Humiliated and Insulted something of its strange fervour and terrible passion, yet it has not made it egotistic; we see things from every point of view, and we feel not that action has been trammelled by fact, but that fact itself has become ideal and imaginative.” –  Oscar Wilde</p>
+<p>.</p>
+<p>What the literary geniuses thought of Dostoevsky</p>
+<p>.</p>
+<p>Weekend <a class="reference external" href="https://www.google.com/search?q=ivan+karamazov+theodicy&amp;amp;ie=UTF-8&amp;amp;oe=UTF-8&amp;amp;hl=xog-us&amp;amp;client=safari">study</a> on Ivan Karamazov and Theodicy</p>
+<p>.</p>
+<p>#Forever<br />
+Thats the most important word in the human civilization<br />
+It corrupts the weak, the powerful use it to exploit the weak, etc.</p>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>Dishwasher soap</p></li>
+<li><p>Cranberry juice</p></li>
+<li><p>???</p></li>
+</ol>
+<p>.</p>
+<p>Alex Huang<br />
+Antonio Huang</p>
+<p>.</p>
+<p>I’m aching, in pain<br />
+Arms, thighs, knees<br />
+Name it<br />
+Back, mind, etc<br />
+age?</p>
+<p>.</p>
+<p>Lucretia Borgia, born EXACTLY — to the day — 600 years before me</p>
+<p>.</p>
+<p>Bramante<br />
+High Renaissance<br />
+Architecture<br />
+Thomas Jefferson memorial??</p>
+<p>.</p>
+<p>There’s no good continuance<br />
+In WhatsApp groups<br />
+Philistines</p>
+<p>.</p>
+<p>Freedom in fetters<br />
+Without ridicule!!</p>
+<p>.</p>
+<p>Aphorism 262 of BGE confirms 100% that “I’m done” with DAGs, pardon the weak pun!</p>
+<p>.</p>
+<p>You know what you are? You’re God’s answer to Job, … He would have pointed to you and said, “Y’know, I do a lot of terrible things, but I can still make one of these</p>
+<p>#Theodicy</p>
+<p>.</p>
+<p>I always wonder how Dre &amp; Timbo pulled off those tidy piano leitmotifs yet I knew they were not pianist. So its mostly Scott Storch (Still Dre, Cry me a River, and much more).</p>
+<p>Meanwhile, there is another Jewish boy whose work provided my favorite hiphop sample: Jeff Lorber (Crush on you, ‘Lil Kim/‘Lil Cease/Big Chris).</p>
+<p>African American’s like to whine about appropriation of their Culture (e.g. Bruno Mars, another Jewish Boy, appropriating Teddy Riley, Babyface, and Jam &amp; Lewis). But herein lies the proof: culture is made up of as much imported stuff as any decent economy is!!!</p>
+<p>Then there’s Jon B (Yub Yum)</p>
+<p>.</p>
+<p>Surely he hath borne our griefs!</p>
+<p>.</p>
+<p>Lascia ch’io pianga</p>
+<p>.</p>
+<p>Handel was an Aries ♈️<br />
+Bach came really close :-)</p>
+<p>.</p>
+<p>I know that my redeemer liveth!</p>
+<p>.</p>
+<p>O Death 💀 Where is thy Sting?</p>
+<p>.</p>
+<p>If God be for us!</p>
+<p>.</p>
+<p>Worthy is the lamb 🐑… Amen 🙏🏾</p>
+<p>.</p>
+<p>The Trumpet Shall Sound 🎺</p>
+<p>.</p>
+<p>Bach Complex<br />
+Handel Simple<br />
+WTF wins?</p>
+<p>.</p>
+<p>Bach <a class="reference external" href="http://www.dorak.info/music/jsbgfh.html">vs.</a> Handel</p>
+<p>Great Intellectual Resource</p>
+<p>No very clear winner!!</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Handel</span> <span class="ow">and</span> <span class="n">JS</span> <span class="n">Bach</span>
+
+<span class="n">GF</span> <span class="n">Handel</span> <span class="p">(</span><span class="n">Halle</span><span class="p">;</span> <span class="n">Febr</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">1685</span> <span class="o">-</span> <span class="n">Apr</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">1759</span><span class="p">;</span> <span class="n">London</span><span class="p">)</span>
+<span class="n">George</span> <span class="n">Frideric</span> <span class="n">Handel</span> <span class="n">can</span> <span class="n">be</span> <span class="n">described</span> <span class="k">as</span> <span class="n">a</span> <span class="n">completely</span> <span class="n">international</span> <span class="n">composer</span><span class="o">.</span> <span class="n">His</span> <span class="n">main</span> <span class="n">output</span> <span class="n">was</span> <span class="n">opera</span><span class="o">/</span><span class="n">oratorio</span> <span class="k">for</span> <span class="n">international</span> <span class="n">public</span><span class="o">.</span> <span class="n">His</span> <span class="n">music</span> <span class="n">has</span> <span class="n">immediate</span> <span class="n">appeal</span> <span class="ow">and</span> <span class="n">more</span> <span class="n">accessible</span> <span class="n">than</span> <span class="n">Bach</span><span class="s1">&#39;s. He is a master of grandiose effects and drama. Pictorial and effective musical symbolism is one of the main features of Handel&#39;</span><span class="n">s</span> <span class="n">choral</span> <span class="n">writing</span> <span class="p">(</span><span class="n">word</span><span class="o">-</span><span class="n">painting</span><span class="p">,</span> <span class="n">descriptive</span> <span class="n">music</span><span class="p">,</span> <span class="n">use</span> <span class="n">of</span> <span class="n">certain</span> <span class="n">keys</span> <span class="ow">in</span> <span class="n">certain</span> <span class="n">contexts</span><span class="p">)</span><span class="o">.</span> <span class="n">Much</span> <span class="n">of</span> <span class="n">his</span> <span class="n">happiest</span> <span class="n">word</span> <span class="n">setting</span> <span class="n">occurs</span> <span class="ow">in</span> <span class="n">description</span> <span class="n">of</span> <span class="n">nature</span><span class="o">.</span> <span class="n">He</span> <span class="n">uses</span> <span class="n">choral</span> <span class="n">counterpoint</span> <span class="n">to</span> <span class="n">express</span> <span class="n">a</span> <span class="n">conflict</span> <span class="n">of</span> <span class="n">dramatic</span> <span class="n">principle</span><span class="o">.</span> <span class="n">Double</span> <span class="ow">and</span> <span class="n">inverted</span> <span class="n">counterpoint</span> <span class="ow">is</span> <span class="n">frequent</span><span class="o">.</span> <span class="n">He</span> <span class="n">has</span> <span class="n">a</span> <span class="n">wonderful</span> <span class="n">melodic</span> <span class="n">gift</span><span class="o">.</span> <span class="n">Expansive</span><span class="p">,</span> <span class="n">tuneful</span><span class="p">,</span> <span class="n">seemingly</span> <span class="n">effortless</span> <span class="n">music</span> <span class="n">that</span> <span class="n">makes</span> <span class="n">no</span> <span class="n">demands</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">listener</span> <span class="ow">is</span> <span class="n">typical</span> <span class="n">of</span> <span class="n">Handel</span><span class="o">.</span> <span class="n">Most</span> <span class="n">tunes</span> <span class="n">have</span> <span class="n">a</span> <span class="n">serene</span> <span class="n">lyricism</span> <span class="p">(</span><span class="n">like</span> <span class="n">Lascia</span> <span class="n">ch</span><span class="s1">&#39;io pianga). He uses Romantic harmony (it is said that between him and Bach, all tools of the so-called Romantic harmony had already been used). Purcellian turns of melody and harmony, including false relations at cadences and love of hemiola (not exclusively at cadences), expressive play with words, broken unaccompanied cadences are frequent. Handel and Purcell often elected to dwell in the same way on the same words and ideas (especially death). Although his works during the Cannons period have some flaws, he set the language with a subtlety few native composers have equaled. His melodic simplicity points to the classical style. The dramatic charge in his simple music is noteworthy (the Dead March in Saul). Beethoven most appreciated the ability of Handel to create enormous effects through simplicity.</span>
+
+<span class="n">He</span> <span class="n">was</span> <span class="n">a</span> <span class="n">man</span> <span class="n">of</span> <span class="n">the</span> <span class="n">theatre</span><span class="o">.</span> <span class="n">Writing</span> <span class="n">music</span> <span class="k">for</span> <span class="n">a</span> <span class="n">paying</span> <span class="n">audience</span> <span class="n">was</span> <span class="n">his</span> <span class="n">business</span><span class="o">.</span> <span class="n">He</span> <span class="n">had</span> <span class="n">first</span> <span class="n">left</span> <span class="n">his</span> <span class="n">hometown</span> <span class="n">Halle</span> <span class="n">to</span> <span class="n">go</span> <span class="n">to</span> <span class="n">the</span> <span class="n">only</span> <span class="n">operatic</span> <span class="n">center</span> <span class="ow">in</span> <span class="n">Germany</span><span class="p">,</span> <span class="n">Hamburg</span><span class="p">,</span> <span class="n">where</span> <span class="n">he</span> <span class="n">wrote</span> <span class="n">his</span> <span class="n">first</span> <span class="n">two</span> <span class="n">operas</span><span class="o">.</span> <span class="n">His</span> <span class="nb">next</span> <span class="n">journey</span> <span class="n">was</span> <span class="ow">not</span> <span class="n">surprisingly</span> <span class="n">to</span> <span class="n">the</span> <span class="n">European</span> <span class="n">center</span> <span class="n">of</span> <span class="n">opera</span><span class="p">,</span> <span class="n">Italy</span><span class="o">.</span> <span class="n">According</span> <span class="n">to</span> <span class="n">Mainwaring</span><span class="p">,</span> <span class="n">his</span> <span class="n">biographer</span><span class="p">,</span> <span class="n">Handel</span><span class="s1">&#39;s intention in traveling to Italy was to experience Italian opera at first hand. Altogether he wrote almost fifty operas and half as many oratorios, much of his other music is also occasional music (like Water Music, Music for the Royal Fireworks). Even the organ concertos he wrote were written for use in the theatre to be played between the acts of his oratorios. Handel, therefore, is not interested in the academic side of his music, he doe not care about the academic procedures in his fugues, ignores the pure consecutive fifths (in Zadok) as long as the music has the theatrical character. For Handel his music had to be appreciated at first hearing. He was one of the first composers who responded the demands from the audience. For example, he knew that English taste showed a predisposition towards the chorus to which he replied promptly. His theatrical ambitions were so strong that even after the failure of the Royal Academy of Music (1718-1728) and the huge success of the Beggar&#39;</span><span class="n">s</span> <span class="n">Opera</span> <span class="p">(</span><span class="mi">1728</span><span class="p">),</span> <span class="n">he</span> <span class="n">continued</span> <span class="n">to</span> <span class="n">produce</span> <span class="n">operas</span><span class="o">.</span> <span class="n">This</span> <span class="n">time</span> <span class="n">he</span> <span class="n">was</span> <span class="ow">not</span> <span class="n">so</span> <span class="n">successful</span><span class="o">.</span> <span class="n">In</span> <span class="mi">1732</span><span class="p">,</span> <span class="n">he</span> <span class="n">created</span> <span class="n">a</span> <span class="n">new</span> <span class="n">genre</span><span class="p">:</span> <span class="n">the</span> <span class="n">Handelian</span> <span class="n">Oratorio</span><span class="o">.</span> <span class="n">Esther</span> <span class="n">was</span> <span class="n">the</span> <span class="n">first</span> <span class="n">production</span> <span class="k">with</span> <span class="n">success</span><span class="o">.</span> <span class="n">In</span> <span class="n">those</span> <span class="n">years</span><span class="p">,</span> <span class="n">to</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">compete</span> <span class="k">with</span> <span class="n">the</span> <span class="n">rival</span> <span class="n">company</span> <span class="s1">&#39;the Opera of the Nobility&#39;</span><span class="p">,</span> <span class="n">he</span> <span class="n">invented</span> <span class="n">the</span> <span class="n">organ</span> <span class="n">concertos</span> <span class="n">to</span> <span class="n">be</span> <span class="n">played</span> <span class="n">between</span> <span class="n">the</span> <span class="n">acts</span><span class="o">.</span> <span class="n">Until</span> <span class="mi">1741</span><span class="p">,</span> <span class="n">he</span> <span class="n">produced</span> <span class="n">both</span> <span class="n">operas</span> <span class="ow">and</span> <span class="n">oratorios</span> <span class="n">after</span> <span class="n">which</span> <span class="n">there</span> <span class="n">were</span> <span class="n">only</span> <span class="n">oratorios</span><span class="o">.</span> <span class="n">An</span> <span class="n">obvious</span> <span class="n">reason</span> <span class="k">for</span> <span class="n">abandoning</span> <span class="n">the</span> <span class="n">Italian</span> <span class="n">opera</span> <span class="n">serie</span> <span class="n">was</span> <span class="n">that</span> <span class="n">the</span> <span class="n">public</span> <span class="n">was</span> <span class="ow">not</span> <span class="k">as</span> <span class="n">enthusiastic</span> <span class="k">as</span> <span class="n">it</span> <span class="n">had</span> <span class="n">once</span> <span class="n">been</span> <span class="n">about</span> <span class="n">Italian</span> <span class="n">opera</span><span class="o">.</span>
+
+<span class="n">JS</span> <span class="n">Bach</span> <span class="p">(</span><span class="mi">1685</span><span class="o">-</span><span class="mi">1750</span><span class="p">)</span>
+
+<span class="n">A</span> <span class="n">brief</span> <span class="n">biographical</span> <span class="n">note</span> <span class="n">on</span> <span class="n">Johann</span> <span class="n">Sebastian</span> <span class="n">Bach</span><span class="s1">&#39;s life:</span>
+
+<span class="mi">1685</span>  <span class="n">Born</span> <span class="ow">in</span> <span class="n">Eisenach</span> <span class="p">(</span><span class="n">March</span> <span class="mi">21</span><span class="p">),</span> <span class="n">a</span> <span class="n">small</span> <span class="n">town</span> <span class="ow">in</span> <span class="n">Thuringia</span><span class="o">.</span> <span class="n">His</span> <span class="n">mother</span> <span class="n">died</span> <span class="ow">in</span> <span class="mi">1694</span> <span class="ow">and</span> <span class="n">his</span> <span class="n">father</span> <span class="ow">in</span> <span class="mf">1695.</span>
+
+<span class="mi">1695</span><span class="o">-</span><span class="mi">1700</span>  <span class="n">Together</span> <span class="k">with</span> <span class="n">his</span> <span class="n">brother</span> <span class="n">Jacob</span><span class="p">,</span> <span class="n">moved</span> <span class="n">to</span> <span class="n">Ohrdurf</span> <span class="n">to</span> <span class="n">his</span> <span class="n">brother</span> <span class="n">Johann</span> <span class="n">Christoph</span> <span class="n">III</span><span class="s1">&#39;s house who had been a pupil of Pachelbel.</span>
+
+<span class="mi">1700</span><span class="o">-</span><span class="mi">1702</span><span class="o">/</span><span class="mi">3</span>  <span class="n">Moved</span> <span class="n">to</span> <span class="n">Luneburg</span> <span class="p">(</span><span class="n">St</span> <span class="n">Michael</span> <span class="n">Church</span><span class="p">)</span> <span class="n">to</span> <span class="n">be</span> <span class="n">a</span> <span class="n">member</span> <span class="n">of</span> <span class="n">Matins</span> <span class="n">choir</span><span class="o">.</span> <span class="n">In</span> <span class="n">another</span> <span class="n">church</span> <span class="ow">in</span> <span class="n">Luneburg</span><span class="p">,</span> <span class="n">G</span><span class="o">.</span> <span class="n">Bohm</span> <span class="n">was</span> <span class="n">the</span> <span class="n">organist</span><span class="o">.</span> <span class="n">From</span> <span class="n">Luneburg</span><span class="p">,</span> <span class="n">he</span> <span class="n">traveled</span> <span class="n">to</span> <span class="n">Hamburg</span> <span class="ow">and</span> <span class="n">Celle</span> <span class="p">(</span><span class="n">French</span> <span class="n">orchestra</span><span class="p">)</span> <span class="n">to</span> <span class="n">increase</span> <span class="n">his</span> <span class="n">musical</span> <span class="n">experience</span><span class="o">.</span>
+
+<span class="mi">1703</span>  <span class="n">Briefly</span> <span class="ow">in</span> <span class="n">Weimar</span> <span class="k">as</span> <span class="n">a</span> <span class="n">violinist</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">court</span> <span class="n">of</span>  <span class="n">Prince</span> <span class="n">Ernst</span> <span class="n">who</span> <span class="n">was</span> <span class="n">fond</span> <span class="n">of</span> <span class="n">Italian</span> <span class="n">music</span><span class="o">.</span>
+
+<span class="mi">1703</span><span class="o">-</span><span class="mi">1707</span>  <span class="n">Organist</span> <span class="ow">in</span> <span class="n">Arnstadt</span> <span class="p">(</span><span class="n">the</span> <span class="n">New</span> <span class="n">Church</span><span class="p">)</span><span class="o">.</span> <span class="n">He</span> <span class="n">traveled</span> <span class="n">to</span> <span class="n">Lubeck</span> <span class="n">to</span> <span class="n">listen</span> <span class="n">to</span> <span class="n">Buxtehude</span> <span class="ow">and</span> <span class="n">became</span> <span class="n">aware</span> <span class="n">of</span> <span class="n">Kuhnau</span><span class="s1">&#39;s programmatic music. Under his music&#39;</span><span class="n">s</span> <span class="n">influence</span><span class="p">,</span> <span class="n">wrote</span> <span class="n">the</span> <span class="n">Capriccio</span> <span class="p">(</span><span class="mi">1704</span><span class="p">)</span> <span class="k">for</span> <span class="n">Jacob</span><span class="s1">&#39;s departure.</span>
+
+<span class="mi">1707</span><span class="o">-</span><span class="mi">1708</span>  <span class="n">Organist</span> <span class="n">at</span> <span class="n">St</span> <span class="n">Blasius</span><span class="p">,</span> <span class="n">Muhlhausen</span><span class="o">.</span> <span class="n">Married</span> <span class="n">Maria</span> <span class="n">Barbara</span> <span class="n">Bach</span><span class="o">.</span> <span class="n">Early</span> <span class="n">cantatas</span> <span class="p">(</span><span class="n">No</span><span class="o">.</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">71</span><span class="p">,</span> <span class="mi">131</span><span class="p">)</span><span class="o">.</span>
+
+<span class="mi">1708</span><span class="o">-</span><span class="mi">1717</span>  <span class="n">Court</span> <span class="n">organist</span> <span class="n">at</span> <span class="n">Weimar</span> <span class="p">(</span><span class="n">second</span> <span class="n">Weimar</span> <span class="n">period</span><span class="p">)</span><span class="o">.</span> <span class="n">Primarily</span> <span class="n">wrote</span> <span class="n">organ</span> <span class="n">music</span><span class="o">.</span> <span class="n">WF</span> <span class="n">Bach</span> <span class="p">(</span><span class="mi">1710</span><span class="p">)</span> <span class="ow">and</span> <span class="n">CPE</span> <span class="n">Bach</span> <span class="p">(</span><span class="mi">1714</span><span class="p">)</span> <span class="n">were</span> <span class="n">born</span><span class="o">.</span>
+
+<span class="mi">1717</span><span class="o">-</span><span class="mi">1723</span>  <span class="n">Kapellmeister</span> <span class="n">to</span> <span class="n">Prince</span> <span class="n">Leopold</span> <span class="n">of</span> <span class="n">Kothen</span><span class="o">.</span> <span class="n">Concertos</span> <span class="p">(</span><span class="n">the</span> <span class="n">Brandenburgs</span><span class="p">,</span> <span class="n">solo</span> <span class="ow">and</span> <span class="n">double</span> <span class="n">string</span><span class="p">),</span> <span class="n">two</span> <span class="n">of</span> <span class="n">the</span> <span class="n">orchestral</span> <span class="n">suites</span><span class="p">,</span> <span class="n">instrumental</span> <span class="n">works</span> <span class="p">(</span><span class="n">sonatas</span> <span class="ow">and</span> <span class="n">partitas</span> <span class="k">for</span> <span class="n">violin</span><span class="p">,</span> <span class="n">cello</span> <span class="n">suites</span><span class="p">)</span> <span class="ow">and</span> <span class="n">keyboard</span> <span class="n">works</span> <span class="p">(</span><span class="n">sonatas</span> <span class="k">for</span> <span class="n">harpsichord</span> <span class="ow">and</span> <span class="n">viola</span> <span class="n">da</span> <span class="n">gamba</span><span class="p">)</span><span class="o">.</span> <span class="n">Maria</span> <span class="n">Barbara</span> <span class="n">died</span> <span class="n">at</span> <span class="mi">1720</span> <span class="ow">and</span> <span class="n">he</span> <span class="n">married</span> <span class="n">Anna</span> <span class="n">Magdalena</span> <span class="n">Wilcken</span><span class="o">.</span>
+
+<span class="mi">1723</span><span class="o">-</span><span class="mi">1750</span>  <span class="n">St</span><span class="o">.</span> <span class="n">Thomas</span><span class="s1">&#39;s Kantor in Leipzig as successor to Kuhnau. Cantatas, Passions, Oratorios, Masses, Motets and Magnificats, Harpsichord Concertos, Well-tempered Clavier, Goldberg Variations (Air with thirty variations), the Musical Offering, the Art of the Fugue, etc. Director of the Collegium Musicum in Leipzig (1729). JC Bach was born (1735).</span>
+
+<span class="mi">1750</span>  <span class="p">(</span><span class="n">July</span> <span class="mi">28</span><span class="p">)</span> <span class="n">Died</span> <span class="ow">in</span> <span class="n">Leipzig</span>
+
+<span class="n">He</span> <span class="n">was</span> <span class="n">a</span> <span class="n">determined</span> <span class="n">person</span> <span class="n">to</span> <span class="n">extract</span> <span class="n">the</span> <span class="n">best</span> <span class="kn">from</span> <span class="nn">every</span> <span class="n">worthy</span> <span class="n">source</span><span class="o">.</span> <span class="n">His</span> <span class="n">stylistic</span> <span class="n">development</span> <span class="n">was</span> <span class="n">determined</span> <span class="n">by</span> <span class="n">those</span> <span class="n">whose</span> <span class="n">music</span> <span class="n">he</span> <span class="n">came</span> <span class="n">across</span><span class="o">.</span> <span class="n">The</span> <span class="n">first</span> <span class="n">composers</span> <span class="n">he</span> <span class="n">got</span> <span class="n">to</span> <span class="n">know</span> <span class="n">were</span> <span class="n">Froberger</span><span class="p">,</span> <span class="n">Pachelbel</span> <span class="ow">and</span> <span class="n">Kerll</span> <span class="n">during</span> <span class="n">his</span> <span class="n">stay</span> <span class="ow">in</span> <span class="n">his</span> <span class="n">brother</span> <span class="n">Johann</span> <span class="n">Christoph</span><span class="s1">&#39;s house in Ohrdurf (1695-1700). The composer Froberger had traveled a lot and integrated various national styles in his keyboard suites whereas Kerll was a contrapuntist of distinction. In Luneburg (1700-1702/3), he met G. Bohm who had a famous repertory of Italian music. In the same period, he traveled to Hamburg (Reinken, Keiser and Lubeck) and Celle. The Duke of Celle had been to the famous court of Louis XIV and transferred French string players to Celle. Again, without traveling abroad, Bach was able to come across the French Baroque music. In his short stay in Weimar (1703), he was a violinist in the court of Prince Johann Ernst who was a transcriber of Italian music. (When he later had a post in Weimar in 1713, the Prince had acquired Vivaldi&#39;</span><span class="n">s</span> <span class="p">[</span><span class="n">Op</span><span class="mf">.3</span><span class="p">]</span> <span class="n">concertos</span> <span class="n">published</span> <span class="ow">in</span> <span class="n">Amsterdam</span> <span class="ow">in</span> <span class="mf">1711.</span><span class="p">)</span> <span class="n">During</span> <span class="n">his</span> <span class="n">Arnstadt</span> <span class="n">years</span> <span class="p">(</span><span class="mi">1703</span><span class="o">-</span><span class="mi">7</span><span class="p">),</span> <span class="n">he</span> <span class="n">traveled</span> <span class="n">to</span> <span class="n">Lubeck</span> <span class="n">to</span> <span class="n">hear</span> <span class="n">Buxtehude</span><span class="o">.</span> <span class="n">Buxtehude</span> <span class="n">had</span> <span class="n">been</span> <span class="n">a</span> <span class="n">pupil</span> <span class="n">of</span> <span class="n">Italian</span> <span class="n">Frescobaldi</span><span class="o">.</span> <span class="n">At</span> <span class="n">this</span> <span class="n">period</span><span class="p">,</span> <span class="n">his</span> <span class="n">predecessor</span> <span class="ow">in</span> <span class="n">Leipzig</span> <span class="n">Johann</span> <span class="n">Kuhnau</span> <span class="p">(</span><span class="mi">1660</span><span class="o">-</span><span class="mi">1722</span><span class="p">)</span> <span class="n">published</span> <span class="n">programmatic</span> <span class="n">multi</span><span class="o">-</span><span class="n">movement</span> <span class="n">keyboard</span> <span class="n">sonatas</span> <span class="n">which</span> <span class="n">used</span> <span class="n">romantic</span> <span class="n">harmony</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">French</span> <span class="n">style</span> <span class="n">brise</span><span class="o">.</span> <span class="n">These</span> <span class="n">sonatas</span> <span class="n">exhibit</span> <span class="n">elements</span> <span class="n">of</span> <span class="n">French</span><span class="p">,</span> <span class="n">Italian</span> <span class="ow">and</span> <span class="n">German</span> <span class="n">styles</span><span class="o">.</span> <span class="n">These</span> <span class="n">pieces</span> <span class="n">may</span> <span class="n">have</span> <span class="n">inspired</span> <span class="n">Bach</span> <span class="n">to</span> <span class="n">write</span> <span class="n">the</span> <span class="n">Capriccio</span> <span class="k">for</span> <span class="n">harpsichord</span> <span class="p">(</span><span class="n">BWV992</span><span class="p">)</span> <span class="n">on</span> <span class="n">the</span> <span class="n">departure</span> <span class="n">of</span> <span class="n">his</span> <span class="n">brother</span> <span class="n">Jacob</span><span class="o">.</span> <span class="n">At</span> <span class="n">an</span> <span class="n">unknown</span> <span class="n">period</span> <span class="ow">in</span> <span class="n">his</span> <span class="n">life</span><span class="p">,</span> <span class="n">Bach</span> <span class="n">came</span> <span class="n">under</span> <span class="n">the</span> <span class="n">influence</span> <span class="n">of</span> <span class="n">JCF</span> <span class="n">Fisher</span> <span class="n">who</span> <span class="n">had</span> <span class="n">transferred</span> <span class="n">the</span> <span class="n">French</span> <span class="n">orchestral</span> <span class="n">ballet</span> <span class="n">suit</span> <span class="n">idiom</span> <span class="n">to</span> <span class="n">the</span> <span class="n">keyboard</span><span class="o">.</span> <span class="n">In</span> <span class="n">Weimar</span> <span class="p">(</span><span class="mi">1708</span><span class="o">-</span><span class="mi">17</span><span class="p">),</span> <span class="n">the</span> <span class="n">organist</span> <span class="n">of</span> <span class="n">the</span> <span class="n">town</span> <span class="n">church</span> <span class="p">(</span><span class="n">who</span> <span class="n">was</span> <span class="n">also</span> <span class="n">his</span> <span class="n">cousin</span><span class="p">)</span> <span class="n">had</span> <span class="n">an</span> <span class="n">interest</span> <span class="ow">in</span> <span class="n">arranging</span> <span class="n">Italian</span> <span class="n">organ</span> <span class="n">music</span><span class="o">.</span> <span class="n">The</span> <span class="n">combined</span> <span class="n">effects</span> <span class="n">of</span> <span class="n">these</span> <span class="n">interactions</span> <span class="n">were</span> <span class="n">the</span> <span class="n">fusion</span> <span class="n">of</span> <span class="n">national</span> <span class="n">styles</span> <span class="n">of</span> <span class="n">the</span> <span class="n">late</span> <span class="n">Baroque</span> <span class="n">period</span> <span class="ow">in</span> <span class="n">Bach</span><span class="s1">&#39;s music. For example, his unaccompanied solo violin sonatas are in Corelli&#39;</span><span class="n">s</span> <span class="n">sonata</span> <span class="n">da</span> <span class="n">chiesa</span> <span class="nb">type</span> <span class="p">(</span><span class="n">slow</span><span class="o">-</span><span class="n">fast</span><span class="o">-</span><span class="n">slow</span><span class="o">-</span><span class="n">fast</span> <span class="n">plan</span><span class="p">),</span> <span class="n">the</span> <span class="n">violin</span> <span class="n">partitas</span> <span class="ow">and</span> <span class="n">unaccompanied</span> <span class="n">cello</span> <span class="n">suites</span> <span class="n">are</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">French</span> <span class="n">suit</span> <span class="n">model</span><span class="o">.</span>
+
+<span class="n">In</span> <span class="n">concertos</span><span class="p">,</span> <span class="n">combination</span> <span class="n">of</span> <span class="n">French</span> <span class="ow">and</span> <span class="n">Italian</span> <span class="n">styles</span> <span class="n">can</span> <span class="n">easily</span> <span class="n">be</span> <span class="n">seen</span><span class="o">.</span> <span class="n">Unlike</span> <span class="n">Handel</span><span class="p">,</span> <span class="n">Bach</span> <span class="n">absorbed</span> <span class="n">foreign</span> <span class="n">influences</span> <span class="n">without</span> <span class="n">traveling</span> <span class="n">abroad</span><span class="o">.</span> <span class="n">For</span> <span class="n">example</span><span class="p">,</span> <span class="n">the</span> <span class="n">Brandenburg</span> <span class="n">concertos</span> <span class="n">are</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">Italianate</span><span class="o">-</span><span class="n">Vivaldian</span> <span class="n">style</span> <span class="k">with</span> <span class="n">German</span> <span class="n">preference</span> <span class="k">for</span> <span class="n">several</span> <span class="n">wind</span> <span class="n">instruments</span> <span class="n">together</span><span class="o">.</span> <span class="n">The</span> <span class="n">first</span> <span class="n">one</span> <span class="ow">is</span> <span class="n">French</span> <span class="n">suit</span><span class="o">-</span><span class="n">based</span><span class="p">,</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">fifth</span> <span class="n">one</span> <span class="ow">is</span> <span class="n">almost</span> <span class="n">an</span> <span class="n">Harpsichord</span> <span class="n">concerto</span> <span class="p">(</span><span class="n">the</span> <span class="n">favorite</span> <span class="n">French</span> <span class="n">instrument</span> <span class="n">of</span> <span class="n">the</span> <span class="n">time</span><span class="p">)</span><span class="o">.</span> <span class="n">Brandenburg</span> <span class="n">concerto</span> <span class="n">No</span><span class="o">.</span> <span class="mi">4</span><span class="p">,</span> <span class="n">on</span> <span class="n">the</span> <span class="n">other</span> <span class="n">hand</span><span class="p">,</span> <span class="ow">is</span> <span class="n">considered</span> <span class="n">to</span> <span class="n">be</span> <span class="n">a</span> <span class="n">Violin</span> <span class="n">concerto</span> <span class="ow">in</span> <span class="n">Italian</span> <span class="n">style</span><span class="o">.</span> <span class="n">As</span> <span class="n">early</span> <span class="k">as</span> <span class="mi">1715</span><span class="p">,</span> <span class="n">he</span> <span class="n">had</span> <span class="n">written</span> <span class="n">an</span> <span class="n">Italian</span> <span class="n">style</span> <span class="n">ritornello</span> <span class="n">movement</span> <span class="p">(</span><span class="n">Cantata</span> <span class="n">No</span><span class="o">.</span> <span class="mi">31</span><span class="p">;</span> <span class="n">first</span> <span class="n">movement</span><span class="p">)</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">French</span> <span class="n">overture</span> <span class="p">(</span><span class="n">Cantata</span> <span class="mi">61</span><span class="p">;</span> <span class="ow">in</span> <span class="mi">1714</span><span class="p">)</span><span class="o">.</span> <span class="n">Also</span> <span class="n">plenty</span> <span class="n">of</span> <span class="n">organ</span> <span class="n">music</span> <span class="ow">in</span> <span class="n">German</span> <span class="n">style</span> <span class="n">was</span> <span class="n">written</span> <span class="ow">in</span> <span class="n">Weimar</span> <span class="n">years</span> <span class="p">(</span><span class="mi">1708</span><span class="o">-</span><span class="mi">1717</span><span class="p">)</span><span class="o">.</span>
+
+<span class="n">Bach</span> <span class="n">writes</span> <span class="k">for</span> <span class="n">human</span> <span class="n">voices</span> <span class="ow">in</span> <span class="n">instrumental</span> <span class="n">idioms</span> <span class="p">(</span><span class="k">for</span> <span class="n">example</span><span class="p">,</span> <span class="n">the</span> <span class="n">jagged</span> <span class="n">tenor</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">Kyrie</span> <span class="n">of</span> <span class="n">Mass</span> <span class="ow">in</span> <span class="n">B</span> <span class="n">minor</span><span class="p">)</span><span class="o">.</span> <span class="n">He</span> <span class="n">likes</span> <span class="n">musical</span> <span class="n">symbolism</span><span class="p">,</span> <span class="n">symmetry</span> <span class="ow">and</span> <span class="n">mathematical</span> <span class="n">relationships</span> <span class="ow">in</span> <span class="n">his</span> <span class="n">music</span><span class="p">,</span> <span class="ow">and</span> <span class="ow">is</span> <span class="n">fond</span> <span class="n">of</span> <span class="n">modulating</span> <span class="n">to</span> <span class="n">the</span> <span class="n">subdominant</span><span class="o">.</span> <span class="n">Bach</span><span class="s1">&#39;s music is more expressive than abstract, and when he chooses to tell a story (as in St. Matthew&#39;</span><span class="n">s</span> <span class="n">Passion</span><span class="p">)</span> <span class="n">the</span> <span class="n">result</span> <span class="ow">is</span> <span class="n">impressive</span><span class="o">.</span> <span class="n">He</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">master</span> <span class="n">of</span> <span class="n">counterpoint</span><span class="o">.</span> <span class="n">His</span> <span class="n">work</span> <span class="n">represents</span> <span class="n">the</span> <span class="n">climax</span> <span class="n">of</span> <span class="n">the</span> <span class="n">later</span> <span class="n">contrapuntal</span> <span class="n">style</span><span class="p">,</span> <span class="n">of</span> <span class="n">which</span> <span class="n">the</span> <span class="n">fugue</span> <span class="n">was</span> <span class="n">the</span> <span class="n">most</span> <span class="n">definite</span> <span class="n">expression</span><span class="o">.</span>  <span class="n">The</span> <span class="n">ultimate</span> <span class="n">expression</span> <span class="n">of</span> <span class="n">his</span> <span class="n">contrapuntal</span> <span class="n">genius</span> <span class="ow">is</span> <span class="n">The</span> <span class="n">Musical</span> <span class="n">Offering</span> <span class="p">(</span><span class="mi">1747</span><span class="p">)</span><span class="o">.</span> <span class="n">He</span> <span class="n">wrote</span> <span class="n">a</span> <span class="n">lot</span> <span class="n">of</span> <span class="n">sacred</span> <span class="n">vocal</span> <span class="n">music</span> <span class="n">but</span> <span class="n">no</span> <span class="n">opera</span><span class="o">.</span> <span class="n">Some</span> <span class="n">of</span> <span class="n">his</span> <span class="n">cantatas</span> <span class="p">(</span><span class="n">like</span> <span class="n">the</span> <span class="n">Peasant</span><span class="p">)</span> <span class="n">strongly</span> <span class="n">suggest</span> <span class="n">that</span> <span class="n">he</span> <span class="n">could</span> <span class="n">have</span> <span class="n">written</span> <span class="n">comique</span> <span class="n">operas</span> <span class="k">if</span> <span class="n">he</span> <span class="n">had</span> <span class="n">to</span><span class="o">.</span> <span class="n">He</span> <span class="n">wrote</span> <span class="n">nothing</span> <span class="k">for</span> <span class="n">public</span> <span class="n">entertainment</span><span class="p">,</span> <span class="n">his</span> <span class="n">instrumental</span> <span class="n">music</span> <span class="ow">is</span> <span class="k">for</span> <span class="n">private</span> <span class="n">court</span> <span class="n">entertainment</span><span class="o">.</span> <span class="n">In</span> <span class="n">his</span> <span class="n">concertos</span><span class="p">,</span> <span class="n">he</span> <span class="n">follows</span> <span class="n">the</span> <span class="n">Vivaldian</span> <span class="n">structure</span> <span class="n">leading</span> <span class="n">to</span> <span class="n">the</span> <span class="n">three</span><span class="o">-</span><span class="n">movement</span> <span class="n">classical</span> <span class="n">concerto</span> <span class="n">style</span><span class="o">.</span> <span class="n">The</span> <span class="n">main</span> <span class="n">difference</span> <span class="kn">from</span> <span class="nn">Vivaldi</span> <span class="ow">is</span> <span class="n">that</span> <span class="n">he</span> <span class="n">emphasizes</span> <span class="n">woodwind</span> <span class="n">instruments</span> <span class="k">as</span> <span class="n">a</span> <span class="n">North</span> <span class="n">German</span> <span class="n">tradition</span><span class="o">.</span> <span class="n">Also</span> <span class="n">the</span> <span class="n">texture</span> <span class="n">of</span> <span class="n">his</span> <span class="n">concertos</span> <span class="ow">is</span> <span class="n">fuller</span> <span class="ow">and</span> <span class="n">more</span> <span class="n">contrapuntal</span> <span class="n">than</span> <span class="n">Vivaldi</span><span class="s1">&#39;s. Even in his sonatas or suites for solo violin and cello (with no accompanying part), one does not feel that the texture is thin. He had a similar interest to various instruments like Vivaldi but he was more interested in their combinations (as in the Brandenburgs). Compared to Handel who followed the Corellian style in Baroque concerto, Bach makes use of the ritornello structure more and uses wind instruments more. In chorales, he made extensive use of chromaticism and dissonance to emphasize emotional significance of words. A typical Bach melody in slow movements on a ground bass is highly elaborate and rococo: frequent groups of demisemiquavers, a lot of mordents, appoggiaturas, subservient to no metrical pattern, but pausing to cadence only. From diverse stylistic elements of Baroque music, he created an individual style. His style is the result of his technical competence, intellectual concentration, musical imagination and emotional sensitivity.</span>
+
+<span class="n">Bach</span> <span class="n">vs</span> <span class="n">Handel</span>
+
+<span class="n">A</span> <span class="n">general</span> <span class="n">comparison</span> <span class="n">of</span> <span class="n">Bach</span><span class="s1">&#39;s with Handel&#39;</span><span class="n">s</span> <span class="n">music</span> <span class="n">can</span> <span class="n">be</span> <span class="n">summarized</span> <span class="k">as</span> <span class="n">intensive</span> <span class="n">melodies</span> <span class="n">vs</span> <span class="n">extensive</span> <span class="n">melodies</span><span class="o">.</span> <span class="n">Handel</span> <span class="n">excels</span> <span class="ow">in</span> <span class="n">broad</span> <span class="ow">and</span> <span class="n">majestic</span> <span class="n">motives</span> <span class="k">while</span> <span class="n">Bach</span><span class="s1">&#39;s melodies are intensive. Bach uses very dense contrapuntal texture with complex and chromatic harmonies. Handel achieves expressiveness through simple means. In their sensuous and immediate appeal, Handel&#39;</span><span class="n">s</span> <span class="n">arias</span> <span class="n">are</span> <span class="n">opposite</span> <span class="n">of</span> <span class="n">the</span> <span class="n">abstract</span> <span class="n">appeal</span> <span class="n">of</span> <span class="n">Bach</span><span class="s1">&#39;s music. The extensive quality of Handel&#39;</span><span class="n">s</span> <span class="n">melodies</span> <span class="n">explains</span> <span class="n">why</span> <span class="n">his</span> <span class="n">music</span> <span class="n">lends</span> <span class="n">itself</span> <span class="n">to</span> <span class="n">amplification</span> <span class="n">by</span> <span class="n">massed</span> <span class="n">ensembles</span><span class="o">.</span> <span class="n">The</span> <span class="n">monumental</span> <span class="n">effects</span> <span class="n">of</span> <span class="n">Handel</span><span class="s1">&#39;s music gain strength by reinforcement whereas it would ruin Bach&#39;</span><span class="n">s</span> <span class="n">music</span> <span class="n">because</span> <span class="n">it</span> <span class="n">would</span> <span class="n">obscure</span> <span class="n">the</span> <span class="n">transparency</span> <span class="n">of</span> <span class="n">the</span> <span class="n">contrapuntal</span> <span class="n">process</span><span class="o">.</span>
+
+<span class="n">Bach</span> <span class="n">writes</span> <span class="n">complicated</span> <span class="n">instrumental</span> <span class="n">lines</span> <span class="ow">and</span> <span class="n">different</span> <span class="n">but</span> <span class="n">still</span> <span class="n">complicated</span> <span class="n">vocal</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">his</span> <span class="n">vocal</span> <span class="n">music</span><span class="o">.</span> <span class="n">In</span> <span class="n">the</span> <span class="n">vocal</span> <span class="n">part</span><span class="p">,</span> <span class="n">disjunct</span> <span class="n">movements</span> <span class="ow">and</span> <span class="n">awkward</span> <span class="n">intervals</span> <span class="n">are</span> <span class="n">common</span><span class="o">.</span> <span class="n">Between</span> <span class="n">instrumental</span> <span class="ow">and</span> <span class="n">vocal</span> <span class="n">lines</span><span class="p">,</span> <span class="n">there</span> <span class="ow">is</span> <span class="n">no</span> <span class="n">sharing</span> <span class="n">of</span> <span class="n">the</span> <span class="n">material</span><span class="o">.</span> <span class="n">The</span> <span class="n">free</span><span class="o">-</span><span class="n">voiced</span> <span class="n">choral</span> <span class="n">polyphony</span> <span class="n">of</span> <span class="n">Handel</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">strictly</span> <span class="n">linear</span><span class="p">,</span> <span class="n">instrumentally</span> <span class="n">conceived</span> <span class="n">polyphony</span> <span class="n">of</span> <span class="n">Bach</span> <span class="n">form</span> <span class="n">the</span> <span class="n">two</span> <span class="n">poles</span> <span class="n">of</span> <span class="n">late</span> <span class="n">Baroque</span> <span class="n">music</span><span class="o">.</span> <span class="n">To</span> <span class="n">Handel</span><span class="p">,</span> <span class="n">who</span> <span class="ow">is</span> <span class="n">always</span> <span class="n">close</span> <span class="n">to</span> <span class="n">improvisation</span> <span class="p">(</span><span class="n">cf</span><span class="o">.</span> <span class="n">his</span> <span class="n">organ</span> <span class="n">concertos</span><span class="p">),</span> <span class="n">the</span> <span class="n">flow</span> <span class="n">of</span> <span class="n">ideas</span> <span class="ow">is</span> <span class="n">more</span> <span class="n">important</span> <span class="n">than</span> <span class="n">their</span> <span class="n">elaboration</span><span class="p">,</span> <span class="n">whereas</span> <span class="n">to</span> <span class="n">Bach</span> <span class="n">elaboration</span> <span class="ow">is</span> <span class="n">more</span> <span class="n">important</span><span class="o">.</span> <span class="n">Handel</span> <span class="n">regards</span> <span class="n">counterpoint</span> <span class="n">only</span> <span class="k">as</span> <span class="n">a</span> <span class="n">means</span> <span class="n">to</span> <span class="n">a</span> <span class="n">dramatic</span> <span class="n">end</span><span class="p">,</span> <span class="k">as</span> <span class="n">can</span> <span class="n">be</span> <span class="n">seen</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">quickly</span> <span class="n">changing</span> <span class="n">textures</span> <span class="ow">in</span> <span class="n">his</span> <span class="n">choral</span> <span class="n">writing</span><span class="o">.</span> <span class="n">Bach</span> <span class="n">takes</span> <span class="n">it</span> <span class="k">as</span> <span class="n">an</span> <span class="n">end</span> <span class="ow">in</span> <span class="n">itself</span> <span class="n">which</span> <span class="n">must</span> <span class="n">be</span> <span class="n">consistent</span><span class="o">.</span> <span class="n">Because</span> <span class="n">of</span> <span class="n">its</span> <span class="n">dramatic</span> <span class="n">conception</span><span class="p">,</span> <span class="n">Handel</span><span class="s1">&#39;s counterpoint reaches its greatest heights in the vocal medium. Even his keyboard fugues seem to call for text and seem to acquire their final impetus in vocal form; it is for this reason that Handel was so successful in transferring his ideas from the instrumental to the vocal music. In his vocal-mindedness (which is quite different from the instrumental-mindedness of Bach and Vivaldi), Handel appears as a composer whose main concern was the human voice. Bach&#39;</span><span class="n">s</span> <span class="bp">self</span><span class="o">-</span><span class="n">borrowings</span> <span class="n">are</span> <span class="n">between</span> <span class="n">instrumental</span> <span class="n">forms</span> <span class="p">(</span><span class="n">many</span> <span class="n">movements</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Brandenburg</span> <span class="n">concertos</span> <span class="n">were</span> <span class="n">used</span> <span class="k">as</span> <span class="n">preludes</span> <span class="n">to</span> <span class="n">his</span> <span class="n">cantatas</span><span class="p">)</span><span class="o">.</span> <span class="n">Bach</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">hesitate</span> <span class="n">to</span> <span class="n">submit</span> <span class="n">his</span> <span class="n">choral</span> <span class="n">polyphony</span> <span class="n">to</span> <span class="n">an</span> <span class="n">instrumental</span> <span class="n">standard</span><span class="o">.</span> <span class="n">In</span> <span class="n">the</span> <span class="n">flexibility</span> <span class="n">of</span> <span class="n">his</span> <span class="n">choral</span> <span class="n">idiom</span><span class="p">,</span> <span class="n">Handel</span> <span class="n">surpasses</span> <span class="n">Bach</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">same</span> <span class="n">measure</span> <span class="k">as</span> <span class="n">Bach</span> <span class="n">surpasses</span> <span class="n">Handel</span> <span class="ow">in</span> <span class="n">contrapuntal</span> <span class="n">consistency</span><span class="o">.</span>
+
+<span class="n">In</span> <span class="n">his</span> <span class="n">instrumental</span> <span class="n">music</span><span class="p">,</span> <span class="n">Handel</span> <span class="n">shares</span> <span class="n">the</span> <span class="n">Italian</span> <span class="n">conservatism</span> <span class="ow">and</span> <span class="n">hardly</span> <span class="n">goes</span> <span class="n">beyond</span> <span class="n">Corelli</span> <span class="n">so</span> <span class="n">far</span> <span class="k">as</span> <span class="n">form</span> <span class="ow">is</span> <span class="n">concerned</span><span class="o">.</span> <span class="n">The</span> <span class="n">simplicity</span> <span class="n">of</span> <span class="n">his</span> <span class="n">instrumental</span> <span class="n">melodies</span> <span class="n">points</span> <span class="n">towards</span> <span class="n">innovations</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Classical</span> <span class="n">period</span><span class="o">.</span> <span class="n">Bach</span> <span class="ow">is</span> <span class="n">conservative</span> <span class="ow">in</span> <span class="n">his</span> <span class="n">adherence</span> <span class="n">to</span> <span class="n">polyphonic</span> <span class="n">texture</span><span class="p">,</span> <span class="n">but</span> <span class="n">progressive</span> <span class="ow">in</span> <span class="n">his</span> <span class="n">choice</span> <span class="n">of</span> <span class="n">modern</span> <span class="n">forms</span><span class="p">,</span> <span class="n">such</span> <span class="k">as</span> <span class="n">the</span> <span class="n">concerto</span> <span class="n">form</span> <span class="n">of</span> <span class="n">Vivaldi</span><span class="o">.</span> <span class="n">Similarly</span><span class="p">,</span> <span class="n">the</span> <span class="n">organ</span> <span class="n">style</span> <span class="n">of</span> <span class="n">Handel</span> <span class="ow">is</span> <span class="n">clearly</span> <span class="n">influenced</span> <span class="n">by</span> <span class="n">the</span> <span class="n">idiom</span> <span class="n">of</span> <span class="n">the</span> <span class="n">harpsichord</span> <span class="k">as</span> <span class="n">the</span> <span class="n">opposite</span> <span class="ow">is</span> <span class="n">true</span> <span class="k">for</span> <span class="n">Bach</span><span class="o">.</span>
+
+<span class="n">Their</span> <span class="n">psychological</span> <span class="n">attitudes</span> <span class="n">were</span> <span class="n">also</span> <span class="n">different</span><span class="o">.</span> <span class="n">Bach</span> <span class="n">was</span> <span class="n">an</span> <span class="n">introvert</span> <span class="n">whereas</span> <span class="n">Handel</span> <span class="n">was</span> <span class="n">an</span> <span class="n">extrovert</span><span class="o">.</span> <span class="n">Handel</span> <span class="n">assimilated</span> <span class="n">the</span> <span class="n">various</span> <span class="n">national</span> <span class="n">styles</span> <span class="n">so</span> <span class="n">that</span> <span class="n">they</span> <span class="n">became</span> <span class="n">his</span> <span class="n">second</span> <span class="n">nature</span><span class="o">.</span> <span class="n">He</span> <span class="n">mastered</span> <span class="n">each</span> <span class="n">one</span> <span class="n">equally</span> <span class="n">well</span><span class="o">.</span> <span class="n">Bach</span> <span class="n">assimilated</span> <span class="n">the</span> <span class="n">various</span> <span class="n">influences</span> <span class="k">with</span> <span class="n">his</span> <span class="n">own</span> <span class="n">personal</span> <span class="n">style</span> <span class="ow">and</span> <span class="n">arrived</span> <span class="n">at</span> <span class="n">a</span> <span class="n">fusion</span> <span class="n">of</span> <span class="n">national</span> <span class="n">styles</span> <span class="ow">in</span> <span class="n">which</span> <span class="n">the</span> <span class="n">single</span> <span class="n">elements</span> <span class="n">are</span> <span class="n">inseparable</span><span class="o">.</span> <span class="n">Handel</span><span class="s1">&#39;s work center around his operas, written from a worldwide perspective for an international public. Bach&#39;</span><span class="n">s</span> <span class="n">works</span> <span class="n">center</span> <span class="n">around</span> <span class="n">his</span> <span class="n">cantatas</span><span class="p">,</span> <span class="n">written</span> <span class="k">for</span> <span class="n">the</span> <span class="n">local</span> <span class="n">churches</span><span class="p">,</span> <span class="ow">and</span> <span class="n">his</span> <span class="n">passions</span><span class="p">,</span> <span class="n">the</span> <span class="n">monuments</span> <span class="n">of</span> <span class="n">his</span> <span class="n">liturgical</span> <span class="n">severity</span><span class="o">.</span> <span class="n">Handel</span> <span class="n">always</span> <span class="n">bent</span> <span class="n">on</span> <span class="n">success</span><span class="p">,</span> <span class="n">passed</span> <span class="n">through</span> <span class="n">the</span> <span class="n">international</span> <span class="n">centers</span> <span class="n">of</span> <span class="n">music</span><span class="p">;</span> <span class="n">Bach</span><span class="p">,</span> <span class="n">unconcerned</span> <span class="n">about</span> <span class="n">worldly</span> <span class="n">success</span><span class="p">,</span> <span class="n">began</span> <span class="ow">and</span> <span class="n">ended</span> <span class="n">his</span> <span class="n">career</span> <span class="n">within</span> <span class="n">the</span> <span class="n">narrowness</span> <span class="n">of</span> <span class="n">central</span> <span class="n">Germany</span><span class="o">.</span>
+
+<span class="n">It</span> <span class="ow">is</span> <span class="n">interesting</span> <span class="n">that</span> <span class="n">the</span> <span class="n">same</span> <span class="n">text</span> <span class="n">was</span> <span class="nb">set</span> <span class="n">to</span> <span class="n">music</span> <span class="n">by</span> <span class="n">both</span> <span class="n">composers</span><span class="o">.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">Eilt</span> <span class="n">ihr</span> <span class="n">angefocht</span><span class="s1">&#39;nen Seelen in the Passion Oratorio (by Handel) and in the St. John Passion (by Bach). They used the same key and the same pictorial representation of &#39;</span><span class="n">haste</span><span class="s1">&#39;, and the choral interjections at dramatic points are also common. According to Bukofzer, however, Handel&#39;</span><span class="n">s</span> <span class="n">music</span> <span class="ow">is</span> <span class="n">inferior</span> <span class="n">because</span> <span class="n">it</span> <span class="n">lacks</span> <span class="n">the</span> <span class="n">highly</span> <span class="n">individual</span> <span class="n">stamp</span> <span class="n">that</span> <span class="n">distinguished</span> <span class="n">Bach</span> <span class="kn">from</span> <span class="nn">all</span> <span class="n">other</span> <span class="n">composers</span><span class="o">.</span>
+<span class="n">References</span>
+ 
+<span class="o">*</span> <span class="n">Bukofzer</span> <span class="n">MF</span><span class="o">.</span> <span class="n">Music</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">Baroque</span> <span class="n">Era</span><span class="o">.</span> <span class="n">WW</span> <span class="n">Norton</span> <span class="o">&amp;</span> <span class="n">Company</span> <span class="n">Inc</span><span class="o">.</span> <span class="n">NY</span><span class="p">,</span> <span class="mi">1974</span><span class="p">,</span> <span class="n">pp</span><span class="o">.</span> <span class="mi">345</span><span class="o">-</span><span class="mf">9.</span>
+<span class="o">*</span> <span class="n">Sadie</span> <span class="n">S</span> <span class="o">&amp;</span> <span class="n">Latham</span> <span class="n">A</span><span class="o">.</span> <span class="n">The</span> <span class="n">Cambridge</span> <span class="n">Music</span> <span class="n">Guide</span><span class="o">.</span> <span class="n">Cambridge</span> <span class="n">University</span> <span class="n">Press</span><span class="o">.</span> <span class="n">Cambridge</span><span class="p">,</span> <span class="mi">1996</span><span class="p">,</span> <span class="n">pp</span><span class="o">.</span> <span class="mi">184</span><span class="o">-</span><span class="mi">217</span>
+<span class="o">*</span> <span class="n">Dean</span> <span class="n">W</span><span class="o">.</span> <span class="n">Handel</span><span class="s1">&#39;s Dramatic Oratorios and Masques. Oxford University Press. London, 1959</span>
+<span class="o">*</span> <span class="n">Hendrie</span> <span class="n">G</span><span class="o">.</span> <span class="n">Handel</span> <span class="p">(</span><span class="n">From</span> <span class="n">Baroque</span> <span class="n">to</span> <span class="n">Romantic</span><span class="p">,</span> <span class="n">Units</span> <span class="mi">5</span><span class="o">-</span><span class="mi">7</span><span class="p">)</span><span class="o">.</span> <span class="n">The</span> <span class="n">Open</span> <span class="n">University</span> <span class="n">Press</span><span class="o">.</span> <span class="n">Milton</span> <span class="n">Keynes</span><span class="p">,</span> <span class="mf">1996.</span>
+<span class="o">*</span> <span class="n">Hendrie</span> <span class="n">G</span><span class="o">.</span> <span class="n">Bach</span> <span class="p">(</span><span class="n">From</span> <span class="n">Baroque</span> <span class="n">to</span> <span class="n">Romantic</span><span class="p">,</span> <span class="n">Units</span> <span class="mi">8</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span> <span class="n">The</span> <span class="n">Open</span> <span class="n">University</span> <span class="n">Press</span><span class="o">.</span> <span class="n">Milton</span> <span class="n">Keynes</span><span class="p">,</span> <span class="mf">1996.</span>
+ 
+<span class="n">I</span> <span class="n">thank</span> <span class="n">Grant</span> <span class="n">AB</span> <span class="n">Gilman</span> <span class="n">of</span> <span class="n">Peabody</span> <span class="n">Conservatory</span> <span class="k">for</span> <span class="n">pointing</span> <span class="n">out</span> <span class="n">the</span> <span class="n">lack</span> <span class="n">of</span> <span class="n">acknowledgement</span> <span class="n">of</span> <span class="n">the</span> <span class="n">References</span> <span class="n">used</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">compilation</span> <span class="p">(</span><span class="n">April</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2002</span><span class="p">)</span><span class="o">.</span>
+<span class="n">Compiled</span> <span class="n">by</span>  <span class="n">M</span><span class="o">.</span><span class="n">Tevfik</span> <span class="n">Dorak</span><span class="p">,</span> <span class="n">BA</span> <span class="p">(</span><span class="n">Hons</span><span class="p">)</span>
+
+<span class="n">Last</span> <span class="n">updated</span> <span class="n">on</span> <span class="n">April</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2002</span>
+
+</pre></div>
+</div>
+<p>.</p>
+<p>It is interesting that the same text was set to music by both composers. This is Eilt ihr angefocht’nen Seelen in the Passion Oratorio (by Handel) and in the St. John Passion (by Bach). They used the same key and the same pictorial representation of ‘haste’, and the choral interjections at dramatic points are also common. According to Bukofzer, however, Handel’s music is inferior because it lacks the highly individual stamp that distinguished Bach from all other composers.
+References</p>
+<p>Dogg do you feel me?<br />
+— Gucci Mane!</p>
+<p>.</p>
+<p>Hi 👋🏾, my name is Gucci Mane and I’m addicted to everything!</p>
+<p>.</p>
+<p>Oh come on, look who is talking! You’ve been seeing a psychiatrist for fifteen years! You should smoke some of this: you’ll be off the couch in no time!!</p>
+<p>.</p>
+<p>Estelle had better have some “skin in the game”</p>
+<p>.</p>
+<p><a class="reference external" href="https://twitter.com/dorry_segev/status/1250542022580207621?s=21">https://twitter.com/dorry_segev/status/1250542022580207621?s=21</a></p>
+<p>Dorry is more Euripides than Aeschylus or Sophocles</p>
+<p>This piece richly argues why this is so</p>
+<p>.</p>
+<p>This is what I was dealing with, quite literally, as I turned 40</p>
+<p>Not exactly “East African” Quality!!</p>
+<p>But one has to get over their pubescent ideals. I’m North American and have to be content with what is in North America — in B’more to be specific</p>
+<p>And, therefore, I present to you.. Ms. Cameroon, Baltimore Chapter  🇨🇲</p>
+<p>.</p>
+<p>Rasumovsky Adagio :-)</p>
+<p>April 17, 2020 at 7:47 AM</p>
+<p>.</p>
+<p>One is reminded of King Solomon — how many perspectives he had to life? How much wisdom came with all those perspectives!!</p>
+<p>.</p>
+<p>I wear make up because I want to<br />
+Not because I need to<br />
+So save me the speech</p>
+<p>.</p>
+<p>Dorry and Allans parodies aren’t anything like those of Aristophanes. They are pretty much Euripides:</p>
+<p>His contemporaries associated him with Socrates as a leader of a decadent intellectualism, both of them being frequently lampooned by comic poets such as Aristophanes. Whereas Socrates was eventually put on trial and executed as a corrupting influence, Euripides chose a voluntary exile in old age, dying in Macedonia</p>
+<p>Parody and satire, in gazing at performers, are the output of critics. Whereas tragedy faces life itself and is the work of poets — true artists</p>
+<p>.</p>
+<p>Babyface vz Riley</p>
+<p>.</p>
+<p>Freud the fraud:<br />
+Looking at things doesn’t heal;<br />
+It is the weak who avoid looking who become neurotic<br />
+The strong always confront things and so they never get any neuroses<br />
+So Freuds confounded “looking at things” for “the strength that tends to look at things”<br />
+x<br />
+No wonder his cures never worked for the 35y that Woody Allen was in therapy<br />
+By extension we can so no wonder his cures never work<br />
+What they do is cumulate billable hours<br />
+Maybe they are also titillating<br />
+Asses &amp; communicate :-)</p>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">8</a><span class="fn-bracket">]</span></span>
+<p>education reform</p>
+</aside>
+</aside>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./bloc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

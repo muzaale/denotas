@@ -1,0 +1,1302 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>10/2022 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bloc/_build/jupyter_execute/bdn202210';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/practicing.png" class="logo__image only-light" alt="Nothin' - Home"/>
+    <script>document.write(`<img src="../../../_static/practicing.png" class="logo__image only-dark" alt="Nothin' - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../chapter2.html">object</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbloc/_build/jupyter_execute/bdn202210.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/bloc/_build/jupyter_execute/bdn202210.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>10/2022</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>10/2022<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Bob Dylan</p>
+<p>09/30/22</p>
+<p>Your money meant shall be my gentle verse,<br />
+Which eyes not yet created shall o’er read;<br />
+And tongues to be, your being shall rehearse,<br />
+When all the breathers of this world are dead;<br />
+You still shall live,— such virtue hath my pen,—<br />
+Where breath most breathes, even in the mouths of men.</p>
+<p>Review Bob Dylan’s acceptance speech<br />
+For the Nobel prize in literature</p>
+<p><a class="reference external" href="https://www.nobelprize.org/prizes/literature/2016/dylan/lecture/">https://www.nobelprize.org/prizes/literature/2016/dylan/lecture/</a></p>
+<p>.</p>
+<p>Reversal of fortunes</p>
+<p>10/01/22</p>
+<p>Idea of the month</p>
+<p>.</p>
+<p>Swolf is a score that measures your swimming efficiency, and just as in golf, a lower score is better. For pool swimming, the swolf score for a length is obtained by adding together the number of strokes taken in the pool length, and the time it took to swim that length.</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Avg. SWOLF
+
+10/01/22
+
+#25 Butterfly 25yd 0’48”/28
+Avg.SWOLF 19
+Lowest on record!
+
+#34 Butterfly 25yd 0’57”/20
+Avg.SWOLF 19
+
+#46 Butterfly 25yd 0’43”/28
+Avg.SWOLF 17
+
+*
+
+Swolf is a score that measures your swimming efficiency, and just as in golf, a lower score is better. For pool swimming, the swolf score for a length is obtained by adding together the number of strokes taken in the pool length, and the time it took to swim that length.
+
+*
+&lt;35 for long axis 
+&lt;25 for short axis 
+</pre></div>
+</div>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=N8av28fydMw">https://www.youtube.com/watch?v=N8av28fydMw</a></p>
+<p>.</p>
+<p>It’s my theory that men who drink <em>strictly</em> one alcohol beverage (Guinness in this case) have so much trouble sampling strictly one chic. Mwami Tumwiine, aka Isabirye :)</p>
+<p>10/01/22<br />
+16:50hrs</p>
+<p>.</p>
+<p>Creative destruction</p>
+<p>10/02/22</p>
+<ol class="arabic simple">
+<li><p>Symptom of energy</p></li>
+<li><p>Consequence of becoming</p></li>
+<li><p>Especially while standing on shoulders..</p></li>
+<li><p>Monumental historians with dynamite!</p></li>
+<li><p>They see beautiful bricks, not the building</p></li>
+</ol>
+<p>.</p>
+<p>Interesting</p>
+<p>10/02/22</p>
+<ol class="arabic simple">
+<li><p>Long legs, peak-to-peak, perspective, effects!</p></li>
+<li><p>Navel-gazing, causes, no mentors!!!</p></li>
+<li><p>Everything has been done</p></li>
+</ol>
+<p>.</p>
+<p>Stata Programming</p>
+<p>10/03/22</p>
+<ol class="arabic simple">
+<li><p>Blocks of functional code</p></li>
+<li><p>Analogous to genes</p></li>
+<li><p>Include regulator “if” statements</p></li>
+<li><p>Thus “if 0” vs. “if 1” vs. “if 2” vs. “quietly”</p></li>
+<li><p>Would regulate specific bits of the script/code</p></li>
+</ol>
+<p>.</p>
+<p>Porter, Stout, Coffee, Cocoa</p>
+<p>10/03/22</p>
+<p>All based on roasted seeds<br />
+Might be blended together in beer<br />
+Generally darker than unroasted stuff</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Mary Grace 
+
+10/03/22
+
+Precision Medicine Analytics Platform (PMAP) data
+— huge new asset!!!!
+— cause for delay in IRB?
+— maybe bypass 
+
+Interested in using it? Reach out to MGB
+
+*
+
+CVD following KT
+Leading cause of death
+Excluding pre-KT CVD??
+
+*
+
+https://pm.jh.edu
+
+*
+
+Build database as standard of care
+Feed it back into EHR dashboard
+Has already been done by biostats department
+
+*
+
+Submit IRB &amp; 
+Add to MGB IRB??? 
+Candidates, Recipients, and their donors!!!
+MGB may help out here since its expensive
+Delivered in a data projection on SAFE desktop
+
+eForm R (Christine’s) —&gt; for IRB 
+eForm S (MGBs) —&gt; supplement of eForm R (from Christine)
+Would potentially use eForm S on MGBs grant
+</pre></div>
+</div>
+<p>.</p>
+<p>Matrices</p>
+<p>10/04/22</p>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">H</span><span class="o">=</span><span class="n">X</span><span class="w"> </span><span class="o">%*%</span><span class="w"> </span><span class="nf">solve</span><span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="w"> </span><span class="o">%*%</span><span class="w"> </span><span class="n">X</span><span class="p">)</span><span class="w"> </span><span class="o">%*%</span><span class="w"> </span><span class="nf">t</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1">#age 65 </span>
+<span class="n">diff65</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">coefficients</span><span class="p">(</span><span class="n">fit_2.1</span><span class="p">)[</span><span class="m">5</span><span class="p">]</span><span class="o">/</span><span class="m">1000</span><span class="w"> </span><span class="n">se65</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sqrt</span><span class="p">(</span><span class="nf">vcov</span><span class="p">(</span><span class="n">fit_2.1</span><span class="p">)[</span><span class="m">5</span><span class="p">,</span><span class="m">5</span><span class="p">])</span><span class="o">/</span><span class="m">1000</span><span class="w"> </span><span class="n">CI65</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diff65</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-1</span><span class="p">,</span><span class="m">1</span><span class="p">)</span><span class="o">*</span><span class="m">1.96</span><span class="o">*</span><span class="n">se65</span><span class="w"> </span>
+
+<span class="c1">#age 75 </span>
+<span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">10</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">0</span><span class="p">)</span><span class="n">diff75</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">%*%</span><span class="w"> </span><span class="nf">coefficients</span><span class="p">(</span><span class="n">fit_2.1</span><span class="p">))</span><span class="o">/</span><span class="m">1000</span><span class="w"> </span><span class="n">se75</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sqrt</span><span class="p">(</span><span class="nf">as.numeric</span><span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">%*%</span><span class="nf">vcov</span><span class="p">(</span><span class="n">fit_2.1</span><span class="p">)</span><span class="o">%*%</span><span class="n">A</span><span class="p">))</span><span class="o">/</span><span class="m">1000</span><span class="w"> </span><span class="n">CI75</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diff75</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-1</span><span class="p">,</span><span class="m">1</span><span class="p">)</span><span class="o">*</span><span class="m">1.96</span><span class="o">*</span><span class="n">se75</span><span class="w"> </span>
+</pre></div>
+</div>
+<p>.</p>
+<p>Madness in great ones must not unwatched go</p>
+<p>10/05/22</p>
+<p><a class="reference external" href="https://www.psychiatrictimes.com/view/shakespeare-and-psychiatry-personal-meditation">https://www.psychiatrictimes.com/view/shakespeare-and-psychiatry-personal-meditation</a></p>
+<p>.</p>
+<p>What is a man? If he foreseeth evil what does he? Hideth? Whineth? Or Tameth?</p>
+<p>10/05/22</p>
+<p>My wittiest aphorism</p>
+<p>Aphorism contra Proverbs 27:12 contra Psalm 23</p>
+<p>.</p>
+<p>In lieu of TV:</p>
+<p>10/05/22</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=GO0Pzh3BFMk">https://www.youtube.com/watch?v=GO0Pzh3BFMk</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=0bKX5quiYhU">https://www.youtube.com/watch?v=0bKX5quiYhU</a></p>
+<p>.</p>
+<p>Counterfeit</p>
+<p>10/05/22</p>
+<p>Word of the month<br />
+Best word of all-time<br />
+Summarizes everything!</p>
+<p>.</p>
+<p>Brazilian Gourmet</p>
+<p>10/05/22</p>
+<ol class="arabic simple">
+<li><p>Burger</p></li>
+<li><p>Pao de Quejo</p></li>
+<li><p>Coxhinha</p></li>
+<li><p>Bolhinho de …</p></li>
+<li></li>
+</ol>
+<p>my #1 ethnic food from S.A.</p>
+<p>.</p>
+<p>Yale</p>
+<p>10/05/22</p>
+<p>English department</p>
+<p><a class="reference external" href="http://www.curtainup.com/richard2yale07.html">http://www.curtainup.com/richard2yale07.html</a></p>
+<p>god save the king! will no man say amen?<br />
+A CurtainUp Review<br />
+Richard II</p>
+<p>By Summer Banks</p>
+<p>.</p>
+<p>Shakespeare &amp; Modernity</p>
+<p>10/05/22</p>
+<ol class="arabic simple">
+<li><p>Absurdity/Satire</p></li>
+<li><p>Trial of Hamlet/C-SPAN</p></li>
+</ol>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=GO0Pzh3BFMk">https://www.youtube.com/watch?v=GO0Pzh3BFMk</a><br />
+<a class="reference external" href="https://www.c-span.org/video/?55363-1/trial-hamlet">https://www.c-span.org/video/?55363-1/trial-hamlet</a></p>
+<p>.</p>
+<p>NHATS</p>
+<p>10/05/22</p>
+<p>— Medicare beneficiaries<br />
+— Longitudinal data<br />
+— Insights<br />
+— Foot prints of missing data<br />
+— Planning live donor data collection revisions</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Thesis</span> <span class="n">Committee</span>
+
+<span class="mi">10</span><span class="o">/</span><span class="mi">05</span><span class="o">/</span><span class="mi">22</span>
+
+<span class="mf">1.</span><span class="n">GTPCI</span> <span class="n">advisor</span><span class="o">/</span><span class="n">Julie</span> <span class="p">(</span><span class="n">jhoover2</span><span class="nd">@jhmi</span><span class="o">.</span><span class="n">edu</span><span class="p">)</span>
+<span class="mf">2.</span><span class="n">SOM</span> <span class="n">thesis</span> <span class="n">mentor</span><span class="o">/</span><span class="n">Dorry</span> <span class="p">(</span><span class="n">dorry</span><span class="nd">@jhmi</span><span class="o">.</span><span class="n">edu</span><span class="p">)</span> 
+<span class="mf">3.</span><span class="n">Another</span> <span class="n">GTPCI</span><span class="o">/</span><span class="n">Betsy</span> <span class="p">(</span><span class="n">eking19</span><span class="nd">@jhmi</span><span class="o">.</span><span class="n">edu</span><span class="p">)</span>
+<span class="mf">4.</span><span class="n">Primary</span> <span class="n">SPH</span><span class="o">/</span><span class="n">Caffo</span> <span class="p">(</span><span class="n">Chair</span><span class="p">)</span> <span class="p">(</span><span class="n">bcaffo1</span><span class="nd">@jhu</span><span class="o">.</span><span class="n">edu</span><span class="p">)</span>
+<span class="o">*</span>
+<span class="mf">1.</span><span class="n">GPTCI</span><span class="o">/</span><span class="n">Fabian</span> <span class="p">(</span><span class="n">fjohnst4</span><span class="nd">@jhmi</span><span class="o">.</span><span class="n">edu</span><span class="p">)(</span><span class="n">newkir3</span><span class="nd">@jhmi</span><span class="o">.</span><span class="n">edu</span><span class="p">)</span>
+<span class="mf">2.</span><span class="n">Primary</span> <span class="n">SPH</span><span class="o">/</span><span class="n">Alden</span> <span class="p">(</span><span class="n">agross14</span><span class="nd">@jhu</span><span class="o">.</span><span class="n">edu</span><span class="p">)</span> 
+
+
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Healthy older non-donors</p></li>
+<li><p>Incidence of hospitalizations (ICD-9/10)</p></li>
+<li><p>Trajectories of frailty</p></li>
+<li><p>Cross-sections of donor hospitalizations</p></li>
+<li><p>Footprint of missing data: see Macey</p></li>
+</ol>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Jen Schrack 
+
+10/06/22
+
+*by looking at NHANES we’ve revealed that donors, though healthier than average, have increased risk —&gt; AR
+*first mortality, then ESRD, now we wish to go further upstream before ESRD (e.g. CKD, CVD, hospitalization, frailty)
+*with older NHANES we don’t have great longitudinal data for our upstream interests
+*here’s where NHATS comes to mind with caveats…
+*there is no longitudinal older donor followup. At best cross-sections during hospitalization events… 
+
+1.Healthy older non-donors
+2.Incidence of hospitalizations (ICD-9/10)
+3.Trajectories of frailty 
+4.Cross-sections of donor hospitalizations 
+5.Footprint of missing data: see Macey 
+
+In that case, let’s meet in my office at COAH: 2024 E Monument St, Suite 2-700, room 710. See you then!
+
+— disability trajectories: ADL, IADL, frailty, etc.
+— cms-linked restricted file for ESRD: my access? IRB, 
+— incidence of hospitalizations and associated ICD codes!!!!
+*
+— guide my cross-sectional donor analyses
+— maybe cross-sectional comparisons
+— unlikely to have disability collected in donors
+— but will use text review of medical records… length of hospitalization, rehospitalization, etc.
+*
+— also pilots for R03/R21?
+
+*
+
+Physical, cognitive functional trajectories, but not blood work… 
+2 and half hours at home… 
+SBBP, cognitive battery, hearing and vision, etc.
+Hospitalization, CMS (free linkage).. next c
+ACJMEN
+*demographicas can be linked with medical claims 
+
+2011-onward 
+Replenished in 2015
+Covid mesed 2020 replenishment 
+
+1.website… instructions
+2.application to fill out
+3.DUA with Hopkins/HATS/NIA (two diff. Applications)
+4.IRB
+5.NIA approval
+
+https://www.nhats.org
+
+The unclave… 
+
+*
+
+The other study—&gt; ARIC… may have a lot of measure too.
+Go to the website… fill out a manuscript proposal form… would help with labs 
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Criminal responsibility</p>
+<p>10/06/22</p>
+<p>1.Sanity or insanity<br />
+2.Right before the criminal act<br />
+3.Does premeditation invalidate time immediately prior?</p>
+<p><a class="reference external" href="https://www.c-span.org/video/?55363-1/trial-hamlet">https://www.c-span.org/video/?55363-1/trial-hamlet</a></p>
+<p>Timeline is everything<br />
+Bipolar, rapid cycling for instance<br />
+States come and go: being (truth) vs. becoming (process)</p>
+<p>33:15/2:09:36</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Time
+
+10/06/22
+
+1.Time implies several interacting processes 
+2.Q&amp;A seeks some invariant being
+3.Mutually exclusive: 1 vs. 2
+
+— philosophy: parmenides/einstein vs. heraclitus/schroedinger
+— competing risks: latent distribution if reality hadn’t happened!
+— religion: was, is, ever shall be.. has no changeable “mind” like man
+— science: isotopic only if viewed at the physically impossible speed of light!
+— justice: premeditation (being) vs. immediately before action (process) 
+— diagnosis: rapidly-cycling bipolar disorder, manic now, depr..
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Counterfeit</p>
+<p>10/7/22</p>
+<p>What art thou. That counterfeit’st the person of a king?<br />
+The knave counterfeits well. A good knave<br />
+I fear thou art another counterfeit,<br />
+Now counterfeit to swoon, why, now fall down</p>
+<p>.</p>
+<p>On schedule today</p>
+<p>10/08/22</p>
+<ol class="arabic simple">
+<li><p>Patton</p></li>
+<li><p>Hamlet</p></li>
+<li><p>Lebowski</p></li>
+</ol>
+<p>No more after this!</p>
+<p>.</p>
+<p>Wedding anniversary</p>
+<p>10/08/22</p>
+<p>Nov 17, 1972</p>
+<p>.</p>
+<p>Kunswaaza</p>
+<p>10/08/22</p>
+<p>The Road to Kirya<br />
+Maurice Kirya</p>
+<p>.</p>
+<p>Alejandro G. Iñarritu Still Hurt by Robert Downey Jr.’s<br />
+Response to His Belief That Superhero Films<br />
+Are ‘Cultural Genocide’</p>
+<p>09/08/22</p>
+<p>Alejandro Gonzalez Iñarritu does not like superhero movies.<br />
+The Oscar winner said in 2014 while promoting<br />
+“Birdman” that superhero movies were a form of<br />
+“cultural genocide,” adding, “I don’t respond to those<br />
+characters. They have been poison because the audience<br />
+is so overexposed to plot and explosions and shit that<br />
+doesn’t mean nothing about the experience of being human.”</p>
+<p>10/10/22</p>
+<p>Tameth/Malcontent (Innate)<br />
+Whineth/Jesus (Source)<br />
+Hideth/Police (Prefrail)</p>
+<p>Hope of deliverance from without!<br />
+At least religion’s error results<br />
+In cultural ties and bonds :)</p>
+<p>21 grams? Del Toro!!!</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>*!fave
+
+#will e   
+0g.κοσμογονία,γ   
+1f.ἡ ἔρις,κ  
+2e.πρᾶξις,σ  
+
+  #metaphysical mc2 
+   3e.ἄσκησις,μ   
+   4d.∫δυσφορία.dt,ψ   
+   5c.φάρμακον,δ  
+
+   #physical χ 
+   6b.ομορφιά,β
+      7a.τάξη,α  
+
+     *!auteurs
+
+ #adm V 6 on 09/03/22
+— agency, dynamite —&gt; atoms //quentin tarantino
+— cause —&gt; effect —&gt; forever //woody Allen
+— passivity, atoms —&gt; narcotics //coen brothers
+*
+bowling, ransom, nihilists, ruined rug
+*
+— monumental
+— antiquarian
+— critical
+
+ #ooo take II 10/10/22
+— tameth/rigged: alejandro.iñarritu
+— whineth/scream: coen brothers
+— hideth/banter: woody allen
+</pre></div>
+</div>
+<p>.</p>
+<p>Takes a Village</p>
+<p>10/10/22</p>
+<ol class="arabic simple">
+<li><p>Spartans raised their children in cohorts, not families</p></li>
+<li><p>British-style boarding school does the same, at Eton</p></li>
+<li><p>The whole family-values argument is flawed, Duncan!</p></li>
+</ol>
+<p>.</p>
+<p>Butiful</p>
+<p>10/10/22</p>
+<p>My love, what you see<br />
+Over there aren’t the stars:<br />
+It’s your nervous system</p>
+<p>Alejandro G. Iñarritu</p>
+<p>.</p>
+<p>Iñárritu has stated that he believes music has had a bigger influence on him as an artist than film itself</p>
+<p>.</p>
+<p>Innaritu</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=E2xuTyILwTw">https://www.youtube.com/watch?v=E2xuTyILwTw</a></p>
+<p>.</p>
+<p>Amores Perros</p>
+<p>10/12/22</p>
+<ol class="arabic simple">
+<li><p>Sparta: soldiers or workers</p></li>
+<li><p>Britain: boarding school</p></li>
+<li><p>Guadalajara? a finger up his ass!</p></li>
+</ol>
+<p>Family values my ass!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+              Know what? A baby born in Guadalajara
+
+              gets a finger up his ass.
+
+              - Why? - To see what he&#39;ll be.
+
+              If he kicks, he&#39;ll be a soccer player.
+
+              If he screams, a mariachi.
+
+              And if he laughs, he&#39;ll be a homo.
+
+              What about girls?
+
+              We finger them until they&#39;re 18
+</pre></div>
+</div>
+<p>.</p>
+<p>Sparta was frequently a subject of fascination in its own day, as well as in Western culture following the revival of classical learning. The admiration of Sparta is known as Laconophilia. Bertrand Russell wrote:</p>
+<p>Sparta had a double effect on Greek thought: through the reality, and through the myth…. The reality enabled the Spartans to defeat Athens in war; the myth influenced Plato’s political theory, and that of countless subsequent writers…. [The] ideals that it favors had a great part in framing the doctrines of Rousseau, Nietzsche, and National Socialism</p>
+<p>.</p>
+<p>Duncan?</p>
+<p>10/12/22</p>
+<p>Spartan boys were expected to take an older male mentor, usually an unmarried young man. According to some sources, the older man was expected to function as a kind of substitute father and role model to his junior partner; however, others believe it was reasonably certain that they had sexual relations (the exact nature of Spartan pederasty is not entirely clear). Xenophon, an admirer of the Spartan educational system whose sons attended the agoge, explicitly denies the sexual nature of the relationship.</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>*!λακωνίζειν
+
+#perros e 🤺 
+0g.κοσμογονία,γ  
+1f.ἡ ἔρις,κ      
+2e.πρᾶξις,σ r2  
+
+   #amores mc2 ♀  
+   3e.ἄσκησις,μ   
+   4d.∫δυσφορία.dt,ψ #i.  
+   5c.φάρμακον,δ Ho  
+
+   #dolor χ ♂  
+   6b.ομορφιά,β   
+      7a.τάξη,α X=0   
+
+     *!laconophilia
+
+ #ooo  take III on 10/12/22
+— monuments sparta
+— antiques britain
+— critique guadalajara
+*
+— monarchy/tyranny/deus 
+— aristocracy/oligarchy/telos
+— democracy/anarchy/chaos
+*
+— agoge system
+— boarding school
+— finger up his ass
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Critical Race Theory :)</p>
+<p>10/12/22</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=_xQ27AsF4_k">https://www.youtube.com/watch?v=_xQ27AsF4_k</a></p>
+<p>.</p>
+<p>Iñárritu</p>
+<p>10/12/22</p>
+<p>Finds his ἀγών in Birdman</p>
+<p>.</p>
+<p>Why do they call the Ukraine war “unprovoked”?</p>
+<p>It’s been known since the beginning of time that nothing like weakness provokes the strong!</p>
+<p>They don’t treat you like a worthy adversary but an easy addition to their labor force</p>
+<p>.</p>
+<p>Life</p>
+<p>10/13/22</p>
+<p>It’s all about knowing when to tame, whine, or hide:</p>
+<p>Ecclesiastics 3:1-8</p>
+<p>.</p>
+<p>Abimelech was the generic name given to all Philistine kings in the Hebrew Bible from the time of Abraham through King David. In the Book of Judges, Abimelech, son of Gideon, of the Tribe of Manasseh, is proclaimed king of Shechem after the death of his father. Wikipedia</p>
+<p>.</p>
+<p>Calvin</p>
+<p>10/14/22</p>
+<ol class="arabic simple">
+<li><p>Outstanding job!<br />
+— Table looks tidy<br />
+— Statistics believable<br />
+— But its not yet perfect</p></li>
+<li><p>New concepts<br />
+— Inclusion criteria<br />
+— Recoding variables<br />
+— Merge vs. append</p></li>
+<li><p>Table1_Nondonors<br />
+— Overall n=76,153<br />
+— Exact grouping required (e.g. Race: White, Black, Hispanic, Other)<br />
+— Don’t include any subgroups that are not shown in Table_Nondonors (.e.g. Citizenship)</p></li>
+</ol>
+<p>.</p>
+<p>10/08/22</p>
+<p>gamma function and exponential distributions<br />
+these are dominated my mind<br />
+<a class="reference external" href="https://en.wikipedia.org/wiki/Gamma_function">https://en.wikipedia.org/wiki/Gamma_function</a></p>
+<p>counterfeiting data even so!</p>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="c1">//swoosh</span>
+cls
+<span class="k">clear</span> 
+<span class="k">local n</span>=<span class="m">10</span><span class="o">^</span><span class="m">4</span>
+<span class="k">set</span> obs <span class="nv">`n&#39;</span>
+<span class="k">g</span> beta=_n
+<span class="k">replace</span> beta=beta<span class="o">*</span><span class="m">7.3</span><span class="o">/</span><span class="nv">`n&#39;</span> 
+<span class="k">g</span> fb = <span class="nf">exp</span>(<span class="nf">lngamma</span>(beta))
+<span class="k">g</span> logfb = <span class="nf">lngamma</span>(beta)
+<span class="k">line</span> logfb beta,<span class="k"> sort</span> 
+<span class="k">graph</span> export swoosh<span class="m">.</span>png,<span class="k"> replace</span> 
+</pre></div>
+</div>
+<p><img alt="" src="bloc/_build/jupyter_execute/swoosh.png" /></p>
+<p>.</p>
+<p>Swinging between genius and idiocy… has an attention span of 3 seconds</p>
+<p>.</p>
+<p>Drugs still sellin<br />
+Snitches still tellin</p>
+<p>.</p>
+<p>As I Like It</p>
+<p>10/16/22</p>
+<p>I want people in places at certain times<br />
+Acting like people in places at certain times<br />
+Not some meta-analysis of such people, places, times</p>
+<p>.</p>
+<p>Donald Glover, I’ve written you off!</p>
+<p>.</p>
+<p>De devil hideth in de tails of de distribution</p>
+<p>10/18/22</p>
+<p>Meanwhile God reigneth in the middle and tameth it to his will</p>
+<p>As such, the predictions and forecasts that come forth from parametrization are of questionable if any value to the sort who will not be governed: heroes and great men, on the one hand, and slackers and epicureans on the other</p>
+<p>.</p>
+<p>Ted Lasso</p>
+<p>10/18/22</p>
+<p>Only such a broken man could write so moving a TV show!</p>
+<p>— Nanny diaries<br />
+— Saladgate<br />
+— Etc.</p>
+<p>From harmony within he wrung out order, harmony, and beauty in a world gone awry. This is aesthetic</p>
+<p>.</p>
+<p>Lucy Fa vs. De Telos</p>
+<p>10/18/22</p>
+<p>War of the tails :)</p>
+<p>.</p>
+<p>St. Paul</p>
+<p>10/19/22</p>
+<p>I propose that Dr. Kasenene rebrand as St. Paul</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Sudeikis
+
+10/19/22
+
+#fwn III 2 201
+
+Wit.—Wit is the epitaph of an emotion.
+
+— mythos: ted lasso as a tragicomedy in finest form
+— logos: q&amp;a, capitulating to art, bravo!
+— pathos: auteurs divorce
+*
+— from harmony within
+— wrung out order, beauty in an awry world
+— nanny, saladgate, harry styles, quite [olivia] wilde innit?
+
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p>My Synonyms</p>
+<p>10/18/22 - present</p>
+<p>I</p>
+<p>Superman, mythos, argos, ongoing, monumental, aristophanes, will, idiosyncrasy, delivereth, generosity, y, perros, action, tournaments, alone, hades, zeus, olympus, eagle/self, domination, sanguine, tyranny, heraclitus, desert, aphorisms, bge, lordstar, god, judges, eternal recurrence, tomorrow and tomorrow and tomorrow, figs, wild honey, locusts, festivals, psilocybin, soul, energy, nietzsche, power, iñárritu,</p>
+<p>II</p>
+<p>God, logos, telos, story, antiquarian, socrates, theory of everything, parameters, tameth, order, β, amores, verb, busy, cult, clouds for floor, stars for chandelier, heaven, church/superego, missions, the blood, monarchy,  parmenides, paradise, beatitudes, good, priest, leader, romans, redemption of man, forever, bread, wine, sacraments, incense, spirit, chastity, freud, stunted, perry,</p>
+<p>III</p>
+<p>Devil, pathos, narcos, backstory, critical, epicurus, atomos, tvar, hideth, chaos, X, dolores, object, passive, herd, green pastures, still waters, america/id, hopkins, grants, belgians, anarchy, democritus, garden, eden, original sin, evil, satan, tail, genesis, fall of man, now, food, drugs, cigarettes, alcohol, sex, marx, weak, allen,</p>
+<p>.</p>
+<p>PYt :)</p>
+<p>10/20/22</p>
+<p>— survival —&gt; Area: P(Y &lt; t = T or C)<br />
+— event —&gt; Limit: C<br />
+— time —&gt; X: T<br />
+.
+— P(T&gt;t, C&gt;t) = S(t)<br />
+— Y=min{T,C}; Delta=I(T&lt;C)<br />
+— t<br />
+.<br />
+— here do simulation<br />
+— assume pars<br />
+— generate ts</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Migration
+
+10/21/22
+
+1.Migrate from notes to RMarkdown
+2.Strict format (see my.pyt.Rmd)
+3.Hyperlinks, color codes!
+</pre></div>
+</div>
+<p>.</p>
+<p>Maldives</p>
+<p>10/22/22</p>
+<p>Dinye Mawanda<br />
+Angela Aizire<br />
+Bunda Katende<br />
+Leona Buhenzire</p>
+<p>.</p>
+<p>Westmalle</p>
+<p>10/22/22</p>
+<p>After a seven-year itch<br />
+I conclude that this is my #1<br />
+Belgian across all styles</p>
+<p>.</p>
+<p>Vanessa Carlton</p>
+<p>10/22/22</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=Cwkej79U3ek">https://www.youtube.com/watch?v=Cwkej79U3ek</a></p>
+<p>707k subscribers<br />
+335m viewers :)</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Bryan Adams
+
+10/22/22
+
+Let’s make a night to remember 2:55/4:33
+Have you ever really loved a woman? Hahahaha
+
+Bryan Adams has been a vegan for 32 years; he quit eating meat and dairy in 1989.[352] He relayed his experiences with his plant-based diet in an interview with Vegan Life Magazine in 2016:
+
+For those people who aren&#39;t veggie or vegan it was the best gift I could ever give myself to do it. I am turning 57 years old this year and I work hard, I am always on the move but I have tons of energy because I am plant-based. It is absolutely the best thing you could ever do for yourself. It is a great path.[353]
+
+Adams has never married. In the 1990s, he was in a relationship with Danish model Cecilie Thomsen.[354] Adams and Alicia Grimaldi, his former personal assistant and now trustee and co-founder of his namesake foundation, had their first daughter in April 2011 and their second daughter in February 2013.[355] His parents are British, and one grandmother was born in Malta.[356] Adams has homes in London[20] and Paris.[357]
+On October 30, 2021, Adams cancelled his participation in a tribute to singer Tina Turner, just before the Rock and Roll Hall of Fame ceremony, after testing positive for COVID-19.[358] On November 25, 2021, Adams tested positive for COVID-19 for the second time, and was placed in a hotel for a two week quarantine in Italy
+</pre></div>
+</div>
+<p>.</p>
+<p>Rottweiler</p>
+<p>10/22/22</p>
+<p>I’ve a soft spot for this breed</p>
+<p>.</p>
+<p>Guillermo</p>
+<p>10/22/22</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Guillermo_del_Toro">https://en.wikipedia.org/wiki/Guillermo_del_Toro</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Auteurs
+
+10/23/22
+
+1.Alejandro Iñárritu
+2.Alfonso Cuaron
+3.
+
+These motherfuckers don’t offer any metaphysical consolation
+Maestro Cuaron might appear to do so in Sólo con tu pareja 
+But the final scene is really a super-subtle critique of consolation
+*
+As for sampling the “distribution” they do a nice job
+Each of the strata is represented
+Mean, both tails, etc.
+*
+Random variables?
+Persons, places, times
+Under persons: race, ethnicity
+*
+What about places: often auteurs hometown 
+Of course there is room for “away” 
+For places: past epoch, current one/never future!!!
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Amazing how business schools are still stuck with case-study method in the day and age of science. Instead of these hallowed HBS case studies, folks should have access to data from teams across the world and rigorously analyze it to find patterns</p>
+<p>.</p>
+<p>Rishi (to recap whom they passed over when they picked Liz Truss:)</p>
+<ol class="arabic simple">
+<li><p>Winchester (like SMACK)</p></li>
+<li><p>Oxford</p></li>
+<li><p>Stanford</p></li>
+<li><p>Goldman Sachs</p></li>
+<li><p>Hedge Fund</p></li>
+<li><p>Chancellor</p></li>
+<li><p>Resignation ended Boris Johnson</p></li>
+</ol>
+<p>&amp; Married an Indian chic<br />
+Father-in-law is a billionaire</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>GDP
+
+1.US $19T
+2.China $12T
+3.Japan $5T
+4.Germany $4T
+5.India $3T
+</pre></div>
+</div>
+<p>.</p>
+<p>Uganda is statistically significantly poor with a GDP of 0.03% of the world</p>
+<p>This is an error in logic since it’s the same contribution as Estonia</p>
+<p>However, Estonia achieves this with a population of 1.3m vs 41.1m for Uganda</p>
+<p>.</p>
+<p><a class="reference external" href="https://wjgan.com/posts/latex.html">LaTeX</a><a class="footnote-reference brackets" href="#id3" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>34<span class="fn-bracket">]</span></a></p>
+<p>.</p>
+<p>Yield spread</p>
+<p>10/25/22</p>
+<p><a class="reference external" href="https://fred.stlouisfed.org/series/T10Y2Y">https://fred.stlouisfed.org/series/T10Y2Y</a></p>
+<ol class="arabic simple">
+<li><p>downlaod dataset</p></li>
+<li><p>read into RStudio</p></li>
+<li><p>include hyperlinik</p></li>
+</ol>
+<p>.</p>
+<p>Intuition</p>
+<p>10/25/22</p>
+<p>Second derivative of log function<br />
+And statistics<br />
+Variance?<br />
+With MLE of theta<br />
+The variance is - d2/d theta^2</p>
+<p><a class="reference external" href="https://data.princeton.edu/wws509/notes/c7s2">https://data.princeton.edu/wws509/notes/c7s2</a></p>
+<p>.</p>
+<p>Fisher information!</p>
+<p>.</p>
+<p>Passive voice</p>
+<p>At 1:03/6:03 on 10/26/22</p>
+<p>And <a class="reference external" href="https://en.wikipedia.org/wiki/Rishi_Sunak">I</a> want to pay tribute to my predecessor, Liz Truss.
+She was not wrong to want to improve growth in this country.
+It is a noble aim. And I admired her restlessness to create change.
+But some <a class="reference external" href="https://en.wikipedia.org/wiki/Passive_voice">mistakes were made</a>.  Not bourn of ill will or bad intention:
+Quite the opposite, in fact. But <a class="reference external" href="https://twitter.com/RishiSunak/status/1584892345715040258?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Etweet">mistakes, nonetheless</a>.</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Abimereki Dhatemwa at 11:24 on 10/26/22
+
+Unfortunately, these platitudes are meaningless
+
+They’ll not make a convert of this fella ☝🏾
+
+Uniting the country? That’s what I was reacting to. Folks from larger previously dominant tribes are threatened by unity. Things can only get “worse” for them as the “United Nations” take their country from them
+
+We see it with the Baganda and Wazungu in America, UK, Sweden, Spain, Italy, France, etc
+
+Also, and this is a question for P, as father, Christian, and educator: when one talks of family values, education, and raising our children, aren’t all these things at war with each other?
+
+I say this as a product of all the above:
+
+1.Church of Uganda did its job in childhood 
+
+2.Boarding school did its job in teenage
+
+3.Wider world has done its job in early adulthood 
+
+4.And family has been the accompanying bass through out
+
+5.Then science, philosophy, arts have proved to be disrupters of everything that’s I’ve been taught since childhood as “valuable”
+
+So to me family values compete with education. They don’t complement each other. It’s the whole mess of boarding school and the various influences it brings. Is it the point to shield onself from outside influence? If so, then why not just remain at home instead of school?
+
+Food for thought
+
+And Ps responses especially desired since he is national leader in education, ministry, family, counseling :)
+
+One last thing, with the ascendency of Indian culture in the UK (curry, kebab now not Fish &amp; chicken and plum pudding), and the already eminent decline of the Church of England, Hindu May emerge as a source of values
+
+Is a Christian to welcome these changes and trends?
+
+This is the world my nieces and nephews are going to face as they seek further education and career opportunities beyond Kampala
+
+*
+
+Patrick Muinda at 15:32 on 10/26/22
+
+D, thanks for asking.
+
+When done as God teaches us in His Word, family values and Education actually complement each other. They are by no means at war with each other when done as taught by God in His Word.
+
+Let&#39;s examine the facts in scripture:
+
+Exodus 20:12 (The First family value, given as a command AND the only command in scripture with a promise)
+
+Regard (treat with honor, due obedience, and courtesy) your father and mother, that your days may be long in the land the Lord your God gives you. A promise of long life!! ...as a desirable outcome of family values. Education alone cannot pull off long life. We&#39;ve seen Proffessors cut their lives short by simply not living according to God&#39;sWord.
+
+2 Timothy 3:15 says, you took in the sacred Scriptures with your mother&#39;s milk as she taught you Godly, damily values! There&#39;s nothing like the written Word of God for showing you the way to salvation, and success in this life through faith in Christ Jesus. (...added emphasis).
+
+This too applies to formal education. As you study scripture to add to your knowledge of God and His will, we too ought to have a formal education to add to our knowledge of life in this world.
+
+Jesus prayed for us when He said in John 17:15-16 My prayer is not that you take them out of the world but that you protect them from the evil one. They are not of the world, even as I am not of it.
+
+On the flip side, having Godly family values will keep you away from evil. Education does not even attempt to do likewise. If anything, education could draw you into science that instead draws you away from God.
+
+The Apostle Peter exhorted believers to “make every effort to add to your faith goodness; and to goodness, knowledge, and to knowledge, self control” (2 Peter 1:6).
+
+When you couple this with the family values enshrined in honoring your father and mother, it will go well with you in the land God has given you...even your education and it&#39;s outcome thereof.
+
+Finally, being a wholesome Christian who is educated and yet is established in Godly family values, the outcome is the creation of an environment of respect for God, for His Word and for authority. It will lay foundations of discipline, moral values and a work ethic that will prepare a student for life. That student will grow into such a pullar in society because He is well anchored in God&#39;s Word with education and solid family values.
+
+I submit. God be with you.
+
+P.
+</pre></div>
+</div>
+<p>.</p>
+<p>Let us hear the conclusion of the whole matter: Fear God, and keep his commandments: for this is the whole duty of man</p>
+<p>.</p>
+<p>Oktoberfest: Blood &amp; Beer</p>
+<p>It’s so cutthroat !!</p>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">34</a><span class="fn-bracket">]</span></span>
+<p>LaTeX</p>
+</aside>
+</aside>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./bloc/_build/jupyter_execute"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

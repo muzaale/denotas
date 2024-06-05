@@ -1,0 +1,1233 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>02/2020 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bloc/bdn202002';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/practicing.png" class="logo__image only-light" alt="Nothin' - Home"/>
+    <script>document.write(`<img src="../_static/practicing.png" class="logo__image only-dark" alt="Nothin' - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbloc/bdn202002.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bloc/bdn202002.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>02/2020</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>02/2020<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>What Peter Thiel missed—
+
+Humans are extremely malleable 
+Man is born without instinct 
+Therefore our identity
+Arises from lifelong training
+Leaving us perfectly corruptible 
+
+So “identity” is no bubble, it’s ever more..
+
+X
+
+Rarefied in age of Information &amp; mimicry
+
+Dionysian rituals in their collectiveness 
+Recall a more primeval origin of man 
+Identity at this point belongs to the group 
+Origins are in shared cultural references 
+No room for corrupting revered traditions
+
+Anti-technological education befitting 
+</pre></div>
+</div>
+<p>.</p>
+<p>March 16-20<br />
+J (Arrival is 14th)<br />
+Business ends 21st<br />
+Might throw in extra days<br />
+DC</p>
+<p>.</p>
+<p>Totally add all songs <a class="reference external" href="https://en.wikipedia.org/wiki/Only_You_(112_song)">he ever produced</a> to poseidon</p>
+<p>.</p>
+<p>The abomination of Obama’s nation</p>
+<p>.</p>
+<p>“Reimagining Diversity &amp; Inclusion: A Pathway to Courageous Conversations,” by Derreck Kayongo, entrepreneur, Global Soap Project founder, CNN Hero, and former CEO of the Center for Civil and Human Rights.</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Worship μ
+         \
+          Analyze ψ —&gt; Remix 𝛿 —&gt; Discard κ
+         /
+         Hit σ
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Piety μ
+        \
+         Worship ψ—&gt; Interpret 𝛿—&gt; Usurp κ
+        /
+        Deity σ
+</pre></div>
+</div>
+<p>.</p>
+<p>02/02/2020 20:20:20</p>
+<p>.</p>
+<p>Nuptial gifts — WTF<a class="reference external" href="https://www.nwf.org/en/Magazines/National-Wildlife/2005/Mating-in-a-Material">?</a><a class="reference external" href="https://en.m.wikipedia.org/wiki/Nuptial_gift">?</a></p>
+<p>.</p>
+<p>Animal behaviorists believe these “deals” could have evolved for several reasons: to encourage sex; to provide a kind of offspring support for the third party’s potential progeny; or to lay the groundwork for a possible future relationship. In any case, with some of the examples stretching back millions of years, prostitution seems to live up to its reputation as the oldest profession.</p>
+<p>.</p>
+<p>Discursive article on <a class="reference external" href="https://www.npr.org/sections/health-shots/2012/07/02/155979681/organ-donation-has-consequences-some-donors-arent-prepared-for">live donor risk</a> from the donors perspective</p>
+<p>.</p>
+<p>“the noblest human being (Christ), the purest philosopher (Baruch Spinoza), the mightiest book, and the most effective moral code in the world”</p>
+<p>.</p>
+<p>CVP 2020/02/02<br />
+Met Amanda with Dave (hubby)<br />
+Really great folks</p>
+<p>.</p>
+<p>Cost of 30-second commercial<br />
+$5.6 million</p>
+<p>Super bowl LIV</p>
+<p>.</p>
+<p>My 02/02/2020 WhatsApp DP:<br />
+Life be tight :(</p>
+<p>.</p>
+<p>Hellen<br />
+Daniel</p>
+<p>.</p>
+<p>Waverly — February 8<br />
+Ethiopians biddies :-)</p>
+<p>.</p>
+<p>Imz whatsApp: Problem of producing a free spirit with the energy,<br />
+strength &amp; endurance to oppose tradition is the<br />
+same as the problem of producing genius</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        Savoir μ
+                \
+                  Voir ψ —&gt; Division 𝛿 —&gt; Pouvoir κ
+                  /
+                  Culture σ
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        Ether μ
+                \
+                Inertia ψ—&gt; Gravity 𝛿—&gt; Acceleration κ
+               /
+               Light σ
+</pre></div>
+</div>
+<p>.</p>
+<p>The Nietzschean project was to establish a passion for greatness in a world without gods</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>It’s all about epistemology — how we view things
+When the love of your life runs off with someone else?
+You’ll only hurt if you insist that she’s the love of your life
+Reality and dream are clashing and so “bando”
+Abandon the ridiculous outlook :(
+</pre></div>
+</div>
+<p>.</p>
+<p>Romanticism, at best, is a vicarious heroism</p>
+<p>.</p>
+<p>“Only he who changes remains akin to me”</p>
+<p>The striving for excellence is tantamount to endemic change in the individual who is always in competition with former selves</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+So what then did Nietzsche believe politically? In some respects it is difficult to say a priori, since if one could give a strict formula for how to produce the “highest specimens” of humanity then they would cease to be the highest. Instead their greatness and creativity would be manufactured and predictable. As Nietzsche sometimes puts it, a priori formulas must occasionally give way to the nobility of the “nose,” which recognizes the scent of greatness and vulgarity when it is near. My sense is that Nietzsche is best understood as a radical individualist; one who insists passionately that our duty in life is to become what we are. But what kind of person is that? And how can we avoid false paths? I think the deepest clue lies in his profound treatment of resentment, which is well described by Gilles Deleuze in his classic book Nietzsche:
+
+We rediscover the definition of resentment: resentment is a reaction which simultaneously becomes perceptible and ceases to be acted: a formula which defines sickness in general. Nietzsche is not simply saying that resentment is a sickness, but rather that sickness as such is a form or resentment.
+</pre></div>
+</div>
+<p>.</p>
+<p>For Nietzsche, much of human action which appears superficially great is actually done for slavish reasons. The weakness we feel at our limitations becomes a hatred for those who present themselves as our betters, and we therefore undertake works to either bring them down or prove our own superiority. This can take myriad forms, from the socialist demand to redistribute wealth to the poor to the nationalist demand that intellectually minded cosmopolitans are corrupting the pure soul of the real people. Sometimes it even takes more vulgar forms, for instance when someone engages in self-aggrandizing acts to draw attention to themselves from the mass of people who dared to ignore them. In some circumstances, resentment can lead to tremendous and terrifying outbursts of energy, which give it the appearance of strength and power. But this is a lie, since buried beneath all such acts is a personal and collective weakness which stifles all efforts to truly overcome its opposition.</p>
+<p>.</p>
+<p>The person driven by resentment may claim to hate the rich or the foreigner and wish them to be destroyed. But they are also dependent on them, since the only way the resentful can feel any real power is by feeling morally superior to what opposes them. The poor need to feel morally superior to the rich to claim they are victims being exploited, as nationalists needs to feel morally superior to the foreigner to feel pride in their collective identity. In this sense, resentment is an impotent force which can wail and brag, but never achieve anything truly for itself. This is left to the truly great person, who lives for himself and his values and cares little enough for the opinions or actions of others.</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Nietzsche and Politics
+The goal of humanity lies in its highest specimens.
+~Friedrich Nietzsche, Untimely Meditations
+Unlike the controversy surrounding Marx and Heidegger, the outrage associated with Nietzsche has given way to ubiquitous and lavish praise. Since the end of the Second World War, thanks in no small part to the tireless efforts of interpreters like Walter Kaufmann, there has been a flurry of more rigorous and charitable interpretations of Nietzsche. The range is truly impressive; perhaps no other philosopher has influenced so many different opinions. Nietzsche was a profound influence on figures like Gilles Deleuze and Michel Foucault who have become prominently associated with the political Left, who supported overcoming society’s remaining moral and traditional barriers to self-creation. Other figures influenced by Nietzsche moved to the political Right, including the libertarian Ayn Rand and the classicist Leo Strauss. Artists have invoked his work to call for radical new aesthetic forms to emerge, while others have appealed to him to decry the decadence of modern art and feeling. Perhaps most interestingly, Nietzsche has even gained some popular traction, with his books selling millions of copies despite their strange topics and myriad styles. Despite this, Nietzsche remains a thinker very much at odds with many of the political positions at play today. This is perhaps inevitable, as Nietzsche was ever the contrarian and would likely have approved of Kierkegaard’s solemn maxim that “when you label me, you negate me.”
+Firstly, Nietzsche was certainly in no way a progressive in gestation. He would almost certainly have had nothing but contempt for the postmodern proponents of difference and toleration who invoke aspects of his thought. Nietzsche was a staunch elitist who frequently derided the “herd” which made up most of mankind. And he was openly contemptuous of many cultural practices and traditions; lampooning Buddhism, dismissing the British as a nation of mediocre shopkeepers, and of course endlessly denigrating Judeo-Christianity as religions of “resentment” oriented by a “slave” morality. Moreover, Nietzsche had little good to say about either socialism or radical democracy, regarding them as little more than watered down efforts at secularizing vulgar Christian tropes.
+
+Secondly, Nietzsche would not have been fond of contemporary liberalism—classical or egalitarian—and liberal rights, either. For Nietzsche, the call for rights—whether to private property or welfare—were simply slavish demands by the weak for protection from the worthy and strong. As John Rawls pointed out in his critique of Nietzschian “perfectionism,” there is a strong sense in Nietzsche that society does not exist to benefit all of its members. Instead, it exists to enable the few truly great men and women to rise and establish new and almost god-like kinds of values. It was offensive that such figures must be held back by the mediocrity of humankind; great men like Napoleon cared little for the rights and welfare of others as they rode out to remake the world. This, of course, did not mean that such individuals wanted to trample over others as a sign of their greatness. Rather, as he put in On the Genealogy of Morals, the great “eagle” devotes very little thought one way or another to the “lambs” beneath it. But that includes feelings of pity where the lamb lies between the eagle and its goals.
+There is nothing very odd about lambs disliking birds of prey, but this is no reason for holding it against large birds of prey that they carry off lambs. And when the lambs whisper among themselves, ‘These birds of prey are evil, and does this not give us a right to say that whatever of the opposite of a bird of prey must be good?’ there is nothing intrinsically wrong with such an argument—though the birds of prey will look somewhat quizzically and say, ‘We have nothing against these good lambs; in fact, we love them; nothing tastes better than a tender lamb.’
+
+Thirdly, Nietzsche would hardly be a friend of the contemporary Right either, in any of its various forms. Despite some rejigging by figures like Ayn Rand, Nietzsche was hardly a proto-libertarian or classical liberal. Nietzsche disdained consumer culture and capitalism, seeing it as producing vulgar and decadent societies of “last men” focused on the pursuit of meaningless wealth and menial satisfactions. These last men lived out their days in material affluence, but were committed to no truly great projects, mostly concerned with issues like “health” and physical appearance. One can think of the Wall Street icons ridiculed by Bret Easton Ellis in American Psycho, each thinking he was lord of the world and each in fact tedious and indistinguishable from on another. Nietzsche was also dismissive of nationalism, sharing Schopenhauer’s opinion that it was an infantile outlook for individuals not strong enough to will their own destiny without banding together with the rest of the “herd.” Part of this is due to Nietzsche’s personal disdain for German nationalism, and his preference for pan-Europeanism. Whether this means he would be fond of the contemporary European Union, with its liberal outlook and social democratic policies, one can only guess. But he would have certainly regarded the idea of moving away from the nation-state model appealing. 
+
+Finally, Nietzsche would have found the invocations by the far Right—past and present—infuriating. He often looked at his sister Elizabeth’s gradual descent into German nationalism and later Nazism with an uncharacteristic mixture of pity and scorn. Had Nietzsche lived to see the rise of Hitler, he would likely have immediately recognized the Austrian dropout as the mean and resentful creature he was. He would likely have been horrified to see his work on the will to power and the great man transformed into a kind of racist eugenics, insisting that his work was about the individual self and not collective genetic overcoming. And, of course, Nietzsche would regard the deindividuation of totalitarianism, its attempt to completely assimilate the single person into the nation, as nihilistic. Today, no doubt Nietzsche would have lambasted the alt-right efforts to associate his work with concerns about immigration and the racial makeup of society.
+
+So what then did Nietzsche believe politically? In some respects it is difficult to say a priori, since if one could give a strict formula for how to produce the “highest specimens” of humanity then they would cease to be the highest. Instead their greatness and creativity would be manufactured and predictable. As Nietzsche sometimes puts it, a priori formulas must occasionally give way to the nobility of the “nose,” which recognizes the scent of greatness and vulgarity when it is near. My sense is that Nietzsche is best understood as a radical individualist; one who insists passionately that our duty in life is to become what we are. But what kind of person is that? And how can we avoid false paths? I think the deepest clue lies in his profound treatment of resentment, which is well described by Gilles Deleuze in his classic book Nietzsche:
+
+We rediscover the definition of resentment: resentment is a reaction which simultaneously becomes perceptible and ceases to be acted: a formula which defines sickness in general. Nietzsche is not simply saying that resentment is a sickness, but rather that sickness as such is a form or resentment.
+
+For Nietzsche, much of human action which appears superficially great is actually done for slavish reasons. The weakness we feel at our limitations becomes a hatred for those who present themselves as our betters, and we therefore undertake works to either bring them down or prove our own superiority. This can take myriad forms, from the socialist demand to redistribute wealth to the poor to the nationalist demand that intellectually minded cosmopolitans are corrupting the pure soul of the real people. Sometimes it even takes more vulgar forms, for instance when someone engages in self-aggrandizing acts to draw attention to themselves from the mass of people who dared to ignore them. In some circumstances, resentment can lead to tremendous and terrifying outbursts of energy, which give it the appearance of strength and power. But this is a lie, since buried beneath all such acts is a personal and collective weakness which stifles all efforts to truly overcome its opposition.
+
+The person driven by resentment may claim to hate the rich or the foreigner and wish them to be destroyed. But they are also dependent on them, since the only way the resentful can feel any real power is by feeling morally superior to what opposes them. The poor need to feel morally superior to the rich to claim they are victims being exploited, as nationalists needs to feel morally superior to the foreigner to feel pride in their collective identity. In this sense, resentment is an impotent force which can wail and brag, but never achieve anything truly for itself. This is left to the truly great person, who lives for himself and his values and cares little enough for the opinions or actions of others.
+
+Conclusion: What Can We Learn From Nietzsche
+Nietzsche is one of the most difficult thinkers in the Western canon to think through. This is both in spite and because of his brilliant literary powers. In part due to illness which hampered his ability to write for an extended period of time, most of Nietzsche’s writings appear as aphorisms and short essays rather than sustained works. Nietzsche was also moody and emotional, meaning that he occasionally lashes out with vitriol against a figure or idea which is later treated more soberly. Overall, his philosophy is not a manual for how to become a Nietzschian, but rather how to overcome one’s self limitations and unleash new creative potential and insight. Nonetheless, there are two key points we can pick up from his work.
+
+Firstly, Nietzsche draws our attention to the historical contingency of many of our moral conceits. This is perhaps best accomplished in the On the Genealogy of Morals and the short books Twilight of the Idols and The Antichrist. In these works, Nietzsche develops some of his most striking imagery and ideas. He suggests that most every moral philosopher and figure thus far has failed to recognize that the moral claims they presented were historically and psychologically motivated. They took the moral claims presented as true, when in fact they were culturally or psychologically motivated. The failure to acknowledge this left us unable to recognize the deepest prompts to our actions, leading to a great deal of corruption and vulgarization.
+
+For instance, Nietzsche famously had mixed feelings about Jesus Christ, occasionally ridiculing him, and occasionally praising him as the only opponent worthy of the Antichrist. In either case, he was the only real Christian and he “died on the cross.” Later Christians appropriated his rhetoric to argue that he sought to bring universal love. The reality is that they wanted to replace the aristocratic and warlike ancient Greco-Roman world with one that conformed to the mediocrity of the slaves, and so needed to find a way to re-describe weakness and servility as a moral virtue. The upshot was Christian morality, which was resentful to its core. Nietzsche often gleefully pointed out how the religion of universal love was paranoid about sin, fixating with almost erotic satisfaction on the suffering of those in hell. Nietzsche thought that unawareness of often unconscious motivators leads us to make vulgar and baseless moral claims. This insight is frequently misused today by a host of commentators who substitute pop-psychologism for real analysis of their opponent’s position. Invocations of resentment can also be dangerously overused to dismiss appeals which are really about fairness or justice. Nonetheless, it was a profound contribution to our understanding of morality.
+Secondly, and most innovatively, Nietzsche’s writings radically deepened our understanding of what constitutes authentic individuality. Like his existentialist kin Søren Kierkegaard and Simone de Beauvoir, Nietzsche recognized that we all too often regard being an individual as simply doing what we profess to want. It certainly is not mere consumerism and the acquisition of material goods. He draws our attention to the many ways in which external factors like culture and internal psychological motivations like resentment can actually lead us to become false or vulgar iterations of our selves. The task then is to free ourselves from these inauthentic constraints through continuous and arduous self-overcoming.
+
+I don’t think Nietzsche was concerned with ‘authenticity’ in the Maslowian sense (which is where you seem headed in the last paragraph; I don’t know Kierkegaard well enough definitively to add his name here, too.) Don’t forget that Nietzsche believed in the ubiquity of the will to power — he says in ‘The Will To Power’ that the WTP is what we are — and therefore also believed in the inevitability – and value – of great social hierarchies. (And of our fundamental needs to obey — and command.) Any Nietzschean project of ‘becoming who one is’ must therefore reconcile itself with such elemental facts of ‘nature’ and human nature. This is something well beyond ‘self-overcoming’ of (presumably socialized) ‘inauthentic constraints’: it means transcending many constraints we’ve also come to identify as human; becoming (as N says in ‘Beyond Good and Evil’) at once ‘more G-d and more beast’.Also, you make no mention of N’s epistemology — which is a useful part of his moral critique and not at all separate from it. Because we misperceive the world – via anthropological and linguistic errors – we also fail to see its essence — the sovereignty of the will to power. (We mistakenly believe in ‘things’, cause and effect, etc. – the whole mechanistic universe.) This erroneous ‘dependable and logical’ world we’ve constructed for ourselves is also not ‘noble’ in N’s view: ‘reason,’ science and the deification of Truth are for him already moralistic corruptions of the spirit; and they have accordingly only added to the original perceptual/phenomenological errors of our forefathers. (Quantum physics, or at least so I glean, also seems to be leaning to a conception of the world not composed of matter but of loci of information; or perhaps as N would say, of ‘centers of force’.) For Nietzsche, any ‘optimum individual’ (we used to call him the Superman) must needs grasp all this, too, and see the world in a wholly new way: as composed of the will to power and nothing more.Though perhaps no one can yet experience such a world-view, Nietzsche’s argument does draw back the veil and raise our consciousness almost to the point.
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The truly heroic culture produces great men not so much to bow down before them as to step beyond them. The heroic individual must serve as a stimulant to further growth and the production of a still higher type 
+
+         Piety μ
+                \
+                 Worship ψ—&gt; Interpretation 𝛿—&gt; Usurpation κ
+                 /
+                 Deity σ
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>In the physical sciences, when errors of measurement and other noise are found to be of the same order of magnitude as the phenomena under study, the response is not to to try to squeeze more information out of the data by statistical means; it is instead to find techniques for observing the phenomena at a higher level of resolution. The corresponding strategy for economics is obvious: to secure new kinds of data at the micro level, data that will provide direct evidence about the behavior of economic agents and the ways in which they go about making their decisions (support fo this thesis comes from surprising directions. See Lucas, 1980, pp.288-289). 
+
+Herbert Simon
+
+         Epistemology μ
+                         \
+                          Identity ψ —&gt; Agent* 𝛿 —&gt; Error κ
+                         /
+                          Ontology σ
+</pre></div>
+</div>
+<p>Herbert Simon <a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></p>
+<p>.</p>
+<p>I agree, if you like it then you should have put a ring on it</p>
+<p>But if I put a ring on everything I liked, then, Houston, we’d have a problem :-)</p>
+<p>No pun on nativity intended!</p>
+<p>.</p>
+<p>Before D.C.s Duke Ellington<br />
+There was James R. Europe</p>
+<p>.</p>
+<p>Marsalis responded to criticism by saying, “You can’t enter a battle and expect not to get hurt. He said that losing the freedom to criticize is “to accept mob rule, it is a step back towards slavery.</p>
+<p>.</p>
+<p>I will NOT call Estelle ever again. Lets say this is a $600 epistemological experiment</p>
+<p>.</p>
+<p>K.581</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   Earnings μ 
+              \
+               Growth ψ —&gt; Beta 𝛿 —&gt; Alpha κ
+               /
+               Volatility σ 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>      Dominant μ 
+                \
+                 Western ψ —&gt; Genre 𝛿 —&gt; Distinction κ
+                /
+                Circle σ 
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Op</span><span class="o">.</span> <span class="mi">123</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">127</span>
+
+<span class="n">Missa</span> <span class="n">Solemnis</span> 
+<span class="n">Ode</span> <span class="n">to</span> <span class="n">Joy</span> 
+<span class="n">String</span> <span class="n">quartet</span> <span class="mi">12</span><span class="p">:</span> <span class="n">Andante</span> 
+</pre></div>
+</div>
+<p>.</p>
+<p>Ask Estelle which Cameroonian language she speaks</p>
+<p>She believes the most important thing that history has ever taught her is kindness.[9] Her greatest influence is the Congolese historian Elikia M’Bokolo. Otele speaks French, English, some German, and three Cameroonian languages, Ewondo, Eton and Bulu.</p>
+<p>.</p>
+<p>Somersaulting locusts invade East Africa<br />
+🤸🏿‍♂️🤸‍♂️</p>
+<p>.</p>
+<p>#goingviral<br />
+Corona virus 🦠</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+After completing her doctoral studies, Otele was made an Associate Professor at Université Paris XIII. She has written about cultural and collective memory and the memorialisation of the past. She analyses the legacies of European colonisation in post-slavery societies. She has also published academic articles about Afro-European identities, including &#39;Frenchness&#39;, British identities in Wales, and what it meant to be British, Welsh and Black
+     European μ 
+                \
+                 Identity ψ —&gt; Means* 𝛿 —&gt; Change κ
+                /
+                African σ 
+In 2018, at the age of 48, Otele became the first Black woman to be made Professor of History in the United Kingdom.[6] She acknowledged that her promotion to the professoriate took longer because she has caring responsibilities as a mother to two children and because she is a woman of colour.[14] The Race, Ethnicity &amp; Equality Report published by the Royal Historical Society in October 2018 found that only 0.5% of historians working in UK universities are black.[15] Until Otele&#39;s promotion there had never been a black woman Professor of History in the UK.[16] Otele hopes that her appointment will &#39;open the door for many hard-working women, especially black women in academia&#39;.[17] On her promotion Otele commented that &quot;any success that is used only to improve one&#39;s own life is a waste of possibilities. That is why being the first black female history professor does not mean anything to me if I&#39;m not given and can&#39;t find means to bring others up.&quot;[5] Otele also highlighted the difficulties she encountered in becoming a Professor: &quot;I&#39;ve worked very hard and kept pushing and had a family...It&#39;s hard. I&#39;m tired. It&#39;s bleak.&quot;[18] The Vice-Chancellor of Bath Spa University, Professor Susan Rigby described Otele as &quot;world-class and internationally respected&quot;.[19] Otele announced her promotion from her active Twitter account.[20]
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     Clergy μ 
+              \
+               Metaphysics ψ —&gt; Heresy* 𝛿 —&gt; Self κ
+              /
+              Nobility σ 
+
+Many literary critics have written interpretations of Shakespeare from a Marxist perspective, and several prominent commentators on Shakespeare (like George Bernard Shaw and Bertolt Brecht) drew on Marxian ideas in their understanding of his body of work. The Russian revolutionary Leon Trotsky, unusually steeped in European literary culture for a Bolshevik, sought to explain what was so interesting about Shakespeare to Marxists:
+
+In the tragedies of Shakespeare, which would be entirely unthinkable without the Reformation*, the fate of the ancients and the passions of the mediaeval Christians are crowded out by individual human passions, such as love, jealousy, revengeful greediness, and spiritual dissension. But in every one of Shakespeare’s dramas, the individual passion is carried to such a high degree of tension that it outgrows the individual, becomes super-personal, and is transformed into a fate of a certain kind. The jealousy of Othello, the ambition of Macbeth, the greed of Shylock, the love of Romeo and Juliet, the arrogance of Coriolanus, the spiritual wavering of Hamlet, are all of this kind…
+
+For Trotsky, Shakespeare represents the birth of modern literature by placing the individual man, his own personal desires and emotions, in the centre of the narrative, symbolizing the equally progressive and destructive aspirations for personal emancipation characterizing the bourgeois revolt against feudalism. After Shakespeare, he writes, ‘we shall no longer accept a tragedy in which God gives orders and man submits. Moreover, there will be no one to write such a tragedy.’
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">In</span> <span class="mi">1999</span> <span class="n">Routledge</span> <span class="n">published</span> <span class="n">Maps</span> <span class="n">of</span> <span class="n">Meaning</span><span class="p">:</span> <span class="n">The</span> <span class="n">Architecture</span> <span class="n">of</span> <span class="n">Belief</span><span class="o">.</span> <span class="n">The</span> <span class="n">book</span><span class="p">,</span> <span class="n">which</span> <span class="n">took</span> <span class="n">Peterson</span> <span class="mi">13</span> <span class="n">years</span> <span class="n">to</span> <span class="n">complete</span><span class="p">,</span> <span class="n">describes</span> <span class="n">a</span> <span class="n">comprehensive</span> <span class="n">theory</span> <span class="n">about</span> <span class="n">how</span> <span class="n">people</span> <span class="n">construct</span> <span class="n">meaning</span><span class="p">,</span> <span class="n">form</span> <span class="n">beliefs</span> <span class="ow">and</span> <span class="n">make</span> <span class="n">narratives</span> <span class="n">using</span> <span class="n">ideas</span> <span class="kn">from</span> <span class="nn">various</span> <span class="n">fields</span> <span class="n">including</span> <span class="n">mythology</span><span class="p">,</span> <span class="n">religion</span><span class="p">,</span> <span class="n">literature</span><span class="p">,</span> <span class="n">philosophy</span> <span class="ow">and</span> <span class="n">psychology</span> <span class="ow">in</span> <span class="n">accordance</span> <span class="n">to</span> <span class="n">the</span> <span class="n">modern</span> <span class="n">scientific</span> <span class="n">understanding</span> <span class="n">of</span> <span class="n">how</span> <span class="n">the</span> <span class="n">brain</span> <span class="n">functions</span><span class="o">.</span><span class="p">[</span><span class="mi">31</span><span class="p">][</span><span class="mi">5</span><span class="p">][</span><span class="mi">43</span><span class="p">]</span>
+<span class="n">According</span> <span class="n">to</span> <span class="n">Peterson</span><span class="p">,</span> <span class="n">his</span> <span class="n">main</span> <span class="n">goal</span> <span class="n">was</span> <span class="n">to</span> <span class="n">examine</span> <span class="n">why</span> <span class="n">both</span> <span class="n">individuals</span> <span class="ow">and</span> <span class="n">groups</span> <span class="n">participate</span> <span class="ow">in</span> <span class="n">social</span> <span class="n">conflict</span><span class="p">,</span> <span class="n">explore</span> <span class="n">the</span> <span class="n">reasoning</span> <span class="ow">and</span> <span class="n">motivation</span> <span class="n">individuals</span> <span class="n">take</span> <span class="n">to</span> <span class="n">support</span> <span class="n">their</span> <span class="n">belief</span> <span class="n">systems</span> <span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span> <span class="n">ideological</span> <span class="n">identification</span><span class="p">[</span><span class="mi">31</span><span class="p">])</span> <span class="n">that</span> <span class="n">eventually</span> <span class="n">results</span> <span class="ow">in</span> <span class="n">killing</span> <span class="ow">and</span> <span class="n">pathological</span> <span class="n">atrocities</span> <span class="n">like</span> <span class="n">the</span> <span class="n">Gulag</span><span class="p">,</span> <span class="n">the</span> <span class="n">Auschwitz</span> <span class="n">concentration</span> <span class="n">camp</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">Rwandan</span> <span class="n">genocide</span><span class="o">.</span><span class="p">[</span><span class="mi">31</span><span class="p">][</span><span class="mi">5</span><span class="p">][</span><span class="mi">43</span><span class="p">]</span> <span class="n">He</span> <span class="n">considers</span> <span class="n">that</span> <span class="n">an</span> <span class="s2">&quot;analysis of the world&#39;s religious ideas might allow us to describe our essential morality and eventually develop a universal system of morality&quot;</span><span class="o">.</span><span class="p">[</span><span class="mi">43</span><span class="p">]</span> <span class="n">Jungian</span> <span class="n">archetypes</span> <span class="n">play</span> <span class="n">an</span> <span class="n">important</span> <span class="n">role</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">book</span><span class="o">.</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">In</span> <span class="mi">2004</span><span class="p">,</span> <span class="n">a</span> <span class="mi">13</span><span class="o">-</span><span class="n">part</span> <span class="n">TV</span> <span class="n">series</span> <span class="n">based</span> <span class="n">on</span> <span class="n">Peterson</span><span class="s1">&#39;s book Maps of Meaning: The Architecture of Belief aired on TVOntario.[25][33][44]</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+     Lil Nas X μ 
+                 \
+                  Identity ψ —&gt; Mashup 𝛿 —&gt; Violence κ
+                 /
+                  Country σ 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>         Pρομηθεύς μ 
+                      \
+                       ἀγών ψ —&gt; φανερωο 𝛿 —&gt; πανδώρα κ
+                      /
+                       Zεύς σ 
+</pre></div>
+</div>
+<p>.</p>
+<p>Why is “Knowledge” Intertwined with “Woman”?<br />
+If this is my year of “Epistemology” why so intertwined with “Estelle”?<br />
+Because — if truth is a woman, what then?? Our failure to seduce her says it all :-)</p>
+<p>.</p>
+<p>I found <a class="reference external" href="https://en.wikipedia.org/wiki/Jordan_Peterson">this fellow</a> at a critical point of my understanding of epistemology</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Rationality doesn’t fail in its analysis of history
+We believe what advantages us
+Slaughter dissenters
+Makes sense
+Amen!
+</pre></div>
+</div>
+<p>.</p>
+<p>I recall too with great intensity an early reading experience that had nothing to do with imaginative literature. I read Nietzsche’s “Genealogy of Morals” — I do not know where I would have come across it — and I was unbelievably disturbed by it. I can only think of the French word, bouleversé, turned upside down. … it still seems to me an astonishing work, marvelous and hateful at the same time, brilliant and horrible. Even now, so many years later, I can actually channel the feeling, as it were, of getting hit by its intellectual and rhetorical violence.  Greeblatt</p>
+<p>.</p>
+<p>Couldn’t we have done all this WITH Andrew around?<br />
+Why did he have to die to awake us?<br />
+Thats the question!</p>
+<p>.</p>
+<p>What was the book that most influenced your life or your career as a writer?</p>
+<p>Strangely enough, it is probably Nietzsche’s On the Genealogy of Morals, which I must have read as a freshman in college. It deeply shocked and upset me; in fact I hated it. But it deeply challenged everything I believed in and cared about; it made me understand that a book could do such a thing, and I have never fully recovered from its recklessness and brilliance — Greenblatt</p>
+<p>.</p>
+<p>Trotsky is my man 👨🏾</p>
+<p>.</p>
+<p>Marx’s Opium of Masses<br />
+Nietzsche’s Direction-Changer<br />
+Dostoevsky’s Bread 🥯 🍞 🥖<br />
+Priestly Shepherds Anesthetize their Flock<br />
+Kakira’s Madhvani Gives Scholarships</p>
+<p>.</p>
+<p>Gracias señor — JIT request yesterday!!<br />
+This has been a very humbling 3 years<br />
+And I’m grateful that I’ve had it</p>
+<p>.</p>
+<p>On February 12, 2020 at 3:43 PM I lose interest in Epistemology</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+Today —  February 12, 2020 at 8:45 AM — is the day of the great purge of my dropbox folders
+Curiously exactly 365 days following my K08 submission; And day after receiving a JIT request from NIH
+Some strange stuff here if you think of it; but Nietzsche, Marx, Dostoevsky, and Trotsky are partly to blame
+
+x
+
+Purge is leading to economy and clarity (JIT was for my original K08, not resubmission — confused DS!)
+I seem to better understand Raphael, Mozart — , and Shakespeare (and everything)
+Have I arrived or returned to where I was 8 years ago? Plus ça change.. 
+
+x
+
+8:59 AM to 10:27AM
+What an experience!
+Ridded self of 88 docs
+</pre></div>
+</div>
+<p>.</p>
+<p>There’s a chance Estelle is autistic — or a just socially awkward</p>
+<p>Absence of emotional responses is really killing me (but her background might offer an explanation)</p>
+<p>Granted, I’m not going to think about it again</p>
+<p>.</p>
+<p>The value of pleasant surprises!!<br />
+Appreciated via its absence<br />
+Sort of a mirror to me :(<br />
+Opposite of schadenfreude<br />
+What a life lesson at 40!</p>
+<p>.</p>
+<p>Ok but<br />
+I want<br />
+I don’t want<br />
+But you should<br />
+I won’t have time<br />
+Can you help me pay<br />
+I want to get my</p>
+<p>.</p>
+<p>2020/02/12 8:29 PM<br />
+Stop loss order<br />
+Fuck!</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>          Plato μ 
+                  \
+                   Advocate ψ —&gt; Of.The.Beyond 𝛿 —&gt; Idolator.Of.Golden.Nature κ
+                  /
+                   Homer σ
+</pre></div>
+</div>
+<p>.</p>
+<p>Knowledge, Epistemology?<br />
+Let’s call the whole thing off!<br />
+It is all about resilience :-)<br />
+As old wisdom says: hang in there —<br />
+Give fortune a chance</p>
+<p>.</p>
+<p>February 13, 2020 at 4:51 AM</p>
+<p>Thank you, thank you, thank you!<br />
+I’d never have experienced a xxxxxxxx if it<br />
+Weren’t for you running away :-) .
+¡Spent the entire night reading about it!<br />
+And PYT didn’t understand what the haps</p>
+<p>.</p>
+<p>2020/02/12 at 11.57 PM<br />
+I got battle injuries in my crib!<br />
+Here is the proof —</p>
+<p>But well<br />
+It was worth the while<br />
+Since —</p>
+<p>It has been a storm brewing for a while now<br />
+But finally<br />
+Thunder, lightening, rain showers — flood</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>               Postdoc μ 
+                        \
+                         K08 ψ —&gt; R01 𝛿 —&gt; U01 κ
+                         /
+                         Faculty σ
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     Gaea μ 
+           \
+            Cronus ψ —&gt; Zeus 𝛿 —&gt; Achilles κ
+            /
+             Uranus σ
+</pre></div>
+</div>
+<p>1,001+999+1,850+150+1,950=$6,000</p>
+<p>.</p>
+<p>Taking over from a legendary figure at the firm at a troubled moment in its history, Thiam studied the earnings profile, growth potential, embedded risks and running costs of each of the bank’s core businesses, as well as the group capital position and reporting structure</p>
+<p>Full article: <a class="reference external" href="https://www.euromoney.com/article/b199lzvsyn5m0j/the-master-strategist-how-tidjane-thiam-brought-a-revolution-to-credit-suisse?copyrightInfo=true">https://www.euromoney.com/article/b199lzvsyn5m0j/the-master-strategist-how-tidjane-thiam-brought-a-revolution-to-credit-suisse?copyrightInfo=true</a>
+Visit <a class="reference external" href="http://www.euromoney.com/reprints">http://www.euromoney.com/reprints</a> for additional distribution rights. For more articles like this, follow us &#64;euromoney on Twitter.</p>
+<p>.</p>
+<p>Siege Feb 29 in New York<br />
+— call Norah<br />
+— talk to Joan<br />
+— rope mark in (visa?)</p>
+<p>.</p>
+<p>The master strategist: How Tidjane Thiam brought a <a class="reference external" href="https://www.euromoney.com/article/b199lzvsyn5m0j/the-master-strategist-how-tidjane-thiam-brought-a-revolution-to-credit-suisse">revolution</a> to Credit Suisse | Euromoney <a class="footnote-reference brackets" href="#id5" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a></p>
+<p>.</p>
+<p>Number of live donations per year, per month</p>
+<p>See graphic detail from economist</p>
+<p>Will help explain between year variance and within year (ie monthly)</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>         Words 🗣μ 
+                  \
+                   Piercéd 🤺ψ —&gt; Ear👂🏾𝛿 —&gt; Bruiséd 💔 κ
+                   /
+                   Heart σ
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+Peter Lee of Euromoney blows it out of the park here —FYI he joined Euromoney straight from Oxford university in 1985, swapping the delights of studying Coleridge and Wordsworth for the more rigorous discipline of breaking news out of the syndicated loan market.
+
+                        Weak μ Earnings
+                                        \
+                                         Herd ψ Growth —&gt; Mimicry 𝛿 Beta —&gt; Crisis κ Alpha
+                                          /
+                                         Strong σ Volatility
+
+Taking over from a legendary figure at the firm at a troubled moment in its history, Thiam studied the earnings profile, growth potential, embedded risks and running costs of each of the bank’s core businesses, as well as the group capital position and reporting structure. 
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Unibroque!!!<br />
+Dark ale abv 9% 👌🏾</p>
+<p>.</p>
+<p>With neat spectacles, sharply parted hair and a taste for discreet but heavyweight timepieces by the luxury Swiss With neat spectacles, sharply parted hair and a taste for discreet but heavyweight timepieces by the luxury Swiss watchmaker IWC, Mr Khan always cut a smooth figure at gatherings in Zurich. But it was his solicitous interest in others, and memory for small personal details, that marked him out on the social circuit from other hard-driving titans of high finance. Mr Khan always cut a smooth figure at gatherings in Zurich</p>
+<p>.</p>
+<p>His resignation capped a four-month corporate surveillance saga that has haunted Credit Suisse and cast a shadow over the entire Swiss banking sector. The fallout has also reignited allegations of xenophobia and racism that have hung over Zurich’s insular elite since Mr Thiam — the first black chief executive of a major European bank — was appointed from insurer Prudential five years ago.</p>
+<p>.</p>
+<p>Estelle wakes up at 10:45 AM 🤦🏾‍♂️</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+Yield Curve μ 
+                     \
+                     Complex ψ —&gt; Equity Markets 𝛿 —&gt; ? κ
+                     /
+                     Asset Price Volatility σ
+I don’t want to underestimate the complexity of banking, but I’m hardly a stranger to financial services or to financial markets,” Thiam tells Euromoney. “We all deal with the same yield curve, the same equity markets, the same volatility. Yet people were acting as if I had landed at the bank from planet Mars. Saying that it was risky for Credit Suisse to appoint a non-banker felt to me like a cheap shot.” 
+</pre></div>
+</div>
+<p>.</p>
+<p>Goldman was traditionally solid and staid, slow to move into new businesses or to expand outside the US. Commodities trader J Aron, bought in 1981, was Goldman’s first acquisition since 1923. The firm waited until 1988 before following the rest of Wall Street into asset management and until 1990 before running a swaps book of any size. It did not squander its capital on high-risk bridge loans to LBOs. It also resisted buying a UK broker. Instead, Goldman used its reputation as an expert defender in contested acquisitions.</p>
+<p>.</p>
+<p>A UK merchant banker recalls a meeting about a European privatization deal held on a stormy weekend in the city of London, late last year. Realizing that nothing more could be done that evening, bankers from various firms started hailing taxis and heading their separate ways. The Goldman team, to the amazement of their British counterparts, suddenly appeared in tracksuits and set off running together through the sleet and rain towards west London.</p>
+<p>.</p>
+<p>Estelle is pure ontology<br />
+She has no questions<br />
+And lives in the moment<br />
+Giving her $$$ works in reality<br />
+But don’t expect a change of world-view</p>
+<p>.</p>
+<p>I would chose Carl Jung over Freud<br />
+But Konrad Lorenz over Carl Jung<br />
+Friedrich Nietzsche hovers above :-)<br />
+So we are biologically programmed<br />
+And so we need to overcome that</p>
+<p>.</p>
+<p>Lorenz: There are several. Indoctrination by ideology is one of the cultural factors capable of causing the most serious derailments of collective aggression. A doctrine’s power of conviction increases with the square of the number of men participating in it—the relationship is geometric. As soon as a doctrine has a sufficient number of adherents, the nonconformist becomes a heretic who must be liquidated.</p>
+<p>.</p>
+<p>Father brown — Netflix</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        Edrophonium μ 
+                      \
+                       IgG ψ —&gt; AChIn 𝛿 —&gt; Droop κ
+                       /
+                        Thymoma σ
+</pre></div>
+</div>
+<p>.</p>
+<p>Ice test 🥶 vs. Eyes test 😃</p>
+<p>.</p>
+<p>Shared <a class="reference external" href="https://en.wikipedia.org/wiki/Martin_Seligman">this</a> with daddy — Positive/Optimistic psychology</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Daddy enjoyed conversation
+Might call again soon
+Folks can’t hand being awake* (could be worse for them)
+Thats where it cut off from
+Awakened didn’t ever need prompter (m7)
+
+x
+
+Giving advocacy a bad name:
+Negotiating with Wolves to “Shepherd” the lambs
+Everything is Futile 
+While that is my pessimistic conclusion
+I’m hand you the only optimist I endorse: Martin Seligman
+
+x
+
+Left off on “make believe”
+Other moiety of human mind 
+And the twixt shall not be Twain
+How am I able to apply for grants?
+Because I know how to write fiction!!!
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>— GRANT12790139 (Pending Administrative Review), GRANT12969947, 1K08AG065520-01
+— Status: changed from SRG review completed: Council review pending to: Pending administrative Review
+— Gracias Señor! Grazie Mille! Mucho Gracias
+— Email from Xxx Xxx &lt;xxx@mail.nih.gov&gt;
+</pre></div>
+</div>
+<p>.</p>
+<p>Estelle — Could do with AirPods :-)</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+      Categories μ 
+                     \
+                      Within ψ —&gt; Between* 𝛿 —&gt; Variance κ
+                       /
+                        Kontinua σ
+When you think in categories (like calendar year):
+Underestimate within group variance (Same Identity)
+Overestimate between group variance  (Different) 
+Categorical boundaries kill big picture (Anova)
+Emergence of “change” within group isn’t causal 
+
+     Lorenz μ 
+              \
+                Identity ψ —&gt; Time 𝛿 —&gt; Change* κ
+                /
+                 Sapolsky σ
+</pre></div>
+</div>
+<p>.</p>
+<p>It’s torture calling Estelle
+We know the consequences<br />
+Now do we wish to avoid torture?<br />
+From this day forth I’m truly Dionysian</p>
+<p>.</p>
+<p>February 18, 2020 at 2:46 PM<br />
+I created the file “confluence.png”<br />
+This is perhaps the final turning point<br />
+Links Nietzsche to Sapolsky and back to Kant<br />
+Clarifies everything about the Kategorischer Imperativ</p>
+<p>.</p>
+<p>Let Estelle have it unconditionally<br />
+I’m not her life coach<br />
+And she is not interested in a tutor</p>
+<p>.</p>
+<p>The <a class="reference external" href="https://www.youtube.com/watch?v=AjSl4n_KdOY">IGF-1 Trade-Off</a>: Performance vs. Longevity</p>
+<p>.</p>
+<p>Ask Brian For his GTPCI app</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>      Shephard μ 
+                 \
+                  Green Pasteurs, Still Waters ψ —&gt; Dwell in House Forever 𝛿 —&gt; Valley of the Death κ
+                  /
+                   In Presence of Mine Enemies σ
+</pre></div>
+</div>
+<p>.</p>
+<p>The Lord is my Shepherd, I shall not want!</p>
+<p>.</p>
+<p>Prometheus — a serious advocate of the “beyond”<br />
+Its right there in his name: “Forethought”<br />
+This optimism of man undoes him<br />
+Channeling Nietzsche today —<br />
+Declaring Prometheus, for the first time, to be the enemy of man!</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+         Idyll μ 
+                 \
+                  Themes ψ —&gt; Concerto 2 𝛿 —&gt; Rachmaninoff κ
+                  /
+                   Militaristic σ
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>              Prometheus μ 
+                           \
+                            Savagery ψ —&gt; Civilization 𝛿 —&gt; Forecasting κ
+                            /
+                            Zeus σ
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+                    Knowledge μ Prometheus
+                                           \
+                                            Epoch ψ Regime —&gt; Unconditional ♂ —&gt; Conditional ♀
+                                            /
+                                            Strength σ Zeus
+</pre></div>
+</div>
+<p>.</p>
+<p>There are two kinds of people in the world; those who try to fit our chaotic existence into a semblance of order, and those who believe that the best one can do is surf the waves of chaos as reality hurls them at you. The latter group has much to thank Nassim Nicholas Taleb for. Taleb’s famous book, The Black Swan, describes the power of unforeseeable events, and the damage they can wreak on unsuspecting societies. This Lebanese-American writer and statistician thinks of himself as an epistemologist of randomness as opposed to a businessman. His work on probability examines the limitations of knowledge, and likewise proves the importance of anticipating seemingly impossible scenarios.</p>
+<p>This extremely skeptical starting point has led Taleb to oppose large scale social theorizing. He has gone so far as to say that the Nobel Prize in economics should be done away with, for the damage that economic metanarratives does is immense. Instead, he advances what he calls “robustification” and “anti-fragility.” Not surprisingly, his Ph.D. dissertation focused on the mathematics of derivatives pricing, which is arguably the most unstable part of the market. Regardless of whether you think Taleb goes too far in his sweeping rebuttal of most economic theorizing, at the very least this very bright man’s words are a much needed call for sobriety in a market otherwise known for excess.</p>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>Andrei Shleifer (fave in my 30s, Smith)</p></li>
+<li><p>Heck-of a-man (fave in my 40s, Nietzsche)</p></li>
+<li><p>Joseph Stiglitz (fave in my 20s, Marx)</p></li>
+</ol>
+<p>.</p>
+<p>As of now it’s likely that I’m “done”</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   Dethrone μ 
+              \
+               Become ψ —&gt; Aesthetic 𝛿 —&gt; Embodiment κ
+                /
+                 Create σ 
+
+Create a table for book chapter (2)
+Enumerate all risk factors (3)
+Reference them 
+Bunch them together as “calculator”
+Reveal key missing variables 
+x2
+Genetic risk factors 
+Perinatal risk factors 
+Life-course events 
+Nondonor risk 
+Donor risk
+x3
+Factor of concern 
+Literature: donor vs nondonor 
+
+     Perinatal μ 
+                 \
+                  Life-Course ψ —&gt; Nondonor 𝛿 —&gt; Donor κ
+                  /
+                   Genetic σ
+</pre></div>
+</div>
+<p>.</p>
+<p>The warrior has got to be a first-rate psychologist<br />
+With a nuanced understanding of the weak
+And their penchant for high priests<br />
+For Pasteurs green, waters still<br />
+Patience, arbitrage, resiliency are key</p>
+<p>.</p>
+<p>Yea— I would do it all over again!</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>        Shepherd μ 
+                   \
+                    Pastures ψ —&gt; Restores 𝛿 —&gt; Yea κ
+                    /
+                    Enemies σ 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>       Yours Truly μ 
+                     \
+                      Ain’t Nothing, Rent  ψ —&gt; Cum, Spa 𝛿 —&gt; “Rod”, Stuff κ
+                     /
+                     Table, Hennessy σ 
+</pre></div>
+</div>
+<p>.</p>
+<p>I had a very good time the last time you were here &amp; I’ve battle injuries to show for it — war stories to tell</p>
+<p>Since you gave me something I’ve never experienced in 40y then that’s 👌🏾. Only a true warrior would understand</p>
+<p>But a warrior must remain well practiced. Here it’s a defeated joy: I’m at one glorious in this battle, but then frustrated by the scarcity of battles</p>
+<p>.</p>
+<p>I’m out of town until March</p>
+<p>.</p>
+<p>Aren’t you supposed to be a catholic<br />
+How do you feel about doing this<br />
+On Ash Wednesday — beginning of lent?</p>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>Young Nietzsche was a precious fellow who was appointed professor at 24 before completion of his PhD</p></li>
+<li><p>During his scholarship he identified worthy enemies against whom he’d measure his power</p></li>
+<li><p>His first attempt at 28yo is the work of a fledging scholar steeped in ancestral worship</p></li>
+<li><p>But Ecce Homo beautifully illustrates how he kept disrupting himself through strength training</p></li>
+<li><p>At 6k feet above the fray he reserved his energy for duals with Greeks, Hebrews, Christians, and Germans</p></li>
+</ol>
+<p>.</p>
+<p>Virtually all previous gods have been “beings”: static in essence
+But the Christian god is always self disrupting
+He was the Father, then Son, now Holy—</p>
+<p>.</p>
+<p>Sega —</p>
+<p>.</p>
+<p>sophas</p>
+<p>.</p>
+<p>SOPHAS — what is left?</p>
+<ol class="arabic simple">
+<li><p>Professional Transcript Entry $69</p></li>
+<li><p>My transcript from the Bloomberg School  (This I can do in July)</p></li>
+<li><p>Transcript from SoM (On its way)</p></li>
+<li><p>Submission fees of $135</p></li>
+<li><p>LoR receipt isn’t necessary on my part (may “check status” after submission)</p></li>
+</ol>
+<p>.</p>
+<p>Daniel</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>      Gold μ 
+            \ (Follow)
+             Silver ψ —&gt; Iron  𝛿—&gt; Clay κ
+            /(Hammer)
+             Bronze σ 
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Nebuchadnezzar <a class="reference external" href="https://link.springer.com/article/10.1007/BF01533125">Nietzsche</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+       Babylon μ 
+                 \ (Fall)
+                  Persia ψ —&gt; Rome 𝛿—&gt; World κ
+                 /(Hammer)
+                 Greece σ 
+                     
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">There</span> <span class="ow">is</span> <span class="n">such</span> <span class="n">a</span> <span class="n">thing</span> <span class="k">as</span> <span class="n">involuntary</span> <span class="n">coital</span> <span class="n">incontenance</span><span class="p">,</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">subtly</span> <span class="n">different</span> <span class="n">variant</span> <span class="n">of</span> <span class="n">voluntary</span> <span class="n">coital</span> <span class="n">incontenance</span>
+
+</pre></div>
+</div>
+<p>.</p>
+<p>5418 Fort Hamilton Pkwy<br />
+Brooklyn NY 11219<br />
+United States</p>
+<p>.</p>
+<p>The shrine, Harlem</p>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">6</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://ideas.repec.org/top/top.person.all.html">herbert</a> <a class="reference external" href="https://muzaale.github.io/book/bilowozo.html#uncertainty">simon</a></p>
+</aside>
+<aside class="footnote brackets" id="id5" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">7</a><span class="fn-bracket">]</span></span>
+<p>with hindsight<a class="reference external" href="https://en.wikipedia.org/wiki/Credit_Suisse#Ownership">.</a>..</p>
+</aside>
+</aside>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./bloc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

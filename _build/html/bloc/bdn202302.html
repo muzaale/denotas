@@ -1,0 +1,1685 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>02/2023 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bloc/bdn202302';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/practicing.png" class="logo__image only-light" alt="Nothin' - Home"/>
+    <script>document.write(`<img src="../_static/practicing.png" class="logo__image only-dark" alt="Nothin' - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbloc/bdn202302.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bloc/bdn202302.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>02/2023</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">02/2023</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">03/2023</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>02/2023<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Sharon</p>
+<p>02/02</p>
+<p>Joram Tibasimwa</p>
+<p>.</p>
+<p>Weihenstephaner</p>
+<p>02/23</p>
+<p>VAH-EYE-HEN STEPH-AH-NAH</p>
+<p>.</p>
+<p>Fawaz/Ping</p>
+<p>02/23</p>
+<p>ssc nmissing</p>
+<p>.</p>
+<p>Lawrence</p>
+<p>02/23</p>
+<ol class="arabic simple">
+<li><p>Deaths outside hospital</p></li>
+<li><p>Minority and access</p></li>
+<li><p>CDC wonder data: outpatient vs. inpatient death</p></li>
+<li><p>Underlying cause of death by ICD</p></li>
+<li><p>To better understand</p></li>
+<li><p>PPT (criteria)</p></li>
+<li><p>Limiting factor is CDC: 75,000 rows is limit</p></li>
+<li><p>Export .txt delimited file</p></li>
+</ol>
+<p><a class="reference external" href="https://wonder.cdc.gov/controller/datarequest/D77">https://wonder.cdc.gov/controller/datarequest/D77</a></p>
+<p>.</p>
+<p>hymns</p>
+<p>2023</p>
+<ol class="arabic simple" start="0">
+<li><p>Dear Lord and father of man kind</p></li>
+<li><p>Immortal love</p></li>
+<li><p>Alleluia song to Jesus</p></li>
+<li><p>My God how wonderful you are</p></li>
+<li><p>The lords my shepherd</p></li>
+<li><p>God, whose alright word</p></li>
+<li><p>Come Oh Long Expected Jesus</p></li>
+<li><p>Love Divine</p></li>
+<li><p>Come Holy Ghost</p></li>
+<li><p>The Lord Is My Shepherd</p></li>
+<li><p>Be thou my guide</p></li>
+</ol>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Dear</span> <span class="n">lord</span> <span class="ow">and</span> <span class="n">father</span> <span class="n">of</span> <span class="n">mankind</span><span class="p">,</span>
+<span class="n">Forgive</span> <span class="n">our</span> <span class="n">foolish</span> <span class="n">ways</span><span class="p">;</span> 
+<span class="n">Re</span><span class="o">-</span><span class="n">cloth</span> <span class="n">us</span> <span class="ow">in</span> <span class="n">our</span> <span class="n">rightful</span> <span class="n">mind</span><span class="p">,</span>
+<span class="n">In</span> <span class="n">purer</span> <span class="n">loves</span> <span class="n">thy</span> <span class="n">service</span> <span class="n">find</span><span class="p">,</span> 
+<span class="n">In</span> <span class="n">deeper</span> <span class="n">reference</span> <span class="n">praise</span><span class="p">:</span> 
+<span class="n">In</span> <span class="n">deeper</span> <span class="n">reference</span> <span class="n">praise</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>.</p>
+<p>Fellini</p>
+<p>8 1/2</p>
+<p>Dream sequence</p>
+<p>.</p>
+<p>Jerk Taco</p>
+<p>02/04/23</p>
+<ol class="arabic simple">
+<li><p>Oxtail (large) x2</p></li>
+<li><p>Jerk Chicken (large)</p></li>
+</ol>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>8 1/2
+
+01/23
+
+I thought my ideas were so clear. I wanted to make an honest film. No lies whatsoever. I thought I had something so simple to say. Something useful to everybody. A film that could help to bury forever all those dead things we carry within ourselves. Instead, I’m the one without the courage to bury anything at all. And now I’m utterly confused. This launch pad to deal with… I wonder why things turned out this way. When did I go wrong? I really have nothing to say, but I want to say it all the same.
+</pre></div>
+</div>
+<p>.</p>
+<p>Rely</p>
+<p>01/23</p>
+<p>Muscle<br />
+Faith<br />
+Data</p>
+<p>.</p>
+<p>Craft Beer Cellar</p>
+<p>02/05</p>
+<p>Penn 12:40pm - 1:40pm<br />
+Union 2pm-3pm</p>
+<p>.</p>
+<p>Miracle</p>
+<p>02/05</p>
+<p>Marvin sapp/Jonathan Dunn/Kevin Bond<br />
+Find YouTube <a class="reference external" href="https://www.youtube.com/watch?v=1gCurp9xAvs">tutorials</a><br />
+The scales in E-flat are unbelievable</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Verbs</span> 
+
+<span class="mi">2023</span>
+
+<span class="n">Do</span>
+<span class="n">Be</span> 
+<span class="n">Have</span> 
+
+<span class="n">X</span>
+
+<span class="n">Muscle</span> <span class="k">as</span> <span class="n">pessimism</span><span class="p">,</span> <span class="n">Vici</span> <span class="n">vs</span><span class="o">.</span> <span class="n">Labor</span>
+<span class="n">Faith</span> <span class="ow">in</span> <span class="n">data</span><span class="p">,</span> <span class="n">Errata</span> <span class="n">vs</span><span class="o">.</span> <span class="n">Metaphysics</span>
+<span class="n">Data</span><span class="o">-</span><span class="n">blockers</span><span class="p">,</span> <span class="n">Oblivio</span> <span class="n">vs</span><span class="o">.</span> <span class="n">Psychosis</span>
+
+<span class="n">X</span>
+
+<span class="n">Ambition</span> 
+<span class="n">Q</span><span class="o">&amp;</span><span class="n">A</span> <span class="nb">type</span> 
+<span class="n">Slacker</span> 
+</pre></div>
+</div>
+<p><a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>39<span class="fn-bracket">]</span></a></p>
+<p>.</p>
+<p>Woke</p>
+<p>2023</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=4qW7YuY25aQ">Black</a> Grammy</p>
+<p>.</p>
+<p>Abdul — servant<br />
+Abi/Abu — father<br />
+Melech/Malik — king<br />
+Al-Malik (God)</p>
+<p>Mālik-ul-Mulk</p>
+<p>.</p>
+<p>Obuvunanisibwa</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Caffo
+
+02/06
+
+Ziqi Fu
+Phyllis Wei
+
+0.clonegithub repo for HW1
+— have to set up SSH keys
+— but this aint good workflow
+
+1.github username quiz 
+2.passwordless logins for jupyterlab server on gitHub
+— start terminal
+— generate your key: ssh-keygen -t ed25519-sk -C &quot;YOUR_EMAIL&quot;
+— more id_rsa (consider mv id_rsa.pub id_rsa)
+— D
+— navigate to your ssh keys on github 
+— paste in the key (you copied &amp; added above)
+— ls -al
+
+https://www.jhsph.edu/courses/course/35871/2022/140.628.01/data-science-for-public-health-i
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p>2023</p>
+<p>Vici — Runneth ‘o<br />
+Errata - Conjure<br />
+Oblivio - Data</p>
+<p>.</p>
+<p>My girls got a girlfriend</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>LESSONS FROM JACOB: FROM A FRAUDSTER TO A FORWARD-STAR
+
+Temitope Jaiyeola
+￼
+Temitope Jaiyeola
+Associate Professor of Mathematics
+Published Aug 27, 2020
++ Follow
+
+LESSONS FROM JACOB: FROM A FRAUDSTER TO A FORWARD-STAR
+
+&#39;Jacob&#39; means &#39;supplanter&#39;=One who wrongfully or illegally seizes and holds the place of another i.e. usurper). In the bible, Jacob did some things:
+(i) he deceitfully made Esau to sell his birthright; and
+(ii) took Esau&#39;s blessing by false pretense.
+Of course, Jacob didn&#39;t need to do all these to prosper. But his mum encouraged and supported him.
+(i) and (ii) portray him in the light of today&#39;s internet fraudsters commonly called &#39;Yahoo boys&#39;. By deceitfully taking someone&#39;s birthright through exchange with food is similar to &#39;advance fee fraud&#39; which many tag &#39;419&#39; in Nigeria. Furthermore, birthright being exclusive to an individual is like a password or bank account details. By pretending to be Esau in dressing and speech, Jacob deceived his father. This is a &#39;yahoo boy&#39; way of operation.
+He ended up suffering for all he did. He even met a senior &#39;Yahoo boy&#39; in the person of Laban who:
+
+(a) changed his salary 10 times;
+(b) deceived him maritally to serve for another 7 years after serving for an initial 7 years (making 14 years and was not still willing to release him);
+(c) who was part of the reason why Jacob lost his preferred wife Rachel at an early age.
+(e) He lived in the fear of Esau;
+(f) Was deceived by his children that Joseph had died;
+(g) He went through that trauma for years.
+
+This was why God had to change his name from Jacob to Israel. One can use these to minister to Yahoo boys that they should repent or await future punishments and consequences.
+In fact, Jacob himself at old age confessed to Pharoah of his struggles through evil times.
+
+Gen 47:8 And Pharaoh said unto Jacob, How old art thou?
+
+Gen 47:9 And Jacob said unto Pharaoh, The days of the years of my pilgrimage are an hundred and thirty years: few and EVIL HAVE THE DAYS OF THE YEARS OF MY LIFE BEEN, and have not attained unto the days of the years of the life of my fathers in the days of their pilgrimage.
+
+Looking at Jacob in the light of the above, we can use him to preach repentance to yahoo boys. But this must be well explained and analyzed.
+</pre></div>
+</div>
+<p>.</p>
+<p>Psalm 121</p>
+<p>2023</p>
+<p>From whence cometh my help?<br />
+From whence cometh evil?<br />
+From whence cometh earthquakes?</p>
+<p>.</p>
+<p>Life = Physical + Metaphysical</p>
+<p>2023</p>
+<ol class="arabic simple">
+<li><p>AI</p></li>
+<li><p>Deepfake</p></li>
+<li><p>Even AI for deepfake porn</p></li>
+</ol>
+<p>X</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=_9d9d4mEsTE">Libel</a></p></li>
+<li><p>Rigor</p></li>
+<li><p>Stick to the physical identity (i.e., DNA, fingerprints, digital ID, get offline)</p></li>
+</ol>
+<p>X</p>
+<ol class="arabic simple">
+<li><p>Jacob</p></li>
+<li><p>Fraud</p></li>
+<li><p>Esau</p></li>
+</ol>
+<p>.</p>
+<p>White Lotus: S2</p>
+<p>2023</p>
+<ol class="arabic simple">
+<li><p>Jealousy</p></li>
+<li><p>Paranoia</p></li>
+<li><p>Naivety</p></li>
+<li><p>Sex</p></li>
+<li><p>Faith</p></li>
+</ol>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Existentialism</span>
+
+<span class="mi">2023</span>
+
+<span class="n">Great</span> <span class="n">lectures</span>
+
+<span class="o">*</span> 		<span class="n">Michel</span> <span class="n">Foucault</span>
+<span class="o">*</span> 		<span class="n">Sun</span> <span class="n">Ra</span> <span class="n">at</span> <span class="n">UC</span> <span class="n">Berkeley</span>
+<span class="o">*</span> 		<span class="n">Richard</span> <span class="n">Feynman</span>
+<span class="o">*</span> 		<span class="n">Joseph</span> <span class="n">Campbell</span>
+<span class="o">*</span> 		<span class="n">Carl</span> <span class="n">Sagan</span>
+<span class="o">*</span> 		<span class="n">Margaret</span> <span class="n">Atwood</span>
+<span class="o">*</span> 		<span class="n">Jorge</span> <span class="n">Luis</span> <span class="n">Borges</span>
+<span class="o">*</span> 		<span class="n">Leonard</span> <span class="n">Bernstein</span>
+<span class="o">*</span> 		<span class="n">Richard</span> <span class="n">Dawkins</span>
+<span class="o">*</span> 		<span class="n">Buckminster</span> <span class="n">Fuller</span>
+<span class="o">*</span> 		<span class="n">Walter</span> <span class="n">Kaufmann</span> <span class="n">on</span> <span class="n">Existentialism</span>
+<span class="o">*</span> 		<span class="n">Jacques</span> <span class="n">Lacan</span>
+<span class="o">*</span> 		<span class="n">Roland</span> <span class="n">Barthes</span>
+<span class="o">*</span> 		<span class="n">Nobel</span> <span class="n">Lectures</span> <span class="n">by</span> <span class="n">Writers</span>
+<span class="o">*</span> 		<span class="n">Toni</span> <span class="n">Morrison</span>
+<span class="o">*</span> 		<span class="n">Bertrand</span> <span class="n">Russell</span>
+<span class="o">*</span> 		<span class="n">Oxford</span> <span class="n">Philosophy</span> <span class="n">Lectures</span>
+
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">openculture</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+<p>.</p>
+<p>Ideal</p>
+<p>2023</p>
+<p>Rudderless<br />
+Twenty two<br />
+Middle-class</p>
+<p>.</p>
+<p><a class="reference external" href="https://www.tutorialspoint.com/python/python_functions.htm">Objects</a> = Data + Methods</p>
+<p>.</p>
+<p>Ella Mai/Babyface</p>
+<p>2023</p>
+<ol class="arabic simple">
+<li><p>For the lover in you/This is</p></li>
+<li><p>There you go/Boo’d up</p></li>
+<li><p>Can’t we talk/I keeps on fallin’</p></li>
+</ol>
+<p>.</p>
+<p>Italy</p>
+<p>2016</p>
+<p>Milano<br />
+Venecia<br />
+Bologna<br />
+Firenze<br />
+Roma</p>
+<p>2023</p>
+<p>Parma<br />
+Reggio<br />
+Rimini (San Marino)<br />
+Napoli<br />
+Palermo<br />
+Catania</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Italian
+
+02/05
+
+Grazie di tutto 
+Tutta la notte 
+Si, tu!
+Tu mi turbi 
+Commandatore
+Buornonotte tutte 
+Tutti La vita 
+La mare 
+Vino Bellissimo, Sangiovese 
+</pre></div>
+</div>
+<p>.</p>
+<p>Yale</p>
+<p>2023</p>
+<p>Larissa MacFarquhar</p>
+<p><a class="reference external" href="https://www.newyorker.com/magazine/2002/09/30/the-prophet-of-decline">https://www.newyorker.com/magazine/2002/09/30/the-prophet-of-decline</a></p>
+<p>.</p>
+<p>Moreover, action requires an inhibition of consciousness—it requires turning away from other possibilities and, in the moment of decision, blocking off all those mental motions that work against action, such as futility and ambivalence. The will to act, therefore, is a sign not that a man is full of force but that he is empty of human richness. “The exaltation of the will, in Iago,” Bloom writes, “emanates from an ontological lack so great that no human emotion possibly could fill it.” Action, decision, will—all are limited. Bloom’s hero is Hamlet, whom he compares to Nietzsche’s Dionysian man. “Both have once looked truly into the essence of things,” he writes. “They have gained knowledge, and nausea inhibits action; for their action could not change anything in the eternal nature of things. . . . Knowledge kills action; action requires the veils of illusion: that is the doctrine of Hamlet.”</p>
+<p>.</p>
+<p>2023</p>
+<p>Science vs. Theology</p>
+<p>Duncan just shared<br />
+<a class="reference external" href="https://www.youtube.com/watch?app=desktop&amp;amp;v=xt3BGDMRRts&amp;amp;feature=youtu.be">https://www.youtube.com/watch?app=desktop&amp;v=xt3BGDMRRts&amp;feature=youtu.be</a><br />
+With an emphasis on min 41-51</p>
+<p>x</p>
+<p>AI<br />
+Deepfake porn<br />
+Libel/Rigor/Stick to Physical Activity</p>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=F5spd9mrXqg">400 IM</a></p>
+<p>Michael Phelps: 4:03:84 long course<br />
+Day Seto: 3:54:81 short course</p>
+<p>.</p>
+<p>Ray-Ban</p>
+<p>2023</p>
+<ol class="arabic simple">
+<li><p>RB3025</p></li>
+<li><p>Classic Polarized</p></li>
+<li><p>Aviator</p></li>
+<li><p>62 Millimeters</p></li>
+<li><p>Any Color</p></li>
+</ol>
+<p>$161</p>
+<p>X</p>
+<ol class="arabic simple">
+<li><p>RB3449</p></li>
+<li><p>Aviator</p></li>
+<li><p>Silver/Clear/Blue/Grey Gradient</p></li>
+<li><p>59 Millimeters</p></li>
+<li></li>
+</ol>
+<p>$188</p>
+<p>.</p>
+<p>Hal</p>
+<p>2023</p>
+<p>Adieu, and take thy praise with thee to Heaven!</p>
+<p>.</p>
+<p>Ecce Homo</p>
+<p>2023</p>
+<p>Sblood, ‘twas time to counterfeit, or that hot termagant Scot had paid me scot and lot to</p>
+<p>.</p>
+<p>Valor</p>
+<p>2023</p>
+<p>The better part of valor is—</p>
+<p>.</p>
+<p>Falstaff</p>
+<p>2023</p>
+<p>I grant you I was down and out</p>
+<p>.</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/smart-stats/ds4bio_book/main/book/assetts/kirby21AllLevels.csv">https://raw.githubusercontent.com/smart-stats/ds4bio_book/main/book/assetts/kirby21AllLevels.csv</a></p>
+<p>.</p>
+<p>Tasks</p>
+<p>2023</p>
+<ol class="arabic simple">
+<li><p>There are mundane tasks that every generation of analysts deals with</p></li>
+<li><p>It is these for which we are building an in-house catalogue</p></li>
+<li><p>Easily accessible and usable by new and old hires</p></li>
+<li><p>Analysts should be spending time on idiosyncratic tasks</p></li>
+<li><p>Question then is what are the mundane and what the idiosyncratic?</p></li>
+</ol>
+<p>.</p>
+<p>Chasing Wind</p>
+<p>2023</p>
+<ol class="arabic simple">
+<li><p>Ambition/Power</p></li>
+<li><p>Meaning/Knowledge</p></li>
+<li><p>Please/Fun</p></li>
+</ol>
+<p>Ecclesiastes 1:14</p>
+<p>I have seen all the works that are done under the sun; and,<br />
+behold, all is vanity and vexation of spirit.</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Workflow
+
+2023
+
+1.Organization 
+— on GitHub
+— ds4ph-bme
+
+2.Repository
+— ds4ph-spring-hw-4-muzaale
+— or other homework 
+— classroom repo is private
+— your own is public 
+
+3.File
+— add or open
+— github.dev (not github desktop)
+— README.md for instance
+— bsph is paying for python
+— otherwise google colab is an option
+— download .ipytn then upload to github
+
+4.Terminal
+— not yet figured this out
+— where it is and its advantage
+— but I think its code space/jupyter
+— @muzaale ➜ /workspaces/codespaces-jupyter (main) $ 
+
+5.Wepage
+— control+U (in chrome)
+— source code
+— .html (hypertext markup language)
+— indent within levels (caffo)
+— not required as it is in python
+— but good practice 
+— double-click on .html file
+— https:// or file://
+— webserver serves a local file to the world
+— JSON &amp; CSV two most popular data formats
+— software &amp; analysis folks
+
+6.HW4
+— interactive figure
+— host on personal repo
+— not on HW4/class repo
+— shared link should work 
+
+7.Languages
+— R, Python
+— those are the two
+— virtual studio code (vs code) vs. r studio 
+
+8.Other
+— https://github.com/bcaffo/testClassRepo2023
+— https://bcaffo.github.io/testClassRepo2023/figure.html
+
+9.Relational
+— databases
+— connect tables to one another
+— most popular data format every created
+— being used in industry
+— we don’t teach them!!
+— sql via sqlite (structured query language) 
+— like a database on phone for app
+— for bigger databases maybe something else
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Circa 2010 I randomly learned some python for a med school viral genetics project. and promptly forgot everything. Dusted some stuff off for PMAP purposes but it’s still very dusty and I think I want to audit Cafo’s class next year to refresh</p>
+<p>— Bill</p>
+<p>.</p>
+<p>PMAP</p>
+<p>2023</p>
+<ol class="arabic simple">
+<li><p>Access to PMAP</p></li>
+<li><p>EHR, Patient Surveys, Clinical Trials, Outpatients Visits</p></li>
+<li><p>PMAP Data Projection</p></li>
+<li><p>PMAP Data Projection of KT Cohort</p></li>
+<li><p>Linkage with Neighborhood level indices, Supplement with SSDMF</p></li>
+<li><p>Data quality assessment, data cleaning and management, data analysis, prediction model building</p></li>
+<li><p>Model integration back into the EHR (for clinicians to use): MGB PhD ***</p></li>
+<li><p>Contents and Capabilities of Precision Medicine Analytics Platform</p></li>
+<li><p>Working with Scott Zeger</p></li>
+</ol>
+<p>X</p>
+<p>Parametric</p>
+<p>.</p>
+<p>Kalinaki</p>
+<p>2023</p>
+<p>Mr Kalinaki is a journalist and  poor man’s freedom fighter.</p>
+<p>.</p>
+<p>Navel-gazing</p>
+<p>2023</p>
+<p>There is, culturally, an image of a man in black, holding a skull, who’s deemed to be self-indulgent, <a class="reference external" href="https://www.branaghcompendium.com/artic-hc297.htm">navel gazing</a>, the image of a melancholy, suicidal man,’’ said Branagh, relaxing at the Houstonian after a recent preview screening of his film</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Carbon
+
+2023
+
+Why so hard!&quot;--said to the diamond one day the charcoal; &quot;are we then not near relatives?&quot;--
+Why so soft? O my brethren; thus do I ask you: are ye then not--my brethren?
+Why so soft, so submissive and yielding? Why is there so much negation and abnegation in your hearts? Why is there so little fate in your looks?
+And if ye will not be fates and inexorable ones, how can ye one day-- conquer with me?
+And if your hardness will not glance and cut and chip to pieces, how can ye one day--create with me?
+For the creators are hard. And blessedness must it seem to you to press your hand upon millenniums as upon wax,--
+--Blessedness to write upon the will of millenniums as upon brass,--harder than brass, nobler than brass. Entirely hard is only the noblest.
+This new table, O my brethren, put I up over you: BECOME HARD!--
+30
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Trajectory</p>
+<p>2023</p>
+<p>The courses of his youth promis’d it not</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Carbon copies 
+
+Why so hard!&quot;--said to the diamond one day the charcoal; &quot;are we then not near relatives?&quot;--
+
+Why so soft? O my brethren; thus do I ask you: are ye then not--my brethren?
+
+Why so soft, so submissive and yielding? Why is there so much negation and abnegation in your hearts? 
+
+Why is there so little fate in your looks?
+
+And if ye will not be fates and inexorable ones, how can ye one day-- conquer with me?
+
+And if your hardness will not glance and cut and chip to pieces, how can ye one day--create with me?
+
+For the creators are hard. And blessedness must it seem to you to press your hand upon millenniums as upon wax,--
+
+--Blessedness to write upon the will of millenniums as upon brass,--harder than brass, nobler than brass. Entirely hard is only the noblest.
+
+This new table, O my brethren, put I up over you: BECOME HARD!--
+
+X
+
+1 Corinthians 2:9
+Open menu
+King James Version
+Open menu
+
+9 But as it is written, Eye hath not seen, nor ear heard, neither have entered into the heart of man, the things which God hath prepared for them that love him.
+
+X
+
+Is this the basis of all my aesthetics? 
+Yes, yes, yes!
+Three times yes!
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Angleterr</p>
+<p>2023</p>
+<p>But Branagh, steeped in the English theater tradition in which the role and the play are more important than the actor, doesn’t seem to have any major pretensions about his work or importance.</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Nationality
+
+2023
+
+Actor
+Role &amp; Play
+Censor
+
+X
+
+US: Actor &gt; Role &amp; Play —&gt; Celebrity
+Britain: Role &amp; Play &gt; Actor —&gt;  Modesty
+Russia: Censor &gt; Actor, Role &amp; Play —&gt; Kremlin 
+</pre></div>
+</div>
+<p>.</p>
+<p>I think people are always looking for symbols of something that works in a difficult situation, be it the perils of show business or indeed the difficult situation for anyone these days of being married or in a relationship,’’ Branagh said of the split. “”When they see those models not work, it’s disappointing</p>
+<p>.</p>
+<p>Milano</p>
+<p>2023</p>
+<p>it is a very lively, curious, bright, vibrant story that is not about people predisposed to be manic-depressives but people struggling with the business of being alive</p>
+<p>a man in turmoil commenting and reacting in a sort of early midlife crisis to everything that goes on around him which involves his views on family, his views on religion, his views on war, and his views on politics</p>
+<p>this incredible debate – about everything – celebrates the glories and the utter insignificance of humans in the cosmos</p>
+<p>Gianmaria Biancuzzi</p>
+<p><a class="reference external" href="https://milanoartguide.com/reviews/review-hamlet-latella-piccolo-teatro/">https://milanoartguide.com/reviews/review-hamlet-latella-piccolo-teatro/</a></p>
+<p>.</p>
+<p>Give me life!</p>
+<p>2023</p>
+<p>Honor<br />
+KnowledgeLife</p>
+<p>Thus saith Falstaff</p>
+<p>.</p>
+<p>openai</p>
+<p>2023</p>
+<p>Deftly handled my questions<br />
+Hamlet vs. Harry<br />
+Similarities</p>
+<p>.</p>
+<p>Shiny</p>
+<p>2023</p>
+<p>— open ai<br />
+— web apps<br />
+— presentation</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Limits
+
+2023
+
+1.Really big data 
+— causes of death in the US: 1959-2017
+— remote/institutional computing power
+— linux command terminal
+— how about free R? Even python via colab 
+— at least be able to import/export any format into/outof R
+
+2.Quietly
+— be in control of monitor and .log output
+— easily identify bugs
+— monitor progress on scripts that run for hours-to-days
+
+3.Languages
+— SAS
+— R
+— Python
+— Collaborators
+— May send and request non-Stata formats
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Vanity
+
+2023
+
+Bake
+Wake
+Cake 
+
+2. Wake
+
+Where be your gibes now? Your gambols? Your songs? Your flashes of merriment, that were wont to set the table on roar? 
+
+The contrast between Yorick as &quot;a fellow of infinite jest, of most excellent fancy&quot; and his grim remains reflects on the theme of earthly vanity: death being unavoidable, the things of this life are inconsequential
+
+3. Cake 
+
+How stand I then that have a father maim’d, a mother stain’d, excitements of my reason and blood, and let all sleep? 
+
+</pre></div>
+</div>
+<p>.</p>
+<p>cooler heads prevailed</p>
+<p>.</p>
+<p>The Swimmers</p>
+<p>2023</p>
+<ol class="arabic simple">
+<li><p>Netflix</p></li>
+<li><p>Script</p></li>
+<li><p>Compelling</p></li>
+</ol>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Hannah
+
+02/20/2023
+
+Ancestry - origin: person, place, time // one’s heritage tied to a geographic region, place of origin, or cultural group
+
+Ethnicity - shared culture // a group with a shared culture, language, religion, and/or expenses and generally associated with a geographic region or country 
+
+Race - hierarchical grouping classification or categorization of people based on perceived differences irrespective of culture, country of origin, or ancestry 
+
+x
+
+eGFR equation that included race 
+Been replaced with equation that excludes race
+Variability of data 
+
+x
+
+Review Lancet article 
+Mind mapping 
+How is that risk related to race?
+Once suggestion
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Constructs 
+
+02/20/23
+
+1.Nothing in nature ensures equality among humans. Simple fact of biology 
+
+2.Social justice warriors claim that race is a social construct
+
+3.But equality is a social construct as well, justice is a social construct, equity is a social construct.
+
+4.They reflect social values of a liberal kind whereas race reflects social values of a more historical kind. 
+
+5.Does being a social construct per se invalidate something? Or is it context specific? (Equality is invalidated by that argument or is it an exception, a goal, a desired construct?)
+
+X
+
+At bottom: neglecting a process and resorting to definitions &amp; redefining unpleasant stuff 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>HW5
+
+2023
+
+Colab will not work anymore
+Gotta switch over to class server 
+Python file, not Jupyter
+
+Base R 
+Tidyverse 
+How to use the jupyter server!
+</pre></div>
+</div>
+<p>.</p>
+<p>Three generations</p>
+<p>2023</p>
+<p>Festo Kivengere</p>
+<p>Ruhakana Rugunda</p>
+<p>Kwame Rugunda</p>
+<p><a class="reference external" href="https://savannah.ug/leadership/">https://savannah.ug/leadership/</a></p>
+<p>.</p>
+<p>Remote work</p>
+<p>2023</p>
+<p>When you drink too much, you’re more likely to make bad decisions or act on impulse</p>
+<p>During a lab meeting via zoom. But has also happened in-person</p>
+<p>.</p>
+<p>Heed</p>
+<p>2023</p>
+<p>Deeds/Tame</p>
+<ol class="arabic simple">
+<li><p>Let them precede you</p></li>
+<li><p>They are most articulate</p></li>
+<li><p>And thats it all folks!</p></li>
+</ol>
+<p>Be-attitudes/Soothe</p>
+<ol class="arabic simple">
+<li><p>Blessedness of certain qualities</p></li>
+<li><p>Vary with ideology</p></li>
+<li><p>Imposed by the current powers</p></li>
+</ol>
+<p>Prudence/Abide</p>
+<ol class="arabic simple">
+<li><p>Put up with</p></li>
+<li><p>Mostly by avoidance</p></li>
+<li><p>Escape with the default: alcohol, drugs, hiding</p></li>
+</ol>
+<p>.</p>
+<p>Verbs</p>
+<p>2023</p>
+<ol class="arabic simple">
+<li><p>Do/Flaunt</p></li>
+<li><p>Be/Virtuous</p></li>
+<li><p>Hide/Avoid</p></li>
+</ol>
+<p>.</p>
+<p>Si tu vois ma mére</p>
+<p>.</p>
+<p>Blame</p>
+<p>22/23</p>
+<p>Armstrong was a foundational influence in jazz, shifting the focus of the music from collective improvisation to solo performance</p>
+<p>It’s because of him that we now have Kenny G &amp; smooth jazz. Just as we have the romantic musicians like Wagner because of Beethoven</p>
+<p>Emotional, navel-gazing, personality cult, and such stuff where the actor is bigger than the role they play. Where one whineth and seeketh comfort, wherein art sootheth the savage breast. Where classical Greco-Roman or Judaic virtues of strength are replaced with Christian and Vatican beatitudes</p>
+<p>One who tameth is now reviled for the hierarchical structures he imposed on the weak. The tamer, the one who once commanded, is now cancelled! His only option? Prudence! Hideth! Avoid!</p>
+<p>.</p>
+<p>We are the weird ones who have these ideas about art</p>
+<p>.</p>
+<p><a class="reference external" href="https://www.newyorker.com/culture/cultural-comment/does-kenny-g-make-good-music">https://www.newyorker.com/culture/cultural-comment/does-kenny-g-make-good-music</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=a546lxxJIhE">https://www.youtube.com/watch?v=a546lxxJIhE</a></p>
+<p><a class="reference external" href="https://www.amazon.com/gp/video/detail/B00D5DVU3A/ref=atv_hm_hom_1_c_lZOsi7_2_1">https://www.amazon.com/gp/video/detail/B00D5DVU3A/ref=atv_hm_hom_1_c_lZOsi7_2_1</a></p>
+<p>.</p>
+<p>Content</p>
+<p>2023</p>
+<p>Content creator</p>
+<ol class="arabic simple">
+<li><p>Something I mocked in the past</p></li>
+<li><p>But here I am preparing content for my Gen Z students</p></li>
+<li><p>They will surely have the last laugh :)</p></li>
+</ol>
+<p>.</p>
+<p>Babyface</p>
+<p>Launched a kid that wrote a thousand songs</p>
+<p>.</p>
+<p>Scrape this!</p>
+<p>2023</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/List_of_songs_written_by_Babyface">https://en.wikipedia.org/wiki/List_of_songs_written_by_Babyface</a></p>
+<p>.</p>
+<p>Nina omukwano gwange ye Yesu</p>
+<p>2023</p>
+<p>Yanunamya</p>
+<p>.</p>
+<p>Annuŋŋamya mu  makubo ag’obutuukirivu  olw’erinnya lye</p>
+<p>.</p>
+<p>η .</p>
+<p>2023</p>
+<p>Y’annuηηamya<br />
+Yakuη-ηαanyizza<br />
+Baakuη-ηαaanyizza 40m /-<br />
+ηηenda</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AYF</span> <span class="n">MISSION</span> <span class="n">STATEMENT</span>
+
+<span class="n">To</span> <span class="n">preach</span> <span class="n">the</span> <span class="n">gospel</span> <span class="n">of</span> <span class="n">the</span> <span class="n">saving</span> <span class="n">power</span> <span class="n">of</span> <span class="n">Jesus</span> <span class="n">Christ</span> <span class="n">through</span> <span class="n">music</span> <span class="ow">and</span> <span class="n">testimony</span> <span class="n">to</span> <span class="nb">all</span> <span class="n">peoples</span> <span class="n">of</span> <span class="n">different</span> <span class="n">tribes</span> <span class="ow">and</span> <span class="n">nations</span><span class="o">.</span>
+
+<span class="n">Preaching</span> <span class="n">has</span> <span class="n">often</span> <span class="n">been</span> <span class="n">done</span> <span class="ow">in</span> <span class="n">language</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="n">that</span> <span class="n">can</span> <span class="n">be</span> <span class="n">understood</span> <span class="n">by</span> <span class="n">the</span> <span class="n">target</span> <span class="n">audience</span><span class="p">,</span> <span class="ow">and</span> <span class="n">this</span> <span class="ow">is</span> <span class="n">reflected</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">linguistic</span> <span class="n">diversity</span> <span class="n">of</span> <span class="n">AYF</span> <span class="n">music</span><span class="o">.</span> <span class="n">As</span> <span class="n">we</span> <span class="n">preach</span> <span class="n">the</span> <span class="n">gospel</span> <span class="n">of</span> <span class="n">Christ</span><span class="p">,</span> <span class="n">we</span> <span class="n">warn</span> <span class="nb">all</span> <span class="n">about</span> <span class="n">the</span> <span class="n">wrath</span> <span class="n">of</span> <span class="n">God</span> <span class="n">against</span> <span class="n">godlessness</span> <span class="ow">and</span> <span class="n">wickedness</span> <span class="k">while</span> <span class="n">encouraging</span> <span class="n">the</span> <span class="n">body</span> <span class="n">of</span> <span class="n">believers</span> <span class="ow">in</span> <span class="n">Christ</span> <span class="n">into</span> <span class="n">true</span> <span class="n">worship</span> <span class="n">of</span> <span class="n">God</span> <span class="n">so</span> <span class="n">that</span> <span class="n">God</span> <span class="n">can</span> <span class="n">be</span> <span class="n">glorified</span> <span class="ow">in</span> <span class="nb">all</span> <span class="n">that</span> <span class="n">we</span> <span class="n">say</span> <span class="ow">and</span> <span class="n">do</span><span class="o">.</span>
+
+<span class="n">AYF</span> <span class="n">Band</span>
+
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">youtube</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">channel</span><span class="o">/</span><span class="n">UCZxR2Y8sF_WCv2BvLyBDGMA</span>
+</pre></div>
+</div>
+<p>.</p>
+<p>Pace</p>
+<p>2023</p>
+<p>9 IM sets<br />
+90min<br />
+2/3 m/s</p>
+<p>.</p>
+<p>Greta Thurnberg</p>
+<p>2023</p>
+<p>The lady, me thinks, doth <a class="reference external" href="https://www.youtube.com/watch?v=KAJsdgTPJpU">protest too much</a></p>
+<p>.</p>
+<p>Combination locks (for gym)</p>
+<p>2010: 25 33 08<br />
+2023: 13 31 21</p>
+<p>.</p>
+<p>Ganda</p>
+<p>2023</p>
+<p>ŋŋyamba, nnyinyonnyola</p>
+<p>.</p>
+</section>
+<section id="id3">
+<h1>03/2023<a class="headerlink" href="#id3" title="Link to this heading">#</a></h1>
+<p>PoV - Bill Maher</p>
+<p>2023</p>
+<p>— Uniform<br />
+— Predictable<br />
+— Feminine<br />
+— Diversity?<br />
+— Not of ideas!</p>
+<p>.</p>
+<p>2nd Derivative</p>
+<p>Concave like a cave<br />
+Convex cups hold water</p>
+<p>.</p>
+<p>Rigoletto</p>
+<p>2023</p>
+<p>Maddalena<br />
+Aspettatte</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#slacker </span>
+
+
+<span class="mi">2023</span>
+
+<span class="n">Recreational</span> <span class="n">smoker</span><span class="p">:</span> <span class="n">indulges</span> <span class="n">once</span> <span class="ow">in</span> <span class="k">while</span>
+<span class="n">Stoner</span><span class="p">:</span> <span class="n">indulges</span> <span class="n">once</span> <span class="n">a</span> <span class="n">day</span>
+<span class="n">Pothead</span><span class="p">:</span> <span class="n">high</span> <span class="n">more</span> <span class="n">times</span> <span class="n">than</span> <span class="ow">not</span>
+</pre></div>
+</div>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=Y7JcY6YzUxE">dolphin</a></p>
+<p>.</p>
+<p>Arsenal</p>
+<p>2023</p>
+<p>Arsenal came back<br />
+From 0-2 without striker<br />
+Jesus &amp; Nketiah injured<br />
+Trossard off with early injury</p>
+<p>.</p>
+<p>Bet 365</p>
+<p>2023</p>
+<p>Arsenal -110<br />
+Man City +110</p>
+<p><a class="reference external" href="https://www.nj.bet365.com/#/AC/B1/C172/D1/E74884037/F2/">https://www.nj.bet365.com/#/AC/B1/C172/D1/E74884037/F2/</a></p>
+<p>.</p>
+<p>Warren Campbell</p>
+<p>2023</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=jA19Epq3KMo">https://www.youtube.com/watch?v=jA19Epq3KMo</a></p>
+<p>.</p>
+<p>Trevor Noah</p>
+<p>2023</p>
+<p>Mimesis</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=jvzmPsqag9w">https://www.youtube.com/watch?v=jvzmPsqag9w</a></p>
+<p>.</p>
+<p>And why does everyone over the age of 40 still feel the need to talk about pronouns? Haven’t enough TV shows, movies, stand-up comics, dads, uncles, and grandads made every “joke” there is, including Rock’s? (“Yeah, I’m rich, but I identify as poor,” Rock said. “My pronoun is Broke.”)</p>
+<p>.</p>
+<p>Chris Rock</p>
+<p>2023</p>
+<p>None of us has ever been interviewed by the person that cheated on us, on television…  She hurt him way more than he hurt me</p>
+<p>And after this interview Rock implies that, “everybody in the world called him a bitch. I tried to call the motherfucker, I tried to call that man and give him my condolences, he didn’t pick up for me.” The comedian then went on to list off all the people in Hollywood who called Smith a “bitch” after the aforementioned interview including “The View,” “The Breakfast Club,” “Drink Champs” and so on. “Everybody called him a bitch and who did he hit? Me.”</p>
+<p>He then switched tone, “I love Will Smith, my whole life… he makes great movies. I rooted for Will Smith my whole life,” Rock said. “And now I watch ‘Emancipation’ just so I could watch him get whooped.”</p>
+<p><a class="reference external" href="https://www.indiewire.com/2023/03/chris-rock-selective-outrage-review-netflix-special-1234815941/amp/">https://www.indiewire.com/2023/03/chris-rock-selective-outrage-review-netflix-special-1234815941/amp/</a></p>
+<p>.</p>
+<p>TV</p>
+<p>Amazon: Rocky<br />
+Netflix: Bardo<br />
+HBO: New Jack City</p>
+<p>.</p>
+<p>Sankey</p>
+<p><a class="reference external" href="https://towardsdatascience.com/sankey-diagram-basics-with-pythons-plotly-7a13d557401a">https://towardsdatascience.com/sankey-diagram-basics-with-pythons-plotly-7a13d557401a</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MiT</span>
+
+<span class="mi">2023</span>
+
+<span class="c1">#chatgpt </span>
+<span class="c1">#openai </span>
+
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">technologyreview</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mi">2023</span><span class="o">/</span><span class="mi">03</span><span class="o">/</span><span class="mi">03</span><span class="o">/</span><span class="mi">1069311</span><span class="o">/</span><span class="n">inside</span><span class="o">-</span><span class="n">story</span><span class="o">-</span><span class="n">oral</span><span class="o">-</span><span class="n">history</span><span class="o">-</span><span class="n">how</span><span class="o">-</span><span class="n">chatgpt</span><span class="o">-</span><span class="n">built</span><span class="o">-</span><span class="n">openai</span><span class="o">/</span>
+
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">codespaces</span><span class="o">-</span><span class="n">jupyter</span><span class="o">/</span><span class="n">R_path</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>.</p>
+<p>GPT-3 has 175 billion parameters (the values in a network that get adjusted during training)</p>
+<p>.</p>
+<p>Cabrón/a - Asshole</p>
+<p>.</p>
+<p>Twins</p>
+<p>Kato<br />
+Nkuru</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#chrisrock
+#selectiveoutrage
+#jadapinket
+#willsmith
+
+
+&quot;Everybody in the world called him a b----,&quot; Rock said. &quot;I tried to call the motherf----- and give him my condolences; he ain’t pick up for me. Everybody called that man a b----, f------ Charlamagne [tha God] called him a b----, ‘The Breakfast Club’ called him a b----- and ‘The View’ and ‘The Talk,’ and every rapper, they called him a b----, his wife a predator, everybody called him a b----. Everybody! Everybody! And who does he hit? Me!&quot;
+
+Rock also accused Pinkett of pressuring him to not host the Oscars in 2016 because Smith wasn’t nominated. 
+&quot;So did I do some jokes about it, who gives a f---?&quot; he said. &quot;That&#39;s how it is. She starts it, I finish it. That&#39;s what the f--- happened. Nobody&#39;s picking on this b----. She started this s---.&quot;
+
+https://en.wikipedia.org/wiki/Three_wise_monkeys#/media/File:The_Three_Wise_Monkeys,_Nikk&amp;omacr;_T&amp;omacr;sh&amp;omacr;-g&amp;umacr;;_April_2018.jpg
+</pre></div>
+</div>
+<p>.</p>
+<p>It may indeed be safely predicted that once the English people have recovered from the first shock of Nietzsche’s thoughts, their biblical training will enable them, more than any other nation, to appreciate the deep piety underlying Nietzsche’s Cause</p>
+<p>DEAR ENGLISHMEN,—In one of my former writings I have made the remark that the world would have seen neither the great Jewish prophets nor the great German thinkers, if the people from among whom these eminent men sprang had not been on the whole such a misguided, and, in their misguidedness, such a tough and stubborn race. The arrow that is to fly far must be discharged from a well distended bow: if, therefore, anything is necessary for greatness, it is a fierce and tenacious opposition, an opposition either of open contempt, or of malicious irony, or of sly silence, or of gross stupidity, an opposition regardless of the wounds it inflicts and of the precious lives it sacrifices, an opposition that nobody would dare to attack who was not prepared, like the Spartan of old, to return either with his shield or on it.</p>
+<p>an aristocrat—a man who, just like the anarchist, but with a perfectly holy right, wishes to obey no laws but those of his own conscience; a man who thinks too highly of his own faith and persuasion, to convert other people to it</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=PkKj5jlNpwk">https://www.youtube.com/watch?v=PkKj5jlNpwk</a></p>
+<p>.</p>
+<p>Greatness</p>
+<p>Amores Perros<br />
+21 Grams<br />
+Babel<br />
+Biutiful<br />
+Birdman<br />
+Revenant</p>
+<p>.</p>
+<p>Sex</p>
+<p>2023</p>
+<p>Have you ever been offered sex on a menu?<br />
+Dry or wet?<br />
+I was baffled!</p>
+<p>.</p>
+<p>The best comedy punches up at people in power, not down at unprotected people — these comics have been in the game long enough to know this</p>
+<p>.</p>
+<p>And so it hurts him, like the thought of a lost Paradise, to see a herd grazing, or, nearer still, a child, that has nothing yet of the past to disown, and plays in a happy blindness between the walls of the past and the future</p>
+<p>.</p>
+<p>his life is the fairest who thinks least about life</p>
+<p>.</p>
+<p>HI2015 score</p>
+<p>2023</p>
+<ol class="arabic simple">
+<li><p>Nutrition</p></li>
+<li><p>Each</p></li>
+<li><p>Liz Sullivan</p></li>
+<li><p>Casey Rebholz</p></li>
+</ol>
+<p>.</p>
+<p>Graffiti</p>
+<p>2023</p>
+<p>Vigilantes?<br />
+Bando?<br />
+Ha!</p>
+<p>.</p>
+<p>Swimming</p>
+<p>2023</p>
+<ol class="arabic simple">
+<li><p>Streamline Position</p></li>
+<li><p>Dolphin Kick Up/Down</p></li>
+<li><p>Ankle Flexibility</p></li>
+<li><p>Undulate: Kick + Arm Counterbalance</p></li>
+<li><p>Velocity &gt; 1 m/s</p></li>
+</ol>
+<p>.</p>
+<p>Olobbo</p>
+<p>2023</p>
+<p>12pm - 10pm<br />
+Carving Room NoMA<br />
+The Pub &amp; the people<br />
+The consulate</p>
+<p>Catchup with Olobo<br />
+12pm Saturday 03/18/23<br />
+Carving Room NoMA<br />
+140 M St NE Washington, DC 20002</p>
+<p>.</p>
+<p>Umu</p>
+<p>2023</p>
+<p>So yes I am a lawyer by profession. Feminist, art(african) lover, curious brained, into business(I have co owned a betting company at some point this my long 39 years) and Ido plenty community building work.</p>
+<p>Tell me, what are your dating politics?</p>
+<p>.</p>
+<p>340.700</p>
+<p>2023</p>
+<p>Online<br />
+Github<br />
+Raw<br />
+.Do, .Ado, .DTA, .R, .csv<br />
+Tasks</p>
+<p>.</p>
+<p>First time</p>
+<p>2023</p>
+<p>To ever dream in language other than English<br />
+And it was some object-oriented language<br />
+Not too sure which but I suspect python</p>
+<p>Objects over time</p>
+<ol class="arabic simple">
+<li><p>Names</p></li>
+<li><p>Person</p></li>
+<li><p>Place</p></li>
+</ol>
+<p>Procedures (tasks) on blocks</p>
+<ol class="arabic simple">
+<li><p>If (over a scope)</p></li>
+<li><p>While</p></li>
+<li><p>For</p></li>
+</ol>
+<p>Scope</p>
+<ol class="arabic simple">
+<li><p>Lexical</p></li>
+<li><p>Dynamic (Run time)</p></li>
+</ol>
+<p>.</p>
+<p>Python</p>
+<p>In 2019, Python became the second most popular language on GitHub, the largest source code management website on the internet, second only to JavaScript</p>
+<p>.</p>
+<p>It’s the attitude of the eagle<br />
+— inspirational fella who appears to channel Nietzsche</p>
+<p>.</p>
+<p>Improving allocation efficiency of hard-to-place deceased donor kidneys: Predicting probability of discard or delay</p>
+<p>2010</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;&lt;</span><span class="n">dd_version</span><span class="p">:</span> <span class="mi">2</span><span class="o">&gt;&gt;</span>
+<span class="o">&lt;&lt;</span><span class="n">dd_include</span><span class="p">:</span> <span class="n">myfile</span><span class="o">.</span><span class="n">txt</span><span class="o">&gt;&gt;</span>
+
+<span class="n">echo</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">some</span> <span class="n">text</span> <span class="o">&gt;</span> <span class="n">myfile</span><span class="o">.</span><span class="n">txt</span>
+
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">stata</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">stata</span><span class="o">-</span><span class="n">news</span><span class="o">/</span><span class="n">news36</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">spotlight</span><span class="o">-</span><span class="n">markdown</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>.</p>
+<p>Stata</p>
+<p>Ides of March</p>
+<ol class="arabic simple">
+<li><p>User control of output</p></li>
+<li><p>Courseplus quizzes built on that (.log file)</p></li>
+<li><p>But also hand in script (.do file)</p></li>
+<li><p>Post file all .log output</p></li>
+<li><p>Jupyter book instead of .ppt</p></li>
+<li><p>Reverse catalogue (drop vs keep)</p></li>
+</ol>
+<p>.</p>
+<p>Winans</p>
+<p>His Gift — album</p>
+<p>.</p>
+<p>Cedric Caldwell</p>
+<p>2023</p>
+<p>Gives his sister-in-law the most compelling sound</p>
+<p>Worship is probably my favorite kind of music<br />
+— Cece Winans</p>
+<p>.</p>
+<p>My Bitch better have my money<br />
+— The Pimp in I’m gonna get you sucka</p>
+<p>.</p>
+<p>And that’s why I make the big bucks!</p>
+<p>.</p>
+<p>Passion</p>
+<p>2023</p>
+<p>Commit a <a class="reference external" href="https://www.gutenberg.org/files/773/773-h/773-h.htm#page145">forgery</a> to prove something you believe is true</p>
+<p>.</p>
+<p>Trump</p>
+<p>2023</p>
+<p>When you’ve gotta agree with him 100%</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=W5Pm_HcXcbI">https://www.youtube.com/watch?v=W5Pm_HcXcbI</a></p>
+<p>.</p>
+<p>Followers</p>
+<p>2023</p>
+<ol class="arabic simple">
+<li><p>Football: Top two most followed are footballers</p></li>
+<li><p>Brands: Instagram, Nike, Nat Geo, RMA, Barcelona, UEFA CL, NASA, NBA</p></li>
+<li><p>Industries: Sports, Music, Socialite, Wrestler, Comedy, Actress, Gov Agency</p></li>
+</ol>
+<p>.</p>
+<p>Tequila</p>
+<p>2023</p>
+<ol class="arabic simple">
+<li><p>Blanco</p></li>
+<li><p>Añejo</p></li>
+<li><p>Reposado</p></li>
+</ol>
+<p>.</p>
+<p>It’s no secret that the late Queen Elizabeth II was an admirer of Arsenal FC. In fact, the Gunners were the only Premier League team that was invited to Buckingham Palace during her reign.</p>
+<p>.</p>
+<p>streamlit run /workspaces/codespaces-jupyter/app1.py</p>
+<p>streamlit run <a class="reference external" href="http://app2.py">app2.py</a> –server.enableCORS=false</p>
+<p><a class="reference external" href="https://raw.githubusercontent.com/smart-stats/ds4bio_book/main/book/assetts/kirby21.csv">https://raw.githubusercontent.com/smart-stats/ds4bio_book/main/book/assetts/kirby21.csv</a><br />
+<a class="reference external" href="https://raw.githubusercontent.com/smart-stats/ds4bio_book/main/book/assetts/kirby21AllLevels.csv">https://raw.githubusercontent.com/smart-stats/ds4bio_book/main/book/assetts/kirby21AllLevels.csv</a></p>
+<p><a class="reference external" href="https://muzaale-vigilant-fortnight-qrgxxqqwv4xcx5wp-8050.preview.app.github.dev">https://muzaale-vigilant-fortnight-qrgxxqqwv4xcx5wp-8050.preview.app.github.dev</a></p>
+<p>.</p>
+<p>HW5</p>
+<ol class="arabic simple">
+<li><p>Create a python file that webscrapes GDP by country and plots a stacked interactive bar plot using plotly. Stack countries within regions using the IMF numbers.</p></li>
+<li><p>Display the plot in a streamlit app that displays a stacked bar plot of country GDPs stacked within regions. Allow the user to select between the IMF, UN and World Bank reported numbers.</p></li>
+<li><p>Create a short (5-10 second) gif demonstrating your app functioning. Note I use the Chrome Capture extension for this. Add your gif to your repository.</p></li>
+</ol>
+<p>In your git repo for the assignment have the python file that scrapes the data, the streamlit python file and your gif.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">import</span> <span class="nn">requests</span> <span class="k">as</span> <span class="nn">rq</span>
+<span class="kn">import</span> <span class="nn">bs4</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">dash</span> <span class="kn">import</span> <span class="n">Dash</span><span class="p">,</span> <span class="n">dcc</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">Input</span><span class="p">,</span> <span class="n">Output</span>
+
+<span class="c1">#st.title(&quot;GDP by Region&quot;)</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)&#39;</span>
+<span class="n">page</span> <span class="o">=</span> <span class="n">rq</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">page</span><span class="o">.</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span> <span class="p">:</span> <span class="mi">99</span><span class="p">]</span>
+
+<span class="n">bs4page</span> <span class="o">=</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">page</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+
+<span class="n">tables</span> <span class="o">=</span> <span class="n">bs4page</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">,{</span><span class="s1">&#39;class&#39;</span><span class="p">:</span><span class="s2">&quot;wikitable&quot;</span><span class="p">})</span>
+
+<span class="n">gdp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">tables</span><span class="p">))</span>
+<span class="n">gdp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_html</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">tables</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1">## There&#39;s an empty row</span>
+
+<span class="n">gdp</span> <span class="o">=</span> <span class="n">gdp</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;UN Region&quot;</span><span class="p">:</span> <span class="s2">&quot;Region&quot;</span><span class="p">,</span> <span class="s2">&quot;IMF[1][13]&quot;</span><span class="p">:</span> <span class="s2">&quot;IMF&quot;</span><span class="p">,</span> <span class="s2">&quot;World Bank[14]&quot;</span><span class="p">:</span> <span class="s2">&quot;World Bank&quot;</span><span class="p">,</span> <span class="s2">&quot;Country/Territory&quot;</span><span class="p">:</span> <span class="s2">&quot;Country&quot;</span><span class="p">})</span>
+<span class="n">gdp</span><span class="o">.</span><span class="n">IMF</span> <span class="o">=</span> <span class="n">gdp</span><span class="o">.</span><span class="n">IMF</span><span class="p">[</span><span class="n">gdp</span><span class="o">.</span><span class="n">IMF</span> <span class="o">!=</span> <span class="s2">&quot;101560901&quot;</span><span class="p">]</span>
+
+
+<span class="n">gdp</span><span class="o">.</span><span class="n">IMF</span> <span class="o">=</span> <span class="n">gdp</span><span class="o">.</span><span class="n">IMF</span><span class="p">[</span><span class="n">gdp</span><span class="o">.</span><span class="n">IMF</span> <span class="o">!=</span> <span class="s2">&quot;101560901&quot;</span><span class="p">]</span>
+<span class="n">gdp</span> <span class="o">=</span> <span class="n">gdp</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">gdp</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">gdp</span><span class="o">.</span><span class="n">IMF</span> <span class="o">=</span> <span class="n">gdp</span><span class="o">.</span><span class="n">IMF</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">,</span><span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">gdp</span> <span class="o">=</span> <span class="n">gdp</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+<span class="c1"># gdp.dtypes</span>
+<span class="c1">#gdp_imf = pd.to_numeric(gdp_imf, errors=&#39;coerce&#39;)</span>
+<span class="c1">#gdp = gdp.dropna()</span>
+
+<span class="n">gdp</span> <span class="o">=</span> <span class="n">gdp</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+
+<span class="n">regions</span> <span class="o">=</span> <span class="n">gdp</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">gdp_imf</span> <span class="o">=</span> <span class="n">gdp</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">countries</span> <span class="o">=</span> <span class="n">gdp</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">colors</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">qualitative</span><span class="o">.</span><span class="n">Pastel1</span> <span class="c1"># set the color scheme</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">regions</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">gdp_imf</span><span class="p">,</span> <span class="n">color_discrete_sequence</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">hover_data</span><span class="o">=</span><span class="p">[</span><span class="n">gdp_imf</span><span class="p">])</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span><span class="n">template</span><span class="o">=</span><span class="s1">&#39;plotly&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_xaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s2">&quot;Region&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_yaxes</span><span class="p">(</span><span class="n">title_text</span><span class="o">=</span><span class="s2">&quot;GDP as per IMF (in USD)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">requests</span> <span class="k">as</span> <span class="nn">rq</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">bs4</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;streamlit&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">39</a><span class="fn-bracket">]</span></span>
+<p>summary 1.0</p>
+</aside>
+</aside>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./bloc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">02/2023</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">03/2023</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

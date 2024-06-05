@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>545. asynchronous &#8212; Nothin&#39;</title>
   
@@ -19,48 +18,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'bdn2023/bdn202307';</script>
@@ -75,7 +71,15 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -110,11 +114,16 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -129,9 +138,11 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
   
 
 <a class="navbar-brand logo" href="../intro.html">
+  
   
   
   
@@ -141,12 +152,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/practicing.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/practicing.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/practicing.png" class="logo__image only-light" alt="Nothin' - Home"/>
+    <script>document.write(`<img src="../_static/practicing.png" class="logo__image only-dark" alt="Nothin' - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -312,20 +334,22 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -683,13 +707,13 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="asynchronous">
-<h1>545. <a class="reference external" href="https://muzaale.github.io/denotas/bdn202306.html#id34">asynchronous</a><a class="headerlink" href="#asynchronous" title="Permalink to this heading">#</a></h1>
+<h1>545. <a class="reference external" href="https://muzaale.github.io/denotas/bdn202306.html#id34">asynchronous</a><a class="headerlink" href="#asynchronous" title="Link to this heading">#</a></h1>
 </section>
 <section id="todoby07012023">
-<h1>545.1 todoby07012023<a class="headerlink" href="#todoby07012023" title="Permalink to this heading">#</a></h1>
+<h1>545.1 todoby07012023<a class="headerlink" href="#todoby07012023" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>notes (icloud)</p></li>
 <li><p>workflow (python)</p></li>
@@ -698,7 +722,7 @@ document.write(`
 </ul>
 </section>
 <section id="doneby07122023">
-<h1>545.2 doneby07122023<a class="headerlink" href="#doneby07122023" title="Permalink to this heading">#</a></h1>
+<h1>545.2 doneby07122023<a class="headerlink" href="#doneby07122023" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>natural language processing topic for R03 to NIA</p></li>
 <li><p>figure out the IRB &amp; dua that MGB/Durand have for <a class="reference external" href="https://www.hopkinsmedicine.org/office-of-johns-hopkins-physicians/best-practice-news/using-epic-for-research-at-johns-hopkins-tips-and-resources">PMAP</a></p></li>
@@ -707,21 +731,21 @@ document.write(`
 </ul>
 </section>
 <section id="gleanedfrom2011-2023">
-<h1>545.3 gleanedfrom2011-2023<a class="headerlink" href="#gleanedfrom2011-2023" title="Permalink to this heading">#</a></h1>
+<h1>545.3 gleanedfrom2011-2023<a class="headerlink" href="#gleanedfrom2011-2023" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>that i’ve a well-established and matured credo</p></li>
 <li><p>it is bound to clash with democratic, modern-types</p></li>
 <li><p>and so i’m lonely without the <a class="reference external" href="https://en.wikipedia.org/wiki/Through_a_Glass,_Darkly_(poem)">patton-types</a></p></li>
 <li><p>but this should be viewed as a marvelous opportunity</p></li>
-<li><p>lets channel that princely punctilio in mozart<span class="xref myst">’</span>s music</p></li>
+<li><p>lets channel that princely punctilio in mozart<a class="reference internal" href="#afecdvi.ipynb"><span class="xref myst">’</span></a>s music</p></li>
 <li><p>o! let us dance in the shackles of modern times</p></li>
 <li><p>move over mary mary, y’all can only dance <a class="reference external" href="https://www.youtube.com/watch?v=V7eZD3TKn_M">after</a> your shackles are removed!</p></li>
 </ul>
 </section>
 <section id="id1">
-<h1>07/01/2023<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<h1>07/01/2023<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="milestone">
-<h2>607. milestone<a class="headerlink" href="#milestone" title="Permalink to this heading">#</a></h2>
+<h2>607. milestone<a class="headerlink" href="#milestone" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>dual ctz</p></li>
 <li><p>17y</p></li>
@@ -729,7 +753,7 @@ document.write(`
 </ul>
 </section>
 <section id="service">
-<h2>608. service<a class="headerlink" href="#service" title="Permalink to this heading">#</a></h2>
+<h2>608. service<a class="headerlink" href="#service" title="Link to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -810,7 +834,16 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/0d1ad2c883b5c8dd72b91d796322290c0ff57579196ccdf5d2c87d24d402c1a2.png" src="../_images/0d1ad2c883b5c8dd72b91d796322290c0ff57579196ccdf5d2c87d24d402c1a2.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Create data for the skill and challenge levels</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
 </div>
 </div>
 <p><span class="math notranslate nohighlight">\(
@@ -850,7 +883,7 @@ Y  =  \beta_0  +  \beta_1 X_1  + \beta_2 X_2  +  \cdots  +  \beta_N X_N  +  \eps
 </ol>
 </section>
 <section id="generalize">
-<h2>609. generalize<a class="headerlink" href="#generalize" title="Permalink to this heading">#</a></h2>
+<h2>609. generalize<a class="headerlink" href="#generalize" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>education</p></li>
 <li><p>service</p></li>
@@ -861,12 +894,12 @@ Y  =  \beta_0  +  \beta_1 X_1  + \beta_2 X_2  +  \cdots  +  \beta_N X_N  +  \eps
 <p>a service must incorporate a <u>longitudinal plan</u> with scheduled feedback sessions (exams, surveys, followup). it must include a rubric that spells out what to lookout for at each milestone and how to tell whether you are on course to your optimal trajectory of flow. when the service is from a non-professional, then <u>accountability-sessions</u> should be the form of feedback.</p>
 </section>
 <section id="origin">
-<h2>610. origin<a class="headerlink" href="#origin" title="Permalink to this heading">#</a></h2>
+<h2>610. origin<a class="headerlink" href="#origin" title="Link to this heading">#</a></h2>
 <p>points of origin of every educational, service, or research endeavor must be the <span class="math notranslate nohighlight">\(x,y\)</span> coordinate <span class="math notranslate nohighlight">\(0,0\)</span>. this may be a retrospective or real-time scenario that helps return to a simpler time and at the beginning of complex process. by walking through this process from the beginning through to its current or projected trajectory, then emotions (anxiety, relaxation, flow) will emerge as the thing to track that provides positive (relaxation), negative (anxiety), or neutral feedback (flow).</p>
 <p>from this point of view, neither negative or positive feedback are preffered; rather, its flow that must be the ultimate goal towards which we calibrate our progress and fine-tune our challenge- and skill-levels.</p>
 </section>
 <section id="bel-air">
-<h2>611. bel-air<a class="headerlink" href="#bel-air" title="Permalink to this heading">#</a></h2>
+<h2>611. bel-air<a class="headerlink" href="#bel-air" title="Link to this heading">#</a></h2>
 <p>the school of resentment produces high-quality works of art because of the strong passions they bring to their creative efforts. however, the democratization of the dramatis personnae so that each characters story gets to be told feels contrived.</p>
 <p>geoffrey, aunt viv, and even non-family members get their narrative arc. but here art isn’t imitating life. many folks remain mysterious and others never have their stories told. chatGPT, what sayst thou? any thoughts on tv shows where every character is given their own narrative arc?</p>
 <p><strong>chatGPT:</strong> TV shows where every character is given their own narrative arc can be highly engaging and satisfying for viewers. Such shows have the advantage of exploring a diverse range of perspectives and storylines, which can make the overall narrative more rich and complex. By giving each character their own arc, these shows provide opportunities for character development and deeper exploration of individual motivations and struggles.</p>
@@ -883,9 +916,9 @@ I understand your point. In TV shows where every character is given their own na
 </section>
 </section>
 <section id="id3">
-<h1>07/02/2023<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h1>
+<h1>07/02/2023<a class="headerlink" href="#id3" title="Link to this heading">#</a></h1>
 <section id="school-of-resentment">
-<h2>612. school-of-resentment<a class="headerlink" href="#school-of-resentment" title="Permalink to this heading">#</a></h2>
+<h2>612. school-of-resentment<a class="headerlink" href="#school-of-resentment" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>history</p></li>
 <li><p>gender</p></li>
@@ -899,11 +932,11 @@ I understand your point. In TV shows where every character is given their own na
 <p>But lets leave this hear for now and touch upon it later when another work of art seems to be driven by social causes rather than the aesthetics that arise from life, including said social causes.</p>
 </section>
 <section id="aging">
-<h2>613. aging<a class="headerlink" href="#aging" title="Permalink to this heading">#</a></h2>
+<h2>613. aging<a class="headerlink" href="#aging" title="Link to this heading">#</a></h2>
 <p>Frailty in aging marks a state of decreased reserves resulting in increased vulnerability to adverse outcomes when exposed to stressors. This Perspective synthesizes the evidence on the aging-related pathophysiology underpinning the clinical presentation of physical frailty as a phenotype of a clinical syndrome that is distinct from the cumulative-deficit-based frailty index. We focus on integrating the converging evidence on the conceptualization of physical frailty as a state, largely independent of chronic diseases, that emerges when the dysregulation of multiple interconnected physiological and biological systems crosses a threshold to critical dysfunction, severely compromising homeostasis. Our exegesis posits that the physiology underlying frailty is a critically dysregulated complex dynamical system. This conceptual framework implies that interventions such as physical activity that have multisystem effects are more promising to remedy frailty than interventions targeted at replenishing <a class="reference external" href="https://muzaale.github.io/denotas/bdn202305.html#types">single</a> systems <span id="id4">[<a class="reference internal" href="../references.html#id26" title="P Pralavolio. History of elementary particles. 2013. URL: https://muzaale.github.io/denotas/bdn202305.html#types.">32</a>]</span>. We then consider how this framework can drive future research to further understanding, prevention and treatment of frailty, which will likely preserve health and resilience in aging populations.</p>
 </section>
 <section id="synthesize">
-<h2>614. synthesize<a class="headerlink" href="#synthesize" title="Permalink to this heading">#</a></h2>
+<h2>614. synthesize<a class="headerlink" href="#synthesize" title="Link to this heading">#</a></h2>
 <p>From the provided code, it seems to be a visualization of the concept of “flow” in psychology. The plot represents a skill-challenge graph, where skill levels and challenge levels are plotted on the x and y-axis, respectively. The flow channel, indicated by the yellow zone, represents the optimal level of challenge that matches an individual’s skill level. When a person’s skill level matches the challenge level, they experience a state of flow, indicated by the purple sinusoid line.</p>
 <p>The plot also includes areas representing anxiety (above the flow channel) and boredom (below the flow channel). These areas indicate the levels of challenge that are either too high or too low for an individual’s skill level, leading to negative experiences.</p>
 <p>The annotations on the plot describe the different areas and their meanings, such as anxiety, flow, and relaxation. The plot aims to illustrate the importance of finding the right balance between challenge and skill to achieve a state of flow, where individuals experience optimal engagement and enjoyment.</p>
@@ -912,7 +945,7 @@ I understand your point. In TV shows where every character is given their own na
 <p>Overall, the provided code and accompanying text discuss the concept of flow, the visualization of skill-challenge levels, and the importance of finding the right balance to achieve optimal engagement and progress.</p>
 </section>
 <section id="iterate">
-<h2>615. iterate<a class="headerlink" href="#iterate" title="Permalink to this heading">#</a></h2>
+<h2>615. iterate<a class="headerlink" href="#iterate" title="Link to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -990,9 +1023,6 @@ I understand your point. In TV shows where every character is given their own na
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<img alt="../_images/ebff3fcf7bc25e40c2117d86482b0ded72ec8afb3aa3aa096c1b5acfda07d0ef.png" src="../_images/ebff3fcf7bc25e40c2117d86482b0ded72ec8afb3aa3aa096c1b5acfda07d0ef.png" />
-</div>
 </div>
 <p><strong>Notes:</strong><br />
 The plot above visualizes the concept of flow, a psychological state characterized by optimal engagement and enjoyment. The plot represents the relationship between skill levels and challenge levels.</p>
@@ -1008,7 +1038,7 @@ The plot above visualizes the concept of flow, a psychological state characteriz
 <p>Overall, the plot and accompanying notes illustrate the significance of the flow channel and emphasize the aim of achieving a balanced state of flow by aligning challenge levels with an individual’s skill set.</p>
 </section>
 <section id="life">
-<h2>616. life<a class="headerlink" href="#life" title="Permalink to this heading">#</a></h2>
+<h2>616. life<a class="headerlink" href="#life" title="Link to this heading">#</a></h2>
 <p>In seeking professional services, individuals often encounter situations where their skill levels undergo changes or face challenges that exceed their coping abilities. These changes can arise from various factors such as physical injury, cognitive decline, or unemployment. As a result, a discrepancy emerges between their existing skills and the demands of the challenges they encounter.</p>
 <p>To address this mismatch and restore balance, individuals turn to professionals who specialize in their respective fields. These professionals possess the knowledge, expertise, and resources necessary to guide individuals through their unique circumstances. Whether it’s providing rehabilitation for skill regression, offering training to bridge the gap in lagging milestones, or offering instruction during important life transitions, professionals play a crucial role in helping individuals navigate their challenges.</p>
 <p>Seeking professional services entails more than just receiving assistance from experts; it involves engaging in a comprehensive and longitudinal process. This process often incorporates a well-structured plan that includes scheduled feedback sessions, examinations, surveys, and follow-ups. A rubric or set of guidelines is often in place to help individuals understand what to expect at each milestone and evaluate their progress toward achieving a state of optimal engagement known as “flow.”</p>
@@ -1018,14 +1048,14 @@ The plot above visualizes the concept of flow, a psychological state characteriz
 <p>By understanding the dynamics of seeking professional services and the role they play in addressing skill-challenge mismatches, individuals can make informed decisions to regain equilibrium, overcome obstacles, and navigate their personal journeys more effectively.</p>
 </section>
 <section id="aesthetics">
-<h2>617. aesthetics<a class="headerlink" href="#aesthetics" title="Permalink to this heading">#</a></h2>
+<h2>617. aesthetics<a class="headerlink" href="#aesthetics" title="Link to this heading">#</a></h2>
 <p>Henceforth, all discussion of <a class="reference external" href="https://muzaale.github.io/destruction/chapter2.html">beauty in art</a> must be moulded on Nietzsche’s unpretentious preface of <code class="docutils literal notranslate"><span class="pre">Thoughts</span> <span class="pre">Out</span> <span class="pre">of</span> <span class="pre">Season</span></code> titled <a class="reference external" href="https://www.gutenberg.org/files/38226/38226-h/38226-h.htm">Uses and Abuses of History</a> <span id="id5">[<a class="reference internal" href="../references.html#id50" title="Yours truly. Struggle, anxiety, boredom. 2021. URL: https://muzaale.github.io/denotas/bdn202307.html#aesthetics.">10</a>]</span>.</p>
 <p>When you consider the three terms: struggle, deliverance, and reverence, then you’ll find that you have the best possible summary of the entire range of the notions, emotions, and motions that constitute the human condition. Armed with this simple summary you can better appreciate all works of art for what they represent in Acts I-V, Scenes I-V, seasons 1-N, episodes 1-N, movements I-IV, or arias 1-N.</p>
 <p>Even a painting such as <a class="reference external" href="https://en.wikipedia.org/wiki/The_School_of_Athens">Raphael’s School of Athens</a> can be appreciated much more from this dynamic and dramatic perspective of stuggle, deliverence, and reverence:</p>
 <p><img alt="" src="bdn2023/schoolofathens.jpg" /></p>
 </section>
 <section id="kyrie">
-<h2>618. kyrie<a class="headerlink" href="#kyrie" title="Permalink to this heading">#</a></h2>
+<h2>618. kyrie<a class="headerlink" href="#kyrie" title="Link to this heading">#</a></h2>
 <p>It should be easy to recognize the themes of struggle, deliverance, and reverenace in the directed graph below <span id="id6">[<a class="reference internal" href="../references.html#id4" title="Yours Truly. Latin mass. 2015. URL: https://muzaale.github.io/denotas/bdn201502.html.">3</a>]</span>:</p>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -1115,9 +1145,6 @@ The plot above visualizes the concept of flow, a psychological state characteriz
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<img alt="../_images/cd7adc694a2a5938c7088b5f01b2444d22ec75efcf179700156aadef65a59bab.png" src="../_images/cd7adc694a2a5938c7088b5f01b2444d22ec75efcf179700156aadef65a59bab.png" />
-</div>
 </div>
 <p>Hopefully this respresents a convergence of notions, emotions, and motions from Greek mythology, Judaism, and Roman Catholicism:</p>
 <ul class="simple">
@@ -1130,15 +1157,15 @@ The plot above visualizes the concept of flow, a psychological state characteriz
 <p>Appreciation of the relevance of these ideas to a more general stance of the human condition would improve anyones appreciation of Mozart’s Mass in C minor, Requiem Mass in D minor, and Vesperae solennes de confessore (for Mozart was raised a Catholic). But this should also explain why J.S. Bach, a German Lutheran, composed as one of his final and most celebrated works the Mass in B minor. Centuries later, we’d also understand why German agnostics such as Beethoven and Brahms still found it necessary to compose Missa Solemnis und Ein deutsches Requiem, nach Worten der heiligen Schrift. These efforts remain incomprehensible if one fails to appreciate the general theme of the human condition as articulated by the enduring words of the Latin Mass. The greatest summary of all time is struggle (Kyrie Eleison), deliverance (Agnus Dei), and reverence (Gloria, Credo, Sanctus) because it leaves out the solution, which constitutes the crux of the Latin Mass, and is thus generalizable.</p>
 </section>
 <section id="atheism">
-<h2>619. atheism<a class="headerlink" href="#atheism" title="Permalink to this heading">#</a></h2>
+<h2>619. atheism<a class="headerlink" href="#atheism" title="Link to this heading">#</a></h2>
 <p>Show me an atheist and I’ll show you someone who lacks humility. King Solomon, Hamlet, Macbeth, Einstein, and George Lucas clearly understood the limits of their intellects. But atheists do not</p>
 </section>
 <section id="connessione">
-<h2>620. connessione<a class="headerlink" href="#connessione" title="Permalink to this heading">#</a></h2>
+<h2>620. connessione<a class="headerlink" href="#connessione" title="Link to this heading">#</a></h2>
 <p><img alt="" src="bdn2023/howtothinklikeleonardo.jpg" /></p>
 </section>
 <section id="rsm-gjc-edf">
-<h2>621. rsM-GJC-eDf<a class="headerlink" href="#rsm-gjc-edf" title="Permalink to this heading">#</a></h2>
+<h2>621. rsM-GJC-eDf<a class="headerlink" href="#rsm-gjc-edf" title="Link to this heading">#</a></h2>
 <p>Raphael<br />
 Shakespeare<br />
 Mozart</p>
@@ -1150,7 +1177,7 @@ Darwin<br />
 Freud</p>
 </section>
 <section id="avoidance">
-<h2>622. avoidance<a class="headerlink" href="#avoidance" title="Permalink to this heading">#</a></h2>
+<h2>622. avoidance<a class="headerlink" href="#avoidance" title="Link to this heading">#</a></h2>
 <p>homeostatic response to challenge <span class="math notranslate nohighlight">\(&gt;\)</span> skill thereby restoring challenge <span class="math notranslate nohighlight">\(\le\)</span> skill</p>
 <p>from the center of the clock the three classic direction of avoidance are:</p>
 <ul class="simple">
@@ -1161,7 +1188,7 @@ Freud</p>
 <p>virutally all human behavior can be reduced to this formula</p>
 </section>
 <section id="deliverance">
-<h2>623. deliverance<a class="headerlink" href="#deliverance" title="Permalink to this heading">#</a></h2>
+<h2>623. deliverance<a class="headerlink" href="#deliverance" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>apple music</p></li>
 <li><p>gospel: take me to church</p></li>
@@ -1169,7 +1196,7 @@ Freud</p>
 </ul>
 </section>
 <section id="chemistry">
-<h2>624. chemistry<a class="headerlink" href="#chemistry" title="Permalink to this heading">#</a></h2>
+<h2>624. chemistry<a class="headerlink" href="#chemistry" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>yellow -&gt; x = y -&gt; <code class="docutils literal notranslate"><span class="pre">dopamine</span></code></p></li>
 <li><p>green -&gt; xline = credo -&gt; gaba</p></li>
@@ -1251,16 +1278,13 @@ Freud</p>
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<img alt="../_images/3d9dc282dbafbee13111af56a36a791ff9b74bfb164138be0e1310e4336d2eb9.png" src="../_images/3d9dc282dbafbee13111af56a36a791ff9b74bfb164138be0e1310e4336d2eb9.png" />
-</div>
 </div>
 </section>
 </section>
 <section id="id7">
-<h1>07/03/2023<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h1>
+<h1>07/03/2023<a class="headerlink" href="#id7" title="Link to this heading">#</a></h1>
 <section id="areas">
-<h2>625. areas<a class="headerlink" href="#areas" title="Permalink to this heading">#</a></h2>
+<h2>625. areas<a class="headerlink" href="#areas" title="Link to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1327,16 +1351,13 @@ Freud</p>
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<img alt="../_images/435f699f9da584091a67d0b19753e1abdf0da58f28e91867bdee8c2498fa2e17.png" src="../_images/435f699f9da584091a67d0b19753e1abdf0da58f28e91867bdee8c2498fa2e17.png" />
-</div>
 </div>
 <p>Does ones credo impose limits on the skill-levels they might attain? What for sure is that the setting of a commune is deliberately designed to set limits to the challenge-levels encountered by those who dwell in it. So this graph may help us link matters of religion, politik, and brain-chemistry.</p>
 <p>We should find hippies in the green zone having arrived there by the horizontal red line represented by 9 o’clock. Catholics should mostly be in the red zone in urgent need of deliverance, which they do obtain via confession and the green line represented by 6 o’clock should get them there. But what would be truly optimal is the yellow zone represented by 2 o’clock, which represents constant struggle: incremental challenges and skill-levels that are matching these changes over time.</p>
 <p>Such a person is a worthy adversary and worthy of the greatest honors. Athletes and sportsmen are the embodiment of this credo in modern life. They represent the healthiest, most sustainable, and dare I say, most meaningful approach to life <span id="id8">[<a class="reference internal" href="../references.html#id11" title="Yours Truly. Credo. 2023. URL: https://muzaale.github.io/denotas/bdn202109.html.">18</a>]</span>.</p>
 </section>
 <section id="twoway">
-<h2>626. twoway<a class="headerlink" href="#twoway" title="Permalink to this heading">#</a></h2>
+<h2>626. twoway<a class="headerlink" href="#twoway" title="Link to this heading">#</a></h2>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>import delimited https:<span class="o">//</span>raw<span class="m">.</span>githubusercontent<span class="m">.</span>com<span class="o">/</span>jhustata<span class="o">/</span>livre<span class="o">/</span>main<span class="o">/</span>transplants<span class="m">.</span>txt,<span class="k"> clear</span>
 <span class="k">sum</span> age
 <span class="k">g</span> age_c = age <span class="o">-</span> <span class="nf">r</span>(mean)
@@ -1378,15 +1399,15 @@ Freud</p>
 </section>
 </section>
 <section id="id9">
-<h1>07/04/2023<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h1>
+<h1>07/04/2023<a class="headerlink" href="#id9" title="Link to this heading">#</a></h1>
 <section id="washington">
-<h2>627. washington<a class="headerlink" href="#washington" title="Permalink to this heading">#</a></h2>
+<h2>627. washington<a class="headerlink" href="#washington" title="Link to this heading">#</a></h2>
 <p>the greater Seattle area is best thought of as an elliptical patch of land with a north-south long axis. lake washington is at the center, i5 and i405 form the western and eastern boarders, with the elliot bay (continuous with vancouver &amp; victoria) to the west of i5 and the mountain ranges to the east of i405.</p>
 <p>everett is the northern most tip, tacoma the southern most tip, and west-east bridges across lake washington connect from south-to-noth seatac-renton, seattle-bellevue (over mercer island), and university district-redmond.</p>
 <p>as such, a northward one-hour $150 uber ride on i405 in either a prius or telsa from from seatac via renton, bellevue, to <code class="docutils literal notranslate"><span class="pre">snohomish</span></code> is especially picturesque, revealing some prime real estate including bill gates’ marital home.</p>
 </section>
 <section id="urls">
-<h2>628. urls<a class="headerlink" href="#urls" title="Permalink to this heading">#</a></h2>
+<h2>628. urls<a class="headerlink" href="#urls" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://jhustata.github.io/book/_downloads/34a8255f06036b44354b3c36c5583d7e/transplants.dta">https://jhustata.github.io/book/_downloads/34a8255f06036b44354b3c36c5583d7e/transplants.dta</a>
 <a class="reference external" href="https://jhustata.github.io/livre/_downloads/34a8255f06036b44354b3c36c5583d7e/transplants.dta">https://jhustata.github.io/livre/_downloads/34a8255f06036b44354b3c36c5583d7e/transplants.dta</a><br />
 <a class="reference external" href="https://raw.githubusercontent.com/jhustata/livre/main/transplants.txt">https://raw.githubusercontent.com/jhustata/livre/main/transplants.txt</a></p>
@@ -1409,7 +1430,7 @@ import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 </div>
 </section>
 <section id="prime">
-<h2>629. prime<a class="headerlink" href="#prime" title="Permalink to this heading">#</a></h2>
+<h2>629. prime<a class="headerlink" href="#prime" title="Link to this heading">#</a></h2>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>cls
 <span class="k">capture program drop</span> prime
 <span class="k">program</span> define prime 
@@ -1449,7 +1470,7 @@ import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 <p>codify non-prime odd numbers later</p>
 </section>
 <section id="simulate">
-<h2>630. simulate<a class="headerlink" href="#simulate" title="Permalink to this heading">#</a></h2>
+<h2>630. simulate<a class="headerlink" href="#simulate" title="Link to this heading">#</a></h2>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">capture program drop</span> _all
 
 <span class="k">program</span> define sampmean
@@ -1510,7 +1531,7 @@ import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 </div>
 </section>
 <section id="xlab">
-<h2>631. xlab 🚧<a class="headerlink" href="#xlab" title="Permalink to this heading">#</a></h2>
+<h2>631. xlab 🚧<a class="headerlink" href="#xlab" title="Link to this heading">#</a></h2>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">qui local numlist</span> <span class="m">5</span> <span class="m">20</span> <span class="m">100</span> <span class="m">1000</span>
 <span class="k">local n</span>:<span class="k"> di</span> <span class="nf">wordcount</span>(<span class="s">&quot;</span><span class="nv">`numlist&#39;</span><span class="s">&quot;</span>)
 <span class="k">forvalues</span> i=<span class="m">1</span><span class="o">/</span><span class="nv">`n&#39;</span> {
@@ -1522,7 +1543,7 @@ import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 </div>
 </section>
 <section id="tw">
-<h2>632. tw<a class="headerlink" href="#tw" title="Permalink to this heading">#</a></h2>
+<h2>632. tw<a class="headerlink" href="#tw" title="Link to this heading">#</a></h2>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">capture program drop</span> _all
 
 <span class="k">program</span> define sampmean
@@ -1575,9 +1596,9 @@ import excel url<span class="m">.</span>xlsx,<span class="k"> clear</span>
 </section>
 </section>
 <section id="id10">
-<h1>07/05/2023<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h1>
+<h1>07/05/2023<a class="headerlink" href="#id10" title="Link to this heading">#</a></h1>
 <section id="uncertainty">
-<h2>633. uncertainty<a class="headerlink" href="#uncertainty" title="Permalink to this heading">#</a></h2>
+<h2>633. uncertainty<a class="headerlink" href="#uncertainty" title="Link to this heading">#</a></h2>
 <p><span class="math notranslate nohighlight">\(
 Y_i  =  \beta_0  +  \beta_1 X_1  +  \beta_2 X_2  +  \cdots  +  \beta_N X_N  +  \epsilon_{i  \sim  N (\mu,  \sigma)}
 \)</span></p>
@@ -1640,11 +1661,11 @@ Y_i  =  \beta_0  +  \beta_1 X_1  +  \beta_2 X_2  +  \cdots  +  \beta_N X_N  +  \
 </ul>
 </section>
 <section id="j">
-<h2>634. j<a class="headerlink" href="#j" title="Permalink to this heading">#</a></h2>
+<h2>634. j<a class="headerlink" href="#j" title="Link to this heading">#</a></h2>
 <p>1824 23rd st, snohomish, wa 98290</p>
 </section>
 <section id="phew">
-<h2>635. phew!<a class="headerlink" href="#phew" title="Permalink to this heading">#</a></h2>
+<h2>635. phew!<a class="headerlink" href="#phew" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>finally we can hire<a class="reference external" href="https://jobs.jhu.edu/job/Baltimore-Research-Data-Analyst-MD-21205/1047414500/">!</a></p></li>
 <li><p>RDA 109905</p></li>
@@ -1652,7 +1673,7 @@ Y_i  =  \beta_0  +  \beta_1 X_1  +  \beta_2 X_2  +  \cdots  +  \beta_N X_N  +  \
 </ul>
 </section>
 <section id="bach">
-<h2>636. bach<a class="headerlink" href="#bach" title="Permalink to this heading">#</a></h2>
+<h2>636. bach<a class="headerlink" href="#bach" title="Link to this heading">#</a></h2>
 <p>Why Bach Moves Us | <a class="reference external" href="https://www.nybooks.com/articles/2014/02/20/why-bach-moves-us/">The New York Review</a></p>
 <p>George B. Stauffer</p>
 <p>John Eliot Gardiner’s ‘Bach: Music in the Castle of Heaven’</p>
@@ -1664,7 +1685,7 @@ Y_i  =  \beta_0  +  \beta_1 X_1  +  \beta_2 X_2  +  \cdots  +  \beta_N X_N  +  \
 <p>There was great lamenting at the memorial service that this talented young man had been snatched away in the midst of important work, with so much promise unfulfilled. The service began with Gabe’s recording of Salamone Rossi’s Hebrew setting of the Songs of Solomon, a gorgeous yet relatively unknown Venetian masterpiece <span class="math notranslate nohighlight">\(\cdots\)</span></p>
 </section>
 <section id="wayne">
-<h2>637. wayne<a class="headerlink" href="#wayne" title="Permalink to this heading">#</a></h2>
+<h2>637. wayne<a class="headerlink" href="#wayne" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>alaska airlines <code class="docutils literal notranslate"><span class="pre">1184</span></code></p></li>
 <li><p>expedia itinerary: 72599861510824</p></li>
@@ -1677,9 +1698,9 @@ Y_i  =  \beta_0  +  \beta_1 X_1  +  \beta_2 X_2  +  \cdots  +  \beta_N X_N  +  \
 </section>
 </section>
 <section id="id11">
-<h1>07/06/2023<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h1>
+<h1>07/06/2023<a class="headerlink" href="#id11" title="Link to this heading">#</a></h1>
 <section id="pretty-please">
-<h2>638. pretty-please<a class="headerlink" href="#pretty-please" title="Permalink to this heading">#</a></h2>
+<h2>638. pretty-please<a class="headerlink" href="#pretty-please" title="Link to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -1708,15 +1729,6 @@ Y_i  =  \beta_0  +  \beta_1 X_1  +  \beta_2 X_2  +  \cdots  +  \beta_N X_N  +  \
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>account          number       username    password     date
----------------  -----------  ----------  -----------  ----------
-studentuniverse               mozart      shaKespeare  2023-06-15
-alaskan          340733890    mozart      shaKespeare  2023-02-05
-frontier         90102556651  mozart      shaKespeare  2023-07-06
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1724,15 +1736,10 @@ frontier         90102556651  mozart      shaKespeare  2023-07-06
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2023-06-15&#39;
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="seattle">
-<h2>639. seattle<a class="headerlink" href="#seattle" title="Permalink to this heading">#</a></h2>
+<h2>639. seattle<a class="headerlink" href="#seattle" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>paramount</p></li>
 <li><p>911 pine st, seattle, wa 98101</p></li>
@@ -1742,7 +1749,7 @@ frontier         90102556651  mozart      shaKespeare  2023-07-06
 </ul>
 </section>
 <section id="homecoming">
-<h2>640. homecoming<a class="headerlink" href="#homecoming" title="Permalink to this heading">#</a></h2>
+<h2>640. homecoming<a class="headerlink" href="#homecoming" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>mon, jul 10 at 7:56pm</p></li>
 <li><p>orange county -&gt; baltimore</p></li>
@@ -1750,7 +1757,7 @@ frontier         90102556651  mozart      shaKespeare  2023-07-06
 </ul>
 </section>
 <section id="tas">
-<h2>641. tas<a class="headerlink" href="#tas" title="Permalink to this heading">#</a></h2>
+<h2>641. tas<a class="headerlink" href="#tas" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>spring term 2024</p>
 <ul>
@@ -1763,9 +1770,9 @@ frontier         90102556651  mozart      shaKespeare  2023-07-06
 </section>
 </section>
 <section id="id12">
-<h1>07/07/2023<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h1>
+<h1>07/07/2023<a class="headerlink" href="#id12" title="Link to this heading">#</a></h1>
 <section id="apple">
-<h2>642. apple<a class="headerlink" href="#apple" title="Permalink to this heading">#</a></h2>
+<h2>642. apple<a class="headerlink" href="#apple" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>alex half-life</p></li>
 <li><p>game for apple glasses</p></li>
@@ -1773,7 +1780,7 @@ frontier         90102556651  mozart      shaKespeare  2023-07-06
 </ul>
 </section>
 <section id="fawaz">
-<h2>643. fawaz<a class="headerlink" href="#fawaz" title="Permalink to this heading">#</a></h2>
+<h2>643. fawaz<a class="headerlink" href="#fawaz" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>got qualified analyst to apply for job posting</p></li>
 <li><p>schedule an interview as soon as application received</p></li>
@@ -1781,7 +1788,7 @@ frontier         90102556651  mozart      shaKespeare  2023-07-06
 </ul>
 </section>
 <section id="id13">
-<h2>644. seattle<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h2>
+<h2>644. seattle<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>i5 &amp; Boren, Convention center &amp; sparghetti</p></li>
 <li><p>8th &amp; Pine, Paramount Hotel</p></li>
@@ -1803,7 +1810,7 @@ frontier         90102556651  mozart      shaKespeare  2023-07-06
 </ul>
 </section>
 <section id="sound">
-<h2>645. sound<a class="headerlink" href="#sound" title="Permalink to this heading">#</a></h2>
+<h2>645. sound<a class="headerlink" href="#sound" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Two Brazilians</p></li>
 <li><p>Look Italian</p></li>
@@ -1812,7 +1819,7 @@ frontier         90102556651  mozart      shaKespeare  2023-07-06
 </ul>
 </section>
 <section id="thc">
-<h2>646. thc<a class="headerlink" href="#thc" title="Permalink to this heading">#</a></h2>
+<h2>646. thc<a class="headerlink" href="#thc" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Day after 400mg THC</p></li>
 <li><p>Should never exceed 200mg</p></li>
@@ -1836,7 +1843,7 @@ Y  =  \beta_0  +  \beta_1 X_1  +  \cdots  +  \beta_N X_N  +  \epsilon_{i  \sim  
 </ul>
 </section>
 <section id="catalog">
-<h2>647. catalog<a class="headerlink" href="#catalog" title="Permalink to this heading">#</a></h2>
+<h2>647. catalog<a class="headerlink" href="#catalog" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Python script to compile all ergot papers and create links with title &amp; author</p></li>
 <li><p>Later create page with hyperlinks for all the SRTR code-snippets</p></li>
@@ -1850,7 +1857,7 @@ Y  =  \beta_0  +  \beta_1 X_1  +  \cdots  +  \beta_N X_N  +  \epsilon_{i  \sim  
 </ul>
 </section>
 <section id="philosophy">
-<h2>648. philosophy<a class="headerlink" href="#philosophy" title="Permalink to this heading">#</a></h2>
+<h2>648. philosophy<a class="headerlink" href="#philosophy" title="Link to this heading">#</a></h2>
 <p>and education. with regard to regression analysis:</p>
 <ol class="arabic simple">
 <li><p>Why are most didactic experiences dedicated to interpreting <span class="math notranslate nohighlight">\(\beta_i\)</span>?</p></li>
@@ -1865,7 +1872,7 @@ Y  =  \beta_0  +  \beta_1 X_1  +  \cdots  +  \beta_N X_N  +  \epsilon_{i  \sim  
 </ol>
 </section>
 <section id="poland">
-<h2>649. poland<a class="headerlink" href="#poland" title="Permalink to this heading">#</a></h2>
+<h2>649. poland<a class="headerlink" href="#poland" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>stefan (Uber driver)</p></li>
 <li><p>$100 for a night in 5-star hotel</p></li>
@@ -1877,7 +1884,7 @@ Y  =  \beta_0  +  \beta_1 X_1  +  \cdots  +  \beta_N X_N  +  \epsilon_{i  \sim  
 </ul>
 </section>
 <section id="seatac">
-<h2>650. seatac<a class="headerlink" href="#seatac" title="Permalink to this heading">#</a></h2>
+<h2>650. seatac<a class="headerlink" href="#seatac" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>train to downtown $<span class="math notranslate nohighlight">\(5\)</span></p></li>
 <li><p>uber is <span class="math notranslate nohighlight">\(75\)</span></p></li>
@@ -1886,7 +1893,7 @@ Y  =  \beta_0  +  \beta_1 X_1  +  \cdots  +  \beta_N X_N  +  \epsilon_{i  \sim  
 </ul>
 </section>
 <section id="id14">
-<h2>651. wayne<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h2>
+<h2>651. wayne<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>most g5’s ever seen in one place</p></li>
 <li><p>also a pretty large commercial airport</p></li>
@@ -1895,9 +1902,9 @@ Y  =  \beta_0  +  \beta_1 X_1  +  \cdots  +  \beta_N X_N  +  \epsilon_{i  \sim  
 </section>
 </section>
 <section id="id15">
-<h1>07/08/2023<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h1>
+<h1>07/08/2023<a class="headerlink" href="#id15" title="Link to this heading">#</a></h1>
 <section id="five-o-clock">
-<h2>652. five-o’clock<a class="headerlink" href="#five-o-clock" title="Permalink to this heading">#</a></h2>
+<h2>652. five-o’clock<a class="headerlink" href="#five-o-clock" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>woken me up</p></li>
 <li><p>call to prayer at 4:20</p></li>
@@ -1905,14 +1912,14 @@ Y  =  \beta_0  +  \beta_1 X_1  +  \cdots  +  \beta_N X_N  +  \epsilon_{i  \sim  
 </ul>
 </section>
 <section id="tameth">
-<h2>653. tameth<a class="headerlink" href="#tameth" title="Permalink to this heading">#</a></h2>
+<h2>653. tameth<a class="headerlink" href="#tameth" title="Link to this heading">#</a></h2>
 <p><span class="math notranslate nohighlight">\(Y_i  =  \hat Y_i  +  \epsilon_i\)</span></p>
 </section>
 </section>
 <section id="id16">
-<h1>07/10/2023<a class="headerlink" href="#id16" title="Permalink to this heading">#</a></h1>
+<h1>07/10/2023<a class="headerlink" href="#id16" title="Link to this heading">#</a></h1>
 <section id="verbs">
-<h2>654. verbs<a class="headerlink" href="#verbs" title="Permalink to this heading">#</a></h2>
+<h2>654. verbs<a class="headerlink" href="#verbs" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">tameth</span></code> <span class="math notranslate nohighlight">\(1 - \frac{SSR}{SST} \sim 1 - \frac{var(\epsilon_i)}{var(Y_i)}\)</span></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">whineth</span></code> <span class="math notranslate nohighlight">\(\frac{SSR}{SST} \sim \frac{var(\epsilon_i)}{var(Y_i)}\)</span></p></li>
@@ -1920,7 +1927,7 @@ Y  =  \beta_0  +  \beta_1 X_1  +  \cdots  +  \beta_N X_N  +  \epsilon_{i  \sim  
 </ul>
 </section>
 <section id="amy">
-<h2>655. amy<a class="headerlink" href="#amy" title="Permalink to this heading">#</a></h2>
+<h2>655. amy<a class="headerlink" href="#amy" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>she’s a text away from fawaz!</p></li>
 <li><p>didn’t even so much as say bye</p></li>
@@ -1928,7 +1935,7 @@ Y  =  \beta_0  +  \beta_1 X_1  +  \cdots  +  \beta_N X_N  +  \epsilon_{i  \sim  
 </ul>
 </section>
 <section id="hangar24">
-<h2>656. hangar24<a class="headerlink" href="#hangar24" title="Permalink to this heading">#</a></h2>
+<h2>656. hangar24<a class="headerlink" href="#hangar24" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>its 1 mile from john wayne aiport</p></li>
 <li><p>has over 15 local craft beers on tap</p></li>
@@ -1938,7 +1945,7 @@ Y  =  \beta_0  +  \beta_1 X_1  +  \cdots  +  \beta_N X_N  +  \epsilon_{i  \sim  
 </ul>
 </section>
 <section id="soca">
-<h2>657. soca<a class="headerlink" href="#soca" title="Permalink to this heading">#</a></h2>
+<h2>657. soca<a class="headerlink" href="#soca" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>a sort of paradise: the weather, beaches, lifestyle</p></li>
 <li><p>how may one live in this environment and achieve flow?</p></li>
@@ -1947,15 +1954,15 @@ Y  =  \beta_0  +  \beta_1 X_1  +  \cdots  +  \beta_N X_N  +  \epsilon_{i  \sim  
 </section>
 </section>
 <section id="id17">
-<h1>07/11/2023<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h1>
+<h1>07/11/2023<a class="headerlink" href="#id17" title="Link to this heading">#</a></h1>
 <section id="b-more">
-<h2>658. b’more<a class="headerlink" href="#b-more" title="Permalink to this heading">#</a></h2>
+<h2>658. b’more<a class="headerlink" href="#b-more" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>ewns, home is best!</p></li>
 </ul>
 </section>
 <section id="auteurs">
-<h2>659. auteurs<a class="headerlink" href="#auteurs" title="Permalink to this heading">#</a></h2>
+<h2>659. auteurs<a class="headerlink" href="#auteurs" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>chaplin</p></li>
 <li><p>woody</p></li>
@@ -1964,7 +1971,7 @@ Y  =  \beta_0  +  \beta_1 X_1  +  \cdots  +  \beta_N X_N  +  \epsilon_{i  \sim  
 <p>actors, screenwriters, and directors that demanded and attained <code class="docutils literal notranslate"><span class="pre">control</span></code> when they became producers</p>
 </section>
 <section id="contest">
-<h2>660. contest<a class="headerlink" href="#contest" title="Permalink to this heading">#</a></h2>
+<h2>660. contest<a class="headerlink" href="#contest" title="Link to this heading">#</a></h2>
 <p>while <a class="reference external" href="https://www.economist.com">The Economist</a> was first published in September 1843 to take part in a severe contest between intelligence, which presses forward, and an unworthy, timid ignorance obstructing our progress, the more enduring contest is really between beauty, which needs no explanation, and truth, which has believers and doubters.</p>
 <p>aesthetics is the subject focusing on beauty and ethics is the one about truth. it should be noted that while beauty is self-evident and compelling truth and ethics start off with declarations about their self-evident essence, which is outrightly rejected by many.</p>
 <p>to speak more specifically, ethics and truth represent conscious or unconscious wishes by the more caring kinds of human beings, who wish to protect vulnerable lambs from wolves. aesthetics and beauty by contrast simply represent effects that inspire awe, wonder, and life.</p>
@@ -1973,32 +1980,32 @@ Y  =  \beta_0  +  \beta_1 X_1  +  \cdots  +  \beta_N X_N  +  \epsilon_{i  \sim  
 <p>for who is the truest and worthiest knight in shinning armour? beauty always goes with the winner of the duel, battle, or war. <a class="reference external" href="https://www.gutenberg.org/files/1998/1998-h/1998-h.htm#link2H_4_0012">dead shepherd</a>, now i see thy saw of might: carefree, mocking, unconcerned, scornful, coercive, violent —so wisdom wisheth us; she is a woman, and ever loveth only a warrior.</p>
 </section>
 <section id="understood">
-<h2>661. understood<a class="headerlink" href="#understood" title="Permalink to this heading">#</a></h2>
+<h2>661. understood<a class="headerlink" href="#understood" title="Link to this heading">#</a></h2>
 <p>why don’t i have the urge to correct a wrong impression one may have of me?<br />
 more generally, why are folks so afraid of being <a class="reference external" href="https://www.gutenberg.org/files/52190/52190-h/52190-h.htm">misunderstood</a>?
 is there really anything at stake or is it just ego?</p>
 </section>
 <section id="wilde">
-<h2>662. wilde<a class="headerlink" href="#wilde" title="Permalink to this heading">#</a></h2>
+<h2>662. wilde<a class="headerlink" href="#wilde" title="Link to this heading">#</a></h2>
 <p>Beauty is a form of Genius–is higher, <a class="reference external" href="https://www.gutenberg.org/files/174/174-h/174-h.htm">indeed</a>, than Genius, as it needs no explanation. It is one of the great facts of the world, like sunlight, or springtime, or the reflection in the dark waters of that silver shell we call the moon. It cannot be questioned</p>
 </section>
 <section id="actions">
-<h2>663. actions<a class="headerlink" href="#actions" title="Permalink to this heading">#</a></h2>
+<h2>663. actions<a class="headerlink" href="#actions" title="Link to this heading">#</a></h2>
 <p>a solder or warrior is never afraid of being misunderstood!</p>
 </section>
 <section id="id18">
-<h2>664. verbs<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h2>
+<h2>664. verbs<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">tameth</span></code> to do acclaimed stuff and take the <a class="reference external" href="https://www.biblegateway.com/passage/?search=Deuteronomy%2020%3A14&amp;version=KJV">spoils</a> <span id="id19">[<a class="reference internal" href="../references.html#id12" title="Yours Truly. Deut 20:14. 2023. URL: https://muzaale.github.io/denotas/bdn202307.html#id15.">50</a>]</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tameth</span></code> to do acclaimed stuff and take the <a class="reference external" href="https://www.biblegateway.com/passage/?search=Deuteronomy%2020%3A14&amp;amp;version=KJV">spoils</a> <span id="id19">[<a class="reference internal" href="../references.html#id12" title="Yours Truly. Deut 20:14. 2023. URL: https://muzaale.github.io/denotas/bdn202307.html#id15.">50</a>]</span></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">whineth</span></code> to be misunderstood (please here me out!)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">hideth</span></code> to lie in the shadows (thereby <a class="reference external" href="https://www.biblegateway.com/passage/?search=Proverbs%2027%3A12&amp;version=KJV">avoiding</a> evil)<span id="id20">[<a class="reference internal" href="../references.html#id13" title="Yours Truly. Proverbs 27:12. -1015. URL: https://muzaale.github.io/denotas/bdn202307.html#id15.">37</a>]</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hideth</span></code> to lie in the shadows (thereby <a class="reference external" href="https://www.biblegateway.com/passage/?search=Proverbs%2027%3A12&amp;amp;version=KJV">avoiding</a> evil)<span id="id20">[<a class="reference internal" href="../references.html#id13" title="Yours Truly. Proverbs 27:12. -1015. URL: https://muzaale.github.io/denotas/bdn202307.html#id15.">37</a>]</span></p></li>
 </ul>
 </section>
 </section>
 <section id="id21">
-<h1>07/12/2023<a class="headerlink" href="#id21" title="Permalink to this heading">#</a></h1>
+<h1>07/12/2023<a class="headerlink" href="#id21" title="Link to this heading">#</a></h1>
 <section id="coping">
-<h2>665. coping<a class="headerlink" href="#coping" title="Permalink to this heading">#</a></h2>
+<h2>665. coping<a class="headerlink" href="#coping" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>illusions. the ideas that inspite of, and perhaps because of, their inaccuracy enable healthy coping with the human condition</p></li>
 <li><p>delusions. ideas that interfere with our ability to relate with fellow man and to function socially</p></li>
@@ -2008,13 +2015,13 @@ is there really anything at stake or is it just ego?</p>
 </ul>
 </section>
 <section id="acting">
-<h2>666. acting<a class="headerlink" href="#acting" title="Permalink to this heading">#</a></h2>
+<h2>666. acting<a class="headerlink" href="#acting" title="Link to this heading">#</a></h2>
 <p>isn’t it upsetting when your hero, who always seemed to be in <a class="reference external" href="https://en.wikipedia.org/wiki/Relaxation_(psychology)">control</a> of things, turns out to be merely an oustanding actor? beware of meeting your hero in person: comes with a huge risk and might precipitate cognitive dissonance at best and an existential crisis at worst.</p>
 <p>for some their hero is the scientific enterprise. and so they dedicate a lifetime as participants, gladiators if you will, in the arena. it is here that they become acquainted with their hero and, alas, the veil of illusion is lifted.</p>
 <p>art should celebrate life in the midst of mystery, without any inkling of despair or the illusions sought by science.</p>
 </section>
 <section id="jhu">
-<h2>667. jhu<a class="headerlink" href="#jhu" title="Permalink to this heading">#</a></h2>
+<h2>667. jhu<a class="headerlink" href="#jhu" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>president ron daniels</p></li>
 <li><p>his <a class="reference external" href="https://president.jhu.edu/assets/uploads/sites/7/2023/03/TenbyTwenty.pdf">vision</a> for jhu by 2020</p></li>
@@ -2024,7 +2031,7 @@ is there really anything at stake or is it just ego?</p>
 </div>
 </section>
 <section id="catchphrase">
-<h2>668. catchphrase<a class="headerlink" href="#catchphrase" title="Permalink to this heading">#</a></h2>
+<h2>668. catchphrase<a class="headerlink" href="#catchphrase" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>my cup runneth over</p></li>
 <li><p>ekikompe kyange kiyiika</p></li>
@@ -2032,7 +2039,7 @@ is there really anything at stake or is it just ego?</p>
 </ul>
 </section>
 <section id="orangecounty">
-<h2>669. orangecounty<a class="headerlink" href="#orangecounty" title="Permalink to this heading">#</a></h2>
+<h2>669. orangecounty<a class="headerlink" href="#orangecounty" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>the clear quran</p></li>
 <li><p>a thematic translation</p></li>
@@ -2048,7 +2055,7 @@ is there really anything at stake or is it just ego?</p>
 <p>Please Note: The Quran, sometimes written as “Koran,” is a sacred book of Mulsims, who believe that God has revealed His word and message to humanity throughout the ages. For example, we believe that Moses was given the Torah, David was given the Psalms, and Jesus was given the Gospel. In the same way, we believe that Muhammad was given the Quran. Muslims therefore treat the holy books of other faiths with greate care and respect. For instance, we do not read these books in the bathroom or place them on the floor. It is our request that you treat this book with the same respect and handle it as you would your own scripture. If you do not want this copy, please do not throw it away. You may give it to any Muslim you know or your nearest Islamic center. You may also call us at 1-888-273-2754, and we will arrange to pick it up.</p>
 </section>
 <section id="enfrancais">
-<h2>670. enfrançais<a class="headerlink" href="#enfrancais" title="Permalink to this heading">#</a></h2>
+<h2>670. enfrançais<a class="headerlink" href="#enfrancais" title="Link to this heading">#</a></h2>
 <p>Yes, there is a link between the French words “voir,” “savoir,” and “pouvoir.” These three words are part of a group of verbs known as the “irregular -oir verbs.” While they are not conjugated in the same way as regular -ir verbs, they do share some similarities.</p>
 <p>The common link between these three verbs is their infinitive endings: -oir. This ending is characteristic of a group of verbs in French, and it often indicates the verb’s meaning or function.</p>
 <p>Here’s a breakdown of each verb and its meaning:</p>
@@ -2075,7 +2082,7 @@ is there really anything at stake or is it just ego?</p>
 <p>While these verbs share the -oir ending and are irregular in their conjugation, they do not have any inherent etymological or semantic connection beyond being part of the same verb group.</p>
 </section>
 <section id="id22">
-<h2>671. verbs<a class="headerlink" href="#id22" title="Permalink to this heading">#</a></h2>
+<h2>671. verbs<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>pouvoir <code class="docutils literal notranslate"><span class="pre">tameth</span></code> to do</p></li>
 <li><p>savoir <code class="docutils literal notranslate"><span class="pre">whineth</span></code> to be</p></li>
@@ -2085,7 +2092,7 @@ is there really anything at stake or is it just ego?</p>
 <p>Certainly! The variant “do no evil” can be translated as “ne rien faire de mal” in French. It complements the traditional phrase “see no evil, hear no evil, speak no evil” with the additional principle of not doing any evil actions.</p>
 </section>
 <section id="belgians">
-<h2>672. belgians<a class="headerlink" href="#belgians" title="Permalink to this heading">#</a></h2>
+<h2>672. belgians<a class="headerlink" href="#belgians" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>orval <code class="docutils literal notranslate"><span class="pre">6.2%</span></code> 3:45PM - 5:20PM</p></li>
 <li><p>westmalle dubbel <code class="docutils literal notranslate"><span class="pre">7.0%</span></code> 5:20PM - 8:37PM</p></li>
@@ -2095,7 +2102,7 @@ is there really anything at stake or is it just ego?</p>
 </ul>
 </section>
 <section id="clever">
-<h2>673. clever<a class="headerlink" href="#clever" title="Permalink to this heading">#</a></h2>
+<h2>673. clever<a class="headerlink" href="#clever" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>nutrition</p></li>
 <li><p>environment <span id="id23">[<a class="reference internal" href="../references.html#id5" title="Yours Truly. Diet, climate. 2016. URL: https://muzaale.github.io/denotas/bdn201610.html.">4</a>]</span></p></li>
@@ -2116,9 +2123,9 @@ from January 14, 2020 at 3:15AM + 8hrs
 </section>
 </section>
 <section id="id24">
-<h1>07/13/2023<a class="headerlink" href="#id24" title="Permalink to this heading">#</a></h1>
+<h1>07/13/2023<a class="headerlink" href="#id24" title="Link to this heading">#</a></h1>
 <section id="today">
-<h2>674. today<a class="headerlink" href="#today" title="Permalink to this heading">#</a></h2>
+<h2>674. today<a class="headerlink" href="#today" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>simeon</p></li>
 <li><p>homerun</p></li>
@@ -2126,7 +2133,7 @@ from January 14, 2020 at 3:15AM + 8hrs
 </ul>
 </section>
 <section id="friends">
-<h2>675. friends<a class="headerlink" href="#friends" title="Permalink to this heading">#</a></h2>
+<h2>675. friends<a class="headerlink" href="#friends" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>develop a system of staying in touch with the wider network of friends</p></li>
 <li><p>with our aging parents there is just a lot going on for everyone</p></li>
@@ -2136,7 +2143,7 @@ from January 14, 2020 at 3:15AM + 8hrs
 </ul>
 </section>
 <section id="three-peat">
-<h2>676. three-peat<a class="headerlink" href="#three-peat" title="Permalink to this heading">#</a></h2>
+<h2>676. three-peat<a class="headerlink" href="#three-peat" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">soul</span><span class="p">,</span> <span class="n">t</span> 
      \
       <span class="n">mind</span><span class="p">,</span> <span class="n">x</span> <span class="o">--&gt;</span> <span class="n">verb</span><span class="p">,</span> <span class="n">n</span> <span class="o">--&gt;</span> <span class="n">change</span><span class="p">,</span> <span class="n">o</span>  
@@ -2147,14 +2154,14 @@ from January 14, 2020 at 3:15AM + 8hrs
 <p>objection-oriented  programming is the most natural way to think about the world. the world is a collection of objects, each with its own attributes and methods. the attributes are the nouns and the methods are the verbs. the verbs are the actions that change the state of the object. the state of the object is the collection of attributes <span id="id25">[<a class="reference internal" href="../references.html#id62" title="MIT. Object-oriented: agent=programmer, verb=code, object=datasets. 1950. URL: https://muzaale.github.io/denotas/bdn202307.html#three-peat.">51</a>]</span>.</p>
 </section>
 <section id="cluster">
-<h2>677. cluster<a class="headerlink" href="#cluster" title="Permalink to this heading">#</a></h2>
-<p>definitive <span class="xref myst">guide</span> to accessing the cluster</p>
+<h2>677. cluster<a class="headerlink" href="#cluster" title="Link to this heading">#</a></h2>
+<p>definitive <a class="reference internal" href="#cluster.md"><span class="xref myst">guide</span></a> to accessing the cluster</p>
 </section>
 </section>
 <section id="id26">
-<h1>07/14/2023<a class="headerlink" href="#id26" title="Permalink to this heading">#</a></h1>
+<h1>07/14/2023<a class="headerlink" href="#id26" title="Link to this heading">#</a></h1>
 <section id="learning">
-<h2>678. learning<a class="headerlink" href="#learning" title="Permalink to this heading">#</a></h2>
+<h2>678. learning<a class="headerlink" href="#learning" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                                          3. parametric
                                                        \ 
                        —&gt; 0. humans  —&gt; 1. twoway       4. model —&gt; 5. data -&gt; 6. likelihood -&gt; 7. inference
@@ -2186,7 +2193,7 @@ from January 14, 2020 at 3:15AM + 8hrs
 <p>education reform <span id="id27">[<a class="reference internal" href="../references.html#id51" title="Peter Thiel. Education reform and adversarial learning networks. 2021. URL: https://muzaale.github.io/denotas/bdn202307.html#hypothesis.">11</a>]</span></p>
 </section>
 <section id="publishing">
-<h2>679. publishing<a class="headerlink" href="#publishing" title="Permalink to this heading">#</a></h2>
+<h2>679. publishing<a class="headerlink" href="#publishing" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>markup your document and save it as .txt, .do, .md, or .do</p></li>
 </ol>
@@ -2330,9 +2337,6 @@ successfully converted <span class="s">&quot;/Users/d/Desktop/publish.html&quot;
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<img alt="../_images/e4bd8b689277327e1af94fd72367f2949e9cb2ef61f24ab648e3d06d32012c4e.png" src="../_images/e4bd8b689277327e1af94fd72367f2949e9cb2ef61f24ab648e3d06d32012c4e.png" />
-</div>
 </div>
 <ol class="arabic simple" start="6">
 <li><p>do the pat hack</p></li>
@@ -2342,11 +2346,11 @@ successfully converted <span class="s">&quot;/Users/d/Desktop/publish.html&quot;
 </pre></div>
 </div>
 <ol class="arabic simple" start="7">
-<li><p><span class="xref myst">voila!</span></p></li>
+<li><p><a class="reference internal" href="#publish.html"><span class="xref myst">voila!</span></a></p></li>
 </ol>
 </section>
 <section id="time">
-<h2>680. time<a class="headerlink" href="#time" title="Permalink to this heading">#</a></h2>
+<h2>680. time<a class="headerlink" href="#time" title="Link to this heading">#</a></h2>
 <p><img alt="" src="bdn2023/flow.clock.png" /></p>
 <ol class="arabic simple">
 <li><p><span style="color: yellow;">active</span></p></li>
@@ -2355,7 +2359,7 @@ successfully converted <span class="s">&quot;/Users/d/Desktop/publish.html&quot;
 </ol>
 <p>Let’s explore the contrast between active and passive <a class="reference external" href="https://muzaale.github.io/book/bilowozo.html#avoidance">processes</a>, which occur over time, and miracles, which are not bound by cause-effect relationships or the dimension of time.</p>
 <section id="active">
-<h3>680.1 active<a class="headerlink" href="#active" title="Permalink to this heading">#</a></h3>
+<h3>680.1 active<a class="headerlink" href="#active" title="Link to this heading">#</a></h3>
 <p>Active processes involve a series of intentional and directed actions that take place over a period of time. They are characterized by cause-and-effect relationships and a sense of agency or deliberate effort. Here are some key attributes of active processes:</p>
 <ol class="arabic simple">
 <li><p>Intentionality: Active processes are initiated and driven by conscious decisions or actions.</p></li>
@@ -2367,7 +2371,7 @@ successfully converted <span class="s">&quot;/Users/d/Desktop/publish.html&quot;
 <p>Examples of active processes include project management, problem-solving methodologies, skill development through practice and training, or any task that requires deliberate action and progresses over time. <span id="id28">[<a class="reference internal" href="../references.html#id11" title="Yours Truly. Credo. 2023. URL: https://muzaale.github.io/denotas/bdn202109.html.">18</a>]</span></p>
 </section>
 <section id="passive">
-<h3>680.2 passive<a class="headerlink" href="#passive" title="Permalink to this heading">#</a></h3>
+<h3>680.2 passive<a class="headerlink" href="#passive" title="Link to this heading">#</a></h3>
 <p>Passive processes, also known as natural or inherent processes, occur over time without conscious or deliberate human intervention. They are driven by natural laws, environmental factors, or inherent properties of a system. Here are some key attributes of passive processes:</p>
 <ol class="arabic simple">
 <li><p>Natural Laws: Passive processes operate according to predetermined rules or laws of nature.</p></li>
@@ -2379,7 +2383,7 @@ successfully converted <span class="s">&quot;/Users/d/Desktop/publish.html&quot;
 <p>Examples of passive processes include erosion, weathering, ecological succession, natural healing or recovery processes, or the growth of plants in response to environmental factors. While these processes can be influenced by external factors, they primarily occur without conscious human intervention.</p>
 </section>
 <section id="miracle">
-<h3>680.3 miracle<a class="headerlink" href="#miracle" title="Permalink to this heading">#</a></h3>
+<h3>680.3 miracle<a class="headerlink" href="#miracle" title="Link to this heading">#</a></h3>
 <p>Miracles, as mentioned earlier, are extraordinary events or phenomena that defy the laws of nature and cause-effect relationships. Here are the contrasting aspects between active/passive processes and miracles:</p>
 <ol class="arabic simple">
 <li><p>Cause and Effect: Active and passive processes are governed by cause and effect, where specific actions or natural laws drive the progression of events over time. In contrast, miracles are seen as exceptions to cause-effect relationships, often defying rational explanation.</p></li>
@@ -2391,7 +2395,7 @@ successfully converted <span class="s">&quot;/Users/d/Desktop/publish.html&quot;
 </section>
 </section>
 <section id="joshua">
-<h2>681. joshua<a class="headerlink" href="#joshua" title="Permalink to this heading">#</a></h2>
+<h2>681. joshua<a class="headerlink" href="#joshua" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>new resident <a class="reference external" href="https://regentjames.residentportal.com/auth">portal</a> as of 07/01</p></li>
 <li><p>password: shaKespeare</p></li>
@@ -2399,24 +2403,24 @@ successfully converted <span class="s">&quot;/Users/d/Desktop/publish.html&quot;
 </ul>
 </section>
 <section id="yay">
-<h2>682. yay!<a class="headerlink" href="#yay" title="Permalink to this heading">#</a></h2>
+<h2>682. yay!<a class="headerlink" href="#yay" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>jhu offer of employment</p></li>
 <li><p>recruitor <a class="reference external" href="mailto:system&#37;&#52;&#48;successfactors&#46;com">system<span>&#64;</span>successfactors<span>&#46;</span>com</a></p></li>
-<li><p>View/Accept Offer ..<a class="reference external" href="https://career4.successfactors.com/career?company=jhu&amp;loginFlowRequired=true&amp;navBarLevel=CANDIDATE_MY_OFFERS&amp;appId=1634219&amp;">.</a></p></li>
+<li><p>View/Accept Offer ..<a class="reference external" href="https://career4.successfactors.com/career?company=jhu&amp;amp;loginFlowRequired=true&amp;amp;navBarLevel=CANDIDATE_MY_OFFERS&amp;amp;appId=1634219&amp;amp;">.</a></p></li>
 </ul>
 </section>
 <section id="chordstack">
-<h2>683. chordstack<a class="headerlink" href="#chordstack" title="Permalink to this heading">#</a></h2>
+<h2>683. chordstack<a class="headerlink" href="#chordstack" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Professor <a class="reference external" href="https://join.gospelu.com/masterclass45810192?gc_id=19508314507&amp;gclid=EAIaIQobChMInq6t0I-PgAMVuUhHAR3H4QqNEAAYASAAEgJStvD_BwE&amp;h_ad_id=644123320246">Vaughn Brathwaite</a> - The Gospel University</p></li>
+<li><p>Professor <a class="reference external" href="https://join.gospelu.com/masterclass45810192?gc_id=19508314507&amp;amp;gclid=EAIaIQobChMInq6t0I-PgAMVuUhHAR3H4QqNEAAYASAAEgJStvD_BwE&amp;amp;h_ad_id=644123320246">Vaughn Brathwaite</a> - The Gospel University</p></li>
 <li><p>His Piano system will take you to another level</p></li>
 <li><p>Berklee College of Music</p></li>
 <li><p>I’ve signed up &amp; should remain committed for 10y</p></li>
 </ul>
 </section>
 <section id="gratitude">
-<h2>684. gratitude 🙏<a class="headerlink" href="#gratitude" title="Permalink to this heading">#</a></h2>
+<h2>684. gratitude 🙏<a class="headerlink" href="#gratitude" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>andrew</p></li>
 <li><p>vincent</p></li>
@@ -2425,13 +2429,13 @@ successfully converted <span class="s">&quot;/Users/d/Desktop/publish.html&quot;
 </section>
 </section>
 <section id="id29">
-<h1>07/15/2023<a class="headerlink" href="#id29" title="Permalink to this heading">#</a></h1>
+<h1>07/15/2023<a class="headerlink" href="#id29" title="Link to this heading">#</a></h1>
 <section id="flow">
-<h2>685. flow<a class="headerlink" href="#flow" title="Permalink to this heading">#</a></h2>
+<h2>685. flow<a class="headerlink" href="#flow" title="Link to this heading">#</a></h2>
 <p>i guess i’ve been in flow this past week, since returning from the west coast</p>
 </section>
 <section id="newlove">
-<h2>686. newlove<a class="headerlink" href="#newlove" title="Permalink to this heading">#</a></h2>
+<h2>686. newlove<a class="headerlink" href="#newlove" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>victoria monét is a <a class="reference external" href="https://www.youtube.com/watch?v=owS78G-N168">dionysian girl</a>  <em>per excellence</em></p></li>
 <li><p>her art form is beyond good &amp; evil: even beyoncé can’t say that</p></li>
@@ -2441,22 +2445,22 @@ successfully converted <span class="s">&quot;/Users/d/Desktop/publish.html&quot;
 </ul>
 </section>
 <section id="r-b">
-<h2>687. r&amp;b<a class="headerlink" href="#r-b" title="Permalink to this heading">#</a></h2>
+<h2>687. r&amp;b<a class="headerlink" href="#r-b" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>her - gotta move on</p></li>
 <li><p>sir - nothing even matters</p></li>
 </ul>
 </section>
 <section id="tonibraxton">
-<h2>689. tonibraxton<a class="headerlink" href="#tonibraxton" title="Permalink to this heading">#</a></h2>
+<h2>689. tonibraxton<a class="headerlink" href="#tonibraxton" title="Link to this heading">#</a></h2>
 <p><em>sui generis</em></p>
 </section>
 <section id="ye">
-<h2>690. ye<a class="headerlink" href="#ye" title="Permalink to this heading">#</a></h2>
+<h2>690. ye<a class="headerlink" href="#ye" title="Link to this heading">#</a></h2>
 <p>father stretch my hands, pt. 1</p>
 </section>
 <section id="stata">
-<h2>691. stata<a class="headerlink" href="#stata" title="Permalink to this heading">#</a></h2>
+<h2>691. stata<a class="headerlink" href="#stata" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>grading heuristic</p></li>
 <li><p>c - visualize observed data (enhance basic stuff from epi)</p></li>
@@ -2474,14 +2478,14 @@ successfully converted <span class="s">&quot;/Users/d/Desktop/publish.html&quot;
 </ul>
 </section>
 <section id="tutor">
-<h2>692. tutor<a class="headerlink" href="#tutor" title="Permalink to this heading">#</a></h2>
+<h2>692. tutor<a class="headerlink" href="#tutor" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Hey Abimereki, it&#39;s Vaughn J Brathwaite from Gospel University. Our ZOOM call is on Jul 15 @ 04:00 PM . Here&#39;s the ZOOM link: https://us06web.zoom.us/j/88924354455?pwd=VDhvd21LTDlwTUF2WHB4NGpUVGg2dz09 . Also, Vaughn wants you to watch this video before our Zoom call - join.gospelu.com/pre-call-hw
  Sent by OnceHub.
 </pre></div>
 </div>
 </section>
 <section id="veranolibro">
-<h2>693. veranolibro<a class="headerlink" href="#veranolibro" title="Permalink to this heading">#</a></h2>
+<h2>693. veranolibro<a class="headerlink" href="#veranolibro" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>start experimenting</p></li>
 <li><p>for the 340.600</p></li>
@@ -2489,7 +2493,7 @@ successfully converted <span class="s">&quot;/Users/d/Desktop/publish.html&quot;
 </ul>
 </section>
 <section id="annuamya">
-<h2>694. annuŋŋamya<a class="headerlink" href="#annuamya" title="Permalink to this heading">#</a></h2>
+<h2>694. annuŋŋamya<a class="headerlink" href="#annuamya" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>continue building variations on the original theme</p></li>
 <li><p>recruit the chord-stack system</p></li>
@@ -2497,7 +2501,7 @@ successfully converted <span class="s">&quot;/Users/d/Desktop/publish.html&quot;
 </ul>
 </section>
 <section id="organ">
-<h2>695. organ<a class="headerlink" href="#organ" title="Permalink to this heading">#</a></h2>
+<h2>695. organ<a class="headerlink" href="#organ" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>gospel university</p></li>
 <li><p>online gospel music academy</p></li>
@@ -2534,8 +2538,8 @@ BKNG-AFCY906BGZHP
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>consulation <a class="reference external" href="https://fathom.video/share/NySs1Va6iMHpkXsiWjxZ6PWzuQ75GZ-B?tab=summary&amp;utm_medium=attendeesummaryemail&amp;utm_campaign=ab1-c">session</a></p></li>
-<li><p>united credit (855) 503 1800 of irvine<a class="reference external" href="https://www.unitedcredit.com/your-loan-offers/?rid=1166093&amp;sc=9220299450219&amp;sc2=7e0d8c77087b50e8bfc4b4f10d68cd16&amp;lender=lendingpointprovdir">,</a> california</p></li>
+<li><p>consulation <a class="reference external" href="https://fathom.video/share/NySs1Va6iMHpkXsiWjxZ6PWzuQ75GZ-B?tab=summary&amp;amp;utm_medium=attendeesummaryemail&amp;amp;utm_campaign=ab1-c">session</a></p></li>
+<li><p>united credit (855) 503 1800 of irvine<a class="reference external" href="https://www.unitedcredit.com/your-loan-offers/?rid=1166093&amp;amp;sc=9220299450219&amp;amp;sc2=7e0d8c77087b50e8bfc4b4f10d68cd16&amp;amp;lender=lendingpointprovdir">,</a> california</p></li>
 <li><p>please upload photo id (did passport)</p></li>
 <li><p>lending point aggreement signed</p></li>
 </ul>
@@ -2558,7 +2562,7 @@ The Gospel University, 1545 VFW PKWY, West Roxbury, MA 02132, United States, 888
 Unsubscribe Manage preferences
 </pre></div>
 </div>
-<p><a class="reference external" href="https://go.oncehub.com/GMCOnboardingLorenzo?utm_medium=email&amp;_hsmi=221959353&amp;_hsenc=p2ANqtz-9juVaE5bH-Jp1LQcUBVfQjgzoGBzUS3ygsP7AdC2uanFTUzRLUgkJl8y-uTEgnFBuo5uLwBf7KjrhTmmuER8DVg4Tqtw&amp;utm_content=221959353&amp;utm_source=hs_automation">CLICK HERE</a></p>
+<p><a class="reference external" href="https://go.oncehub.com/GMCOnboardingLorenzo?utm_medium=email&amp;amp;_hsmi=221959353&amp;amp;_hsenc=p2ANqtz-9juVaE5bH-Jp1LQcUBVfQjgzoGBzUS3ygsP7AdC2uanFTUzRLUgkJl8y-uTEgnFBuo5uLwBf7KjrhTmmuER8DVg4Tqtw&amp;amp;utm_content=221959353&amp;amp;utm_source=hs_automation">CLICK HERE</a></p>
 <ul class="simple">
 <li><p>signed gospel music coaching agreement</p></li>
 <li><p>gospel music <a class="reference external" href="https://academy.thegospeluniversity.com/users/sign_in">coaching program</a></p>
@@ -2634,7 +2638,7 @@ BKNG-AFCY906BGZHP
 </div>
 </section>
 <section id="id30">
-<h2>696. stata<a class="headerlink" href="#id30" title="Permalink to this heading">#</a></h2>
+<h2>696. stata<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>i unconsciously seperated the conceptual (sessions 1-5) from the technical (hub notes 1-27)</p></li>
 <li><p>but lets formalize this and capitalize on it to advance our cause even more efficiently</p></li>
@@ -2642,7 +2646,7 @@ BKNG-AFCY906BGZHP
 </ul>
 </section>
 <section id="recap">
-<h2>697. recap<a class="headerlink" href="#recap" title="Permalink to this heading">#</a></h2>
+<h2>697. recap<a class="headerlink" href="#recap" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fingers</span> <span class="o">=</span> <span class="n">voices</span>
 <span class="n">so</span><span class="o">..</span> <span class="n">voicing</span>
 <span class="n">confused</span> <span class="n">me</span> <span class="k">for</span> <span class="n">a</span> <span class="nb">min</span>
@@ -2658,11 +2662,11 @@ BKNG-AFCY906BGZHP
 </div>
 </section>
 <section id="zone">
-<h2>698. zone<a class="headerlink" href="#zone" title="Permalink to this heading">#</a></h2>
+<h2>698. zone<a class="headerlink" href="#zone" title="Link to this heading">#</a></h2>
 <p>been in it lately!</p>
 </section>
 <section id="migration">
-<h2>699. migration<a class="headerlink" href="#migration" title="Permalink to this heading">#</a></h2>
+<h2>699. migration<a class="headerlink" href="#migration" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">~/</span><span class="n">dropbox</span><span class="o">/</span><span class="mi">1</span><span class="n">f</span><span class="o">.</span><span class="n">ἡἔρις</span><span class="p">,</span><span class="n">κ</span><span class="o">/</span><span class="mf">1.</span><span class="n">ontology</span>
 </pre></div>
 </div>
@@ -2678,7 +2682,7 @@ BKNG-AFCY906BGZHP
 </ul>
 </section>
 <section id="id31">
-<h2>700. chemistry<a class="headerlink" href="#id31" title="Permalink to this heading">#</a></h2>
+<h2>700. chemistry<a class="headerlink" href="#id31" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>musical prodigees are immersed in chemistry</p></li>
 <li><p>perhaps unique and innate brain chemistry</p></li>
@@ -2692,7 +2696,7 @@ BKNG-AFCY906BGZHP
 </ul>
 </section>
 <section id="ancient-modern">
-<h2>701. ancient&amp;modern<a class="headerlink" href="#ancient-modern" title="Permalink to this heading">#</a></h2>
+<h2>701. ancient&amp;modern<a class="headerlink" href="#ancient-modern" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=VnRkCJuIhuY">the choir</a> of belfast cathedral</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1 
 There’s a wideness in God’s mercy,
@@ -2727,7 +2731,7 @@ by the presence of our Lord
 </div>
 </section>
 <section id="conventions">
-<h2>702. conventions<a class="headerlink" href="#conventions" title="Permalink to this heading">#</a></h2>
+<h2>702. conventions<a class="headerlink" href="#conventions" title="Link to this heading">#</a></h2>
 <p><strong>Yours truly:</strong> Produce code that generates a table with 6 columns (Language, Season 1, Season 2, Season 3, Season 4, Book). Row 1 will have the following values for the respective cells: English, Spring, Summer, Fall, Winter, Book. Now, please, fill out additional rows with translations for the following languages: Spanish, French, German, Italian, portuguese, swedish, Norwegian, icelandish, danish, dutch, latin, Russian, Chinese, Korean, Japanese, Vietnamese, arabic, Hindi, Gujarati, Zulu, Yoruba, Luganda, Swahili, etc. please use only the common roman alphabet or variants that are easy to use on the common keyboard</p>
 <p><strong>ChatGPT:</strong> Certainly! Below is the code that generates the table with 6 columns (Language, Season 1, Season 2, Season 3, Season 4, Book) and fills out additional rows with translations for the specified languages:</p>
 <div class="cell tag_hide-input docutils container">
@@ -2773,35 +2777,6 @@ by the presence of our Lord
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Language   Season 1 Season 2  Season 3   Season 4     Book
-0      English     Spring   Summer      Fall     Winter     Book
-1      Spanish  Primavera   Verano     Otoño   Invierno    Libro
-2       French  Printemps      Été   Automne      Hiver    Livre
-3       German   Frühling   Sommer    Herbst     Winter     Buch
-4      Italian  Primavera   Estate   Autunno    Inverno    Libro
-5   Portuguese  Primavera    Verão    Outono    Inverno    Livro
-6      Swedish        Vår   Sommar      Höst     Vinter      Bok
-7    Norwegian        Vår   Sommer      Høst     Vinter      Bok
-8   Icelandish        Vor    Sumar     Haust      Vetur      Bók
-9       Danish      Forår   Sommer   Efterår     Vinter      Bog
-10       Dutch      Lente    Zomer    Herfst     Winter     Boek
-11       Latin        Ver   Aestas  Autumnus      Hiems    Liber
-12     Russian      Весна     Лето     Осень       Зима    Книга
-13     Chinese         春季       夏季        秋季         冬季        书
-14      Korean          봄       여름        가을         겨울        책
-15    Japanese          春        夏         秋          冬        本
-16  Vietnamese   Mùa Xuân   Mùa Hè   Mùa Thu   Mùa Đông     Sách
-17      Arabic       ربيع      صيف      خريف       شتاء     كتاب
-18       Hindi       वसंत  ग्रीष्म      शरद्        शीत   पुस्तक
-19    Gujarati       વસંત  ગ્રીષ્મ      પતઝડ      શિયાળ   પુસ્તક
-20        Zulu     Lentha  Inhlaba   Inyanga     Injini  Incwadi
-21      Yoruba       Ọsan      Ètì       Ọla  Harmattan      Ìwe
-22     Luganda    Omukaka   Kyampa    Kwakya   Ssekidde  Empaako
-23     Swahili     Masika     Vuli   Kipupwe   Kiangazi   Kitabu
-</pre></div>
-</div>
-</div>
 </div>
 <p>The provided code will create a DataFrame with the translations for the specified languages. You can extend the list of languages and their translations as needed by following the same pattern used in the code.</p>
 <div class="cell tag_hide-input docutils container">
@@ -2847,40 +2822,11 @@ by the presence of our Lord
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      Language      Open       Science
-0      English      Open       Science
-1      Spanish   Abierto       Ciencia
-2       French    Ouvert       Science
-3       German     Offen  Wissenschaft
-4      Italian    Aperto       Scienza
-5   Portuguese    Aberto       Ciência
-6      Swedish     Öppen     Vetenskap
-7    Norwegian      Åpen     Vitenskap
-8   Icelandish      Opin       Vísindi
-9       Danish      Åben     Videnskab
-10       Dutch      Open    Wetenschap
-11       Latin   Apertus      Scientia
-12     Russian   Открыто         Наука
-13     Chinese        开放            科学
-14      Korean        열린            과학
-15    Japanese      オープン            科学
-16  Vietnamese        Mở      Khoa học
-17      Arabic     مفتوح           علم
-18       Hindi      खुला       विज्ञान
-19    Gujarati   ખોલ્યું       વિજ્ઞાન
-20        Zulu  Okuvulwe        Ulwazi
-21      Yoruba       Ọya           Ẹkọ
-22     Luganda   Ebisolo      Ebitonde
-23     Swahili      Wazi       Sayansi
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="vaughn">
-<h2>703. vaughn<a class="headerlink" href="#vaughn" title="Permalink to this heading">#</a></h2>
-<p><a class="reference external" href="https://fathom.video/share/NySs1Va6iMHpkXsiWjxZ6PWzuQ75GZ-B?tab=summary&amp;utm_medium=attendeesummaryemail&amp;utm_campaign=ab1-c">consultation</a>: 37:54</p>
+<h2>703. vaughn<a class="headerlink" href="#vaughn" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://fathom.video/share/NySs1Va6iMHpkXsiWjxZ6PWzuQ75GZ-B?tab=summary&amp;amp;utm_medium=attendeesummaryemail&amp;amp;utm_campaign=ab1-c">consultation</a>: 37:54</p>
 <ul class="simple">
 <li><p>voir</p>
 <ul>
@@ -2900,11 +2846,11 @@ by the presence of our Lord
 </ul>
 </section>
 <section id="coach">
-<h2>704. coach<a class="headerlink" href="#coach" title="Permalink to this heading">#</a></h2>
+<h2>704. coach<a class="headerlink" href="#coach" title="Link to this heading">#</a></h2>
 <p>submit my first piano video to him (see 6XX above)</p>
 </section>
 <section id="ai">
-<h2>705. ai<a class="headerlink" href="#ai" title="Permalink to this heading">#</a></h2>
+<h2>705. ai<a class="headerlink" href="#ai" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">AI</span>  <span class="n">summary</span>
 
 <span class="n">Abimereki</span> <span class="ow">and</span> <span class="n">Vaughn</span> <span class="n">had</span> <span class="n">a</span> <span class="n">conversation</span> <span class="n">about</span> <span class="n">Abimereki</span><span class="s1">&#39;s passion for music and his struggle to play the way he wants to feel. They discussed Abimereki&#39;</span><span class="n">s</span> <span class="n">background</span> <span class="ow">in</span> <span class="n">music</span><span class="p">,</span> <span class="n">his</span> <span class="n">processing</span> <span class="n">methods</span><span class="p">,</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">challenge</span> <span class="n">of</span> <span class="n">analyzing</span> <span class="ow">and</span> <span class="n">expressing</span> <span class="n">emotions</span> <span class="n">through</span> <span class="n">music</span><span class="o">.</span>
@@ -2925,9 +2871,9 @@ by the presence of our Lord
 </section>
 </section>
 <section id="id32">
-<h1>07/16/2023<a class="headerlink" href="#id32" title="Permalink to this heading">#</a></h1>
+<h1>07/16/2023<a class="headerlink" href="#id32" title="Link to this heading">#</a></h1>
 <section id="openai">
-<h2>706. openai<a class="headerlink" href="#openai" title="Permalink to this heading">#</a></h2>
+<h2>706. openai<a class="headerlink" href="#openai" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>walle USD 15</p></li>
 <li><p>gpt4 USD 20</p></li>
@@ -2936,7 +2882,7 @@ by the presence of our Lord
 </ul>
 </section>
 <section id="hypothesis">
-<h2>707. hypothesis<a class="headerlink" href="#hypothesis" title="Permalink to this heading">#</a></h2>
+<h2>707. hypothesis<a class="headerlink" href="#hypothesis" title="Link to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -3013,9 +2959,6 @@ by the presence of our Lord
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<img alt="../_images/ec85559871fbcf5f231da59637bf7af8efedbeb4671ef66d3acb16319bc40957.png" src="../_images/ec85559871fbcf5f231da59637bf7af8efedbeb4671ef66d3acb16319bc40957.png" />
-</div>
 </div>
 <ol class="arabic simple">
 <li><p><span style="color: #FFCC00;">engineering</span></p>
@@ -3043,9 +2986,9 @@ by the presence of our Lord
 </section>
 </section>
 <section id="id34">
-<h1>07/17/2023<a class="headerlink" href="#id34" title="Permalink to this heading">#</a></h1>
+<h1>07/17/2023<a class="headerlink" href="#id34" title="Link to this heading">#</a></h1>
 <section id="journaling">
-<h2>708. journaling<a class="headerlink" href="#journaling" title="Permalink to this heading">#</a></h2>
+<h2>708. journaling<a class="headerlink" href="#journaling" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>unconvered how i’d reached my recent insights much, much earlier</p></li>
 <li><p>so what then happened to them? why didn’t they leave a mark?</p></li>
@@ -3053,7 +2996,7 @@ by the presence of our Lord
 </ul>
 </section>
 <section id="id35">
-<h2>709. conventions<a class="headerlink" href="#id35" title="Permalink to this heading">#</a></h2>
+<h2>709. conventions<a class="headerlink" href="#id35" title="Link to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -3081,35 +3024,6 @@ by the presence of our Lord
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      language           note                    pad
-0      English           Note                    Pad
-1      Spanish           Nota          Bloc de notas
-2       French           Note             Bloc-notes
-3       German          Notiz             Notizblock
-4      Italian           Nota         Blocco di note
-5   Portuguese           Nota         Bloco de notas
-6      Swedish     Anteckning       Anteckningsblock
-7    Norwegian          Notat             Notatblokk
-8   Icelandish  Minnispunktur              Minnisbók
-9       Danish          Notat               Notesbog
-10       Dutch        Notitie            Notitieblok
-11       Latin           Nota                 Tabula
-12     Russian        Заметка                Блокнот
-13     Chinese             笔记                    记事本
-14      Korean             노트                   노트패드
-15    Japanese            ノート                 ノートパッド
-16  Vietnamese        Ghi chú             Sổ ghi chú
-17      Arabic          مذكرة         دفتر الملاحظات
-18       Hindi            नोट                 नोटपैड
-19    Gujarati            નોટ                 નોટપેડ
-20        Zulu         Inothi       Ikhadi lokubhala
-21      Yoruba         Akílẹ̀           Padi apileko
-22     Luganda           Yiga          Yiga empapula
-23     Swahili        Kumbuka  Kitabu cha kumbukumbu
-</pre></div>
-</div>
-</div>
 </div>
 <p>migrating my ‘note book’ journal to central place for all things python/jupyter and it will go by bloc de notas:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">~/</span><span class="n">dropbox</span><span class="o">/</span><span class="mi">1</span><span class="n">f</span><span class="o">.</span><span class="n">ἡἔρις</span><span class="p">,</span><span class="n">κ</span><span class="o">/</span><span class="mf">1.</span><span class="n">ontology</span>
@@ -3117,7 +3031,7 @@ by the presence of our Lord
 </div>
 </section>
 <section id="afecdvi">
-<h2>710. afecdvi<a class="headerlink" href="#afecdvi" title="Permalink to this heading">#</a></h2>
+<h2>710. afecdvi<a class="headerlink" href="#afecdvi" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>priorities</p></li>
 <li><p>vision</p></li>
@@ -3168,15 +3082,15 @@ by the presence of our Lord
 </ol>
 </section>
 <section id="advert">
-<h2>711. advert<a class="headerlink" href="#advert" title="Permalink to this heading">#</a></h2>
+<h2>711. advert<a class="headerlink" href="#advert" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.sensible.so/?utm_source=ea&amp;utm_medium=display&amp;utm_campaign=EA+data+science+0723&amp;utm_term=purple-oai+gpt-4+document+extraction+11&amp;utm_content=readthedocs&amp;ea-publisher=readthedocs">found</a> at <a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">jupyterbook</a></p></li>
+<li><p><a class="reference external" href="https://www.sensible.so/?utm_source=ea&amp;amp;utm_medium=display&amp;amp;utm_campaign=EA+data+science+0723&amp;amp;utm_term=purple-oai+gpt-4+document+extraction+11&amp;amp;utm_content=readthedocs&amp;amp;ea-publisher=readthedocs">found</a> at <a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">jupyterbook</a></p></li>
 <li><p>sounds interesting</p></li>
 <li><p>look into it</p></li>
 </ul>
 </section>
 <section id="gracias">
-<h2>713. graçias 🙏<a class="headerlink" href="#gracias" title="Permalink to this heading">#</a></h2>
+<h2>713. graçias 🙏<a class="headerlink" href="#gracias" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>hires</p></li>
 <li><p>flow</p></li>
@@ -3186,7 +3100,7 @@ by the presence of our Lord
 </ul>
 </section>
 <section id="archives">
-<h2>714. archives<a class="headerlink" href="#archives" title="Permalink to this heading">#</a></h2>
+<h2>714. archives<a class="headerlink" href="#archives" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>form 08/2011 - 04/2023</p></li>
 <li><p>just completed task</p></li>
@@ -3194,7 +3108,7 @@ by the presence of our Lord
 </ul>
 </section>
 <section id="bilowozo">
-<h2>715. bilowozo<a class="headerlink" href="#bilowozo" title="Permalink to this heading">#</a></h2>
+<h2>715. bilowozo<a class="headerlink" href="#bilowozo" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>text edit document - 8 MB</p></li>
 <li><p>cancerously grown</p></li>
@@ -3205,7 +3119,7 @@ by the presence of our Lord
 </ul>
 </section>
 <section id="diagnosis">
-<h2>716. diagnosis<a class="headerlink" href="#diagnosis" title="Permalink to this heading">#</a></h2>
+<h2>716. diagnosis<a class="headerlink" href="#diagnosis" title="Link to this heading">#</a></h2>
 <p><strong>Yours truly:</strong> I’ve a jupyter-book with a particular page that is .ipynb on the back end (8 MB in size). over the last 2-3 days it’s been giving me the following error when I try to access it on my iPhone 12 Pro Max: “Problem repeatedly occurred on “<a class="reference external" href="https://muzaale.github.io/book/bilowozo.html">https://muzaale.github.io/book/bilowozo.html</a>”. In other words, the webpage crashes each time I try to load it. This has never happened even once since I created it in April 2023. that said, the webpage is perfectly accessible on my iMac and so I’m wondering why I can’t access it on my iphone.</p>
 <p><strong>ChatGPT:</strong> There are several possible reasons why you may be experiencing this issue. Here are a few possibilities:</p>
 <ol class="arabic simple">
@@ -3227,9 +3141,9 @@ by the presence of our Lord
 </section>
 </section>
 <section id="id37">
-<h1>07/18/2023<a class="headerlink" href="#id37" title="Permalink to this heading">#</a></h1>
+<h1>07/18/2023<a class="headerlink" href="#id37" title="Link to this heading">#</a></h1>
 <section id="id38">
-<h2>717. migration<a class="headerlink" href="#id38" title="Permalink to this heading">#</a></h2>
+<h2>717. migration<a class="headerlink" href="#id38" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>successful</p></li>
 <li><p>insightful</p></li>
@@ -3237,7 +3151,7 @@ by the presence of our Lord
 </ul>
 </section>
 <section id="unix">
-<h2>718. unix<a class="headerlink" href="#unix" title="Permalink to this heading">#</a></h2>
+<h2>718. unix<a class="headerlink" href="#unix" title="Link to this heading">#</a></h2>
 <p>To create .ipynb files named as “bdnYYYYMM.ipynb” for the period from January 2011 to December 2024 by copying the content of “bdn001.ipynb,” you can use the following Linux command:</p>
 <div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>for y in {2011..2024}; do
   for m in {01..12}; do
@@ -3250,9 +3164,9 @@ done
 <p>This command uses nested loops. The outer loop iterates through the years from 2011 to 2024, and the inner loop iterates through the months represented by {01..12}. The command copies the content of “bdn001.ipynb” to files named as “bdnYYYYMM.ipynb” for each combination of year and month.</p>
 </section>
 <section id="r">
-<h2>719. r<a class="headerlink" href="#r" title="Permalink to this heading">#</a></h2>
+<h2>719. r<a class="headerlink" href="#r" title="Link to this heading">#</a></h2>
 <section id="packages">
-<h3>719.1 packages<a class="headerlink" href="#packages" title="Permalink to this heading">#</a></h3>
+<h3>719.1 packages<a class="headerlink" href="#packages" title="Link to this heading">#</a></h3>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">suppressWarnings</span><span class="p">({</span>
 <span class="w">  </span><span class="nf">invisible</span><span class="p">({</span>
 <span class="w">    </span><span class="nf">rm</span><span class="p">(</span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">ls</span><span class="p">())</span>
@@ -3274,7 +3188,7 @@ done
 </div>
 </section>
 <section id="documentation">
-<h3>719.2 documentation<a class="headerlink" href="#documentation" title="Permalink to this heading">#</a></h3>
+<h3>719.2 documentation<a class="headerlink" href="#documentation" title="Link to this heading">#</a></h3>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">ls</span><span class="p">(</span><span class="s">&quot;package:icdpicr&quot;</span><span class="p">)</span><span class="w"> </span>
 </pre></div>
 </div>
@@ -3284,7 +3198,7 @@ done
 </div>
 </section>
 <section id="syntax">
-<h3>719.3 syntax<a class="headerlink" href="#syntax" title="Permalink to this heading">#</a></h3>
+<h3>719.3 syntax<a class="headerlink" href="#syntax" title="Link to this heading">#</a></h3>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">cat_trauma</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3488,7 +3402,7 @@ done
 </div>
 </section>
 <section id="dx-pre-dx">
-<h3>719.4 dx_pre=”dx”<a class="headerlink" href="#dx-pre-dx" title="Permalink to this heading">#</a></h3>
+<h3>719.4 dx_pre=”dx”<a class="headerlink" href="#dx-pre-dx" title="Link to this heading">#</a></h3>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="n">injury</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -3512,7 +3426,7 @@ done
 </div>
 </section>
 <section id="trial">
-<h3>719.5 trial<a class="headerlink" href="#trial" title="Permalink to this heading">#</a></h3>
+<h3>719.5 trial<a class="headerlink" href="#trial" title="Link to this heading">#</a></h3>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># use subset of injury given its size</span>
 <span class="n">inj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">injury</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">,</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]</span>
 
@@ -3569,9 +3483,9 @@ done
 </section>
 </section>
 <section id="id39">
-<h1>07/19/2023<a class="headerlink" href="#id39" title="Permalink to this heading">#</a></h1>
+<h1>07/19/2023<a class="headerlink" href="#id39" title="Link to this heading">#</a></h1>
 <section id="dopamine">
-<h2>720. dopamine<a class="headerlink" href="#dopamine" title="Permalink to this heading">#</a></h2>
+<h2>720. dopamine<a class="headerlink" href="#dopamine" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>less:</p>
 <ul>
@@ -3590,7 +3504,7 @@ done
 </ul>
 </section>
 <section id="reconcile">
-<h2>721. reconcile<a class="headerlink" href="#reconcile" title="Permalink to this heading">#</a></h2>
+<h2>721. reconcile<a class="headerlink" href="#reconcile" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>ms. acungura, aug xx, va</p></li>
 <li><p>ms. peace, aug 26, otchy’s residence, va</p></li>
@@ -3598,7 +3512,7 @@ done
 </ul>
 </section>
 <section id="id40">
-<h2>722. migration<a class="headerlink" href="#id40" title="Permalink to this heading">#</a></h2>
+<h2>722. migration<a class="headerlink" href="#id40" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>successful, insightful, experiential</p></li>
 <li><p>had <a class="reference external" href="https://www.youtube.com/watch?v=4XpnKHJAok8">accidentally</a> deleted notes 718-719</p></li>
@@ -3612,7 +3526,7 @@ done
 </ul>
 </section>
 <section id="id41">
-<h2>722. philosophy<a class="headerlink" href="#id41" title="Permalink to this heading">#</a></h2>
+<h2>722. philosophy<a class="headerlink" href="#id41" title="Link to this heading">#</a></h2>
 <p><strong>Yours Truly:</strong> quick and dirty on <code class="docutils literal notranslate"><span class="pre">reality</span> <span class="pre">encode</span> <span class="pre">code</span> <span class="pre">decode</span> <span class="pre">counterfeit</span></code><br />
 <strong>ChatGPT:</strong></p>
 <ol class="arabic simple">
@@ -3625,7 +3539,7 @@ done
 <p>Combining the concepts: Reality can be represented and stored through the process of encoding, converting real-world events or data into a specific format or ‘code’. This ‘code’ can then be transmitted, stored, and eventually decoded to reproduce or understand the original information. However, just like tangible items can be counterfeited, so too can encoded information. This counterfeit data, once decoded, presents a skewed or false version of reality, leading to potential misconceptions or deceits.</p>
 </section>
 <section id="id42">
-<h2>723. afecdvi<a class="headerlink" href="#id42" title="Permalink to this heading">#</a></h2>
+<h2>723. afecdvi<a class="headerlink" href="#id42" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>preface</p>
 <ul>
@@ -3707,7 +3621,7 @@ done
 </ul>
 </section>
 <section id="countefeiting">
-<h2>724. countefeiting<a class="headerlink" href="#countefeiting" title="Permalink to this heading">#</a></h2>
+<h2>724. countefeiting<a class="headerlink" href="#countefeiting" title="Link to this heading">#</a></h2>
 <p><strong>Yours Truly:</strong> what are the uses and abuses of simulation or simulated data?<br />
 <strong>ChatGPT:</strong></p>
 <p>Simulations and simulated data play critical roles across various fields and industries. They can replicate complex systems or phenomena, making it possible to study scenarios that might be costly, dangerous, or even impossible to observe directly. However, as with many tools, simulations can be both beneficial and potentially misused.</p>
@@ -3771,11 +3685,11 @@ done
 <p>The domain of simulation and simulated data is rich with potential, but it’s a tool that demands responsibility. Its mastery can open doors to deeper insights, clearer communication of complex topics, and innovative solutions to pressing problems. Yet, the same power that makes it invaluable also makes it a tool that can mislead or misrepresent. Users and consumers of simulated data must approach it with a blend of appreciation, caution, and critical thinking.</p>
 </section>
 <section id="darkchild">
-<h2>725. darkchild<a class="headerlink" href="#darkchild" title="Permalink to this heading">#</a></h2>
-<p>i never worked a day in my life: <a class="reference external" href="https://www.youtube.com/watch?app=desktop&amp;v=7ru0FTbV1lU&amp;feature=youtu.be">8:04</a>/1:30:01</p>
+<h2>725. darkchild<a class="headerlink" href="#darkchild" title="Link to this heading">#</a></h2>
+<p>i never worked a day in my life: <a class="reference external" href="https://www.youtube.com/watch?app=desktop&amp;amp;v=7ru0FTbV1lU&amp;amp;feature=youtu.be">8:04</a>/1:30:01</p>
 </section>
 <section id="mjb">
-<h2>726. <a class="reference external" href="https://www.youtube.com/watch?v=tSQCvb-UEH0">mjb</a><a class="headerlink" href="#mjb" title="Permalink to this heading">#</a></h2>
+<h2>726. <a class="reference external" href="https://www.youtube.com/watch?v=tSQCvb-UEH0">mjb</a><a class="headerlink" href="#mjb" title="Link to this heading">#</a></h2>
 <p>so I’m playing the piano in g-minor and play a chord that includes a bass D note plus f#, B♭, c and f (but this note resolves to E♭), then the entire chord resolves to g-minor (home). what chords are those?</p>
 <p><strong>First Chord: D, F#, B♭, C, and F:</strong>
 This chord is a D7♭5#9:</p>
@@ -3812,9 +3726,9 @@ This is similar to the first chord but has an additional E♭:</p>
 </section>
 </section>
 <section id="id43">
-<h1>07/20/2023<a class="headerlink" href="#id43" title="Permalink to this heading">#</a></h1>
+<h1>07/20/2023<a class="headerlink" href="#id43" title="Link to this heading">#</a></h1>
 <section id="id44">
-<h2>727. stata<a class="headerlink" href="#id44" title="Permalink to this heading">#</a></h2>
+<h2>727. stata<a class="headerlink" href="#id44" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>week 1 content overview and approach; shouldn’t be stata-driven, rather concept-driven</p></li>
 <li><p><a class="reference external" href="https://muzaale.github.io/denotas/bdn202306.html#id35">oneway plot</a> of age at transplant</p></li>
@@ -3828,7 +3742,7 @@ This is similar to the first chord but has an additional E♭:</p>
 </ul>
 </section>
 <section id="chat">
-<h2>728. chat<a class="headerlink" href="#chat" title="Permalink to this heading">#</a></h2>
+<h2>728. chat<a class="headerlink" href="#chat" title="Link to this heading">#</a></h2>
 <p><strong>What</strong> does hamlet mean when he talks of having “cause, will, strength, and means to do..”</p>
 <p>In William Shakespeare’s play “Hamlet,” the phrase “cause, and will, and strength, and means” comes from Act IV, Scene IV, during Hamlet’s soliloquy after he witnesses the Norwegian army heading to battle over a trivial piece of land. This moment prompts Hamlet to reflect on his own inaction concerning avenging his father’s murder.</p>
 <p>Here’s a breakdown:</p>
@@ -3854,7 +3768,7 @@ This is similar to the first chord but has an additional E♭:</p>
 <p>De rien! If you have any more questions, feel free to ask. Bonne journée!</p>
 </section>
 <section id="accountability">
-<h2>729. accountability<a class="headerlink" href="#accountability" title="Permalink to this heading">#</a></h2>
+<h2>729. accountability<a class="headerlink" href="#accountability" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>mark to be a partner with regard to diet, alcohol &amp; exercize</p></li>
 <li><p>yesterday i weighted in at 222 lbs</p></li>
@@ -3862,7 +3776,7 @@ This is similar to the first chord but has an additional E♭:</p>
 </ul>
 </section>
 <section id="pairs">
-<h2>730. pairs<a class="headerlink" href="#pairs" title="Permalink to this heading">#</a></h2>
+<h2>730. pairs<a class="headerlink" href="#pairs" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>python</p></li>
 <li><p>ai</p></li>
@@ -3880,7 +3794,7 @@ This is similar to the first chord but has an additional E♭:</p>
 </ol>
 </section>
 <section id="music">
-<h2>731. music<a class="headerlink" href="#music" title="Permalink to this heading">#</a></h2>
+<h2>731. music<a class="headerlink" href="#music" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>life consists of the emotional states of flow, anxiety, and boredom</p></li>
 <li><p>music evokes these through tension &amp; release cycles</p></li>
@@ -3890,7 +3804,7 @@ This is similar to the first chord but has an additional E♭:</p>
 </ul>
 </section>
 <section id="app">
-<h2>732. app<a class="headerlink" href="#app" title="Permalink to this heading">#</a></h2>
+<h2>732. app<a class="headerlink" href="#app" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>anticiper (prévoir)</p></li>
 <li><p>participer (pourvoir)</p></li>
@@ -3898,7 +3812,7 @@ This is similar to the first chord but has an additional E♭:</p>
 </ul>
 </section>
 <section id="timecheck">
-<h2>733. timecheck<a class="headerlink" href="#timecheck" title="Permalink to this heading">#</a></h2>
+<h2>733. timecheck<a class="headerlink" href="#timecheck" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><span style="color: #FFCC00;">1:</span><span style="color: green;">29:</span><span style="color: red;">45</span></p></li>
 </ul>
@@ -3957,7 +3871,7 @@ function setup() {
 </ul>
 </section>
 <section id="constant">
-<h2>734. constant<a class="headerlink" href="#constant" title="Permalink to this heading">#</a></h2>
+<h2>734. constant<a class="headerlink" href="#constant" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><span style="color: #FFCC00;">energy (heraclitean hustle)</span></p></li>
 <li><p><span style="color: green;">credo (platonic ideal)</span> <span id="id47">[<a class="reference internal" href="../references.html#id14" title="Will Durant. A fixed credo is a sign of a dead mind. 1981. URL: https://muzaale.github.io/denotas/bdn202209.html.">36</a>]</span></p></li>
@@ -3965,7 +3879,7 @@ function setup() {
 </ul>
 </section>
 <section id="essay">
-<h2>735. essay<a class="headerlink" href="#essay" title="Permalink to this heading">#</a></h2>
+<h2>735. essay<a class="headerlink" href="#essay" title="Link to this heading">#</a></h2>
 <p><strong>and</strong> what are they. also, write a 500 word essay on these three characters and one must emerge as the winner. please don’t be dull, democratic, and overly sensible. give us a human touch with bias</p>
 <p>Epicurus, Plato, and Heraclitus represent three prominent figures in ancient philosophy, each contributing unique perspectives and ideas to the field. In this essay, we will explore the philosophies of these three characters, their key concepts, and evaluate their contributions. Please note that the following essay will incorporate a human touch with bias.</p>
 <p>Epicurus, known as an Epicurean philosopher, emphasized the pursuit of happiness and pleasure as the ultimate goal of life. He believed that pleasure should be sought, but not in the form of hedonistic indulgence. Epicurus advocated for a moderate and balanced approach, focusing on mental tranquility and the avoidance of pain. He taught that by attaining ataraxia (freedom from disturbance) and aponia (freedom from bodily pain), individuals could achieve a state of happiness. Epicurus valued friendship, simple living, and the absence of fear in his philosophy.</p>
@@ -3986,7 +3900,7 @@ function setup() {
 <p>However, drawing a parallel between Epicurean pragmatism and the prudence highlighted in Proverbs 27:12 is an insightful connection. Both promote an awareness of one’s surroundings and circumstances, advocating for actions that lead to the best possible outcomes for oneself.</p>
 </section>
 <section id="gotzendammerung">
-<h2>736. <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#pop">götzendämmerung</a><a class="headerlink" href="#gotzendammerung" title="Permalink to this heading">#</a></h2>
+<h2>736. <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#pop">götzendämmerung</a><a class="headerlink" href="#gotzendammerung" title="Link to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -4027,19 +3941,6 @@ function setup() {
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">requests</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Send a request to the Wikipedia page</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;bs4&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell tag_hide-input tag_hide-output docutils container">
 <details class="hide above-input">
@@ -4195,7 +4096,7 @@ function setup() {
 </div>
 </section>
 <section id="survey">
-<h2>737. survey<a class="headerlink" href="#survey" title="Permalink to this heading">#</a></h2>
+<h2>737. survey<a class="headerlink" href="#survey" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Candidate Evaluation Form
 
 1. What is your professional connection to the candidate?
@@ -4278,7 +4179,7 @@ _(Provide answer here)_
 </div>
 </section>
 <section id="passion">
-<h2>738. passion<a class="headerlink" href="#passion" title="Permalink to this heading">#</a></h2>
+<h2>738. passion<a class="headerlink" href="#passion" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=Tq4lxMcwYwU">st. matthew</a></p>
 <ul class="simple">
 <li><p>st. matthew is the patron saint of accountants</p></li>
@@ -4290,7 +4191,7 @@ _(Provide answer here)_
 </ul>
 </section>
 <section id="merge">
-<h2>739. merge<a class="headerlink" href="#merge" title="Permalink to this heading">#</a></h2>
+<h2>739. merge<a class="headerlink" href="#merge" title="Link to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -4426,11 +4327,11 @@ _(Provide answer here)_
 <p>This includes several inaccuracies. But for starters the code is of interest to me as a Python novice. Later we’ll investigate how to debug and improve it (for instance: everything is hardcoded but we need to scrape old websites to capture this information).</p>
 </section>
 <section id="gouldstein">
-<h2>740. gouldstein<a class="headerlink" href="#gouldstein" title="Permalink to this heading">#</a></h2>
+<h2>740. gouldstein<a class="headerlink" href="#gouldstein" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=9ZX_XCYokQo">bellissimo</a></p>
 </section>
 <section id="bernstein">
-<h2>741. bernstein!<a class="headerlink" href="#bernstein" title="Permalink to this heading">#</a></h2>
+<h2>741. bernstein!<a class="headerlink" href="#bernstein" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=8fHi36dvTdE">the unanswered question</a></p></li>
 <li><p>six lecture series on music (1973)</p></li>
@@ -4448,7 +4349,7 @@ _(Provide answer here)_
 </ul>
 </section>
 <section id="khloe">
-<h2>742. khloe<a class="headerlink" href="#khloe" title="Permalink to this heading">#</a></h2>
+<h2>742. khloe<a class="headerlink" href="#khloe" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>why is Khloe kadashian gaining so much ground in instagram popularity?<br />
 <span class="math notranslate nohighlight">\(\vdots\)</span></p></li>
@@ -4467,11 +4368,11 @@ _(Provide answer here)_
 <p>Again, it’s important to emphasize that these are speculative reasons based on past observations. The dynamics of social media popularity can change over time, and the current landscape might be different from what was prevalent during my knowledge cutoff in September 2021.</p>
 </section>
 <section id="paulsimon">
-<h2>743. paulsimon<a class="headerlink" href="#paulsimon" title="Permalink to this heading">#</a></h2>
+<h2>743. paulsimon<a class="headerlink" href="#paulsimon" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=Bi6NFPhsGyM">philospher</a></p>
 </section>
 <section id="mankind">
-<h2>744. <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#timecheck">mankind</a><a class="headerlink" href="#mankind" title="Permalink to this heading">#</a></h2>
+<h2>744. <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#timecheck">mankind</a><a class="headerlink" href="#mankind" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p><span style="color: #FFCC00">Fix your attitude</span> (i.e., burn as many calories as is necessary to getrrr done) <span id="id48">[<a class="reference internal" href="../references.html#id14" title="Will Durant. A fixed credo is a sign of a dead mind. 1981. URL: https://muzaale.github.io/denotas/bdn202209.html.">36</a>]</span> <span id="id49">[<a class="reference internal" href="../references.html#id63" title="Yours Truly. Fixed: attitude, credo, settings. 2023. URL: https://muzaale.github.io/denotas/bdn202307.html#mankind.">15</a>]</span></p>
 <ul class="simple">
@@ -4494,7 +4395,7 @@ _(Provide answer here)_
 </ol>
 </section>
 <section id="clock">
-<h2>745. <a class="reference external" href="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js">clock</a><a class="headerlink" href="#clock" title="Permalink to this heading">#</a></h2>
+<h2>745. <a class="reference external" href="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js">clock</a><a class="headerlink" href="#clock" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>study this code</p></li>
 <li><p>what language is it?</p></li>
@@ -4503,7 +4404,7 @@ _(Provide answer here)_
 </ul>
 </section>
 <section id="co-pilot">
-<h2>745. co-pilot<a class="headerlink" href="#co-pilot" title="Permalink to this heading">#</a></h2>
+<h2>745. co-pilot<a class="headerlink" href="#co-pilot" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>signed up for github co-pilot a few days ago</p></li>
 <li><p>can’t remember exactly when and whether it cost me anything</p></li>
@@ -4513,7 +4414,7 @@ _(Provide answer here)_
 </ul>
 </section>
 <section id="livedonation">
-<h2>746. livedonation<a class="headerlink" href="#livedonation" title="Permalink to this heading">#</a></h2>
+<h2>746. livedonation<a class="headerlink" href="#livedonation" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>reverence</p></li>
 <li><p>prudence</p></li>
@@ -4524,9 +4425,9 @@ _(Provide answer here)_
 </section>
 </section>
 <section id="id50">
-<h1>07/21/2023<a class="headerlink" href="#id50" title="Permalink to this heading">#</a></h1>
+<h1>07/21/2023<a class="headerlink" href="#id50" title="Link to this heading">#</a></h1>
 <section id="record">
-<h2>747. record<a class="headerlink" href="#record" title="Permalink to this heading">#</a></h2>
+<h2>747. record<a class="headerlink" href="#record" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>june 2023 hottest month on record</p></li>
 <li><p>07/20/2023 <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#timecheck">baddest</a> journaling day on record <span id="id51">[<a class="reference internal" href="../references.html#id15" title="Yours Truly. Baddest journaling day ever. 2023. URL: https://muzaale.github.io/denotas/bdn202307.html#timecheck.">52</a>]</span></p></li>
@@ -4534,7 +4435,7 @@ _(Provide answer here)_
 </ul>
 </section>
 <section id="science">
-<h2>748. science<a class="headerlink" href="#science" title="Permalink to this heading">#</a></h2>
+<h2>748. science<a class="headerlink" href="#science" title="Link to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -4613,7 +4514,7 @@ _(Provide answer here)_
 </details>
 </div>
 <ul class="simple">
-<li><p><span class="xref myst">psychology</span></p></li>
+<li><p><a class="reference internal" href="#psychology.ipynb"><span class="xref myst">psychology</span></a></p></li>
 <li><p>sociology</p></li>
 <li><p>anthropology</p></li>
 <li><p>economics</p></li>
@@ -4634,7 +4535,7 @@ _(Provide answer here)_
 <li><p>computer science</p></li>
 <li><p>data science</p></li>
 <li><p>statistics</p></li>
-<li><p><span class="xref myst">epidemiology</span></p></li>
+<li><p><a class="reference internal" href="#epidemiology.ipynb"><span class="xref myst">epidemiology</span></a></p></li>
 <li><p>public health</p></li>
 <li><p>public policy</p></li>
 <li><p>law</p></li>
@@ -4693,7 +4594,7 @@ _(Provide answer here)_
 </ul>
 </section>
 <section id="references">
-<h2>749. references<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<h2>749. references<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Here’s one style:</p></li>
 </ol>
@@ -4706,7 +4607,7 @@ _(Provide answer here)_
 <ol class="arabic simple" start="2">
 <li><p>Here’s another style:</p></li>
 </ol>
-<p>Here’s some text and <a class="reference internal" href="#my-label"><span class="std std-ref">here’s my label</span></a>.</p>
+<p>Here’s some text and <a class="reference internal" href="../bloc/bdn202307.html#my-label"><span class="std std-ref">here’s my label</span></a>.</p>
 <ol class="arabic simple" start="3">
 <li><p>Here’s a third style:</p></li>
 </ol>
@@ -4719,9 +4620,9 @@ _(Provide answer here)_
 </section>
 </section>
 <section id="id52">
-<h1>07/22/2023<a class="headerlink" href="#id52" title="Permalink to this heading">#</a></h1>
+<h1>07/22/2023<a class="headerlink" href="#id52" title="Link to this heading">#</a></h1>
 <section id="markedlystructuredtext">
-<h2>750. markedlystructuredtext<a class="headerlink" href="#markedlystructuredtext" title="Permalink to this heading">#</a></h2>
+<h2>750. markedlystructuredtext<a class="headerlink" href="#markedlystructuredtext" title="Link to this heading">#</a></h2>
 <p>we’re now ready to add the <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#daskapital">following features</a>: <span id="id53">[<a class="reference internal" href="../references.html#id10" title="Yours Truly. Markedly structured text. 2023. URL: https://muzaale.github.io/denotas/bdn202307.html#daskapital.">53</a>]</span></p>
 <ul class="simple">
 <li><p>bibtext</p></li>
@@ -4752,10 +4653,10 @@ _(Provide answer here)_
 <figure class="align-default" id="rst-fun-fish">
 <a class="reference internal image-reference" href="bdn2023/img/fun-fish.png"><img alt="bdn2023/img/fun-fish.png" src="bdn2023/img/fun-fish.png" style="width: 100px;" /></a>
 <figcaption>
-<p><span class="caption-text">Party time!</span><a class="headerlink" href="#rst-fun-fish" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Party time!</span><a class="headerlink" href="#rst-fun-fish" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>A reference from inside: <a class="reference internal" href="#rst-fun-fish"><span class="std std-ref">Party time!</span></a></p>
+<p>A reference from inside: <a class="reference internal" href="../bloc/bdn202307.html#rst-fun-fish"><span class="std std-ref">Party time!</span></a></p>
 <p>A reference from outside: <span class="xref std std-ref">syntax/directives/parsing</span></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -4771,22 +4672,22 @@ _(Provide answer here)_
 </div>
 <p>Since Pythagoras, we know that <span class="math notranslate nohighlight">\(a^2 + b^2 = c^2\)</span></p>
 <div class="math notranslate nohighlight" id="equation-euler">
-<span class="eqno">()<a class="headerlink" href="#equation-euler" title="Permalink to this equation">#</a></span>\[e^{i\pi} + 1 = 0\]</div>
-<p>Euler’s identity, equation <a class="reference internal" href="#equation-euler">()</a>, was elected one of the
+<span class="eqno">()<a class="headerlink" href="#equation-euler" title="Link to this equation">#</a></span>\[e^{i\pi} + 1 = 0\]</div>
+<p>Euler’s identity, equation <a class="reference internal" href="../bloc/bdn202307.html#equation-euler">()</a>, was elected one of the
 most beautiful mathematical formulas.</p>
 <blockquote>
-<div><p>Sep 02, 2023 | 25587 words | 128 min read</p>
+<div><p>Jun 04, 2024 | 25587 words | 128 min read</p>
 </div></blockquote>
 </section>
 </section>
 <section id="id54">
-<h1>07/24/2023<a class="headerlink" href="#id54" title="Permalink to this heading">#</a></h1>
+<h1>07/24/2023<a class="headerlink" href="#id54" title="Link to this heading">#</a></h1>
 <section id="id55">
-<h2>751. annuŋŋamya<a class="headerlink" href="#id55" title="Permalink to this heading">#</a></h2>
+<h2>751. annuŋŋamya<a class="headerlink" href="#id55" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=g2HLnjXKcHg">The Lord’s my shepherd</a>, I’ll not want Hymn <span id="id56">[<a class="reference internal" href="../references.html#id55" title="David of Judah. Annuŋŋamya. 2023. URL: https://muzaale.github.io/denotas/bdn202307.html#id46.">54</a>]</span></p>
 </section>
 <section id="success">
-<h2>752. success!<a class="headerlink" href="#success" title="Permalink to this heading">#</a></h2>
+<h2>752. success!<a class="headerlink" href="#success" title="Link to this heading">#</a></h2>
 <p>jupyter-book citations and references are working with references numeric and in order of appearance following this hack:</p>
 <p>{bibliography}
 :style: unsrt</p>
@@ -4794,27 +4695,27 @@ most beautiful mathematical formulas.</p>
 </section>
 </section>
 <section id="id57">
-<h1>07/25/2023<a class="headerlink" href="#id57" title="Permalink to this heading">#</a></h1>
+<h1>07/25/2023<a class="headerlink" href="#id57" title="Link to this heading">#</a></h1>
 <section id="jupyterbook">
-<h2>753. jupyterbook<a class="headerlink" href="#jupyterbook" title="Permalink to this heading">#</a></h2>
+<h2>753. jupyterbook<a class="headerlink" href="#jupyterbook" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=lZ2FHTkyaMU">quickstart</a></p></li>
 <li><p><a class="reference external" href="https://pubs.acs.org/doi/10.1021/acs.jchemed.2c00640">trending</a></p></li>
 </ul>
 </section>
 <section id="backreferences">
-<h2>754. backreferences<a class="headerlink" href="#backreferences" title="Permalink to this heading">#</a></h2>
+<h2>754. backreferences<a class="headerlink" href="#backreferences" title="Link to this heading">#</a></h2>
 <p>adding back-references directly through native Jupyter Book configuration for HTML output is not possible. However, you can use the Sphinx configuration to add back-references to your HTML output. To do so, you can add the following to your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </section>
 <section id="turingway">
-<h2>755. turingway<a class="headerlink" href="#turingway" title="Permalink to this heading">#</a></h2>
+<h2>755. turingway<a class="headerlink" href="#turingway" title="Link to this heading">#</a></h2>
 <p>check <a class="reference external" href="https://the-turing-way.netlify.app/index.html">this</a> out for your irb &amp; workflow</p>
 </section>
 <section id="sphinx">
-<h2>756. sphinx<a class="headerlink" href="#sphinx" title="Permalink to this heading">#</a></h2>
+<h2>756. sphinx<a class="headerlink" href="#sphinx" title="Link to this heading">#</a></h2>
 <p>To add back-references to the HTML output in Jupyter Book, you can post-process the generated HTML files to inject the necessary back-reference links. This approach involves using custom Python scripts to modify the HTML files after they have been generated by Jupyter Book.</p>
 <p>Below is a step-by-step guide on how to post-process the HTML output to add back-references:</p>
 <p>Step 1: Generate the HTML output using Jupyter Book as you normally would. Run the following command:</p>
@@ -4878,7 +4779,7 @@ most beautiful mathematical formulas.</p>
 <p>After running the script, your HTML files should now include back-references for citations in the bibliography section.</p>
 </section>
 <section id="id58">
-<h2>757. apple<a class="headerlink" href="#id58" title="Permalink to this heading">#</a></h2>
+<h2>757. apple<a class="headerlink" href="#id58" title="Link to this heading">#</a></h2>
 <p>committees vs. <a class="reference external" href="https://www.youtube.com/watch?v=f60dheI4ARg">collaboration</a> <span id="id59">[<a class="reference internal" href="../references.html#id58" title="Steve Jobs. Management. 1998. URL: https://muzaale.github.io/denotas/bdn202307.html#id49.">55</a>]</span></p>
 <p>“If you wanna hire great people and have them stay working for you, you have to let them make a lot of decisions and you have to be run by ideas not hierarchy. The best ideas have to win, otherwise good people don’t stay.” - Steve Jobs</p>
 <p>also, the idea of <a class="reference external" href="https://www.youtube.com/watch?v=8QeCQn7uxnE">distributed cognition</a> as contrasted with the traditional idea of the individual genius</p>
@@ -4892,7 +4793,7 @@ most beautiful mathematical formulas.</p>
 <p>In summary, the connection between distributed cognition, collaboration, and Steve Jobs’ quote lies in the recognition that organizations benefit from tapping into the collective intelligence of their workforce and allowing ideas to flourish in an environment that values collaboration and open decision-making. This approach can lead to a more adaptive and successful organization in the long run.</p>
 </section>
 <section id="daskapital">
-<h2>758. daskapital<a class="headerlink" href="#daskapital" title="Permalink to this heading">#</a></h2>
+<h2>758. daskapital<a class="headerlink" href="#daskapital" title="Link to this heading">#</a></h2>
 <p>The relationship between religious beliefs, societal structures, and economic systems is a complex and debated topic in social sciences. The hypotheses you mentioned, regarding the contrast between Catholicism’s hierarchy and distributed cognition, and the correlation between capitalism and Protestantism, have been subjects of academic investigation.</p>
 <ol class="arabic simple">
 <li><p>Catholicism’s Hierarchy vs. Distributed Cognition:<br />
@@ -4971,7 +4872,7 @@ Andrei Shleifer</p>
 </div>
 </section>
 <section id="id61">
-<h2>759. backreferences<a class="headerlink" href="#id61" title="Permalink to this heading">#</a></h2>
+<h2>759. backreferences<a class="headerlink" href="#id61" title="Link to this heading">#</a></h2>
 <p>To reference a section, provide it with a label, and then later reference that label.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># My Heading {#mylabel}</span>
 
@@ -5002,7 +4903,7 @@ Reference back to ![the figure above](#myfig).
 <p>The {ref} role can be used to create a reference to any labeled object (figure, table, section, etc.)</p>
 </section>
 <section id="grants">
-<span id="my-label"></span><h2>760. grants<a class="headerlink" href="#grants" title="Permalink to this heading">#</a></h2>
+<span id="my-label"></span><h2>760. grants<a class="headerlink" href="#grants" title="Link to this heading">#</a></h2>
 <p>Alright, considering your <a class="reference external" href="https://grantome.com/grant/NIH/K08-AG065520-01">expertise</a> in older living kidney donors, and integrating your teaching proficiency in Stata programming and recent completion of two data science classes that focus on python, here’s a revised list of possible grant mechanisms and research avenues you might consider:</p>
 <p><strong>Research Grant Avenues</strong>:</p>
 <ol class="arabic simple">
@@ -5025,15 +4926,15 @@ Reference back to ![the figure above](#myfig).
 <p>Remember, given your expertise and the skills you’ve recently acquired, you’re in a unique position to push the boundaries of traditional research with a more data-centric approach. This not only enhances the quality of your research but can also provide actionable insights for clinical practice. Collaborate with experts in both nephrology and data science, and ensure regular consultations with program officers for optimal alignment with NIH priorities <span id="id62">[<a class="reference internal" href="../references.html#id57" title="Yours Truly. My grants. 2020. URL: https://muzaale.github.io/denotas/bdn202307.html#grants.">57</a>]</span>.</p>
 </section>
 <section id="management">
-<h2>761. management<a class="headerlink" href="#management" title="Permalink to this heading">#</a></h2>
+<h2>761. management<a class="headerlink" href="#management" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>ergot was <a class="reference external" href="https://www.youtube.com/watch?v=ACucrVBq8Yg">hierarchically</a> managed</p></li>
 <li><p>trc is managed by committee</p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=1zybuzVgGsA">afecdvi</a> should be managed by <a class="reference external" href="https://www.youtube.com/watch?v=i5f8bqYYwps">collaboration</a> <a class="reference external" href="https://www.youtube.com/watch?v=UF8uR6Z6KLc&amp;t=20s"><span class="math notranslate nohighlight">\(\dots\)</span></a> <span id="id63">[<a class="reference internal" href="../references.html#id58" title="Steve Jobs. Management. 1998. URL: https://muzaale.github.io/denotas/bdn202307.html#id49.">55</a>]</span></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=1zybuzVgGsA">afecdvi</a> should be managed by <a class="reference external" href="https://www.youtube.com/watch?v=i5f8bqYYwps">collaboration</a> <a class="reference external" href="https://www.youtube.com/watch?v=UF8uR6Z6KLc&amp;amp;t=20s"><span class="math notranslate nohighlight">\(\dots\)</span></a> <span id="id63">[<a class="reference internal" href="../references.html#id58" title="Steve Jobs. Management. 1998. URL: https://muzaale.github.io/denotas/bdn202307.html#id49.">55</a>]</span></p></li>
 </ul>
 </section>
 <section id="recession">
-<h2>762. recession<a class="headerlink" href="#recession" title="Permalink to this heading">#</a></h2>
+<h2>762. recession<a class="headerlink" href="#recession" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://fred.stlouisfed.org/series/T10Y2Y">fred</a> <span id="id64">[<a class="reference internal" href="../references.html#id59" title="St. Louis Fed. 10-year treasury constant maturity minus 2-year treasury constant maturity (t10y2y). 2023. URL: https://muzaale.github.io/denotas/bdn202210.html.">38</a>]</span></p></li>
 <li><p>spread</p></li>
@@ -5041,7 +4942,7 @@ Reference back to ![the figure above](#myfig).
 </ul>
 </section>
 <section id="odds">
-<h2>763. <a class="reference external" href="https://www.youtube.com/watch?v=0122gzcPk9M">odds</a><a class="headerlink" href="#odds" title="Permalink to this heading">#</a></h2>
+<h2>763. <a class="reference external" href="https://www.youtube.com/watch?v=0122gzcPk9M">odds</a><a class="headerlink" href="#odds" title="Link to this heading">#</a></h2>
 <p>Alright! Imagine you’re a 21-year-old guy named Jake and you’re chatting with a friend at a café. Let’s break this down using an analogy.</p>
 <hr class="docutils" />
 <p><strong>Friend:</strong> Hey Jake, I heard your cousin is being considered for the next James Bond role!</p>
@@ -5152,9 +5053,9 @@ Reference back to ![the figure above](#myfig).
 </section>
 </section>
 <section id="id65">
-<h1>07/26/2023<a class="headerlink" href="#id65" title="Permalink to this heading">#</a></h1>
+<h1>07/26/2023<a class="headerlink" href="#id65" title="Link to this heading">#</a></h1>
 <section id="credo">
-<h2>764. credo<a class="headerlink" href="#credo" title="Permalink to this heading">#</a></h2>
+<h2>764. credo<a class="headerlink" href="#credo" title="Link to this heading">#</a></h2>
 <p>Integrating both the philosophical and statistical concepts can be challenging. However, I think it’s possible to draw parallels between the two <span id="id66">[<a class="reference internal" href="../references.html#id11" title="Yours Truly. Credo. 2023. URL: https://muzaale.github.io/denotas/bdn202109.html.">18</a>]</span>:</p>
 <ol class="arabic simple">
 <li><p><strong>Tameth (Heraclitus; fixed on struggle; <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#khaby">1 - unexplained variance</a>)</strong>:</p>
@@ -5238,7 +5139,7 @@ Reference back to ![the figure above](#myfig).
 </div>
 </section>
 <section id="pop">
-<h2>765. <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#gotzendammerung">pop</a><a class="headerlink" href="#pop" title="Permalink to this heading">#</a></h2>
+<h2>765. <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#gotzendammerung">pop</a><a class="headerlink" href="#pop" title="Link to this heading">#</a></h2>
 <p>It seems you’ve provided a list of entities (mostly celebrities, brands, and organizations) along with the number of their Instagram followers (in millions) and their associated countries. Let’s analyze this data in a few different ways:</p>
 <ol class="arabic simple">
 <li><p><strong>Most Followers</strong>:</p>
@@ -5287,7 +5188,7 @@ Reference back to ![the figure above](#myfig).
 <p>From this list, it’s evident that pop culture, particularly musicians and athletes, have a significant influence on social media, especially on a platform like Instagram. The list also showcases the global nature of social media, with representatives spanning multiple continents and countries.</p>
 </section>
 <section id="id67">
-<h2>766. gratitude<a class="headerlink" href="#id67" title="Permalink to this heading">#</a></h2>
+<h2>766. gratitude<a class="headerlink" href="#id67" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>migration from notebook to bloc de notas</p></li>
 <li><p>incorporated bibliography &amp; myst</p></li>
@@ -5307,7 +5208,7 @@ Reference back to ![the figure above](#myfig).
 </ul>
 </section>
 <section id="nhanes">
-<h2>767. nhanes<a class="headerlink" href="#nhanes" title="Permalink to this heading">#</a></h2>
+<h2>767. nhanes<a class="headerlink" href="#nhanes" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>use version control to prepare final public-use data files</p>
 <ul>
@@ -5325,7 +5226,7 @@ Reference back to ![the figure above](#myfig).
 </ul>
 </section>
 <section id="names">
-<h2>768. names<a class="headerlink" href="#names" title="Permalink to this heading">#</a></h2>
+<h2>768. names<a class="headerlink" href="#names" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>afecdvi as a name sucks and is very limiting</p></li>
 <li><p>lets borrow from python, pandas, anaconda, seaborn, etc.</p></li>
@@ -5389,9 +5290,9 @@ A piece of music in which one solo instrument is accompanied by an orchestra, sy
 </section>
 </section>
 <section id="id68">
-<h1>07/27/2023<a class="headerlink" href="#id68" title="Permalink to this heading">#</a></h1>
+<h1>07/27/2023<a class="headerlink" href="#id68" title="Link to this heading">#</a></h1>
 <section id="khaby">
-<h2>769. khaby<a class="headerlink" href="#khaby" title="Permalink to this heading">#</a></h2>
+<h2>769. khaby<a class="headerlink" href="#khaby" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>life hacks <span id="id69">[<a class="reference internal" href="../references.html#id64" title="Yours Truly. Life hackers. 2023. URL: https://muzaale.github.io/denotas/bdn202307.html#khaby.">58</a>]</span></p></li>
 <li><p>internet sensation</p></li>
@@ -5408,7 +5309,7 @@ A piece of music in which one solo instrument is accompanied by an orchestra, sy
 </ul>
 </section>
 <section id="tables">
-<h2>770. tables<a class="headerlink" href="#tables" title="Permalink to this heading">#</a></h2>
+<h2>770. tables<a class="headerlink" href="#tables" title="Link to this heading">#</a></h2>
 <p>a basic markdown table</p>
 <hr class="docutils" />
 <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>| a | b | c | d |
@@ -5417,7 +5318,7 @@ A piece of music in which one solo instrument is accompanied by an orchestra, sy
 | 5 | 6 | 7 | 8 |
 </pre></div>
 </div>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>a</p></th>
 <th class="head"><p>b</p></th>
@@ -5440,7 +5341,7 @@ A piece of music in which one solo instrument is accompanied by an orchestra, sy
 </table>
 </section>
 <section id="nutshell">
-<h2>771. <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#mankind">nutshell</a><a class="headerlink" href="#nutshell" title="Permalink to this heading">#</a></h2>
+<h2>771. <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#mankind">nutshell</a><a class="headerlink" href="#nutshell" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>w2p -&gt; <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#khaby">money</a> 💰 <span id="id70">[<a class="reference internal" href="../references.html#id64" title="Yours Truly. Life hackers. 2023. URL: https://muzaale.github.io/denotas/bdn202307.html#khaby.">58</a>]</span></p></li>
 <li><p>q&amp;a -&gt; talent 🔬 🥼</p></li>
@@ -5448,7 +5349,7 @@ A piece of music in which one solo instrument is accompanied by an orchestra, sy
 </ol>
 </section>
 <section id="society">
-<h2>772. society<a class="headerlink" href="#society" title="Permalink to this heading">#</a></h2>
+<h2>772. society<a class="headerlink" href="#society" title="Link to this heading">#</a></h2>
 <p>Thank you for providing further context. Based on the information you’ve given, it appears that you are presenting a simplified model of society with three distinct groups of people and their interactions:</p>
 <ol class="arabic simple">
 <li><p><strong>Group 1: Seekers of Power and Money</strong>: This group consists of individuals who actively pursue and may attain power and wealth. They are driven by the desire for success, influence, and financial gains.</p></li>
@@ -5473,7 +5374,7 @@ Your statement suggests that over time, the first group (power and money seekers
 <p>As always, when constructing models, it’s crucial to strike a balance between simplicity and accuracy, ensuring that the model is a useful representation without oversimplifying to the point of losing relevant information.</p>
 </section>
 <section id="backstory">
-<h2>773. <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#timecheck">backstory</a><a class="headerlink" href="#backstory" title="Permalink to this heading">#</a></h2>
+<h2>773. <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#timecheck">backstory</a><a class="headerlink" href="#backstory" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><span style="color: #FFCC00;">1:</span><span style="color: green;">29:</span><span style="color: red;">45</span></p></li>
 </ul>
@@ -5537,7 +5438,7 @@ function setup() {
 </ol>
 </section>
 <section id="dhatemwakulala">
-<h2>774. dhatemwakulala<a class="headerlink" href="#dhatemwakulala" title="Permalink to this heading">#</a></h2>
+<h2>774. dhatemwakulala<a class="headerlink" href="#dhatemwakulala" title="Link to this heading">#</a></h2>
 <p>Good morning, Kadi! I always celebrate hearing from you. As you know, our culture is not rooted in literacy, but the wisdom of our ancestors has been passed down through generations, including the teachings from your late grandfather, with whom you shared the clan name, “Dhatemwa kulala aye dhayawukana emibala.”</p>
 <p>It reminds one of the diversity of people and their perspectives. Just like the “drums cut from the stem of the same tree”, each person creates a unique sound and articulates their philosophy of life differently. This understanding becomes especially apparent when dealing with twins, who, despite sharing the same biological origin, often display distinct behavior preferences.</p>
 <p>By cherishing the wisdom embedded in this saying, one may constantly be reminded to manage their expectations of others with sensitivity, empathy and understanding. By recognizing and appreciating the individuality of each person, one may foster better relationships and create <code class="docutils literal notranslate"><span class="pre">harmony</span></code> within a community.</p>
@@ -5546,7 +5447,7 @@ Munyonyo, Uganda<br />
 August 20, 2020 at 3:10 AM (EST)</p>
 </section>
 <section id="concerto">
-<h2>775. concerto<a class="headerlink" href="#concerto" title="Permalink to this heading">#</a></h2>
+<h2>775. concerto<a class="headerlink" href="#concerto" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>username: <a class="reference external" href="mailto:dhatemwakulala&#37;&#52;&#48;gmail&#46;com">dhatemwakulala<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
 <li><p>collaboration: <a class="reference external" href="http://github.com/dhatemwakulala">github.com/dhatemwakulala</a></p></li>
@@ -5571,7 +5472,7 @@ August 20, 2020 at 3:10 AM (EST)</p>
 </ol>
 </section>
 <section id="theme">
-<h2>776. theme<a class="headerlink" href="#theme" title="Permalink to this heading">#</a></h2>
+<h2>776. theme<a class="headerlink" href="#theme" title="Link to this heading">#</a></h2>
 <p>Certainly! The African drum, also known as “engoma” or simply “drum,” holds great cultural significance across the continent. It plays a central role in various aspects of African life, from traditional rituals and ceremonies to music and dance. Here are some themes and names related to African drums from different regions and languages:</p>
 <ol class="arabic simple">
 <li><p>Cultural Symbolism:</p>
@@ -5617,7 +5518,7 @@ August 20, 2020 at 3:10 AM (EST)</p>
 <p>Please note that there are numerous other types of drums and regional variations in Africa, and each one holds unique cultural and historical significance. The names and themes provided here offer a glimpse into the rich diversity and importance of African drums in different societies.</p>
 </section>
 <section id="variations">
-<h2>777. variations<a class="headerlink" href="#variations" title="Permalink to this heading">#</a></h2>
+<h2>777. variations<a class="headerlink" href="#variations" title="Link to this heading">#</a></h2>
 <p>Certainly! Africa is a continent rich in musical diversity, and there are numerous traditional instruments found across its various regions. Here are some other African instruments and their names in different languages:</p>
 <ol class="arabic simple">
 <li><p>Kora (West Africa):</p>
@@ -5850,7 +5751,7 @@ August 20, 2020 at 3:10 AM (EST)</p>
 <p>This list is by no means exhaustive, but it gives you a diverse collection of musical instruments from various languages and cultures around the world.</p>
 </section>
 <section id="more">
-<h2>778. more<a class="headerlink" href="#more" title="Permalink to this heading">#</a></h2>
+<h2>778. more<a class="headerlink" href="#more" title="Link to this heading">#</a></h2>
 <p>What a beautiful analogy! Drawing parallels between “Dhatemwa kulala” and a Viennese Concerto by Mozart, and then crafting a musical-inspired framework around research themes, adds a creative and artistic dimension to the subject of research on older living kidney donors. Let’s explore the musical-inspired framework further:</p>
 <p>Concerto:
 In the context of research on older living kidney donors, the Concerto represents the overarching study or investigation. It symbolizes the lead research that focuses on understanding the experiences, challenges, and outcomes of older individuals who selflessly donate their kidneys to others. The lead research serves as the central theme, accompanied by various subgroups that explore specific aspects of the overall study.</p>
@@ -5866,11 +5767,11 @@ In the context of research on older living kidney donors, the Concerto represent
 <p>The musical-inspired framework elegantly captures the multidimensional nature of research on older living kidney donors, showcasing how different projects and investigations harmoniously come together, much like an orchestra, to contribute to the masterpiece of knowledge and understanding in this field. The framework also emphasizes the artistry, technique, and precision required in research, mirroring the beauty and complexity of a Viennese Concerto.</p>
 </section>
 <section id="ngomakelele-gmail-com">
-<h2>779. <a class="reference external" href="mailto:ngomakelele&#37;&#52;&#48;gmail&#46;com">ngomakelele<span>&#64;</span>gmail<span>&#46;</span>com</a><a class="headerlink" href="#ngomakelele-gmail-com" title="Permalink to this heading">#</a></h2>
+<h2>779. <a class="reference external" href="mailto:ngomakelele&#37;&#52;&#48;gmail&#46;com">ngomakelele<span>&#64;</span>gmail<span>&#46;</span>com</a><a class="headerlink" href="#ngomakelele-gmail-com" title="Link to this heading">#</a></h2>
 <p>create this account after perhaps deleting inactive ones and then use it to create a new github account. right now google says my # has been used too many times and will not allow me to create a new account. i have to wait 24 hours (i hope).</p>
 </section>
 <section id="drum">
-<h2>780. drum 🪘<a class="headerlink" href="#drum" title="Permalink to this heading">#</a></h2>
+<h2>780. drum 🪘<a class="headerlink" href="#drum" title="Link to this heading">#</a></h2>
 <p>Emibala is plural for Omubala in Lusoga. And it means a clan’s official drum sound.  Like “O’Nkonte abuliku” at that time when Nkomte was the Ssaza chief.</p>
 <p>This is different from “amabala” in Lunyoro or Rutooro to mean ‘colours’.  Eibala is single for colour or, name in lunyoro or rutooro.</p>
 <p>P,  check this while in Hoima.</p>
@@ -5880,7 +5781,7 @@ In the context of research on older living kidney donors, the Concerto represent
 <p>So each clan has its own “mubala” and these sound differently. Hence; “<a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#concerto">dhatemwa</a> kulala, dhawukana mibala”.  It’s a shame I don’t know how my own munala goes !!👎🏽👎🏽. But I know my husband’s and the children: “O Nkonte abuliku” – it is Nkonte ruling Busiki. <span id="id73">[<a class="reference internal" href="../references.html#id65" title="Soga Peoples. Dhatemwa kulala, dhawukana mibala. 1500. URL: https://muzaale.github.io/denotas/bdn202307.html#drum.">59</a>]</span></p>
 </section>
 <section id="upgraded">
-<h2>781. upgraded<a class="headerlink" href="#upgraded" title="Permalink to this heading">#</a></h2>
+<h2>781. upgraded<a class="headerlink" href="#upgraded" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">workflow</a></p></li>
 <li><p>ssh keys</p></li>
@@ -5948,7 +5849,7 @@ git push #success!
 </div>
 </section>
 <section id="private">
-<h2>782. private<a class="headerlink" href="#private" title="Permalink to this heading">#</a></h2>
+<h2>782. private<a class="headerlink" href="#private" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>established first ever private repo workflow</p></li>
 <li><p>means no one can clone this repo</p></li>
@@ -5996,7 +5897,7 @@ The key&#39;s randomart image is:
 </div>
 </section>
 <section id="id74">
-<h2>783. gratitude 🙏<a class="headerlink" href="#id74" title="Permalink to this heading">#</a></h2>
+<h2>783. gratitude 🙏<a class="headerlink" href="#id74" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>what a day: i am grateful for the opportunity to learn</p></li>
 <li><p>lets see if ever i need to save stuff locally</p></li>
@@ -6006,7 +5907,7 @@ The key&#39;s randomart image is:
 </ul>
 </section>
 <section id="mcr">
-<h2>784. mcr<a class="headerlink" href="#mcr" title="Permalink to this heading">#</a></h2>
+<h2>784. mcr<a class="headerlink" href="#mcr" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>melody</p>
 <ul>
@@ -6179,9 +6080,9 @@ The key&#39;s randomart image is:
 </section>
 </section>
 <section id="id75">
-<h1>07/28/2023<a class="headerlink" href="#id75" title="Permalink to this heading">#</a></h1>
+<h1>07/28/2023<a class="headerlink" href="#id75" title="Link to this heading">#</a></h1>
 <section id="id76">
-<h2>785. r<a class="headerlink" href="#id76" title="Permalink to this heading">#</a></h2>
+<h2>785. r<a class="headerlink" href="#id76" title="Link to this heading">#</a></h2>
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">100</span><span class="p">)</span><span class="w"> </span><span class="c1"># how to run an R script from the command line?</span>
 
 <span class="c1"># Path: bloc/afecdvi.r</span>
@@ -6271,7 +6172,7 @@ c(1:100)
 <p>Please note that the steps above assume that you have the necessary permissions and configurations to run R and Jupyter in your system. If you encounter any issues during the setup process, ensure you have installed the required dependencies and consult the official documentation for Jupyter Book and R for further troubleshooting.</p>
 </section>
 <section id="extensions">
-<h2>786. extensions<a class="headerlink" href="#extensions" title="Permalink to this heading">#</a></h2>
+<h2>786. extensions<a class="headerlink" href="#extensions" title="Link to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>R Extension for Visual Studio Code
 Badge
 
@@ -6347,7 +6248,7 @@ Contributions are always welcome! Please see the contributing guide for more det
 </div>
 </section>
 <section id="jupyter">
-<h2>787. jupyter<a class="headerlink" href="#jupyter" title="Permalink to this heading">#</a></h2>
+<h2>787. jupyter<a class="headerlink" href="#jupyter" title="Link to this heading">#</a></h2>
 <p>If you are able to run R code in the zsh terminal but are still unable to load the R kernel in Jupyter Notebook, there might be an issue with the configuration of the Jupyter environment or the installation of the R kernel. Here are some steps to troubleshoot and resolve the problem:</p>
 <ol class="arabic">
 <li><p><strong>Check Jupyter Installation</strong>: Make sure you have Jupyter Notebook installed. If you haven’t installed it yet, you can do so using pip:</p>
@@ -6408,7 +6309,7 @@ git status
 </aside>
 </section>
 <section id="drawblood">
-<h2>788. <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#timecheck">drawblood</a> 🩸<a class="headerlink" href="#drawblood" title="Permalink to this heading">#</a></h2>
+<h2>788. <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#timecheck">drawblood</a> 🩸<a class="headerlink" href="#drawblood" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>to drawblood is to challenge &amp; put one at risk of a physical or emotional injury 👆 <span id="id77">[<a class="reference internal" href="../references.html#id66" title="Nietzsche. Oh dionysus! 1888. URL: https://muzaale.github.io/denotas/bdn202307.html#drawblood.">60</a>]</span></p></li>
 <li><p>since music is a powerful emotive force at its best it can draw blood</p></li>
@@ -6426,7 +6327,7 @@ git status
 </ul>
 </section>
 <section id="workflow3-0">
-<h2>789. workflow3.0<a class="headerlink" href="#workflow3-0" title="Permalink to this heading">#</a></h2>
+<h2>789. workflow3.0<a class="headerlink" href="#workflow3-0" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>pairs</p>
 <ul>
@@ -6438,7 +6339,7 @@ git status
 </ul>
 </section>
 <section id="workflow3-1">
-<h2>790. workflow3.1<a class="headerlink" href="#workflow3-1" title="Permalink to this heading">#</a></h2>
+<h2>790. workflow3.1<a class="headerlink" href="#workflow3-1" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>beware of mistaking repo-clone for work-dir</p></li>
 <li><p>just cost me an entire day</p></li>
@@ -6448,7 +6349,7 @@ git status
 </ol>
 </section>
 <section id="angle">
-<h2>791. angle<a class="headerlink" href="#angle" title="Permalink to this heading">#</a></h2>
+<h2>791. angle<a class="headerlink" href="#angle" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><span style="color: #FFCC00">45°</span> → <span style="color: #FF0000">90°</span> <span class="math notranslate nohighlight">\( =+45°\)</span> (gravity)</p></li>
 <li><p><span style="color: #FF0000">90°</span> → <span style="color: #00CC00">180°</span> <span class="math notranslate nohighlight">\( =+90°\)</span> (assisted)</p></li>
@@ -6458,7 +6359,7 @@ git status
 </ul>
 </section>
 <section id="gmu">
-<h2>792. gmu<a class="headerlink" href="#gmu" title="Permalink to this heading">#</a></h2>
+<h2>792. gmu<a class="headerlink" href="#gmu" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>second week with lorenzo bellini</p></li>
 <li><p>challenge-level - skill-level &gt; 0</p></li>
@@ -6494,7 +6395,7 @@ git status
 </ul>
 </section>
 <section id="gospel">
-<h2>793. gospel<a class="headerlink" href="#gospel" title="Permalink to this heading">#</a></h2>
+<h2>793. gospel<a class="headerlink" href="#gospel" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Definition:
 Gospel music is a genre of Christian music that originated in African American churches during the late 19th and early 20th centuries. It is characterized by its emotive and spiritual content, typically centered around themes of faith, hope, and praise.</p></li>
@@ -6523,7 +6424,7 @@ Gospel music’s influence has extended beyond the United States, reaching diver
 <p>In conclusion, gospel music is a powerful genre with deep cultural and historical roots. It continues to inspire and uplift people of various backgrounds, making it an essential part of both religious worship and the broader music landscape. Gospel Music Universities offer education and training to those interested in studying this influential genre and becoming proficient in its performance and composition.</p>
 </section>
 <section id="noteworthy">
-<h2>794. noteworthy<a class="headerlink" href="#noteworthy" title="Permalink to this heading">#</a></h2>
+<h2>794. noteworthy<a class="headerlink" href="#noteworthy" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>gmu course is 6mo long</p></li>
 <li><p>thats 24 weeks</p></li>
@@ -6701,7 +6602,7 @@ Week 19: Incorporating Ornamentation in Gospel Music
 </div>
 </section>
 <section id="fake">
-<h2>795. fake!<a class="headerlink" href="#fake" title="Permalink to this heading">#</a></h2>
+<h2>795. fake!<a class="headerlink" href="#fake" title="Link to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -6887,7 +6788,7 @@ Week 19: Incorporating Ornamentation in Gospel Music
 </div>
 </section>
 <section id="yaffeffena">
-<h2>796. yaffeffena<a class="headerlink" href="#yaffeffena" title="Permalink to this heading">#</a></h2>
+<h2>796. yaffeffena<a class="headerlink" href="#yaffeffena" title="Link to this heading">#</a></h2>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t ed25519 -C &quot;dhatemwakulala@gmail.com&quot;
@@ -6939,25 +6840,25 @@ git push -u origin master
 </section>
 </section>
 <section id="id80">
-<h1>07/29/2023<a class="headerlink" href="#id80" title="Permalink to this heading">#</a></h1>
+<h1>07/29/2023<a class="headerlink" href="#id80" title="Link to this heading">#</a></h1>
 <section id="ourlab">
-<h2>797. ourlab<a class="headerlink" href="#ourlab" title="Permalink to this heading">#</a></h2>
+<h2>797. ourlab<a class="headerlink" href="#ourlab" title="Link to this heading">#</a></h2>
 <p><span style="color: #FFCC00">encode = arousal (cause)</span><br />
 <span style="color: #00CC00">code = flow (will, strength)</span><br />
 <span style="color: #FF0000">decode = relaxation (<code class="docutils literal notranslate"><span class="pre">means</span></code>)</span></p>
 </section>
 <section id="spectrum">
-<h2>798. spectrum<a class="headerlink" href="#spectrum" title="Permalink to this heading">#</a></h2>
+<h2>798. spectrum<a class="headerlink" href="#spectrum" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p><span class="xref myst"><span style="color: green;">Truth</span></span>, <span class="math notranslate nohighlight">\(+2\sigma\)</span></p></li>
-<li><p><span class="xref myst"><span style="color: lime;">Rigor</span> </span>, <span class="math notranslate nohighlight">\(+1\sigma\)</span></p></li>
-<li><p><span class="xref myst"><span style="color: yellow;">Error</span></span>, <span class="math notranslate nohighlight">\(\pm 0\sigma\)</span></p></li>
-<li><p><span class="xref myst"><span style="color: orange;">Sloppiness</span></span>, <span class="math notranslate nohighlight">\(-1\sigma\)</span></p></li>
-<li><p><span class="xref myst"><span style="color: red;">Fraud</span></span>, <span class="math notranslate nohighlight">\(-2\sigma\)</span></p></li>
+<li><p><a class="reference internal" href="#005_population.ipynb"><span class="xref myst"><span style="color: green;">Truth</span></span></a>, <span class="math notranslate nohighlight">\(+2\sigma\)</span></p></li>
+<li><p><a class="reference internal" href="#006_design.ipynb"><span class="xref myst"><span style="color: lime;">Rigor</span> </span></a>, <span class="math notranslate nohighlight">\(+1\sigma\)</span></p></li>
+<li><p><a class="reference internal" href="#007_methods.ipynb"><span class="xref myst"><span style="color: yellow;">Error</span></span></a>, <span class="math notranslate nohighlight">\(\pm 0\sigma\)</span></p></li>
+<li><p><a class="reference internal" href="#008_results.ipynb"><span class="xref myst"><span style="color: orange;">Sloppiness</span></span></a>, <span class="math notranslate nohighlight">\(-1\sigma\)</span></p></li>
+<li><p><a class="reference internal" href="#009_inference.ipynb"><span class="xref myst"><span style="color: red;">Fraud</span></span></a>, <span class="math notranslate nohighlight">\(-2\sigma\)</span></p></li>
 </ol>
 </section>
 <section id="id81">
-<h2>799. gmu<a class="headerlink" href="#id81" title="Permalink to this heading">#</a></h2>
+<h2>799. gmu<a class="headerlink" href="#id81" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>melody -&gt; diatonic scale</p></li>
 <li><p>chord -&gt; <code class="docutils literal notranslate"><span class="pre">but</span> <span class="pre">the</span> <span class="pre">chords?</span></code></p></li>
@@ -6966,7 +6867,7 @@ git push -u origin master
 <p>2nd diatonic chord: 1, b3, 5, b7</p>
 </section>
 <section id="table1">
-<h2>800. table1<a class="headerlink" href="#table1" title="Permalink to this heading">#</a></h2>
+<h2>800. table1<a class="headerlink" href="#table1" title="Link to this heading">#</a></h2>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="c1">*! inspired by 340.600.71 </span>
 <span class="c1">*! by Vincent Jin &amp; Abi Muzaale</span>
 <span class="c1">*! version 3.02 released on July 5, 2022 </span>
@@ -7089,7 +6990,7 @@ git push -u origin master
 </div>
 </section>
 <section id="clone">
-<h2>801. clone<a class="headerlink" href="#clone" title="Permalink to this heading">#</a></h2>
+<h2>801. clone<a class="headerlink" href="#clone" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p><a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">jupyterbook.org</a></p>
 <ul class="simple">
@@ -7137,7 +7038,7 @@ CALL conda deactivate
 </ol>
 </section>
 <section id="workflow-4-0">
-<h2>802. workflow 4.0<a class="headerlink" href="#workflow-4-0" title="Permalink to this heading">#</a></h2>
+<h2>802. workflow 4.0<a class="headerlink" href="#workflow-4-0" title="Link to this heading">#</a></h2>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="highlight-unix notranslate"><div class="highlight"><pre><span></span>git commit -m &quot;statement&quot;
@@ -7527,7 +7428,7 @@ git push
 </section>
 </section>
 <section id="id82">
-<h1>07/30/2023<a class="headerlink" href="#id82" title="Permalink to this heading">#</a></h1>
+<h1>07/30/2023<a class="headerlink" href="#id82" title="Link to this heading">#</a></h1>
 <aside class="margin sidebar">
 <p class="sidebar-title">&#64;bash_mode_script.sh</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
@@ -7557,7 +7458,7 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 </div>
 </aside>
 <section id="workflow-5-0">
-<h2>803. workflow 5.0<a class="headerlink" href="#workflow-5-0" title="Permalink to this heading">#</a></h2>
+<h2>803. workflow 5.0<a class="headerlink" href="#workflow-5-0" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>have now mastered the public-private key encryption and decryption workflow (workflow 4.0)</p></li>
 <li><p>now i’ve moved from interactive to non-interactive mode on the command line</p></li>
@@ -7565,7 +7466,7 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 </ol>
 </section>
 <section id="workflow-5-1">
-<h2>804. workflow 5.1<a class="headerlink" href="#workflow-5-1" title="Permalink to this heading">#</a></h2>
+<h2>804. workflow 5.1<a class="headerlink" href="#workflow-5-1" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>name convensions for solo, team, or community projects:</p></li>
 <li><p>choose themes inspired by the following:</p></li>
@@ -7649,7 +7550,7 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 </ol>
 </section>
 <section id="workflow-5-2">
-<h2>805. workflow 5.2<a class="headerlink" href="#workflow-5-2" title="Permalink to this heading">#</a></h2>
+<h2>805. workflow 5.2<a class="headerlink" href="#workflow-5-2" title="Link to this heading">#</a></h2>
 <p>To translate the given Windows batch commands to a macOS shell script (Bash script), follow these steps:</p>
 <ol class="arabic simple">
 <li><p>Create a new text file and give it a <code class="docutils literal notranslate"><span class="pre">.sh</span></code> extension. For example, <code class="docutils literal notranslate"><span class="pre">script.sh</span></code>.</p></li>
@@ -7685,7 +7586,7 @@ git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </sp
 <p>Please note that in macOS, you might need to adjust some paths depending on your specific file system structure. Also, be cautious with non-ASCII characters in file and folder names, as they can sometimes cause issues in shell scripts. If you encounter any issues, consider renaming folders with non-ASCII characters to more standard names.</p>
 </section>
 <section id="bash">
-<h2>806. bash<a class="headerlink" href="#bash" title="Permalink to this heading">#</a></h2>
+<h2>806. bash<a class="headerlink" href="#bash" title="Link to this heading">#</a></h2>
 <p>To create a file named “<a class="reference external" href="http://run.sh">run.sh</a>” on the command line, you can use a text editor like <code class="docutils literal notranslate"><span class="pre">nano</span></code>, <code class="docutils literal notranslate"><span class="pre">vim</span></code>, or simply the <code class="docutils literal notranslate"><span class="pre">echo</span></code> command to write the contents of the file. Below are two common methods:</p>
 <p>Method 1: Using a Text Editor (nano)</p>
 <ol class="arabic simple">
@@ -7732,7 +7633,7 @@ git push origin main
 </aside>
 </section>
 <section id="ganoamagunju">
-<h2>807. ganoamagunju<a class="headerlink" href="#ganoamagunju" title="Permalink to this heading">#</a></h2>
+<h2>807. ganoamagunju<a class="headerlink" href="#ganoamagunju" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>this is an inflection point in my workflow</p></li>
 <li><p>more complex doctees are now possible</p></li>
@@ -7746,7 +7647,7 @@ git push origin main
 </aside>
 </section>
 <section id="liz2ra">
-<h2>808. liz2ra<a class="headerlink" href="#liz2ra" title="Permalink to this heading">#</a></h2>
+<h2>808. liz2ra<a class="headerlink" href="#liz2ra" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>only girl - kenny latimore</p></li>
 <li><p>serendipitously recommended</p></li>
@@ -7759,7 +7660,7 @@ git push origin main
 </ul>
 </section>
 <section id="python">
-<h2>809. python<a class="headerlink" href="#python" title="Permalink to this heading">#</a></h2>
+<h2>809. python<a class="headerlink" href="#python" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>with my burgeoning python skills and working folder structure it’s now possible to create a python script that will automate the entire workflow</p></li>
 <li><p>it is also becoming confusing figuring out which workdirectory and git clone to use since i’ve all <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#workflow-4-0">57 in one directory</a></p></li>
@@ -7767,7 +7668,7 @@ git push origin main
 </ul>
 </section>
 <section id="shell-script">
-<h2>810. shell script<a class="headerlink" href="#shell-script" title="Permalink to this heading">#</a></h2>
+<h2>810. shell script<a class="headerlink" href="#shell-script" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>work dir = bloc</p></li>
 <li><p>git clone = denotas</p></li>
@@ -7775,7 +7676,7 @@ git push origin main
 </ul>
 </section>
 <section id="folk">
-<h2>811. folk<a class="headerlink" href="#folk" title="Permalink to this heading">#</a></h2>
+<h2>811. folk<a class="headerlink" href="#folk" title="Link to this heading">#</a></h2>
 <p>Creating a branch in a GitHub repository allows you to experiment with changes and modifications without affecting the main codebase. It’s a great practice for developing new features, fixing bugs, or testing out ideas. Here’s a step-by-step guide to creating a branch:</p>
 <ol class="arabic">
 <li><p><strong>Fork the Repository:</strong>
@@ -7862,7 +7763,7 @@ git<span class="w"> </span>merge<span class="w"> </span>upstream/main
 <p>Thank you for the clarification, and I’ll be sure to respect the tone and context of your queries. If you have any further questions or need assistance with any topic, feel free to ask!</p>
 </section>
 <section id="sexiest">
-<h2>812. sexiest<a class="headerlink" href="#sexiest" title="Permalink to this heading">#</a></h2>
+<h2>812. sexiest<a class="headerlink" href="#sexiest" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># Change directory to ~/dropbox/1f.ἡἔρις,κ/1.ontology</span>
@@ -7892,7 +7793,7 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 </div>
 </section>
 <section id="gas">
-<h2>813. gas<a class="headerlink" href="#gas" title="Permalink to this heading">#</a></h2>
+<h2>813. gas<a class="headerlink" href="#gas" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>git</p></li>
 <li><p>and</p></li>
@@ -7997,7 +7898,7 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 </aside>
 </section>
 <section id="juliocesare">
-<h2>813. juliocesare<a class="headerlink" href="#juliocesare" title="Permalink to this heading">#</a></h2>
+<h2>813. juliocesare<a class="headerlink" href="#juliocesare" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>what a month this been!</p></li>
 <li><p>i’m delighted to close out on this note</p></li>
@@ -8006,9 +7907,9 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 </section>
 </section>
 <section id="id83">
-<h1>07/31/2023<a class="headerlink" href="#id83" title="Permalink to this heading">#</a></h1>
+<h1>07/31/2023<a class="headerlink" href="#id83" title="Link to this heading">#</a></h1>
 <section id="cafe">
-<h2>814. café<a class="headerlink" href="#cafe" title="Permalink to this heading">#</a></h2>
+<h2>814. café<a class="headerlink" href="#cafe" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>henchforth to be my beverage of choice</p></li>
 <li><p>i will drink it black, <em>grazie</em></p></li>
@@ -8026,7 +7927,7 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 </ul>
 </section>
 <section id="feminism">
-<h2>815. feminism<a class="headerlink" href="#feminism" title="Permalink to this heading">#</a></h2>
+<h2>815. feminism<a class="headerlink" href="#feminism" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>jill scott</p></li>
 <li><p>crown royal</p></li>
@@ -8034,7 +7935,7 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 </ul>
 </section>
 <section id="fenagas-llc">
-<h2>816. fenagas,llc<a class="headerlink" href="#fenagas-llc" title="Permalink to this heading">#</a></h2>
+<h2>816. fenagas,llc<a class="headerlink" href="#fenagas-llc" title="Link to this heading">#</a></h2>
 <p>Fenagas, LLC. is introducing <code class="docutils literal notranslate"><span class="pre">Fena</span></code>, an innovative static site generator, with the goal of revolutionizing the way medical research and knowledge are shared and collaboratively explored. In this project, they emphasize the significance of open science and open access to knowledge in the fast-paced world of medical research.</p>
 <p>Fena, as a static site generator, offers exceptional advantages over traditional content management systems. By transforming content into pre-rendered HTML, CSS, and JavaScript files, Fena provides exceptional speed, security, and simplicity in presenting research findings, protocols, and medical knowledge. It empowers the research group with the ability to create interactive and easily navigable websites, integrating data, multimedia content, and code snippets seamlessly.</p>
 <p>The collective efforts with Fena are expected to accelerate scientific communication, streamline research workflows, and foster fruitful collaborations within and beyond their institution. The researchers are committed to safeguarding sensitive data by embracing private repositories and restricting access to invited collaborators and trainees.</p>
@@ -8045,7 +7946,7 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 <p>The project is open to exploration and invites all interested parties to participate in this journey of scientific discovery, collaboration, and innovation. Together, they hope to amplify the impact of their research and medical advancements on a global scale, making a positive difference in healthcare.</p>
 </section>
 <section id="koko">
-<h2>817. koko<a class="headerlink" href="#koko" title="Permalink to this heading">#</a></h2>
+<h2>817. koko<a class="headerlink" href="#koko" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>t32</p></li>
 <li><p>with me</p></li>
@@ -8089,7 +7990,7 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
 </aside>
 </section>
 <section id="playwright">
-<h2>819. playwright<a class="headerlink" href="#playwright" title="Permalink to this heading">#</a></h2>
+<h2>819. playwright<a class="headerlink" href="#playwright" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://muzaale.github.io/repos/intro.html">dramatis personae</a></p></li>
 <li><p>perspectivity</p></li>
@@ -8120,7 +8021,7 @@ While there are notable thinkers associated with the exploration of perspectivit
 </aside>
 </section>
 <section id="herverb">
-<h2>820. herverb<a class="headerlink" href="#herverb" title="Permalink to this heading">#</a></h2>
+<h2>820. herverb<a class="headerlink" href="#herverb" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>for the record, i set record record sales</p></li>
 <li><p>i <a class="reference external" href="https://muzaale.github.io/denotas/chapter1.html">do</a>: cardi b with sza</p></li>
@@ -8128,7 +8029,7 @@ While there are notable thinkers associated with the exploration of perspectivit
 </ul>
 </section>
 <section id="jhutrc-fenagas-llc">
-<h2>821. <a class="reference external" href="https://jhutrc.github.io/fenagas/intro.html">jhutrc/fenagas,llc</a><a class="headerlink" href="#jhutrc-fenagas-llc" title="Permalink to this heading">#</a></h2>
+<h2>821. <a class="reference external" href="https://jhutrc.github.io/fenagas/intro.html">jhutrc/fenagas,llc</a><a class="headerlink" href="#jhutrc-fenagas-llc" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>alpha build, done!</p></li>
 <li><p>now beta testing</p></li>
@@ -8142,7 +8043,7 @@ While there are notable thinkers associated with the exploration of perspectivit
 </ul>
 </section>
 <section id="array">
-<h2>822. array<a class="headerlink" href="#array" title="Permalink to this heading">#</a></h2>
+<h2>822. array<a class="headerlink" href="#array" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="nb">declare</span><span class="w"> </span>-a<span class="w"> </span><span class="nv">arr</span><span class="o">=(</span><span class="s2">&quot;high_school_students&quot;</span><span class="w"> </span><span class="s2">&quot;undergraduates&quot;</span><span class="w"> </span><span class="s2">&quot;graduate_students&quot;</span><span class="w"> </span><span class="s2">&quot;medical_students&quot;</span><span class="w"> </span><span class="s2">&quot;residents&quot;</span><span class="w"> </span>
@@ -8156,7 +8057,7 @@ While there are notable thinkers associated with the exploration of perspectivit
 </div>
 </section>
 <section id="list">
-<h2>823. list<a class="headerlink" href="#list" title="Permalink to this heading">#</a></h2>
+<h2>823. list<a class="headerlink" href="#list" title="Link to this heading">#</a></h2>
 <p>List, Array, and Tibble are data structures used in different programming environments for handling data. Here’s a brief explanation of each:</p>
 <ol class="arabic simple">
 <li><p>List:
@@ -8186,7 +8087,7 @@ A tibble is a data structure used in the R programming language, specifically wi
 <p>In summary, a list is a versatile data structure that can store elements of different types, an array is a more rigid structure meant for elements of the same type, and a tibble is a specific data structure used in R, optimized for data manipulation and analysis tasks.</p>
 </section>
 <section id="ciphers">
-<h2>824. ciphers<a class="headerlink" href="#ciphers" title="Permalink to this heading">#</a></h2>
+<h2>824. ciphers<a class="headerlink" href="#ciphers" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://themarginaliareview.com/shakespeare-contra-nietzsche-andrew-lanham/">Shakespeare Contra Nietzsche</a> by Andrew Lanham<br />
 May 9, 2016</p>
 <p>In the 400 years since Shakespeare’s death, one of his most influential afterlives has been in the philosophy of Friedrich Nietzsche, who thought he was a reincarnation of the Bard.</p>
@@ -8267,16 +8168,12 @@ May 9, 2016</p>
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -8284,6 +8181,7 @@ May 9, 2016</p>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -8634,9 +8532,10 @@ By Abimereki Muzaale
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -8660,8 +8559,8 @@ By Abimereki Muzaale
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

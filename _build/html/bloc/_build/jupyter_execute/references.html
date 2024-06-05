@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>References &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bloc/_build/jupyter_execute/references';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/practicing.png" class="logo__image only-light" alt="Nothin' - Home"/>
+    <script>document.write(`<img src="../../../_static/practicing.png" class="logo__image only-dark" alt="Nothin' - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../chapter2.html">object</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbloc/_build/jupyter_execute/references.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/bloc/_build/jupyter_execute/references.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>References</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="references">
+<h1>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h1>
+<div class="docutils container" id="id1">
+<div role="list" class="citation-list">
+<div class="citation" id="id43" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>2Pac88<span class="fn-bracket">]</span></span>
+<p>2Pac. 16-year-old 2pac. 1988. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202109.html">https://muzaale.github.io/denotas/bdn202109.html</a>.</p>
+</div>
+<div class="citation" id="id3" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Cha11<span class="fn-bracket">]</span></span>
+<p>Jeffrey M Chandor. Margin call. 2011. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn201111.html">https://muzaale.github.io/denotas/bdn201111.html</a>.</p>
+</div>
+<div class="citation" id="id17" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Cha23a<span class="fn-bracket">]</span></span>
+<p>ChatGPT. Beautiful soup. 2023. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202306.html#blasphemy">https://muzaale.github.io/denotas/bdn202306.html#blasphemy</a>.</p>
+</div>
+<div class="citation" id="id20" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Cha23b<span class="fn-bracket">]</span></span>
+<p>ChatGPT. Solution to a most vexing problem. 2023. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202306.html#jupyter-book">https://muzaale.github.io/denotas/bdn202306.html#jupyter-book</a>.</p>
+</div>
+<div class="citation" id="id14" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Dur81<span class="fn-bracket">]</span></span>
+<p>Will Durant. A fixed credo is a sign of a dead mind. 1981. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202209.html">https://muzaale.github.io/denotas/bdn202209.html</a>.</p>
+</div>
+<div class="citation" id="id39" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Fab62<span class="fn-bracket">]</span></span>
+<p>Frederick William Faber. There is a wideness in thy mercy. 1862. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202111.html">https://muzaale.github.io/denotas/bdn202111.html</a>.</p>
+</div>
+<div class="citation" id="id59" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Fed23<span class="fn-bracket">]</span></span>
+<p>St. Louis Fed. 10-year treasury constant maturity minus 2-year treasury constant maturity (t10y2y). 2023. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202210.html">https://muzaale.github.io/denotas/bdn202210.html</a>.</p>
+</div>
+<div class="citation" id="id58" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Job98<span class="fn-bracket">]</span></span>
+<p>Steve Jobs. Management. 1998. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#id49">https://muzaale.github.io/denotas/bdn202307.html#id49</a>.</p>
+</div>
+<div class="citation" id="id18" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Lan85<span class="fn-bracket">]</span></span>
+<p>Paul H Lang. Handel: 300 years on. 1985. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202305.html?highlight=san+diego#sampling">https://muzaale.github.io/denotas/bdn202305.html?highlight=san+diego#sampling</a>.</p>
+</div>
+<div class="citation" id="id56" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LaP99<span class="fn-bracket">]</span></span>
+<p>LaPorta. The quality of government. 1999. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#daskapital">https://muzaale.github.io/denotas/bdn202307.html#daskapital</a>.</p>
+</div>
+<div class="citation" id="id49" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Lef21<span class="fn-bracket">]</span></span>
+<p>Bruce Leff. Beware of hospitalizaing older patients. 2021. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202011.html">https://muzaale.github.io/denotas/bdn202011.html</a>.</p>
+</div>
+<div class="citation" id="id62" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MIT50<span class="fn-bracket">]</span></span>
+<p>MIT. Object-oriented: agent=programmer, verb=code, object=datasets. 1950. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#three-peat">https://muzaale.github.io/denotas/bdn202307.html#three-peat</a>.</p>
+</div>
+<div class="citation" id="id21" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Nie87a<span class="fn-bracket">]</span></span>
+<p>Nietzsche. Genealogy of morality. 1887. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202301.html">https://muzaale.github.io/denotas/bdn202301.html</a>.</p>
+</div>
+<div class="citation" id="id22" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Nie87b<span class="fn-bracket">]</span></span>
+<p>Nietzsche. Nothing succeeds if prankishness has no part in it. 1887. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202212.html">https://muzaale.github.io/denotas/bdn202212.html</a>.</p>
+</div>
+<div class="citation" id="id66" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Nie88a<span class="fn-bracket">]</span></span>
+<p>Nietzsche. Oh dionysus! 1888. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#drawblood">https://muzaale.github.io/denotas/bdn202307.html#drawblood</a>.</p>
+</div>
+<div class="citation" id="id27" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Nie87c<span class="fn-bracket">]</span></span>
+<p>F Nietzsche. Egyptianism. 1887. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202305.html?highlight=egyptian#egypticism">https://muzaale.github.io/denotas/bdn202305.html?highlight=egyptian#egypticism</a>.</p>
+</div>
+<div class="citation" id="id31" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Nie88b<span class="fn-bracket">]</span></span>
+<p>F Nietzsche. Ugliness. 1888. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202206.html">https://muzaale.github.io/denotas/bdn202206.html</a>.</p>
+</div>
+<div class="citation" id="id55" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>oJ23<span class="fn-bracket">]</span></span>
+<p>David of Judah. Annuŋŋamya. 2023. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#id46">https://muzaale.github.io/denotas/bdn202307.html#id46</a>.</p>
+</div>
+<div class="citation" id="id65" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Peo00<span class="fn-bracket">]</span></span>
+<p>Soga Peoples. Dhatemwa kulala, dhawukana mibala. 1500. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#drum">https://muzaale.github.io/denotas/bdn202307.html#drum</a>.</p>
+</div>
+<div class="citation" id="id26" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Pra13<span class="fn-bracket">]</span></span>
+<p>P Pralavolio. History of elementary particles. 2013. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202305.html#types">https://muzaale.github.io/denotas/bdn202305.html#types</a>.</p>
+</div>
+<div class="citation" id="id54" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Ser17<span class="fn-bracket">]</span></span>
+<p>Kelly Servick. Moderna pre-covid. 2017. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn201702.html">https://muzaale.github.io/denotas/bdn201702.html</a>.</p>
+</div>
+<div class="citation" id="id42" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Sha01<span class="fn-bracket">]</span></span>
+<p>Shakespeare. My thoughts be bloody, or be nothing worth. 1601. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202109.html">https://muzaale.github.io/denotas/bdn202109.html</a>.</p>
+</div>
+<div class="citation" id="id52" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Sim78<span class="fn-bracket">]</span></span>
+<p>Herbert Simon. Artificial intelligence. 1978. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202002.html">https://muzaale.github.io/denotas/bdn202002.html</a>.</p>
+</div>
+<div class="citation" id="id51" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Thi21<span class="fn-bracket">]</span></span>
+<p>Peter Thiel. Education reform and adversarial learning networks. 2021. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#hypothesis">https://muzaale.github.io/denotas/bdn202307.html#hypothesis</a>.</p>
+</div>
+<div class="citation" id="id13" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru15a<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Proverbs 27:12. -1015. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#id15">https://muzaale.github.io/denotas/bdn202307.html#id15</a>.</p>
+</div>
+<div class="citation" id="id30" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru54<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Graham colditz. 1954. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202207.html">https://muzaale.github.io/denotas/bdn202207.html</a>.</p>
+</div>
+<div class="citation" id="id32" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>tru88<span class="fn-bracket">]</span></span>
+<p>Yours truly. Why children like me. 1988. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202306.html?highlight=children#children">https://muzaale.github.io/denotas/bdn202306.html?highlight=children#children</a>.</p>
+</div>
+<div class="citation" id="id2" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru11<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Iphone notes migration. 2011. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn201111.html">https://muzaale.github.io/denotas/bdn201111.html</a>.</p>
+</div>
+<div class="citation" id="id4" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru15b<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Latin mass. 2015. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn201502.html">https://muzaale.github.io/denotas/bdn201502.html</a>.</p>
+</div>
+<div class="citation" id="id5" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru16<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Diet, climate. 2016. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn201610.html">https://muzaale.github.io/denotas/bdn201610.html</a>.</p>
+</div>
+<div class="citation" id="id6" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru17<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Due process vs. client outcomes. 2017. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn201711.html">https://muzaale.github.io/denotas/bdn201711.html</a>.</p>
+</div>
+<div class="citation" id="id57" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru20<span class="fn-bracket">]</span></span>
+<p>Yours Truly. My grants. 2020. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#grants">https://muzaale.github.io/denotas/bdn202307.html#grants</a>.</p>
+</div>
+<div class="citation" id="id53" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>tru20<span class="fn-bracket">]</span></span>
+<p>Yours truly. With hindsight, credit suisse was a bad idea. 2020. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202002.html">https://muzaale.github.io/denotas/bdn202002.html</a>.</p>
+</div>
+<div class="citation" id="id44" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>tru21a<span class="fn-bracket">]</span></span>
+<p>Yours truly. Man's greatest error is univariable analysis: a dimentionality reduction strategy. 2021. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202106.html">https://muzaale.github.io/denotas/bdn202106.html</a>.</p>
+</div>
+<div class="citation" id="id40" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>tru21b<span class="fn-bracket">]</span></span>
+<p>Yours truly. Parmenides vs. heracleitus. 2021. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202111.html">https://muzaale.github.io/denotas/bdn202111.html</a>.</p>
+</div>
+<div class="citation" id="id45" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>tru21c<span class="fn-bracket">]</span></span>
+<p>Yours truly. Percentiles are not exchangeable across datasetes and so nonparametric tests unavailable for multivariable problems. 2021. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202104.html">https://muzaale.github.io/denotas/bdn202104.html</a>.</p>
+</div>
+<div class="citation" id="id50" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>tru21d<span class="fn-bracket">]</span></span>
+<p>Yours truly. Struggle, anxiety, boredom. 2021. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#aesthetics">https://muzaale.github.io/denotas/bdn202307.html#aesthetics</a>.</p>
+</div>
+<div class="citation" id="id47" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>tru21e<span class="fn-bracket">]</span></span>
+<p>Yours truly. The mustard seed of my philosophy. 2021. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202012.html">https://muzaale.github.io/denotas/bdn202012.html</a>.</p>
+</div>
+<div class="citation" id="id46" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>tru21f<span class="fn-bracket">]</span></span>
+<p>Yours truly. Unprecedented career progress. 2021. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202102.html">https://muzaale.github.io/denotas/bdn202102.html</a>.</p>
+</div>
+<div class="citation" id="id37" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>tru22a<span class="fn-bracket">]</span></span>
+<p>Yours truly. Folks at max's taphouse. 2022. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202204.html">https://muzaale.github.io/denotas/bdn202204.html</a>.</p>
+</div>
+<div class="citation" id="id19" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru22a<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Her thoughts echo the malcontent. 2022. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202304.html#y">https://muzaale.github.io/denotas/bdn202304.html#y</a>.</p>
+</div>
+<div class="citation" id="id36" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>tru22b<span class="fn-bracket">]</span></span>
+<p>Yours truly. How to engage folks in flow. 2022. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202204.html">https://muzaale.github.io/denotas/bdn202204.html</a>.</p>
+</div>
+<div class="citation" id="id29" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru22b<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Journaling! 2022. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202207.html">https://muzaale.github.io/denotas/bdn202207.html</a>.</p>
+</div>
+<div class="citation" id="id38" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>tru22c<span class="fn-bracket">]</span></span>
+<p>Yours truly. Non plus ultra. 2022. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202204.html">https://muzaale.github.io/denotas/bdn202204.html</a>.</p>
+</div>
+<div class="citation" id="id28" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru22c<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Originality. 2022. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202207.html">https://muzaale.github.io/denotas/bdn202207.html</a>.</p>
+</div>
+<div class="citation" id="id33" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>tru22d<span class="fn-bracket">]</span></span>
+<p>Yours truly. Potential r03 topic. 2022. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202205.html">https://muzaale.github.io/denotas/bdn202205.html</a>.</p>
+</div>
+<div class="citation" id="id7" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru22d<span class="fn-bracket">]</span></span>
+<p>Yours Truly. The man and the artist. 2022. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202201.html">https://muzaale.github.io/denotas/bdn202201.html</a>.</p>
+</div>
+<div class="citation" id="id25" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru22e<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Zeitgeist of my academic life. 2022. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202209.html">https://muzaale.github.io/denotas/bdn202209.html</a>.</p>
+</div>
+<div class="citation" id="id15" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru23a<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Baddest journaling day ever. 2023. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#timecheck">https://muzaale.github.io/denotas/bdn202307.html#timecheck</a>.</p>
+</div>
+<div class="citation" id="id16" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru23b<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Becoming in stata programming. 2023. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202306.html#id35">https://muzaale.github.io/denotas/bdn202306.html#id35</a>.</p>
+</div>
+<div class="citation" id="id9" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru23c<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Biostats cluster. 2023. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202305.html#list">https://muzaale.github.io/denotas/bdn202305.html#list</a>.</p>
+</div>
+<div class="citation" id="id11" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru23d<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Credo. 2023. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202109.html">https://muzaale.github.io/denotas/bdn202109.html</a>.</p>
+</div>
+<div class="citation" id="id12" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru23e<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Deut 20:14. 2023. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#id15">https://muzaale.github.io/denotas/bdn202307.html#id15</a>.</p>
+</div>
+<div class="citation" id="id63" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru23f<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Fixed: attitude, credo, settings. 2023. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#mankind">https://muzaale.github.io/denotas/bdn202307.html#mankind</a>.</p>
+</div>
+<div class="citation" id="id64" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru23g<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Life hackers. 2023. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#khaby">https://muzaale.github.io/denotas/bdn202307.html#khaby</a>.</p>
+</div>
+<div class="citation" id="id10" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru23h<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Markedly structured text. 2023. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#daskapital">https://muzaale.github.io/denotas/bdn202307.html#daskapital</a>.</p>
+</div>
+<div class="citation" id="id61" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru23i<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Science, ethics, aesthetics. 2023. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202307.html#service">https://muzaale.github.io/denotas/bdn202307.html#service</a>.</p>
+</div>
+<div class="citation" id="id8" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Tru23j<span class="fn-bracket">]</span></span>
+<p>Yours Truly. Theme &amp; variations. 2023. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202304.html#musik">https://muzaale.github.io/denotas/bdn202304.html#musik</a>.</p>
+</div>
+<div class="citation" id="id41" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Unk95<span class="fn-bracket">]</span></span>
+<p>Unknown. Fave idea: mwijje mwena abaruhire nimwe abaremerirwe yesu nabahumuriza: matthew 11:28-30. 1895. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202109.html">https://muzaale.github.io/denotas/bdn202109.html</a>.</p>
+</div>
+<div class="citation" id="id24" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Unk22<span class="fn-bracket">]</span></span>
+<p>Unknown. Latex before ds4ph. 2022. URL: <a class="reference external" href="https://muzaale.github.io/denotas/bdn202209.html">https://muzaale.github.io/denotas/bdn202209.html</a>.</p>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./bloc/_build/jupyter_execute"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

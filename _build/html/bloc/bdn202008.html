@@ -1,0 +1,726 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>08/2020 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bloc/bdn202008';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/practicing.png" class="logo__image only-light" alt="Nothin' - Home"/>
+    <script>document.write(`<img src="../_static/practicing.png" class="logo__image only-dark" alt="Nothin' - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbloc/bdn202008.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bloc/bdn202008.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>08/2020</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>08/2020<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Patrick has been an outstanding moderator :-)</p>
+<p>DUNCAN (our eye balls and clicks</p>
+<ol class="arabic simple">
+<li><p>Networks (The Boyz)</p></li>
+<li><p>Scalable (Budonians)</p></li>
+<li><p>Differentiable (Rankings, Pollution, Quality)</p></li>
+<li><p>Platform (For All the Above)</p></li>
+<li><p>Translatable (Earnings, Income)</p></li>
+</ol>
+<p>ABEL</p>
+<ol class="arabic simple">
+<li><p>Proof of Principle</p></li>
+<li><p>Can be adapted</p></li>
+<li><p>Not necessarily for Profit (Adds value in terms of brotherhood)</p></li>
+<li><p>Link to K’la for Diaspora</p></li>
+<li><p>Excellent Platform (Can be leveraged in future)</p></li>
+</ol>
+<p>MARK</p>
+<ol class="arabic simple">
+<li><p>Just wanted to make money (has so many bills, diaper needs, etc)</p></li>
+<li><p>Delinquent loans beyond time T.. Distressed debt (will need extra details.. about financing endeavor)</p></li>
+<li><p>Financial value</p></li>
+<li><p>Vuture funds</p></li>
+<li><p>CFO friends in Uganda</p></li>
+</ol>
+<p>TIM</p>
+<ol class="arabic simple">
+<li><p>We already have networks</p></li>
+<li><p>Formalizing it makes us millennials</p></li>
+<li><p>Generating revenue: later focus</p></li>
+<li><p>Specific targets (short gun vs. ROI approach)</p></li>
+<li><p>No luxury for legacy</p></li>
+</ol>
+<p>PATRICK (issue.. taking deposits vs. giving loans vs bridge financing.. ABE clarification, with serious regulatory implications… fixed annuity from TIM).. our strongest skills</p>
+<ol class="arabic simple">
+<li><p>We’ve made progress (i.e., having these discussions); how come women start this earlier than us (i.e., Namagunga started this at 30 we at 40)</p></li>
+<li><p>Budonian individualism (i.e., strength of the individuals but held back networks)</p></li>
+<li><p>Generationally how we can make something to be proud of (i.e., for generations beyond us)</p></li>
+<li><p>Is this BIG? Clear? If not, we just abandon! No bother</p></li>
+<li><p>The impatience of the younger generation (including self); real online bank with no brick and mortar? Guarantee young customers a rate of return (telecom rivals)</p></li>
+</ol>
+<p>MYSELF</p>
+<ol class="arabic simple">
+<li><p>This is going forward regardless of y’all</p></li>
+<li><p>So if you want to join later that’s fine</p></li>
+<li><p>In the interim we will lose your contribution</p></li>
+<li><p>Idea with focus on revenue and needs an exit strategy</p></li>
+<li><p>Is in a startup and is familiar with that language (Big.. become or be?)</p></li>
+</ol>
+<p>To me its a question of being vs. becoming!</p>
+<p>— this would not have been possible if everyone made it<br />
+— Experience from both diaspora and Ugandan group</p>
+<p>BECOMING</p>
+<ol class="arabic simple">
+<li><p>Legal</p></li>
+<li><p>Online</p></li>
+<li><p>Traffic (Eyeballs and clicks)</p></li>
+<li><p>Content</p></li>
+<li><p>Money (Most popular topic by Patrick)</p></li>
+</ol>
+<p>Here is what we are going to do (Patrick)</p>
+<ol class="arabic simple">
+<li><p>Put idea on paper (whoever you are.. strategy and we refine it as a group)</p></li>
+<li><p>Lets move away from talking (registering a domain name is not making progress)</p></li>
+<li><p>Our starting point the next time is what we put on paper (thats how a business idea comes to mind.. revenue streams options)</p></li>
+<li><p>More people on the phone and participation (</p></li>
+<li><p>Review from the larger (seasonabl point to end meeting… )</p></li>
+</ol>
+<p>ITERATION<br />
+But a communal effort<br />
+Call to action beyond talk<br />
+Alternate vision and ideas (what to deal with first)So we need to find a balance and make this work</p>
+<p>If you want to move quickly, move alone; if you want to move far, move collectively</p>
+<p>.</p>
+<p>When you are living for the approval of strangers… Taylor Swift</p>
+<p>x</p>
+<p>If this is what it takes for commercial success then… Abimereki Muzaale</p>
+<p>x</p>
+<p>For someone who has built her belief system on getting people to clap for you… Taylor after Crazy Kanye boos</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>— If you want to move quickly, move alone; if you want to move far, move collectively — 
+
+Distinguished gentlemen, on August 1st we had meeting #3 defacto moderated by Patrick;
+He invited each person in attendance to summarize their thoughts on a particular matter; and,
+The matter at hand was: “To what end are these zoom meetings aimed?”
+
+No one has attended all three meetings, with the possible exceptions of Patrick, Duncan, and Kadi;
+Some have attended two, others one, and still some none;
+Whether or not 9PM Saturday is an ideal time for these two weekly meetings is an issue to discuss;
+One proposal to improve attendance is to move these meetings to 9PM Sunday;
+But that is an issue that we can discuss before August 15 (Saturday) or August 16 (Sunday).
+
+I attempted to link the ideas across all three meetings;
+But Patrick thought it would be better for each idea to be expressed by its author;
+Yet being perhaps the only person who attended each minute of each meeting,
+Perhaps it would be a great loss if I neglected items already shared, methinks.
+And therefore I’ll merely paraphrase in an abstract manner what that “thread” of thoughts adds up to…
+
+BECOMING..
+1.Legal (Creating a registered entity, say an LLC)
+2.Online (That entity getting an online presence in form of webApp, App, Twitter, Instagram, and Facebook)
+3.Traffic (Eyeballs and clicks; i.e., becoming something that can drive traffic to our webApp/online avatar)
+4.Content (What we are offering that might drive traffic to us on a sustainable basis)
+5.Money (Generating BIG revenues and earnings within 5-10 years of initiating operations)
+
+— What follows are summaries of what was on the minds of others in the meeting — 
+
+DUNCAN  
+1.Networks (The 17 Boyz in this forum)
+2.Scalable (To include other Budonians of our year, other years, and of course, non-Budonians)
+3.Differentiable (Creating products and services that can be differentiated from what is available on the market)
+4.Platform (Creating a platform that brings all the above to life)
+5.Translatable (Earnings, Income)
+
+ABEL
+1.Proof of Principle (We can start something simple.. are already in the process of doing so)
+2.Can be adapted (What we start can grow in directions we didn’t envisage at the start; i.e., adaptive to new opportunities and threats)
+3.Not necessarily for Profit (Adds value in terms of brotherhood; i.e., we move beyond MERELY talking about Nyaru chics!!)
+4.Link to K’la for Diaspora (For those who live outside the motherland, there is a CRAVING to connect with home in as many intimate ways as possible)
+5.Excellent Platform (Can be leveraged in future; the platform we develop can be put to great use as we get new ideas in the future)
+
+MARK
+1.Just wanted to make money (Many folks are married with kids and they have bills to pay; so there’s little time and resources to be wasted)
+2.Delinquent loans, Distressed debt in the +256 (A potential asset class that might be the basis of a high-yield business endeavor) 
+3.We have Budonian &amp; non-Budonian friends who are Bank CFOs &amp; CEOs
+4.Those CFOs and CEOs have approached us, broached the subject of potential investment vehicles that can work with their banks
+5.So far we’ve been caught flat-footed… perhaps because we have been pre-occupied with Nyaru chics
+
+TIM
+1.We already have networks (So we must clarify what value we might add with our networks)
+2.Formalizing them makes us millennials (Therefore we must do something other than just post stuff on Instagram)
+3.Generating revenue (Of course this comes to mind as our area of focus.. although millennials are also doing this quite successfully)
+4.Specific targets (Short gun vs. ROI approach… i.e., we should have a razor-focus on return on investment)
+5.No luxury for legacy (Many of us are not yet at the Bill Gates stage of trying to leave a legacy for humanity; therefore, lets be focused for now on making money)
+
+PATRICK (issue.. taking deposits vs. giving loans vs bridge financing.. ABE clarification, with serious regulatory implications… fixed annuity from TIM).. our strongest skills 
+1.Generationally how can we make something we might be proud of in the future (i.e., for generations beyond us)?
+2.Looks like we are making progress (i.e., having these discussions); but how come women start earlier than us (Namagunga girls started at 30 what we are attempting at 40)?
+3.Whatever we make, we only have time for BIG things!! This thing has to be CLEAR!! If it is not clear in terms of goals and processes, we must abandon it!!!
+4.How about us doing an online bank? Not a brick &amp; mortar kind of thing? To serve the impatient younger generation that can’t stand queuing?
+5.This bank would guarantee young customers a rate of return (Telecoms would potentially be our rivals since they are in this arena)
+
+— Here is what the moderator says we are going to next — 
+1.Put our individual ideas on paper (whoever you are.. strategy and we refine it as a group)
+2.Lets move away from talking (registering a domain name can’t be considered as making progress)
+3.Our starting point the next time is what we put on paper (thats how a business idea comes to mind.. revenue streams options)
+4.More people on the phone and participation in next meeting will be nice
+5.Reviews from a larger audience will move us forward
+
+
+
+
+
+
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Adams was a dedicated diarist and regularly corresponded with many important figures in early American history, including his wife and adviser Abigail Adams, and Thomas Jefferson.</p>
+<p>.</p>
+<p>Adams never owned a slave and declined on principle to use slave labor, saying, “I have, through my whole life, held the practice of slavery in such abhorrence, that I have never owned a negro or any other slave, though I have lived for many years in times, when the practice was not disgraceful, when the best men in my vicinity thought it not inconsistent with their character, and when it has cost me thousands of dollars for the labor and subsistence of free men, which I might have saved by the purchase of negroes at times when they were very cheap.” Before the war, he occasionally represented slaves in suits for their freedom. Adams generally tried to keep the issue out of national politics, because of the anticipated Southern response during a time when unity was needed to achieve independence.</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+TITLE: Continuous environmental scanning for PM2.5
+
+BACKGROUND: Air pollution kills approximately one million in Africa each year. Fine particles, designated PM2.5, with a diameter of 2.5 μm or less penetrate deep into the lungs and blood streams unfiltered, causing heart attacks, respiratory disease, and premature death more frequently — but alas also more subtly —  than, say, poor nutrition or sedentary life do. Exponential growth in the second-hand car industry, among other factors, is a worrisome driver of this silent epidemic. But it is hard to know how bad the problem is with African governments prioritizing virtually all other better known and more visible problems they are faced with.
+
+METHODS: We will deploy one hundred real-time sensors of 24-Hour PM2.5 Levels (μg/m3) from across select Ugandan districts and along high-traffic routes in select cities (unit cost starting at $25) to document how exposed unwitting Ugandan citizens are to hazardous levels of environmental pollution. From the convenience of a webApp, any Ugandan citizen or foreigner visiting Uganda or planning to visit Uganda will have free access to this information. Regulatory authorities in Uganda will be notified of this service, as will the public — via subtle but powerful media compaigns about this “silent killer.”
+
+RESULTS: Eyeballs, clicks, online traffic, governmental &amp; corporate attention to the quality of one of our services. Access to grants (e.g. NIH) and collaboration with ongoing research to fund this endeavor and make it cost neutral. 
+
+INFERENCES: Proof of concept for our online platform where one service can drive traffic towards other unrelated service, thereby potentially achieving network effects.
+</pre></div>
+</div>
+<p>.</p>
+<p>Cicada<br />
+Sound<br />
+Noise<br />
+Hot summer days<br />
+Loudest sound ever<br />
+Rattling sound</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=9O1zROETPqk">https://www.youtube.com/watch?v=9O1zROETPqk</a></p>
+<p>Wazungu girls!!<br />
+Gotta love ‘em :-)</p>
+<p>.</p>
+<p>Condoleezza Rice, former Secretary of State</p>
+<p>I have a long history with this concerto (K.466), having played a movement — and won with it — in competition at the age of 15. And when I was secretary of state, I had a chance to play a few lines from it on Mozart’s own piano at the festival in Vienna celebrating the 250th anniversary of his birth. Needless to say, the piece means a lot to me. The restlessness of the first movement, the simplicity of the second and the playfulness of the third are for me quintessential Mozart: genius. And Martha Argerich’s rendering is incomparable</p>
+<ol class="arabic simple" start="0">
+<li><p>Jupiter (Highest in Classical Pantheon)</p></li>
+<li><p>Mozart</p></li>
+<li><p>Difficile, Restlessness — Dances as Freest of Spirits</p></li>
+<li><p>Facile, Simplicity — Princely (In Fetters), Born to Etiquette</p></li>
+<li><p>Playfulness (Rescue from Dysphoria), Without</p></li>
+<li><p>Encompasses the full Range of Human Emotions</p></li>
+<li><p>Gifted at Birth, Yet he Still Became More Sophisticated</p></li>
+<li><p>Only Great Composer to Dominate both Symphony &amp; Opera</p></li>
+</ol>
+<p>Year I moved to US was Mozarts 250th anniversary</p>
+<p>.</p>
+<p>How many philosophers can talk rather confidently about music?</p>
+<p>.</p>
+<p>Soga, Zulu</p>
+<p>Dhadha, Ubaba/Umama Mkhulu.. Umzali omkhulu<br />
+Kufana, Ngokufanayo</p>
+<p>.</p>
+<p>Good morning, Kadi; l always celebrate hearing from you .As you know, ours is not a literate. I learned from your late grandfather, with whom you shared the clan name, “ Dhatemwa kulala aye dhayawukana emibala (I.e.they diverge when it comes to the sound they make and the philosophy of life they articulate.This was especially noteworthy in the case of twins who frequently in their behaviour preferences!</p>
+<p>Literally, the name conveys the need to manage your expectations of people accordingly.</p>
+<p>Although drums my have been made from stem of a tree  they don’t sound the same.</p>
+<p>.</p>
+<p>How do Hamlet vs. Achilles compare?<br />
+An interesting question. My short answer is, “With difficulty.” To expand on that, they are such different men in such different cultures and circumstances that it is tough to make useful comparisons. Both are major figures in their realms. Both are skilled warriors. Both are intelligent. Both are proud, and both are close to their fathers. Both delay crucial violence. Beyond that, however…it’s hard to say. Hamlet is forever divided and in his head. Achilles, by contrast, is driven by emotion. Hamlet wants to be absolutely right before he acts. Achilles acts, and trusts his actions to be right. Hamlet seems fond of Ophelia, but his ego is not bound to hers. By contrast, Achilles doesn’t seem fond of any woman, but his ego is bound to them as his prize. In other words, as ascetic priest vs warrior</p>
+<p>.</p>
+<p>Shakespeare was born into an emerging United Kingdom, with peaceful succession to the throne within the house of Tudor. So the only warriors he venerates — Harry Hotspur &amp; Henry V — are from a bygone error. His is an age of wicked men angling for power through intrigue in the court. In Macbeth and Hamlet the battlefield is only referred to as a recent memory. Intrigue rules</p>
+<p>.</p>
+<p>I’ve spent my entire life trying to connect dots<br />
+And so naturally the Coen Brothers are my fave film auteurs:<br />
+Their protagonists are just about to connect the final dots of the puzzle<br />
+When things start to fall apart<br />
+So I revel in that details of their stories.. and am left wanting more</p>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>Connect does for audience</p></li>
+<li><p>But not all of them</p></li>
+<li><p>Some connections would insult IQ</p></li>
+<li><p>Others would do the impossible</p></li>
+<li><p>Let then just be enough: eight dots</p></li>
+</ol>
+<p>.</p>
+<p>Toppling Goliath Brewing<br />
+Kentucky Brunch Brand Stout #1</p>
+<p>.</p>
+<p>Case-Shiller Annual Growth Rate</p>
+<p>Might also explain <a class="reference external" href="http://eyeonhousing.org/2019/05/home-price-gains-continued-to-slow-in-march/">older donor surge</a></p>
+<p>1995-2004, 2005-2012, 2013-2019</p>
+<p>.</p>
+<p>Who is Hannah C. Sung? She was not amused by the race/ethnicity variable</p>
+<p>.</p>
+<p>Nietzsche as <a class="reference external" href="https://brians.wsu.edu/2016/10/12/the-influence-of-nietzsche/">#1 in the Pantheon</a> of Great Philosophers</p>
+<p>.</p>
+<p>Jacob Golomb observed, “Nietzsche’s ideas were widely disseminated among and appropriated by the first Hebrew Zionist writers and leaders.”[31] According to Steven Aschheim, “Classical Zionism, that essentially secular and modernizing movement, was acutely aware of the crisis of Jewish tradition and its supporting institutions. Nietzsche was enlisted as an authority for articulating the movement’s ruptured relationship with the past and a force in its drive to normalization and its activist ideal of self-creating Hebraic New Man.”</p>
+<p>.</p>
+<p>The absence of quotation marks—or “perverted commas” as Joyce styled them—and discursive markers, such as the phrase “he said,” are signs of Joyce’s confidence in his being able to differentiate characters purely on the basis of their own individuating and identificative patois, as well as of his faith in his readers’ interpretive prowess.</p>
+<p>.</p>
+<p>It is obvious that in his day-dreams he is a warrior, not a professor; all of the men he admires were military. His opinion of women, like every man’s, is an objectification of his own emotion towards them, which is obviously one of fear. “Forget not thy whip”– but nine women out of ten would get the whip away from him, and he knew it, so he kept away from women, and soothed his wounded vanity with unkind remarks. […] [H]e is so full of fear and hatred that spontaneous love of mankind seems to him impossible. He has never conceived of the man who, with all the fearlessness and stubborn pride of the superman, nevertheless does not inflict pain because he has no wish to do so. Does any one suppose that Lincoln acted as he did from fear of hell? Yet to Nietzsche, Lincoln is abject, Napoleon magnificent. […] I dislike Nietzsche because he likes the contemplation of pain, because he erects conceit into duty, because the men whom he most admires are conquerors, whose glory is cleverness in causing men to die. But I think the ultimate argument against his philosophy, as against any unpleasant but internally self-conscious ethic, lies not in an appeal to facts, but in an appeal to the emotions. Nietzsche despises universal love; I feel it the motive power to all that I desire as regards the world. His followers have had their innings, but we may hope that it is coming rapidly to an end.
+— Russell, History of Western Philosophy</p>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?feature=youtu.be&amp;amp;v=Mg0EFw7sPSo&amp;amp;app=desktop">Will to Power</a><br />
+Masai Warriors<br />
+Lionesses in Savannah</p>
+<p>.</p>
+<p>I like a good drama. And this documentary is about two warring factions in American christianity: one that views faith in Jesus as a guarantee of rewards here on <em>earth</em> vs. another that only sees Jesus as a means to <em>heaven</em>.</p>
+<p>The ones who look to earthly and material things — health, wealth, miracles —  as the expected rewards fancy themselves sort of masters of the universe, victorious warriors and heroes, channeling the Holy Spirit so that their example here on earth might attract the weary to the faith (and, of course, to tithe under their stewardship).</p>
+<p>Meanwhile, the ones who look to heaven insist that only christ alone is the hero. And that by his stripes we might find a way to heaven, but that the earthly portion of the journey goes according to Gods will and not ours — we are not masters of this universe. Thus health, wealth, and miracles are not necessarily promised. Instead, our faith should clarify the path we should take, a path that will involve acts of love to other more needy folks.. as Jesus taught.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./bloc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
