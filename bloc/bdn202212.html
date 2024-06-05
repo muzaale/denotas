@@ -1,0 +1,948 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>12/2022 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bloc/bdn202212';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/practicing.png" class="logo__image only-light" alt="Nothin' - Home"/>
+    <script>document.write(`<img src="../_static/practicing.png" class="logo__image only-dark" alt="Nothin' - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbloc/bdn202212.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bloc/bdn202212.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>12/2022</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>12/2022<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Comedy vs. Tragedy
+
+12/01/22
+
+Whence evil?
+The answer!
+United these :)
+
+Views:
+1.Tragic — everything is meaningless. So there’s no such thing as evil. Its just bad luck
+2.Comic — mistaken identity. Most recluse fella isn’t immune to mistaken identity 
+3.Evil — in other words, evil mistakes the recluse for some other it is targeting
+
+— Midsummer nights dream
+— 
+</pre></div>
+</div>
+<p>.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/John_Singleton#Early_life">ambitious</a>: comic books, video games and movies</p>
+<p>q&amp;a types: vs (a potential buffer against)</p>
+<p>slackers: drugs, the partying and shit</p>
+<p>.</p>
+<p>Saidi</p>
+<p>12/02/22</p>
+<p>13.1 miles<br />
+103 minutes<br />
+7’51” per mile</p>
+<p>.</p>
+<p>Boyz N the Hood</p>
+<p>“One out of every twenty-one Black American males will be murdered in their lifetime”</p>
+<p>“Most will die at the hands of another Black male.”</p>
+<p>Opening sequence in John Singleton’s “Boyz N the Hood” — 1991</p>
+<p>Duncan?</p>
+<p>.</p>
+<p>Woody Allen’s 10 justifications for living (Manhattan)</p>
+<p>12/03/22</p>
+<p>Might we add <a class="reference external" href="https://www.youtube.com/watch?v=ziv8CYsbYWU">Jimmy Fallon</a>?</p>
+<p>.</p>
+<p>Selena Gomez</p>
+<p>12/06/22</p>
+<ol class="arabic simple">
+<li><p>Bipolar</p></li>
+<li><p>Lupus</p></li>
+<li><p>Kidney failure</p></li>
+<li><p>Transplantation</p></li>
+<li><p>Celebrity</p></li>
+<li><p>Millions in the bank</p></li>
+</ol>
+<p>.</p>
+<p>Once upon a time in Hollywood (The Book)</p>
+<p>12/06/22</p>
+<p>You can call me Mirabella<br />
+Roman Polanski<br />
+Sexy evil hamlet<br />
+How can Mirabella be Ophelia???<br />
+Trudy Frazer on Rick Dalton’s lap<br />
+Narrator treats 12yo as mature<br />
+One day 8yo trudy looked her age (i.e. young)<br />
+Undertones of Nabokov are evident</p>
+<p>It’s takes a magnificent film maker<br />
+To thoroughly corrupt an audience</p>
+<p>— Dirty Harry, Cinema Speculation</p>
+<p>.</p>
+<p>Hilton</p>
+<p>152 West 26th St</p>
+<p>.</p>
+<p>Tarantino’s work appeals to resentment</p>
+<p>No wonder historical fantasy is a key part of it</p>
+<p>And commercial success is something his work often enjoys</p>
+<p>.</p>
+<p>Auteurs</p>
+<p>12/06/22</p>
+<p>Pessimistic/Absurd: Coen Brothers, Iñárritu<br />
+Resentment/Historical Fantasy: Tarantino<br />
+Slacker/Epicurean: Woody Allen</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Elements of ethical science communication
+
+12/07/22
+
+
+Part I: 
+I think a fundamental logical fallacy in “Big Sugar’s Secret Ally? Nutritionists” is to mistake cause with effect (1). The basic hypothesis of the article is that the 655% increase in prevalence of Americans with diabetes over the last 60 years is caused by an increase in consumption of sugar. 
+
+However, the true causal relationship is that diabetes causes an increase in blood sugar levels, not the other way around wherein increased blood sugar levels (from dietary sources) increase likelihood of diabetes.
+
+What causes diabetes? More specifically, what causes type-II diabetes (the epidemic kind)? The answer is an increased resistance to the effects of insulin, arising often from a change in body composition with more percent body fat than muscle. Adipose tissue is insulin resistant.
+
+And the cause of increased body fat over the last 60 years is reduced physical activity and more or less sedentary life style amongst Americans of most ages. 
+
+To say obesity is caused “by a lack of energy balance” is incontestable. The article correctly quotes the NIH in saying “in other words, by our taking in more calories than we expend.” But then the author reveals their bias by focusing on the “taking in more calories” and completely neglecting the “more than we expend.” Hence, the entire article focuses on how food may influence our body weight through their caloric content.”
+
+But how about how increased activity and exercise may moderate our appetite and thus our calorie intake (2)? This question uncovers the authors biased question and article title. It blinds us to the cause of dietary intake, namely, the hormones and endorphins that regulate our appetite in the first place.
+
+Modern persons at all the stages of life including childhood, teenage, young adulthood, middle life, and later life have drastically reduced outdoor activity. Many more more video games, increased indoor entertainment through television, sprawling of suburbs and reliance on cars for every mode of movement (from home to grocery store, to school, to work, etc.) and such pattern have increased exponentially over the last 60 years and are the fundamental problem. Sedentary people eat more than active ones. So dietary intake is an effect arising from physical inactivity. 
+
+Of course the consequence of the logical fallacy discussed here is the focus on diet and nutrition instead of physical activity, lifestyle, and environmental engineering that may nudge individuals back to what their ancestors did: more physical activity for daily tasks. 
+
+
+Part II:
+
+My favorite example of a statistical fallacy comes from American politics but may as well apply to clinical studies. Over the last 40 years, the American senate has had either a majority democrat or republican representation. But by majority I mean 51% (majority party) vs. 49% (minority party) of the 100 senators, two from each state. Just today, with Georgia’s senate runoff election complete, the democrats hold 51 of the 100 senate seats (3). 
+
+Those is the majority interpret this as the electoral mandate of the people who have chosen them over their rivals.
+
+But when you subject this to statistical inference this is essentially not different from the toss of a coin or a random electoral event bearing absolutely no meaning. When you toss a coin 100 times (to elect the senators), that may count as a sample size of n=100. And the majority of 51% may count as p=0.51. The standard error is given by the square root of p(1-p)/n, 0.05. Thus such a slim majority is 51% (95% CI: 41.2%-60.8%).
+
+Here we see that this isn’t statistically significantly different from the null-hypothesis from a coin toss (pure chance, luck) of 50%.
+
+References
+1.Gary Taubes. Big Sugar’s Secret Ally? Nutritionists. The New York Times. Jan. 13, 2017
+
+2.James Dorling, et al. Acute and chronic effects of exercise on appetite, energy intake, appetite-related hormones: the modulating effect of adiposity, sex, and habitual physical activity. Nutrients. 2018 Sp; 10(9): 1140
+
+3.Georgia’s U.S. Senate Runoff Election Results. The New York Times. https://www.nytimes.com/interactive/2022/12/06/us/elections/results-georgia-us-senate-runoff.html. Accessed December 07, 2022.
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p>Best swim ever</p>
+<p>12/08/22</p>
+<p>See <a class="reference external" href="http://lose.it">lose.it</a></p>
+<p>.</p>
+<p>Mbappe 1/2 -200<br />
+Messi 7/2 +350</p>
+<p>.</p>
+<p>tweyanziza tweyanzege</p>
+<p>.</p>
+<p>Good <a class="reference external" href="https://www.ft.com/content/f5228f5e-11ab-11e6-91da-096d89bd2173">luck</a> (England)
+Bad luck (Brazil)</p>
+<p>.</p>
+<p>Tirzepatide for treatment of obesity NEJM</p>
+<p>Semaglutide in adults with overweight or obesity<br />
+NEJM</p>
+<p>.</p>
+<p>That’s the church address<br />
+237 W 51 st, New York, NY 10019</p>
+<p>.</p>
+<p>Spontaneous <a class="reference external" href="https://www.cnn.com/2020/07/12/football/ronaldo-brazil-world-cup-final-1998-cmd-spt-intl/index.html">skill</a> still stirs the soul for footballers everywhere</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Censure
+
+12/12/22
+
+i guess i have a more playful approach to (not being but… )
+becoming a better member of the audience:
+my sport is to take what the performer mistakes
+
+“Art being to a certain degree a mode of acting, an attempt to realise one&#39;s own personality on some imaginative plane out of reach of the trammelling accidents and limitations of real life, to censure an artist for a forgery was to confuse an ethical with an aesthetical problem.” 
+― Oscar Wilde, The Portrait of Mr. W.H.
+
+Do we mistake an aesthetic issue
+For an ethical issue?
+Can we be offended by 
+A horrid performance?
+This is perhaps my Q!
+</pre></div>
+</div>
+<p><a class="footnote-reference brackets" href="#id3" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>36<span class="fn-bracket">]</span></a></p>
+<p>.</p>
+<p>Ground rules</p>
+<p>12/12/22</p>
+<ol class="arabic simple">
+<li><p>Everyone has good intensions</p></li>
+<li><p>Confidentiality of meeting</p></li>
+<li><p>If you must share then no names</p></li>
+<li><p>Conversation, nodding, finger snap</p></li>
+<li><p>How did it make you feel? (reactive)</p></li>
+</ol>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>Comedy &amp; tragedy are the same</p></li>
+<li><p>So maybe jokes in science be avoided</p></li>
+<li><p>General casual demeanor is wrong</p></li>
+<li><p>Let’s stick to O, E, M, C, S (epistemology)</p></li>
+<li><p>May consider some surrogates, pending..</p></li>
+</ol>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>Dry detached scientific presentation</p></li>
+<li><p>Very highly structured ABMRDB</p></li>
+<li><p>Lack of boundaries when working?</p></li>
+<li><p>Character, anecdotes, like liability of scientist?</p></li>
+<li><p>Fully circle with pathos, logos, ethos</p></li>
+</ol>
+<p>.</p>
+<p>I think its ok for girls and women to talk feelings<br />
+But if you want to know guys feelings?<br />
+You may not like what you hear!</p>
+<p>.</p>
+<p>Instead of treating audience as passive with no say<br />
+Let’s separate dogmatists from don juans (proactive)<br />
+Treat all performances as a ruse (suppose truth a woman!)</p>
+<p>.</p>
+<p>Pessimism (this lone wolf) vs.<br />
+Optimism (most JHU-TRC)<br />
+Aesthetic (P) vs. Moral (O)</p>
+<p>.</p>
+<p>How did it make you feel?</p>
+<p>12/12/22</p>
+<p>Pessimist: I felt nothing since there was no aesthetic merit<br />
+Optimists: went against the TRCs core values and we felt uncomfortable<br />
+Censure: Art/life is a mode of acting, we confuse an ethical with an aesthetical</p>
+<p>Henry IV Part I: “counterfeit” 13 x of 71 times in Shakespeare!!<br />
+That’s 18% of his usage in just one play (2.6% of oeuvre)<br />
+Which is 6.9-fold greater than by pure chance</p>
+<p>.</p>
+<p>bet365</p>
+<p>Argentina &#64;5/6, -120<br />
+France &#64;5/4, +125<br />
+Morocco &#64;11/1, +1100</p>
+<p>Mbappe &#64;4/5, -125<br />
+Messi &#64;3/2, +150<br />
+Giroud &#64;10/1, +1000</p>
+<p>.</p>
+<p>Aly Strauss</p>
+<p>12/14/22</p>
+<p>Start and/or end with human subjects<br />
+That’s what makes GTPCI/Data science different from epidemiology and microarrays and health services<br />
+Key word: interface (visual, apps, etc)<br />
+Machine learning/AI is now FDI approvable because its a medical device that impacts practice<br />
+Research involving a consent process is the bottom line minimum…. Not meeting definition of GTPCI<br />
+Provider consent, which is my calculator, and aim 3, is perhaps my Segway into HSR<br />
+Data science for public health and most of the class are engineers, can do just the first 4 of 8 credits - TERM 3
+Causal inference TERM 3 (online version in Term 4)</p>
+<p>.</p>
+<p>Flu or COVID</p>
+<p>12/15/22</p>
+<ol class="arabic simple">
+<li><p>Sore throat</p></li>
+<li><p>Nasal congestion</p></li>
+<li><p>Muscle pain</p></li>
+<li><p>Fever</p></li>
+<li><p>Malaise</p></li>
+<li><p>Anosmia</p></li>
+</ol>
+<p>.</p>
+<p>Trump’s major announcement is that he’s finally ready to unveil his alternative to Obamacare - DonTcare.</p>
+<p>Which is exactly how most of us feel about his announcement.</p>
+<p>.</p>
+<p>Two degrees of delegation</p>
+<p>Samuel Benjamin Bankman-Fried</p>
+<p>His aunt Linda P. Fried is the dean of Columbia University Mailman School of Public Health</p>
+<p>.</p>
+<p>Muzaale contra Aristotle</p>
+<p>12/15/22</p>
+<p>force, counterfeiting: one tameth chaotic nature by some contrivance<br />
+epistemology: must demonstrate passion, implies attention to detail
+ontology: need consent since one hideth it in name of privacy</p>
+<p>.</p>
+<p>Wakayima vs Enkuddu</p>
+<p>Obule embiro<br />
+Obbe namagezi</p>
+<p>.</p>
+<p>Agility<br />
+Intellect</p>
+<p>.</p>
+<p>Myself or a household member has tested positive for COVID-19 within the past 14 days. Should I report for jury duty?
+DO NOT REPORT if you or a member of your household has tested positive for COVID-19, if you are experiencing symptoms, or if you are waiting for COVID-19 test results. Please call the jury office at 410-333-3775 to reschedule your service. The call center is to accept calls Monday through Friday, between 10:00 a.m. and 4:00 p.m., except State and Federal holidays.</p>
+<p><a class="reference external" href="https://www.baltimorecitycourt.org/wp-content/uploads/2022/04/Answers-to-Questions-Jurors-May-Ask-During-Reopening-03.30.22.pdf">https://www.baltimorecitycourt.org/wp-content/uploads/2022/04/Answers-to-Questions-Jurors-May-Ask-During-Reopening-03.30.22.pdf</a></p>
+<p>.</p>
+<p>Jury Duty</p>
+<p>12/17/22</p>
+<p>Called 410-333-3775<br />
+Voice note stated that<br />
+Reporting #s 6000-6999<br />
+Should report today<br />
+Mine is 8353</p>
+<p>.</p>
+<p>Interesting</p>
+<p>12/17/22</p>
+<p>This charged atmosphere has produced a backlash from two groups of people who rarely agree on anything: conservatives and famous comedians, who believe that sensitivity to offense is stifling free speech in comedy</p>
+<p>.</p>
+<p>idiom old-fashioned humorous. to play the piano: He’s the piano teacher who taught my daughter to tickle the ivories.</p>
+<p>.</p>
+<p>Babyface</p>
+<p>12/17/22</p>
+<p>Man child<br />
+Crowd pleasers<br />
+Deele (leggings, makeup, soul Glo)</p>
+<p>Learning ground<br />
+Crowd reactions</p>
+<p>Jerry curl (harms hair)<br />
+California curl (looks natural)</p>
+<p>The moment you feel fake<br />
+You’ll lose your audience<br />
+People will dismiss you</p>
+<p>.</p>
+<p>R Kelly &amp; Lolita</p>
+<p>12/17/22</p>
+<p><a class="reference external" href="https://www.vox.com/culture/22621692/aaliyah-death-20-year-anniversary-r-kelly-trial">https://www.vox.com/culture/22621692/aaliyah-death-20-year-anniversary-r-kelly-trial</a></p>
+<p><a class="reference external" href="https://medium.com/&#64;mslola/surviving-lolita-adapting-nabokovs-pentapod-monsters-for-the-metoo-era-9d781a8dd1d3">https://medium.com/&#64;mslola/surviving-lolita-adapting-nabokovs-pentapod-monsters-for-the-metoo-era-9d781a8dd1d3</a></p>
+<p><a class="reference external" href="https://rachel-wagner.com/2020/09/27/lolita-r-kelly-me/">https://rachel-wagner.com/2020/09/27/lolita-r-kelly-me/</a></p>
+<p>.</p>
+<p>Realedy mocks idleness</p>
+<p>Falstaff exposes what is counterfeit in<br />
+The ambitious and the moral (Justice shallow)</p>
+<p>Orson Wells<br />
+— Chimes at Midnight</p>
+<p>Honor: thus ends my catechism :)</p>
+<p>.</p>
+<p>Hotspur , Tragedy<br />
+King Henry IV , Comedy<br />
+Falstaff , Realedy (Give me life!)</p>
+<p>.</p>
+<p>Slackers mock both</p>
+<p><a class="reference external" href="https://en.m.wikipedia.org/wiki/Chimes_at_Midnight">https://en.m.wikipedia.org/wiki/Chimes_at_Midnight</a></p>
+<p>.</p>
+<p>Relatable</p>
+<p>12/19/22</p>
+<p><a class="reference external" href="https://www.emory.edu/EMORY_REPORT/erarchive/1999/April/erapril.5/4_5_99brown.html">Navel gazers</a> unite!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> Emory Report	
+April 5, 1999
+
+ Volume 51, No. 26
+
+
+First person:
+
+Reflections on an over-examined life: navel gazers unite!
+
+It&#39;s high time someone gave us political recognition. Not that we&#39;d ever actually vote, of course. We&#39;re far too busy working through The Artist&#39;s Way to leave the apartment for anything other than brie and cigarettes. But we like the idea of voting. We like the idea that social change is but an election ballot away--and personal transformation is as easy as e-mail.
+
+If television personality Ally McBeal and radio therapist Dr. Laura Schlessinger were inverse halves of the same brain, they would exemplify the mind of the Postmodern Navel Gazer: the gourmet cheese-loving, expensively educated, Gen-X individualists who spend our waking hours trying to have our pain and ease it too. Heads without bodies (with sporadic alcohol-induced reversals), we applaud Dr. Laura&#39;s self-help sound bites while at the same time empathizing with Ally&#39;s endless neuroses. Is this fuzz in my navel lint or inconsistency?
+
+At least three assumptions characterize the navel gazing mentality as I understand it:
+
+Assumption 1: You believe that desire is better than satiation and take steps to ensure that you always want that which you can never have. Happiness is not sexy. Longing is.
+Assumption 2: You boast a nihilistic exterior yet secretly believe The Truth is out there. But you want X-Files Agent Scully to find it for you. She&#39;s not a poet and she&#39;s not emaciated, so she has more time and energy than you to do that sort of thing.
+Assumption 3: You gravitate toward quick-fix solutions to complex psychological and social problems. This Minute Rice approach helps ensure that while you continue to self-destruct, you can relax in the belief that change is just around the bend--should you ever decide to get out of bed and look for it.
+Take my friend Gwen as an example. Gwen worships Dr. Laura with religious intensity. Her bookshelf displays Ten Stupid Things Women Do to Mess Up Their Lives at one end and, to placate the feminists, Ten Stupid Things Men Do at the other. She listens faithfully to Dr. Laura&#39;s daily denunciations of codependence, moral indecision, working mothers and drug-puffing teens. &quot;Instant therapy,&quot; Gwen calls her show.
+
+Of course, she never actually follows Dr. Laura&#39;s advice. That would be taking things to an extreme. No, Gwen is quite content remaining, like Ally, perpetually unhappy; she&#39;s addicted to The English Patient and to angst-ridden Ally McBeal list-servs. She complains of having lost her &quot;passion&quot; for religion. She repeats relational mistakes dozens of times, then spends Kleenex-filled evenings rereading old journals. How could she have time to pursue a healthy relationship, a spiritual life or meaningful work? Thousands of eighth grade diary pages are still waiting to be deconstructed!
+
+Every so often I experience doubts about the implications of postmodern navel gazing. Periodically I wake to looming questions I would rather let Scully--or maybe a licensed ethicist--address. What are the moral, social and political consequences of an over-examined life? Can a person care responsibly for his or her &quot;self&quot; without becoming solipsistic and without abandoning responsibility to the common or public good? Does Generation X need an ethic of self-reflection?
+
+One could argue, after all, that Dr. Laura&#39;s tactics for self-reflection are highly unethical. She interrupts working mothers with unjustified accusations of greed and selfishness. She applies careless verbal Band-Aids to gaping psychological and social wounds. She doesn&#39;t listen; she simply swoops in for the therapeutic kill.
+
+One could also argue that Dr. Laura is as myopic as her waifish opposite. Ally&#39;s television show is a celebration of destructive behavior; Dr. Laura&#39;s radio show is a two-second &quot;solution&quot; to lifelong patterns of destructive behavior. Neither program bothers to distinguish between damaging versus constructive forms of self-examination. Neither pauses to consider the consequences of representing ethical and psychological lethargy as entertainment.
+
+Thankfully, however, I have discovered that coffee and cigarettes provide an excellent antidote to such bothersome late-night misgivings. Armed with mug and cancer stick, I can proclaim to my rapt stuffed animals that while solipsism, social responsibility and myopic stagnation might be worth addressing, I personally do not have the time or luxury to look into any of them.
+
+This is because I am busy perfecting my use of the navel gazer&#39;s favorite academic term: &quot;paradox.&quot; Paradox is a good word because it allows us to be as contradictory as possible without having to explain our actions or justify a lack of personal ethics. For example:
+
+Question: &quot;But Stacia, how can you applaud Dr. Laura&#39;s absolutist moralistic tone while at the same time wallowing in Ally&#39;s haze of moral and personal ambiguity?&quot; Answer: &quot;It&#39;s a paradox!&quot;
+
+See how handy the word is? Thank God for higher education.
+
+Navel gazers, take heart: Contrary to what that awful therapist once told you, being pathologically unhappy or perpetually self-destructive is not a bad thing. Our supposed flaws are actually rare gifts: They not only provide poetic distraction from healthy relationships and from life&#39;s deepest questions, they also make terrific diet aids. Just look at Ally: She&#39;s so busy chewing on her own personal drama, her body has disappeared almost entirely.
+
+Now that&#39;s what I call self-absorption.
+
+Stacia Brown is program associate at the Center for Ethics.
+
+
+Return to April 5, 1999, contents page
+
+
+
+
+</pre></div>
+</div>
+<p>.</p>
+<p>TRC ASTS Abstracts</p>
+<p>12/19/22</p>
+<ol class="arabic simple">
+<li><p>Too much text</p></li>
+<li><p>Excel figures</p></li>
+<li><p>Very poor quality</p></li>
+<li><p>Table 1 + follow-up visits!</p></li>
+<li><p>Incroyable!</p></li>
+</ol>
+<p>.</p>
+<p>Chappell says <a class="reference external" href="https://en.wikipedia.org/wiki/Iceberg_Slim">this</a> is a metaphor of what he went through before surprise retirement</p>
+<p>.</p>
+<p>Swim</p>
+<p>12/20/22</p>
+<p>4x100m<br />
+3:03:03 (WR) = 183s</p>
+<p>.</p>
+<p>46/100m<br />
+23/50m<br />
+12.4/25m</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Para</span> <span class="n">todo</span> <span class="n">mal</span><span class="p">,</span> 
+             <span class="n">mezcal</span><span class="p">,</span> <span class="n">y</span> 
+
+<span class="n">para</span> <span class="n">todo</span> <span class="n">bien</span><span class="p">,</span> 
+           <span class="n">también</span><span class="p">;</span> <span class="n">y</span> 
+
+<span class="n">si</span> <span class="n">no</span> 
+         <span class="n">hay</span> <span class="n">remedio</span> 
+<span class="n">litro</span> 
+         <span class="n">y</span> <span class="n">medio</span><span class="s2">&quot; </span>
+
+<span class="n">Suffers</span> <span class="ow">in</span> <span class="n">translation</span><span class="p">:</span>
+
+<span class="n">For</span> <span class="nb">all</span> <span class="n">bad</span><span class="p">,</span> 
+       <span class="n">mezcal</span><span class="p">,</span> <span class="ow">and</span> 
+
+<span class="k">for</span> <span class="nb">all</span> <span class="n">good</span><span class="p">,</span> 
+         <span class="k">as</span> <span class="n">well</span><span class="p">;</span> <span class="ow">and</span> 
+
+<span class="k">if</span> <span class="n">there</span> <span class="ow">is</span> 
+         <span class="n">no</span> <span class="n">remedy</span><span class="p">,</span> 
+<span class="n">liter</span> <span class="ow">and</span> 
+          <span class="n">a</span> <span class="n">half</span>
+
+</pre></div>
+</div>
+<p>.</p>
+<p>autobiography</p>
+<p>12/22/22</p>
+<p>inspired by alfonso cuarón’s roma:</p>
+<ol class="arabic simple" start="0">
+<li><p>incestuous potential: family, neighbors</p></li>
+<li><p>designing wire cars &amp; fùtbols</p></li>
+<li><p>morris cerullo &amp; festo kivengere</p></li>
+<li><p>heaven bound &amp; breath again</p></li>
+<li><p>s3 australia house party &amp; s4 social</p></li>
+<li><p>a-level biology with mubiro &amp; music with katuramu</p></li>
+<li><p>rugby nation-wide champions, mvp</p></li>
+<li><p>homoerotic potential: effeminate subordinate, was intro to sheba</p></li>
+<li><p>college of medicine &amp;, finally, chaos in my life!</p></li>
+<li><p>impis &amp; a return to some order</p></li>
+<li><p>onset of 20-years of décadence</p></li>
+<li><p>enter hamlet, good by achilles</p></li>
+<li><p>graduate medical school, ihk</p></li>
+<li><p>should have flunked microbiology &amp; medicine</p></li>
+<li><p>public health as prudence: proverbs 27:12</p></li>
+<li><p>numbers, statistics, bayes, philosophy, medicine in nutshell</p></li>
+<li><p>it’s been quite an ache… 2004-2022</p></li>
+<li><p>back-at-one (pathos, logos, ethos or nutshell)</p></li>
+</ol>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Viagra (Soldenafil): Case study in serendipity and blunders
+
+12/21/22
+
+Viagra was developed and studied in phase I clinical trials for hypertension and angina pectoris (1). It’s therapeutic effects were not substantive and did not reach phase II or III trials. But a commonly reported side effect in the phase I trial was the induction of marked penile erections (2).
+
+Pfizer immediately recognized its commercial potential and patented it in 1996. It was then repositioned for erectile dysfunction and was approved for erectile dysfunction by FDA within a mere two years(3).
+
+Within 3 months of FDA licensing in 1998 (4), Pfizer had earned $400m from viagra and over the next 20 years leading to expiry of its patent in 2020 the annual earnings from the sale of viagra were $1.2 - $2.0b, with a cumulative total of $27.6b as of 2020 (5).
+
+The market for viagra and its competitors is expected to continue growing according to the WHO. Increased burden of lifestyle disease and sedentary lifestyle interact to cause erectile dysfunction. At a prevalence of 15% of the male population, it is projected by WHO to reach 320m persons by 2025 (6). Such is the story of an entirely serendipitous discovery by otherwise astute scientists and clinicians that were meticulous enough to profit from unintended consequences.
+
+References
+1.History of sildenafil. Wikipedia. Accessed December 22, 2022. https://en.wikipedia.org/wiki/Sildenafil#History 
+2.Goldstein I, et al. The Serendipitous story of sildenafil: an unexpected oral therapy for erectile dysfunction. ScienceDirect. Volume 7, Issue 1, January 2019, Pages 115-128
+3.Ellis P, et al. Pyrazolopyrimidinones for the treatment of impotence. Google Patents. Accessed December 22, 2022. https://patents.google.com/patent/US6469012B1/en
+4. Cox, D. The race to replace viagra. The Guardian. Accessed https://www.theguardian.com/science/2019/jun/09/race-to-replace-viagra-patents-erectile-dysfunction-drug-medical-research-cialis-eroxon
+5.Worldwide revenue of Pfizer’s viagra from 2003 to 2019. Statista. Accessed December 22, 2022. https://www.statista.com/statistics/264827/pfizers-worldwide-viagra-revenue-since-2003/
+6..Erectile dysfunction drugs market size, share &amp; trends analysis report by product (viagra, Cialis, zydeco, levity, stendra), by region (North America, Europe, APAC, Latin America, MEA), and segment forecasts, 2022-2030. Grand View Research. Accessed December 22, 2022. https://www.grandviewresearch.com/industry-analysis/erectile-dysfunction-drugs-market
+</pre></div>
+</div>
+<p>.</p>
+<p>Phrase of the year</p>
+<p>12/25/22</p>
+<p>He thinks in terms of profit &amp; loss not virtue &amp; vice, which is just as well given that he wears flip flops and has a solar panel attached to his thatched roof, breaking the PROHIBITIONS against shoes &amp; and electricity</p>
+<p>.</p>
+<p>Kardamon &amp; Kofee</p>
+<p>Otters bar</p>
+<p>Ruhanga Tayebwa (God didn’t forget)</p>
+<p>.</p>
+<p>Okusumagira — Esau
+Instead of condemning the blinker, praise the fraud by</p>
+<p>.</p>
+<p>Yanungamya</p>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">36</a><span class="fn-bracket">]</span></span>
+<p>nothing succeeds if <a class="reference external" href="https://www.gutenberg.org/files/52263/52263-h/52263-h.htm">prankishness</a> has no part in it</p>
+</aside>
+</aside>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./bloc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

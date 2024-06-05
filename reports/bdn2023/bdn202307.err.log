@@ -1,63 +1,104 @@
 Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+  File "/usr/local/anaconda3/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 1305, in execute
+  File "/usr/local/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 1204, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/d/Library/Python/3.11/lib/python/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
-    return loop.run_until_complete(inner)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+  File "/usr/local/anaconda3/lib/python3.11/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/anaconda3/lib/python3.11/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/anaconda3/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
     return future.result()
            ^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 705, in async_execute
+  File "/usr/local/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+  File "/usr/local/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 965, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+  File "/usr/local/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import requests
-from bs4 import BeautifulSoup
-from tabulate import tabulate
+import matplotlib.pyplot as plt
+import numpy as np
 
-# Send a request to the Wikipedia page
-url = 'https://en.wikipedia.org/wiki/List_of_most-followed_Instagram_accounts'
-response = requests.get(url)
-soup = BeautifulSoup(response.text, 'html.parser')
+# Create data for the skill and challenge levels
+skill_levels = np.linspace(0, 10, 100)
+challenge_levels = np.linspace(0, 10, 100)
 
-# Find the table rows containing the data
-table = soup.find('table', class_='wikitable')
-rows = table.select('tbody tr')[1:]  # Skip the header row
+# Define the flow channel boundaries
+flow_channel = skill_levels
 
-# Extract data from each row and store it in a list
-data = []
-for row in rows:
-    columns = row.find_all('td')
-    
-    if len(columns) >= 3:
-        rank = columns[1].text.strip()
-        owner = columns[3].text.strip()
-        followers = columns[5].text.strip().replace('\xa0', '')  # Remove non-breaking spaces
-        data.append([rank, owner, followers])
+# Adjust the phase and amplitude of the sinusoid wave
+phase = np.pi / 16  # Reducing the wavelength by a quarter
+amplitude = 1.5
+flow_channel += np.sin(skill_levels + phase) * amplitude
 
-# Print the table using tabulate
-headers = ["Name", "Followers", "Country"]
-table = tabulate(data, headers=headers, tablefmt="plain")
+# Define the yellow zone boundaries
+yellow_zone_low = flow_channel - 1.5
+yellow_zone_high = flow_channel + 1.5
 
-print(table)
+# Define the sinusoid function with the middle yellow line as its axis
+sinusoid = flow_channel + np.sin(skill_levels + phase) * amplitude
+
+# Define the anxiety and boredom areas
+anxiety_area = np.where(challenge_levels > flow_channel, challenge_levels, np.nan)
+boredom_area = np.where(challenge_levels < flow_channel, challenge_levels, np.nan)
+
+# Plotting
+plt.figure(figsize=(8, 6))
+
+# Plot the anxiety and boredom areas
+plt.fill_between(skill_levels, flow_channel, 10, color='red', alpha=0.3, label='Anxiety', interpolate=True)
+plt.fill_between(skill_levels, 0, flow_channel, color='green', alpha=0.3, label='Boredom', interpolate=True)
+plt.fill_between(skill_levels, yellow_zone_low, yellow_zone_high, color='yellow', alpha=0.3, label='Flow Channel', interpolate=True)
+
+# Plot the sinusoid function
+plt.plot(skill_levels, sinusoid, color='purple', linestyle='-')
+
+# Add arrowhead to the sinusoid line (flipped direction)
+plt.arrow(skill_levels[-2], sinusoid[-2], skill_levels[-1] - skill_levels[-2], sinusoid[-1] - sinusoid[-2],
+          color='purple', length_includes_head=True, head_width=-0.15, head_length=-0.3)
+
+# Plot the flow channel boundaries
+plt.plot(skill_levels, flow_channel, color='yellow', linestyle='-')
+
+# Set plot labels and title
+plt.xlabel('Agency')
+plt.ylabel('Progression')
+plt.title(' ')
+
+# Set plot limits and grid
+plt.ylabel('Progression', rotation=0)
+
+plt.xlim(0, 10)
+plt.ylim(0, 10)
+plt.grid(True)
+
+# Set tick labels
+tick_labels = ['0', '2', '4', '6', '8', '10']
+plt.xticks(np.linspace(0, 10, 6), tick_labels)
+plt.yticks(np.linspace(0, 10, 6), tick_labels)
+
+# Add text annotations to label the areas
+plt.text(2.8, 7.9, 'Anxiety', color='black', ha='center', va='center', fontsize=12, bbox=dict(facecolor='pink', edgecolor='pink', boxstyle='round'))
+plt.text(5, 5.1, 'Flow', color='black', ha='center', va='center', fontsize=12, bbox=dict(facecolor='yellow', edgecolor='yellow', boxstyle='round'))
+plt.text(6.2, 2.1, 'Relaxation', color='black', ha='center', va='center', fontsize=12, bbox=dict(facecolor='lightgreen', edgecolor='lightgreen', boxstyle='round'))
+
+# Display the plot
+plt.show()
 
 ------------------
 
-
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[13], line 2[0m
-[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mrequests[39;00m
-[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mbs4[39;00m [38;5;28;01mimport[39;00m BeautifulSoup
-[1;32m      3[0m [38;5;28;01mfrom[39;00m [38;5;21;01mtabulate[39;00m [38;5;28;01mimport[39;00m tabulate
-[1;32m      5[0m [38;5;66;03m# Send a request to the Wikipedia page[39;00m
+Cell [0;32mIn[1], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[1;32m      4[0m [38;5;66;03m# Create data for the skill and challenge levels[39;00m
 
-[0;31mModuleNotFoundError[0m: No module named 'bs4'
+[0;31mModuleNotFoundError[0m: No module named 'matplotlib'
+ModuleNotFoundError: No module named 'matplotlib'
 

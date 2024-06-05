@@ -1,0 +1,1306 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>12/2019 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bloc/_build/jupyter_execute/bdn201912';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/practicing.png" class="logo__image only-light" alt="Nothin' - Home"/>
+    <script>document.write(`<img src="../../../_static/practicing.png" class="logo__image only-dark" alt="Nothin' - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../chapter2.html">object</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbloc/_build/jupyter_execute/bdn201912.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/bloc/_build/jupyter_execute/bdn201912.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>12/2019</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>.</p>
+<section id="id1">
+<h1>12/2019<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Crunch situations like these are when the truly gifted macro traders come into their own. They have many of the qualities of great playmakers. They are able to see things that less gifted players cannot. They are unhurried under pressure. They know when to bide their time and when to go for the jugular. And they can imagine a world that might soon be arranged differently and work out the implications. “Don’t try to play the game better; try to figure out when the game has changed,” Mr Soros would tell colleagues. The most profitable trades would often come after periods of calm, when volatility had been suppressed either by complacency or official fiat. — Familiar?</p>
+<p>.</p>
+<p>Life task: expand cognitive processing<br />
+Toolkit: works of aesthetics sensibility<br />
+Wherefore: reproduction to transformation<br />
+That leads to productivity growth and..<br />
+Growth of GDP, wealth of nations, etc</p>
+<p>.</p>
+<p>Funniest economist article ever</p>
+<p>Science and technology
+Birdsong<br />
+Rehearsing for Berkeley Square</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+     Know μ
+            \
+             Identity ψ —&gt; Geometry 𝛿 —&gt; Attribute* κ
+             /
+             Thing σ
+1.Boeing MAX-8; Phat Engine
+2.Manufacturer says so; Regulators agree 
+3.Same as earlier Boeing 737s; But the MCAS was added
+4.Nose higher (space); @ take-off MCAS kicks in (time); Pilots uninformed (agent)
+5.Mimic A320 Neos Big Engine, Inappropriately Test with in-house Pilots*, Rush to Market Place to Compete &amp; Scape-goat
+
+    Pulse μ
+            \
+             Cohort ψ —&gt; Deeds 𝛿 —&gt; Needs* κ
+             /
+             Group 
+1.Ontology/Strong/Body —&gt; Adjective
+— Gender, “Opinion”, Basic, Instinct, Julia, Monk
+— Spouse 
+— Family, African* 
+— Tribe+Noumena, Strong, Nature 
+— ἀγών, Kiwanuka, Background, Anecdote
+
+2.Possibility/Weak/Mind —&gt; Determiner
+— Metaphysics, “Truth”, Noninteracting, Leibnitz, Plurality, Forms
+— Education , Learning, Culture, Belonging 
+— Income, Credit, Future, Pension, Debt, Reputation, Score, History, Archivists, Luxury*, Bookkeeping, Markets, Theft 
+— Distinction+Phenomena, Weak, Business
+— Patriotism, Foreground, Anomie, Reciprocity, Charity, Welfare
+
+3.School/Manipulate/Soul —&gt; Subject
+— Initial 
+— Orthogonal 
+— Collision, Good, Bad, Permanence, Ethics, Strippers, DasKapital, Negotiation*, Peter, Sellers, Insecurity, Alcoholism, Jewish, Boarding
+— Trajectory, Geodesic+Synthesis, Manipulation, Trichotomy
+— Finale, Attribute, Conscience
+
+4.Heroism/Nudge/Action —&gt; Verb
+— Space, Relativity, Doppler, Shift, Observer, Weak
+— Time
+— Gravity 
+— Agent+Materialism, Slaves, Oblivious 
+— Overcoming, Potentiality
+
+5.Actuality/Rig/Importance —&gt; Object
+— Trapdoor, Weight&gt;Photon, Shellcompany, Alibi
+— Other, Daemon, Aesthetic, Force, Illusions, Laundromat*, Privacy, Value
+— Freefall, Will, Power, Momentum
+— Genealogy, Literary, Criticism+Bolsheviks, Unshackle, America
+— Constraints, E=mC^2, Actuality
+ Environment μ
+               \
+                Interaction ψ —&gt; Phenotype 𝛿 —&gt; בְּמִדְבַּר κ
+                /
+                Genotype 
+
+1.Locks assistant in cabinet
+2.Waves a magic want
+3.Disappeared from cabinet
+4.So we have a drum-roll &amp; suspense.. 
+5.Only to reappear in a cabinet on other side of stage
+Appearance/PCR μ
+            \
+              Monozygotic ψ —&gt; Nature 𝛿 —&gt; Relativity κ
+             /
+             DNA σ
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+
+
+
+
+To do 2019/12/01
+
+1.Tragedy
+2.Beyond
+3.Human
+4.—
+5.Ecce
+
+x
+
+1.Nietzsche
+2.Dreams**
+3.Ritual??
+4.Forebears
+5.Plato
+
+x
+
+1.Declutter folders xxx
+2.Folders self-explanatory xxx
+3.Leave “representative” documents 
+4.Then read Nietzsche 
+5.Economist xxx
+</pre></div>
+</div>
+<p>.</p>
+<p>understanding vs. predict
+<a class="reference external" href="https://www.youtube.com/watch?v=d3_04o1BkGk">Galit Shmueli</a></p>
+<p>.</p>
+<p>— Get Estelle’s address<br />
+— Pick her up by Uber<br />
+— Mezze &amp; good life</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+     Exposure μ
+               \
+               Age ψ —&gt; Time 𝛿 —&gt; Cause κ
+              /
+              Genes σ
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>N=561,304 part D claims for benzo/opioid from 2013 to 2014
+N=177,471 payer Part B/MPO with begdate from 2013 to 2014
+N=123,784 unique hemodialysis, US citizen, first_se from 2013 to 2014, age&lt;18y &amp; above (  
+N=248,094 comorbidity data from 2013 to 2014
+N=86,259 confluence 
+N=69,435 
+
+Exposure/Part D N=561k 
+               \
+               Age/Cohort N=86k —&gt; Time/90dWindow 69k —&gt; Cause/Study
+              /
+              Genes/Dialysis N=123k
+
+1.Hemodialysis, US citizen, initiated between 2013 to 2014 (N=123,784)
+2.Part D claims for benzo from 2013 to 2014 (561,304)
+3.Of incident cohort with part D claims (N=86,259)
+4.
+
+Part D Benzo/Opioid Claims for 2013-2014 N=561,305
+                          \
+                           Dialysis Cohort of Interest, N=86,259  —&gt; Restricted &gt;90 days on Dialysis, 69,368 
+                          /
+                         Part B/MPO/Initiated Hemodialysis 2013-2014, US citizen, Age&gt;18years, N=123,784
+</pre></div>
+</div>
+<p>.</p>
+<p>playing the prelude to the usual Romantic finale—break, collapse, return, and prostration before an ancient belief, before the old God … What? Isn’t your book for pessimists itself an anti-Greek and Romantic piece, even something “as intoxicating as it is befuddling,” in any event, a narcotic, even a piece of music,German music? Listen to the following:</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>         God μ
+               \
+                Break ψ —&gt; Collapse 𝛿 —&gt; Return κ
+               /
+               Prostrate σ
+</pre></div>
+</div>
+<p>.</p>
+<p>Once anyone clearly sees how, after Socrates, that mystagogue of science, one philosophical school succeeds another in sequence, like wave after wave, how a never-imagined universal greed for knowledge throughout the widest extent of the educated world steered science around on the high seas as the essential task for every person of greater capabilities… whoever reminds himself of all this, together with that astonishingly high pyramid of contemporary knowledge, cannot deny the fact that in Socrates we see a turning point and vortex of so-called world history</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>             Moral/15,000μ
+                           \
+                            Intention/1,500 ψ —&gt; Action/1,500,000 𝛿 —&gt; Premoral/150,000 κ
+                           /
+                           Extramoral/150 σ
+
+
+
+
+
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Estelle 
+— June 13, 1997
+— Husky, yup 
+— 7.5 👠 
+— 144￼ lbs 
+— 5’ 7”
+— 36B
+— Never shop for her 
+— Dancing 💃🏾 
+— Anxiety ‘bout college milestones 
+— Hasn’t spoken with dad in years
+— Silver Spring 
+— Physically browsed with step-mom, 35
+— Mom lives in Paris  
+— First born 
+— Wants “proof” that I’m for real
+— Obviously been played in the past 
+— Beauty sleep till 12pm daily 
+— Sophomore
+— Red wine 🍷 
+— Prefers it sweet 
+— Jean size 3
+— Dress medium 
+— Rosé for Estelle :-)
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Why we sing.. 🎼 🎵 🎶 🎤 
+</pre></div>
+</div>
+<p>.</p>
+<p>Aphorism 74 proves that Harold Bloom might have been overstretched:</p>
+<p>A person of genius is intolerable if he does not posses at least two other things: gratitude and cleanliness</p>
+<p>.</p>
+<p>Aphorism 152</p>
+<p>Where the tree of knowledge stands, you will always find ‘paradise’ — that’s what the oldest and the youngest serpents will tell you</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>              Tree of Knowledge μ
+                                  \
+                                   Serpent ψ —&gt; Action 𝛿 —&gt; Paradise κ
+                                   /
+                                   Aphorism 152 σ
+
+</pre></div>
+</div>
+<p>.</p>
+<p>December 3, 2019 at 1:07 PM</p>
+<p>1.Txxxxx/Bulbs .
+2.Petals/Soap
+3.Flowers/Towels xxx<br />
+4.Rosé/Apothetic Redblend<br />
+5.Smoothie/Mouthwash</p>
+<p>Pizza, wings, etc.</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Matthew 25 King James Version (KJV)
+25 Then shall the kingdom of heaven be likened unto ten virgins, which took their lamps, and went forth to meet the bridegroom.
+
+Has a jihadist ring to it :-)
+
+                         Charity μ
+                                  \
+                                   Hope ψ —&gt; Deeds 𝛿 —&gt; Jesus κ
+                                   /
+                                   Faith σ
+</pre></div>
+</div>
+<p>.</p>
+<p>June 13<br />
+Estelle</p>
+<p>.</p>
+<p>BCDEF workings :-) .
+My credo!!!<br />
+Yay</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>— Nice heart to heart with Dorry on December 4, 2019 from 12:04 PM to 12:35 PM
+— He totally gets me and I totally get him and for now thats key
+— A mentor should be the anti-thesis of a mentee
+— But I’ll have to toe-the-line
+— Weekly updates :(
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+She’s from Cameroon 
+Moved to the US at 12yo
+And so her accent is like Sheba’s 
+Has a French touch to it :-)
+But she is a little too millennial 
+I met her on my way back home
+From Klein Duivel, Belgian beer Hall
+You might have guessed right —
+Was a little blazed and saw around 
+JH undergrad and have..
+No clue what I said to her
+</pre></div>
+</div>
+<p>.</p>
+<p>Ceci n’est pas <a class="reference external" href="https://en.wikipedia.org/wiki/Frances_Farmer">Andrew!</a></p>
+<p>.</p>
+<p>A pun is proof that you know the language well enough to fool around with it, and that you have confidence that your peers are similarly equipped.</p>
+<p>.</p>
+<p>Considered in that light, punning seems quite enlightened. And the history of punning serves as a reminder to be less dogmatic about the rules of diction than propriety might suggest. Language is a common heritage and a democratic pursuit; anyone may play a role in its evolution. While linguists focus on unconscious changes shaping a language, conscious fooling about has played a role, too. (The joke misspelling of “all correct” as “oll korrekt” gave us a ubiquitous bit of English: “OK”.) So to defend the pun is to say that everyone has the right to a rune of one’s own</p>
+<p>.</p>
+<p>Alex Kiyimba<br />
+5418 Fort Hamilton Parkway<br />
+Brooklyn New York, NY 11219</p>
+<p>.</p>
+<p>it’s all about the rent:<br />
+no romance <a class="reference external" href="https://www.youtube.com/watch?v=gkO9us2ZmGg">without</a> finance !</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Aristocrats are unwillingly photographed by paparazzi and the photoshoots are tabloid fodder (eg when away on southern coast or Italy)
+
+Millennials are willingly selfieing and publishing away their photoshoots on the gram and anxiously looking on as their posts are “liked” (eg when away on coast of Mombasa)
+
+The working class may only be photographed by the PR team of a philanthropic organization to reiterate the contrast between the above two classes and this one, striving for necessity 
+
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Best of 2019  
+These are the top 20 scientific discoveries of the decade
+
+The 2010s yielded many incredible finds and important milestones. Here are our favorites.
+
+As the 2010s come to an end, we can look back on an era rife with discovery. In the past 10 years, scientists around the world made remarkable progress toward understanding the human body, our planet, and the cosmos that surrounds us. What’s more, science in the 2010s became more global and collaborative than ever before. These days, major breakthroughs are likelier to come from groups of 3,000 scientists than groups of three.
+
+So much has happened, thanks to so many, that National Geographic’s writers and editors decided not to whittle down the last decade into just a handful of discoveries. Instead, we’ve put our heads together to identify 20 trends and milestones that we found especially noteworthy, and that we think will set the stage for more amazing finds in the decade to come.
+
+1.Detecting the first gravitational waves
+In 1916, Albert Einstein proposed that when objects with enough mass accelerate, they can sometimes create waves that move through the fabric of space and time like ripples on a pond’s surface. Though Einstein later doubted their existence, these spacetime wrinkles—called gravitational waves—are a key prediction of relativity, and the search for them captivated researchers for decades. Though compelling hints of the waves first emerged in the 1970s, nobody directly detected them until 2015, when the U.S.-based observatory LIGO felt the aftershock of a distant collision between two black holes. The discovery, announced in 2016, opened up a new way to “hear” the cosmos.
+
+In 2017, LIGO and the European observatory Virgo felt another set of tremors, this time made when two ultra-dense objects called neutron stars collided. Telescopes around the world saw the related explosion, making the event the first ever observed in both light and gravitational waves. The landmark data have given scientists an unprecedented look at how gravity works and how elements such as gold and silver form.
+
+2.Shaking up the human family tree
+The decade has seen numerous advances in understanding our complex origin story, including new dates on known fossils, spectacularly complete fossil skulls, and the addition of multiple new branches. In 2010, National Geographic explorer-at-large Lee Berger unveiled a distant ancestor named Australopithecus sediba. Five years later, he announced that South Africa’s Cradle of Humankind cave system contained fossils of a new species: Homo naledi, a hominin whose “mosaic” anatomy resembles that of both modern humans and far more ancient cousins. A follow-up study also showed that H. naledi is surprisingly young, living at least between 236,000 and 335,000 years ago.
+
+Other remarkable discoveries piled up in Asia. In 2010, a team announced that DNA pulled from an ancient Siberian pinky bone was unlike any modern human’s, the first evidence of a shadowy lineage now called the Denisovans. In 2018, a site in China yielded 2.1-million-year-old stone tools, confirming that toolmakers spread into Asia hundreds of thousands of years earlier than once thought. In 2019, researchers in the Philippines announced fossils of Homo luzonensis, a new type of hominin similar to Homo floresiensis, the “hobbit” of Flores. And newfound stone tools on Sulawesi predate modern humans’ arrival, which suggests the presence of a third, unidentified island hominin in Southeast Asia.
+
+3.Revolutionizing the study of ancient DNA
+As DNA sequencing technologies have improved exponentially, the past decade has seen huge leaps in understanding how our genetic past shapes modern humans. In 2010, researchers published the first near-complete genome from an ancient Homo sapiens, kicking off a revolutionary decade in the study of our ancestors’ DNA. Since then, more than 3,000 ancient genomes have been sequenced, including the DNA of Naia, a girl who died in what is now Mexico 13,000 years ago. Her remains are among the oldest intact human skeletons ever found in the Americas. Also in 2010, researchers announced the first draft of a Neanderthal genome, providing the first solid genetic evidence that one to four percent of all modern non-Africans’ DNA comes from these close relatives.
+
+In another striking discovery, scientists studying ancient DNA revealed in 2018 that a 90,000-year-old bone belonged to a teenage girl whose mother was Neanderthal and whose father was Denisovan, making her the first hybrid ancient human ever found. In another find, scientists compared Denisovan DNA to fossil proteins to confirm that Denisovans once lived in Tibet, expanding the mysterious group’s known range. As the field of ancient DNA has matured, so too has its handling of ethical concerns, such as the need for community engagement and the repatriation of indigenous human remains.
+
+4.Revealing thousands of new exoplanets
+Human knowledge of planets orbiting distant stars took a giant leap forward in the 2010s, in no small part thanks to NASA’s Kepler Space Telescope. From 2009 to 2018, Kepler alone found more than 2,700 confirmed exoplanets, more than half the current total. Among Kepler’s greatest hits: the first confirmed rocky exoplanet. Its successor TESS, launched in 2018, is starting its survey of the night sky and has already bagged 34 confirmed exoplanets.
+
+Ground-based surveys were also in on the action. In 2017, researchers announced the discovery of TRAPPIST-1, a star system just 39 light-years away that hosts a whopping seven Earth-size planets, the most found around any star other than the sun. The year before, the Pale Red Dot project announced the discovery of Proxima b, an Earth-size planet that’s orbiting Proxima Centauri, the star closest to the sun at a mere 4.25 light-years away.
+
+5.Entering the Crispr era
+The 2010s marked huge advances in our ability to precisely edit DNA, in large part thanks to the identification of the Crispr-Cas9 system. Some bacteria naturally use Crispr-Cas9 as an immune system, since it lets them store snippets of viral DNA, recognize any future matching virus, and then cut the virus’s DNA to ribbons. In 2012, researchers proposed that Crispr-Cas9 could be used as a powerful genetic editing tool, since it precisely cuts DNA in ways that scientists can easily customize. Within months, other teams confirmed that the technique worked on human DNA. Ever since, labs all over the world have raced to identify similar systems, to modify Crispr-Cas9 to make it even more precise, and to experiment with its applications in agriculture and medicine.
+
+While Crispr-Cas9’s possible benefits are huge, the ethical quandaries it poses are also staggering. To the horror of the global medical community, Chinese researcher He Jiankui announced in 2018 the birth of two girls whose genomes he had edited with Crispr, the first humans born with heritable edits to their DNA. The announcement sparked calls for a global moratorium on heritable “germline” edits in humans.
+
+6.Seeing the cosmos as never before
+The 2010s brought with them several major observations that are revolutionizing our study of the universe. In 2013, the European Space Agency launched Gaia, a spacecraft that is collecting distance measurements for more than a billion stars in the Milky Way, as well as velocity data for more than 150 million stars. The dataset helped scientists make a 3D movie of our home galaxy, yielding an unprecedented look at how galaxies form and change over time.
+
+In 2018, scientists released the final version of the Planck satellite’s measurements of the early universe’s faint afterglow, which contains vital clues to cosmic ingredients, structure, and rate of expansion. Puzzlingly, the expansion rate Planck saw differs from today’s, a potential &quot;crisis in cosmology&quot; that may require new physics to explain. Also in 2018, the massive Dark Energy Survey released its first batch of data, which will help with searches for hidden patterns in our universe’s structure. And in April 2019, scientists with the Event Horizon Telescope revealed the first-ever image of a black hole’s silhouette, thanks to a massive global effort to peer into the heart of the galaxy M87.
+
+7.Unveiling ancient art
+Discoveries from around the world have reinforced that art—or at least doodling—was an older and more global phenomenon that once thought. In 2014, researchers showed that hand stencils and a “pig-deer” painting in Sulawesi’s Maros cave sites were at least 39,000 years old, making them as old as Europe’s most ancient cave paintings. Then, in 2018, researchers announced the discovery of cave art in Borneo that’s between 40,000 and 52,000 years old, further pushing back the origins of figurative painting. And another 2018 find in South Africa, a stone flake that was cross-hatched some 73,000 years ago, may well be the world’s oldest doodle.
+
+Other controversial finds stoked debate over Neanderthals’ artistic skills. In 2018, researchers unveiled pigments and perforated marine shells found in Spain that were 115,000 years old, when only Neanderthals lived in Europe. That same year, another study claimed that some of Spain’s cave paintings are 65,000 years old. Many cave-art specialists have disputed the find, but if it holds, it could be the first evidence of Neanderthal cave paintings. And in 2016, researchers announced that a French cave contained bizarre circles of stalagmites set up about 176,000 years ago. If cave bears didn’t somehow make them, the circles’ age suggests yet more Neanderthal handiwork.
+
+8.Making interstellar firsts
+Future historians might look back on the 2010s as the interstellar decade: For the first time, our spacecraft punctured the veil between the sun and interstellar space, and we got our first visits from objects that formed around distant stars.
+In August 2012, NASA’s Voyager 1 probe crossed the outer boundary of the heliosphere, the bubble of charged particles our sun gives off. Voyager 2 joined its twin in the interstellar medium in November 2018 and captured groundbreaking data along the way. But the interstellar road is a two-way street. In October 2017, astronomers found ‘Oumuamua, the first object ever detected that formed in another star system and passed through ours. In August 2019, amateur astronomer Gennady Borisov found the second such interstellar interloper, a highly active comet that now bears his name.
+
+9.Opening doors to ancient civilizations
+Archaeologists made many extraordinary discoveries in the 2010s. In 2013, British researchers finally found the body of King Richard III—beneath what’s now a parking lot. In 2014, researchers announced that Peru’s Castillo de Huarmey temple complex still had an untouched royal tomb. In 2016, archaeologists revealed the first Philistine cemetery, offering an unprecedented window into the lives of the Hebrew Bible’s most notorious, enigmatic people. The following year, researchers announced that Jerusalem&#39;s Church of the Holy Sepulchre dates back more than 1,700 years to Rome&#39;s first Christian emperor, appearing to confirm that it&#39;s built on the site identified by Rome as the burial place of Christ. And in 2018, teams working in Peru announced the largest mass child sacrifice site ever uncovered, while other scientists scouring Guatemala detected more than 60,000 newly identified ancient Maya buildings with airborne lasers.
+
+Big archaeological discoveries also surfaced from deep underwater. In 2014, a Canadian team finally found the H.M.S. Erebus, an ill-fated Arctic research vessel that sank in 1846. Two years later, another expedition located its sister ship, the H.M.S. Terror. In 2017, an effort led by Microsoft co-founder Paul Allen found the long-lost U.S.S. Indianapolis, which sank in 1945 and became one of the deadliest disasters in U.S. naval history. The Black Sea Maritime Archaeology Project has found more than 60 historic shipwrecks at the bottom of the Black Sea—including a pristine 2,400-year-old vessel discovered in 2018. And in 2019, Alabama officials announced the discovery of the long-lost Clotilda, the last ship that ferried enslaved Africans to the United States.
+
+10.Breaking new ground in the solar system
+In July 2015, NASA’s New Horizons probe made good on a decades-long quest to visit the icy world Pluto, sending back the first-ever images of the dwarf planet’s shockingly varied surface. And on New Year’s Day 2019, New Horizons pulled off the most distant flyby ever attempted when it snapped the first pictures of the icy body Arrokoth, a primordial leftover from the solar system’s infancy.
+
+A little closer to home, NASA’s Dawn spacecraft arrived at Vesta, the second-biggest body in the asteroid belt, in 2011. After mapping that world, Dawn darted off to orbit the dwarf planet Ceres, the asteroid belt’s largest object—becoming the first mission ever to orbit a dwarf planet, and the first to orbit two different extraterrestrial bodies. Near the decade’s end, NASA’s OSIRIS-REx and JAXA’s Hayabusa2 visited the asteroids Bennu and Ryugu, respectively, with the goal of returning samples back to Earth.
+
+11.Changing the course of disease
+In response to the 2014-2016 Ebola outbreak in West Africa, public health officials and the pharmaceutical company Merck fast-tracked rVSV-ZEBOV, an experimental Ebola vaccine. After a highly successful field trial in 2015, European officials approved the vaccine in 2019—a milestone in the fight against the deadly disease. Several landmark studies also opened new avenues to preventing the spread of HIV. A 2011 trial showed that preventatively taking antiretroviral drugs greatly reduced the spread of HIV among heterosexual couples, a finding confirmed in follow-up studies that included same-sex couples.
+
+12.Pushing reproductive limits
+In 2016, clinicians announced the birth of a “three-parent baby” grown from the father’s sperm, the mother’s cell nucleus, and a third donor’s egg that had its nucleus removed. The therapy—which remains ethically controversial—aims to correct for disorders in the mother’s mitochondria. One 2018 study made [precursors of human sperm or eggs out of reprogrammed skin and blood cells](https://science.sciencemag.org/content/362/6412/356.abstract?
+casatoken=xaKN4iPnEu0AAAAA:rwRkg6U88IdarvsyYpPAFk1RmFkBUMpzKI5-Ol1BFpsfu-3LrgXvqJcKVSgQT8mfV3R9YoBC0hu7Q), while another showed that gene editing could let two same-sex mice conceive pups. And in 2018, Chinese scientists announced the birth of two cloned macaques, the first time that a primate had ever been cloned like Dolly the sheep. Though researchers avow that the technique won’t be used on humans, it’s possible that it could work with other primates, including us.
+
+13.Tracking down the Higgs boson
+How does matter get mass? In the 1960s and 1970s, physicists including Peter Higgs and François Englert proposed a solution in the form of a novel energy field that permeates the universe, now called the Higgs field. This theorized field also came with its associated fundamental particle, what’s now called the Higgs boson. In July 2012, a decades-long search ended when two teams at CERN’s Large Hadron Collider announced the detection of the Higgs boson. The discovery filled in the last missing piece of the Standard Model, the spectacularly successful—albeit incomplete—theory that describes three of the four fundamental forces in physics and all known elementary particles.
+
+14.Rewriting paleontology textbooks
+This decade has seen an explosion in our understanding of prehistoric life, as scientists have found stunning new fossils while expanding their analytical toolkits. In 2010, researchers supported by the National Geographic Society published the first full-body color reconstruction for a dinosaur, based on the discovery of fossilized pigments. In the years since, the palette has widened, as paleontologists have found dino-camouflage, feathers that ranged from black to blue to iridescent rainbow, and reddish skin on one of the best-ever fossils of an armored dinosaur. And in a remarkable feat of chemical sleuthing, researchers analyzed preserved fatty molecules and proved in 2018 that Dickinsonia, a primitive creature that lived more than 540 million years ago, was an animal.
+
+In 2014, paleontologists also revealed new fossils of the predatory dinosaur Spinosaurus that suggested it was a semiaquatic predator—the first known among dino-kind. A year later, a team in China unveiled the stunning fossil of Yi qi, a truly weird feathered dinosaur with membraned wings like a bat’s. Also in the last decade, scientists’ interest in Myanmar’s 99-million-year-old amber has surged, revealing a feathered dinosaur tail, a primitive baby bird, and all sorts of invertebrates trapped in the fossilized tree resin.
+
+15.Finding life’s building blocks on other worlds
+In the last 10 years, space missions have given us a more sophisticated look at other worlds’ carbon-based organic molecules, which are necessary ingredients for life as we know it. The European Space Agency’s Rosetta mission orbited and landed on Comet 67P Churyumov–Gerasimenko. The data it collected between 2014 and 2016 gave us an astonishingly close look at the raw materials that ancient impacts might have brought to Earth. Before NASA’s Cassini probe died in 2017, it confirmed that the watery plumes of Saturn’s moon Enceladus contain large organic molecules, a clue that it has the right stuff for life. And in 2018, NASA announced that its Curiosity rover had found organic compounds on Mars, as well as a bizarre seasonal cycle in the red planet’s atmospheric methane levels.
+
+16.Ringing climate alarms louder than ever
+Throughout this decade, atmospheric carbon dioxide were reaching levels that are unprecedented in modern times, with record temperatures to match. On May 9, 2013, global CO2 levels reached 400 parts per million for the first time in human history, and by 2016, CO2 levels were staying firmly above this threshold. As a result, the whole world felt an uptick in warming; 2015, 2016, 2017, 2018, and 2019 were the five hottest years on record since 1880. Starting in 2014, warming oceans kicked off a global coral bleaching event. Corals around the world suffered die-offs, including parts of the Great Barrier Reef. In 2019, Australia declared the island-dwelling Bramble Cay melomys extinct from sea level rise, the first known mammal lost to modern climate change.
+
+In a series of major reports, the world’s scientists forcefully called attention to Earth’s altered climate, the risks it poses, and the need to respond. In 2014, the Intergovernmental Panel on Climate Change released its fifth assessment of climate change’s reality and consequences, and a year later, the world’s nations negotiated the Paris Agreement, the global climate accord that aims to keep warming below 2 degrees Celsius—which world leaders and scientists consider a dangerous threshold. In October 2018, the IPCC published another grim report that outlined the huge costs of warming even 1.5 degrees Celsius by 2100—which is likely the minimum the planet will face. In the face of such huge challenges, record-breaking climate protests have swept the world, many led by youth activists.
+
+17.Discovering—and rediscovering—species
+Modern biologists are identifying new species at a blistering pace, naming 18,000 new species a year on average. In the past decade, scientists described several charismatic mammal species for the first time, such as the Myanmar snub-nosed monkey, the Vangunu giant rat, and the olinguito, the first newfound carnivore in the Western Hemisphere since the late 1970s. The ranks of other animals groups also swelled, as scientists described newfound fish with “hands,” tiny frogs smaller than a dime, a giant Florida salamander, and many others. In addition, some animals, such as Vietnam’s saola and China’s Ili pika, were spotted once again after having gone missing for years.
+
+But along with these many finds, scientists have tallied the exponential rate of modern extinctions. In 2019, scientists warned that a quarter of plant and animal groups are threatened with extinction, suggesting that as many as a million species—both known and unknown to science—are now at risk of dying out, some within decades.
+
+18.Kicking off a new spaceflight era
+The 2010s were a pivotal transition period for spaceflight, as access to low-Earth orbit and beyond became a more global—and commercial—enterprise. In 2011, China launched its first space laboratory, Tiangong-1, into orbit. In 2014, India’s Mars Orbiter Mission arrived at the red planet, making India the first country ever to successfully arrive at Mars on its first try. In 2019, Israeli nonprofit SpaceIL attempted the first privately funded lunar landing, and China’s Chang’e-4 mission performed the first soft landing on the lunar farside. The global astronaut corps also grew more diverse: Tim Peake became the first professional British astronaut, Aidyn Aimbetov became the first post-Soviet Kazakh cosmonaut, and the United Arab Emirates and Denmark sent their first astronauts to space. What’s more, NASA astronauts Jessica Meir and Christina Koch performed the first all-female spacewalk.
+
+In the U.S., after the last space shuttle mission launched in 2011, private companies angled to fill the void. In 2012, SpaceX launched the first commercial resupply mission to the ISS, and in 2015, Blue Origin and SpaceX became the first companies to successfully launch reusable rockets to space and then vertically land them back on Earth, a milestone for cheaper launches to low-Earth orbit.
+
+19.Seeing animals’ unexpected sides
+The past decade has revealed unusual traits and behaviors across the animal kingdom. In 2015, National Geographic explorer David Gruber found that hawksbill sea turtles fluoresce green and red—the first biofluorescence ever recorded in a reptile. In 2016, researchers showed that the Greenland shark can live at least 272 years, making it the longest-lived vertebrate yet known. Our understanding of animal tool use also improved: One 2019 study showed for the first time that Visayan warty pigs use tools, and several studies showed that Brazil’s capuchins have been using tools for at least 3,000 years, the oldest such non-human record found outside Africa. In an extremely rare 2018 sighting, biologists in Kenya scientifically documented a black leopard in Africa for the first time since 1909.
+
+20.Redefining the units of science
+To understand the natural world, scientists must measure it—but how do we define our units? Over the decades, scientists have gradually redefined classic units in terms of universal constants, such as using the speed of light to help define the length of a meter. But the scientific unit of mass, the kilogram, remained pegged to “Le Grand K,” a metallic cylinder stored at a facility in France. If that ingot’s mass varied for whatever reason, scientists would have to recalibrate their instruments. No more: In 2019, scientists agreed to adopt a new kilogram definition based on a fundamental factor in physics called Planck’s constant and the improved definitions for the units of electrical current, temperature, and the number of particles in a given substance. For the first time ever, all our scientific units now stem from universal constants—ensuring a more accurate era of measurement.
+_
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+      Demand μ
+               \
+                Market💵ψ —&gt;Price🥩𝛿 —&gt;Good🧥κ
+               /
+               Supply σ
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Duncan, you have such a propensity for changing religions :-)
+
+Your so-called 2019 “rebirth” is not at all intellectual, it’s religious!
+
+And we know that you’ve had several such “awakenings” over the last 30 years. You are naturally pious, but not at all loyal to any of the gods you prostate before. 
+
+Today it’s Trump, tomorrow it’s someone else. No wonder you are 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+While ethics constrains—, aesthetics extends horizons 
+
+Beyond good and evil clearly invites one to abandon ethics for aesthetics 
+
+For only then will the stage be set for 
+</pre></div>
+</div>
+<p>.</p>
+<p><img alt="" src="bloc/_build/jupyter_execute/hypergraphia.finale.png" /></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+              ♂
+               \
+                ψ —&gt; $ —&gt; κ
+               /
+               ♀
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+#HorizonBeyondGood&amp;Evil — 
+Epistemology is the Alpha &amp; Omega
+I shall try to fly by those nets 🦇 
+Dec 6, 2018 to Dec 8, 2019/
+Bella calls 24h after intense reflection on her
+Which is 365 days after my spiritual rebirth 
+Of course the gravity of the matter sent vibes/
+She needs her own “space, time, agency”
+Yet she believes that I could be a good influence 
+And has sort of invited me to be as much/
+Being the free spirit that she is I can’t 
+Constrain or nudge her but could enlighten 
+Looks like she will be selective of her influencers/
+And this finally marks my last iteration 
+It’s been quite an ache going about tryin’
+#RejectNormμEmbraceExceptionalσ
+</pre></div>
+</div>
+<p>.</p>
+<p><a class="reference external" href="https://hub.jhu.edu/2019/12/09/nobel-week-semenza-lecture-physiology-medicine/">Nobel</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>— Mexico City from a native 
+
+(Three places to visit)
+Place of the Gods
+Down down
+Polanco
+
+(One person to visit)
+andreaxxxx@gmail.com
++52X555XXX5543 (whatsApp)
+
+Said “bien sous”, “love you too”
+Piamonte
+
+Argentina
+Bronta 
+
+She is Italian
+Born in Brasil
+Probably Argentinian citizenship
+But lives in Mexico City
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+December 9, 2019 at 12.35 PM
+— Sat next to me
+— Christine
+— Structural Engineer
+— But on nuclear plants
+— About 56yo
+— Three sons including twins
+— Was told by OB GY they were fraternal
+— Yet 21y later ancestry.com said of them “twins” or “same individual”
+— No doubt what that means: monozygotic 
+— I saw a picture of them: identical
+— Fascinating anecdotes over the last 21y
+— One got Lymes disease
+— VTU
+— Had hysterectomy that converted from laporascopic to open
+— Also, twins were born at 39 weeks vaginally
+— Has a very strong family history of twinning 
+— Virtually all in family were fraternal
+— So essentially history is both fraternal and identical
+— Husband has had Parkinsons for at least 10y
+— Twins have not known anything else
+— So she tries to assure them that “Das nitch ich” their dad
+— Thats the disease 
+— Eldest son in cooking school
+— They live in Fredrickville, MD
+— Ancestry mostly Vicking
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+Constrain/Possibility/Nudge 1,4,5 μ
+             \
+              Extend 3,6 ψ—&gt; Horizon 7,8 𝛿 —&gt; Become 9 κ
+              /
+              Free 2 σ
+
+
+3.Medicare Claims Part D from January 1, 2013 to December 31, 2014 (N=561,304)
+1.Payer MPAB, MPO from January 1, 2013 to December 31, 2014 (177,471)
+2.First_SE from January 1, 2013 to December 31, 2014 for hemodialysis + US citizen (N=123,784)
+5.Incident cohort (N=86,259); 27,400 had claims after what???
+?.Inrange First_SE+91,begdate,enddate (N=69,454)
+4.Used Benzo within six months of initiation of dialysis (N=11,289 vs. 58,079)
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Rich dad poor dad Neglects:
+— initial conditions 
+— how that affects credit 
+— then only highest yield viable 
+— so it’s rigged against upstarts 
+— except the accidental tech billionaire 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Book Club 📚 
+Complexity Score 🦋 
+Ten Points
+
+1.Rich dad, poor dad
+— Just enough income? #1
+— Focus on necessities
+— Access to credit? #2
+— Search for yield &gt; interest 
+— Understand the markets? #3
+— Global macro it is 
+— Payments to make? #4
+— Use income not credit 
+— Create good or service? #5
+— Iterate to add value cut costs 
+
+Reproduces, transforms, obfuscates
+Systems: Initial 0, Butterfly 0, Adaptive 0
+Grade: -5/5 (Very harmful)
+
+2.The brothers Karamazov 
+— 
+</pre></div>
+</div>
+<p>.</p>
+<p>Nothin’ going on but the rent</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+  Pleasure μ
+            \
+             Identity ψ —&gt; Time 𝛿 —&gt; Change κ
+            /
+            Unpleasurable σ
+
+
+Constrain/Possibility/Nudgeμ
+             \
+              Extendψ—&gt;Horizon𝛿 —&gt;Becomeκ
+              /
+              Freeσ
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+<span class="n">Round</span> <span class="mi">1</span> <span class="p">(</span><span class="mi">60</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
+<span class="n">Chimay</span> <span class="n">white</span> 
+<span class="n">Chimay</span> <span class="n">blue</span>
+<span class="n">Obscura</span> 
+<span class="n">Trabadour</span> <span class="n">westkust</span> 
+<span class="n">Le</span> <span class="n">fort</span> <span class="n">tripel</span>
+<span class="n">Le</span> <span class="n">cheouff</span> <span class="n">blonde</span>
+
+<span class="n">Round</span> <span class="mi">2</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
+<span class="mi">2</span> <span class="n">chimay</span> <span class="n">whites</span>
+<span class="n">Trabadour</span> <span class="n">west</span> <span class="n">mast</span>
+<span class="n">Blue</span> <span class="n">chimay</span>
+
+<span class="n">Round</span> <span class="mi">3</span> <span class="p">(</span><span class="mi">70</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
+<span class="mi">3</span> <span class="n">white</span> <span class="n">chimays</span> 
+<span class="mi">2</span> <span class="n">westkust</span> 
+<span class="mi">1</span> <span class="n">chimay</span> <span class="n">blue</span> 
+<span class="mi">1</span> <span class="n">Grinbergen</span> <span class="n">tripple</span>
+
+<span class="n">Round</span> <span class="mi">4</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">000</span><span class="p">)</span>
+<span class="mi">2</span> <span class="n">chimay</span> <span class="n">whites</span> 
+<span class="mi">1</span> <span class="n">obscura</span>
+<span class="mi">1</span> <span class="n">Rochefort</span> <span class="mi">10</span>
+<span class="mi">1</span> <span class="n">westmall</span> <span class="n">tripple</span>
+
+<span class="mi">220</span><span class="p">,</span><span class="mi">000</span> <span class="o">/-</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>                 🦃 🤔💭🧥μ
+                          \
+                           📞 ψ —&gt; 🍕𝛿 —&gt; 👩🏾 κ
+                              /
+                              💰σ 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Nudge/Possibility/Constrain 1,4,5 μ
+                     \
+                      Identity 3,6 ψ—&gt; Time 7,8 𝛿 —&gt; Change 9 κ
+                      /
+                      Demographics 2 σ
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+This is an excellent article written by a Ugandan citizen analysing the systemic rot in all African nations with Uganda as a case study. 
+
+Enjoy!
+
+The biggest problem of Ugandans or Africans in general is this illusionary belief that they could change their countries by voting a different person into power. It is this belief that all problems of a country start and stop with the President. That if you could just have the right man in power, then all of a sudden, Africa would transform. This is what they call chasing a mirage, imagining some utopia. Unfortunately utopias are never realized in life. 
+
+The actual problem of Africa is not the presidents. From where do these presidents come? From within. The problem of Africa, the problem of Uganda is its citizens, their shared values and mentalities. The day Africans wakeup, and stop looking for an external enemy and realize that they themselves are Africa&#39;s problem is the day we shall get closer to finding an African solution. 
+
+I have often told friends that I am happiest whenever the MPs draw bigger salaries every financial year. As Ugandans we lambast our representatives in public for drawing these salaries. In private, we drain our MPs. We invite them for funerals, for introduction ceremonies and expect them to contribute out of pocket to save us. A Ugandan MP attends no less than 10 functions in a week on average. They are expected to find jobs for their people. They must contribute towards the least of needs. These big salaries they draw, they all go straight to the people they represent. Yet it seems some of us live in an illusion called Uganda. We expect our MPs to act as MPs in UK except that in our case, we also expect to play donor to their people&#39;s needs. 
+
+We decry the corruption in the country yet we bribe to get our children in the best schools. We bribe our way out of police tickets. We have no respect for traffic rules. We are every evil we see in the president and his team. 
+
+Every ill you can diagnose in Museveni and his government, you will find twice or thrice the magnitude in a Ugandan citizen. 
+
+We complain of government incompetence, yet go ahead to champion incompetence in every aspect of our lives where government has no control. Our carpenters produce substandard furniture. 
+
+I often ask myself; if the public sector is too incompetent, how come the private sector has not been any better? How come you are more bound to have a misdiagnosis in a private hospital than in a public hospital? 
+
+Daily Monitor, Observer, Red Pepper, New Vision write stories everyday that highlight government incompetence. Yet, there will never be a single day where you will pick up a Ugandan newspaper and fail to find an error on every page. 
+
+Perhaps one day as Ugandans we ought to self reflect, and look within and realize, that we are demons we are trying to fight. If Museveni and his government were the only incompetent people and everyone else was competent, then Uganda would be a scandinavian country of sorts. Why don&#39;t we have world class restaurants in the country? Why is it that customer care sucks in private institutions just as it does in public institutions? 
+
+Every Ugandan I meet complains of the system, of the incompetence. Then I ask myself; &quot;you dear Ugandan, where can I find examples of your excellent output?&quot; 
+
+The same people who complain of poor working conditions run slavery rings in their own homes. The day maids of this country decide to speak out, we shall be shocked at the evil we sustained in our homes. 
+
+I now suspect that our anger, our rants, our complaints about the system are all because this system is a daily reminder of our own incompetences, our own weaknesses as a people. What this government has done is hold a mirror up to the Ugandan society and we are not happy about our own reflection. 
+
+Today I read a sad story. That there are about 20,000 Asians in Uganda, less than 0.5% of the Ugandan Population. And that these pay 64% of our tax revenues. To put it simply, even the taxes we complain that government mishandles, more than half of them are paid by non-Ugandans. In other words, we don&#39;t even have a right to complain. 
+
+That should signify an innate Ugandan problem. There is something deeply wrong around how the Ugandan and African societies are constructed. Ugandan Citizens promise so much and deliver so little. Our shared beliefs, mindsets and values have been constructed in such a way that regardless of the president in power, we shall always produce substandard results. It is no wonder that all over Africa, we complain of the same problems. Littered cities, corruption, failed government institutions, name it all. You could fly from Uganda to Malawi to Ghana to Zambia and not notice a difference. Because? It is not a problem of presidents. It is a problem of the African citizens. But they are too scared of self-criticism, they have dabbled in escapism and found scapegoats in their leaders.
+
+As Plato wrote in the Republic; &quot;like man, like state.&quot; We can&#39;t expect to have better leaders until we have better people. You can&#39;t create great companies without great employees. It doesn&#39;t matter how great the CEO is, if she has crap employees, she will have a crap company. That is the case of Uganda and other African countries!
+
+Credit Wamulume Laurence Beele
+</pre></div>
+</div>
+<p>.</p>
+<p>Diddy &amp; Ray Dalio: Watch <a class="reference external" href="https://www.youtube.com/watch?app=desktop&amp;amp;v=5GGh9Y0QRV4">16:36</a>/24:54</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     Possibilities μ
+                     \
+                      Will ψ—&gt; Dance 𝛿 —&gt; Overcome κ
+                      /
+                      Fetters σ
+
+Principles/Values
+— Process
+— Endpoints
+— Unexpected
+— Reappraisals
+— Adaptation
+
+Divisions/States
+— Fetters
+— Possibilities
+— Will-to-Power
+— Dancers
+— Overcomers
+
+Teams/Best-Of-Both-Worlds
+— Relay, Metamorphosis, Stage-of-Life
+— Age, Location, History
+— Strengths, Weaknesses, Complement
+— Diversity, Conservative, Liberal
+— Thesis, Antithesis, Synthesis
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+Daddy,
+
+I’ve only one question: have any of Ibrahim A. Ragab’s insights articulated in 1990 been translated into action as of 2020 some solid three decades later?
+
+Your astonished Son,
+
+Abimereki
+</pre></div>
+</div>
+<p>.</p>
+<p>Nihilism <a class="reference external" href="https://www.theguardian.com/lifeandstyle/2019/dec/18/sunny-nihilism-since-discovering-im-worthless-my-life-has-felt-precious?utm_term=Autofeed&amp;amp;CMP=twt_gu&amp;amp;utm_medium=&amp;amp;utm_source=Twitter#Echobox=1576608368">is back</a>!</p>
+<p>.</p>
+<p>the PYT is fine — but I didn’t travel with her to UG. Her last exam is today :(</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">December</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">2019</span> <span class="n">at</span> <span class="mi">1</span><span class="p">:</span><span class="mi">48</span> <span class="n">PM</span>
+
+<span class="n">Andrew</span> 
+<span class="n">Mimic</span> <span class="n">him</span>
+<span class="n">Proverbs</span> <span class="mi">10</span><span class="p">:</span><span class="mi">7</span>
+<span class="n">Hebrews</span> <span class="mi">13</span><span class="p">:</span><span class="mi">16</span>
+<span class="c1">#Goals2020 #Vision2020 #Legacy2020</span>
+
+<span class="n">x</span>
+
+<span class="n">The</span> <span class="n">way</span> <span class="n">to</span> <span class="n">success</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">hard</span> <span class="n">road</span> <span class="n">to</span> <span class="n">travel</span><span class="o">.</span> <span class="n">Disappointments</span> <span class="ow">and</span> <span class="n">failures</span> <span class="n">dishearten</span> <span class="n">us</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">midst</span> <span class="n">of</span> <span class="n">struggle</span> <span class="n">but</span> <span class="n">a</span> <span class="n">man</span> <span class="n">of</span> <span class="n">enterprise</span> <span class="n">has</span> <span class="n">to</span> <span class="k">pass</span> <span class="n">through</span> <span class="n">the</span> <span class="n">period</span> <span class="k">with</span> <span class="n">patience</span> <span class="ow">and</span> <span class="n">cheerfulness</span> <span class="n">till</span> <span class="n">he</span> <span class="n">gets</span> <span class="n">his</span> <span class="n">well</span> <span class="n">deserved</span> <span class="k">return</span>
+
+<span class="n">x</span>
+
+<span class="n">Probably</span> <span class="n">the</span> <span class="n">success</span> <span class="n">of</span> <span class="n">the</span> <span class="n">most</span> <span class="n">prominent</span> <span class="n">Lohana</span> <span class="n">families</span> <span class="ow">in</span> <span class="n">Uganda</span><span class="p">,</span> <span class="n">Nanji</span> <span class="n">Kalidas</span> <span class="n">Mehta</span> <span class="ow">and</span> <span class="n">Sons</span><span class="p">,</span> <span class="n">M</span><span class="o">.</span> <span class="n">P</span><span class="o">.</span> <span class="n">Madhvani</span> <span class="ow">and</span> <span class="n">D</span><span class="o">.</span> <span class="n">K</span><span class="o">.</span> <span class="n">Hindocha</span> <span class="n">had</span> <span class="n">much</span> <span class="n">influence</span> <span class="n">on</span> <span class="n">Lohana</span> <span class="n">migration</span> <span class="kn">from</span> <span class="nn">Porbandar</span> <span class="ow">and</span> <span class="n">Jamnagar</span>
+
+<span class="n">x</span>
+
+<span class="n">Mimicry</span> 
+<span class="n">Imitation</span>
+<span class="n">Flattery</span>
+<span class="n">Alinda</span>
+<span class="n">Range</span>
+<span class="n">Sport</span> 
+<span class="n">Leadership</span> 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+Hebrew 13
+17 Obey them that have the rule over you, and submit yourselves: for they watch for your souls, as they that must give account, that they may do it with joy, and not with grief: for that is unprofitable for you
+
+
+      Rulers μ
+              \
+               Obey ψ—&gt; Pay/Actions 𝛿 —&gt; Sell/Joy κ
+               /
+               Yourselves σ
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+ 
+Liam Emory Wang arrived on Monday December 16th 12:04p weighing 5lb 1oz and measuring 18.5inches long.  
+ 
+Jackie, Liam and Dan are doing great! 
+ 
+Here is the first photo of the family of three and another of sweet baby Liam! 
+ 
+Congrats to Jackie and Dan!!
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>JAMA publishes quite often these somewhat boring NHANES-based papers, and they seem to me like shit we could do in a weekend
+ 
+I wonder if we could think of some actually interesting, broad-based studies to do that would actually deserve to be in JAMA :)
+ 
+Race, social determinants, age, gender angles are probably the biggest opportunities
+ 
+I definitely consider ERGOT scope to include any pre-transplant diseases, so DM, HTN, heart disease, lung disease, CKD, etc
+ 
+Abi – you have most experience with NHANES – do you want to send around some information about what is captured there, and then we could maybe have a brainstorming session on what we could do with it?
+</pre></div>
+</div>
+<p>.</p>
+<p>^!3tZ$(he</p>
+<p>.</p>
+<p>318,000/- the boys</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+*Dangote, Africa’s richest Man Ends Year $4.3bn Better Off*
+ 
+
+Aliko Dangote, Africa’s richest man, became $4.3 billion richer in 2019 as his fortune continued to grow on the back of investments in cement, flour and sugar.
+
+The 62-year-old Nigerian businessman and Africa’s most prominent industrialist ended the decade with a net worth of almost $15 billion, making him the 96th wealthiest man in the world, according to the Bloomberg Billionaires Index.
+
+Born into a wealthy Muslim family of traders in the north, Dangote incorporated his own business selling cement at 21.
+
+He shifted to manufacturing the building material in the 1990s, helped by government policies that encouraged ways to reduce the need for imports.
+
+His conglomerate, Dangote Industries, includes the biggest cement company on the continent, the Lagos-listed Dangote Cement Plc.
+
+
+That’s one of four publicly traded companies under the Dangote umbrella that account for more than a fifth of the value of the Nigerian stock exchange.
+
+The year 2020 could be a significant one for the billionaire, who is close to completing one of the world’s largest oil refineries in Nigeria.
+
+The plant has the capacity to meet more than Nigeria’s entire fuel consumption and could transform an economy that currently imports all its refined product needs.
+
+Dangote is also constructing a fertilizer factory on the same site.
+</pre></div>
+</div>
+<p>.</p>
+<p>Ayita bukunya😳🙆🏻‍♂<br />
+Naked</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./bloc/_build/jupyter_execute"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

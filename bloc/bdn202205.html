@@ -1,0 +1,789 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>05/2022 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bloc/bdn202205';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/practicing.png" class="logo__image only-light" alt="Nothin' - Home"/>
+    <script>document.write(`<img src="../_static/practicing.png" class="logo__image only-dark" alt="Nothin' - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbloc/bdn202205.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bloc/bdn202205.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>05/2022</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>05/2022<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+#runnethover
+
+1.First authors with Dorry as senior 
+2.My Stata class courtesy of Allan 
+3.What may I leave others?
+
+A-List (Change), Company
+— Musculoskeletal
+— Drop outta school
+— Found another institution
+— Best your school in market cap
+
+B-List (Being), School
+— Cognitive
+— Have been a sponge for nearly half a century
+— Q&amp;A: MD MPH PhD
+— Killing it off!
+— That we never ask questions that aren’t questions
+— And instead proceed with hike to the mountain top :)
+
+C-List (Abide), Idiosyncrasy
+— Sensory
+— Cassio Stereo sampling CDP 100
+— 9 mile running at a pace of 7’-8’/mile
+— Delights of the culinary kind
+— Belgian beer
+— Aged cheeses and snacking
+— Chess: Kevin 
+
+1.Pretty clear what I’ve neglected
+2.My natural home judging by Rugby, Academic, Musical glory
+3.But then I made a Knights move :)
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+Santiago Alvarez Arango (This is my Guy!!)
+
+*Free-text data using natural language processing (MGH.. informatics person, had developed medical extraction from the tests)
+— Why Massachussetts
+— Not enough EMR at Hopkins
+— Or no persons with analytic skills for free-test data.. 
+
+— Allergy specialist: drug hypersensitivity
+— EMR records: evidence of hypersensitivity
+— Immediate Vancomoycine Hypersensitivity reactions
+
+
+1.Phenotype (HEIGHT)
+— Different vancomycin phenotypes 
+— Focus on vancomycin infusion reactions (VIR), non-IgE
+— New receptor Mas-related G protein (MRGPRX2) in cutaneous Mast cells
+
+2.Exposure (SLOPE)
+— Vancomycin is one of the most prescribed antibiotics (empirical, MRSA)
+— Skin testing not validated
+— Antihistamine slow inclusion may be preventive
+
+3.Idiosyncrasy (INTERCEPT)
+—
+—
+—
+
+1.Describe EPI from EMR
+2.Define skin protocol to distinguish non-IgE immediate to VIR (lower skin test threshold vs. drug-tolerant controls)
+3a.Determine immunogenicity to vancomycin in recipients
+— fully remotely 
+— Remote consenting (change in protocol), at home collection, amazon gift cards
+— data on vancomycin history
+— MRGPRX2 mechanism favored by low immunogenicity
+3b.Assess. basophil responses in functional basophil assays in vancomycin tolerant subjects 
+— Functional 
+
+1.twenty minutes of interactive discussion
+2.comments about the work
+3.methodological issue
+4.ask presenter questions
+5.then maybe open for general discussion
+
+VIR — moving beyond “red man syndrome” 
+Santiago et al came up with this term racially neutral term?
+</pre></div>
+</div>
+<p>followup <a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>23<span class="fn-bracket">]</span></a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#ulysses 
+
+2022/05/10
+
+— Finally able to smile 😊 //comprehension
+— Stately, plump, Buck… //anthropometry
+— God, these bloody English //resentment 
+— Snotgreen, a new colour for… //neologism 
+— The mockery of it.. second-leg //hand 
+— Rage of Caliban.. //compadre 
+— 
+</pre></div>
+</div>
+<p>.</p>
+<p>Canelé pastry cake<br />
+La Bohem cake 🧁</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#innovation
+
+Daniel Hayes
+Met at Food Market
+Wife left him during his rehab 
+Had head-on collision while driving
+She’s not a gold digger, he insists
+
+https://www.consensusortho.com/about/
+
+Invited me to send him ideas
+That I could have patents to my names
+Although his focus is orthopedics
+Kidney Transplantation wouldn’t be a bad idea
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#taxes</span>
+
+<span class="n">Garnished</span> <span class="n">salary</span>
+<span class="mf">1.04</span><span class="o">/</span><span class="mi">29</span> <span class="n">xxx</span>
+<span class="mf">2.05</span><span class="o">/</span><span class="mi">13</span> <span class="n">xxx</span>
+<span class="mf">3.</span>
+<span class="mf">4.</span>
+<span class="mf">5.</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#outliers
+
+Malcom Gladwell 
+Classifies intelligence:
+General and practical
+Declares them orthogonal
+Fails to see the interaction
+
+Analytic intelligence causes
+Independence early in life &amp;
+Yet dependence fosters relationships,
+Skills one may call interpersonal,
+Practical intelligence!
+
+By what lucky strokes does one have both?
+Teamwork with a perfect foil
+Realism from day to day 
+Never asking questions that aren’t questions 
+Lack of opposition to moral problems of others  
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#accomplishments
+1.Identified a consilient philosopher 
+2.Not the respected E. O. Wilson!
+3.Have built a metaphysical system
+4.Only to illustrate whence metaphysics comes
+5.And what its destiny is: τάξη, same as realism
+6.Resolved to return to the species essence:
+7.Physical activity first and foremost
+8.Adaptation is second-rate, reactive
+9.Reminiscent of resentment 
+
+*
+
+0g.κοσμογονία,γ
+1f.ἡ ἔρις,κ
+2e.πρᾶξις,σ
+3e.ἄσκησις,μ
+4d.∫δυσφορία.dt,ψ
+5c.φάρμακον,δ
+6b.ομορφιά,β
+7a.τάξη,α
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#kids</span>
+
+<span class="mi">3</span><span class="o">-</span><span class="mi">11</span> <span class="n">piano</span>
+<span class="mi">12</span><span class="o">-</span><span class="mi">18</span> <span class="n">track</span><span class="p">,</span> <span class="n">field</span> <span class="o">&amp;</span> <span class="n">pool</span><span class="o">.</span> <span class="n">Buy</span><span class="o">/</span><span class="n">Rent</span> <span class="n">Stadium</span>
+<span class="mi">19</span><span class="o">-</span><span class="mi">22</span> <span class="n">software</span><span class="p">,</span> <span class="n">hardware</span> <span class="n">eng</span><span class="p">,</span> <span class="n">pre</span><span class="o">-</span><span class="n">med</span>
+<span class="mi">23</span><span class="o">-</span><span class="mi">27</span> <span class="n">medical</span> <span class="n">school</span>
+<span class="mi">28</span><span class="o">-</span><span class="mi">32</span> <span class="n">orthopedic</span> <span class="n">surgery</span>
+<span class="mi">33</span><span class="o">-</span><span class="mi">35</span> <span class="n">sports</span> <span class="n">medicine</span><span class="o">.</span> <span class="n">Use</span> <span class="n">Stadium</span> <span class="k">as</span> <span class="n">Clinic</span>
+<span class="mi">36</span><span class="o">-</span><span class="mi">90</span> <span class="n">rehab</span> <span class="n">medicine</span><span class="o">.</span> <span class="n">Ditto</span> <span class="n">those</span> <span class="k">with</span> <span class="n">injuries</span>
+
+<span class="n">Innovation</span>
+<span class="n">Patenting</span>
+<span class="n">Registering</span><span class="p">,</span> <span class="n">inc</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>.</p>
+<p>Breaststroke<br />
+<a class="reference external" href="https://www.youtube.com/watch?v=rVaXro6fcEQ">https://www.youtube.com/watch?v=rVaXro6fcEQ</a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#achilles
+
+https://hbswk.hbs.edu/item/for-entrepreneurs-blown-deadlines-can-crush-big-ideas
+
+Meeting timelines!
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#howtoengage</span>
+
+<span class="n">The</span> <span class="n">student</span><span class="p">,</span> <span class="n">employee</span><span class="p">,</span> <span class="n">colleague</span> 
+<span class="n">Who</span> <span class="n">have</span> <span class="n">mastered</span> <span class="n">the</span> <span class="n">basics</span> 
+<span class="n">And</span> <span class="n">are</span> <span class="n">very</span> <span class="n">bored</span> <span class="k">with</span> 
+<span class="n">Stuff</span> <span class="n">others</span> <span class="n">are</span> <span class="n">doing</span><span class="p">:</span>
+<span class="n">Create</span> <span class="n">extra</span> <span class="n">credit</span><span class="p">,</span> <span class="n">leadership</span><span class="p">,</span> <span class="n">etc</span> 
+</pre></div>
+</div>
+<p>no followup thru &amp; thus importancec of journaling! <a class="footnote-reference brackets" href="#id5" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>24<span class="fn-bracket">]</span></a></p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>05/24/2022
+When I reach 200% of my move goal for the hundredth time (presently at 92), then I’ll refine my activity goals as follows:
+
+1.Burning 1000 active calories 
+2.After accounting for a 400-500 baseline 
+3.Therefore I estimate the goal to 1500 calories 
+
+Let’s make this work!! 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+#butterfly
+
+05/29/22
+
+Maggie, a 48yo WF, says I’m a source of inspiration to her and her two daughters
+
+She told the daughters about a man who decided to challenge himself and learn butterfly
+
+x
+
+Valentine (Redhead, Off White)
+Natalie (Black girl)
+
+Shared lanes with these two badass young ladies
+At the end the black girl said I’m an inspiration
+To her and to many others I’m not even aware of
+Because I’m a black man who seems to be a
+Professional and badass at butterfly
+
+x
+
+THANK YOU!
+
+x
+
+Ambition: Learn butterfly at 41yo
+Meaning: Inspire others by my success
+Pleasure: Badass body that could get them xxx
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#iglesia
+
+This music is indistinguishable 
+From kifunda church music 
+In Bwaise or Kawempe 
+How did we lose the samba?
+Or the salsa, mariachi??? 
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#sleep
+
+My sleep position changed
+When I started doing swim drills
+Specifically the backstroke dolphin
+I now comfortably sleep on my back!!
+Preferably with dangling legs 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#queenbed
+
+L 6’1” (I’m two inches short)
+W 5’0” (Blade of scapular)
+D 6’6” (Half-foot short)
+
+Explains why I snugly fit
+Backstroke Dolphin position
+Knees slightly flexed 
+Since legs are dangling 
+And my arms streamline 
+</pre></div>
+</div>
+<p>.</p>
+<p>5 x 50s of each stroke = 100 laps = 1000 cals</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#taxes 
+
+Matt 22:17
+
+17 Tell us therefore, What thinkest thou? Is it lawful to give tribute unto Caesar, or not?
+</pre></div>
+</div>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">23</a><span class="fn-bracket">]</span></span>
+<p>another potential r03 inspiration</p>
+</aside>
+<aside class="footnote brackets" id="id5" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">24</a><span class="fn-bracket">]</span></span>
+<p>how to engage folks</p>
+</aside>
+</aside>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./bloc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

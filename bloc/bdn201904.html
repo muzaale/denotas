@@ -1,0 +1,752 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>04/2019 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bloc/bdn201904';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/practicing.png" class="logo__image only-light" alt="Nothin' - Home"/>
+    <script>document.write(`<img src="../_static/practicing.png" class="logo__image only-dark" alt="Nothin' - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbloc/bdn201904.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bloc/bdn201904.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>04/2019</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>04/2019<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>🐐</p>
+<p>G.O.A.T</p>
+<p>Business</p>
+<p>Bartleby</p>
+<p>The two tribes of working life</p>
+<p>Those who love networking and those who want to be left alone</p>
+<p>x</p>
+<p>Bookmark it already!!</p>
+<p>Greatest peace of all time, along with Raphael’s school of Athens, and yours truly (Raphael 2.0’s) Venn diagram :-)</p>
+<p>.</p>
+<p>Happy 80th birthday, Daddy! Looking forward to celebrating the day with you. I pray that the good lord grants you many more exciting years.</p>
+<p>Not a day goes by without me being grateful to you for all you’ve been &amp; continue to be to me — could never ask for a better dad.</p>
+<p>See you soon!</p>
+<p>.</p>
+<p>Nathaniel Nahamya’s in the house</p>
+<p>.</p>
+<p>Interesting. Just sat next to a Dutch woman in her 60s who was traveling with her husband (seared in business class). She’s traveling for pleasure. He for business. Reminded me of another couple I run into a few years ago under similar circumstances:-)</p>
+<p>.</p>
+<p>What would Aristotle have had to say about Mozart’s piano concerto no. 15 (andante)? Yeah, I thought so!</p>
+<p>.</p>
+<p>Musta gotta taste!!</p>
+<p>Trappist Westvleteren 12 (XII)</p>
+<p>.</p>
+<p>Bob’s Top 3!!!</p>
+<p>Cushwa Fog — Fredrick, Md (hazy NE IPA; smells like Pine 🌲)</p>
+<p>Mully’s — southern, md (hazy, not lazy)</p>
+<p>Dogfish head — SeaQuench Ale (sour AF)</p>
+<p>Not sure any really works for me!</p>
+<p>.</p>
+<p>Tapeo</p>
+<p>Boston</p>
+<p>Atc 2017</p>
+<p>Restaurant dinner</p>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>First-generation antihistamines</p></li>
+<li><p>Antiparkinsonian agents</p></li>
+<li><p>Antispasmodics4.Antithrombotics (only short-acting)</p></li>
+<li><p>Anti-infective</p></li>
+<li><p>Peripheral alpha-1 blockers</p></li>
+<li><p>Central alpha-agonists</p></li>
+<li><p>Other CNS alpha-agonists</p></li>
+<li><p>Antidepressants</p></li>
+<li><p>Antipsychotics, first (conventional) and second (atypical) generation</p></li>
+<li><p>Barbiturates</p></li>
+<li><p>Benzodiazepines (classify as short- and long-acting)</p></li>
+<li><p>Nonbenzodiazepine, benzodiazepine receptor agonist hypnotics (ie, “Z-drugs”)</p></li>
+<li><p>Ergoloid mesylates</p></li>
+<li><p>Androgens</p></li>
+<li><p>Estrogens with or without progestins (oral and transdermal)</p></li>
+<li><p>Growth hormone</p></li>
+<li><p>Insulin (classify as short- and long-acting)</p></li>
+<li><p>Sulfonylureas, long acting</p></li>
+<li><p>Proton-pump inhibitors</p></li>
+<li><p>Non–cyclooxygenase-selective NSAIDs, oral</p></li>
+<li><p>Skeletal muscle relaxants</p></li>
+<li><p>Nondihydropyridine calcium channel blockers</p></li>
+<li><p>Thiazolidinediones</p></li>
+<li><p>Acetyl cholinesterase inhibitors</p></li>
+<li><p>Nonselective peripheral alpha-1 blockers</p></li>
+<li><p>Tertiary tri-cyclic antidepressants (TCAs)</p></li>
+<li><p>Corticosteroids (oral and parenteral)</p></li>
+<li><p>H2-receptor antagonists</p></li>
+<li><p>Antiepileptics</p></li>
+<li><p>Antiemetics</p></li>
+<li><p>NSAIDs (non-COX, COX selective, oral and parenteral, nonacetylated salicylates)</p></li>
+<li><p>Diuretics</p></li>
+<li><p>SNRIs</p></li>
+<li><p>SSRIs</p></li>
+<li><p>RAS inhibitor (ACEIs, ARBs)</p></li>
+<li><p>Opioids</p></li>
+<li><p>Anticholinergic</p></li>
+</ol>
+<p>.</p>
+<p>KLM $1,061 (Dreamliner!)</p>
+<p>July 10 - 24</p>
+<p>.</p>
+<p>Not all who wonder are lost — Jeep 🚙</p>
+<p>.</p>
+<p>Jimmy Fallon and young metro</p>
+<p>.</p>
+<p>Many Americans probably don’t know that a Pentecostal movement exists in France<br />
+x<br />
+Probably 90 percent of the attendees were black<br />
+x<br />
+The people danced, sang at the top of their lungs, and sometimes spoke in tongues. I never had the feeling I was witnessing a collective delirium, or that I was in the midst of a cult<br />
+x<br />
+The sign of peace, reduced in Catholic Masses to a brief, irritated, and icy shake of the hand, gave way here to interminable warm hugs and kisses. And at the end of the celebration, we would share bountiful meals.<br />
+x<br />
+And it was almost entirely a group of white people—I say that in order to establish that whenever we are ­dealing with affairs of the heart (and religion is such an affair, indeed of the highest degree), race is not ­pertinent</p>
+<p>While I very much liked these charismatic celebrations, there remained in me a certain uneasiness, which I fully understood only later, thanks to Douglas Kennedy’s very good book, In God’s Country, which relates his study of revivalist Christianity in the Bible Belt. In reading the book, you sometimes get the impression that this renewal can only involve people with a past in alcoholism, drug addiction, prostitution, or homelessness—that it does not address itself to people who are integrated into society in a normal way, having spent their childhood in a reasonably loving family.</p>
+<p>.</p>
+<p>Savage 21<br />
+August 21, 2018<br />
+Instagram<br />
+Gotta see this!!!!!<br />
+<a class="reference external" href="https://www.instagram.com/p/Bmv8r-CjVAh/">https://www.instagram.com/p/Bmv8r-CjVAh/</a></p>
+<p>.</p>
+<p>We are right to expect that the Church will point out a path toward God,
+independently of the jolts and shocks of the epoch<br />
+x<br />
+Independently of the jolts and shocks of the epoch; that it will remain, subsist.
+x<br />
+Latin was supposed to mark a difference between everyday language and the language with which we address the Creator<br />
+x<br />
+The incense, rising up into the nave, pointed out a path for the soul<br />
+x<br />
+Priest, with his back to the faithful, was in reality turned toward heaven</p>
+<p>.</p>
+<p>What doesn’t kill you makes you..<br />
+No it gives you PTSD. Remember Ricky..<br />
+I think this is a very interesting debate!!</p>
+<p>.</p>
+<p>Rochefort vs Chimay<br />
+Westvleteren — Belgian<br />
+Mardesous 10</p>
+<p>Monks in Philly 16th &amp; Spruce<br />
+— Max’s in Pilly<br />
+— Great mussels</p>
+<p>.</p>
+<p>Rochefort vs Chimay</p>
+<p>Seriously vet:<br />
+Dubbels<br />
+Tripels<br />
+Quads</p>
+<p>.</p>
+<p>Met a self-described beer nerd 🤓</p>
+<p>.</p>
+<p>Chimay on tap in Philadelphia<br />
+Inspired the birth of craft beers in USA<br />
+Look at us now? Hugest revolution<br />
+Regardless of replicability in the 256<br />
+Sounds like a pretty story</p>
+<p>.</p>
+<p>Free will vs. will to power<br />
+One is delusional<br />
+The other is conditional</p>
+<p>.</p>
+<p>Hi Abi,<br />
+ 
+Yes, I’m happy to assist with developing your search terms.  This is going to be a lot of work so I’ve asked my colleague, Stella, who is the Informationist for the Department of Surgery to work with me on this project.  She’s copied on this email.<br />
+ 
+I think it will be best to have a group meeting so we understand the parameters of your search.<br />
+ 
+Can you send us some dates and times you are available to meet? <br />
+ 
+Lori<br />
+ 
+From: Xxx Xxx Sent: Thursday, April 18, 2019 11:23 AMTo: Xxx Xxx <a class="reference external" href="mailto:xxx&#37;&#52;&#48;jhmi&#46;edu">xxx<span>&#64;</span>jhmi<span>&#46;</span>edu</a>Cc: Xxx Xxx <a class="reference external" href="mailto:xxx&#37;&#52;&#48;jhmi&#46;edu">xxx<span>&#64;</span>jhmi<span>&#46;</span>edu</a>; Xxx Xxx <a class="reference external" href="mailto:xxx&#37;&#52;&#48;jhu&#46;edu">xxx<span>&#64;</span>jhu<span>&#46;</span>edu</a>Subject: Catalog of generic drug names by drug class
+ 
+Hi Lori – Xxx referred us to you and we hope you might be able to help us out, given your expertise.
+ 
+We are embarking on a study that will query a large national database for certain generic drug names. We have a list of about 38 drug classes of interest to us (please see attachment), but the query will call for precise generic drug names. Is it at all possible to produce a catalog of the generic drug names under each drug class? Creating a comprehensive list of these drugs would be the first and, perhaps, most consequential step of this project. And so we thought it wise to consult an expert in these matters. 
+ 
+Mara is the PI of this study and her primary appointment is with Epidemiology. It is for this reason that Donna referred us to you. Please let us know if anything needs clarification.
+ 
+Thanks!
+ 
+Abi
+ 
+ 
+Xxx Xxx, MD MPH
+Instructor of Surgery
+Department of Surgery/Division of Transplant Surgery
+Johns Hopkins University School of Medicine
+Office: (410) 955-XXXX
+Cell: XXX XXX-XXXX
+Email: <a class="reference external" href="mailto:xxx&#37;&#52;&#48;jhmi&#46;edu">xxx<span>&#64;</span>jhmi<span>&#46;</span>edu</a> 
+ 
+.</p>
+<p>Heaven = No Rich Folks<br />
+Earth 🌎 = Selfishness<br />
+Bridge 🌉 = Eye of a Needle</p>
+<p>.</p>
+<p>Bruges and Brussels, Belgium 🇧🇪<br />
+The two places to visit</p>
+<p>.</p>
+<p>What, if some day or night a demon were to steal after you into your loneliest loneliness and say to you: ‘This life as you now live it and have lived it, you will have to live once more and innumerable times more; and there will be nothing new in it, but every pain and every joy and every thought and sigh and everything unutterably small or great in your life will have to return to you, all in the same succession and sequence’ … Would you not throw yourself down and gnash your teeth and curse the demon who spoke thus? Or have you once experienced a tremendous moment when you would have answered him: ‘You are a god and never have I heard anything more divine.’ <a class="reference external" href="https://www.gutenberg.org/files/52881/52881-h/52881-h.htm">The Gay Science, §341</a></p>
+<p>.</p>
+<p>We shall not cease from exploration<br />
+And the end of all our exploring<br />
+Will be to arrive where we started<br />
+And know the place for the first time.<br />
+Through the unknown, unremembered gate<br />
+When the last of earth left to discover<br />
+Is that which was the beginning;<br />
+At the source of the longest river<br />
+The voice of the hidden waterfall<br />
+And the children in the apple-tree</p>
+<p>.</p>
+<p>Centuries of husbandry, decades of diligent culling, the work of numerous hearts and hands, have gone into the hackling, sorting, and spinning of this tightly twisted yarn. Furthermore, we have not even to risk the adventure alone; for the heroes of all time have gone before us; the labyrinth is thoroughly known; we have only to follow the thread of the hero-path. And where we had thought to find an abomination, we shall find a god; where we had thought to slay another, we shall slay ourselves; where we had thought to travel outward, we shall come to the center of our own existence; and where we had thought to be alone, we shall be with all the world.</p>
+<p>Joseph Campbell</p>
+<p>.</p>
+<p>The Triumph of Bacchus</p>
+<p>The time of youth indeed is sweet,<br />
+But all too soon it slips away.<br />
+If you’d be happy - don’t delay!<br />
+Tomorrow’s ills we’ve yet to meet.<br />
+Welcome Bacchus, Ariadne!<br />
+An ardent couple, loving, fair.<br />
+They spend as one their days with glee,<br />
+For time flies fast and does not spare.<br />
+Thus these nymphs - and others - fare.<br />
+Happy they the livelong day!<br />
+If you’d be happy - don’t delay!<br />
+Tomorrow’s ills we’ve yet to meet.<br />
+These nymphs are tickled by the thought<br />
+To be deceived by lover’s wile.<br />
+If Love’s sweet remedy were naught,<br />
+Folk sure would be uncouth and vile.<br />
+Commingled now, they dance and smile<br />
+And sport and play the livelong day!<br />
+If you’d be happy - don’t delay!<br />
+Tomorrow’s ills we’ve yet to meet.<br />
+Upon a donkey, corpulent,<br />
+Silenus wends his weighty way.<br />
+Heavy, drunk and senescent,<br />
+Years and blubber on him lay.<br />
+He can’t stand straight, he is quite bent -<br />
+Yet still he smiles the livelong day!<br />
+If you’d be happy - don’t delay!<br />
+Tomorrow’s ills we’ve yet to meet.<br />
+All ye lovers, boys, girls too -<br />
+Long live Bacchus, and Love, I say.<br />
+Play, dance, and sing, each one of you,<br />
+Let sweetness o’er your hearts hold sway.<br />
+Fatigue and weakness throw away,<br />
+For what must be you cannot beat.<br />
+If you’d be happy - don’t delay!<br />
+Tomorrow’s ills we’ve yet to meet.</p>
+<p>.</p>
+<p>“What is it that Raphael did not paint? He painted no scene on the Mount of Olives, no Crucifixion. True, he painted a “Bearing of the Cross,” but it was a very poor picture and gives the impression of having been done to order. Neither did he paint any of the scenes leading directly to the Crucifixion. His creative genius begins to reveal itself again only when he portrays the figure of the great successor of John — the figure of Paul in “The School of Athens”; or when, passing over the other events in the life of Christ, he paints “The Transfiguration.” What Raphael has not painted helps us to understand that it was alien to him to portray those events on Earth (not events in the spiritual world) which took place after he was beheaded in his previous life. We realise why it was that Raphael painted fewer pictures of these particular events. When we look at the pictures, we feel that all those which portray events subsequent to the Beheading of John the Baptist, are not, like the others, born of earlier remembrances.”</p>
+<p>.</p>
+<p>In defense of Trap music (and rap music, in general):</p>
+<p>If modern art is sometimes shrill,” he said, “it is not the fault of artist alone. We all incline to raise our voices when we speak to people who are getting deaf</p>
+<p>Edgar Wind</p>
+<p>x</p>
+<p>the presence of unresolved residues of meaning is an obstacle to the enjoyment of art</p>
+<p>x</p>
+<p>These lectures were later compiled into a book, also entitled Art and Anarchy. In it he notes that, over time, public audiences have lost their capacity for an immediate and visceral response to art. The production and appreciation of art, he observes, has become marginalized and domesticated to a point where it can no longer significantly and lastingly move its addressees. Wind’s impulse in the piece is apparently restorative; he seeks to impede the observed tendency toward apathy and recover some of art’s latent anarchic quality</p>
+<p>x</p>
+<p>Wind begins his argument by presenting the long-standing conceptual correlation between art and forces of chaos or disorder, citing a lineage of thinkers and artists including Plato, Goethe, Baudelaire and Burckhardt. Particular emphasis is placed on Plato’s distrustful view of the imagination as fundamentally uncontrollable; Plato explicitly denied the true artist a place in his imagined ideal republic, not for lack of respect for the artist’s talent but out of fear for his capacity to upset the social balance. Wind also notes the repeated historical coincidence – in Greece at Plato’s time and in Italy during the Renaissance – of peaks in artistic accomplishment with political turmoil and breakdown</p>
+<p>x</p>
+<p>Plato explicitly denied the true artist a place in his imagined ideal republic, not for lack of respect for the artist’s talent but out of fear for his capacity to upset the social balance</p>
+<p>x</p>
+<p>when art is removed to a zone of safety, it may still remain very good art indeed, and also very popular art, but its effect on our existence will vanish</p>
+<p>x</p>
+<p>Art has thus, according to Wind, moved to life’s periphery. Again, Wind notes that this distance carries with it certain benefits for the scholarly approach to art; “detachment brought freshness and breadth, and a freedom from prejudice, a willingness to explore the unfamiliar, even the repulsive, and to risk new adventures of sensibility.” At the same time, however, art has lost its ability to resonate at levels deeper than the intellect, to incite the passions. Engaging with a work of art has become an act of mere observation as opposed to “vital participation.” Art has, for Wind, gained interest at the expense of potency.</p>
+<p>x</p>
+<p><a class="reference external" href="https://artintheblood.typepad.com/art_history_today/2011/04/raphael-rudolf-steiner-and-secret-art-history.html">https://artintheblood.typepad.com/art_history_today/2011/04/raphael-rudolf-steiner-and-secret-art-history.html</a></p>
+<p>.</p>
+<p>The labyrinth is no longer unknown<br />
+A thread🧵 maps out the path of the<br />
+Heroes 🦸‍♀️ that went before us</p>
+<p>x</p>
+<p>We are not alone</p>
+<p>.</p>
+<p>These days, the value of a firm lies as much in its reputation, its processes, the know-how of staff and relationships with customers and suppliers as in tangible assets. Putting an accounting value on these intangibles is notoriously tricky. By their nature, they have unclear boundaries. Not every dollar of r&amp;d or advertising spending can be ascribed to a well-defined asset, such as a brand or patent. That is in large part why, with a few exceptions, such spending is treated as a running cost, like rent or electricity.</p>
+<p>.</p>
+<p>War Story<br />
+\ 
+     Opioid Use —&gt; Tolerance —&gt; Rx<br />
+    /<br />
+Vulnerable Folks</p>
+<p>#2 What’s her war story?<br />
+#3 What’s you poison?</p>
+<p>.</p>
+<p>You’ve gotta meditate everyday<br />
+Clear your garbage regularly  🗑<br />
+Under the rag cleaning 🧼🧻🧹</p>
+<p>x</p>
+<p>Otherwise gets unbearably unhygienic<br />
+And something will have to give<br />
+Eves drop three 40 something divorcées</p>
+<p>x</p>
+<p>.</p>
+<p>Who needs a 6pack when you have a keg?</p>
+<p>.</p>
+<p>At a time when a lot of us feel buffeted by a daily onslaught of grim news, 1843 takes you on a different journey. We cover the enduring stories of our age. Many of them have been around since The Economist, our sister publication, was founded in – you guessed it – 1843.</p>
+<p>x</p>
+<p>Our aim is to take a sideways look at the world and season it with a dash of humour or irreverence.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./bloc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,68 +1,116 @@
 Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+  File "/usr/local/anaconda3/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 1305, in execute
+  File "/usr/local/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 1204, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/d/Library/Python/3.11/lib/python/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
-    return loop.run_until_complete(inner)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+  File "/usr/local/anaconda3/lib/python3.11/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/anaconda3/lib/python3.11/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/anaconda3/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
     return future.result()
            ^^^^^^^^^^^^^^^
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 705, in async_execute
+  File "/usr/local/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+  File "/usr/local/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 965, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+  File "/usr/local/anaconda3/lib/python3.11/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import requests
-from bs4 import BeautifulSoup
-import pandas as pd
+import networkx as nx
+import matplotlib.pyplot as plt
+import numpy as np
+import sklearn as skl
 
-# Fetch the HTML content of the book
-url = "https://www.gutenberg.org/files/38226/38226-h/38226-h.htm"
-response = requests.get(url)
-html_content = response.text
+#plt.figure(figsize=[2, 2])
+G = nx.DiGraph()
+G.add_node("Cosmos ",  pos = (0, 5) )
+G.add_node("Quake",  pos = (1, 5) )
+G.add_node("Flood",  pos = (2, 5) )
+G.add_node("Plague",  pos = (3, 5) )
+G.add_node("Vexed",  pos = (4, 5) )
+G.add_node("Kyrie",  pos = (5, 5) )
+G.add_node("Eleison",  pos = (6, 5) )
+G.add_node("Christe",  pos = (7, 5) )
 
-# Parse the HTML content using BeautifulSoup
-soup = BeautifulSoup(html_content, "html.parser")
+G.add_node("Yhwh",  pos = (1.4, 4) )
+G.add_node("Father",  pos = (2.8, 4) )
+G.add_node("Son",  pos = (4.2, 4) )
+G.add_node("Holy",  pos = (5.6, 4) )
 
-# Find all the paragraphs in the book
-paragraphs = soup.find_all("p")
+G.add_node("Literal",  pos = (2.1, 3) )
+G.add_node("Methaph",  pos = (4.9, 3) )
 
-# Initialize counters for Mozart and Beethoven mentions
-mozart_count = 0
-beethoven_count = 0
+G.add_node("Covenat",  pos = (1.4, 2) )
+G.add_node("Lamb",  pos = (2.8, 2) )
+G.add_node("Wine",  pos = (4.2, 2) )
+G.add_node("Bread",  pos = (5.6, 2) )
 
-# Iterate over each paragraph and count mentions of Mozart and Beethoven
-for paragraph in paragraphs:
-    text = paragraph.get_text()
-    mozart_count += text.lower().count("mozart")
-    beethoven_count += text.lower().count("beethoven")
 
-# Create a pandas DataFrame to store the results
-data = {
-    "Word": ["Mozart", "Beethoven"],
-    "Frequency": [mozart_count, beethoven_count]
-}
-df = pd.DataFrame(data)
+G.add_node("Ark",  pos = (0, 1) )
+G.add_node("War",  pos = (1, 1) )
+G.add_node("Requite",  pos = (2, 1) )
+G.add_node("Discord",  pos = (3, 1) )
+G.add_node("Forever",  pos = (4, 1) )
+G.add_node("God",  pos = (5, 1) )
+G.add_node("With",  pos = (6, 1) )
+G.add_node("Tobe",  pos = (7, 1) )
 
-# Display the tabulated frequencies
-print(df)
+G.add_edges_from([ ("Cosmos ", "Yhwh"),  ("Cosmos ", "Father"),  ("Cosmos ", "Son"),  ("Cosmos ", "Holy")])
+G.add_edges_from([ ("Quake", "Yhwh"),  ("Quake", "Father"),  ("Quake", "Son"),  ("Quake", "Holy")])
+G.add_edges_from([ ("Flood", "Yhwh"),  ("Flood", "Father"),  ("Flood", "Son"),  ("Flood", "Holy")])
+G.add_edges_from([ ("Plague", "Yhwh"),  ("Plague", "Father"),  ("Plague", "Son"),  ("Plague", "Holy")])
+G.add_edges_from([ ("Vexed", "Yhwh"),  ("Vexed", "Father"),  ("Vexed", "Son"),  ("Vexed", "Holy")])
+G.add_edges_from([ ("Kyrie", "Yhwh"),  ("Kyrie", "Father"),  ("Kyrie", "Son"),  ("Kyrie", "Holy")])
+G.add_edges_from([ ("Eleison", "Yhwh"),  ("Eleison", "Father"),  ("Eleison", "Son"),  ("Eleison", "Holy")])
+G.add_edges_from([ ("Christe", "Yhwh"),  ("Christe", "Father"),  ("Christe", "Son"),  ("Christe", "Holy")])
 
+G.add_edges_from([ ("Yhwh", "Literal"),  ("Yhwh", "Methaph")])
+G.add_edges_from([ ("Father", "Literal"),  ("Father", "Methaph")])
+G.add_edges_from([ ("Son", "Literal"),  ("Son", "Methaph")])
+G.add_edges_from([ ("Holy", "Literal"),  ("Holy", "Methaph")])
+
+
+G.add_edges_from([ ("Literal", "Covenat"),  ("Literal", "Lamb"),  ("Literal", "Wine"),  ("Literal", "Bread")])
+G.add_edges_from([ ("Methaph", "Covenat"),  ("Methaph", "Lamb"),  ("Methaph", "Wine"),  ("Methaph", "Bread")])
+
+G.add_edges_from([ ("Covenat", "Ark"),  ("Covenat", "War"),  ("Covenat", "Requite"),  ("Covenat", "Discord")])
+G.add_edges_from([ ("Covenat", "Forever"),  ("Covenat", "God"),  ("Covenat", "With"),  ("Covenat", "Tobe")])
+G.add_edges_from([ ("Lamb", "Ark"),  ("Lamb", "War"),  ("Lamb", "Requite"),  ("Lamb", "Discord")])
+G.add_edges_from([ ("Lamb", "Forever"),  ("Lamb", "God"),  ("Lamb", "With"),  ("Lamb", "Tobe")])
+G.add_edges_from([ ("Wine", "Ark"),  ("Wine", "War"),  ("Wine", "Requite"),  ("Wine", "Discord")])
+G.add_edges_from([ ("Wine", "Forever"),  ("Wine", "God"),  ("Wine", "With"),  ("Wine", "Tobe")])
+G.add_edges_from([ ("Bread", "Ark"),  ("Bread", "War"),  ("Bread", "Requite"),  ("Bread", "Discord")])
+G.add_edges_from([ ("Bread", "Forever"),  ("Bread", "God"),  ("Bread", "With"),  ("Bread", "Tobe")])
+
+
+#G.add_edges_from([("H11", "H21"), ("H11", "H22"), ("H12", "H21"), ("H12", "H22")])
+#G.add_edges_from([("H21", "Y"), ("H22", "Y")])
+nx.draw(G, 
+        nx.get_node_attributes(G, 'pos'), 
+        with_labels=True, 
+        font_weight='bold', 
+        node_size = 3000,
+        node_color = "lightblue",
+        linewidths = 3)
+ax= plt.gca()
+ax.collections[0].set_edgecolor("#000000")
+ax.set_xlim([-.5, 7.5])
+ax.set_ylim([.5, 5.5])
+plt.show()
 ------------------
-
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[38], line 2[0m
-[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mrequests[39;00m
-[0;32m----> 2[0m [38;5;28;01mfrom[39;00m [38;5;21;01mbs4[39;00m [38;5;28;01mimport[39;00m BeautifulSoup
-[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
-[1;32m      5[0m [38;5;66;03m# Fetch the HTML content of the book[39;00m
+Cell [0;32mIn[1], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mnetworkx[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnx[39;00m
+[1;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
 
-[0;31mModuleNotFoundError[0m: No module named 'bs4'
+[0;31mModuleNotFoundError[0m: No module named 'networkx'
+ModuleNotFoundError: No module named 'networkx'
 

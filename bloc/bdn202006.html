@@ -1,0 +1,659 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>06/2020 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bloc/bdn202006';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/practicing.png" class="logo__image only-light" alt="Nothin' - Home"/>
+    <script>document.write(`<img src="../_static/practicing.png" class="logo__image only-dark" alt="Nothin' - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbloc/bdn202006.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bloc/bdn202006.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>06/2020</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>06/2020<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>The only reason a warrior is alive is to fight</p>
+<p>And the only reason to fight is to win</p>
+<p>.</p>
+<p>I don’t have a functional satiety center<br />
+Whether for food, sex, or alcohol<br />
+Hence my need for asceticism</p>
+<p>.</p>
+<p>Pembroke House — Gabby<br />
+Peponi — Bria</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Simple lesson in life:  
+Under no circumstances  
+Do you give folks money  
+That they can’t handle  
+I repeat: under no circumstances! 
+x
+This is a question of class
+Anyone in want of money
+Will not treat a windfall 
+Like one familiar with it:
+Just like PEM and a meal
+x
+$600 a week is $2,400/mo
+$1,350 four seasons
+$1,000 puppy
+Thats $4,750 for June
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+
+El Dragón: Return of a Warrior 
+
+SUMMARY
+A tale of the origin of a jefe de jefas, ensuing succession battles, differential impacts on the strong, and the weak-willed; family dysfunction and alienation, use and abuse of CNS stimulants, search and discovery of a less harmful drug of refuge, and evolution of a plethora of love triangles wherein true love wins and the fake loses 
+
+MAJOR critiques 
+Detailed and frequent references to the past insult the imagination and intelligence of the viewer, would be a much richer and more succinct script if truly in medias res, several of the scenes feel like unpardonable long detours from the main narrative, which means these other characters aren’t developed enough to capture our interest, otherwise the exoticism of the Japanese origin of the protagonist offers sufficient stardust and mystery to hold this reviewer for an entire season 
+
+OTHER critiques
+For ambition and scope it scores quite high. But the creators, writers, and directors don’t lend sufficient depth to all the seven dimensions, the full breadth of “scope”, to make this a top notch TV series
+</pre></div>
+</div>
+<p>.</p>
+<p>Messing with a girl in your station with guidance from John Adams</p>
+<p>1.Basic needs. She will literally be hungry and $15 can totally sort her out on a given day &#64;McDonald’s</p>
+<p>2.Keeping up appearances. To cover up strife in professional trajectory Instagram and Youtube channel to showcase her successful “life”</p>
+<p>3.Leisure and art. Intimate and idiosyncratic tastes, adventure, obsession with antiquity or the spirit or its spirit</p>
+<p>xxx</p>
+<p>.</p>
+<p>Jeremiah 32:7 Uncle Isabirye</p>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>never criticize Estelle</p></li>
+<li><p>Help as much as possible</p></li>
+<li><p>Be resilient??</p></li>
+<li><p>Trust more</p></li>
+<li><p>Just be a guide</p></li>
+</ol>
+<p>.</p>
+<p>It should not be surprising that theomachy is difficult to identify in biblical passages because most of the theomachy categories only operate in a polytheistic system. Despite the fact that throughout much of Israel’s history they had not succeeded n discarding polytheism, the biblical text does not adopt a polytheistic worldview for itself.</p>
+<p>Any reading of Genesis 1 makes it clear that the author has not employed a theomachy motif in this cosmogony. The absence of this motif could only. E labeled as polemical if theomachy were a consistent motif in cosmogonies. Its absence cannot be used as evidence that it has been suppressed. We have seen that it is not a consistent motif, and therefore we must seek an alternative cognitive environment for Genesis 1 in relation to the cosmogonic cognitive environment of the Ancient Near East</p>
+<p>.</p>
+<p>Why so hard?” the kitchen coal once said to the diamond. “After all, are we not close kin?”<br />
+Why so soft? O my brothers, thus I ask you: are you not after all my brothers?</p>
+<p>I do not set up any new idols; may old idols only learn what it costs to have legs of clay</p>
+<p>.</p>
+<p>Jung, like others who become gurus, was originally an isolated child</p>
+<p>.</p>
+<p>Don’t judge a girl, and she will open up to you like a budding flower<br />
+— Yours truly on June 9, 2020 at 8:43 AM</p>
+<p>.</p>
+<p>Para siempre</p>
+<p>.</p>
+<p>Estelle, una bella donna!</p>
+<p>.</p>
+<p>Was Bach a genius?<br />
+If it is misanthropy, then Johann Sebastian Bach (born March 21, 1685) was not a genius. … But if genius is rational and productive, then Bach is a composer for all seasons, for no other composer produced so much excellent, cunning music or understood his craft so encyclopedically.</p>
+<p>.</p>
+<p>I regret that I’ve spent my life<br />
+Being hungry for power, games, and war<br />
+Never have I witnessed the beauty of the world<br />
+Go and live it for me<br />
+The further the better<br />
+— Shadow, 2018</p>
+<p>.</p>
+<p>Y tu madre también</p>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=9QmlqMAh54Y">This</a> is pretty cool! He achieves in 14 min what Leonard Bernstein attempted over 11 hours in his “The Unanswered Question” lecture <a class="reference external" href="https://www.youtube.com/watch?v=8fHi36dvTdE">series</a></p>
+<p>.</p>
+<p>A glass of local wine went to his head, he looked up to me and said, “Oh yes, Trini Christmas is the best.. 🇹🇹”</p>
+<p>.</p>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/The_Road_Not_Taken">Road Not Taken</a> is only to be recited in a British accent.
+Although the author was American, he wrote it while in Britain
+He even dedicated it to a British peer whom he’d interacted with
+One perceives phonetic resonance and rhyme at various points
+But only from the perspective of the somewhat aristocratic accent</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>I— shall be telling this with a 
+Sigh— 
+
+Two roads diverged in a wood, and I— 
+I— took the one less travelled
+By—, 
+</pre></div>
+</div>
+<p>.</p>
+<p>What’s the point in doing all this research when access is literally the elephant in the room?</p>
+<p>But what would be the point in access if there is no quality?</p>
+<p>.</p>
+<p>The loss of Mabel Kwatiraho on June 17, 2020 has disrupted all my sensibilities</p>
+<p>.</p>
+<p>When you have access to alcohol 🍺, food 🍣, sex 👩🏾, you just might run into an existential crisis</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Oh, my son. You have to be careful / Oh figlio mio, devi stare attento
+Beautiful women are heaven for the eyes/ Le belle donne sono un paradiso per gli occhi
+And hell for the soul/ E l&#39;inferno per l&#39;anima
+— And purgatory for the wallet / E il purgatorio per il portafoglio
+
+</pre></div>
+</div>
+<p>.</p>
+<p>The charm of the 23 year old girl
+Her stronger points lie in her confusion
+Confusion about life and everything
+So there’s room for poetry, adventure, love
+But as she approaches 30 all that is lost
+x
+Lost to an emergent certitude
+About what she wants out of life
+We see her become prosaic—
+More calculating, glorifying spreadsheets
+Fear of missing milestones than passion
+x
+Discovered the formula for her happiness:
+Yes: Exit out of the 1000y labyrinth
+No: Modern woman, no barbarian 👩🏾
+Straight line: Cowardly compromise
+Goal: Life in ice 🧊 &gt; south winds 🌬</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Davis Ntulume is inviting you to a scheduled Zoom meeting.
+
+Topic: KCB class Church 
+Time: Jun 21, 2020 11:00 AM Africa/Kampala
+
+Join Zoom Meeting
+https://us04web.zoom.us/j/2985882018?pwd=Wlk5bkNwdzJScWw2SVp2WE10NTVGdz09
+
+Meeting ID: 298 588 201
+Password: busu
+
+How sweet the name of Jesus music sound in b
+Great is they faithfulness
+
+Yesu byona abin=banyi
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Tequila — from Monarca (powerful metaphor for the three heirs)
+
+Silver/Blanco 
+Rested/
+Aged/
+
+Each one with its flaws and virtues:
+
+1.Silver tequila is young. Some find it immature, while others find it pure. 
+
+2.The aging process has distanced rested tequila from its source, but deep down it retains its essence 
+
+3.The wait has been long for aged tequila, but it has developed its own identity. Some claim that so many years spent in the barrel have made it impure, far from the agave from which it was born. 
+
+But which one is best? All three are excellent. My compliments to the master tequilier. Dhatemwa Kulala 
+</pre></div>
+</div>
+<p>.</p>
+<p>I’m not misanthropic, but I’m reclusive<br />
+I’m a minimalist, but I’m not an ascetic monk<br />
+I’m a loner, but no longer an introvert whilst in society</p>
+<p>So I might share a lot with the lone wolf<br />
+Acting alone rather than as part of a larger organization<br />
+But its always for the greater good —</p>
+<p>.</p>
+<p>I’ve chosen a different pantheon than the one wherein you dabble</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./bloc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

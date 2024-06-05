@@ -1,0 +1,570 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>07/2020 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bloc/bdn202007';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/practicing.png" class="logo__image only-light" alt="Nothin' - Home"/>
+    <script>document.write(`<img src="../_static/practicing.png" class="logo__image only-dark" alt="Nothin' - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbloc/bdn202007.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bloc/bdn202007.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>07/2020</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>07/2020<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Second best <a class="reference external" href="https://www.theguardian.com/books/2018/oct/06/exploding-nietzsche-myths-need-dynamiting">mini-biography</a> of Nietzsche</p>
+<p>.</p>
+<p>School toughened me up… as you walked down the chapel aisle to assembly they graded you out of ten.” If girls wore white shirts, they would spray them with water so they could see their bras. “I just thought it was absolutely pathetic.”</p>
+<p>.</p>
+<p>I am emailing to invite you to become an Associate Editor for Clinical Transplantation.</p>
+<p>.</p>
+<p>Xta: this movie is <a class="reference external" href="https://scroll.in/reel/898545/love-is-a-battlefield-in-mumbai-film-festival-pick-jaoon-kahan-bata-ae-dil">about us</a> to the last detail…</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Carefree
+Mocking 
+Violent 
+— That’s how wisdom wants us: 
+She’s a woman 
+All she ever wants is a warrior 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>First, no iTunes 
+Then, piano..
+Only k. 545 &amp;
+Two-part invention 
+In D minor 
+Soon, no alcohol 
+And no Estelle 
+Come to think of it..
+No more DAGs
+We now have a 8*5 Matrix! 
+Meet with Higgins 
+Usurp Dorry on Google Scholar 
+Lodda student mentees 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">Not</span> <span class="n">marble</span><span class="p">,</span> <span class="n">nor</span> <span class="n">the</span> <span class="n">gilded</span> <span class="n">monuments</span>
+<span class="n">Of</span> <span class="n">princes</span><span class="p">,</span> <span class="n">shall</span> <span class="n">outlive</span> <span class="n">this</span> <span class="n">powerful</span> <span class="n">rhyme</span><span class="p">;</span>
+<span class="n">But</span> <span class="n">you</span> <span class="n">shall</span> <span class="n">shine</span> <span class="n">more</span> <span class="n">bright</span> <span class="ow">in</span> <span class="n">these</span> <span class="n">contents</span>
+<span class="n">Than</span> <span class="n">unswept</span> <span class="n">stone</span><span class="p">,</span> <span class="n">besmear</span><span class="s1">&#39;d with sluttish time.</span>
+<span class="n">When</span> <span class="n">wasteful</span> <span class="n">war</span> <span class="n">shall</span> <span class="n">statues</span> <span class="n">overturn</span><span class="p">,</span>
+<span class="n">And</span> <span class="n">broils</span> <span class="n">root</span> <span class="n">out</span> <span class="n">the</span> <span class="n">work</span> <span class="n">of</span> <span class="n">masonry</span><span class="p">,</span>
+<span class="n">Nor</span> <span class="n">Mars</span> <span class="n">his</span> <span class="n">sword</span><span class="p">,</span> <span class="n">nor</span> <span class="n">war</span><span class="s1">&#39;s quick fire shall burn</span>
+<span class="n">The</span> <span class="n">living</span> <span class="n">record</span> <span class="n">of</span> <span class="n">your</span> <span class="n">memory</span><span class="o">.</span>
+<span class="s1">&#39;Gainst death, and all-oblivious enmity</span>
+<span class="n">Shall</span> <span class="n">you</span> <span class="n">pace</span> <span class="n">forth</span><span class="p">;</span> <span class="n">your</span> <span class="n">praise</span> <span class="n">shall</span> <span class="n">still</span> <span class="n">find</span> <span class="n">room</span>
+<span class="n">Even</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">eyes</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">posterity</span>
+<span class="n">That</span> <span class="n">wear</span> <span class="n">this</span> <span class="n">world</span> <span class="n">out</span> <span class="n">to</span> <span class="n">the</span> <span class="n">ending</span> <span class="n">doom</span><span class="o">.</span>
+<span class="n">So</span><span class="p">,</span> <span class="n">till</span> <span class="n">the</span> <span class="n">judgment</span> <span class="n">that</span> <span class="n">yourself</span> <span class="n">arise</span><span class="p">,</span>
+<span class="n">You</span> <span class="n">live</span> <span class="ow">in</span> <span class="n">this</span><span class="p">,</span> <span class="ow">and</span> <span class="n">dwell</span> <span class="ow">in</span> <span class="n">lovers</span><span class="s1">&#39; eyes.</span>
+</pre></div>
+</div>
+<p>.</p>
+<p>In the video, Prince Harry said the Commonwealth, which is, of course, lead by his grandmother the Queen, needs to follow the example of others who have “acknowledged the past” and are “trying to right [their] wrongs”.</p>
+<p>.</p>
+<p>Estelle<br />
+— No rules apply<br />
+— Except resiliency<br />
+— Got shit when I did<br />
+— Above market rate<br />
+— But got it anyways</p>
+<p>.</p>
+<p>A type with few, but very marked features, a species of severe, warlike, wisely silent, reserved, and reticent men (and as such, with the most delicate sensibility for the charm and nuances of society) is thus established, unaffected by the vicissitudes of generations; the constant struggle with uniform UNFAVOURABLE conditions is, as already remarked, the cause of a type becoming stable and hard.</p>
+<p>.</p>
+<p>Jethro showed up late to the orgy to discover that the gentlemen far out numbered the ladies. He could be heard exclaiming to himself, “I’m just stuck here with my dick in my hand”</p>
+<p>.</p>
+<ol class="arabic simple" start="0">
+<li><p>Harmonic series</p></li>
+<li><p>16th-31st partials</p></li>
+<li><p>Chromatic scale</p></li>
+<li><p>Diatonic scale</p></li>
+<li><p>Fantasy K.475</p></li>
+<li><p>Not average Joe</p></li>
+<li><p>Sense a becoming</p></li>
+<li><p>Much like the series</p></li>
+</ol>
+<p>.</p>
+<p>Sample a 2018 South African wine 🍷</p>
+<p>.</p>
+<p>DiCaprio’s reign, especially over the last decade, has run almost comically contrary to what defines Hollywood success and Hollywood stardom. He has never made a sequel, he has never explicitly made a franchise flick, his films tend to be R-rated, often brutal or violent, targeted at adults and often featuring bleak endings. No spoilers, but his onscreen mortality rate would make Sean Bean proud. Not unlike Denzel Washington (relatively speaking), DiCaprio has maintained his movie star draw by continuing to make himself the “franchise” or the “brand.” And that brand is generally “DiCaprio giving it his all in a high-quality, big-budget event movie for grown-ups courtesy of a marquee director.”</p>
+<p>.</p>
+<p>Find and follow Forbes’ Scott Mendelson</p>
+<p>I’ve studied the film industry, both academically and informally, and with an emphasis in box office analysis, for nearly 30 years. I have extensively written about all of said subjects for the last 11 years. My outlets for film criticism, box office commentary, and film-skewing scholarship have included The Huffington Post, Salon, and Film Threat. Follow me at &#64;ScottMendelson and “like” The Ticket Booth on Facebook</p>
+<p>.</p>
+<p>Twateera embundu</p>
+<p>.</p>
+<p>Our epoch, the epoch of the bourgeoisie, possesses, however, this distinct feature: it has simplified class antagonisms. Society as a whole is more and more splitting up into two great hostile camps, into two great classes directly facing each other – Bourgeoisie and ProletariatOur epoch, the epoch of the bourgeoisie, possesses, however, this distinct feature: it has <code class="docutils literal notranslate"><span class="pre">simplified</span> <span class="pre">class</span> <span class="pre">antagonisms</span></code>. Society as a whole is more and more splitting up into two great hostile camps, into two great classes directly facing each other – Bourgeoisie and Proletariat.</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>0g.εξέλιξη,γ history
+1f.θεοδικία,κ conflict
+2e.πρᾶξις,σ freeman
+3e.ἀσκέω,μ slave
+4d.∫δυσφορία.dt,ψ hidden/open
+5c.φάρμακον,δ revolution/ruin
+6b.ομορφιά,β bourgeoisie 
+7a.τάξη,α rank-order
+</pre></div>
+</div>
+<p>.</p>
+<p>No character in The Brothers Karamazov is afflicted with more trauma or inner conflict than Ivan. Ivan is a brilliant student with an incisively analytical mind, and his intelligence is directly to blame for his descent into despair. Unable to reconcile the horror of unjust human suffering—particularly the suffering of children—with the idea of a loving God, Ivan is consumed with doubt and argues that even if God does exist, he is malicious and hostile, and loves to torture mankind. Ivan believes that human concepts of morality are dependent on the idea that the soul is immortal, meaning that people only worry about “right” and “wrong” behavior because they want to experience pleasure rather than pain in the afterlife. Because of his feelings about God, Ivan himself is unable to believe in the immortality of the soul, and thus he argues that good and evil are fraudulent categories, and that people may do whatever they wish without regard for morality. But Ivan only starts thinking about these concepts in the first place because he loves humanity—it is his concern for human suffering that initially leads him to reject God. His logical disbelief in morality is terribly painful for him because it would make a way of life such as Fyodor Pavlovich’s, which Ivan detests, an acceptable mode of human behavior. Dignified and coldly moral, Ivan wants to be able to accept an idea of goodness that would exalt mankind and reject Fyodor Pavlovich’s brutishness, but, trapped in his own logic, he is unable to do so. He is so beset with doubt, and so defensively determined to keep the rest of humanity at a distance, that he is unable to act on his love for Katerina, and seems to scorn the very thought of pursuing happiness for himself.</p>
+<p>After Smerdyakov murders Fyodor Pavlovich, Ivan’s crisis of faith becomes more traumatic still. Convinced by Smerdyakov that Ivan’s philosophy made it possible for Smerdyakov to kill Fyodor Pavlovich, Ivan is forced to confront two very difficult notions: first, that he is responsible for another human being, and second, that his beliefs have paved the way for murder. Ivan’s subsequent collapse into hallucination and madness represents the novel’s final rejection of his skeptical way of life. When the novel ends, Ivan is feverish and unconscious, having been taken home by Katerina to recuperate, and his future is uncertain. It may be that, with Katerina’s love, he will find a way to accept Alyosha’s faith or come to terms intellectually with morality and his own responsibility for others. Or it may be that he will never resolve his crisis—he may become permanently insane. But the extremely optimistic note on which the novel ends suggests that he will find some form of redemption.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./bloc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

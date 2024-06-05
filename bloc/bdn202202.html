@@ -1,0 +1,737 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>02/2022 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bloc/bdn202202';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/practicing.png" class="logo__image only-light" alt="Nothin' - Home"/>
+    <script>document.write(`<img src="../_static/practicing.png" class="logo__image only-dark" alt="Nothin' - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbloc/bdn202202.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bloc/bdn202202.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>02/2022</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>02/2022<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#japanese
+
+— nigiri 🍣 sake 
+</pre></div>
+</div>
+<p>.</p>
+<p><a class="reference external" href="https://hekint.org/2020/08/11/friedrich-nietzsche-much-afflicted-philosopher/">#mykindathing</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Friedrich Nietzsche—much afflicted philosopher
+
+
+ Portrait of Friedrich Nietzsche by Munch
+Friedrich Nietzsche by Edvard Munch. 1906. Thielska Gallerie, Sweden. Via Wikimedia.
+Friedrich Nietzsche was one of the most important philosophers of the nineteenth century. Though often misinterpreted, his influence has been enormous. Like his compatriot Schopenhauer, he questioned the comfortable beliefs of the conservative bourgeoisie of his time. His writings have fascinated generations of readers, his style was exquisite, his ideas original. Bertrand Russell called him an aristocratic anarchist.
+
+Nietzsche admired the Pre-Socratic philosophers and was sympathetic to the teachings of the Buddha. He formulated the concept of the overman or superman, of the eternal recurrence, of a Dionysian life of gaiety and heroism. For Nietzsche, Christianity was a failure because it promoted a slave-like mentality, and when he said God was dead, he meant it was the belief in God that was dead. He asked whether man was a mistake of God or God a mistake of man. He thought that spiritualizing sensuality as love represented a great triumph over Christianity. He despised the bourgeois “herd,” who loved the police more than their neighbor, and advocated a free life as the desirable state for great souls.
+
+In a section of the Twilight of the Idols (1888) titled “Morality for physicians,” Nietzsche proclaimed that the sick man was a parasite of society and that when the meaning of life and the right to live had been lost it was indecent and contemptible for a man to “vegetate in cowardly dependence on physicians and machines.”2 He argued that death should be freely chosen and cheerfully accomplished, amid children and witnesses instead of the “wretched and revolting comedy that Christianity has made of the hour of death.” “Die at the right time,” preached the hero of Thus Spoke Zarathustra (1883) as he came down from the rarefied atmosphere of his mountain bearing his eagle and his serpent. Yet sadly and paradoxically, this was not what happened to him after his collapse in Turin, and he lingered for many years, bedridden and demented.
+
+Nietzsche was born in 1844 near Leipzig in Saxony, Germany. He studied classical philology in Bonn and Leipzig, and at age twenty-four was the youngest person to ever be appointed to the chair of philology at the University of Basel (1869). He resigned from that position in 1879 for health reasons and completed most of his writing in the next decade in Switzerland and Italy. There he lived in increasing isolation, usually in a modest, coldly furnished room, his compositions strewn on the floor, an old trunk holding his only possessions of two shirts and a worn suit, and a tray displaying his numerous bottles of medications: chloral hydrate, opium, and barbiturates. Wrapped in his overcoat, his double glasses close to the paper, he wrote for hours, depressed, in pain, increasingly blind, and isolated.1
+
+We learn from “Nietzsche: in Illness and in Health” by William Gass that Nietzsche had been troubled by ill health most of his life.2 He had hemorrhoids and suffered from “gastric spasms.” He had bad eyesight, often fainted, had fits, and was scared of lightning, which made him hide under the covers. He sometimes vomited blood, for which he was given quinine. He followed prescribed diets seriously, ate only small pieces of meat with Carlsbad fruit salts, but changed his diets and physicians frequently. In the morning he had “his rectum flushed out with cold water.” He was treated with leeches applied to his ears, and these apparently partook of his blood while he partook of his wine.2 
+
+Nietzsche had suffered from migraines since he was nine years old. These were recurrent, severe, not preceded by auras, mostly localized to the right side, and often lasted several hours or even days.3 Visual problems began at age twelve, when he complained of tired eyes, and later of diminished vision. Later he was found to be blind in the right eye, and by 1878 he was almost completely blind. Depressive symptoms with suicidal ideas first appeared in 1882, followed by visual hallucinations (1884). The final breakdown occurred in Turin in 1889. There are several versions of this story, the most common being that he saw a man flogging his horse, rushed to him to stop him, collapsed, and was found hanging onto the horse’s neck.
+
+He was taken to a psychiatric clinic or asylum in Basel, where general paresis of the insane, quaternary neurosyphilis, was diagnosed. For the next decade, he remained in a bedridden vegetative state, insane and at times unmanageable. He had a series of strokes leading to impaired speech, facial paresis, and later a left-sided hemiplegia. He was cared for by his proto-fascist sister, who returned from South America and elaborated aspects of his philosophy that he had never expounded. He died in 1900 from pneumonia.
+
+It had long been thought that Nietzsche had suffered from neurosyphilis, general paresis of the insane, but several authorities have now disputed this diagnosis.3-6 Interestingly, the asymmetry of his pupils, an important sign of neurosyphilis, had been noted forty years earlier but was assumed to be a new finding. Other proposed causes of Nietzsche’s disease are meningioma, bipolar affective disorder followed by vascular dementia, a hereditary form of frontotemporal dementia, or mitochondrial encephalomyopathy with lactic acidosis and stroke-like episodes (MELAS), a disease presenting with stroke-like episodes, epilepsy, and neurologic deficits.4,5
+
+In 2008 neurologists from Ghent in Belgium carried out an extensive and meticulous review of original medical notes and other documents, mostly in German, and renewed their opinion that the clinical picture was not consistent with neurosyphilis. Instead, they proposed that Nietzsche had suffered the newly described neurological syndrome of cerebral autosomal dominant arteriopathy with subcortical infarcts and leukoencephalopathy or CADASIL.3 This inherited disease of blood vessels has been found to affect mainly the blood vessels supplying the white matter of the brain. In support of their diagnosis, they pointed out that Nietzsche’s father Ludwig had suffered from an illness running a similar course, with aphasia, multiple strokes, and dementia, becoming incapacitated and dying at age forty-six from “brain softening.” One younger brother also had migraines, suggesting this was a hereditary disease.3
+
+Still, the cause of Nietzsche’s death remains uncertain. It has been suggested that it could be established by an exhumation of the body and DNA testing on tissue and looking for skull imprints that would confirm the presence of a tumor.6 Some authors still favor an atypical form of syphilis as the most likely diagnosis.6 When all is said and done we may never know what killed this remarkable person. But more than a century later people still read him, and academicians argue about what he really meant. And for most of his readers, he remains stimulating, controversial, provocative, and fun to read.
+
+ 
+
+Further reading
+William H Gass. Nietzsche in Illness and in Health, in Life Sentences, Alfred A Knopf, New York, 2012.
+Walter Kaufmann: The Portable Nietzsche. The Viking Press, New York 1954.
+Hemelsoet D, Hemelsoet K, and Devreese D. The neurological illness of Frederic Nietzsche. Acta Neurol Belg 2008; 108:19p.
+Koszka. Friedrich Nietzsche (1844-1900): a classical case of mitochondrial encephalomyopathy with lactic acidosis and stroke-like episodes (MELAS) syndrome? Journal of Medical Biography 2009: 17(3):161.
+Tényi The madness of Dionysus — six hypotheses on the illness of Nietzsche. Psychiatr Hung. 2012;27(6):420
+Charles André C and Rios. Furious Frederich: Nietzsche’s neurosyphilis diagnosis and new hypotheses. Arq. Neuro-Psiquiatr. 2015; vol.73 no.12, São Paulo.
+ 
+
+ 
+
+GEORGE DUNEA, MD, Editor-in-Chief
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#nietzsche
+
+anatomy — cerebral, sub-cortical
+pathology — arteriopathy, infarcts, leukoenceph
+etiology — autosomal dominant 
+
+My paradise is “in the shadow of my sword”
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#colleenhoover 
+
+— wtf is she?
+— has no. 6, 8, 11, and 15 on Amazon 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#modusoperandi
+
+Ambition/Beyond
+Morality/Good
+Nyege Nyege/Evil 
+
+🏔 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+Dear GTPCI Advisory Committee members,
+
+I have discussed the issue regarding my mentorship plan with Dr. Segev and the Department of Surgery.  We do not expect a substantial impact on my GTPCI plans for the following reasons:  
+
+1. Dr. Segev will be keeping an adjust appointment with the JHU Department of Surgery;
+2. For the last two years we’ve mostly communicated via zoom and email and will continue to do so on a weekly basis;
+3. Our research group at JHU will continue close collaborations with the Dorry’s research group at NYU;
+4. I will continue to have access to the data sources required for my research topic.
+
+Because the GTPCI PhD is an integral part of my K08 career development plans, we have also addressed this issue with the National Institute of Aging. I’ve attached a copy of the letter for your convenience. 
+</pre></div>
+</div>
+<p>.</p>
+<p>Soros, Paulson, Simons, Cohen, Ackman, Icahn, Graham</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+Icahn: The Restless Billionaire 
+
+30:11/1:42:06
+
+“It’s almost unreadable, it’s so complex, but he got his revenge — and he won that senior thesis.” 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#emotion</span>
+
+<span class="n">From</span> <span class="n">emotional</span> <span class="n">problems</span> <span class="n">of</span> <span class="n">the</span> <span class="n">student</span>
+
+
+<span class="mf">1.</span>
+<span class="mf">2.</span><span class="n">Withers</span> <span class="o">&amp;</span> <span class="n">dries</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">healthy</span> <span class="n">upperclassman</span> <span class="ow">or</span> <span class="n">graduate</span>
+<span class="mf">3.</span><span class="n">Lush</span> <span class="n">Brazilian</span> <span class="n">jungle</span> <span class="n">of</span> <span class="n">teenage</span> <span class="n">fantasy</span> <span class="p">(</span><span class="n">persists</span> <span class="ow">in</span> <span class="n">neurosis</span><span class="p">)</span>
+
+<span class="c1">#kindred</span>
+
+<span class="n">William</span> <span class="n">James</span> 
+
+
+<span class="n">James</span> <span class="k">finally</span> <span class="n">earned</span> <span class="n">his</span> <span class="n">MD</span> <span class="n">degree</span> <span class="ow">in</span> <span class="n">June</span> <span class="mi">1869</span> <span class="n">but</span> <span class="n">he</span> <span class="n">never</span> <span class="n">practiced</span> <span class="n">medicine</span><span class="o">.</span> <span class="n">What</span> <span class="n">he</span> <span class="n">called</span> <span class="n">his</span> <span class="s2">&quot;soul-sickness&quot;</span> <span class="n">would</span> <span class="n">only</span> <span class="n">be</span> <span class="n">resolved</span> <span class="ow">in</span> <span class="mi">1872</span><span class="p">,</span> <span class="n">after</span> <span class="n">an</span> <span class="n">extended</span> <span class="n">period</span> <span class="n">of</span> <span class="n">philosophical</span> <span class="n">searching</span><span class="o">.</span> <span class="n">He</span> <span class="n">married</span> <span class="n">Alice</span> <span class="n">Gibbens</span> <span class="ow">in</span> <span class="mf">1878.</span> <span class="n">In</span> <span class="mi">1882</span> <span class="n">he</span> <span class="n">joined</span> <span class="n">the</span> <span class="n">Theosophical</span> <span class="n">Society</span>
+
+<span class="s2">&quot;I originally studied medicine in order to be a physiologist, but I drifted into psychology and philosophy from a sort of fatality. I never had any philosophic instruction, the first lecture on psychology I ever heard being the first I ever gave&quot;</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+<span class="c1">#beer</span>
+
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">beeradvocate</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">beer</span><span class="o">/</span><span class="n">profile</span><span class="o">/</span><span class="mi">207</span><span class="o">/</span><span class="mi">510204</span><span class="o">/</span>
+
+
+<span class="mf">4.43</span><span class="o">/</span><span class="mi">5</span>  <span class="n">rDev</span> <span class="o">+</span><span class="mf">5.7</span><span class="o">%</span>
+<span class="n">look</span><span class="p">:</span> <span class="mf">4.25</span> <span class="o">|</span> <span class="n">smell</span><span class="p">:</span> <span class="mf">4.25</span> <span class="o">|</span> <span class="n">taste</span><span class="p">:</span> <span class="mf">4.5</span> <span class="o">|</span> <span class="n">feel</span><span class="p">:</span> <span class="mf">4.5</span> <span class="o">|</span> <span class="n">overall</span><span class="p">:</span> <span class="mf">4.5</span>
+<span class="n">by</span> <span class="n">BEERchitect</span> <span class="kn">from</span> <span class="nn">Kentucky</span>
+
+<span class="n">Never</span> <span class="n">ones</span> <span class="n">to</span> <span class="n">rush</span> <span class="n">out</span> <span class="k">with</span> <span class="n">new</span> <span class="n">offerings</span><span class="p">,</span> <span class="n">the</span> <span class="n">brewery</span> <span class="n">of</span> <span class="n">Rochefort</span> <span class="n">now</span> <span class="n">finds</span> <span class="n">it</span> <span class="n">time</span> <span class="n">to</span> <span class="n">roll</span> <span class="n">out</span> <span class="n">a</span> <span class="n">standout</span> <span class="n">beer</span> <span class="n">among</span> <span class="n">their</span> <span class="n">darker</span> <span class="n">regular</span> <span class="n">offering</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">style</span> <span class="n">of</span> <span class="n">Tripel</span> <span class="n">Ale</span><span class="o">.</span> <span class="n">Nearly</span> <span class="n">seventy</span> <span class="n">years</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">making</span><span class="p">,</span> <span class="n">this</span> <span class="n">lighter</span> <span class="n">colored</span> <span class="n">beer</span> <span class="n">still</span> <span class="n">packs</span> <span class="n">that</span> <span class="n">signature</span> <span class="n">Rochefort</span> <span class="n">punch</span><span class="o">.</span>
+
+<span class="n">Triple</span> <span class="n">Extra</span> <span class="n">pours</span> <span class="k">with</span> <span class="n">an</span> <span class="n">elegant</span> <span class="n">weave</span> <span class="n">into</span> <span class="n">the</span> <span class="n">the</span> <span class="n">classic</span> <span class="n">Rochefort</span> <span class="n">chalice</span> <span class="k">while</span> <span class="n">billowing</span> <span class="n">to</span> <span class="n">the</span> <span class="n">brim</span> <span class="k">with</span> <span class="n">a</span> <span class="n">cottony</span><span class="p">,</span> <span class="n">stark</span><span class="o">-</span><span class="n">white</span> <span class="n">froth</span><span class="o">.</span> <span class="n">As</span> <span class="n">odd</span> <span class="k">as</span> <span class="n">seeing</span> <span class="n">a</span> <span class="n">lighter</span> <span class="n">hued</span> <span class="n">beverage</span> <span class="n">sitting</span> <span class="ow">in</span> <span class="n">that</span> <span class="n">glass</span><span class="p">,</span> <span class="n">the</span> <span class="n">scent</span> <span class="ow">is</span> <span class="n">both</span> <span class="n">exciting</span> <span class="ow">and</span> <span class="n">unique</span> <span class="k">as</span> <span class="n">a</span> <span class="n">collection</span> <span class="n">of</span> <span class="n">vinous</span> <span class="n">spices</span><span class="p">,</span> <span class="n">candied</span> <span class="n">fruit</span><span class="p">,</span> <span class="n">fresh</span> <span class="n">dough</span> <span class="ow">and</span> <span class="n">peppery</span> <span class="n">hops</span> <span class="n">drift</span> <span class="n">onto</span> <span class="n">the</span> <span class="n">senses</span> <span class="k">with</span> <span class="n">a</span> <span class="n">radiant</span> <span class="n">but</span> <span class="n">piquant</span> <span class="n">perfume</span><span class="o">.</span> <span class="n">Sweeter</span> <span class="n">though</span> <span class="ow">in</span> <span class="n">its</span> <span class="n">early</span> <span class="n">impressions</span><span class="p">,</span> <span class="n">those</span> <span class="n">fresh</span> <span class="n">bread</span> <span class="n">flavors</span> <span class="n">lace</span> <span class="k">with</span> <span class="n">impressions</span> <span class="n">of</span> <span class="n">sugar</span> <span class="n">cookie</span> <span class="ow">and</span> <span class="n">honeysuckle</span><span class="o">.</span>
+
+<span class="n">As</span> <span class="n">its</span> <span class="n">expressive</span> <span class="n">carbonation</span> <span class="n">pops</span> <span class="n">on</span> <span class="n">the</span> <span class="n">middle</span> <span class="n">palate</span><span class="p">,</span> <span class="n">the</span> <span class="n">bulk</span> <span class="n">of</span> <span class="n">sweetness</span> <span class="ow">is</span> <span class="n">lifted</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">higher</span> <span class="n">fruit</span> <span class="n">impressions</span> <span class="n">start</span> <span class="n">to</span> <span class="n">shine</span><span class="o">.</span> <span class="n">Pear</span><span class="p">,</span> <span class="n">apple</span><span class="p">,</span> <span class="n">lemon</span><span class="p">,</span> <span class="n">orange</span> <span class="n">peel</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">hint</span> <span class="n">of</span> <span class="n">grapefruit</span> <span class="n">pull</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">ester</span> <span class="n">profile</span> <span class="ow">and</span> <span class="n">invite</span> <span class="n">a</span> <span class="n">later</span> <span class="n">balance</span> <span class="n">of</span> <span class="n">peppercorn</span><span class="p">,</span> <span class="n">white</span> <span class="n">wine</span> <span class="ow">and</span> <span class="n">grassy</span> <span class="n">hops</span> <span class="n">to</span> <span class="n">catch</span> <span class="n">up</span> <span class="n">to</span> <span class="n">the</span> <span class="n">level</span> <span class="n">of</span> <span class="n">fruitiness</span> <span class="k">for</span> <span class="n">a</span> <span class="n">dry</span> <span class="ow">and</span> <span class="n">even</span><span class="o">-</span><span class="n">keel</span> <span class="n">character</span> <span class="n">heading</span> <span class="n">into</span> <span class="n">finish</span><span class="o">.</span>
+
+<span class="n">Medium</span> <span class="n">bodied</span> <span class="ow">and</span> <span class="n">trending</span> <span class="n">lighter</span> <span class="ow">and</span> <span class="n">drier</span> <span class="n">on</span> <span class="n">the</span> <span class="n">finish</span><span class="p">,</span> <span class="n">the</span> <span class="n">Tripel</span> <span class="n">Ale</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">masterful</span> <span class="n">spice</span><span class="o">-</span><span class="n">forward</span> <span class="ow">and</span> <span class="n">drier</span> <span class="n">example</span> <span class="n">of</span> <span class="n">the</span> <span class="n">style</span> <span class="ow">and</span> <span class="n">done</span> <span class="n">so</span> <span class="ow">in</span> <span class="n">that</span> <span class="n">classic</span> <span class="n">Trappist</span> <span class="n">Tripel</span> <span class="n">style</span><span class="o">.</span> <span class="n">Finishing</span> <span class="n">surprisingly</span> <span class="n">refreshing</span> <span class="ow">and</span> <span class="n">effortless</span> <span class="n">on</span> <span class="n">the</span> <span class="n">palate</span> <span class="k">for</span> <span class="n">its</span> <span class="n">strength</span><span class="p">,</span> <span class="n">the</span> <span class="n">ale</span> <span class="n">extends</span> <span class="k">with</span> <span class="n">an</span> <span class="n">afterglow</span> <span class="n">of</span> <span class="n">yeast</span> <span class="n">spice</span> <span class="ow">and</span> <span class="n">peppery</span> <span class="n">hops</span> <span class="k">for</span> <span class="n">a</span> <span class="n">hint</span> <span class="n">of</span> <span class="n">lemongrass</span> <span class="ow">and</span> <span class="n">white</span> <span class="n">wine</span> <span class="n">to</span> <span class="n">close</span><span class="o">.</span>
+
+<span class="n">Thursday</span> <span class="n">at</span> <span class="mi">02</span><span class="p">:</span><span class="mi">01</span> <span class="n">PM</span>
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="c1">#destiny</span>
+
+<span class="n">Only</span> <span class="kn">from</span> <span class="nn">my</span> <span class="n">time</span> <span class="ow">and</span> <span class="n">after</span> <span class="n">me</span> <span class="n">will</span> <span class="n">politics</span> <span class="n">on</span> <span class="n">a</span> <span class="n">large</span> <span class="n">scale</span> <span class="n">exits</span> <span class="n">on</span> <span class="n">earth</span> 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#jeen-yuhs
+
+I can tell when a nigga is hot and when he has the potential to become complacent — Pharrell 
+
+Window seat video — Erykah Badu
+
+College drop out, through the wire… perspective from a convalescent #whyamisowise?
+
+
+
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#faves 
+
+In the mountains the shortest way is from peak to peak, but for that route thou must have long legs. Proverbs should be peaks, and those spoken to should be big and tall
+
+I no longer feel in common with you; the very cloud which I see beneath me, the blackness and heaviness at which I laugh—that is your thunder-cloud
+
+🏔 
+
+And to me also, who appreciate life, the butterflies, and soap-bubbles, and whatever is like them amongst us, seem most to enjoy happiness.
+
+To see these light, foolish, pretty, lively little sprites flit about—that moveth Zarathustra to tears and songs
+
+🏔 
+
+I should only believe in a God that would know how to dance.
+
+And when I saw my devil, I found him serious, thorough, profound, solemn: he was the spirit of gravity—through him all things fall.
+
+Not by wrath, but by laughter, do we slay. Come, let us slay the spirit of gravity!
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="c1">#poe</span>
+
+<span class="n">Muzaale</span><span class="p">,</span> <span class="n">Abimereki</span> <span class="n">poe</span><span class="o">/</span><span class="n">phd</span><span class="o">/</span><span class="n">gtpci</span>
+
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">jhjhm</span><span class="o">.</span><span class="n">zoom</span><span class="o">.</span><span class="n">us</span><span class="o">/</span><span class="n">j</span><span class="o">/</span><span class="mi">98180375399</span>
+
+<span class="n">jhoover2</span><span class="nd">@jhmi</span><span class="o">.</span><span class="n">edu</span>
+<span class="n">dorry</span><span class="nd">@jhmi</span><span class="o">.</span><span class="n">edu</span>
+<span class="n">kbandee1</span><span class="nd">@jhu</span><span class="o">.</span><span class="n">edu</span>
+<span class="n">dcelent1</span><span class="nd">@jhu</span><span class="o">.</span><span class="n">edu</span>
+<span class="n">ermiller</span><span class="nd">@jhmi</span><span class="o">.</span><span class="n">edu</span>
+<span class="n">fjohnst4</span><span class="nd">@jhmi</span><span class="o">.</span><span class="n">edu</span>
+<span class="n">bcaffo1</span><span class="nd">@jhu</span><span class="o">.</span><span class="n">edu</span>
+<span class="n">cdenard1</span><span class="nd">@jhu</span><span class="o">.</span><span class="n">edu</span>
+
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+#ken
+
+— Kenny
+— Victoria
+— Savanna 
+— Jada 
+— Tyra 
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+#philosophy
+
+Robert Sapolsky’s on categorical thinking, origin of error
+Evolution from Ape to man is not categorical, no “civilized”
+The first nine aphorisms in Human, All Too Human
+Cause and effect in Nietzsche’s writings on 02/28/22
+Missing data lecture by Elizabeth Sugar on 03/01/22
+And thoughts of Constantine Frangakis also on 03/01/22
+Wittes et all dilemma as the DSMB of WHI studies of several exposures and outcomes
+
+A complexity which is thousandfold reaches our consciousness as a simple entity — Nietzsche, 1888
+
+No aphorism is more frequently repeated in connection with field trials, than that we must ask Nature few questions, or ideally one question, at a time. The writer is convinced that this view is wholly mistaken. Nature he suggests, will best respond to a logical and carefully thought out questionnaire.” 
+— R.A. Fisher, 1926 
+
+I develop designs and methods of analyses to evaluate treatments in medicine, public health and policy (causal inference) — Frangakis, 2002
+ 
+
+*
+
+Association between increased sophistication of analyses and number of assumptions made?
+Randomized trials are not exempt given factor design, multiple outcomes, adverse effects, follow-up t
+I mistrust all systematizers and avoid them. The will to a system is a lack of integrity — Nietzsche 
+
+*
+
+I have never pondered over questions that are not questions. I have never squandered my strength. Of actual religious difficulties, for instance, I have no experience. I have never known what it feels to be “sinful”
+
+*
+
+To conclude, we value creation more than searching; engineering more than science; practical more than theoretical
+
+#explainedvarianceorcauseandeffect
+
+
+
+</pre></div>
+</div>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#love</span>
+
+<span class="n">The</span> <span class="n">state</span> <span class="ow">in</span> <span class="n">which</span> <span class="n">man</span> <span class="n">sees</span> <span class="n">things</span> <span class="n">most</span> <span class="n">decidedly</span> <span class="k">as</span> <span class="n">they</span> <span class="n">are</span> <span class="ow">not</span> 
+</pre></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./bloc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>11/2020 &#8212; Nothin&#39;</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bloc/bdn202011';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/practicing.png" class="logo__image only-light" alt="Nothin' - Home"/>
+    <script>document.write(`<img src="../_static/practicing.png" class="logo__image only-dark" alt="Nothin' - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    man
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapter1.html">verb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapter2.html">object</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbloc/bdn202011.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/bloc/bdn202011.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>11/2020</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<h1>11/2020<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+1. Iago quarterly 
+— gerontology journal 
+(0) get mom/dad smart phone 
+(1) create Twitter for dad/mom
+(2) engage &amp; offer links to our websites
+(3) cultural matters &amp; archives 
+— aging (engage young to link parents)
+— report
+— magazine 
+— logistics 
+— education 
+— health issues for the young &amp; aging 
+— pollution 
+— insurance 
+— banking 
+— farming, financing, futures* (Norman)
+— green energy 
+
+2. Iago politics 
+— public health 
+— American families
+— race in America 
+— climate change 
+— national security
+— leadership 
+x
+— energy, pollution(net zero emotions)
+— leadership, adversaries 
+</pre></div>
+</div>
+<p>.</p>
+<p>Big brother saw me at the bottom of the totem</p>
+<p>.</p>
+<p>Deja vu<br />
+— written and produced by Dark Child<br />
+— mostly an unacknowledged sample<br />
+— of Eddie Kendricks “Girl You Need a Change of Heart”</p>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+Pisco y Nazca (Ceviche Gastrobar)
+18th &amp; L
+Foggy Bottom
+
+1.Snapper Calamari Mussels
+2.Chaufa: chia fried rice, shrimp, calamari (Chinese-Peruvian)***
+3.Plancha Anticuchera**
+4.Nikkei Ceviche
+5.Pescado a lo macho
+6.Jaleo*
+7.Dome melting***
+8.Anticucho Corazon
+9.Conchita a la Parmezaan
+10.Ceviche Sampler?
+11.Ahi De Gallina
+12.Seared Salmon
+13.Tostones/pulled pork*
+14.Ceviche Callejero (Liquid)*
+15.Ahi tuna ceviche
+16.Pisco sour****
+17.Lomo salted sandwich
+</pre></div>
+</div>
+<p>.</p>
+<p>I don’t know why poor white folk don’t line wearing masks. You wear one to the clan rally. So wear one to Walmart!</p>
+<p>— Chapelle</p>
+<p>.</p>
+<p>“Either he was egregiously sloppy with data or it was fabricated,” former Air Force Lt. Col. Craig Hendrix, a doctor who is now director of the division of clinical pharmacology at Johns Hopkins University School of Medicine, told the health news service. “It was somewhere on that spectrum, both of which were serious and raised questions about his trustworthiness.”</p>
+<p>.</p>
+<p>Orval — get this beer</p>
+<p>.</p>
+<p>Gertrude Stein Book —<br />
+Rasin’ in the sun — Ely memorized it (I’m gonna challenge herr!)</p>
+<p>.</p>
+<p>Henry Kissinger’s brother was once asked how — given they emigrated to America at the same time — he had an American accent but Henry still had a thick, mittle-European one.</p>
+<p>“Well, that’s simple”, he said. “Henry..  doesn’t listen.”</p>
+<p>.</p>
+<p>Important information for geriatric conditions is more likely to be found in free text that in large databases — natural language processing <a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a></p>
+<p><a class="reference external" href="mailto:bleff&#37;&#52;&#48;jhmi&#46;edu">bleff<span>&#64;</span>jhmi<span>&#46;</span>edu</a></p>
+<ol class="arabic simple">
+<li><p>find my correspondence with the visiting lecturer</p></li>
+<li><p>review his published articles on this</p></li>
+<li><p>armed with chatGPT &amp; ds4ph we can do this</p></li>
+<li><p>caffo would be a mentor or advisor</p></li>
+<li><p>etc.</p></li>
+</ol>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+— Movie Up! 🍿— 
+
+Vertigo — VerrTeeGo
+Functionally impaired and home bound 
+These are invisible to medicine 
+Biomedical model only knows disease 
+Leff’s parents home a death trap 
+Asking them to leave ain’t working 
+You’d think he’s asking ‘em to go to Mars!
+
+— Human Inertia — 
+</pre></div>
+</div>
+<p>.</p>
+<p>Craig Hendrix, whistle blower!</p>
+<ol class="arabic simple" start="0">
+<li><p>Misconduct</p></li>
+<li><p>Go to Whom?</p></li>
+<li><p>Directly to Person</p></li>
+<li><p>Follow Order of Command</p></li>
+<li><p>Sloppy vs. Intention:</p></li>
+<li><p>Behavior</p></li>
+<li><p>When to Report</p></li>
+<li><p>Rank-Order: Truth <span class="math notranslate nohighlight">\((-2\sigma)\)</span>, Opinion <span class="math notranslate nohighlight">\((-1\sigma)\)</span>, Error <span class="math notranslate nohighlight">\((μ=0)\)</span>, Sloppy <span class="math notranslate nohighlight">\((+1\sigma)\)</span>, Intention <span class="math notranslate nohighlight">\((+2\sigma)\)</span></p></li>
+</ol>
+<p>“Either he was egregiously sloppy with data or it was fabricated,” former Air Force Lt. Col. Craig Hendrix, a doctor who is now director of the division of clinical pharmacology at Johns Hopkins University School of Medicine, told the health news service. “It was somewhere on that spectrum, both of which were serious and raised questions about his trustworthiness.”</p>
+<p>Truth/Common knowledge —&gt; Please don’t cite source!
+Opinion/Structure of revolutions —&gt; Dramatize the contest and cite!!
+Sloppy/Inconsistently does it —&gt; Maybe deserves the consequences
+Intention/Plagiarism and fame —&gt; What can I say?</p>
+<p>.</p>
+<p><span class="math notranslate nohighlight">\(-2\)</span>. Knowledge<br />
+<span class="math notranslate nohighlight">\(-1\)</span>. Contested<br />
+<span class="math notranslate nohighlight">\(\pm0\)</span>. Statistics<br />
+<span class="math notranslate nohighlight">\(+1\)</span>. Untrained<br />
+<span class="math notranslate nohighlight">\(+2\)</span>. Subversion</p>
+<p>.</p>
+<p>Air Zoom (Tempo Next%)</p>
+<p>.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=iKKyiFH2gbw">setembro</a></p>
+<p>.</p>
+<p>a killa and a thrilla and a chilla, when I get that gorilla in Manila</p>
+<p>.</p>
+<p>keep the old <a class="reference external" href="https://www.johnshopkinssolutions.com/hospitals-keep-older-patients-hospital/">outta hospital</a>! <a class="footnote-reference brackets" href="#id5" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a></p>
+<p>.</p>
+<p>Who wants transparency when you can have magic?<br />
+Who wants prose when you can have poetry?<br />
+Pull away the veil, and what are you left with?<br />
+An ordinary young woman of modest ability and little imagination<br />
+Wrap her like this, anoint her with oil, and hey presto..<br />
+What do you have? The goddess!</p>
+<p>And you turned all that down, a chance to be a god?</p>
+<p>I turned it down for something greater, still…</p>
+<p>.</p>
+<p>The crown and why it works:<br />
+— dramatic contrasts<br />
+— lillibet vs sister<br />
+— eli vs phil<br />
+— tumbling tumbleweed of a sister<br />
+— sense vs sensibility<br />
+Oh, and the abdicated king!</p>
+<p>.</p>
+<ol class="arabic simple">
+<li><p>Knowledge —&gt; Arousal</p></li>
+<li><p>Contest —&gt; Flow</p></li>
+<li><p>Error +/-  —&gt; Control</p></li>
+<li><p>Sloppy —&gt; <a class="reference external" href="https://en.wikipedia.org/wiki/Relaxation_(psychology)">Relaxation</a></p></li>
+<li><p>Disinformation —&gt; Boredom</p></li>
+</ol>
+<p>or</p>
+<ol class="arabic simple">
+<li><p>Info</p></li>
+<li><p>War</p></li>
+<li><p>Error</p></li>
+<li><p>Consensus</p></li>
+<li><p>Peace</p></li>
+</ol>
+<p>or</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(R^2 = 1 - \frac{\text{MSE}}{\text{Var}(y)}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\beta_i\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\text{MSE} = \frac{1}{n-2} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\text{Bias}(\hat{\beta}) = E(\hat{\beta}) - \beta\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(I(\theta) = -E\left[\frac{{\partial^2 \log f(x;\theta)}}{{\partial \theta^2}}\right]\)</span></p></li>
+</ol>
+<p>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+You have no enemies, you say? Alas, my friend, the boast is poor. 
+
+He who has mingled in the fray of duty that the brave endure, 
+
+must have made foes. If you have none, 
+small is the work that you have done. 
+
+You’ve hit no traitor on the hip. You’ve dashed no cup from perjured lip. 
+
+You’ve never turned the wrong to right. You’ve been a coward in the fight.
+
+Charles Mackay
+
+Also, The Crown S4E2 at 44:30
+</pre></div>
+</div>
+<p>.</p>
+<p>Compare</p>
+<p>Churros vs Tres Leches</p>
+<p>Dessert &#64;Maximón</p>
+<p>.</p>
+<p>Netflix: The Crown S4:E8 at 10:45</p>
+<p>“The Common Wealth.. ridiculous waste of time, ridiculous organization; worse, morally offensive! Why we allow our queen to fraternize with countries like Uganda.. “</p>
+<p>Margaret Thatcher</p>
+<p>.</p>
+<p>Diana was the patron saint of the weak</p>
+<p>She was physically in touch with them (no gloves)</p>
+<p>And knew a thing or two about vulnerability and helper to connect with the weak and vulnerable</p>
+<p>Her beauty, radiance, and that she was a protagonist of a fairy tale 🧚‍♂️ : wronged, but resurgent</p>
+<p>Mother of a future king, princess of Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿</p>
+<p>.</p>
+<p>A man of his time rather than a reactionary like Bach or a revolutionary like Beethoven, Mozart was equally at home composing for the concert salon or the opera stage</p>
+<p>No wonder Nietzsche approved of him</p>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">9</a><span class="fn-bracket">]</span></span>
+<p>this is an r03</p>
+</aside>
+<aside class="footnote brackets" id="id5" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">10</a><span class="fn-bracket">]</span></span>
+<p>beware of hospitalizing older patients</p>
+</aside>
+</aside>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./bloc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
